@@ -16,6 +16,7 @@ ranges in metres, unless a parameter name says otherwise.
 
 from __future__ import annotations
 
+import math
 from dataclasses import dataclass, replace
 from typing import Literal
 
@@ -564,6 +565,52 @@ def layered_plate_effective_thickness(first_hit_mm: float, underlying_mm: float)
     floor = 0.3 * min(t1, t2) + max(t1, t2)
     ceiling = 0.96 * (t1 + t2)
     return max(floor, min(raw, ceiling))
+
+
+def _appendix15_a_value(score: float) -> float:
+    """The "A" value from Appendix 15's shot-placement equations.
+
+    Source: Bird & Livingston Appendix 15, p.117. Two different meanings
+    depending on what "score" represents (the equations are identical,
+    only the interpretation differs): fed a percentile dice score (0-99),
+    it is "the number of standard deviations that the shot varies by,
+    assuming a normal distribution." Fed a hit percentage (0-100) instead,
+    it is "the inverse of the standard deviation for the hit probability
+    against a 2m target distance."
+    """
+    if score <= 80:
+        return math.exp(-22.7614) * math.exp(18.416 * score**0.05)
+    return math.exp(0.193090) * math.exp(2.665e-21 * score**10.25)
+
+
+def shot_displacement_m(dice_score: float, hit_pct: float) -> float:
+    """Displacement (metres, unsigned magnitude) from the aim point along
+    one axis (vertical or lateral), given a percentile dice score (0-99)
+    and the hit percentage along that same axis against a 2m x 2m
+    reference target.
+
+    Source: Bird & Livingston Appendix 15, p.117-118. "Divide 'A' figure
+    for dice score by 'A' figure for step 1 hit score to determine shot
+    placement relative to aim location." Validated against the chapter's
+    own three worked examples (0.7m @ 85%/dice66, 0.2m @ 95%/dice22, 0.4m
+    @ 95%/dice50) -- see test_formulas.py::TestShotDisplacement.
+
+    Args:
+        dice_score: A percentile roll, 0-99 (or 0-100; the source's own
+            "00 means 100" convention for its raw dice table does not
+            apply here since this is the closed-form equation, not the
+            table).
+        hit_pct: The hit percentage (0-100) along this axis against a 2m
+            reference target -- from vertical_lateral_hit_pct(), not the
+            shot's raw overall hit%.
+
+    Returns:
+        Displacement magnitude in metres. Caller applies a random sign
+        (direction) separately -- this function is direction-agnostic.
+    """
+    dice_a = _appendix15_a_value(dice_score)
+    hit_a = _appendix15_a_value(hit_pct)
+    return dice_a / hit_a
 
 
 def cast_deficiency_multiplier(thickness_mm: float, diameter_mm: float) -> float:

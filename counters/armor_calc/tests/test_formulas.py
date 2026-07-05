@@ -29,6 +29,7 @@ from armor_calc.formulas import (
     layered_plate_effective_thickness,
     roll_threshold_for_probability,
     rounded_mantlet_angle_distribution,
+    shot_displacement_m,
     shatter_gap_failure,
     shatter_gap_reference_table,
     shatter_gap_window,
@@ -557,6 +558,46 @@ class TestLayeredPlateInContact:
         as well as one solid plate of the same total thickness."""
         eff = layered_plate_effective_thickness(20.0, 50.0)
         assert eff < 70.0
+
+
+class TestShotDisplacement:
+    """Appendix 15 p.117-118: dice score + hit% -> displacement in metres
+    along one axis. Validated against the chapter's own worked examples
+    before being trusted with new zone-geometry data."""
+
+    def test_matches_worked_example_85pct_dice66(self):
+        """'Assume hit score against 2m x 2m target is 85 vertical, and
+        corresponding dice score for vertical shot placement is 66... The
+        ratio of the dice and hit scores equals 0.948/1.38, or 0.7m.'"""
+        displacement = shot_displacement_m(dice_score=66.0, hit_pct=85.0)
+        assert displacement == pytest.approx(0.7, abs=0.05)
+
+    def test_matches_worked_example_95pct_dice22(self):
+        """'For 95% accuracy and a roll of 22... shot placement is 0.2m
+        above aim point' (vertical axis)."""
+        displacement = shot_displacement_m(dice_score=22.0, hit_pct=95.0)
+        assert displacement == pytest.approx(0.2, abs=0.05)
+
+    def test_matches_worked_example_95pct_dice50(self):
+        """Same worked example, lateral axis: 'roll of 50... results in a
+        shot placement 0.4m left of aim point.'"""
+        displacement = shot_displacement_m(dice_score=50.0, hit_pct=95.0)
+        assert displacement == pytest.approx(0.4, abs=0.05)
+
+    def test_higher_dice_score_means_larger_displacement(self):
+        """A higher percentile roll is further from the aim point --
+        monotonicity check independent of the exact worked-example
+        tolerances above."""
+        small = shot_displacement_m(dice_score=10.0, hit_pct=85.0)
+        large = shot_displacement_m(dice_score=90.0, hit_pct=85.0)
+        assert large > small
+
+    def test_higher_hit_pct_means_tighter_dispersion(self):
+        """A higher overall hit% implies tighter shot bunching -- the same
+        dice score should produce a SMALLER displacement at higher hit%."""
+        tight = shot_displacement_m(dice_score=50.0, hit_pct=95.0)
+        loose = shot_displacement_m(dice_score=50.0, hit_pct=20.0)
+        assert tight < loose
 
 
 class TestPartialFaceHardening:
