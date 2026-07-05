@@ -121,7 +121,7 @@ The following terms are used throughout this document. Each term is defined here
 
 **D3 —**  Roll 1d6, halve, round up: results 1–3. Used for rout movement and mortar dispersion distance.
 
-**Fire group —**  All firing units sharing the same ⬡h interval value, resolved as a single attack. Effective rFP is calculated per unit and summed (Rule 8.3.2); units sharing a hex may sum rFP and -f values first (Rule 8.3.3).
+**Fire group —**  All firing units sharing the same ⬡h interval value — or units with different ⬡h combined within the smallest interval's range (Rule 8.3.4a) — resolved as a single attack. Effective rFP is calculated per unit and summed (Rule 8.3.2); units sharing a hex may sum rFP and -f values first (Rule 8.3.3).
 
 **Cover modifier —**  A bonus added to the defender's Defence value based on terrain occupied.
 

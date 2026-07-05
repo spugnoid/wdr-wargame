@@ -33,6 +33,8 @@ E.5  Summing rFP and f Within a Fire Group
 
 *Design note: The summation rule (sum rFP, sum f, retain ⬡h interval) is mathematically equivalent to calculating each unit's effective rFP at range individually and summing the results. This was proven across the full range curve, not just at a single range. The equivalence holds because the floor function distributes across addition when the interval h is identical. Units with different intervals cannot be summed because the floor function does not distribute across different denominators — hence the grouping requirement.*
 
+    *See also: E.60 (the ban this note explains is scoped to the summation shortcut specifically — Rule 8.3.4a permits mixed-⬡h combining under a narrower condition that doesn't need the shortcut at all).*
+
 E.6  Why the Resolution Strip Applies Only to Combined Fire
 -----------------------------------------------------------
 

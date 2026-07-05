@@ -9,7 +9,7 @@ Fire combat in With Deepest Regret... uses a single unified resolution procedure
 
 The full procedure for any fire combat action:
 
-**8.1.1**  Group all firing units by ⬡h interval value.
+**8.1.1**  Group all firing units by ⬡h interval value (or see Rule 8.3.4a for mixed-interval groups within the smallest ⬡h's range).
 
 **8.1.2**  For each firing unit, calculate the effective rFP at that unit's own firing range (Rule 8.2).
 
@@ -45,6 +45,8 @@ The full procedure for any fire combat action:
 
 **8.3.1**  When multiple units fire at the same target in the same impulse, units sharing the same ⬡h interval value may be combined into a single fire group.
 
+    *See also: Rule 8.3.4a (units with different ⬡h values may also combine, within a narrower range condition).*
+
 **8.3.2**  To form a fire group: each unit first calculates its own effective rFP (falloff at its own range per Rule 8.2, plus its own intervening terrain and modifiers). Sum the effective rFP values. The group is resolved as a single attack using the summed value.
 
 **8.3.3**  Same-hex shortcut: when every unit in the group occupies the same hex, all firers share an identical range and line of sight. The group may instead sum rFP values and f values first — expressed as (total rFP) ⬡h −(total f) — and apply the falloff formula once to the summed values. This produces a result identical to the per-unit calculation (Rule 8.3.6).
@@ -59,17 +61,17 @@ The full procedure for any fire combat action:
 --------------------------------
 
 
-**8.3.4a.1**  Units with different ⬡h values may form a single fire group provided every combining unit's firing range does not exceed the smallest ⬡h value among them — equivalently, no unit in the group has yet crossed its own first falloff step (Rule 8.2).
+**8.3.4a.1**  Units with different ⬡h values may form a single fire group provided every combining unit's firing range does not exceed the smallest ⬡h value among them. This is a single test against the group's smallest ⬡h, not each unit's own ⬡h individually — it can be stricter than any one unit's own falloff step would require, since a unit with a larger ⬡h may still be excluded by a smaller-⬡h groupmate's threshold.
 
 **8.3.4a.2**  Because every combining unit is, by this condition, still at its full printed rFP, form the group by summing each unit's full rFP directly — no falloff calculation is required for this group's Resolution FP.
 
-**8.3.4a.3**  The moment any unit's range would exceed its own ⬡h value, that unit can no longer combine by this method. The group reverts to separate attacks (Rule 8.8) for that impulse.
+**8.3.4a.3**  The moment any unit's range exceeds the group's smallest ⬡h value — not necessarily that unit's own ⬡h — the group can no longer combine by this method. This happens as soon as the smallest-⬡h member itself crosses its own falloff step, even if other members with larger ⬡h haven't crossed theirs yet. The group reverts to separate attacks (Rule 8.8) for that impulse.
 
 **8.3.4a.4**  This does not extend the same-hex shortcut (Rule 8.3.3), which remains valid only for units sharing both hex and ⬡h. Mixed-interval groups always sum full rFP values directly per 8.3.4a.2.
 
     *See also: Rule 8.8.1 (separate-attack fallback once any unit crosses its own ⬡h).*
 
-**8.3.4a.5**  Example: a ⬡4 -2 unit (rFP 7) and two ⬡5 -1 units (rFP 5 each) fire at a target 4 hexes away. All three are within their own ⬡h, so they combine: total rFP = 17, resolved as one group. At 5 hexes, the ⬡4 unit has crossed its own interval even though the ⬡5 units haven't — the group can no longer combine. Resolve as two separate attacks instead: the two ⬡5 units combine as usual (same ⬡h), the ⬡4 unit fires alone, and the results combine per Rule 8.8.2.
+**8.3.4a.5**  Example: a ⬡4 -2 unit (rFP 7) and two ⬡5 -1 units (rFP 5 each) all fire at a target 4 hexes away — within the group's smallest ⬡h (4), so they combine: total rFP = 7+5+5 = 17, resolved as one group. At 5 hexes, the range now exceeds the group's smallest ⬡h (4) — even though the ⬡5 units individually haven't reached their own falloff step yet — so the group can no longer combine. This holds even if the units fire from different hexes at different individual ranges: the test is always against the smallest ⬡h in the group, not each unit's own. Resolve as two separate attacks instead: the two ⬡5 units combine as usual (same ⬡h), the ⬡4 unit fires alone, and the results combine per Rule 8.8.2.
 
 8.4  Resolution Strip
 ---------------------
