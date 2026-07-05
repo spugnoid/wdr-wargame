@@ -89,3 +89,23 @@ class TestHitZoneLoading:
         classifications = {z.classification for z in tiger_turret_zones}
         assert "mobility" not in classifications
         assert "gun" in classifications  # mantlet/gun itself
+
+    def test_sherman_hull_front_zones_include_sponson_ammo_as_gun_classified(self):
+        """Sherman M4A1 is the dry-stowage variant -- ammunition in hull
+        side sponsons, not yet relocated to armoured wet-stowage floor
+        bins. Ammunition counts as 'gun' classification (design spec:
+        'Gun: turret ring, gun/breech, ammunition stowage within the
+        profile')."""
+        rows = load_hit_zones()
+        sherman_hull_zones = [r.zone for r in rows if r.vehicle == "Sherman M4A1 (75mm)" and r.profile == "Hull" and r.arc == "Front"]
+        classifications = {z.classification for z in sherman_hull_zones}
+        assert "mobility" in classifications  # front transmission housing
+        assert "gun" in classifications  # sponson-stored ammunition
+        assert "neither" in classifications  # driver/bow-gunner positions
+
+    def test_sherman_turret_front_zones_have_no_mobility_zone(self):
+        rows = load_hit_zones()
+        sherman_turret_zones = [r.zone for r in rows if r.vehicle == "Sherman M4A1 (75mm)" and r.profile == "Turret" and r.arc == "Front"]
+        classifications = {z.classification for z in sherman_turret_zones}
+        assert "mobility" not in classifications
+        assert "gun" in classifications
