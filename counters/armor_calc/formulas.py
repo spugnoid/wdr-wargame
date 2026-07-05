@@ -23,6 +23,8 @@ from typing import Literal
 import numpy as np
 from numpy.typing import NDArray
 
+from quality.tiers import ALL_QUALITIES, Quality
+
 AmmoFamily = Literal["capped", "apbc", "ap_uncapped", "hvap90", "hvap76", "apds"]
 
 
@@ -79,7 +81,11 @@ def base_hit_probability(flight_time_s: float) -> float:
     return 100.0 * np.exp(-(flight_time_s / _HIT_PCT_TAU) ** _HIT_PCT_P)
 
 
-CrewQuality = Literal["elite", "veteran", "regular", "green", "militia"]
+# CrewQuality is armor_calc's name for the shared Quality tier vocabulary --
+# kept as an alias so existing armor_calc code and tests don't need to
+# change any import. See counters/quality/tiers.py for what's actually
+# shared vs. what stays domain-specific.
+CrewQuality = Quality
 
 # Source: Bird & Livingston Ch.6/Appendix 7. Caps maximum hit probability by
 # crew quality, modelling human factors (fear, fatigue, stress) that a pure
@@ -98,7 +104,7 @@ def crew_quality_hit_cap(quality: CrewQuality) -> float:
     return _CREW_QUALITY_HIT_CAP[quality]
 
 
-ALL_CREW_QUALITIES: tuple[CrewQuality, ...] = ("elite", "veteran", "regular", "green", "militia")
+ALL_CREW_QUALITIES: tuple[CrewQuality, ...] = ALL_QUALITIES
 
 
 def crew_quality_from_morale(morale: int) -> CrewQuality:
