@@ -7,7 +7,7 @@ Source data (editable like a spreadsheet, no Python required to update):
   data/hardness_table.csv   -- BHN by nation/armor-type/era/thickness bracket
   data/hit_zones.csv        -- one row per vehicle hit-location zone (profile/arc/classification)
 
-Run: python3 -m counters.armor_calc.pipeline
+Run: PYTHONPATH=counters python3 -m armor_calc.pipeline (from the repo root)
 Output: counters/armor_calc/roster_output.csv
 """
 

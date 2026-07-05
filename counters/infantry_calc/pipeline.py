@@ -5,7 +5,7 @@ Source data (editable like a spreadsheet, no Python required to update):
   data/weapons.csv  -- one row per distinct weapon
   data/units.csv    -- one row per unit-variant/face
 
-Run: python3 -m counters.infantry_calc.pipeline
+Run: PYTHONPATH=counters python3 -m infantry_calc.pipeline (from the repo root)
 Output: counters/infantry_calc/infantry_roster_output.csv
 """
 
