@@ -241,6 +241,8 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
 
 **12.9.1a**  Exception: a Casualty result produced by sniper deliberate targeting (Rule 20.2) applies directly to the named target. No allocation roll is made.
 
+    *See also: Rule 20.2 (Sniper Deliberate Targeting)*
+
 **12.9.2**  If the leader is hit, flip the leader counter to its wounded rear face. A wounded leader continues to function but at reduced effectiveness.
 
 **12.9.3**  If the hex contains only the leader (no subordinate units), the leader is automatically hit — no roll needed.

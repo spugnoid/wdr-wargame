@@ -79,6 +79,8 @@ Sniper rules differ from standard infantry fire in three fundamental ways: they 
 
 **20.2.6**  Long range cap exemption: when deliberate targeting is declared, the long range cap (Rule 8.7) does not apply. Full result thresholds are used regardless of effective rFP. See Rule 8.7.4.
 
+    *See also: Rule 8.7.4 (Long Range Cap exemption) and Rule 12.9.1a (Leaders — casualty allocation exception) both depend on this rule.*
+
 20.3  Sniper Concealment and Detection
 --------------------------------------
 

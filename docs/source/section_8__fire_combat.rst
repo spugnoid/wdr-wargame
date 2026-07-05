@@ -155,6 +155,8 @@ The full procedure for any fire combat action:
 
 **8.7.4**  Sniper exemption:  Sniper fire lines (weapon class icon ╌○) are exempt from the long range cap when deliberate targeting is declared (see Rule 20.2). Full result thresholds apply regardless of effective rFP. A sniper firing without declaring a deliberate target is treated as normal area fire and the cap applies normally.
 
+    *See also: Rule 20.2 (Sniper Deliberate Targeting)*
+
 *NOTE: The long range cap was designed for volume fire — many weapons degraded to marginal effectiveness at extreme range. A sniper fires one precise round. The physical phenomenon being modelled is different: a sniper at 500 yards can kill; a rifle squad at 500 yards mostly suppresses. The exemption distinguishes precision fire from volume fire.*
 
 8.8  Multiple Attacks Against Same Target
