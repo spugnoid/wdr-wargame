@@ -2,7 +2,7 @@ import csv
 
 import pytest
 
-from infantry_calc.pipeline import load_units, load_weapons
+from infantry_calc.pipeline import load_units, load_weapons, write_infantry_roster_csv
 
 
 class TestLoadWeapons:
@@ -97,3 +97,69 @@ class TestLoadUnits:
         units = {u.unit_id: u for u in load_units()}
         assert units["GER_GREN_1943.3_F"].source == "Nafziger OOB, TM-E 30-451"
         assert units["SOV_GDSRIF_1943.3_F"].source == "STAVKA TO&E 1943"
+
+
+class TestWriteInfantryRosterCsv:
+    """Cross-checked against the infantry-counter-design spreadsheet's
+    own UNIT ROSTER sheet -- every expected value below was read directly
+    from that sheet's own computed cells, not re-derived from the
+    formulas under test (that would make this a tautology, not a
+    validation)."""
+
+    def _rows_by_unit_id(self, tmp_path):
+        out_path = tmp_path / "infantry_roster_output.csv"
+        write_infantry_roster_csv(load_weapons(), load_units(), out_path)
+        with open(out_path, newline="") as f:
+            return {r["unit_id"]: r for r in csv.DictReader(f)}
+
+    def test_writes_one_row_per_unit(self, tmp_path):
+        rows = self._rows_by_unit_id(tmp_path)
+        assert len(rows) == 12
+
+    def test_gren_43_front_face_matches_the_worked_example(self, tmp_path):
+        rows = self._rows_by_unit_id(tmp_path)
+        row = rows["GER_GREN_1943.3_F"]
+        assert row["fire_line_1"] == "─● 7 ⬡4 -1"
+        assert row["fire_line_2"] == "╌ 3 ⬡5 -1"
+        assert row["defence"] == "8"
+        assert row["morale"] == "5"
+        assert row["m_number"] == "2"
+        assert row["f_number"] == "2"
+        assert row["g_number"] == "3"
+
+    def test_gren_43_rear_face_defence_is_front_minus_two(self, tmp_path):
+        """4x Kar98k alone computes to rFP 1 -- below MIN_RFP (2), so this
+        fire line reads 'omit', not a printed '1 ⬡15 -1' notation (matches
+        the source spreadsheet's own UNIT ROSTER cell BX5)."""
+        rows = self._rows_by_unit_id(tmp_path)
+        row = rows["GER_GREN_1943.3_R"]
+        assert row["defence"] == "6"
+        assert row["fire_line_1"] == "omit (rFP too low)"
+
+    def test_mg42_team_rear_face_uses_the_practical_rpm_override(self, tmp_path):
+        """This unit's loadout entry overrides practical RPM to 250
+        (vs. the weapon's own default of 350) -- confirms the override
+        actually flows into the rFP calculation, not just get parsed."""
+        rows = self._rows_by_unit_id(tmp_path)
+        row = rows["GER_MG42_1943.3_R"]
+        assert row["fire_line_1"] == "═● 8 ⬡6 -1"
+        assert row["defence"] == "3"
+
+    def test_soviet_rifle_squad_rear_face_below_min_rfp_is_omitted(self, tmp_path):
+        """SOV_RIFSQ_1943.3_R's lone weapon (4x Mosin-Nagant) computes to
+        rFP 0 -- below MIN_RFP, so the fire line reads 'omit', not a
+        bogus '0 ⬡- -1' notation."""
+        rows = self._rows_by_unit_id(tmp_path)
+        row = rows["SOV_RIFSQ_1943.3_R"]
+        assert row["fire_line_1"] == "omit (rFP too low)"
+
+    def test_rifle_squad_front_face_has_three_fire_lines(self, tmp_path):
+        """The Mosin-Nagant slot (weapon2, 6x, rFP 1) is below MIN_RFP and
+        reads 'omit', not a printed notation -- matches the source
+        spreadsheet's own UNIT ROSTER cell BY12. Only the DP-28 and
+        PPSh-41 slots clear the threshold."""
+        rows = self._rows_by_unit_id(tmp_path)
+        row = rows["SOV_RIFSQ_1943.3_F"]
+        assert row["fire_line_1"] == "─● 7 ⬡3 -1"
+        assert row["fire_line_2"] == "omit (rFP too low)"
+        assert row["fire_line_3"] == "≡ 3 ⬡2 -1"

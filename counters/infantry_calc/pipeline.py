@@ -16,7 +16,14 @@ import pathlib
 from dataclasses import dataclass
 from typing import Literal
 
-from infantry_calc.formulas import WeaponClass
+from infantry_calc.formulas import (
+    MIN_RFP,
+    WeaponClass,
+    fire_interval_hexes,
+    unit_defence,
+    unit_morale,
+    weapon_rfp,
+)
 from quality.tiers import Quality
 
 DATA_DIR = pathlib.Path(__file__).parent / "data"
@@ -122,3 +129,84 @@ def load_units(path: pathlib.Path = DATA_DIR / "units.csv") -> list[UnitRow]:
                 )
             )
     return rows
+
+
+# Fire-line notation prefix by weapon class -- source: infantry-counter-
+# design spreadsheet, UNIT ROSTER sheet's BX/BY/BZ/CA column formulas.
+_NOTATION_PREFIX: dict[WeaponClass, str] = {
+    "lmg": "─● ",
+    "hmg": "═● ",
+    "smg": "≡ ",
+    "at_rifle": "╌○ ",
+    "rifle": "╌ ",
+    "pistol": "╌ ",  # same as rifle -- pistols rarely rate their own notation
+}
+
+_FALLOFF = 1  # every pilot-roster row uses -1; not yet a computed value (see design spec open items)
+
+
+def _resolve_practical_rpm(slot: UnitWeaponSlot, weapon: WeaponRow) -> float:
+    return slot.practical_rpm_override if slot.practical_rpm_override is not None else weapon.practical_rpm
+
+
+def _fire_line_notation(slot: UnitWeaponSlot, weapon: WeaponRow, quality: Quality) -> str:
+    practical_rpm = _resolve_practical_rpm(slot, weapon)
+    rfp = weapon_rfp(slot.count, practical_rpm, weapon.weapon_class, quality)
+    if rfp < MIN_RFP:
+        return "omit (rFP too low)"
+    interval = fire_interval_hexes(weapon.max_range_yds, rfp)
+    return f"{_NOTATION_PREFIX[weapon.weapon_class]}{rfp} ⬡{interval} -{_FALLOFF}"
+
+
+def write_infantry_roster_csv(
+    weapons: list[WeaponRow],
+    units: list[UnitRow],
+    out_path: pathlib.Path,
+) -> None:
+    """The infantry roster reference table: per unit-face, up to three
+    fire-line notations plus Defence, Morale, and M#/F#/G# -- the exact
+    values printed on the physical counter. No arithmetic required at
+    the table: read the row for this unit, done.
+    """
+    weapons_by_name = {w.name: w for w in weapons}
+
+    with open(out_path, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(
+            [
+                "unit_id", "nation", "unit_type", "year_bracket", "face", "quality",
+                "fire_line_1", "fire_line_2", "fire_line_3",
+                "defence", "morale", "m_number", "f_number", "g_number",
+                "verify_status",
+            ]
+        )
+        for unit in units:
+            front_def, rear_def = unit_defence(unit.manpower_full, unit.quality)
+            defence = front_def if unit.face == "F" else rear_def
+            morale = unit_morale(unit.quality)
+
+            fire_lines = [
+                _fire_line_notation(slot, weapons_by_name[slot.weapon_name], unit.quality)
+                for slot in unit.loadout
+            ]
+            fire_lines += [""] * (3 - len(fire_lines))
+
+            writer.writerow(
+                [
+                    unit.unit_id, unit.nation, unit.unit_type, unit.year_bracket, unit.face, unit.quality,
+                    fire_lines[0], fire_lines[1], fire_lines[2],
+                    defence, morale, unit.m_number, unit.f_number, unit.g_number,
+                    unit.verify_status,
+                ]
+            )
+
+
+def main() -> None:
+    weapons = load_weapons()
+    units = load_units()
+    write_infantry_roster_csv(weapons, units, DATA_DIR.parent / "infantry_roster_output.csv")
+    print(f"Wrote infantry_calc output to {DATA_DIR.parent}")
+
+
+if __name__ == "__main__":
+    main()
