@@ -2,7 +2,7 @@
 
 ## 1. Why this exists
 
-The armored-combat penetration physics redesign (see the sister spec, `2026-07-04-armored-combat-penetration-physics-design.md`) explicitly deferred hit-location/crew-position/component-damage as "phase 2" from the start (§8 of that document). Today, when a shot produces a Casualty result (Rule 18.5/18.6), the owning player freely chooses whether it's a MOB kill or a GUN kill, justified narratively ("based on the most plausible damage given shot geometry" — Rule 18.7.1). This phase replaces that free choice with a real, sourced determination.
+The armored-combat penetration physics redesign (see the sister spec, `2026-07-04-armored-combat-penetration-physics-design.md`) explicitly deferred hit-location/crew-position/component-damage as "phase 2" from the start (§8 of that document). Today, when a shot produces a Casualty result (Rule 18.5/18.6), the owning player freely chooses whether it's a MOB kill or a GUN kill, justified narratively ("based on the most plausible damage given shot geometry" — Rule 17.1.1). This phase replaces that free choice with a real, sourced determination.
 
 **Source material**: Bird & Livingston's Appendix 6 ("Theoretical Hit Probability Method") and Appendix 15 ("Shot Placement System") were flagged in the phase-1 spec as "already fully extracted." Direct verification this session found that claim was stale — neither had actually been transcribed anywhere. Both were read in full for the first time as part of this design pass.
 
@@ -56,9 +56,11 @@ A real, historically-grounded example this geometry has to get right: Tiger (and
 
 A new small table per vehicle profile/arc, same shape as the existing Gunnery Table: range bands as rows, thresholds as columns. At the table: roll once (same dice already rolled for the Gunnery Roll and everything else), read the result directly. No new dice, no new lookup shape — the "zero lines" principle holds exactly as it has everywhere else this session.
 
+**Implemented and tested** (`formulas.py`: `shot_displacement_m`, `vertical_lateral_hit_pct`, `HitZone`, `classify_hit_location`, `HitLocationThresholds`, `hit_location_thresholds`; `data/hit_zones.csv`: Front-arc zone geometry for both pilot vehicles; `pipeline.py`: `load_hit_zones`, `write_hit_location_reference_csv`, wired into `main()`), 19 new regression tests across `test_formulas.py` and `test_pipeline.py`, all passing (99 total). Rulebook updated: Rule 17.1.1 rewritten, new Rule 17.7 and Rule 18.6a added, Section 1.3 definitions extended, Appendix E.58 added. Verified with a real Sphinx build (`sphinx-build -b dummy -W`), zero warnings.
+
 ## 4. Validation approach
 
-1. **Formula validation**: `formulas.py`'s new displacement-equation implementation must reproduce all three of Appendix 15's own worked examples before being trusted with real zone data — 0.2m @ 95% hit / roll 22, 0.4m @ 95% hit / roll 50, 0.7m @ 85% hit / roll 66.
+1. **Formula validation**: `formulas.py`'s displacement-equation implementation is validated against Appendix 15's one genuine equation-based worked example — 0.7m @ 85% hit / roll 66 (p.117-118). Two other figures the book gives (0.2m @ 95%/roll 22, 0.4m @ 95%/roll 50) were initially assumed to be additional equation worked examples but turned out, on direct primary-source verification, to come from the book's separate discrete percentile lookup table (introduced in the text as "an alternative to table use") applied to an unrelated scenario — not valid equation-reproduction tests. Corrected mid-implementation; see `formulas.py`'s `TestShotDisplacement` test class docstring for the full explanation.
 2. **Monte Carlo convergence**: independent runs with different random seeds must produce stable zone-split percentages within a small tolerance — a regression test, not just a one-off check.
 3. **Historical sanity check**: final precomputed tables should be spot-checked against basic historical expectation before being treated as final — e.g. Tiger's Rear arc (not built this phase, but worth stating as the eventual check) should show a much higher Mobility-zone probability than Front, given the rear-mounted engine; Sherman M4A1's Front arc should show a real, non-trivial Gun-zone (ammo) probability given its dry sponson stowage.
 
@@ -76,3 +78,17 @@ A new small table per vehicle profile/arc, same shape as the existing Gunnery Ta
 - **Generalizing beyond Front arc.** The scatter math is a property of gun dispersion, not of which arc is being engaged, so applying the same equations to Side/Rear arcs later is a reasonable generalization — but it is a generalization beyond the book's own (frontal) worked example, and should be flagged as such when that expansion happens, not silently assumed.
 - **Whether crew-quality-dependent scatter width is worth the table size.** This spec keeps full fidelity (range × crew quality, mirroring the Gunnery Table), since design-time table size isn't a "zero lines" violation — but if the per-crew-quality difference turns out to be a small, second-order effect once real numbers are computed, collapsing to a single "average crew" table may be worth reconsidering during implementation.
 - **Whether the "Neither → downgrade to Pinned" rule is the right one**, versus, say, treating it as a full miss of the Casualty tier entirely and re-rolling one band down through Rule 18.5/18.6's own bands rather than landing specifically on Pinned. Chosen for simplicity; not stress-tested against edge cases (e.g. a vehicle already Suppressed when this triggers).
+- **Scaling beyond the pilot.** This pass covers 2 of 13 roster vehicles and Front arc only. Expanding to the rest of the roster (and to Side/Rear arcs) means: (a) building real zone geometry for 11 more vehicles, general historical knowledge each time, not a quick copy-paste; (b) deciding whether the single-representative-attacker-gun simplification (Task 6) still holds once a genuinely diverse set of attacking guns is in play, or whether a full per-gun table becomes necessary; (c) re-checking whether Side/Rear arc geometry (tracks become visible, engine bay fully exposed from Rear) meaningfully changes the zone classifications rather than just repositioning them.
+
+## 7. Pilot results — real numbers, not just a working mechanism
+
+Computed values at 500m, Regular crew quality (illustrative — see `hit_location_output.csv` for the full table across all range bands and crew qualities):
+
+| Vehicle | Profile | Mobility % | Gun % | Neither % |
+|---|---|---|---|---|
+| Tiger I Ausf E | Hull | 12.0 | 0.0 | 88.0 |
+| Tiger I Ausf E | Turret | 0.0 | 21.8 | 78.2 |
+| Sherman M4A1 (75mm) | Hull | 11.8 | 0.7 | 87.5 |
+| Sherman M4A1 (75mm) | Turret | 0.0 | 17.8 | 82.2 |
+
+Both vehicles' Turret profiles correctly show 0% Mobility — no vehicle's turret contains a mobility-critical component, and the classification pipeline reflects a real absence rather than defaulting to some nonzero placeholder (confirmed by `test_tiger_turret_never_produces_a_mobility_threshold`). Tiger's Hull profile shows a literal 0.0% Gun-classification chance: no gun/ammo zone exists in that profile's geometry at all. Sherman's Hull profile, by contrast, shows a real, non-zero Gun-classification chance (0.7% at this specific range/crew combination) driven directly by its sponson-mounted ammunition zones. While the quantitative gap at this range/crew is modest, the qualitative contrast is what validates the Sherman pilot choice: a genuine, present-but-modest, non-zero risk of hitting gun-critical components that simply does not exist in Tiger's hull geometry. This is the concrete result the Sherman pilot vehicle was chosen to test for.
