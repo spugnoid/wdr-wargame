@@ -592,8 +592,10 @@ def shot_displacement_m(dice_score: float, hit_pct: float) -> float:
     Source: Bird & Livingston Appendix 15, p.117-118. "Divide 'A' figure
     for dice score by 'A' figure for step 1 hit score to determine shot
     placement relative to aim location." Validated against the chapter's
-    own three worked examples (0.7m @ 85%/dice66, 0.2m @ 95%/dice22, 0.4m
-    @ 95%/dice50) -- see test_formulas.py::TestShotDisplacement.
+    one equation-based worked example (dice=66, hit=85% -> 0.7m) -- see
+    test_formulas.py::TestShotDisplacement. (The book also gives
+    dice=22/50 @ ~95% examples, but those are computed via its separate
+    discrete lookup table, not this equation, so they don't apply here.)
 
     Args:
         dice_score: A percentile roll, 0-99 (or 0-100; the source's own

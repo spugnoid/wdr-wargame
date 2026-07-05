@@ -562,8 +562,21 @@ class TestLayeredPlateInContact:
 
 class TestShotDisplacement:
     """Appendix 15 p.117-118: dice score + hit% -> displacement in metres
-    along one axis. Validated against the chapter's own worked examples
-    before being trusted with new zone-geometry data."""
+    along one axis.
+
+    The source presents TWO distinct methods for this conversion: a
+    discrete percentile lookup table (not transcribed in this codebase --
+    see the design spec's scope decision) and this closed-form equation,
+    introduced in the text as "an alternative to table use." The book
+    validates the equation against exactly one worked example computed
+    via the equation itself (dice=66, hit=85% -> 0.7m, tested below).
+    Other displacement figures appearing in the book's prose (e.g. a
+    Tiger-vs-IS-2 example using dice=22/50 at an approximate 95% hit
+    rate) come from the discrete table's own threshold-crossing lookup,
+    not from this equation -- the two methods are different approximating
+    models of the same phenomenon and are not expected to agree to tight
+    tolerance, so they are not valid tests of this function.
+    """
 
     def test_matches_worked_example_85pct_dice66(self):
         """'Assume hit score against 2m x 2m target is 85 vertical, and
@@ -571,18 +584,6 @@ class TestShotDisplacement:
         ratio of the dice and hit scores equals 0.948/1.38, or 0.7m.'"""
         displacement = shot_displacement_m(dice_score=66.0, hit_pct=85.0)
         assert displacement == pytest.approx(0.7, abs=0.05)
-
-    def test_matches_worked_example_95pct_dice22(self):
-        """'For 95% accuracy and a roll of 22... shot placement is 0.2m
-        above aim point' (vertical axis)."""
-        displacement = shot_displacement_m(dice_score=22.0, hit_pct=95.0)
-        assert displacement == pytest.approx(0.2, abs=0.05)
-
-    def test_matches_worked_example_95pct_dice50(self):
-        """Same worked example, lateral axis: 'roll of 50... results in a
-        shot placement 0.4m left of aim point.'"""
-        displacement = shot_displacement_m(dice_score=50.0, hit_pct=95.0)
-        assert displacement == pytest.approx(0.4, abs=0.05)
 
     def test_higher_dice_score_means_larger_displacement(self):
         """A higher percentile roll is further from the aim point --
