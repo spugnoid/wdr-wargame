@@ -12,3 +12,6 @@ Thumbs.db
 
 # Reference source PDFs (large, not project deliverables)
 *.pdf
+
+# Subagent-driven-development scratch (progress ledger)
+.superpowers/
