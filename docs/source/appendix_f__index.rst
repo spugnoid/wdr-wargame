@@ -79,15 +79,15 @@ delay  ..........  16.8.2
 
 new sealed slip required  ..........  16.8.2
 
-**Ammunition (AMO)**  ..........  16.3, 21.1.3
+**Ammunition (AMO)**  ..........  16.3, 20.1.3
 
 extended ammunition table  ..........  16.3.3
 
-fog of war — secret bonus  ..........  16.3.1, 21.1.3
+fog of war — secret bonus  ..........  16.3.1, 20.1.3
 
 mortar AMO  ..........  16.3
 
-sniper AMO  ..........  21.1.2
+sniper AMO  ..........  20.1.2
 
 **Anti-infantry fire (vehicles)**  ..........  18.8
 
@@ -139,11 +139,11 @@ scale (1 AV = 10mm effective)  ..........  17.2.1
 
 slope calculation  ..........  17.2.4
 
-**Assault bridge**  ..........  22.8
+**Assault bridge**  ..........  21.8
 
-deployment procedure  ..........  22.8.2
+deployment procedure  ..........  21.8.2
 
-destruction  ..........  22.8.6
+destruction  ..........  21.8.6
 
 **Assault fire (move and fire)**  ..........  6.3, 7.3
 
@@ -183,13 +183,13 @@ size categories (single/small/large)  ..........  14.3.1
 
 condition: PEN < AV − 3  ..........  18.2
 
-**Breach / Breaching**  ..........  22.2
+**Breach / Breaching**  ..........  21.2
 
-BREACH marker  ..........  22.2.3
+BREACH marker  ..........  21.2.3
 
-obstacle thresholds  ..........  22.2.2
+obstacle thresholds  ..........  21.2.2
 
-under fire failure  ..........  22.2.5
+under fire failure  ..........  21.2.5
 
 **Break (morale)**  ..........  10.4, 15.2.3, 15.3.2
 
@@ -201,17 +201,17 @@ vs Rout  ..........  15.3
 
 **BROKEN zone (Casualty Track)**  ..........  10.4, 13.1
 
-**Building assault (engineer)**  ..........  22.6
+**Building assault (engineer)**  ..........  21.6
 
-bonuses by phase  ..........  22.6.2
+bonuses by phase  ..........  21.6.2
 
-**Burning marker**  ..........  22.5.4
+**Burning marker**  ..........  21.5.4
 
-duration  ..........  22.5.7
+duration  ..........  21.5.7
 
-effects  ..........  22.5.5
+effects  ..........  21.5.5
 
-extinguishing  ..........  22.5.6
+extinguishing  ..........  21.5.6
 
 **Buttoned up — see Pinned (vehicle)**  ..........  10.1, 18.7
 
@@ -225,7 +225,7 @@ between-scenario recovery rolls  ..........  13.3
 
 combining half squads  ..........  13.4
 
-Recovery Window  ..........  13.2, 20.7
+Recovery Window  ..........  13.2, 22.7
 
 **Careless movement**  ..........  7.4
 
@@ -235,7 +235,7 @@ free spot attempt triggered  ..........  7.4.3
 
 M#+1 hexes  ..........  7.4.1
 
-unavailable near sniper CONTACT marker  ..........  21.5.3
+unavailable near sniper CONTACT marker  ..........  20.5.3
 
 **Cascade (morale)**  ..........  15.4
 
@@ -303,13 +303,13 @@ not necessarily dead  ..........  10.7.2
 
 modifiers table  ..........  14.9.7
 
-sniper base CON  ..........  21.3.4
+sniper base CON  ..........  20.3.4
 
 **CONTACT marker**  ..........  14.8
 
 decay states (fresh/recent/cold)  ..........  14.8.2
 
-sniper type (crosshair)  ..........  21.4.3
+sniper type (crosshair)  ..........  20.4.3
 
 **Contested penetration**  ..........  18.2, 18.3
 
@@ -359,25 +359,25 @@ suppressed penalty (−2)  ..........  10.2.2
 
 pinned penalty (−3)  ..........  10.3.3
 
-**Deliberate targeting (sniper)**  ..........  21.2
+**Deliberate targeting (sniper)**  ..........  20.2
 
-long range cap exempt  ..........  8.7.4, 21.2.6
+long range cap exempt  ..........  8.7.4, 20.2.6
 
-priority target list  ..........  21.2.3
+priority target list  ..........  20.2.3
 
-**Demolitions (engineer)**  ..........  22.3
+**Demolitions (engineer)**  ..........  21.3
 
-DEMO capability icon  ..........  22.1.3
+DEMO capability icon  ..........  21.1.3
 
-targets and results  ..........  22.3.5
+targets and results  ..........  21.3.5
 
-under fire procedure  ..........  22.3.4
+under fire procedure  ..........  21.3.4
 
-**Detection roll (sniper)**  ..........  21.3.3
+**Detection roll (sniper)**  ..........  20.3.3
 
-CON modifiers  ..........  21.3.4
+CON modifiers  ..........  20.3.4
 
-procedure  ..........  21.3.2
+procedure  ..........  20.3.2
 
 **Dice — 1d6 + 1d8 + 1d12**  ..........  8.5
 
@@ -429,27 +429,27 @@ rFP bonus for elevated firer  ..........  4.5.1
 
 margin 23+  ..........  8.6, App.C
 
-**Engineer counters**  ..........  S.22
+**Engineer counters**  ..........  S.21
 
-assault bridge  ..........  22.8
+assault bridge  ..........  21.8
 
-breaching  ..........  22.2
+breaching  ..........  21.2
 
-building assault bonuses  ..........  22.6
+building assault bonuses  ..........  21.6
 
-capability icons  ..........  22.1.3
+capability icons  ..........  21.1.3
 
-demolitions  ..........  22.3
+demolitions  ..........  21.3
 
-flamethrower  ..........  22.5
+flamethrower  ..........  21.5
 
-fortification building  ..........  22.7
+fortification building  ..........  21.7
 
-mine clearing  ..........  22.4
+mine clearing  ..........  21.4
 
-representative counters 1943  ..........  22.9
+representative counters 1943  ..........  21.9
 
-**EXPENDED strip**  ..........  18.9.1, 22.1.3
+**EXPENDED strip**  ..........  18.9.1, 21.1.3
 
 covers used capability icon or weapon band  ..........  18.9.1
 
@@ -525,15 +525,15 @@ surprise bonus (+2 rFP)  ..........  14.7.6
 
 transition to HIDDEN on move  ..........  14.7.2
 
-**Flamethrower**  ..........  22.5
+**Flamethrower**  ..........  21.5
 
-burning marker  ..........  22.5.4
+burning marker  ..........  21.5.4
 
-cover halved  ..........  22.5.3
+cover halved  ..........  21.5.3
 
-fire line stats  ..........  22.5.2
+fire line stats  ..........  21.5.2
 
-vehicle targets (engine deck)  ..........  22.5.8
+vehicle targets (engine deck)  ..........  21.5.8
 
 **Force Morale**  ..........  15.5
 
@@ -545,11 +545,11 @@ formula  ..........  15.5.1
 
 threshold advances on pass  ..........  15.5.6
 
-**Fortification building (engineer)**  ..........  22.7
+**Fortification building (engineer)**  ..........  21.7
 
-times and results  ..........  22.7.4
+times and results  ..........  21.7.4
 
-under fire interruption  ..........  22.7.3
+under fire interruption  ..........  21.7.3
 
 **Forward observer (FO)**  ..........  1.3, 16.4.1
 
@@ -571,9 +571,9 @@ simultaneous resolution  ..........  9.3.1
 
 **Grenade value (G#)**  ..........  3.3.3
 
-engineer G5  ..........  22.1.2
+engineer G5  ..........  21.1.2
 
-sniper G0  ..........  21.1.2
+sniper G0  ..........  20.1.2
 
 **Guard (prisoner)**  ..........  11.3
 
@@ -689,7 +689,7 @@ vehicle LOS rule  ..........  17.6.3
 
 effective rFP ≤ 3 → max Pinned  ..........  8.7.1
 
-sniper exemption  ..........  8.7.4, 21.2.6
+sniper exemption  ..........  8.7.4, 20.2.6
 
 **M**
 
@@ -697,19 +697,19 @@ sniper exemption  ..........  8.7.4, 21.2.6
 
 hex size recommendations  ..........  1.5.5
 
-**Mine clearing (engineer)**  ..........  22.4
+**Mine clearing (engineer)**  ..........  21.4
 
-engineer immune to mine strike  ..........  22.4.3
+engineer immune to mine strike  ..........  21.4.3
 
-mine strike roll  ..........  22.4.2
+mine strike roll  ..........  21.4.2
 
-safe lane (BREACH marker)  ..........  22.4.5
+safe lane (BREACH marker)  ..........  21.4.5
 
-**Minefield hex**  ..........  22.4.1
+**Minefield hex**  ..........  21.4.1
 
-movement cost 3  ..........  22.4.1
+movement cost 3  ..........  21.4.1
 
-mine strike on entry  ..........  22.4.2
+mine strike on entry  ..........  21.4.2
 
 **Mobile weapon counters**  ..........  7.6
 
@@ -859,7 +859,7 @@ cost 1 MP per 60°  ..........  17.5.4
 
 casemate extra cost  ..........  17.4.4
 
-**Player aid card**  ..........  S.20 design notes, E.44
+**Player aid card**  ..........  S.22 design notes, E.44
 
 **POW markers**  ..........  11.2.2
 
@@ -915,7 +915,7 @@ markers removed  ..........  5.2.2
 
 recovery roll procedure  ..........  5.2.4
 
-**Recovery Window**  ..........  13.2, 20.7
+**Recovery Window**  ..........  13.2, 22.7
 
 four levels  ..........  13.2
 
@@ -983,25 +983,25 @@ vs Break  ..........  15.3
 
 **S**
 
-**Scenario design guidelines**  ..........  S.20
+**Scenario design guidelines**  ..........  S.22
 
-checklist  ..........  20.10
+checklist  ..........  22.10
 
-example parameters (Prokhorovka)  ..........  20.11
+example parameters (Prokhorovka)  ..........  22.11
 
-FIXED unit placement  ..........  20.8
+FIXED unit placement  ..........  22.8
 
-Force Morale calculation  ..........  20.3
+Force Morale calculation  ..........  22.3
 
-force ratio guidelines  ..........  20.2
+force ratio guidelines  ..........  22.2
 
-setup zone guidelines  ..........  20.9
+setup zone guidelines  ..........  22.9
 
-terrain density  ..........  20.4
+terrain density  ..........  22.4
 
-turn limit guidelines  ..........  20.5
+turn limit guidelines  ..........  22.5
 
-victory conditions  ..........  20.6
+victory conditions  ..........  22.6
 
 **Sealed slip — see Fire mission slip**  ..........  16.5
 
@@ -1019,23 +1019,23 @@ dissipation steps (THICK/THINNING/DISSIPATING)  ..........  16.10.2
 
 intervening penalty per step  ..........  16.10.2
 
-**Sniper counters**  ..........  S.21
+**Sniper counters**  ..........  S.20
 
-AMO — secret bonus  ..........  21.1.3
+AMO — secret bonus  ..........  20.1.3
 
-concealment and detection  ..........  21.3
+concealment and detection  ..........  20.3
 
-counter-sniper duel  ..........  21.6.3
+counter-sniper duel  ..........  20.6.3
 
-deliberate targeting  ..........  21.2
+deliberate targeting  ..........  20.2
 
-long range cap exempt  ..........  8.7.4, 21.2.6
+long range cap exempt  ..........  8.7.4, 20.2.6
 
-psychological area suppression  ..........  21.5
+psychological area suppression  ..........  20.5
 
-repositioning after firing  ..........  21.4
+repositioning after firing  ..........  20.4
 
-representative 1943 counters  ..........  21.7
+representative 1943 counters  ..........  20.7
 
 **Spot Action**  ..........  14.10
 
@@ -1181,9 +1181,9 @@ allowances by type  ..........  17.6.1
 
 terrain costs table  ..........  17.6.2
 
-**Victory conditions**  ..........  20.6
+**Victory conditions**  ..........  22.6
 
-types  ..........  20.6.2
+types  ..........  22.6.2
 
 **VISIBLE state**  ..........  1.3, 14.1
 

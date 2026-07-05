@@ -26,9 +26,10 @@ Rules of Play — Docs-as-Code Edition
    section_17__vehicles_counter_design_and_movement
    section_18__vehicle_combat_resolution
    section_19__vehicle_morale_bailout_and_capture
-   section_20__scenario_design_guidelines
-   section_21__snipers
-   section_22__engineers_and_assault_specialists
+   section_20__snipers
+   section_21__engineers_and_assault_specialists
+   section_22__scenario_design_guidelines
+   appendix_a__resolution_strip_quick_reference
    appendix_b__terrain_quick_reference
    appendix_c__result_thresholds
    appendix_d__counter_notation_reference

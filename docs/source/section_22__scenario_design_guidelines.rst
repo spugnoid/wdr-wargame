@@ -1,9 +1,9 @@
-Section 20 — Scenario Design Guidelines
+Section 22 — Scenario Design Guidelines
 =======================================
 
 This section provides guidelines for designing With Deepest Regret... scenarios. It is written for scenario designers — players who want to create their own engagements rather than use pre-designed scenarios. Following these guidelines will produce scenarios with historically plausible outcomes and balanced tactical decisions.
 
-20.1  Scenario Parameter Block
+22.1  Scenario Parameter Block
 ------------------------------
 
 
@@ -39,7 +39,7 @@ Every scenario sheet must include the following parameters. Players read these b
      - Tactical
    * - Victory conditions
      - What each side must achieve
-     - See Rule 20.6
+     - See Rule 22.6
    * - Special conditions
      - Scenario-specific rules
      - Night: visibility 2 hexes
@@ -54,11 +54,11 @@ Every scenario sheet must include the following parameters. Players read these b
      - Germans: columns A–B / Soviets: columns G–H
 
 
-20.2  Force Ratio Guidelines
+22.2  Force Ratio Guidelines
 ----------------------------
 
 
-**20.2.1**  Force ratios determine the likely outcome before play begins. Use these guidelines to design scenarios with meaningful decisions rather than foregone conclusions:
+**22.2.1**  Force ratios determine the likely outcome before play begins. Use these guidelines to design scenarios with meaningful decisions rather than foregone conclusions:
 
 .. list-table::
    :header-rows: 1
@@ -84,21 +84,21 @@ Every scenario sheet must include the following parameters. Players read these b
      - Attacker needs fire support and good tactics
 
 
-**20.2.2**  Count only combat units for force ratio calculations. Leaders, supply units, and off-map assets are not counted.
+**22.2.2**  Count only combat units for force ratio calculations. Leaders, supply units, and off-map assets are not counted.
 
-**20.2.3**  Quality adjusts the ratio. A veteran unit is worth approximately 1.5 regular units for ratio purposes. An elite unit is worth approximately 2 regular units. A green unit is worth approximately 0.6 regular units.
+**22.2.3**  Quality adjusts the ratio. A veteran unit is worth approximately 1.5 regular units for ratio purposes. An elite unit is worth approximately 2 regular units. A green unit is worth approximately 0.6 regular units.
 
-**20.2.4**  Vehicle units count as 2 combat units for ratio purposes at tactical scale. A heavy tank (Tiger, KV-1) counts as 3.
+**22.2.4**  Vehicle units count as 2 combat units for ratio purposes at tactical scale. A heavy tank (Tiger, KV-1) counts as 3.
 
-20.3  Force Morale Calculation
+22.3  Force Morale Calculation
 ------------------------------
 
 
-**20.3.1**  Calculate Force Morale for each side at scenario design time and record it on the scenario sheet. Players need this value at the start of play.
+**22.3.1**  Calculate Force Morale for each side at scenario design time and record it on the scenario sheet. Players need this value at the start of play.
 
-**20.3.2**  Force Morale = total combat unit count × force factor (round down, minimum 1).
+**22.3.2**  Force Morale = total combat unit count × force factor (round down, minimum 1).
 
-**20.3.3**  Force factors:
+**22.3.3**  Force factors:
 
 .. list-table::
    :header-rows: 1
@@ -118,15 +118,15 @@ Every scenario sheet must include the following parameters. Players read these b
      - Sum (units × individual factor) ÷ total units
 
 
-**20.3.4**  Example: German force of 8 units, 3 veteran (factor 0.5) and 5 regular (factor 0.4). Force Morale = floor(3×0.5 + 5×0.4) = floor(3.5) = 3 (round down, minimum 1 — Rule 15.5.1).
+**22.3.4**  Example: German force of 8 units, 3 veteran (factor 0.5) and 5 regular (factor 0.4). Force Morale = floor(3×0.5 + 5×0.4) = floor(3.5) = 3 (round down, minimum 1 — Rule 15.5.1).
 
-**20.3.5**  Record Force Morale on the scenario sheet. Do not recalculate during play — the value is fixed at scenario start.
+**22.3.5**  Record Force Morale on the scenario sheet. Do not recalculate during play — the value is fixed at scenario start.
 
-20.4  Terrain Density Guidelines
+22.4  Terrain Density Guidelines
 --------------------------------
 
 
-**20.4.1**  Terrain density determines the tactical style of the scenario. Use these guidelines:
+**22.4.1**  Terrain density determines the tactical style of the scenario. Use these guidelines:
 
 .. list-table::
    :header-rows: 1
@@ -149,21 +149,21 @@ Every scenario sheet must include the following parameters. Players read these b
      - Close assault focus · mortars and grenades dominate · vehicles nearly useless without engineers
 
 
-**20.4.2**  Place terrain to create tactical decisions, not decoration. Every terrain feature should do one of: channel movement, provide a defensible position, create a covered approach route, or obstruct LOS in a tactically meaningful way.
+**22.4.2**  Place terrain to create tactical decisions, not decoration. Every terrain feature should do one of: channel movement, provide a defensible position, create a covered approach route, or obstruct LOS in a tactically meaningful way.
 
-**20.4.3**  Ensure at least one covered approach route exists for each attacking force. A map with no covered approach makes the attacker's task nearly impossible and produces a one-sided scenario regardless of force ratio.
+**22.4.3**  Ensure at least one covered approach route exists for each attacking force. A map with no covered approach makes the attacker's task nearly impossible and produces a one-sided scenario regardless of force ratio.
 
-**20.4.4**  Objectives should be defensible terrain — buildings, high ground, prepared positions. An objective in open ground with no natural cover produces poor defensive play because the defender has no tactical advantage to exploit.
+**22.4.4**  Objectives should be defensible terrain — buildings, high ground, prepared positions. An objective in open ground with no natural cover produces poor defensive play because the defender has no tactical advantage to exploit.
 
-20.5  Turn Limit Guidelines
+22.5  Turn Limit Guidelines
 ---------------------------
 
 
-**20.5.1**  Turn limits should be set so that: a well-played attacker can just achieve the objective in time; a poorly-played attacker cannot; a well-played defender can hold to the limit without being eliminated.
+**22.5.1**  Turn limits should be set so that: a well-played attacker can just achieve the objective in time; a poorly-played attacker cannot; a well-played defender can hold to the limit without being eliminated.
 
-**20.5.2**  As a starting point, estimate the number of turns the attacker needs to cross the map and engage the objective, then add 1-2 turns for tactical complications.
+**22.5.2**  As a starting point, estimate the number of turns the attacker needs to cross the map and engage the objective, then add 1-2 turns for tactical complications.
 
-**20.5.3**  Rough turn estimates by scenario type:
+**22.5.3**  Rough turn estimates by scenario type:
 
 .. list-table::
    :header-rows: 1
@@ -189,15 +189,15 @@ Every scenario sheet must include the following parameters. Players read these b
      - Include withdrawal time in estimate
 
 
-**20.5.4**  Always playtest the turn limit before finalising. The most common error is setting too few turns — the attacker never has a realistic chance.
+**22.5.4**  Always playtest the turn limit before finalising. The most common error is setting too few turns — the attacker never has a realistic chance.
 
-20.6  Victory Conditions
+22.6  Victory Conditions
 ------------------------
 
 
-**20.6.1**  Victory conditions define what each side is trying to achieve. Clear, unambiguous conditions are essential — players should never be uncertain whether a condition has been met.
+**22.6.1**  Victory conditions define what each side is trying to achieve. Clear, unambiguous conditions are essential — players should never be uncertain whether a condition has been met.
 
-**20.6.2**  Victory condition types:
+**22.6.2**  Victory condition types:
 
 .. list-table::
    :header-rows: 1
@@ -223,15 +223,15 @@ Every scenario sheet must include the following parameters. Players read these b
      - Control objective = 3VP · each enemy CI = 1VP
 
 
-**20.6.3**  Define occupation clearly: a side controls an objective hex when they have at least one combat unit in the hex and the opponent has none. A hex with both sides present is contested — neither side controls it.
+**22.6.3**  Define occupation clearly: a side controls an objective hex when they have at least one combat unit in the hex and the opponent has none. A hex with both sides present is contested — neither side controls it.
 
-**20.6.4**  Victory point scenarios require pre-defined VP values for each condition recorded on the scenario sheet. Calculate total possible VP for each side and verify the scenario is winnable from both sides.
+**22.6.4**  Victory point scenarios require pre-defined VP values for each condition recorded on the scenario sheet. Calculate total possible VP for each side and verify the scenario is winnable from both sides.
 
-20.7  Recovery Window Selection
+22.7  Recovery Window Selection
 -------------------------------
 
 
-**20.7.1**  Recovery Window is a campaign parameter set by the scenario designer. It represents time elapsed between scenarios in campaign play.
+**22.7.1**  Recovery Window is a campaign parameter set by the scenario designer. It represents time elapsed between scenarios in campaign play.
 
 .. list-table::
    :header-rows: 1
@@ -254,21 +254,21 @@ Every scenario sheet must include the following parameters. Players read these b
      - Operational pause · full recovery possible · replacements arrive
 
 
-**20.7.2**  The losing side in a scenario has their Recovery Window reduced one step. A force that loses a scenario and has only Hours recovery will fight the next scenario with no recovery at all — compounding pressure that models real operational dynamics.
+**22.7.2**  The losing side in a scenario has their Recovery Window reduced one step. A force that loses a scenario and has only Hours recovery will fight the next scenario with no recovery at all — compounding pressure that models real operational dynamics.
 
-**20.7.3**  Set Recovery Windows honestly based on historical context. German forces in the summer of 1944 frequently had no recovery time between actions — this should be reflected in the campaign chain.
+**22.7.3**  Set Recovery Windows honestly based on historical context. German forces in the summer of 1944 frequently had no recovery time between actions — this should be reflected in the campaign chain.
 
-20.8  FIXED Unit Placement
+22.8  FIXED Unit Placement
 --------------------------
 
 
-**20.8.1**  FIXED units represent ambush positions, prepared defensive positions, and units not yet in contact. Their positions must be recorded on the scenario record sheet before play begins.
+**22.8.1**  FIXED units represent ambush positions, prepared defensive positions, and units not yet in contact. Their positions must be recorded on the scenario record sheet before play begins.
 
-**20.8.2**  Both players must agree that all FIXED positions have been recorded before the scenario begins. Neither player may add FIXED units after setup is complete.
+**22.8.2**  Both players must agree that all FIXED positions have been recorded before the scenario begins. Neither player may add FIXED units after setup is complete.
 
-**20.8.3**  FIXED units must be placed within their designated setup zone unless the scenario specifically permits otherwise.
+**22.8.3**  FIXED units must be placed within their designated setup zone unless the scenario specifically permits otherwise.
 
-**20.8.4**  Guidelines for FIXED unit placement by scenario type:
+**22.8.4**  Guidelines for FIXED unit placement by scenario type:
 
 .. list-table::
    :header-rows: 1
@@ -286,21 +286,21 @@ Every scenario sheet must include the following parameters. Players read these b
      - Both sides may place any unit as FIXED. High hidden unit density — spotting and information are primary tactical challenges.
 
 
-**20.8.5**  Limit FIXED dummy markers to a number equal to actual FIXED units — one dummy per real FIXED unit. More dummies than real units becomes implausible and tedious.
+**22.8.5**  Limit FIXED dummy markers to a number equal to actual FIXED units — one dummy per real FIXED unit. More dummies than real units becomes implausible and tedious.
 
-20.9  Setup Zone Guidelines
+22.9  Setup Zone Guidelines
 ---------------------------
 
 
-**20.9.1**  Setup zones define where each side deploys at scenario start. They should be defined in hexes or columns on the scenario sheet.
+**22.9.1**  Setup zones define where each side deploys at scenario start. They should be defined in hexes or columns on the scenario sheet.
 
-**20.9.2**  Setup zones should not overlap — both sides occupying the same zone at scenario start produces an immediate engagement that bypasses the approach and contact mechanics.
+**22.9.2**  Setup zones should not overlap — both sides occupying the same zone at scenario start produces an immediate engagement that bypasses the approach and contact mechanics.
 
-**20.9.3**  Minimum separation between setup zone edges: 4 hexes (160 yards) for infantry-only scenarios. 6 hexes (240 yards) for scenarios including vehicles — longer engagement ranges require more separation.
+**22.9.3**  Minimum separation between setup zone edges: 4 hexes (160 yards) for infantry-only scenarios. 6 hexes (240 yards) for scenarios including vehicles — longer engagement ranges require more separation.
 
-**20.9.4**  The defender should have at least one turn to reach and occupy key terrain before the attacker can engage at effective range. If the attacker can reach effective fire range in one activation from their setup zone, the defender has no time to set up — increase separation or restrict attacker setup depth.
+**22.9.4**  The defender should have at least one turn to reach and occupy key terrain before the attacker can engage at effective range. If the attacker can reach effective fire range in one activation from their setup zone, the defender has no time to set up — increase separation or restrict attacker setup depth.
 
-20.10  Scenario Design Checklist
+22.10  Scenario Design Checklist
 --------------------------------
 
 
@@ -338,7 +338,7 @@ Before finalising a scenario, verify the following:
      - Neither side has an obviously dominant strategy
 
 
-20.11  Historical Scenario Example Parameters
+22.11  Historical Scenario Example Parameters
 ---------------------------------------------
 
 

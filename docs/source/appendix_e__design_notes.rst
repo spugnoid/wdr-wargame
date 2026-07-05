@@ -265,7 +265,7 @@ E.43  Scenario Design as a System Layer
 ---------------------------------------
 
 
-*Design note: Scenario design guidelines were included in the rules document rather than a separate booklet because they are part of the game system — not an afterthought. The Force Morale calculation, Recovery Window, and FIXED unit placement rules are mechanical elements that must be set correctly for the game to produce historical outcomes. A scenario designer who ignores force ratios or sets an impossible turn limit has broken the simulation as surely as using incorrect unit stats. The checklist in Rule 20.10 formalises the quality bar — every scenario that passes the checklist should produce a playable, balanced engagement with historically plausible outcomes.*
+*Design note: Scenario design guidelines were included in the rules document rather than a separate booklet because they are part of the game system — not an afterthought. The Force Morale calculation, Recovery Window, and FIXED unit placement rules are mechanical elements that must be set correctly for the game to produce historical outcomes. A scenario designer who ignores force ratios or sets an impossible turn limit has broken the simulation as surely as using incorrect unit stats. The checklist in Rule 22.10 formalises the quality bar — every scenario that passes the checklist should produce a playable, balanced engagement with historically plausible outcomes.*
 
 E.44  Player Aid Card Design Principles
 ---------------------------------------
