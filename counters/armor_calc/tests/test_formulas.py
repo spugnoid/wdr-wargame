@@ -35,6 +35,7 @@ from armor_calc.formulas import (
     shatter_gap_window,
     slope_multiplier,
     vehicle_fire_thresholds,
+    vertical_lateral_hit_pct,
 )
 
 YD_TO_M = 0.9144
@@ -599,6 +600,37 @@ class TestShotDisplacement:
         tight = shot_displacement_m(dice_score=50.0, hit_pct=95.0)
         loose = shot_displacement_m(dice_score=50.0, hit_pct=20.0)
         assert tight < loose
+
+
+class TestVerticalLateralHitPct:
+    """Appendix 15's Table 1, 'Simplified Hit Probability Breakdown,
+    Stationary Target' -- splits an overall hit% into separate vertical
+    and lateral hit% against a 2m x 2m reference target."""
+
+    def test_matches_table_exactly_at_listed_rows(self):
+        """Spot-check several of the 19 listed rows directly, no
+        interpolation involved."""
+        assert vertical_lateral_hit_pct(95.0) == (95.0, 98.0)
+        assert vertical_lateral_hit_pct(50.0) == (65.0, 80.0)
+        assert vertical_lateral_hit_pct(5.0) == (15.0, 35.0)
+
+    def test_interpolates_between_listed_rows(self):
+        """62.5 sits exactly halfway between the table's 60 and 65 rows
+        (60 -> vertical 70/lateral 85; 65 -> vertical 70/lateral 90) --
+        vertical is flat across this interval so must return exactly 70,
+        lateral must land exactly halfway at 87.5."""
+        vertical, lateral = vertical_lateral_hit_pct(62.5)
+        assert vertical == pytest.approx(70.0)
+        assert lateral == pytest.approx(87.5)
+
+    def test_clamps_below_lowest_listed_value(self):
+        """The table only goes down to 5% overall hit -- below that,
+        clamp to the lowest row rather than extrapolating or erroring."""
+        assert vertical_lateral_hit_pct(1.0) == vertical_lateral_hit_pct(5.0)
+
+    def test_clamps_above_highest_listed_value(self):
+        """The table only goes up to 95% overall hit."""
+        assert vertical_lateral_hit_pct(99.0) == vertical_lateral_hit_pct(95.0)
 
 
 class TestPartialFaceHardening:

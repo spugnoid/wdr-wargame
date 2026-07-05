@@ -615,6 +615,43 @@ def shot_displacement_m(dice_score: float, hit_pct: float) -> float:
     return dice_a / hit_a
 
 
+# Appendix 15's "SIMPLIFIED HIT PROBABILITY BREAKDOWN, STATIONARY TARGET"
+# table (p.116-117), transcribed in ascending order for interpolation.
+# (overall_hit_pct, lateral_hit_pct, vertical_hit_pct)
+_HIT_PCT_BREAKDOWN: list[tuple[float, float, float]] = [
+    (5, 35, 15), (10, 40, 25), (15, 45, 35), (20, 50, 40), (25, 55, 45),
+    (30, 60, 50), (35, 65, 55), (40, 70, 55), (45, 75, 60), (50, 80, 65),
+    (55, 85, 65), (60, 85, 70), (65, 90, 70), (70, 95, 75), (75, 95, 80),
+    (80, 95, 85), (85, 98, 85), (90, 98, 90), (95, 98, 95),
+]
+
+
+def vertical_lateral_hit_pct(overall_hit_pct: float) -> tuple[float, float]:
+    """Split an overall hit percentage into separate vertical and lateral
+    hit percentages against a 2m x 2m reference target.
+
+    Source: Bird & Livingston Appendix 15 p.116-117, "Simplified Hit
+    Probability Breakdown, Stationary Target" table. Linearly interpolated
+    between the table's 19 listed rows; clamped at both ends (the table
+    only covers 5-95% overall hit).
+
+    Args:
+        overall_hit_pct: Overall hit probability, 0-100.
+
+    Returns:
+        (vertical_hit_pct, lateral_hit_pct).
+    """
+    x = min(max(overall_hit_pct, _HIT_PCT_BREAKDOWN[0][0]), _HIT_PCT_BREAKDOWN[-1][0])
+    for (x0, lat0, vert0), (x1, lat1, vert1) in zip(_HIT_PCT_BREAKDOWN, _HIT_PCT_BREAKDOWN[1:]):
+        if x0 <= x <= x1:
+            frac = 0.0 if x1 == x0 else (x - x0) / (x1 - x0)
+            vertical = vert0 + frac * (vert1 - vert0)
+            lateral = lat0 + frac * (lat1 - lat0)
+            return vertical, lateral
+    # Unreachable given the clamp above, but keeps the type checker honest.
+    return _HIT_PCT_BREAKDOWN[-1][2], _HIT_PCT_BREAKDOWN[-1][1]  # pragma: no cover
+
+
 def cast_deficiency_multiplier(thickness_mm: float, diameter_mm: float) -> float:
     """Cast armor's resistance deficiency relative to rolled homogeneous armor.
 
