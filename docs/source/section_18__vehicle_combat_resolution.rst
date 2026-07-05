@@ -225,6 +225,21 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
      - +1
 
 
+18.6a  Hit Location
+--------------------
+
+
+**18.6a.1**  Whenever Rule 18.5.1 or 18.6.1 produces a "Component damage — vehicle Casualty" result, roll 1d6+1d8+1d12 (the same combination used for every other attack, Rule 8.5.1) against the target vehicle's own Hit Location Table (Rule 17.7) for the profile that was hit (Hull or Turret, per the Gunnery Roll's own determination, Rule 18.1a) and the actual range to target.
+
+**18.6a.2**  If the roll is below the Neither Threshold, the hit landed somewhere non-critical — downgrade the result from Casualty to Pinned (Rule 18.7) instead. The round penetrated, but nothing essential was destroyed.
+
+**18.6a.3**  If the roll is at or above the Mobility Threshold, the hit is a MOB kill. If the roll is at or above the Neither Threshold but below the Mobility Threshold, the hit is a GUN kill.
+
+**18.6a.4**  Vehicles without a printed Hit Location Table use Rule 17.1.1's owning-player judgement call instead — this rule only applies to vehicles whose table has actually been built (Tiger I Ausf E and Sherman M4A1 (75mm), this edition).
+
+*NOTE: This can only ever make an outcome different from what free choice would have picked — it has no effect on whether a Casualty occurs in the first place (Rule 18.5/18.6 are unchanged), only on which specific outcome follows one. A hit that resolves to "Neither" is a real, sourced consequence of this system, not an edge case being carved out: it reflects that not every penetrating hit finds something critical to destroy.*
+
+
 18.7  Vehicle Damage States
 ---------------------------
 

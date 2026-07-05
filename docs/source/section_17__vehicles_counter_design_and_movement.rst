@@ -59,7 +59,7 @@ Vehicle counters display the following fields:
      - Crew defensive resilience
 
 
-**17.1.1**  Vehicle counters have two rear faces representing damage states: MOB KILL (mobility killed — M0, can still fire) and GUN KILL (gun destroyed — MG only, can still move). When a vehicle takes a Casualty result, the owning player chooses which rear face applies based on the most plausible damage given the shot geometry.
+**17.1.1**  Vehicle counters have two rear faces representing damage states: MOB KILL (mobility killed — M0, can still fire) and GUN KILL (gun destroyed — MG only, can still move). When a vehicle takes a Casualty result, roll against the Hit Location Table (Rule 18.6a) to determine which rear face applies — this is no longer a free narrative choice.
 
 **17.1.2**  Casemate vehicles (TRAV 0 — no separate turret) print only Hull armour values, which apply regardless of which "profile" Rule 18.1a's Gunnery Roll would otherwise indicate. There is no Hull/Turret hit allocation for these vehicles.
 
@@ -312,3 +312,23 @@ Casemate vehicles (TRAV 0) never receive a TRAVERSED marker; they have no separa
 
 
 **17.6.3**  Vehicle LOS: vehicles are larger than infantry. Any unit with LOS to a vehicle's hex automatically has LOS to the vehicle through up to 2 hexes of light woods or 1 hex of dense woods. Normal LOS rules apply beyond these limits.
+
+17.7  Hit Location
+-------------------
+
+
+**17.7.1**  Vehicles with a Hit Location Table printed (Tiger I Ausf E and Sherman M4A1 (75mm), this edition — see Rule 18.6a) resolve MOB kill vs. GUN kill by roll rather than free choice. Vehicles without a printed Hit Location Table continue to use the owning player's judgement call (Rule 17.1.1) until their own table is built.
+
+**17.7.2**  The table gives a Neither Threshold and a Mobility Threshold for each range band and crew quality, already resolved for the specific attacking gun class used to build it. No calculation is required at the table — read the row for the actual range and the firing vehicle's own Crew Quality (Rule 18.1a.2).
+
+*Example format (values illustrative, drawn from this session's actual computed output for Tiger I's Hull profile, Regular crew — see* `hit_location_output.csv` *for the full table):*
+
+.. list-table::
+   :header-rows: 1
+
+   * - Range
+     - Result
+   * - 100–750m
+     - Roll below Neither Threshold: Neither (Casualty downgrades to Pinned). Roll at or above Mobility Threshold: MOB kill. Between the two: GUN kill.
+   * - 1000m+
+     - Same procedure, using that range band's own printed thresholds — dispersion widens with range, so the Neither band grows.

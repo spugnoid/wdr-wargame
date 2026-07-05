@@ -231,6 +231,12 @@ The following terms are used throughout this document. Each term is defined here
 
 **Schürzen —**  Standoff skirt armour fitted to a vehicle's Hull or Turret Side arc, effective against HEAT specifically (Rule 18.2b). No effect against kinetic rounds.
 
+**Hit Location Table —**  A per-vehicle table (Rule 17.7) giving the Neither/Mobility dice-roll thresholds used to resolve MOB kill vs. GUN kill vs. a downgrade to Pinned, whenever a Casualty result occurs. Rule 18.6a.
+
+**Mobility zone —**  A hit-location zone containing a mobility-critical component (engine, transmission, final drive). A roll landing here produces a MOB kill.
+
+**Gun zone —**  A hit-location zone containing the gun, breech, turret ring, or on-board ammunition stowage. A roll landing here produces a GUN kill.
+
 **Bail-out —**  Vehicle crew abandoning their vehicle under sustained fire or morale failure. CREW counter placed in hex. Vehicle remains as ABANDONED counter.
 
 **Buttoned up —**  Vehicle Pinned status. Crew closes hatches — limited visibility, -2 OBS, cannot spot hidden units.
