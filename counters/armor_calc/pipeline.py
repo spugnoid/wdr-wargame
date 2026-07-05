@@ -5,6 +5,7 @@ Source data (editable like a spreadsheet, no Python required to update):
   data/gun_calibration.csv  -- one row per attested penetration data point
   data/vehicles.csv         -- one row per vehicle arc-profile plate
   data/hardness_table.csv   -- BHN by nation/armor-type/era/thickness bracket
+  data/hit_zones.csv        -- one row per vehicle hit-location zone (profile/arc/classification)
 
 Run: python3 -m counters.armor_calc.pipeline
 Output: counters/armor_calc/roster_output.csv
