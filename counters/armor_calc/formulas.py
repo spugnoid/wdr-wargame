@@ -677,6 +677,13 @@ class HitZone:
 
 
 def _find_zone(zones: list[HitZone], x: float, y: float) -> HitZone | None:
+    """Return the first zone (in list order) whose bounding box contains
+    (x, y), or None if no zone does.
+
+    If zones overlap, list order is the tie-break: earlier zones in the
+    list take precedence. Callers authoring zone geometry should keep
+    zones non-overlapping where possible rather than relying on this.
+    """
     for zone in zones:
         if zone.x_min <= x <= zone.x_max and zone.y_min <= y <= zone.y_max:
             return zone

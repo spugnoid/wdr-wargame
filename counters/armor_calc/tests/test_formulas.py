@@ -692,6 +692,20 @@ class TestHitLocationClassification:
                                        rng=np.random.default_rng(3))
         assert tight["gun"] > loose["gun"]
 
+    def test_directional_symmetry_left_right_zones_split_evenly(self):
+        """A left-half zone and a right-half zone should each catch about
+        half the hits -- this would fail if the random direction sign were
+        ever dropped (which would bias every hit into a single direction),
+        a regression the other tests in this class do not catch."""
+        zones = [
+            HitZone(name="right half", classification="gun", x_min=0.0, x_max=999.0, y_min=-999.0, y_max=999.0),
+            HitZone(name="left half", classification="mobility", x_min=-999.0, x_max=0.0, y_min=-999.0, y_max=999.0),
+        ]
+        result = classify_hit_location(zones, overall_hit_pct=70.0, n_samples=20000,
+                                        rng=np.random.default_rng(7))
+        assert result["gun"] == pytest.approx(50.0, abs=3.0)
+        assert result["mobility"] == pytest.approx(50.0, abs=3.0)
+
 
 class TestPartialFaceHardening:
     """Session finding: Panzer III Ausf M's hull front is a 20mm bolted
