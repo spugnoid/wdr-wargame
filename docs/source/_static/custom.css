@@ -17,10 +17,13 @@
   --cream: #fbf8f0;
 }
 
-/* Main content area */
+/* Main content area -- use the full width available next to the sidebar
+   instead of the theme's fixed 800px centered column */
 
 .wy-nav-content {
   background: var(--paper) !important;
+  max-width: none !important;
+  margin: 0 !important;
 }
 
 .wy-body-for-nav,
@@ -111,9 +114,14 @@
   background: var(--olive) !important;
 }
 
-/* Tables */
+/* Tables -- contain horizontal overflow to the table itself (display:block
+   lets overflow-x apply directly to a <table>) so a wide table scrolls in
+   its own box instead of forcing a page-level horizontal scrollbar */
 
 .rst-content table.docutils {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
   border: 1px solid var(--khaki);
 }
 
