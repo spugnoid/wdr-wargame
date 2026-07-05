@@ -1,5 +1,7 @@
 # With Deepest Regret...
 
+[![Documentation Status](https://readthedocs.org/projects/with-deepest-regret/badge/?version=latest)](https://with-deepest-regret.readthedocs.io/en/latest/?badge=latest)
+
 A free, open, hex-and-counter WWII tactical wargame system. Squad-level infantry and armoured combat, 40-yard hex scale.
 
 ## Repository layout
@@ -18,7 +20,11 @@ maps/       SVG hex map generator (planned, not yet built)
 Each `counters/` package has its own README with details on its data files
 and how to run it.
 
-## Building the docs locally
+## Reading the docs
+
+The Rules of Play build automatically on every push to `main` and are hosted at [with-deepest-regret.readthedocs.io](https://with-deepest-regret.readthedocs.io/en/latest/).
+
+### Building the docs locally
 
 ```
 cd docs
