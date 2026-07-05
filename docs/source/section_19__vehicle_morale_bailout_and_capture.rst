@@ -174,102 +174,126 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
 ------------------------------------------
 
 
-*[ TBD: All values below are PRELIMINARY. Verify against primary historical sources before treating as final. See Rule 17.3.6 for recommended primary sources. ]*
+*Hull/Turret AV and own-gun PEN values below are computed by* `counters/armor_calc/` *(Rule 17.2.5) and reflect the current Hull/Turret AV split, not the flat single-facing figures this table originally showed. This is a compact "at a glance" comparison — Front facing, AV-vs-Capped only, one representative range band. For AV-vs-Tungsten, Side/Rear facings, full range-band PEN, and the full Gunnery Table across every crew quality, see* `roster_output.csv`, `gun_curves_output.csv`, *and* `vehicle_fire_thresholds_output.csv` *in that directory. TRAV, M#, MG fire line, and Morale are unrelated to the armour/gunnery redesign and are carried over unchanged from this table's original values; HE rFP is recomputed fresh from each vehicle's actual gun calibre (Rule 18.8.4) since the previous figures included at least one confirmed error (see note below).*
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - **Vehicle**
-     - **F/S/R**
-     - **AP PEN**
+     - **Main Gun**
+     - **Hull Front AV**
+     - **Turret Front AV**
+     - **Gun PEN @ 500m**
      - **TRAV**
      - **M#**
      - **HE**
      - **MG**
      - **Morale**
    * - Panzer IV Ausf H
-     - 9/3/2
-     - 11 ⬡8 -1
+     - 75mm KwK40 L48
+     - 64.9
+     - 78.9
+     - 119.6
      - 3
      - M3
      - 4
      - 4 ⬡3 -1
      - 6
    * - Panzer III Ausf M
-     - 6/3/2
-     - 8 ⬡6 -1
+     - 50mm KwK39 L60
+     - 51.4
+     - 57.8
+     - 69.0
      - 3
      - M3
-     - 2
+     - 3
      - 4 ⬡3 -1
      - 6
    * - Tiger I Ausf E
-     - 11/8/8
-     - 14 ⬡6 -1
+     - 88mm KwK36
+     - 102.0
+     - 143.0
+     - 137.4
      - 2
      - M2
-     - 5
+     - 4
      - 4 ⬡3 -1
      - 6
    * - StuG III Ausf G
-     - 8/3/2
-     - 11 ⬡8 -1
+     - 75mm KwK40 L48
+     - 87.1
+     - — (casemate)
+     - 119.6
      - 0
      - M3
      - 4
      - 3 ⬡3 -1
      - 6
    * - T-34 Model 1943
-     - 9/5/3
-     - 9 ⬡5 -1
+     - 76mm F-34
+     - 93.7
+     - 55.8
+     - 72.2
      - 3
      - M3
      - 4
      - 3 ⬡3 -1
      - 5
    * - T-34/85 (late 1943)
-     - 9/6/3
-     - 14 ⬡6 -1
+     - 85mm D-5T
+     - 93.7
+     - 146.0
+     - 119.8
      - 3
      - M3
      - 4
      - 3 ⬡3 -1
      - 5
    * - KV-1S
-     - 9/7/4
-     - 9 ⬡5 -1
+     - 76mm ZIS-5 (modelled on F-34 curve — Rule 18.12(f))
+     - 85.2
+     - 129.1
+     - 72.2
      - 1
      - M2
      - 4
      - 3 ⬡3 -1
      - 5
    * - SU-85
-     - 9/5/3
-     - 14 ⬡6 -1
+     - 85mm D-5S (modelled on D-5T curve — Rule 18.12(f))
+     - 75.5
+     - — (casemate)
+     - 119.8
      - 0
      - M3
      - 4
      - 3 ⬡3 -1
      - 5
    * - Sherman M4A1 (75mm)
-     - 8/4/4
-     - 10 ⬡8 -1
+     - 75mm M3 L31
+     - 76.7
+     - 89.0
+     - 77.9
      - 3
      - M3
      - 4
      - 4 ⬡3 -1
      - 6
    * - Sherman M4A3 (76mm)
-     - 8/4/4
-     - 13 ⬡6 -1
+     - 76mm M1
+     - 115.5
+     - 93.6
+     - 117.5
      - 3
      - M3
      - 4
      - 4 ⬡3 -1
      - 6
    * - Sdkfz 251 half-track
-     - 2/1/1
+     - — (MG only, no main gun)
+     - 14.3
+     - — (no turret)
      - —
      - —
      - M4
@@ -277,13 +301,18 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - 3 ⬡3 -1
      - 5
    * - T-70 light tank
-     - 4/3/2
-     - 5 ⬡4 -1
+     - 45mm 20K L46 (APBC)
+     - 44.0
+     - 30.5
+     - 59.3
      - 3
      - M4
      - 2
      - 3 ⬡3 -1
      - 5
 
+*HE corrections: Tiger I Ausf E's 88mm gun gives HE rFP = ROUND(88/20) = 4 by Rule 18.8.4's own stated formula and worked example ("88mm = 4") — this table previously printed 5, a plain arithmetic error unrelated to the armour redesign, now fixed. Panzer III Ausf M's 50mm gun gives exactly 2.5, a genuine rounding-convention tie; resolved as 3 (round-half-up) for consistency with this project's established convention elsewhere (Excel-style rounding, not Python's round-half-to-even) — previously printed 2, flagged here as a judgement call rather than a silent change.*
 
-*NOTE: Sherman 76mm PEN value revised to 13 ⬡6 -1 based on reassessment of Aberdeen Proving Ground M62 APC data. This produces a contested (not automatic) result against Tiger I front at 400 yards — historically more accurate than the original preliminary value of 16.*
+*Known gap: Panther Ausf G's real, sourced Hull Front AV (229.1) / Turret Front AV (249.2) and own-gun PEN @ 500m (158.6mm, 75mm KwK42 L70) are already in* `armor_calc`*'s roster output, but this vehicle was never added to this table. Deliberately not added here either — TRAV, M#, and MG fire line for Panther would need real game-design judgement (not just tool output) to set consistently with the rest of this table, and inventing them here would be a guess dressed up as data. Worth a real design pass, not a quiet addition.*
+
+*For the current, correctly-resolved Sherman 76mm vs. Tiger I and T-34/85 vs. Tiger I matchups at 400 yards (both were "contested"/"marginal" under the old system for reasons the new Hull/Turret split now makes explicit), see Rule 18.12(d) — the old flat "PEN value revised" footnote this table previously carried referred to a dice-notation AP PEN format that no longer exists under the current resolution model.*
