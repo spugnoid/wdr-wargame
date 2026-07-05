@@ -1,0 +1,13 @@
+unit_id,nation,unit_type,year_bracket,face,quality,manpower_full,manpower_reduced,weapon1_name,weapon1_count,weapon1_practical_rpm_override,weapon2_name,weapon2_count,weapon2_practical_rpm_override,weapon3_name,weapon3_count,weapon3_practical_rpm_override,m_number,f_number,g_number,source,verify_status,notes
+GER_GREN_1943.3_F,Germany,Grenadier Squad,1943.3,F,regular,9,4,MG42 LMG (bipod),1,,Kar98k,8,,,,,2,2,3,"Nafziger OOB, TM-E 30-451",ANCHOR,"Standard German infantry squad mid-1943. Anchor unit for system calibration."
+GER_GREN_1943.3_R,Germany,Grenadier Squad (reduced),1943.3,R,regular,9,4,Kar98k,4,,,,,,,,2,2,2,Derived from front face,ANCHOR,"Rear face: MG42 LMG lost. 4 riflemen remain."
+GER_PZGR_1943.3_F,Germany,Panzergrenadier Squad,1943.3,F,veteran,10,5,MG42 LMG (bipod),1,,MP40,6,,,,,2,2,4,Nafziger OOB,PRELIMINARY,"Mechanized infantry squad. Higher SMG concentration for vehicle assault."
+GER_PZGR_1943.3_R,Germany,Panzergrenadier Squad (reduced),1943.3,R,veteran,10,5,MP40,3,,,,,,,,2,2,3,Derived from front face,PRELIMINARY,"Rear face: MG42 LMG lost. 3x MP40 remain."
+GER_MG42_1943.3_F,Germany,MG42 HMG Team,1943.3,F,regular,4,2,MG42 HMG (tripod),1,,,,,,,,0,3,1,HDv 130,PRELIMINARY,"Tripod-mounted MG42 team. Weapon counter -- does not count toward stacking."
+GER_MG42_1943.3_R,Germany,MG42 HMG Team (reduced crew),1943.3,R,regular,4,2,MG42 HMG (tripod),1,250,,,,,,,0,3,1,Derived from front face,PRELIMINARY,"Rear face: 2-man crew. Reduced practical RPM -- barrel changes slower."
+SOV_GDSRIF_1943.3_F,Soviet Union,Guards Rifle Squad,1943.3,F,veteran,9,5,DP-28,1,,PPSh-41,4,,,,,2,2,4,STAVKA TO&E 1943,PRELIMINARY,"Guards formation -- selected veterans post-Stalingrad. Heavy PPSh-41 concentration reflects assault doctrine."
+SOV_GDSRIF_1943.3_R,Soviet Union,Guards Rifle Squad (reduced),1943.3,R,veteran,9,5,PPSh-41,2,,,,,,,,2,2,3,Derived from front face,PRELIMINARY,"Rear face: DP-28 lost. 2x PPSh-41 remain."
+SOV_RIFSQ_1943.3_F,Soviet Union,Rifle Squad,1943.3,F,regular,10,5,DP-28,1,,Mosin-Nagant,6,,PPSh-41,2,,2,2,3,STAVKA TO&E 1943,PRELIMINARY,"Standard Soviet rifle squad mid-1943. Mixed Mosin/PPSh/DP-28 loadout reflects increasing SMG distribution."
+SOV_RIFSQ_1943.3_R,Soviet Union,Rifle Squad (reduced),1943.3,R,regular,10,5,Mosin-Nagant,4,,,,,,,,2,2,2,Derived from front face,PRELIMINARY,"Rear face: DP-28 and PPSh lost. 4x Mosin remain."
+SOV_DP28_1943.3_F,Soviet Union,DP-28 LMG Team,1943.3,F,regular,3,2,DP-28,1,,,,,,,,0,3,2,STAVKA small arms manual,PRELIMINARY,"DP-28 bipod LMG team. Weapon counter."
+SOV_DP28_1943.3_R,Soviet Union,DP-28 LMG Team (reduced crew),1943.3,R,regular,3,2,DP-28,1,150,,,,,,,0,3,1,Derived from front face,PRELIMINARY,"Rear face: 2-man crew. Practical RPM reduced -- pan mag changes slower."
