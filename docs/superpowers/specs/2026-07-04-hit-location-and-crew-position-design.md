@@ -33,7 +33,7 @@ Casualty result occurs (Rule 18.5.1 or 18.6.1)
   -> result: MOB kill / GUN kill / Neither (-> downgrades to Pinned, replacing the Casualty)
 ```
 
-This slots directly into the existing Rule 18.7.1 hook ("owning player chooses which rear face applies") — the choice is replaced by a roll, nothing upstream (18.1-18.6's penetration determination) changes.
+This slots directly into the existing Rule 17.1.1 hook ("owning player chooses which rear face applies") — the choice is replaced by a roll, nothing upstream (18.1-18.6's penetration determination) changes.
 
 ### 3.2 Zone geometry and coordinate system
 
