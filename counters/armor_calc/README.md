@@ -30,7 +30,7 @@ for the design this implements.
 
 ```
 python3 -m pytest counters/armor_calc/tests/
-python3 -m counters.armor_calc.pipeline
+PYTHONPATH=counters python3 -m armor_calc.pipeline
 ```
 
 Writes `roster_output.csv` (AV-vs-Capped per vehicle/profile/arc) and
