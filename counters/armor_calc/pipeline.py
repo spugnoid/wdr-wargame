@@ -16,13 +16,14 @@ import csv
 import pathlib
 from dataclasses import dataclass
 
+import numpy as np
+
 from .formulas import (
     ALL_CREW_QUALITIES,
     AmmoFamily,
     ArmorPlate,
     FlawSeverity,
     GunCurveFit,
-    HitLocationThresholds,
     HitZone,
     area_weighted_av,
     base_hit_probability,
@@ -45,6 +46,13 @@ from .formulas import (
 # individual guns (design spec §7). A gun-specific roster would pick its own
 # nearest analog instead of this one global default.
 DEFAULT_TUNGSTEN_FAMILY: AmmoFamily = "hvap76"
+
+# Fixed seed for Hit Location Table Monte Carlo classification.
+# The printed table must be reproducible run-to-run (design principle: "one
+# stable printed table, roll once, read the result" -- see superpowers plan
+# 2026-07-04-hit-location-and-crew-position.md). Without a fixed seed, the
+# CSV's own thresholds would drift on regeneration, undermining this principle.
+_HIT_LOCATION_RNG_SEED = 20260704
 
 DATA_DIR = pathlib.Path(__file__).parent / "data"
 
@@ -531,7 +539,9 @@ def write_hit_location_reference_csv(
             for quality in ALL_CREW_QUALITIES:
                 for range_m in bands:
                     hit_pct = hit_probability(fit.muzzle_velocity_fps, fit.k_factor, range_m, quality)
-                    split = classify_hit_location(zones, hit_pct)
+                    split = classify_hit_location(
+                        zones, hit_pct, rng=np.random.default_rng(_HIT_LOCATION_RNG_SEED)
+                    )
                     thresholds = hit_location_thresholds(split)
                     writer.writerow(
                         [
