@@ -6,9 +6,17 @@ A free, open, hex-and-counter WWII tactical wargame system. Squad-level infantry
 
 ```
 docs/       Rules of Play, built with Sphinx, hosted on Read the Docs
-counters/   Excel counter designer + CorelDraw VBA macro + templates
-maps/       SVG hex map generator
+counters/   Design-time calculation engine (Python) — computes the
+            armor/gunnery and infantry counter values printed on counters
+            from sourced formulas. Nothing here runs at the table.
+              armor_calc/     vehicle armor, penetration, and gunnery
+              infantry_calc/  infantry/support-weapon counter values
+              quality/        shared crew/unit quality-tier vocabulary
+maps/       SVG hex map generator (planned, not yet built)
 ```
+
+Each `counters/` package has its own README with details on its data files
+and how to run it.
 
 ## Building the docs locally
 
@@ -20,6 +28,20 @@ sphinx-build -b html source _build/html
 
 Open `docs/_build/html/index.html` in a browser.
 
+## Running the calculation engine and tests
+
+```
+pip install -r counters/requirements.txt
+python3 -m pytest counters/
+PYTHONPATH=counters python3 -m armor_calc.pipeline
+PYTHONPATH=counters python3 -m infantry_calc.pipeline
+```
+
+Both pipelines write plain CSV reference tables (vehicle armor/gunnery
+values, infantry counter values) into their own package directory —
+open directly in Excel/Sheets to review, or hand-edit the CSV inputs
+under each package's `data/` directory to add or correct an entry.
+
 ## License
 
 This project uses two licenses, split by content type:
@@ -27,7 +49,7 @@ This project uses two licenses, split by content type:
 | Content | License | File |
 | --- | --- | --- |
 | Rules text (`docs/`), counter art, maps | CC BY 4.0 | [LICENSE-CONTENT.md](LICENSE-CONTENT.md) |
-| Code — VBA macro, build scripts, future web client | MIT | [LICENSE-CODE.md](LICENSE-CODE.md) |
+| Code — the `counters/` calculation engine, build scripts | MIT | [LICENSE-CODE.md](LICENSE-CODE.md) |
 
 Both permit commercial use and modification. CC BY 4.0 requires attribution to the With Deepest Regret Project; MIT requires only that the license notice be preserved. Neither restricts building closed-source tools or commercial products on top of this work.
 
