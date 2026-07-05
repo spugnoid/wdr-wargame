@@ -109,13 +109,18 @@ def load_units(path: pathlib.Path = DATA_DIR / "units.csv") -> list[UnitRow]:
                 for slot in (_parse_weapon_slot(r, n) for n in (1, 2, 3))
                 if slot is not None
             ]
+            face = r["face"]
+            if face not in ("F", "R"):
+                raise ValueError(
+                    f"Unit {r['unit_id']!r}: face must be 'F' or 'R', got {face!r}"
+                )
             rows.append(
                 UnitRow(
                     unit_id=r["unit_id"],
                     nation=r["nation"],
                     unit_type=r["unit_type"],
                     year_bracket=r["year_bracket"],
-                    face=r["face"],  # type: ignore[arg-type]
+                    face=face,  # type: ignore[arg-type]
                     quality=r["quality"],  # type: ignore[arg-type]
                     manpower_full=int(r["manpower_full"]),
                     manpower_reduced=int(r["manpower_reduced"]),

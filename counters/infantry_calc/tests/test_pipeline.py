@@ -98,6 +98,25 @@ class TestLoadUnits:
         assert units["GER_GREN_1943.3_F"].source == "Nafziger OOB, TM-E 30-451"
         assert units["SOV_GDSRIF_1943.3_F"].source == "STAVKA TO&E 1943"
 
+    def test_invalid_face_value_raises_value_error(self, tmp_path):
+        """Confirm that face must be exactly 'F' or 'R', not any other value."""
+        csv_path = tmp_path / "units_bad_face.csv"
+        # Minimal valid CSV structure with an invalid face value
+        csv_path.write_text(
+            "unit_id,nation,unit_type,year_bracket,face,quality,"
+            "manpower_full,manpower_reduced,weapon1_name,weapon1_count,"
+            "weapon1_practical_rpm_override,weapon2_name,weapon2_count,"
+            "weapon2_practical_rpm_override,weapon3_name,weapon3_count,"
+            "weapon3_practical_rpm_override,m_number,f_number,g_number,"
+            "source,verify_status,notes\n"
+            "TEST_UNIT_1,TestNation,TestType,1943.3,f,regular,"
+            "10,5,Kar98k,4,,,,,,,,2,2,3,TestSource,TEST,\n"
+        )
+        with pytest.raises(ValueError) as exc_info:
+            load_units(path=csv_path)
+        assert "face must be 'F' or 'R'" in str(exc_info.value)
+        assert "TEST_UNIT_1" in str(exc_info.value)
+
 
 class TestWriteInfantryRosterCsv:
     """Cross-checked against the infantry-counter-design spreadsheet's
