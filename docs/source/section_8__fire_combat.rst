@@ -49,11 +49,27 @@ The full procedure for any fire combat action:
 
 **8.3.3**  Same-hex shortcut: when every unit in the group occupies the same hex, all firers share an identical range and line of sight. The group may instead sum rFP values and f values first — expressed as (total rFP) ⬡h −(total f) — and apply the falloff formula once to the summed values. This produces a result identical to the per-unit calculation (Rule 8.3.6).
 
-**8.3.4**  Units with different ⬡h intervals cannot be combined. Each interval group fires separately and is resolved separately.
+**8.3.4**  Units with different ⬡h values may combine into a single fire group only under the conditions given in Rule 8.3.4a. Otherwise, units with different ⬡h intervals cannot be combined — each fires as a separate attack (Rule 8.8).
 
 **8.3.5**  Example (same-hex shortcut): Three units in the same hex with fire lines 6 ⬡4 -1, 8 ⬡4 -1, and 5 ⬡4 -1 form a group: 19 ⬡4 -3. At range 5, effective rFP = 19 − (3 × floor(4/4)) = 19 − 3 = 16.
 
 **8.3.6**  Mathematical proof of the shortcut: for units sharing a hex, the falloff term floor(max(0, range − 1) / h) is identical for every firer — it depends only on range and h. It therefore distributes across the sum: Σ(rFPᵢ − fᵢ × k) = ΣrFPᵢ − (Σfᵢ) × k. The equivalence holds at all ranges, but only when range and intervening terrain are identical for all firers. Units firing from different hexes have different ranges and different sight lines — their effective rFP must be computed per unit before summing (Rule 8.3.2).
+
+8.3.4a  Mixed-Interval Combining
+--------------------------------
+
+
+**8.3.4a.1**  Units with different ⬡h values may form a single fire group provided every combining unit's firing range does not exceed the smallest ⬡h value among them — equivalently, no unit in the group has yet crossed its own first falloff step (Rule 8.2).
+
+**8.3.4a.2**  Because every combining unit is, by this condition, still at its full printed rFP, form the group by summing each unit's full rFP directly — no falloff calculation is required for this group's Resolution FP.
+
+**8.3.4a.3**  The moment any unit's range would exceed its own ⬡h value, that unit can no longer combine by this method. The group reverts to separate attacks (Rule 8.8) for that impulse.
+
+**8.3.4a.4**  This does not extend the same-hex shortcut (Rule 8.3.3), which remains valid only for units sharing both hex and ⬡h. Mixed-interval groups always sum full rFP values directly per 8.3.4a.2.
+
+    *See also: Rule 8.8.1 (separate-attack fallback once any unit crosses its own ⬡h).*
+
+**8.3.4a.5**  Example: a ⬡4 -2 unit (rFP 7) and two ⬡5 -1 units (rFP 5 each) fire at a target 4 hexes away. All three are within their own ⬡h, so they combine: total rFP = 17, resolved as one group. At 5 hexes, the ⬡4 unit has crossed its own interval even though the ⬡5 units haven't — the group can no longer combine. Resolve as two separate attacks instead: the two ⬡5 units combine as usual (same ⬡h), the ⬡4 unit fires alone, and the results combine per Rule 8.8.2.
 
 8.4  Resolution Strip
 ---------------------
@@ -163,7 +179,9 @@ The full procedure for any fire combat action:
 -----------------------------------------
 
 
-**8.8.1**  When two or more separate fire groups attack the same target hex in the same impulse (different ⬡h intervals, or units firing from different hexes that cannot be grouped), resolve each attack separately.
+**8.8.1**  When two or more separate fire groups attack the same target hex in the same impulse — different ⬡h intervals beyond what Rule 8.3.4a permits, or units firing from different hexes that cannot be grouped — resolve each attack separately.
+
+    *See also: Rule 8.3.4a (mixed-interval combining within the smallest ⬡h's range).*
 
 **8.8.2**  After all attacks are resolved, combine the results as follows: take the highest single result; for each additional attack that beats the target's defence, step the result up once on the result track.
 
