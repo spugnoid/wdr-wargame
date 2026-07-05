@@ -292,6 +292,45 @@ def vehicle_fire_thresholds(
     return VehicleFireThresholds(miss_threshold=miss_t, hull_threshold=hull_t)
 
 
+@dataclass(frozen=True)
+class HitLocationThresholds:
+    """The two numbers printed per vehicle/profile/range/crew-quality row:
+    roll the 1d6+1d8+1d12 sum against them to resolve Neither / Gun /
+    Mobility in one roll, same pattern as VehicleFireThresholds resolves
+    Miss / Turret / Hull.
+
+    Attributes:
+        neither_threshold: Roll below this = Neither (downgrades the
+            Casualty result to Pinned, Rule 18.6a). None if every
+            possible roll clears "neither" (i.e. neither_pct rounds to 0).
+        gun_threshold: Roll at or above this = Mobility kill. Between
+            neither_threshold and this (exclusive) = Gun kill. None if no
+            roll can reach "mobility" specifically (e.g. a turret profile
+            with no mobility-classified zone at all).
+    """
+
+    neither_threshold: int | None
+    gun_threshold: int | None
+
+
+def hit_location_thresholds(zone_split: dict[str, float]) -> HitLocationThresholds:
+    """Convert a Mobility/Gun/Neither percentage split (from
+    classify_hit_location) into the two dice-roll thresholds a player
+    compares their 1d6+1d8+1d12 roll against.
+
+    Args:
+        zone_split: {"mobility": pct, "gun": pct, "neither": pct}, as
+            returned by classify_hit_location().
+
+    Returns:
+        HitLocationThresholds ready to print and roll against.
+    """
+    hit_or_better_pct = zone_split["gun"] + zone_split["mobility"]
+    neither_t = roll_threshold_for_probability(hit_or_better_pct)
+    gun_t = roll_threshold_for_probability(zone_split["mobility"])
+    return HitLocationThresholds(neither_threshold=neither_t, gun_threshold=gun_t)
+
+
 def compound_angle(vertical_deg: float, lateral_deg: float) -> float:
     """Single effective impact angle from vertical slope and lateral (traverse) angle.
 

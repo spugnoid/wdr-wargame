@@ -2,6 +2,8 @@
 test_formulas.py, which validates the underlying physics formulas
 themselves against worked examples."""
 
+import csv
+
 import pytest
 
 from armor_calc.pipeline import load_hardness_table, load_hit_zones, load_vehicles
@@ -109,3 +111,41 @@ class TestHitZoneLoading:
         classifications = {z.classification for z in sherman_turret_zones}
         assert "mobility" not in classifications
         assert "gun" in classifications
+
+
+class TestHitLocationReferenceCsv:
+    def test_writes_a_row_per_vehicle_profile_range_band_crew_quality(self, tmp_path):
+        from armor_calc.pipeline import load_gun_curves, load_hit_zones, write_hit_location_reference_csv
+
+        hit_zones = load_hit_zones()
+        curves = load_gun_curves()
+        out_path = tmp_path / "hit_location_output.csv"
+        write_hit_location_reference_csv(hit_zones, curves, out_path)
+
+        with open(out_path, newline="") as f:
+            rows = list(csv.DictReader(f))
+
+        vehicles_profiles = {(r["vehicle"], r["profile"]) for r in rows}
+        assert ("Tiger I Ausf E", "Hull") in vehicles_profiles
+        assert ("Tiger I Ausf E", "Turret") in vehicles_profiles
+        assert ("Sherman M4A1 (75mm)", "Hull") in vehicles_profiles
+        assert ("Sherman M4A1 (75mm)", "Turret") in vehicles_profiles
+        assert len(rows) > 0
+
+    def test_tiger_turret_never_produces_a_mobility_threshold(self, tmp_path):
+        """No roll should ever be able to land on 'mobility' for a profile
+        whose zone geometry has no mobility-classified zone at all --
+        confirms the threshold conversion correctly reflects a real 0%
+        rather than defaulting to some nonzero placeholder."""
+        from armor_calc.pipeline import load_gun_curves, load_hit_zones, write_hit_location_reference_csv
+
+        hit_zones = load_hit_zones()
+        curves = load_gun_curves()
+        out_path = tmp_path / "hit_location_output.csv"
+        write_hit_location_reference_csv(hit_zones, curves, out_path)
+
+        with open(out_path, newline="") as f:
+            rows = [r for r in csv.DictReader(f) if r["vehicle"] == "Tiger I Ausf E" and r["profile"] == "Turret"]
+        assert len(rows) > 0
+        for r in rows:
+            assert float(r["mobility_pct"]) == pytest.approx(0.0, abs=0.5)

@@ -22,14 +22,18 @@ from .formulas import (
     ArmorPlate,
     FlawSeverity,
     GunCurveFit,
+    HitLocationThresholds,
     HitZone,
     area_weighted_av,
     base_hit_probability,
+    classify_hit_location,
     crew_quality_hit_cap,
     crossing_target_ratio,
     fit_gun_curve,
     flight_time,
     heat_effective_resistance,
+    hit_location_thresholds,
+    hit_probability,
     rounded_mantlet_angle_distribution,
     vehicle_fire_thresholds,
 )
@@ -492,6 +496,52 @@ def write_vehicle_fire_thresholds_csv(curves: dict[str, GunCurveFit], out_path: 
                     writer.writerow([gun_id, quality, rm, t.miss_threshold, t.hull_threshold])
 
 
+def write_hit_location_reference_csv(
+    hit_zones: list[HitZoneRow],
+    curves: dict[str, GunCurveFit],
+    out_path: pathlib.Path,
+    representative_gun_id: str = "pziv_75l48_apcbc",
+) -> None:
+    """The Hit Location Table: per vehicle, per profile (Hull/Turret), per
+    range band, per crew quality, the two thresholds that resolve
+    Neither/Gun/Mobility in one roll when a Casualty result occurs
+    (Rule 18.6a).
+
+    Uses a single representative attacking gun (default: the roster's
+    75mm KwK40) to compute the hit% that drives scatter width, rather
+    than a separate table per attacking gun -- the same simplification
+    already used for the AV-vs-Capped columns (diameter_mm=75.0
+    representative attacker). A real per-gun table is a reasonable future
+    expansion, not built in this pilot -- see design spec open items.
+    """
+    bands = [100, 250, 500, 750, 1000, 1500, 2000, 2500]
+    fit = curves[representative_gun_id]
+
+    zones_by_vehicle_profile: dict[tuple[str, str], list[HitZone]] = {}
+    for row in hit_zones:
+        zones_by_vehicle_profile.setdefault((row.vehicle, row.profile), []).append(row.zone)
+
+    with open(out_path, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(
+            ["vehicle", "profile", "crew_quality", "range_m", "mobility_pct", "gun_pct", "neither_pct",
+             "neither_below", "mobility_at_or_above"]
+        )
+        for (vehicle, profile), zones in zones_by_vehicle_profile.items():
+            for quality in ALL_CREW_QUALITIES:
+                for range_m in bands:
+                    hit_pct = hit_probability(fit.muzzle_velocity_fps, fit.k_factor, range_m, quality)
+                    split = classify_hit_location(zones, hit_pct)
+                    thresholds = hit_location_thresholds(split)
+                    writer.writerow(
+                        [
+                            vehicle, profile, quality, range_m,
+                            round(split["mobility"], 1), round(split["gun"], 1), round(split["neither"], 1),
+                            thresholds.neither_threshold, thresholds.gun_threshold,
+                        ]
+                    )
+
+
 def main(diameter_mm: float = 75.0) -> None:
     hardness_table = load_hardness_table()
     vehicles = load_vehicles()
@@ -504,6 +554,8 @@ def main(diameter_mm: float = 75.0) -> None:
     write_hit_probability_csv(curves, DATA_DIR.parent / "hit_probability_output.csv")
     write_gunnery_reference_csv(DATA_DIR.parent / "gunnery_reference_output.csv")
     write_vehicle_fire_thresholds_csv(curves, DATA_DIR.parent / "vehicle_fire_thresholds_output.csv")
+    hit_zones = load_hit_zones()
+    write_hit_location_reference_csv(hit_zones, curves, DATA_DIR.parent / "hit_location_output.csv")
     print(f"Wrote all armor_calc outputs to {DATA_DIR.parent}")
 
 
