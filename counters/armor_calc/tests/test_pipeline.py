@@ -4,7 +4,7 @@ themselves against worked examples."""
 
 import pytest
 
-from armor_calc.pipeline import load_hardness_table, load_vehicles
+from armor_calc.pipeline import load_hardness_table, load_hit_zones, load_vehicles
 
 
 class TestResolveAvFamilyParameter:
@@ -64,3 +64,28 @@ class TestResolveAvFamilyParameter:
         # this would silently pass even if family were ignored unless the
         # two families produce different numbers, so assert they do.
         assert av_capped != pytest.approx(av_tungsten)
+
+
+class TestHitZoneLoading:
+    """Session finding (design spec, hit-location system): neither project
+    source provides interior vehicle layout diagrams -- hit_zones.csv is
+    built from general historical knowledge, flagged as such in its own
+    notes column, not project-source-cited the way most other roster data
+    is."""
+
+    def test_tiger_hull_front_zones_load_and_cover_expected_classifications(self):
+        rows = load_hit_zones()
+        tiger_hull_zones = [r.zone for r in rows if r.vehicle == "Tiger I Ausf E" and r.profile == "Hull" and r.arc == "Front"]
+        classifications = {z.classification for z in tiger_hull_zones}
+        assert "mobility" in classifications  # front-mounted transmission
+        assert "neither" in classifications  # driver/radio-operator positions
+        assert len(tiger_hull_zones) >= 3
+
+    def test_tiger_turret_front_zones_have_no_mobility_zone(self):
+        """No vehicle's turret contains a mobility-critical component --
+        the transmission/engine/final-drive are always in the hull."""
+        rows = load_hit_zones()
+        tiger_turret_zones = [r.zone for r in rows if r.vehicle == "Tiger I Ausf E" and r.profile == "Turret" and r.arc == "Front"]
+        classifications = {z.classification for z in tiger_turret_zones}
+        assert "mobility" not in classifications
+        assert "gun" in classifications  # mantlet/gun itself

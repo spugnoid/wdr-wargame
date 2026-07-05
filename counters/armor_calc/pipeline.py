@@ -22,6 +22,7 @@ from .formulas import (
     ArmorPlate,
     FlawSeverity,
     GunCurveFit,
+    HitZone,
     area_weighted_av,
     base_hit_probability,
     crew_quality_hit_cap,
@@ -231,6 +232,42 @@ class VehiclePlateRow:
         v = self.heat_vertical_deg if self.heat_vertical_deg is not None else self.vertical_deg
         assert t is not None and v is not None
         return heat_effective_resistance(t, v, self.lateral_deg)
+
+
+@dataclass(frozen=True)
+class HitZoneRow:
+    vehicle: str
+    profile: str  # "Hull" or "Turret"
+    arc: str  # "Front" only, this phase
+    zone: HitZone
+
+
+def load_hit_zones(path: pathlib.Path = DATA_DIR / "hit_zones.csv") -> list[HitZoneRow]:
+    """Load per-vehicle hit-location zone geometry.
+
+    See that CSV's own notes column for provenance -- neither project
+    source provides interior vehicle layout diagrams, so this data is
+    general historical knowledge, not project-source-cited.
+    """
+    rows = []
+    with open(path, newline="") as f:
+        for r in csv.DictReader(f):
+            rows.append(
+                HitZoneRow(
+                    vehicle=r["vehicle"],
+                    profile=r["profile"],
+                    arc=r["arc"],
+                    zone=HitZone(
+                        name=r["zone_name"],
+                        classification=r["classification"],  # type: ignore[arg-type]
+                        x_min=float(r["x_min_m"]),
+                        x_max=float(r["x_max_m"]),
+                        y_min=float(r["y_min_m"]),
+                        y_max=float(r["y_max_m"]),
+                    ),
+                )
+            )
+    return rows
 
 
 def _parse_optional_float(value: str) -> float | None:

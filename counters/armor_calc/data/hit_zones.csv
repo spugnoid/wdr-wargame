@@ -1,0 +1,7 @@
+vehicle,profile,arc,zone_name,classification,x_min_m,x_max_m,y_min_m,y_max_m,notes
+Tiger I Ausf E,Hull,Front,driver,neither,-0.9,-0.2,-0.3,0.3,"General historical knowledge, not project-source-cited: Tiger's driver seated front-left of hull centreline."
+Tiger I Ausf E,Hull,Front,radio operator / hull MG,neither,0.2,0.9,-0.3,0.3,"General historical knowledge: radio operator/hull machine-gunner seated front-right, mirroring the driver."
+Tiger I Ausf E,Hull,Front,transmission and final drive,mobility,-1.5,1.5,-0.6,-0.3,"General historical knowledge: Tiger (like most WW2-era German and American medium/heavy tanks) used a front-mounted transmission and final drive, engine at rear, driveshaft under the crew floor -- a hull front hit is genuinely a mobility risk, not just a crew risk."
+Tiger I Ausf E,Turret,Front,mantlet and gun,gun,-0.5,0.5,-0.3,0.4,"General historical knowledge: Tiger's 88mm gun and mantlet centred on the turret front."
+Tiger I Ausf E,Turret,Front,gunner and loader positions,neither,-1.1,-0.5,-0.4,0.4,"General historical knowledge: turret crew positions flanking the gun -- no mobility-critical or ammunition-critical systems directly behind the turret front plate for a Tiger (main ammunition stowage is hull-sponson-based, not reachable from a Front-arc hit on this profile)."
+Tiger I Ausf E,Turret,Front,commander position,neither,0.5,1.1,-0.4,0.4,"General historical knowledge: commander's station on the opposite side of the gun from the loader."
