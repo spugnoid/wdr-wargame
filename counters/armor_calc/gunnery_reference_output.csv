@@ -1,0 +1,13 @@
+crew_quality,max_hit_pct
+elite,90.0
+veteran,85.0
+regular,75.0
+green,65.0
+militia,50.0
+
+range_yd,crossing_ratio_first_shot,crossing_ratio_follow_up
+400,0.91,0.99
+800,0.57,0.8
+1200,0.46,0.61
+1600,0.37,0.53
+2000,0.37,0.48

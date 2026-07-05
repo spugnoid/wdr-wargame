@@ -1,0 +1,70 @@
+vehicle,profile,arc,thickness_mm,vertical_deg,lateral_deg,cast,nation,era,bhn_override,av_override_mm,flaw_severity,heat_thickness_mm,heat_vertical_deg,schurzen,face_hardened,face_hardened_fraction,rounded_mantlet,notes
+Panzer IV Ausf H,Hull,Front,80,10,0,False,German,1943,,,,,,,True,,,"widely-cited figure, not verified vs Panzer Tracts this session"
+Panzer IV Ausf H,Hull,Side,30,0,0,False,German,1943,,,,,,True,True,,,
+Panzer IV Ausf H,Hull,Rear,20,12,0,False,German,1943,,,,,,,,,,
+Panzer IV Ausf H,Turret,Front,50,10,0,False,German,1943,,,,,,,,,True,"flat-plate approx, no mantlet thickness map available"
+Panzer IV Ausf H,Turret,Side,30,0,0,False,German,1943,,,,,,True,,,,
+Panzer IV Ausf H,Turret,Rear,30,8,0,False,German,1943,,,,,,,,,,
+Panzer III Ausf M,Hull,Front,56,21,0,False,German,1943,,,,70,21,,,0.7142857,,"Layered composite: 20mm bolted applique + 50mm base plate, computed via layered_plate_effective_thickness(first_hit_mm=20, underlying_mm=50)=56.0mm (Ch.9 p.38 formula, validated against the chapter's own 3 worked examples this session). face_hardened_fraction=50/70=0.714 reflects that only the base plate (within the confirmed 30-50mm 1942 policy bracket) is face-hardened, not the bolt-on applique -- blended via ArmorPlate.face_hardened_fraction rather than the all-or-nothing face_hardened flag. This project's own construction (how to blend partial face-hardening), not directly sourced -- see design spec S17/19. heat_thickness_mm/heat_vertical_deg overridden to the raw 70mm/21deg: Ch.9's layered-plate discount is derived from kinetic plugging-shear test data and there is no sourced basis for applying the same discount to a HEAT jet's penetration mechanism -- deliberately NOT applying the kinetic-specific correction to HEAT rather than assuming it carries over."
+Panzer III Ausf M,Hull,Side,30,0,0,False,German,1943,,,,,,True,,,,"schurzen: standard running-production feature on PzIII/PzIV from ~March 1943, within this vehicle's 1943 era -- external general knowledge, not confirmed in either project source (searched, not found)"
+Panzer III Ausf M,Hull,Rear,50,0,0,False,German,1943,,,,,,,,,,
+Panzer III Ausf M,Turret,Front,57,12,0,False,German,1943,,,,,,,,,,
+Panzer III Ausf M,Turret,Side,30,0,0,False,German,1943,,,,,,,,,,
+Panzer III Ausf M,Turret,Rear,30,0,0,False,German,1943,,,,,,,,,,
+Tiger I Ausf E,Hull,Front,100,10,0,False,German,1943,,,,,,,,,,
+Tiger I Ausf E,Hull,Side,80,0,0,False,German,1943,320,,,,,,,,,"Ch.20 p.88 (confirmed verbatim this session): 'British firing tests against Tiger E armor in North Africa indicated that the 310-330 Brinell side armor resisted penetration with the same resistance as good quality Allied test plate.' No schurzen: Thoma-shield turret skirts were a ~spring-1944 field feature, after this vehicle's 1943 era"
+Tiger I Ausf E,Hull,Rear,80,0,0,False,German,1943,320,,,,,,,,,"same plate class as side, applying same measured BHN"
+Tiger I Ausf E,Turret,Front,,,,True,German,1943,,143,,100.0,0.0,,,,,"pre-resolved via Ch.10 mantlet edge-effect table, 76mm-class attacker, combined mantlet+turret-front-bar resistance"
+Tiger I Ausf E,Turret,Side,80,0,0,False,German,1943,320,,,,,,,,,
+Tiger I Ausf E,Turret,Rear,80,0,0,False,German,1943,320,,,,,,,,,
+StuG III Ausf G,Hull,Front,80,21,0,False,German,1943,,,,,,,,,,"casemate -- no turret profile. DECIDED, not face-hardened: Ch.3 p.22 names StuG III among vehicles retaining face-hardened armor late-war, but only names Panther and PzKpfw IVH specifically for 'thicker plates' beyond the base 30-50mm policy bracket -- this 80mm glacis isn't confirmed at that thickness the way PzIV's 85mm driver plate was (a direct worked example). Also considered and rejected: treating this as a layered 50mm-base+30mm-applique composite the way Panzer III's hull front was resolved (design spec S20) -- no source confirms StuG III Ausf G's specific 80mm glacis was built this way (vs. a single thicker rolled/cast plate), and inventing that construction without evidence would be a guess, not a resolution. Final call: leave unflagged until a source specifically addresses StuG III's own glacis construction."
+StuG III Ausf G,Hull,Side,30,0,0,False,German,1943,,,,,,True,True,,,"face_hardened: within the confirmed 30-50mm 1942 policy bracket, and Ch.3 p.22 directly names StuG III among vehicles retaining face-hardened armor late-war"
+StuG III Ausf G,Hull,Rear,30,0,0,False,German,1943,,,,,,,,,,
+T-34 Model 1943,Hull,Front,45,60,0,False,Soviet,1942-43,,,,,,,,,,"famous glacis; high-hardness correction genuinely matters here, see spec S7"
+T-34 Model 1943,Hull,Side,45,40,0,False,Soviet,1942-43,,,,,,,,,,
+T-34 Model 1943,Hull,Rear,40,45,0,False,Soviet,1942-43,,,,,,,,,,
+T-34 Model 1943,Turret,Front,52,20,0,True,Soviet,1942-43,,,,,,,,,True,original small cast turret -- known weak point
+T-34 Model 1943,Turret,Side,52,20,0,True,Soviet,1942-43,,,,,,,,,,
+T-34 Model 1943,Turret,Rear,52,20,0,True,Soviet,1942-43,,,,,,,,,,
+T-34/85 (late 1943),Hull,Front,45,60,0,False,Soviet,1942-43,,,,,,,,,,same hull as 1943 model
+T-34/85 (late 1943),Hull,Side,45,40,0,False,Soviet,1942-43,,,,,,,,,,
+T-34/85 (late 1943),Hull,Rear,40,45,0,False,Soviet,1942-43,,,,,,,,,,
+T-34/85 (late 1943),Turret,Front,90,15,0,True,Soviet,1942-43,,,,,,,,,True,"new larger turret -- production era ambiguous, see spec S7 (early 1944 historically; using 1942-43 hardness bracket)"
+T-34/85 (late 1943),Turret,Side,75,20,0,True,Soviet,1942-43,,,,,,,,,,
+T-34/85 (late 1943),Turret,Rear,52,10,0,True,Soviet,1942-43,,,,,,,,,,
+KV-1S,Hull,Front,75,25,0,False,Soviet,1942-43,,,,,,,,,,
+KV-1S,Hull,Side,60,0,0,False,Soviet,1942-43,,,,,,,,,,
+KV-1S,Hull,Rear,60,0,0,False,Soviet,1942-43,,,,,,,,,,
+KV-1S,Turret,Front,82,10,0,True,Soviet,1942-43,,,,,,,,,True,
+KV-1S,Turret,Side,75,0,0,True,Soviet,1942-43,,,,,,,,,,
+KV-1S,Turret,Rear,75,0,0,True,Soviet,1942-43,,,,,,,,,,
+SU-85,Hull,Front,45,55,0,False,Soviet,1942-43,,,,,,,,,,casemate -- no turret profile
+SU-85,Hull,Side,45,40,0,False,Soviet,1942-43,,,,,,,,,,
+SU-85,Hull,Rear,40,45,0,False,Soviet,1942-43,,,,,,,,,,
+Sherman M4A1 (75mm),Hull,Front,51,47,0,True,American,1943,,,,,,,,,,cast rounded hull
+Sherman M4A1 (75mm),Hull,Side,38,0,0,False,American,1943,,,,,,,,,,
+Sherman M4A1 (75mm),Hull,Rear,38,10,0,False,American,1943,,,,,,,,,,
+Sherman M4A1 (75mm),Turret,Front,,,,True,American,1943,,89,,89.0,0.0,,,,,pre-resolved via M34A1 mount hit-distribution table (Ch.8)
+Sherman M4A1 (75mm),Turret,Side,51,0,0,False,American,1943,,,,,,,,,,
+Sherman M4A1 (75mm),Turret,Rear,51,0,0,False,American,1943,,,,,,,,,,
+Sherman M4A3 (76mm),Hull,Front,64,47,0,False,American,1943,,,,,,,,,,"welded hull, wet-stowage-era 64mm glacis"
+Sherman M4A3 (76mm),Hull,Side,38,0,0,False,American,1943,,,,,,,,,,
+Sherman M4A3 (76mm),Hull,Rear,38,10,0,False,American,1943,,,,,,,,,,
+Sherman M4A3 (76mm),Turret,Front,64,15,0,True,American,1943,,,,,,,,,True,"T23 turret, cast gun shield"
+Sherman M4A3 (76mm),Turret,Side,51,0,0,False,American,1943,,,,,,,,,,
+Sherman M4A3 (76mm),Turret,Rear,51,0,0,False,American,1943,,,,,,,,,,
+Sdkfz 251 half-track,Hull,Front,14.5,15,0,False,German,1943,,,,,,,,,,"open-top, no turret"
+Sdkfz 251 half-track,Hull,Side,8,0,0,False,German,1943,,,,,,,,,,
+Sdkfz 251 half-track,Hull,Rear,8,0,0,False,German,1943,,,,,,,,,,
+T-70 light tank,Hull,Front,35,50,0,False,Soviet,1942-43,,,,,,,,,,
+T-70 light tank,Hull,Side,15,0,0,False,Soviet,1942-43,,,,,,,,,,
+T-70 light tank,Hull,Rear,15,0,0,False,Soviet,1942-43,,,,,,,,,,
+T-70 light tank,Turret,Front,35,10,0,True,Soviet,1942-43,,,,,,,,,True,
+T-70 light tank,Turret,Side,15,0,0,False,Soviet,1942-43,,,,,,,,,,
+T-70 light tank,Turret,Rear,15,0,0,False,Soviet,1942-43,,,,,,,,,,
+Panther Ausf G,Hull,Front,85,57,0,False,German,1943,,,medium,,,,,,,"Isigny-measured actual glacis (85mm@57deg), not nominal 80mm@55deg, per Ch.6's own recommendation. Slope-only cross-validated against source's own parallel 76mm-vs-glacis calc (236-248mm). Medium flaw multiplier applied (Ch.6) -- cross-validated against two of the chapter's own Panther-glacis worked examples (152mm APBC and 17pdr APCBC, both within ~1%). 'Medium' chosen as representative since source suggests ~50% of production had some flaw severity, ranging small-large; not a claim every glacis is exactly medium-flawed."
+Panther Ausf G,Hull,Side,50,30,0,False,German,1943,,,,,,,,,,Ausf G figure per Appendix 5 (Ausf A/D used 40mm@40deg instead)
+Panther Ausf G,Hull,Rear,40,30,0,False,German,1943,,,,,,,,,,"SOURCED, found this session: Ch.14 'Armor Data for Selected Vehicles' (printed p.66), never previously read -- Appendix 5 doesn't cover rear-hull data but Ch.14 does. Table gives Hull Rear = 40mm@30deg, identical across Panther D/A/G -- confirms the figure already in use exactly, upgraded from external-knowledge to project-source-cited."
+Panther Ausf G,Turret,Front,,,,True,German,1943,,249.2,,100.0,0.0,,,,,"Ch.11 Panther-mantlet angle-probability distribution (65-75:20%, 50-60:31.2%, 35-45:24.8%, 20-30:14.4%, 0-15:9.6%), weighted-averaged against 100mm apex thickness (cast) -- methodology is this session's own construction applied to sourced data, NOT a source-provided combined-resistance table the way Tiger's Ch.10 table was. Medium confidence -- flagged for independent check. NEW FINDING (Ch.14, printed p.66, found this session): the table lists 'Mantlet: 100c rounded' AND, as a SEPARATE row, 'Turret Front: 110c @ 10' for Panther G -- possibly indicating an additional turret front plate behind/around the mantlet casting, similar in concept to Tiger's separate 'turret front bar' behind its mantlet (Ch.10). This AV figure (249.2mm) only ever accounted for the mantlet itself -- if a genuinely separate 110mm@10deg turret front plate also exists, this figure may be UNDERSTATED. Not chased down this session -- flagged for a dedicated follow-up, not guessed at."
+Panther Ausf G,Turret,Side,45,25,0,True,German,1943,,,,,,,,,,"SOURCED, found this session: Ch.14 (printed p.66) gives Turret Side = 45mm@25deg, identical across Panther D/A/G -- confirms the figure already in use exactly, upgraded from external-knowledge to project-source-cited."
+Panther Ausf G,Turret,Rear,45,28,0,True,German,1943,,,,,,,,,,"CORRECTED this session: Ch.14 (printed p.66) gives Turret Rear = 45mm@28deg specifically (distinct from Turret Side's 25deg) -- the figure previously in use (25deg, copied from Turret Side on the assumption they matched) is revised to the sourced 28deg value. AV-vs-Capped moves from 42.6mm to 44.2mm, a real but modest ~3.7% change."

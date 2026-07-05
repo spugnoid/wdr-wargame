@@ -1,0 +1,10 @@
+nation,armor_type,era,thickness_min_mm,thickness_max_mm,bhn,source
+Soviet,rolled,any,0,60,450,"Bird & Livingston Ch.4, Soviet armor hardness table"
+Soviet,rolled,any,61,80,340,"Bird & Livingston Ch.4, Soviet armor hardness table"
+Soviet,rolled,any,81,9999,300,"Bird & Livingston Ch.4, Soviet armor hardness table"
+Soviet,cast,1942-43,0,60,480,"Bird & Livingston Ch.4, Soviet armor hardness table"
+Soviet,cast,1942-43,61,80,300,"Bird & Livingston Ch.4, Soviet armor hardness table"
+Soviet,cast,1942-43,81,9999,300,"Bird & Livingston Ch.4, Soviet armor hardness table"
+Soviet,cast,1944-45,0,60,420,"Bird & Livingston Ch.4, Soviet armor hardness table"
+Soviet,cast,1944-45,61,80,420,"Bird & Livingston Ch.4, Soviet armor hardness table"
+Soviet,cast,1944-45,81,9999,420,"Bird & Livingston Ch.4, Soviet armor hardness table"

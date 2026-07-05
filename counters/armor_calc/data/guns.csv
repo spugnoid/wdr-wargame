@@ -1,0 +1,10 @@
+gun_id,gun_name,ammo_nature,ammo_family,projectile_diameter_mm,muzzle_velocity_fps,k_factor,confidence_note
+pziv_75l48_apcbc,75mm KwK40 L48,PzGr39 APCBC,capped,75,2460,2361,"5-pt fit, <1.2% error"
+tiger_88_apcbc,88mm KwK36,PzGr39 APCBC,capped,88,2580,1778,"5-pt fit, <1% error"
+pziii_50l60_apcbc,50mm KwK39 L60,PzGr39 APC,capped,50,2739,5061,"5-pt fit"
+t34_76_f34_apc,76mm F-34,BR-350A APHE,capped,76.2,2148,4000,"4-pt fit (Woodman table, replaces earlier 2-pt Zaloga anchor -- see roster notes on source-mixing). ammo_family=capped CONFIRMED, not assumed: Woodman's own table (the exact calibration source) explicitly labels this row 'Sov 76mm APC' (Armor-Piercing Capped) -- resolves the earlier flagged question of whether BR-350A had a cap (the plain, older BR-350 fired from 1930s guns apparently didn't; the 'A' suffix variant used by the wartime F-34 did)."
+t3485_85_d5t_apc,85mm D-5T,BR-365 APHE,capped,85,2600,3989,"4-pt fit (Woodman table, replaces earlier 2-pt Zaloga anchor). ammo_family=capped CONFIRMED: same Woodman table labels this row 'Sov 85mm APC' directly."
+sherman75_m61_apc,75mm M3 L31,M61 APC,capped,75,1850,2300,"3-pt fit (Woodman table, 75mm M2 APC -- replaces earlier synthetic muzzle-velocity-only anchor)"
+sherman76_m62_apc,76mm M1,M62 APC,capped,76.2,2600,4000,"4-pt fit (Woodman table, 76mm M1 APCBC -- replaces earlier synthetic muzzle-velocity-only anchor and the borrowed 3in M7 K-factor)"
+t70_45l46_apbc,45mm 20K L46,APBC,apbc,45,2493,3613,"2-pt interpolated fit (Woodman table, Sov 45mm AP -- up from 1-pt rough anchor)"
+panther_75l70_apcbc,75mm KwK42 L70,PzGr39/42 APCBC,capped,75,3068,2448,"5-pt fit, <1% error (see Panther build-out)"

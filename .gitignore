@@ -1,0 +1,14 @@
+# Sphinx build output
+docs/_build/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Reference source PDFs (large, not project deliverables)
+*.pdf
