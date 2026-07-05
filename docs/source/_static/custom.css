@@ -1,0 +1,196 @@
+/* Field-manual reskin of sphinx_rtd_theme.
+   Overrides only -- the theme's own stylesheet still loads first, this
+   file loads second (see html_css_files in conf.py) so plain-specificity
+   selectors win; a few !important flags cover theme rules more specific
+   than these. */
+
+:root {
+  --paper: #f2eee1;
+  --paper-alt: #e9e2ce;
+  --olive: #4b5320;
+  --olive-dark: #333a16;
+  --khaki: #8b7355;
+  --khaki-light: #c2ad87;
+  --khaki-dark: #6f5a3f;
+  --ink: #2b2b24;
+  --ordnance-red: #6b2c2c;
+  --cream: #fbf8f0;
+}
+
+/* Main content area */
+
+.wy-nav-content {
+  background: var(--paper) !important;
+}
+
+.wy-body-for-nav,
+.rst-content {
+  color: var(--ink);
+}
+
+.rst-content p,
+.rst-content li,
+.rst-content table.docutils td {
+  color: var(--ink);
+}
+
+/* Headings -- stenciled-ordnance olive */
+
+.rst-content h1,
+.rst-content h2,
+.rst-content h3,
+.rst-content h4,
+.rst-content h5,
+.rst-content h6,
+.wy-nav-content .document > .section > h1 {
+  color: var(--olive-dark);
+  border-bottom: 1px solid var(--khaki);
+  padding-bottom: 0.2em;
+}
+
+/* Links */
+
+.rst-content a,
+.wy-nav-content a {
+  color: var(--olive);
+}
+
+.rst-content a:hover,
+.wy-nav-content a:hover {
+  color: var(--ordnance-red);
+}
+
+/* Sidebar -- olive-drab canvas */
+
+.wy-nav-side {
+  background: var(--olive-dark) !important;
+}
+
+.wy-side-nav-search {
+  background: var(--olive) !important;
+}
+
+.wy-side-nav-search input[type="text"] {
+  border-color: var(--khaki);
+}
+
+.wy-side-nav-search > a,
+.wy-side-nav-search .wy-dropdown > a {
+  color: var(--cream) !important;
+}
+
+.wy-menu-vertical a {
+  color: var(--khaki-light);
+}
+
+.wy-menu-vertical a:hover {
+  background: var(--olive) !important;
+  color: var(--cream) !important;
+}
+
+.wy-menu-vertical li.current > a,
+.wy-menu-vertical li.current a {
+  background: var(--paper-alt);
+  color: var(--olive-dark);
+  border-right: none;
+}
+
+.wy-menu-vertical li.toctree-l1.current > a {
+  border-top: none;
+  border-bottom: none;
+}
+
+.wy-menu-vertical p.caption {
+  color: var(--khaki-light);
+  opacity: 0.9;
+}
+
+/* Mobile top bar */
+
+.wy-nav-top {
+  background: var(--olive) !important;
+}
+
+/* Tables */
+
+.rst-content table.docutils {
+  border: 1px solid var(--khaki);
+}
+
+.rst-content table.docutils thead th {
+  background: var(--khaki-dark) !important;
+  color: var(--cream) !important;
+  border-color: var(--khaki-dark);
+}
+
+.rst-content table.docutils td {
+  background: var(--paper);
+  border-color: var(--khaki-light);
+}
+
+.rst-content table.docutils tr:nth-child(2n) td {
+  background: var(--paper-alt);
+}
+
+/* Code blocks */
+
+.rst-content code.literal,
+.rst-content tt.literal {
+  background: var(--paper-alt);
+  color: var(--olive-dark);
+  border: 1px solid var(--khaki-light);
+}
+
+.rst-content div[class^="highlight"],
+.rst-content pre.literal-block {
+  background: var(--paper-alt);
+  border: 1px solid var(--khaki);
+}
+
+/* Admonitions / notes -- ordnance-red marker, matching the existing
+   in-text "*NOTE: ...*" and italic "*See also: ...*" convention */
+
+.rst-content .admonition,
+.rst-content .note,
+.rst-content .warning {
+  background: var(--paper-alt);
+  border-left: 4px solid var(--ordnance-red);
+}
+
+.rst-content .admonition-title {
+  background: var(--ordnance-red);
+  color: var(--cream);
+}
+
+/* Cross-reference / "See also" blockquotes */
+
+.rst-content blockquote {
+  border-left: 3px solid var(--olive);
+  color: var(--khaki);
+  background: transparent;
+  margin-left: 0;
+  padding-left: 1em;
+}
+
+/* Emphasis used throughout for design notes and See-also lines */
+
+.rst-content em {
+  color: var(--olive-dark);
+}
+
+/* Horizontal rules */
+
+.rst-content hr {
+  border-top: 1px solid var(--khaki);
+}
+
+/* Footer */
+
+footer,
+.rst-footer-buttons {
+  color: var(--khaki);
+}
+
+footer .rst-footer-buttons a {
+  color: var(--olive);
+}

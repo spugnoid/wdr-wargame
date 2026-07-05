@@ -22,6 +22,9 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
+# Field-manual reskin (olive/khaki/aged-paper) over the default RTD blue/white
+html_css_files = ['custom.css']
+
 # Numbered figure/table support for future use (maps, counter diagrams)
 numfig = True
 
