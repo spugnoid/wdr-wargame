@@ -1,0 +1,8 @@
+name,weapon_class,cyclic_rpm,practical_rpm,max_range_yds
+MG42 LMG (bipod),lmg,1200,300,1000
+MG42 HMG (tripod),hmg,1200,350,2000
+Kar98k,rifle,20,15,600
+Mosin-Nagant,rifle,15,12,500
+MP40,smg,500,90,200
+PPSh-41,smg,900,100,200
+DP-28,lmg,600,250,900
