@@ -17,13 +17,12 @@
   --cream: #fbf8f0;
 }
 
-/* Main content area -- use the full width available next to the sidebar
-   instead of the theme's fixed 800px centered column */
+/* Main content area -- keep the theme's readable centered column
+   (~800px) for body text; wide tables are handled separately below by
+   wrapping/shrinking to fit rather than widening the whole page */
 
 .wy-nav-content {
   background: var(--paper) !important;
-  max-width: none !important;
-  margin: 0 !important;
 }
 
 .wy-body-for-nav,
@@ -114,15 +113,40 @@
   background: var(--olive) !important;
 }
 
-/* Tables -- contain horizontal overflow to the table itself (display:block
-   lets overflow-x apply directly to a <table>) so a wide table scrolls in
-   its own box instead of forcing a page-level horizontal scrollbar */
+/* Tables -- never wider than the content column. Tables narrower than
+   the column center within it (margin:auto); tables that would
+   otherwise overflow are capped at max-width:100% and wrap their cell
+   text to fit instead of forcing a scrollbar. table-layout:fixed is
+   required for this to actually work -- the default auto layout still
+   sizes columns to their preferred content width first and only wraps
+   once that's genuinely impossible, which for a wide table (many
+   columns x the theme's generous 16px cell padding) still overflows
+   before wrapping kicks in. Fixed layout unconditionally distributes
+   the declared width across columns and wraps content to fit. The
+   theme's own thead rule also forces white-space:nowrap on header
+   cells, which alone can make a table wider than its content needs --
+   overridden below so headers wrap too. */
 
 .rst-content table.docutils {
-  display: block;
-  overflow-x: auto;
+  table-layout: fixed;
+  width: 100%;
   max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   border: 1px solid var(--khaki);
+}
+
+.rst-content table.docutils thead {
+  white-space: normal;
+}
+
+.rst-content table.docutils td,
+.rst-content table.docutils th {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  padding: 4px 6px;
+  font-size: 80%;
 }
 
 .rst-content table.docutils thead th {
