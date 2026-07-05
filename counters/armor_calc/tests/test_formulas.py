@@ -9,6 +9,7 @@ from armor_calc.formulas import (
     area_weighted_av,
     base_hit_probability,
     cast_deficiency_multiplier,
+    classify_hit_location,
     compound_angle,
     crew_quality_from_morale,
     crew_quality_hit_cap,
@@ -22,8 +23,9 @@ from armor_calc.formulas import (
     heat_multiplier,
     heat_pen_vs_schurzen,
     heat_reference_table,
-    hit_probability,
+    HitZone,
     high_hardness_applies,
+    hit_probability,
     high_hardness_multiplier,
     hull_turret_split,
     layered_plate_effective_thickness,
@@ -631,6 +633,64 @@ class TestVerticalLateralHitPct:
     def test_clamps_above_highest_listed_value(self):
         """The table only goes up to 95% overall hit."""
         assert vertical_lateral_hit_pct(99.0) == vertical_lateral_hit_pct(95.0)
+
+
+class TestHitLocationClassification:
+    """Monte Carlo classification of where a hit lands within a target
+    profile's zone geometry, given the shot's overall hit probability."""
+
+    def _single_zone_covering_everything(self, classification):
+        return [HitZone(name="whole area", classification=classification,
+                         x_min=-999.0, x_max=999.0, y_min=-999.0, y_max=999.0)]
+
+    def test_single_zone_covering_everything_gets_100_percent(self):
+        zones = self._single_zone_covering_everything("mobility")
+        result = classify_hit_location(zones, overall_hit_pct=85.0, n_samples=2000,
+                                        rng=np.random.default_rng(1))
+        assert result["mobility"] == pytest.approx(100.0, abs=0.5)
+        assert result["gun"] == pytest.approx(0.0, abs=0.5)
+        assert result["neither"] == pytest.approx(0.0, abs=0.5)
+
+    def test_no_zones_at_all_is_always_neither(self):
+        result = classify_hit_location([], overall_hit_pct=85.0, n_samples=2000,
+                                        rng=np.random.default_rng(1))
+        assert result["neither"] == pytest.approx(100.0, abs=0.5)
+
+    def test_result_percentages_sum_to_100(self):
+        zones = [
+            HitZone(name="gun zone", classification="gun", x_min=-0.5, x_max=0.5, y_min=-0.3, y_max=0.4),
+            HitZone(name="mobility zone", classification="mobility", x_min=-1.5, x_max=1.5, y_min=-0.6, y_max=-0.3),
+        ]
+        result = classify_hit_location(zones, overall_hit_pct=70.0, n_samples=5000,
+                                        rng=np.random.default_rng(2))
+        assert sum(result.values()) == pytest.approx(100.0, abs=0.01)
+
+    def test_converges_across_independent_seeds(self):
+        """Two independent runs with different seeds must agree within a
+        small tolerance -- proof the sample count is high enough to be
+        stable, not just internally consistent with itself."""
+        zones = [
+            HitZone(name="gun zone", classification="gun", x_min=-0.5, x_max=0.5, y_min=-0.3, y_max=0.4),
+            HitZone(name="mobility zone", classification="mobility", x_min=-1.5, x_max=1.5, y_min=-0.6, y_max=-0.3),
+        ]
+        result_a = classify_hit_location(zones, overall_hit_pct=70.0, n_samples=20000,
+                                          rng=np.random.default_rng(10))
+        result_b = classify_hit_location(zones, overall_hit_pct=70.0, n_samples=20000,
+                                          rng=np.random.default_rng(20))
+        for key in ("mobility", "gun", "neither"):
+            assert result_a[key] == pytest.approx(result_b[key], abs=2.0)
+
+    def test_tighter_dispersion_at_higher_hit_pct_concentrates_on_center_zone(self):
+        """A small central gun zone should catch a much higher share of
+        hits at a high (tight-dispersion) hit% than at a low one."""
+        zones = [
+            HitZone(name="gun zone", classification="gun", x_min=-0.3, x_max=0.3, y_min=-0.3, y_max=0.3),
+        ]
+        tight = classify_hit_location(zones, overall_hit_pct=95.0, n_samples=20000,
+                                       rng=np.random.default_rng(3))
+        loose = classify_hit_location(zones, overall_hit_pct=20.0, n_samples=20000,
+                                       rng=np.random.default_rng(3))
+        assert tight["gun"] > loose["gun"]
 
 
 class TestPartialFaceHardening:

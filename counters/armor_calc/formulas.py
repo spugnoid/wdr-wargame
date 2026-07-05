@@ -652,6 +652,93 @@ def vertical_lateral_hit_pct(overall_hit_pct: float) -> tuple[float, float]:
     return _HIT_PCT_BREAKDOWN[-1][2], _HIT_PCT_BREAKDOWN[-1][1]  # pragma: no cover
 
 
+@dataclass(frozen=True)
+class HitZone:
+    """One named region of a target profile's hit-location geometry.
+
+    Coordinates are metres, centred on the profile's aim point (its own
+    centre of mass) -- x is lateral (negative = left), y is vertical
+    (negative = below aim point), matching Appendix 15's own convention.
+
+    Attributes:
+        name: Human-readable label (e.g. "driver", "transmission").
+        classification: "mobility" (engine/transmission/final-drive),
+            "gun" (turret ring/gun/breech/ammunition stowage), or
+            "neither" (crew position with no adjacent critical system).
+        x_min, x_max, y_min, y_max: This zone's bounding box, metres.
+    """
+
+    name: str
+    classification: Literal["mobility", "gun", "neither"]
+    x_min: float
+    x_max: float
+    y_min: float
+    y_max: float
+
+
+def _find_zone(zones: list[HitZone], x: float, y: float) -> HitZone | None:
+    for zone in zones:
+        if zone.x_min <= x <= zone.x_max and zone.y_min <= y <= zone.y_max:
+            return zone
+    return None
+
+
+def classify_hit_location(
+    zones: list[HitZone],
+    overall_hit_pct: float,
+    n_samples: int = 20000,
+    rng: np.random.Generator | None = None,
+) -> dict[str, float]:
+    """Monte Carlo classification of where a Casualty-tier hit lands
+    within a target profile, given the shot's overall hit probability.
+
+    Source: Bird & Livingston Appendix 15. Samples many percentile dice
+    rolls through shot_displacement_m() (itself validated against the
+    chapter's own worked examples) to build a real (dx, dy) scatter
+    pattern, then tallies which zone each sample lands in. Monte Carlo
+    rather than analytic integration -- robust to irregular zone shapes,
+    and its convergence is directly testable (see
+    test_converges_across_independent_seeds) in a way a hand-derived
+    integral would not be.
+
+    Any (x, y) not covered by an explicit zone is implicitly "neither" --
+    zones do not need to tile the plausible scatter area exhaustively by
+    construction, the function does it for them.
+
+    Args:
+        zones: The target profile's zone geometry.
+        overall_hit_pct: This shot's overall hit probability (0-100),
+            already computed by hit_probability() for the actual gun/
+            range/crew-quality combination -- not re-derived here.
+        n_samples: Monte Carlo sample count. 20000 keeps independent runs
+            within about 2 percentage points of each other (see the
+            convergence test) -- a design-time cost, not a table-time one.
+        rng: Optional seeded generator, for reproducible tests. A fresh
+            generator is created if not given.
+
+    Returns:
+        {"mobility": pct, "gun": pct, "neither": pct}, summing to 100.0.
+    """
+    if rng is None:
+        rng = np.random.default_rng()
+    vertical_hit_pct, lateral_hit_pct = vertical_lateral_hit_pct(overall_hit_pct)
+
+    vertical_rolls = rng.uniform(0.0, 99.0, n_samples)
+    lateral_rolls = rng.uniform(0.0, 99.0, n_samples)
+    vertical_signs = rng.choice([-1.0, 1.0], n_samples)
+    lateral_signs = rng.choice([-1.0, 1.0], n_samples)
+
+    counts = {"mobility": 0, "gun": 0, "neither": 0}
+    for i in range(n_samples):
+        dy = vertical_signs[i] * shot_displacement_m(vertical_rolls[i], vertical_hit_pct)
+        dx = lateral_signs[i] * shot_displacement_m(lateral_rolls[i], lateral_hit_pct)
+        zone = _find_zone(zones, dx, dy)
+        counts[zone.classification if zone is not None else "neither"] += 1
+
+    total = float(n_samples)
+    return {k: 100.0 * v / total for k, v in counts.items()}
+
+
 def cast_deficiency_multiplier(thickness_mm: float, diameter_mm: float) -> float:
     """Cast armor's resistance deficiency relative to rolled homogeneous armor.
 
