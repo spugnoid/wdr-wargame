@@ -290,7 +290,9 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
      - Unchanged
 
 
-**12.10.2**  A wounded leader that takes another Casualty result or worse: roll 1d6. On 1–3 the leader is eliminated and moved to the BROKEN zone of the Casualty Track. On 4–6 the leader is captured or evacuated and moved to the DISPERSED zone.
+**12.10.2**  A wounded leader that takes another Casualty result or worse: roll 1d6. On 1–3 the leader is eliminated and moved to the BROKEN zone of the Casualty Track. On 4–5 the leader is evacuated and moved to the BROKEN zone of the Casualty Track. On 6 the leader is captured (Rule 11.2a) and moves to the CAPTURED zone of the Casualty Track.
+
+    *See also: Rule 11.2a (Administrative Capture).*
 
 **12.10.3**  Leader elimination has immediate effect — AP pool drops from the next impulse onward. The remaining leaders must compensate or the force becomes seriously degraded.
 

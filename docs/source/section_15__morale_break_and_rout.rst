@@ -135,7 +135,9 @@ Most WWII engagements ended not with one side physically eliminated but with one
 
 **15.5.6**  Success: the force holds. The new Force Morale threshold advances by 1 — the next check triggers when one more unit becomes CI or begins routing. This continues until the force either collapses or the scenario ends.
 
-**15.5.7**  Failure: the force collapses. The scenario ends immediately. All remaining units on the map are considered routing for scenario resolution purposes. The opposing force wins.
+**15.5.7**  Failure: the force collapses. The scenario ends immediately. All remaining units on the map are considered routing for scenario resolution purposes only — this is a scoring abstraction for determining the victor, not a status change, and does not place a ROUTING marker on any unit or trigger Rule 10.6.9. The opposing force wins.
+
+    *See also: Rule 10.6.9 (capture at scenario end applies only to units with an actual ROUTING marker).*
 
 **15.5.8**  Force Morale checks may trigger multiple times per scenario as the threshold advances. A force that passes early checks can still collapse under sustained attrition.
 

@@ -22,13 +22,13 @@ Section 11 — Prisoners and Surrender
 11.2a  Administrative Capture
 -----------------------------
 
-**11.2a.1**  A Dispersed unit whose rally roll fails (Rule 10.5.4), a Dispersed unit that has not rallied by the end of the scenario (Rule 10.5.6), or a unit still Routing when the scenario ends (Rule 10.6.9), is captured automatically. No enemy unit needs to be present or adjacent, and no AP is spent.
+**11.2a.1**  A Dispersed unit whose rally roll fails (Rule 10.5.4), a Dispersed unit that has not rallied by the end of the scenario (Rule 10.5.6), a unit still Routing when the scenario ends (Rule 10.6.9), or a wounded leader captured on a second Casualty result (Rule 12.10.2), is captured automatically. No enemy unit needs to be present or adjacent, and no AP is spent.
 
-**11.2a.2**  If Dispersed, the counter — already resident in the Casualty Track's DISPERSED zone (Rule 10.5.2) — moves to the CAPTURED zone, and the DISPERSED marker is removed from the map. If Routing, the counter and its ROUTING marker are removed from the map together and the counter moves to the CAPTURED zone. Either way, a POW marker is placed in the hex where the unit was captured.
+**11.2a.2**  If Dispersed, the counter — already resident in the Casualty Track's DISPERSED zone (Rule 10.5.2) — moves to the CAPTURED zone, and the DISPERSED marker is removed from the map. If Routing, the counter and its ROUTING marker are removed from the map together and the counter moves to the CAPTURED zone. If a wounded leader captured per Rule 12.10.2, the leader counter is removed from the map and moves to the CAPTURED zone. In every case, a POW marker is placed in the hex where the unit was captured.
 
 **11.2a.3**  No GUARD marker is placed. Rule 11.3's guard requirements and Rule 11.4's escape attempts do not apply to a unit captured this way — there is no accepting unit to assign a GUARD marker to, and no guard relationship to escape from.
 
-    *See also: Rule 10.5.4 and Rule 10.5.6 (Dispersed rally failure or timeout), Rule 10.6.9 (still Routing at scenario end).*
+    *See also: Rule 10.5.4 and Rule 10.5.6 (Dispersed rally failure or timeout), Rule 10.6.9 (still Routing at scenario end), Rule 12.10.2 (wounded leader captured on a second Casualty result).*
 
 11.3  Guard Requirements
 ------------------------

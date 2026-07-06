@@ -130,9 +130,9 @@ Units may be in one of the following status levels at any time. Status is tracke
 
 **10.6.8**  A routing unit counts toward the force's CI total for Force Morale purposes (see Section 15.4).
 
-**10.6.9**  A unit still Routing when the scenario ends is captured (Rule 11.2a).
+**10.6.9**  A unit with a ROUTING marker (Rule 10.6.2) still on the map when the scenario ends is captured (Rule 11.2a).
 
-    *See also: Rule 11.2a (Administrative Capture).*
+    *See also: Rule 11.2a (Administrative Capture), Rule 15.5.7 (Force Morale collapse is a scoring abstraction and does not itself place a ROUTING marker or trigger this rule).*
 
 10.7  Combat Ineffective
 ------------------------

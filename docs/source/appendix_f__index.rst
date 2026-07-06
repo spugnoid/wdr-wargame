@@ -87,7 +87,7 @@ no AP, no enemy unit required  ..........  11.2a.1
 
 exempt from GUARD marker and escape attempts  ..........  11.2a.3
 
-triggers: failed Dispersed rally, unrallied at scenario end, still Routing at scenario end  ..........  10.5.4, 10.5.6, 10.6.9
+triggers: failed Dispersed rally, unrallied at scenario end, still Routing at scenario end, wounded leader captured  ..........  10.5.4, 10.5.6, 10.6.9, 12.10.2
 
 **Ammunition (AMO)**  ..........  16.3, 20.1.3
 
