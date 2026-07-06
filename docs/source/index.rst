@@ -3,6 +3,8 @@ With Deepest Regret...
 
 Rules of Play — Docs-as-Code Edition
 
+Version |release| — built |today|
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:

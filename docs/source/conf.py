@@ -31,3 +31,8 @@ numfig = True
 # Keep the build strict: warnings (e.g. malformed tables, bad refs) should
 # be visible rather than silently swallowed.
 suppress_warnings = []
+
+# Adds a "Last updated on <date>" line to every page's footer (sphinx_rtd_theme
+# renders this automatically once set). Reflects each build's checkout time on
+# Read the Docs, not per-file git history -- same tradeoff as most RTD sites.
+html_last_updated_fmt = '%d %B %Y'
