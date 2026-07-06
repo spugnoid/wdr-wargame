@@ -32,6 +32,10 @@ counters/   Design-time calculation engine (Python) — computes the
 maps/       SVG hex-map diagram generator (Python) — renders worked-example
             diagrams (terrain, unit tokens, movement) for the Rules of Play,
             the same docs-as-code way counters/ computes stat values.
+viz/        Local interactive dashboard (Streamlit) — compares and charts
+            the vehicle/gun/infantry data counters/ computes. A companion
+            tool for exploring the numbers, not part of the published
+            Rules of Play.
 ```
 
 Each `counters/` package has its own README with details on its data files
@@ -64,6 +68,19 @@ Both pipelines write plain CSV reference tables (vehicle armor/gunnery
 values, infantry counter values) into their own package directory —
 open directly in Excel/Sheets to review, or hand-edit the CSV inputs
 under each package's `data/` directory to add or correct an entry.
+
+## Comparing and charting the data
+
+```
+pip install -r viz/requirements.txt
+python3 -m pytest viz/tests/
+streamlit run viz/app.py
+```
+
+Opens a local dashboard (default `http://localhost:8501`) for comparing
+vehicle armor, gun penetration curves, gun-vs-vehicle matchups, and
+infantry unit stats — reads the CSVs above directly, so re-run the
+pipelines first if the data looks stale. See `viz/README.md` for details.
 
 ## License
 
