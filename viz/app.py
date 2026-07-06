@@ -9,6 +9,11 @@ views/*.py for each comparison view.
 
 from __future__ import annotations
 
+import pathlib
+import sys
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
+
 import streamlit as st
 
 from viz.views import gun_curves, gun_vs_vehicle, infantry_comparison, vehicle_armor
