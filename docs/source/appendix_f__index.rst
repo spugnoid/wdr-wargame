@@ -893,7 +893,7 @@ destination for Dispersed units  ..........  10.5.4, 12.6a
 
 one per leader, replaces previous  ..........  12.6a.1
 
-valid regardless of later enemy control  ..........  12.6a.3
+lost if enemy occupies its hex  ..........  12.6a.3
 
 **RAL threshold (leader)**  ..........  12.6.4
 

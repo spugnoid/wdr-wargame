@@ -189,7 +189,7 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
 
 **12.6a.2**  A RALLY POINT marker is not tied to the leader's continued presence or survival — it remains a valid marker on the map even if the placing leader later moves away, becomes a casualty, or is removed from play.
 
-**12.6a.3**  A RALLY POINT marker, once placed, remains a valid destination for the rest of the scenario regardless of subsequent events in that hex, including enemy occupation.
+**12.6a.3**  A RALLY POINT marker is removed immediately, permanently, and without further effect if an enemy unit ever occupies its hex. Otherwise, once placed, it remains a valid destination for the rest of the scenario.
 
     *See also: Rule 10.5.4 (Dispersed units rally to the nearest RALLY POINT marker, not necessarily where they dispersed).*
 

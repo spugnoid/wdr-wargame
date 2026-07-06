@@ -163,7 +163,7 @@ The following terms are used throughout this document. Each term is defined here
 
 **CONTACT marker —**  A marker placed at a unit's last known position when it goes hidden mid-play. Advances through fresh, recent, and cold states before removal.
 
-**RALLY POINT marker —**  A map token placed by a leader (Rule 12.6a) marking a rendezvous hex for Dispersed units. Independent of the placing leader once set; remains valid for the rest of the scenario.
+**RALLY POINT marker —**  A map token placed by a leader (Rule 12.6a) marking a rendezvous hex for Dispersed units. Independent of the placing leader once set; remains valid for the rest of the scenario unless an enemy unit occupies its hex, which removes it immediately.
 
 **CON —**  Concealment value. A modifier reflecting how hard a unit is to spot based on terrain and behaviour.
 
