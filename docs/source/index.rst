@@ -7,6 +7,7 @@ Rules of Play — Docs-as-Code Edition
    :maxdepth: 2
    :caption: Contents:
 
+   authorship
    section_1__introduction_and_components
    section_2__game_scale_and_conventions
    section_3__counters_and_units

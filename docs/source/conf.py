@@ -2,8 +2,8 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 project = 'With Deepest Regret...'
-copyright = '2026, Rod'
-author = 'Rod'
+copyright = '2026, Rod Peters'
+author = 'Rod Peters'
 release = '0.9.2'
 version = '0.9.2'
 
