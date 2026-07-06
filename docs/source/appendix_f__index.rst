@@ -81,6 +81,14 @@ delay  ..........  16.8.2
 
 new sealed slip required  ..........  16.8.2
 
+**Administrative Capture**  ..........  11.2a
+
+no AP, no enemy unit required  ..........  11.2a.1
+
+exempt from GUARD marker and escape attempts  ..........  11.2a.3
+
+triggers: failed Dispersed rally, unrallied at scenario end, still Routing at scenario end  ..........  10.5.4, 10.5.6, 10.6.9
+
 **Ammunition (AMO)**  ..........  16.3, 20.1.3
 
 extended ammunition table  ..........  16.3.3
@@ -257,7 +265,7 @@ margin 14–18  ..........  8.6, App.C
 
 BROKEN zone  ..........  10.4
 
-CAPTURED zone  ..........  11.2.2
+CAPTURED zone  ..........  11.2.2, 11.2a
 
 DISPERSED zone  ..........  10.5
 
@@ -406,6 +414,8 @@ roll vs ACC  ..........  16.6.1
 serialised DISPERSED markers  ..........  10.5.2
 
 rally destination (Rally Point)  ..........  10.5.4, 12.6a
+
+captured on rally failure or timeout  ..........  10.5.4, 10.5.6, 11.2a
 
 **Dummy markers**  ..........  14.4
 
@@ -867,7 +877,7 @@ casemate extra cost  ..........  17.4.4
 
 **Player aid card**  ..........  S.22 design notes, E.44
 
-**POW markers**  ..........  11.2.2
+**POW markers**  ..........  11.2.2, 11.2a
 
 **Primary sources (vehicle data)**  ..........  17.3.6
 
@@ -994,6 +1004,8 @@ D3 hexes away from enemy  ..........  10.6.3
 ROUTING marker  ..........  10.6.2
 
 vs Break  ..........  15.3
+
+captured if still routing at scenario end  ..........  10.6.9, 11.2a
 
 **S**
 

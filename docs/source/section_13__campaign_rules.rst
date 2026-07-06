@@ -42,34 +42,27 @@ Each scenario has a Recovery Window value printed in its scenario parameters. Th
 
    * - **Recovery Window**
      - **Broken Recovery**
-     - **Dispersed Recovery**
      - **Combine Halves**
      - **Resupply**
    * - None
-     - No roll
      - No roll
      - No
      - No
    * - Hours
      - No roll
-     - Roll at -2
      - No
      - Partial
    * - Days
-     - Roll
      - Roll
      - Yes
      - Full
    * - Extended
      - Roll at +1
-     - Roll at +2
      - Yes
      - Full + bonus
 
 
 **13.2.1**  The scenario outcome modifies the Recovery Window: the losing side's window is reduced one step (Days becomes Hours, Hours becomes None).
-
-**13.2.2**  If the attacker loses ground, their Dispersed counters are vulnerable to capture by the defender during the scenario resolution step.
 
 13.3  Between-Scenario Recovery Rolls
 -------------------------------------
@@ -112,26 +105,6 @@ BROKEN zone recovery (Days window or better):
    * - 7+
      - Returns at full strength
      - Returns as rear face
-
-
-DISPERSED zone recovery (Hours window or better, at penalty; Days or better, normal):
-
-.. list-table::
-   :header-rows: 1
-   :widths: auto
-
-   * - **Roll**
-     - **Result**
-   * - 1
-     - No recovery — removed from campaign pool
-   * - 2–3
-     - Returns as rear face
-   * - 4–5
-     - Returns as rear face
-   * - 6–7
-     - Returns at full strength
-   * - 8+
-     - Returns at full strength with +1 Experience step
 
 
 13.4  Combining Half Squads
