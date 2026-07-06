@@ -69,7 +69,7 @@ The following actions are available to the active player. Each costs 1 AP unless
      - Move one dummy marker independently (free if real unit in same group also moves this turn).
    * - Leader Action
      - 1
-     - Leader moves, coordinates, or provides a fire bonus to an adjacent unit.
+     - Leader moves, coordinates, provides a fire bonus to an adjacent unit, or places a RALLY POINT marker.
 
 
 6.4  Reaction Types

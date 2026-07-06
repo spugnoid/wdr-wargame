@@ -134,6 +134,9 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
    * - Rally
      - One Suppressed or Pinned unit attempts mid-turn recovery at RAL threshold instead of standard threshold. See Rule 12.6.
      - Command radius
+   * - Rally Point
+     - Places a RALLY POINT marker in the leader's current hex — a rally destination for Dispersed units. See Rule 12.6a.
+     - Current hex
    * - Coordinate Assault
      - Add ASL value to assaulting unit's grenade rFP for the Grenade Phase. Does not apply to Entry Fire or Melee Continuation.
      - Same hex as assaulting unit

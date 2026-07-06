@@ -65,6 +65,8 @@ Move Dummy Marker  ..........  6.3, 14.4.4
 
 Rally (leader)  ..........  6.3, 12.6
 
+Rally Point (leader)  ..........  6.3, 12.6a
+
 Spot Action  ..........  6.3, 14.10
 
 **Adjacent fire bonus**  ..........  8.9

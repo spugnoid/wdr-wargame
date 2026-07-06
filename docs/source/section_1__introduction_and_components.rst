@@ -51,6 +51,8 @@ The game does not glorify war. The ordinary soldiers of every nation were not ev
      - TBD
    * - DISPERSED markers — serialised per nation (e.g. GER-01, GER-02, SOV-01)
      - TBD — quantity to match maximum likely dispersed units per scenario
+   * - RALLY POINT markers — per nation, one per leader in play
+     - TBD
    * - Blind markers — single/small/large sizes, per nation
      - TBD
    * - Dummy markers — single/small/large sizes, nation-neutral
@@ -160,6 +162,8 @@ The following terms are used throughout this document. Each term is defined here
 **Dummy marker —**  A blind marker with no unit behind it. Used to create uncertainty about a hidden unit's true position.
 
 **CONTACT marker —**  A marker placed at a unit's last known position when it goes hidden mid-play. Advances through fresh, recent, and cold states before removal.
+
+**RALLY POINT marker —**  A map token placed by a leader (Rule 12.6a) marking a rendezvous hex for Dispersed units. Independent of the placing leader once set; remains valid for the rest of the scenario.
 
 **CON —**  Concealment value. A modifier reflecting how hard a unit is to spot based on terrain and behaviour.
 
