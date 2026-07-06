@@ -108,6 +108,13 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
      - Except at designated crossing points
 
 
+.. figure:: /../../maps/svg_output/section7_movement_example1.svg
+   :alt: A squad moves two hexes across open ground into light woods, spending 1 movement point to enter the first open hex and 2 to enter the light woods hex.
+   :width: 500px
+
+   A squad crossing open ground into light woods. Movement cost is
+   labeled per hex entered.
+
 **7.2.1**  Road movement special rule: a unit moving exclusively along road hexes for its entire activation may move 3 hexes instead of its normal M#. One hex of off-road movement cancels the road bonus for that entire activation.
 
 **7.2.2**  Elevation interaction example: a unit with M2 moving uphill one level into open ground costs 1 (terrain) + 1 (elevation) = 2 MP — the full activation for one hex. Two levels uphill in one activation is impossible for a standard M2 unit.
