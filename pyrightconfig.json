@@ -1,4 +1,4 @@
 {
-  "extraPaths": ["counters"],
+  "extraPaths": ["counters", "."],
   "exclude": ["docs/_build", "**/__pycache__"]
 }
