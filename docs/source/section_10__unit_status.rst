@@ -100,7 +100,9 @@ Units may be in one of the following status levels at any time. Status is tracke
 
 **10.5.3**  The DISPERSED marker is not a combat unit. It cannot fire, move, or react. It exists solely to indicate that men are physically present in that hex.
 
-**10.5.4**  A Dispersed unit that is not captured may attempt to rally during the Recovery Phase: roll 1d6 + Morale - 2 vs threshold 8. On success, the counter returns to play at rear face (reduced strength) and the DISPERSED marker is removed from the hex. On failure, the counter is removed from the Casualty Track permanently for this scenario and the marker is also removed.
+**10.5.4**  A Dispersed unit that is not captured may attempt to rally during the Recovery Phase: roll 1d6 + Morale - 2 vs threshold 8. On success, the counter returns to play at rear face (reduced strength) in the hex of the friendly RALLY POINT marker with the fewest hexes between it and the hex where this unit's own DISPERSED marker sits (Rule 12.6a), or in the hex where the DISPERSED marker was if no friendly RALLY POINT marker exists anywhere on the map. The DISPERSED marker is removed from its hex either way. On failure, the counter is removed from the Casualty Track permanently for this scenario and the marker is also removed.
+
+    *See also: Rule 12.6a (Rally Point Action).*
 
 **10.5.5**  An enemy unit that occupies or is adjacent to a DISPERSED marker may spend 1 AP to formally capture it (see Section 11).
 

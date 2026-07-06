@@ -403,6 +403,8 @@ roll vs ACC  ..........  16.6.1
 
 serialised DISPERSED markers  ..........  10.5.2
 
+rally destination (Rally Point)  ..........  10.5.4, 12.6a
+
 **Dummy markers**  ..........  14.4
 
 movement cost  ..........  14.4.4
@@ -882,6 +884,14 @@ Panzer Tracts  ..........  17.3.6
 **Rally action (leader)**  ..........  12.6
 
 mid-turn recovery at RAL threshold  ..........  12.6.2
+
+**Rally Point (leader action)**  ..........  12.6a
+
+destination for Dispersed units  ..........  10.5.4, 12.6a
+
+one per leader, replaces previous  ..........  12.6a.1
+
+valid regardless of later enemy control  ..........  12.6a.3
 
 **RAL threshold (leader)**  ..........  12.6.4
 

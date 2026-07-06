@@ -178,6 +178,20 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
      - Near-automatic suppressed recovery; Pinned usually succeeds
 
 
+12.6a  Rally Point Action
+-------------------------
+
+
+**12.6a.1**  A leader spending 1 AP places a RALLY POINT marker in their current hex. A leader may have only one active RALLY POINT marker at a time — placing a new one removes any previous RALLY POINT marker placed by that same leader.
+
+**12.6a.2**  A RALLY POINT marker is not tied to the leader's continued presence or survival — it remains a valid marker on the map even if the placing leader later moves away, becomes a casualty, or is removed from play.
+
+**12.6a.3**  A RALLY POINT marker, once placed, remains a valid destination for the rest of the scenario regardless of subsequent events in that hex, including enemy occupation.
+
+    *See also: Rule 10.5.4 (Dispersed units rally to the nearest RALLY POINT marker, not necessarily where they dispersed).*
+
+**12.6a.4**  If two or more RALLY POINT markers are equally nearest (measured in hexes from the hex where the Dispersed unit's own DISPERSED marker currently sits) when Rule 10.5.4 is resolved, the owning player chooses which one applies.
+
 12.7  Direct Fire Coordination
 ------------------------------
 
