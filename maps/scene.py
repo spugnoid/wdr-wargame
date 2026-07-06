@@ -89,11 +89,18 @@ def load_scene(data: dict) -> Scene:
                     f"movement path for token {m['token']!r} references hex "
                     f"{coord} which is not in the scene's hexes list"
                 )
+        cost_labels = m.get("cost_labels", [])
+        if len(cost_labels) > len(path) - 1:
+            raise ValueError(
+                f"movement path for token {m['token']!r} has "
+                f"{len(cost_labels)} cost_labels but only {len(path) - 1} "
+                f"segments to label"
+            )
         movement.append(
             MovementPath(
                 token=m["token"],
                 path=path,
-                cost_labels=m.get("cost_labels", []),
+                cost_labels=cost_labels,
             )
         )
 

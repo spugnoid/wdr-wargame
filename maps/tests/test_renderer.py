@@ -51,7 +51,7 @@ def test_terrain_fill_color_unknown_type_raises():
 
 
 def test_faction_fill_color_known_faction():
-    assert faction_fill_color("german") == "#333a16"
+    assert faction_fill_color("german") == "#4b5320"
 
 
 def test_faction_fill_color_unknown_faction_raises():

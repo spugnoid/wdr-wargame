@@ -61,3 +61,23 @@ def test_load_scene_rejects_movement_referencing_hex_not_in_scene():
     }
     with pytest.raises(ValueError, match="not in the scene's hexes list"):
         load_scene(data)
+
+
+def test_load_scene_rejects_too_many_cost_labels_for_path_length():
+    data = {
+        "title": "Test Scene",
+        "hexes": [
+            {"q": 0, "r": 0, "terrain": "open"},
+            {"q": 1, "r": 0, "terrain": "open"},
+        ],
+        "tokens": [{"id": "squad1", "label": "GREN", "faction": "german", "q": 0, "r": 0}],
+        "movement": [
+            {
+                "token": "squad1",
+                "path": [{"q": 0, "r": 0}, {"q": 1, "r": 0}],
+                "cost_labels": ["1", "2", "3"],
+            }
+        ],
+    }
+    with pytest.raises(ValueError, match="segments to label"):
+        load_scene(data)

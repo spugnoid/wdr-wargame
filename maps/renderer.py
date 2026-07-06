@@ -17,6 +17,7 @@ SVG_NS = "http://www.w3.org/2000/svg"
 # Palette reused exactly from docs/source/_static/custom.css -- do not
 # invent separate values here.
 PAPER = "#f2eee1"
+OLIVE = "#4b5320"
 OLIVE_DARK = "#333a16"
 KHAKI = "#8b7355"
 KHAKI_DARK = "#6f5a3f"
@@ -33,7 +34,7 @@ TERRAIN_FILL = {
 }
 
 FACTION_FILL = {
-    "german": OLIVE_DARK,
+    "german": OLIVE,
     "soviet": KHAKI_DARK,
 }
 

@@ -14,7 +14,9 @@ counters/   Design-time calculation engine (Python) — computes the
               armor_calc/     vehicle armor, penetration, and gunnery
               infantry_calc/  infantry/support-weapon counter values
               quality/        shared crew/unit quality-tier vocabulary
-maps/       SVG hex map generator (planned, not yet built)
+maps/       SVG hex-map diagram generator (Python) — renders worked-example
+            diagrams (terrain, unit tokens, movement) for the Rules of Play,
+            the same docs-as-code way counters/ computes stat values.
 ```
 
 Each `counters/` package has its own README with details on its data files
