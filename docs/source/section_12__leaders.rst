@@ -154,11 +154,11 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
 
 **12.6.1**  A leader spending 1 AP on Rally selects one Suppressed or Pinned unit within command radius. That unit immediately attempts a recovery roll outside the normal Recovery Phase.
 
-**12.6.2**  The unit rolls 1d6 + Morale and compares to the leader's RAL value (not the standard threshold).
+**12.6.2**  The unit rolls 1d6 + Morale modifier (Rule 15.2.1a) and compares to a target derived from the leader's RAL value: **RAL − 1** to recover from Suppressed, **RAL + 1** to recover from Pinned.
 
-**12.6.3**  If the roll meets or exceeds the RAL value, the unit recovers from its current status.
+**12.6.3**  If the roll meets or exceeds the target, the unit recovers from its current status.
 
-**12.6.4**  RAL values by leader quality:
+**12.6.4**  RAL values by leader quality. Percentages are for a regular unit (modifier +0); the standard Recovery Phase thresholds for comparison are 3 (Suppressed, 67%) and 5 (Pinned, 33%):
 
 .. list-table::
    :header-rows: 1
@@ -169,16 +169,16 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
      - **Effect**
    * - CMD 1 / Poor
      - 5
-     - Suppressed recovery harder than standard; Pinned unchanged
+     - Suppressed target 4 (50%) — worse than waiting for the Recovery Phase; Pinned target 6 (17%) — cannot reliably rally pinned units
    * - CMD 2 / Regular
      - 4
-     - Same as standard suppressed threshold
+     - Suppressed target 3 (67%) — the standard threshold, bought mid-turn; Pinned target 5 (33%) — standard
    * - CMD 3 / Veteran
      - 3
-     - Suppressed automatic for Morale 4+; Pinned frequently succeeds
+     - Suppressed target 2 (83%, automatic for veterans); Pinned target 4 (50%) — frequently succeeds
    * - CMD 3 / Elite
      - 2
-     - Near-automatic suppressed recovery; Pinned usually succeeds
+     - Suppressed target 1 — automatic for green and better; Pinned target 3 (67%) — usually succeeds
 
 
 12.6a  Rally Point Action

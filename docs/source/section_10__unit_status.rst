@@ -124,7 +124,7 @@ Units may be in one of the following status levels at any time. Status is tracke
 
 **10.6.5**  A routing unit that reaches the friendly map edge is removed from the map and placed in the BROKEN zone of the Casualty Track with a white CI cause marker.
 
-**10.6.6**  A routing unit that reaches a hex containing a functional friendly leader may attempt an immediate rally: roll 1d6 + Morale vs leader RAL value. Success removes the ROUTING marker and the unit resumes normal status. Failure — the unit continues routing.
+**10.6.6**  A routing unit that reaches a hex containing a functional friendly leader may attempt an immediate rally: roll 1d6 + Morale modifier (Rule 15.2.1a) vs the leader's RAL value + 1. Success removes the ROUTING marker and the unit resumes normal status. Failure — the unit continues routing. Rallying a routing unit is as hard as rallying a pinned one, but a good leader in the path of the rout is far better odds than the Recovery Phase roll (Rule 10.6.7, threshold 6).
 
 **10.6.7**  During the Recovery Phase, routing units may attempt to rally at threshold 6 (roll 1d6 + Morale modifier ≥ 6, Rule 15.2.1a). A leader within command radius adds their CMD rating to this roll. Without a leader, a regular unit (modifier +0) rallies from rout only on a roll of 6 — routed troops rarely recover themselves; leaders bring them back.
 
