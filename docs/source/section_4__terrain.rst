@@ -46,9 +46,6 @@ Cover modifiers are added to the defender's Defence value when resolving fire co
    * - Building — light (wood/plaster)
      - +4
      - Structural cover
-   * - Reverse slope
-     - +4
-     - No direct LOS; indirect fire only
    * - Rubble
      - +4
      - Irregular cover, hard to suppress
@@ -75,7 +72,7 @@ Cover modifiers are added to the defender's Defence value when resolving fire co
 
 **4.3.4**  Multiple terrain types may be crossed. Calculate separately for each terrain type and sum.
 
-**4.3.5**  Effective rFP after all modifiers has a minimum value of 1 regardless of penalties.
+**4.3.5**  Effective rFP can be driven to 0 or below by accumulated penalties. A fire line at 0 or less contributes nothing and cannot attack (Rule 8.2.5) — dense woods and layered smoke can genuinely stop fire.
 
 .. list-table::
    :header-rows: 1
@@ -97,7 +94,7 @@ Cover modifiers are added to the defender's Defence value when resolving fire co
      - -3
    * - Building (firing through)
      - -2
-   * - Hill crest (grazing fire)
+   * - Crest hexside crossed at the firer's own level (grazing fire, Rule 4.4a.5)
      - -1
 
 
@@ -107,9 +104,9 @@ Cover modifiers are added to the defender's Defence value when resolving fire co
 
 **4.4.1**  Line of sight (LOS) is required to fire at a target. LOS is traced from the centre of the firer's hex to the centre of the target's hex.
 
-**4.4.2**  LOS is blocked entirely by the following terrain when it lies in an intervening hex:
+**4.4.2**  LOS is blocked entirely by the following when it lies in an intervening hex:
 
-**Hill mass —**  A hex designated as a hill body (not a crest hex)
+**Higher ground —**  Any hex whose elevation level exceeds the levels of both the firer's and the target's hexes (see Rule 4.4a for elevation LOS in full)
 
 **Cliff —**  A cliff-face hex
 
@@ -117,10 +114,26 @@ Cover modifiers are added to the defender's Defence value when resolving fire co
 
 **4.4.3**  Dense woods and other non-blocking terrain degrade fire through the per-hex penalty system (Rule 4.3) but do not block LOS entirely unless three or more consecutive hexes of dense woods intervene.
 
-**4.4.4**  A unit in a reverse slope hex has no direct LOS to units on the other side of the slope. Only indirect fire (mortars, artillery) may target such units.
+**4.4.4**  Reverse slope is a **position relative to a firer**, not a terrain type: a unit is on a firer's reverse slope when Rule 4.4a.4 denies that firer LOS to it across a crest. Such a unit cannot be targeted by that firer's direct fire at all; indirect fire (mortars, Section 16) may target it, and it receives +4 cover against indirect fire in that position (reduced per Rule 16.7.4). The same unit may be fully visible to a different firer on its own side of the crest — always evaluate per firer.
 
-4.5  Elevation
---------------
+4.4a  Elevation and LOS
+-----------------------
+
+
+**4.4a.1**  Every hex has an elevation level printed on the map: level 0 (ground) unless marked higher. A **crest hexside** is any hexside between two hexes of different elevation levels.
+
+**4.4a.2**  An intervening hex whose level is **equal to or higher than the higher** of the firer's and target's levels blocks LOS (Rule 4.4.2). Two units on top of the same hill see each other normally — hexes at their shared level on the hill mass between them block per this rule only if higher than both.
+
+**4.4a.3**  An intervening hex at or below the **lower** endpoint's level never blocks LOS by elevation (its terrain may still degrade or block fire under Rules 4.3/4.4.2 — a unit two levels up still cannot see through a solid building).
+
+**4.4a.4**  Crest blind zone: an intervening hex at an **intermediate** level (higher than the lower endpoint, lower than the higher endpoint) blocks LOS only to lower-level hexes **adjacent to it on the far side** — the ground immediately behind a crest is defiladed from observers beyond it. Lower-level hexes farther from the crest are visible over it. An intermediate hex adjacent to the higher unit never blocks (the unit looks over its own near crest).
+
+**4.4a.5**  Grazing fire: LOS traced at the firer's own level that crosses one or more crest hexsides (skimming a ridge line between same-level positions) suffers -1 effective rFP per crest hexside crossed (Rule 4.3 table).
+
+**4.4a.6**  Example: A fires from a level-2 hilltop at B on level 0, five hexes away, with a level-1 hex three hexes out along the line. B is visible (level 0, not adjacent to the level-1 hex on the far side). C, in the level-0 hex directly behind the level-1 hex, is in the crest blind zone — invisible to A, on A's reverse slope (Rule 4.4.4), and targetable by A's side only with indirect fire. C sees and fights normally against anything on its own side of the crest.
+
+4.5  Elevation Combat Modifiers
+-------------------------------
 
 
 **4.5.1**  Units firing from a higher elevation than their target receive a bonus to effective rFP.

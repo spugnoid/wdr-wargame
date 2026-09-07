@@ -41,10 +41,10 @@ Appendix B — Terrain Quick Reference
      - +4
      - -2
      - 1
-   * - Reverse slope
+   * - Reverse slope (position, not terrain — Rule 4.4.4; cover vs indirect fire only)
      - +4
      - N/A
-     - 1
+     - —
    * - Rubble
      - +4
      - 0

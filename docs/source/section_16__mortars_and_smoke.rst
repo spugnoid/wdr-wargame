@@ -202,7 +202,7 @@ All mortar counters use M1 F2 (mobile) or M0 F2 (deployed). Mortar teams must de
 
 **16.7.3**  Cover modifiers apply — units in cover are protected from indirect fire.
 
-**16.7.4**  Reverse slope and building cover are each reduced by 1 step — indirect fire angles over and into these positions. Reverse slope +4 becomes +3. Building heavy +5 becomes +4.
+**16.7.4**  Reverse slope (a position, Rule 4.4.4) and building cover are each reduced by 1 step — indirect fire angles over and into these positions. Reverse slope +4 becomes +3. Building heavy +5 becomes +4.
 
 **16.7.5**  No range falloff — mortar rFP is flat regardless of range to target. The dispersion system handles accuracy at range; lethality on impact is constant.
 

@@ -357,7 +357,7 @@ Pinned (buttoned up)  ..........  18.7
 
 Suppressed (crew shock)  ..........  18.7
 
-**Dead ground — see Reverse slope**  ..........  4.2
+**Dead ground — see Reverse slope**  ..........  4.4.4, 4.4a.4
 
 **Defence value**  ..........  1.4
 
@@ -977,7 +977,7 @@ Pinned: 9–13  ..........  8.6
 
 Suppressed: 0–8  ..........  8.6
 
-**Reverse slope**  ..........  4.2
+**Reverse slope**  ..........  4.4.4, 4.4a
 
 indirect fire only  ..........  4.4.4
 
