@@ -354,16 +354,6 @@ Casemate vehicles (TRAV 0) never receive a TRAVERSED marker; they have no separa
 
 **17.7.1**  Vehicles with a Hit Location Table printed (Tiger I Ausf E and Sherman M4A1 (75mm), this edition — see Rule 18.6a) resolve MOB kill vs. GUN kill by roll rather than free choice, for Front-arc hits only — this edition's tables cover only that arc. Side- and Rear-arc hits on these vehicles, and all hits on vehicles without a printed Hit Location Table, continue to use the owning player's judgement call (Rule 17.1.1) until a table covering that arc is built.
 
-**17.7.2**  The table gives a Neither Threshold and a Mobility Threshold for each range band and crew quality, already resolved for the specific attacking gun class used to build it. No calculation is required at the table — read the row for the actual range and the firing vehicle's own Crew Quality (Rule 18.1a.2).
+**17.7.2**  The table gives one **Neither Threshold** and one **Mobility Threshold** per profile (Hull, Turret), printed on the player aid card — a single pair of numbers, valid at every range and for every attacker. The split is conditional on the shot having already hit the profile (the Gunnery Roll settled that), and where a confirmed hit lands on a plate is governed by the plate's own geometry, not by how hard the shot was to make — so range, attacker crew quality, and attacker identity all drop out. An infantry AT penetration (Panzerfaust, Rule 18.9) rolls against the same two thresholds.
 
-*Example format (values illustrative, drawn from this session's actual computed output for Tiger I's Hull profile, Regular crew — see* `hit_location_output.csv` *for the full table):*
-
-.. list-table::
-   :header-rows: 1
-
-   * - Range
-     - Result
-   * - 100–750m
-     - Roll below Neither Threshold: Neither (Casualty downgrades to Pinned). Roll at or above Mobility Threshold: MOB kill. Between the two: GUN kill.
-   * - 1000m+
-     - Same procedure, using that range band's own printed thresholds. The split moves only slightly with range: the table is conditional on the shot having already hit this profile (the Gunnery Roll settled that), and where a confirmed hit lands on the plate is governed by the plate's own geometry far more than by how hard the shot was to make.
+*Read: roll below the Neither Threshold — Neither (Casualty downgrades to Pinned, Rule 18.6a.2). Roll at or above the Mobility Threshold — MOB kill. Between the two — GUN kill. A profile with no printed Mobility Threshold (e.g. a turret with no mobility-critical systems) can never produce a MOB kill. See* ``hit_location_output.csv`` *for the computed values.*

@@ -114,7 +114,10 @@ class TestHitZoneLoading:
 
 
 class TestHitLocationReferenceCsv:
-    def test_writes_a_row_per_vehicle_profile_range_band_crew_quality(self, tmp_path):
+    def test_writes_exactly_one_row_per_vehicle_profile(self, tmp_path):
+        """Post-conditioning, the split is nearly range- and
+        crew-quality-independent, so the table is one row per profile
+        (player aid card) rather than a 160-row per-band grid."""
         from armor_calc.pipeline import load_gun_curves, load_hit_zones, write_hit_location_reference_csv
 
         hit_zones = load_hit_zones()
@@ -125,12 +128,12 @@ class TestHitLocationReferenceCsv:
         with open(out_path, newline="") as f:
             rows = list(csv.DictReader(f))
 
-        vehicles_profiles = {(r["vehicle"], r["profile"]) for r in rows}
+        vehicles_profiles = [(r["vehicle"], r["profile"]) for r in rows]
+        assert sorted(vehicles_profiles) == sorted(set(vehicles_profiles))
         assert ("Tiger I Ausf E", "Hull") in vehicles_profiles
         assert ("Tiger I Ausf E", "Turret") in vehicles_profiles
         assert ("Sherman M4A1 (75mm)", "Hull") in vehicles_profiles
         assert ("Sherman M4A1 (75mm)", "Turret") in vehicles_profiles
-        assert len(rows) > 0
 
     def test_tiger_turret_never_produces_a_mobility_threshold(self, tmp_path):
         """No roll should ever be able to land on 'mobility' for a profile
