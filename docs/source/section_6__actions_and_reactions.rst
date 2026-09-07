@@ -5,11 +5,13 @@ Section 6 — Actions and Reactions
 ------------------
 
 
-**6.1.1**  Spending 1 AP activates one unit or stack for that impulse.
+**6.1.1**  Spending 1 AP activates one unit or stack for that impulse. An activation permits exactly **one** action from the Section 6.3 table.
 
-**6.1.2**  An activated unit may take all of its available actions (up to its F# rate and M# allowance) within that single impulse.
+**6.1.2**  A unit may be activated more than once per turn, in separate impulses, each activation costing 1 AP and granting one action. A unit's total actions per turn are limited by its action markers (Rule 6.5): one Move action (MOVED), fire actions up to its F# rate (FIRE 1/2/3), and so on. A unit with no legal action remaining may not be activated.
 
-**6.1.3**  A unit may only be activated once per turn by the AP system. However, it may respond to enemy actions using opportunity fire (see Section 6.4) even if it has already been activated.
+    *See also: Rule 6.5.2 (marker limits), Rule 5.5.1 (one action per impulse).*
+
+**6.1.3**  Reactions (Section 6.4) are not activations: a unit may react during an enemy impulse regardless of how many times it has been activated this turn, subject to the marker limits of Rule 6.2.3.
 
 6.2  Reaction Points
 --------------------
