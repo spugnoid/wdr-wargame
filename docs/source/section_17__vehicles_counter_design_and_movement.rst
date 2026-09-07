@@ -122,7 +122,7 @@ Vehicle counters display the following fields:
    * - 15°
      - 1.04
    * - 30°
-     - 1.15
+     - 1.16
    * - 45°
      - 1.41
    * - 60°

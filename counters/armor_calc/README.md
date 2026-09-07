@@ -33,19 +33,27 @@ python3 -m pytest counters/armor_calc/tests/
 PYTHONPATH=counters python3 -m armor_calc.pipeline
 ```
 
-Writes `roster_output.csv` (AV-vs-Capped per vehicle/profile/arc) and
-`gun_curves_output.csv` (range-band PEN values per gun, matching the
-counter ready-reckoner format) into this directory. Both are plain CSV —
-open directly in Excel/Sheets to review or hand-edit inputs.
+Writes eight plain-CSV reference tables into this directory — open any of
+them directly in Excel/Sheets to review, or hand-edit the inputs under
+`data/`:
+
+- `roster_output.csv` — AV per vehicle/profile/arc: vs-Capped, vs-Tungsten,
+  and vs-HEAT columns (all three are printed counter values, Rule 17.2.3).
+- `gun_curves_output.csv` — range-band PEN per gun, counter ready-reckoner
+  format.
+- `vehicle_fire_thresholds_output.csv` — the Gunnery Table thresholds
+  (Rule 18.1a) per gun/crew-quality/range band.
+- `hit_location_output.csv` — the per-profile Hit Location thresholds
+  (Rule 18.6a; one row per vehicle/profile).
+- `hit_probability_output.csv`, `gunnery_reference_output.csv`,
+  `heat_reference_output.csv`, `shatter_gap_reference_output.csv` —
+  supporting reference tables (hit%, HEAT multipliers, shatter windows).
 
 ## Known gaps (see design spec §7 for the full list)
 
-- AV-vs-Tungsten is not yet wired into the pipeline output (formulas exist
-  in `formulas.py`, just not plumbed through `pipeline.py` yet).
-- HEAT reference table not yet implemented.
-- Flaw multiplier (Ch.6) not yet implemented — no vehicle in the roster has
-  a flaw correction applied, though pre-Oct-1943 Sherman glacis QC issues
-  are a known candidate.
+- Flaw multiplier (Ch.6) is implemented and applied where sourced (Panther
+  Ausf G hull front carries a medium-severity correction); pre-Oct-1943
+  Sherman glacis QC issues remain a known candidate not yet sourced.
 - `av_override_mm` in vehicles.csv is a manual escape hatch for plates that
   don't reduce to "one thickness at one angle" (Tiger's mantlet, Sherman's
   M34A1 gun mount) — computed by hand from the extracted source data, not

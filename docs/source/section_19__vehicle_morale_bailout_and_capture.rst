@@ -72,7 +72,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
 
 **19.2.7**  Place a CREW counter in the same hex. The CREW counter represents the bailed-out crew.
 
-**19.2.8**  The CREW counter immediately routes using infantry routing rules — moves D3 hexes away from the nearest visible enemy unit. Place ROUTING marker on CREW counter.
+**19.2.8**  The CREW counter immediately routs using infantry routing rules — moves D3 hexes away from the nearest visible enemy unit. Place ROUTING marker on CREW counter.
 
 **19.2.9**  The CREW counter follows all infantry routing rules (Section 10.6) for subsequent turns including rally attempts.
 

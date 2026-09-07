@@ -27,7 +27,7 @@ Vehicle combat uses a dedicated resolution sequence that determines whether a ro
 
 **18.1a.1**  Every vehicle-mounted gun counter prints a Gunnery Table: a Miss Threshold and a Hull Threshold for each range band, already calculated for that vehicle's own Crew Quality (Rule 18.1a.2). No separate lookup, chart, or calculation is required at the table — read the row for the actual range.
 
-*Example format (values illustrative — 88mm KwK36, Regular crew):*
+*Example (88mm KwK36, Regular crew — the actual computed rows from* ``vehicle_fire_thresholds_output.csv``):*
 
 .. list-table::
    :header-rows: 1
@@ -35,8 +35,12 @@ Vehicle combat uses a dedicated resolution sequence that determines whether a ro
 
    * - **Range**
      - **Result**
-   * - 0–750m
+   * - 100m
      - Roll < 12: Miss. Roll 12–13: Turret. Roll ≥ 14: Hull.
+   * - 250–500m
+     - Roll < 12: Miss. Roll 12–14: Turret. Roll ≥ 15: Hull.
+   * - 750m
+     - Roll < 13: Miss. Roll 13–15: Turret. Roll ≥ 16: Hull.
    * - 1000m
      - Roll < 16: Miss. Roll 16–17: Turret. Roll ≥ 18: Hull.
    * - 1500m
@@ -45,6 +49,9 @@ Vehicle combat uses a dedicated resolution sequence that determines whether a ro
      - Roll < 25: Miss. Roll 25: Turret. Roll ≥ 26: Hull.
    * - 2500m+
      - Automatic miss. No roll required.
+
+
+**18.1a.1a**  Blank thresholds: a band with no printed Miss Threshold is an **automatic miss** (the shot is beyond the dice combination's resolution floor). A band with a Miss Threshold but no Hull Threshold means every hit at that range strikes the **Turret** — at extreme range only the taller profile presents. The Gunnery Table prints its own band set (typically 100/250/500/750/1000/1500/2000/2500m); the PEN lines use Rule 17.3.1's bands — the two are read independently.
 
 
 **18.1a.2**  Crew Quality is derived from the firing vehicle's own Morale value (Rule 17.3.6): Morale 7+ = Elite, Morale 6 = Veteran, Morale 5 = Regular, Morale 3–4 = Green, Morale 2 or less = Militia. This is fixed at counter-design time, not chosen or looked up during play.
@@ -104,6 +111,8 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
 *If this module is in use for the scenario:*
 
 **18.2a.1**  Before applying Rule 18.2, check Shatter Gap if all of the following hold: (a) the firing ammunition is Capped, Uncapped AP, or Soviet APBC nature (not Tungsten/APDS, not HEAT); (b) the attacking gun's printed calibre (mm) does not exceed the target's AV in the profile/arc being hit.
+
+*NOTE: condition (b) is a deliberate at-table simplification of the sourced eligibility ratio (shatter applies from T/D ≥ 0.8, i.e. calibre up to 1.25× AV). The simplified test exempts a narrow band of shots the source says could shatter (e.g. an 88mm gun against an 80mm plate); the calculation tool implements the full ratio — see* ``shatter_gap_failure`` *in* ``counters/armor_calc/formulas.py``.*
 
 **18.2a.2**  If 18.2a.1's conditions hold, look up the target's AV on the Shatter Gap Table (player aid card) to find its Shatter Window — a lower and upper PEN value.
 
@@ -222,8 +231,10 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
      - **Modifier**
    * - HEAT warhead (Panzerfaust, PIAT, Bazooka, HEAT round)
      - +1
-   * - Large calibre round (88mm+, 122mm+)
+   * - Large calibre round (88–120mm)
      - +1
+   * - Very large calibre round (122mm+)
+     - +2
    * - Crew quality veteran or elite
      - -1 (experienced crew better at surviving hits)
    * - Vehicle already damaged (on rear face)
@@ -281,7 +292,7 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
 
 **18.8.1**  Vehicles fire against infantry using their MG fire line or HE capability. Both use standard fire resolution (Section 8) against infantry Defence values.
 
-**18.8.2**  MG fire: uses MG rFP ⬡h -f notation, resolves against infantry defence + cover. Range 0 bonus (+3 rFP) applies at adjacent range.
+**18.8.2**  MG fire: uses MG rFP ⬡h -f notation, resolves against infantry defence + cover. The standard close-range bonuses apply: +3 rFP at range 0 (same hex, Rule 8.9.2), +2 rFP at range 1 (adjacent, Rule 8.9.1).
 
 **18.8.3**  HE fire: uses the flat HE rFP value. No falloff — HE effectiveness is constant regardless of range. Cover modifier applies but is reduced by 1 step (same as mortar indirect fire against buildings and reverse slopes).
 
@@ -388,7 +399,7 @@ Infantry AT weapons do not use the Gunnery Roll (Rule 18.1a.8) — they always h
 
 **18.10.2**  On landing: roll 1d6. On 1-3: no effect (fire suppressed or misses engine). On 4-6: engine fire — vehicle Pinned immediately.
 
-**18.10.3**  Each subsequent Recovery Phase while engine fire is active: roll 1d6. On 1-3: crew extinguishes fire — remove Pinned status. On 4-5: fire continues — vehicle remains Pinned. On 6: fire spreads — vehicle takes full penetration damage roll (crew bails or catastrophic kill).
+**18.10.3**  Each subsequent Recovery Phase while engine fire is active: roll 1d6. On 1-3: crew extinguishes fire — remove Pinned status. On 4-5: fire continues — vehicle remains Pinned. On 6: fire spreads — roll on the Full Penetration Damage table (Rule 18.6.1) with a +1 modifier; its full range of outcomes (Suppressed through Eliminated) applies.
 
 18.11  Overrun
 --------------

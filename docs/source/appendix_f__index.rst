@@ -223,7 +223,7 @@ effects  ..........  21.5.5
 
 extinguishing  ..........  21.5.6
 
-**Buttoned up — see Pinned (vehicle)**  ..........  10.1, 18.7
+**Buttoned up — see Pinned (vehicle)**  ..........  18.7
 
 **C**
 
