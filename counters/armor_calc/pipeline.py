@@ -29,6 +29,7 @@ from .formulas import (
     area_weighted_av,
     base_hit_probability,
     classify_hit_location,
+    silhouette_bounds,
     crew_quality_hit_cap,
     crossing_target_ratio,
     fit_gun_curve,
@@ -522,6 +523,14 @@ def write_hit_location_reference_csv(
     already used for the AV-vs-Capped columns (diameter_mm=75.0
     representative attacker). A real per-gun table is a reasonable future
     expansion, not built in this pilot -- see design spec open items.
+
+    The scatter is conditioned on actually striking the profile: Rule
+    18.6a consults this table only after the Gunnery Roll confirms a
+    hit, so each profile's zone-geometry bounding box (silhouette_bounds)
+    rejects off-target samples before classification. Unconditioned, the
+    raw scatter counted clean misses as "neither" and inflated that
+    share several-fold at realistic hit percentages -- and made the split
+    look strongly range-dependent when the conditional split barely is.
     """
     bands = [100, 250, 500, 750, 1000, 1500, 2000, 2500]
     fit = curves[representative_gun_id]
@@ -541,7 +550,8 @@ def write_hit_location_reference_csv(
                 for range_m in bands:
                     hit_pct = hit_probability(fit.muzzle_velocity_fps, fit.k_factor, range_m, quality)
                     split = classify_hit_location(
-                        zones, hit_pct, rng=np.random.default_rng(_HIT_LOCATION_RNG_SEED)
+                        zones, hit_pct, rng=np.random.default_rng(_HIT_LOCATION_RNG_SEED),
+                        silhouette=silhouette_bounds(zones),
                     )
                     thresholds = hit_location_thresholds(split)
                     writer.writerow(

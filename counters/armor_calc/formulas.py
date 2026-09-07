@@ -740,6 +740,7 @@ def classify_hit_location(
     overall_hit_pct: float,
     n_samples: int = 20000,
     rng: np.random.Generator | None = None,
+    silhouette: tuple[float, float, float, float] | None = None,
 ) -> dict[str, float]:
     """Monte Carlo classification of where a Casualty-tier hit lands
     within a target profile, given the shot's overall hit probability.
@@ -753,42 +754,101 @@ def classify_hit_location(
     test_converges_across_independent_seeds) in a way a hand-derived
     integral would not be.
 
-    Any (x, y) not covered by an explicit zone is implicitly "neither" --
-    zones do not need to tile the plausible scatter area exhaustively by
+    Any on-target (x, y) not covered by an explicit zone is implicitly
+    "neither" -- zones do not need to tile the silhouette exhaustively by
     construction, the function does it for them.
+
+    Conditioning: Rule 18.6a only consults this table AFTER the Gunnery
+    Roll has already confirmed a hit on the profile, so the distribution
+    must be conditional on the shot actually striking the plate. When
+    `silhouette` is given, samples falling outside it (clean misses of
+    the profile) are rejected and re-drawn -- percentages are then
+    conditional on an on-target hit. Without a silhouette the raw
+    scatter is tallied unconditioned, which counts off-target misses as
+    "neither" and badly inflates that share at any realistic hit% -- an
+    earlier revision of the pipeline did exactly that; the unconditioned
+    form remains only for geometry-free unit tests.
 
     Args:
         zones: The target profile's zone geometry.
         overall_hit_pct: This shot's overall hit probability (0-100),
             already computed by hit_probability() for the actual gun/
             range/crew-quality combination -- not re-derived here.
-        n_samples: Monte Carlo sample count. 20000 keeps independent runs
-            within about 2 percentage points of each other (see the
-            convergence test) -- a design-time cost, not a table-time one.
+        n_samples: Number of classified (on-target) samples. 20000 keeps
+            independent runs within about 2 percentage points of each
+            other (see the convergence test) -- a design-time cost, not a
+            table-time one.
         rng: Optional seeded generator, for reproducible tests. A fresh
             generator is created if not given.
+        silhouette: Optional (x_min, x_max, y_min, y_max) bounds of the
+            struck plate, metres, in the same aim-point-centred frame as
+            the zones. Samples outside it are rejected and re-drawn.
 
     Returns:
         {"mobility": pct, "gun": pct, "neither": pct}, summing to 100.0.
+
+    Raises:
+        ValueError: if a silhouette is given and so few samples land on
+            target that n_samples cannot be collected in a bounded number
+            of draws (a sign of broken geometry).
     """
     if rng is None:
         rng = np.random.default_rng()
     vertical_hit_pct, lateral_hit_pct = vertical_lateral_hit_pct(overall_hit_pct)
 
-    vertical_rolls = rng.uniform(0.0, 99.0, n_samples)
-    lateral_rolls = rng.uniform(0.0, 99.0, n_samples)
-    vertical_signs = rng.choice([-1.0, 1.0], n_samples)
-    lateral_signs = rng.choice([-1.0, 1.0], n_samples)
-
     counts = {"mobility": 0, "gun": 0, "neither": 0}
-    for i in range(n_samples):
-        dy = vertical_signs[i] * shot_displacement_m(vertical_rolls[i], vertical_hit_pct)
-        dx = lateral_signs[i] * shot_displacement_m(lateral_rolls[i], lateral_hit_pct)
-        zone = _find_zone(zones, dx, dy)
-        counts[zone.classification if zone is not None else "neither"] += 1
+    accepted = 0
+    for _ in range(200):
+        remaining = n_samples - accepted
+        if remaining <= 0:
+            break
+        batch = max(remaining, 1000)
+        vertical_rolls = rng.uniform(0.0, 99.0, batch)
+        lateral_rolls = rng.uniform(0.0, 99.0, batch)
+        vertical_signs = rng.choice([-1.0, 1.0], batch)
+        lateral_signs = rng.choice([-1.0, 1.0], batch)
+        for i in range(batch):
+            if accepted >= n_samples:
+                break
+            dy = vertical_signs[i] * shot_displacement_m(vertical_rolls[i], vertical_hit_pct)
+            dx = lateral_signs[i] * shot_displacement_m(lateral_rolls[i], lateral_hit_pct)
+            if silhouette is not None:
+                x_min, x_max, y_min, y_max = silhouette
+                if not (x_min <= dx <= x_max and y_min <= dy <= y_max):
+                    continue
+            zone = _find_zone(zones, dx, dy)
+            counts[zone.classification if zone is not None else "neither"] += 1
+            accepted += 1
+    if accepted < n_samples:
+        raise ValueError(
+            f"hit-location sampling accepted only {accepted}/{n_samples} samples -- "
+            "the silhouette rejects nearly everything; check the profile geometry"
+        )
 
-    total = float(n_samples)
+    total = float(accepted)
     return {k: 100.0 * v / total for k, v in counts.items()}
+
+
+def silhouette_bounds(zones: list[HitZone]) -> tuple[float, float, float, float]:
+    """Bounding box of a profile's zone geometry, for use as the
+    silhouette in classify_hit_location().
+
+    The zone set is the extent of plate this project has actually
+    modelled for a profile, so its bounding box is the honest
+    conditioning region: gaps between zones inside the box remain
+    genuinely "neither" (penetrated, nothing critical destroyed), while
+    everything outside it is a miss of the profile and must not be
+    counted at all. A profile needing a silhouette larger than its zone
+    bbox can gain explicit bounds later without changing this default.
+    """
+    if not zones:
+        raise ValueError("cannot derive a silhouette from an empty zone list")
+    return (
+        min(z.x_min for z in zones),
+        max(z.x_max for z in zones),
+        min(z.y_min for z in zones),
+        max(z.y_max for z in zones),
+    )
 
 
 def cast_deficiency_multiplier(thickness_mm: float, diameter_mm: float) -> float:

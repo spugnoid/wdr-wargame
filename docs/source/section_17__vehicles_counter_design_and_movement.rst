@@ -331,4 +331,4 @@ Casemate vehicles (TRAV 0) never receive a TRAVERSED marker; they have no separa
    * - 100–750m
      - Roll below Neither Threshold: Neither (Casualty downgrades to Pinned). Roll at or above Mobility Threshold: MOB kill. Between the two: GUN kill.
    * - 1000m+
-     - Same procedure, using that range band's own printed thresholds — dispersion widens with range, so the Neither band grows.
+     - Same procedure, using that range band's own printed thresholds. The split moves only slightly with range: the table is conditional on the shot having already hit this profile (the Gunnery Roll settled that), and where a confirmed hit lands on the plate is governed by the plate's own geometry far more than by how hard the shot was to make.

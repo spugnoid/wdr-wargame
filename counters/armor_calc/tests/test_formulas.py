@@ -10,6 +10,7 @@ from armor_calc.formulas import (
     base_hit_probability,
     cast_deficiency_multiplier,
     classify_hit_location,
+    silhouette_bounds,
     compound_angle,
     crew_quality_from_morale,
     crew_quality_hit_cap,
@@ -691,6 +692,47 @@ class TestHitLocationClassification:
         loose = classify_hit_location(zones, overall_hit_pct=20.0, n_samples=20000,
                                        rng=np.random.default_rng(3))
         assert tight["gun"] > loose["gun"]
+
+    def test_silhouette_conditioning_excludes_off_target_misses(self):
+        """With a silhouette equal to a single all-covering zone's own
+        bounds, every classified sample is on-target -- the zone gets
+        100% regardless of how low the hit probability (and thus how wide
+        the raw scatter) is. Unconditioned, the same setup leaks most
+        samples to 'neither' at low hit%."""
+        zones = [HitZone(name="plate", classification="gun",
+                          x_min=-0.5, x_max=0.5, y_min=-0.4, y_max=0.4)]
+        conditioned = classify_hit_location(
+            zones, overall_hit_pct=20.0, n_samples=5000,
+            rng=np.random.default_rng(4), silhouette=(-0.5, 0.5, -0.4, 0.4))
+        assert conditioned["gun"] == pytest.approx(100.0, abs=0.01)
+        unconditioned = classify_hit_location(
+            zones, overall_hit_pct=20.0, n_samples=5000,
+            rng=np.random.default_rng(4))
+        assert unconditioned["neither"] > 50.0
+
+    def test_conditional_split_is_nearly_range_independent(self):
+        """The conditional Mobility/Gun/Neither split should move only a
+        little as hit% (range) changes -- the strong range dependence of
+        the old output was an artifact of counting misses as Neither."""
+        zones = [
+            HitZone(name="gun zone", classification="gun", x_min=-0.5, x_max=0.5, y_min=-0.3, y_max=0.4),
+            HitZone(name="mobility zone", classification="mobility", x_min=-1.5, x_max=1.5, y_min=-0.6, y_max=-0.3),
+        ]
+        sil = silhouette_bounds(zones)
+        close = classify_hit_location(zones, overall_hit_pct=90.0, n_samples=20000,
+                                       rng=np.random.default_rng(5), silhouette=sil)
+        far = classify_hit_location(zones, overall_hit_pct=25.0, n_samples=20000,
+                                     rng=np.random.default_rng(6), silhouette=sil)
+        assert far["mobility"] == pytest.approx(close["mobility"], abs=8.0)
+
+    def test_silhouette_bounds_is_zone_bbox(self):
+        zones = [
+            HitZone(name="a", classification="gun", x_min=-0.5, x_max=0.5, y_min=-0.3, y_max=0.4),
+            HitZone(name="b", classification="mobility", x_min=-1.5, x_max=1.5, y_min=-0.6, y_max=-0.3),
+        ]
+        assert silhouette_bounds(zones) == (-1.5, 1.5, -0.6, 0.4)
+        with pytest.raises(ValueError):
+            silhouette_bounds([])
 
     def test_directional_symmetry_left_right_zones_split_evenly(self):
         """A left-half zone and a right-half zone should each catch about
