@@ -123,6 +123,8 @@ The full procedure for any fire combat action:
 
 **8.5.3**  The three-dice combination produces a symmetric distribution (range 3–26, mean 14.5, std dev 4.48). The right-skewed shape of real combat outcomes — most fire suppresses, casualties are fewer, elimination is rare — emerges from the modifier system rather than the dice: range falloff, cover, intervening terrain, and status penalties weight the majority of fire events toward low margins, while rare close-range engagements against exposed targets supply the tail.
 
+**8.5.3a**  There is no "miss" at effective range, by design: because the minimum roll is 3, any attack at a net modifier of −3 or better always produces at least Suppressed. Aimed fire at combat ranges reliably makes the target's men put their heads down — the dice decide only how much worse than that it gets. This is the system's core identity: **fire suppresses, manoeuvre kills.** Whiffed attacks live at long range, in deep cover, and through smoke (where the net modifier drops below −3 and the No Effect band opens); at effective range, the meaningful question is never "did I hit?" but "can they still act?", and the suppression-and-recovery cycle (Rules 5.2, 10.2) is the engine the whole game runs on.
+
 **8.5.4**  Subtract the target's Defence value and applicable cover modifier from the combat total. The result is the margin.
 
 8.6  Result Thresholds
