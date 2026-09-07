@@ -43,8 +43,8 @@ Section 7 — Movement
      - M3
      - Lighter load, higher initiative
    * - Sniper team
-     - M2
-     - Careful but unencumbered by crew weapon
+     - M1
+     - Deliberate, concealed movement — snipers do not run (Section 20)
 
 
 **7.1.4**  A unit may always enter any single terrain hex regardless of its movement cost, even if that cost exceeds its remaining M# for that activation. The unit simply cannot move further that activation.

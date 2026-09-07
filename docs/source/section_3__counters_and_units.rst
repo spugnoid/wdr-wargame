@@ -71,19 +71,19 @@ The upper right corner of each counter shows three action values:
      - **Standard Action Values**
      - **Notes**
    * - Rifle squad
-     - M1 F2 G3
+     - M2 F2 G3
      - 
    * - SMG squad
-     - M1 F2 G3
+     - M2 F2 G3
      - 
    * - Panzergrenadier squad
-     - M1 F2 G4
+     - M2 F2 G4
      - Higher grenade value reflects assault doctrine
    * - Guards rifle squad
-     - M1 F2 G4
+     - M2 F2 G4
      - 
    * - LMG team
-     - M1 F3 G2
+     - M2 F3 G2
      - Sustained fire capability
    * - HMG team (deployed)
      - M0 F3 G1
@@ -95,7 +95,7 @@ The upper right corner of each counter shows three action values:
      - M1 F1 G0
      - One careful shot per turn
    * - Leader
-     - M2 F1 G0
+     - M3 F1 G0
      - High mobility, rarely fires directly
 
 

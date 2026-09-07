@@ -20,7 +20,7 @@ Counter Face Layout
      - GREN 43 = Wehrmacht Grenadier, 1943
    * - Upper right
      - Action values
-     - M1 F2 G3
+     - M2 F2 G3
    * - Centre lines
      - Fire lines (1–3)
      - ─● 7 ⬡4 -1
