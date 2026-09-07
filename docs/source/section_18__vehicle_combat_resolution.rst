@@ -222,8 +222,6 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
      - **Modifier**
    * - HEAT warhead (Panzerfaust, PIAT, Bazooka, HEAT round)
      - +1
-   * - HE direct hit (howitzer, infantry gun)
-     - -1
    * - Large calibre round (88mm+, 122mm+)
      - +1
    * - Crew quality veteran or elite
@@ -288,6 +286,24 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
 **18.8.3**  HE fire: uses the flat HE rFP value. No falloff — HE effectiveness is constant regardless of range. Cover modifier applies but is reduced by 1 step (same as mortar indirect fire against buildings and reverse slopes).
 
 **18.8.4**  HE rFP derivation formula (resolved in spreadsheet): HE rFP = round(gun calibre in mm / 20). Examples: 37mm = 2, 75mm = 4, 88mm = 4, 105mm = 5, 122mm = 6.
+
+**18.8.5**  Fire against vehicles as soft targets: open-topped vehicles (the ○— symbol, Rule 17.1) and unarmoured (soft) vehicles can be attacked by HE, MG/small-arms fire (range 0–1 only), mortar blast (Rule 16.7.8), and grenades as if they were infantry, using a class Defence value — no per-vehicle stat is printed:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - **Vehicle class**
+     - **Defence vs soft-target fire**
+   * - Truck / soft vehicle
+     - 6
+   * - Open-topped armoured vehicle (○—)
+     - 8
+
+
+A Casualty result or better eliminates a soft vehicle; against an open-topped armoured vehicle it is a vehicle Casualty (Rule 18.6a applies if a table exists, else Rule 17.1.1).
+
+**18.8.6**  HE direct fire against a **closed** AFV never rolls on the penetration tables: resolve one roll on the Non-Penetrating Hit table (Rule 18.4), at +1 for guns of 105mm and larger — blast and concussion can suppress a crew but not open the tank. Damage to closed AFVs comes only through AP/HEAT penetration (Rule 18.2), overrun (18.11), Molotovs (18.10), and engineer attacks (Section 21).
 
 18.9  Infantry Anti-Tank Weapons
 --------------------------------

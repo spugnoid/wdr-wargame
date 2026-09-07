@@ -210,7 +210,7 @@ All mortar counters use M1 F2 (mobile) or M0 F2 (deployed). Mortar teams must de
 
 **16.7.7**  Hidden units in the blast area: blast effect applies regardless of visibility. A dummy marker in the blast hex produces no effect. A real hidden unit takes the blast effect and is automatically revealed — the explosion nearby discloses the position.
 
-**16.7.8**  Vehicles in the blast area: an open-topped vehicle (the ○— symbol, Rule 17.1) or unarmoured vehicle takes the blast as a normal fire attack against its Defence value, like infantry. A closed AFV takes no damage from mortar blast, but its crew must pass a check (1d6 + Morale modifier, Rule 15.2.1a) or the vehicle is Suppressed — threshold 3, or 4 against 120mm-class blast. Mortars never roll on the Section 18 penetration tables.
+**16.7.8**  Vehicles in the blast area: an open-topped vehicle (the ○— symbol, Rule 17.1) or unarmoured vehicle takes the blast as a normal fire attack against its class Defence (Rule 18.8.5), like infantry. A closed AFV takes no damage from mortar blast, but its crew must pass a check (1d6 + Morale modifier, Rule 15.2.1a) or the vehicle is Suppressed — threshold 3, or 4 against 120mm-class blast. Mortars never roll on the Section 18 penetration tables.
 
     *See also: Rule 17.1 (open-top symbol), Rule 19.1 (vehicle morale checks).*
 

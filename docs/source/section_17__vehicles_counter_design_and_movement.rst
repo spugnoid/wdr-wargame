@@ -268,7 +268,7 @@ Casemate vehicles (TRAV 0) never receive a TRAVERSED marker; they have no separa
      - Road only effectively — see terrain table
 
 
-**17.6.2**  Vehicle terrain movement costs:
+**17.6.2**  Vehicle terrain movement costs (see Rule 17.6.2a for bog checks):
 
 .. list-table::
    :header-rows: 1
@@ -303,7 +303,7 @@ Casemate vehicles (TRAV 0) never receive a TRAVERSED marker; they have no separa
      - 3
      - 3
      - Impassable
-     - Vehicles bog or cannot enter
+     - Bog check for tracked vehicles — Rule 17.6.2a
    * - Hedgerow
      - 2
      - 3
@@ -345,6 +345,10 @@ Casemate vehicles (TRAV 0) never receive a TRAVERSED marker; they have no separa
      - Impassable
      - 
 
+
+**17.6.2a**  Bog check: when a tracked vehicle enters a dense woods hex, roll 1d6 after paying the movement cost: on 1–2 the vehicle bogs — place a BOGGED marker; it cannot move (M0) but fights normally. To free a bogged vehicle, spend a full activation working it loose and roll 1d6: on 4+ remove the BOGGED marker (+1 to the roll if a friendly vehicle is adjacent to tow). A vehicle still bogged at scenario end is treated as abandoned in place (Rule 19.3) if enemy units control the hex area, else recovered.
+
+**17.6.2b**  Reverse movement: a vehicle may back directly into the hex behind it (its rear-wedge adjacent hex) without changing facing, at **double** the terrain's MP cost per hex. This is how a casemate tank destroyer disengages without exposing its side or rear armour.
 
 **17.6.3**  Vehicle LOS: vehicles are larger than infantry. Any unit with LOS to a vehicle's hex automatically has LOS to the vehicle through up to 2 hexes of light woods or 1 hex of dense woods. Normal LOS rules apply beyond these limits.
 
