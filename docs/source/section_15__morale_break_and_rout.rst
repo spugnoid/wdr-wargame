@@ -65,7 +65,7 @@ Most WWII engagements ended not with one side physically eliminated but with one
      - +1
 
 
-    *NOTE: earlier drafts rolled 1d6 + the full Morale value. With Morale spanning only 3–6 and thresholds of 5–7, regular and better troops could never fail most checks — the scale was inert. The modifier form keeps the same quality spread while placing thresholds in honest 1d6 space, where a threshold of 4 means a regular unit holds half the time.*
+*NOTE: earlier drafts rolled 1d6 + the full Morale value. With Morale spanning only 3–6 and thresholds of 5–7, regular and better troops could never fail most checks — the scale was inert. The modifier form keeps the same quality spread while placing thresholds in honest 1d6 space, where a threshold of 4 means a regular unit holds half the time.*
 
 **15.2.2**  If the roll meets or exceeds the threshold: the unit holds. No effect. The check is resolved and discarded.
 
