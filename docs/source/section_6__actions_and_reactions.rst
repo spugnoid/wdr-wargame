@@ -117,7 +117,7 @@ The following reactions are available to the non-active player during the reacti
 
 **6.5.2**  A unit may not take an action for which it already has a marker unless the rules explicitly permit it (e.g., a unit with F3 may place FIRE 1, then FIRE 2, then FIRE 3 on separate impulses).
 
-**6.5.3**  The ASSAULT marker replaces both a MOVED and FIRE 1 marker. A unit with an ASSAULT marker may still use remaining fire actions (FIRE 2, FIRE 3) from stationary positions but may not move again this turn.
+**6.5.3**  The ASSAULT marker replaces both a MOVED and FIRE 1 marker — it records one move and one fire, regardless of which came first. A unit with an ASSAULT marker may still use remaining fire actions (FIRE 2, FIRE 3) in later impulses from its current position, but may not move again this turn. The two orderings (move-then-fire, fire-then-move) leave identical marker states and identical remaining rights — the marker cannot record order, so the rules do not depend on it.
 
 **6.5.4**  All action markers are removed during the Recovery Phase at the start of the following turn.
 
@@ -125,7 +125,7 @@ The following reactions are available to the non-active player during the reacti
 -------------------
 
 
-**6.6.1**  A unit becomes Exposed when it takes a Move and Fire action (ASSAULT marker placed). The Exposed condition persists until the unit spends a Move action to reach terrain with cover modifier +2 or higher, or until the end of the current turn.
+**6.6.1**  A unit becomes Exposed when it takes a Move and Fire action (ASSAULT marker placed). Duration depends on where the unit ends its action: in terrain with cover modifier +2 or higher, the Exposed condition ends when the reaction window of the unit's own impulse closes (the bound into cover is briefly exposed, then covered); in lower cover, it persists until the end of the current turn. There is no mid-turn escape by moving — an ASSAULT-marked unit cannot move again (Rule 6.5.3).
 
 **6.6.2**  A unit firing from open ground (cover modifier +0) for the second time from the same position in the same turn becomes Firing Exposed after its second fire action.
 

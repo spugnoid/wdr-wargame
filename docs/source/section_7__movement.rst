@@ -131,9 +131,9 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
 
 **7.3.3**  A unit with an ASSAULT marker may still use remaining fire actions (FIRE 2, FIRE 3) in subsequent impulses from a stationary position but may not move again this turn.
 
-**7.3.4**  A unit may fire and then move by taking a Fire action followed by a Move action in the same activation. Place FIRE 1 marker, then ASSAULT marker. The unit may not fire again after moving.
+**7.3.4**  The Assault action's move and fire may be taken in either order — bound then fire, or fire then bound. Either way, place the ASSAULT marker only: it subsumes the fire (Rule 6.5.3), and no FIRE 1 marker is placed alongside it. Remaining rights are identical in both orders.
 
-**7.3.5**  In both cases (move then fire, fire then move), the unit is considered Exposed for the remainder of the reaction window.
+**7.3.5**  In both cases the unit is Exposed (Rule 6.6.1): until its own reaction window closes if it ends the action in cover +2 or better, until the end of the turn otherwise.
 
 7.4  Careless Movement
 ----------------------
