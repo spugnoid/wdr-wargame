@@ -649,7 +649,7 @@ mobile M1  ..........  3.3.1
 
 both pass = Action Phase ends  ..........  5.6.2
 
-reaction window  ..........  5.5.3
+reaction window  ..........  5.5.2–5.5.4
 
 **Indirect fire — see Mortars**  ..........  S.16
 

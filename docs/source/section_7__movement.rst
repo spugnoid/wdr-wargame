@@ -153,7 +153,7 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
 ---------------------------
 
 
-**7.5.1**  A unit that is currently in the process of moving (MOVED marker placed, unit in transit) is a moving target.
+**7.5.1**  A unit that is currently in the process of moving (MOVED marker placed, unit in transit) is a moving target. Opportunity fire against a moving target is declared at an interruption point — whenever the unit enters a new hex during its move (Rule 5.5.3) — and resolves before the unit moves further.
 
 **7.5.2**  Opportunity fire against a moving target applies -2 rFP to the attacker.
 

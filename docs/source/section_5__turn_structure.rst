@@ -87,17 +87,19 @@ Each game turn proceeds through three phases in the following order:
 ---------------------
 
 
-Each impulse proceeds as follows:
+Each impulse proceeds through three timing steps. Reactions occur only at the moments these steps define.
 
-**5.5.1**  Active player declares and executes one action (costs 1 AP) or passes.
+**5.5.1**  Declaration: the active player declares one action (costs 1 AP), naming the acting unit and, where relevant, the target or intended path — or passes.
 
-**5.5.2**  After the action executes, a reaction window opens.
+**5.5.2**  Declaration window: after the declaration but before the action resolves, the non-active player may spend RP on reactions that respond to the declaration itself — Defensive Fire against a declared Close Assault, an Interrupt, or Opportunity Fire against an eligible target already in LOS (including an Exposed unit). Reactions in this window resolve before the declared action. If a declaration-window reaction leaves the acting unit Suppressed or Pinned, or renders the declared action illegal (target destroyed, LOS lost), the declared action is cancelled; the active player retains the AP and may declare a different action.
 
-**5.5.3**  The non-active player may spend RP to react. Multiple reactions may be taken in one window if sufficient RP are available.
+    *See also: Rule 6.4.2 (the same cancellation rule for Interrupts).*
 
-**5.5.4**  The reaction window closes. The next impulse begins with the opposing player as active.
+**5.5.3**  Resolution: the action resolves. A Move action (or the move portion of an Assault action) resolves hex by hex — each time the moving unit enters a new hex, an interruption point occurs: the non-active player may spend RP on Opportunity Fire against the moving unit (and take any free spot rolls, Rule 7.4.3) before it moves further. Results of fire at an interruption point apply per Rules 7.5.3–7.5.5.
 
-**5.5.5**  Opportunity fire declared before an action executes (pre-action reaction) resolves before the declared action. If the pre-action reaction suppresses or pins the acting unit, the declared action may be cancelled. The acting player still retains the AP but may spend it on a different action.
+**5.5.4**  Post-action window: after the action resolves, the non-active player may spend RP on reactions triggered by the action's outcome — for example, Opportunity Fire against a unit that is now Exposed, or a Spot Roll against a unit that fired or became visible. Multiple reactions may be taken in one window if sufficient RP are available.
+
+**5.5.5**  All windows close. The next impulse begins with the opposing player as active.
 
 5.6  Passing
 ------------

@@ -89,7 +89,7 @@ The following reactions are available to the non-active player during the reacti
      - **Trigger Condition**
    * - Opportunity Fire
      - 1
-     - Enemy unit moves into LOS, or enemy unit becomes Exposed (see Rule 6.6).
+     - Enemy unit moves within or into LOS (declared at an interruption point, Rule 5.5.3), or enemy unit becomes Exposed (see Rule 6.6).
    * - Defensive Fire
      - 1
      - Enemy unit declares Close Assault against a friendly unit.
@@ -103,9 +103,9 @@ The following reactions are available to the non-active player during the reacti
 
 **6.4.1**  Interrupt procedure: the declared enemy action is placed on hold. The interrupting player executes one complete action with one eligible friendly unit (normal action rules and action markers apply). The held action then resolves.
 
-**6.4.2**  If the interrupting action renders the held action illegal — the target is destroyed or no longer in line of sight, or the acting unit is Suppressed or Pinned — the acting player retains the AP and may declare a different action instead, consistent with Rule 5.5.5.
+**6.4.2**  If the interrupting action renders the held action illegal — the target is destroyed or no longer in line of sight, or the acting unit is Suppressed or Pinned — the acting player retains the AP and may declare a different action instead, consistent with Rule 5.5.2.
 
-**6.4.3**  An Interrupt may not itself be interrupted. Other reactions (Opportunity Fire, Defensive Fire, Spot Roll) may trigger off the interrupting action normally if their conditions are met.
+**6.4.3**  During an Interrupt, the players' roles swap fully for that one action: the original active player becomes the reacting player and may spend their own RP on reactions to the interrupting action (Opportunity Fire, Defensive Fire, Spot Roll), using the same timing windows of Rule 5.5. An Interrupt may not itself be interrupted.
 
 **6.4.4**  Limit: one Interrupt per declared enemy action.
 
