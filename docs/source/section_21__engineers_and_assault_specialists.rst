@@ -170,7 +170,7 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
 ------------------
 
 
-**21.5.1**  The flamethrower is a short-range area weapon that ignores cover. It was most effective in clearing fortifications, bunkers, and buildings where conventional fire was ineffective.
+**21.5.1**  The flamethrower is a short-range area weapon that largely negates cover (cover modifiers are halved — Rule 21.5.3). It was most effective in clearing fortifications, bunkers, and buildings where conventional fire was ineffective.
 
 **21.5.2**  Flamethrower fire line:
 
@@ -205,7 +205,7 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
 
 **21.5.4**  Burning marker: when a flamethrower attack produces a Suppressed result or better, place a BURNING marker in the target hex in addition to the combat result.
 
-**21.5.5**  Burning hex effects: at the start of each activation by a unit in a BURNING hex, that unit takes an automatic rFP 3 attack (no roll — just apply result thresholds to margin). Additionally all units in a BURNING hex suffer -2 CON (fire reveals position).
+**21.5.5**  Burning hex effects: at the start of each activation by a unit in a BURNING hex, that unit takes a fire attack with Resolution FP 3 — roll 1d6+1d8+1d12 normally against the unit's Defence (no cover modifier: the fire is in the cover with them). This attack is exempt from the Long Range Cap (Rule 8.7) — flame kills at any "range". Additionally all units in a BURNING hex suffer -2 CON (fire reveals position).
 
 **21.5.6**  Extinguishing fire: a unit in a BURNING hex may spend 1 AP to attempt to extinguish. Roll 1d6 on 4+ fire is extinguished, BURNING marker removed. On 1-3 fire continues.
 

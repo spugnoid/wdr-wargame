@@ -43,7 +43,7 @@ Sniper rules differ from standard infantry fire in three fundamental ways: they 
      - Small team, hard to spot but lightly equipped
 
 
-**20.1.3**  Sniper ammunition follows the same secret bonus system as mortars (Rule 16.3). Base AMO is 4. At scenario setup the owning player secretly rolls 1d6-1 and adds to base AMO. Past base AMO, roll the extended ammunition table each shot.
+**20.1.3**  Sniper ammunition follows the same system as mortars (Rule 16.3). Base AMO is 4 — certain, with no roll or private record. Past base AMO, roll the extended ammunition table each shot.
 
 20.2  Deliberate Targeting
 --------------------------
@@ -226,4 +226,4 @@ Sniper rules differ from standard infantry fire in three fundamental ways: they 
      - Scoped M1903A4 Springfield
 
 
-*NOTE: All nations use identical fire line values — sniper effectiveness at this scale is determined more by position, patience, and target selection than by weapon differences. Quality differentials are encoded in Morale values and the AMO secret bonus. A veteran sniper with Morale 7 recovers from suppression automatically and passes detection checks more reliably.*
+*NOTE: All nations use identical fire line values — sniper effectiveness at this scale is determined more by position, patience, and target selection than by weapon differences. Quality differentials are encoded in Morale values and the extended-ammunition rolls past base AMO. A veteran sniper with Morale 7 recovers from suppression automatically and passes detection checks more reliably.*
