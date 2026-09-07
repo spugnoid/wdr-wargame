@@ -21,7 +21,7 @@ Section 6 — Actions and Reactions
 
 **6.2.2**  RP expenditure does not require unit activation. Any eligible unit may react if RP are available, regardless of whether it has already been activated this turn.
 
-**6.2.3**  Reacting with opportunity fire consumes one of the reacting unit's F# fire actions for the turn.
+**6.2.3**  Reacting with opportunity fire consumes one of the reacting unit's F# fire actions for the turn: place the unit's next FIRE marker (FIRE 1/2/3) as for any fire, plus the OPPORTUNITY marker to show a reaction fire occurred this turn. A unit may react with opportunity fire more than once per turn while fire actions and RP remain — the OPPORTUNITY marker is informational, not a limit.
 
 6.3  Action Types
 -----------------
@@ -50,7 +50,7 @@ The following actions are available to the active player. Each costs 1 AP unless
      - Declare close assault against adjacent occupied enemy hex. See Section 9.
    * - Rally
      - 1
-     - Leader attempts to rally one adjacent suppressed or pinned unit. See Section 12.
+     - Leader attempts to rally one suppressed or pinned unit within command radius. See Rule 12.6.
    * - Deploy Weapon
      - 1
      - Remove MOBILE marker from a weapon counter. Unit may not fire this impulse.
@@ -71,7 +71,7 @@ The following actions are available to the active player. Each costs 1 AP unless
      - Move one dummy marker independently (free if real unit in same group also moves this turn).
    * - Leader Action
      - 1
-     - Leader moves, coordinates, provides a fire bonus to an adjacent unit, or places a RALLY POINT marker.
+     - Leader moves, coordinates, provides a fire bonus to a fire group within command radius (Rule 12.7), or places a RALLY POINT marker.
 
 
 6.4  Reaction Types
@@ -127,11 +127,11 @@ The following reactions are available to the non-active player during the reacti
 
 **6.6.1**  A unit becomes Exposed when it takes a Move and Fire action (ASSAULT marker placed). Duration depends on where the unit ends its action: in terrain with cover modifier +2 or higher, the Exposed condition ends when the reaction window of the unit's own impulse closes (the bound into cover is briefly exposed, then covered); in lower cover, it persists until the end of the current turn. There is no mid-turn escape by moving — an ASSAULT-marked unit cannot move again (Rule 6.5.3).
 
-**6.6.2**  A unit firing from open ground (cover modifier +0) for the second time from the same position in the same turn becomes Firing Exposed after its second fire action.
+**6.6.2**  A unit firing from open ground (cover modifier +0) for the second or later time in the same turn becomes Firing Exposed after that fire action. No position tracking is required — the FIRE markers already count the unit's fires, and a unit that moved between fires carries an ASSAULT marker and is fully Exposed anyway (Rule 6.6.1).
 
 **6.6.3**  First fire from any position this turn is not Firing Exposed regardless of terrain.
 
-**6.6.4**  An Exposed unit may be targeted by opportunity fire (1 RP cost) at any point while it remains Exposed.
+**6.6.4**  An Exposed unit may be targeted by opportunity fire (1 RP cost) during any reaction window or interruption point (Rule 5.5) while it remains Exposed.
 
 **6.6.5**  Opportunity fire against an Exposed unit uses full fire resolution with no penalty to the attacker's rFP.
 

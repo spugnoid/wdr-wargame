@@ -139,7 +139,7 @@ The following terms are used throughout this document. Each term is defined here
 
 **Pinned —**  A status condition preventing movement and severely degrading fire effectiveness.
 
-**Exposure —**  The condition of a unit that has moved and fired in the same impulse, or fired from open ground a second time. Exposed units may be targeted by opportunity fire.
+**Exposure —**  Two distinct conditions (Rule 6.6): **Exposed** — took a Move and Fire (Assault) action this turn; opportunity fire against it takes no penalty. **Firing Exposed** — fired a second or later time this turn while in open ground; opportunity fire against it takes -1 rFP. Both invite opportunity fire (1 RP).
 
 **AP —**  Action Points. The resource controlling how many units the active player may activate per turn.
 

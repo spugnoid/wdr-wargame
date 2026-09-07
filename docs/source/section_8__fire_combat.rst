@@ -197,6 +197,6 @@ The full procedure for any fire combat action:
 
 **8.10.1**  See Section 6.6 for the full Firing Exposed rules and trigger conditions.
 
-**8.10.2**  Summary: Move and fire (ASSAULT) = Exposed. Second fire from open ground same position = Firing Exposed. First fire from any position = not Exposed.
+**8.10.2**  Summary: Move and fire (ASSAULT) = Exposed. Second or later fire this turn while in open ground = Firing Exposed. First fire from any position = not Exposed.
 
 **8.10.3**  Exposed units may be targeted by opportunity fire at 1 RP cost. Firing Exposed units impose -1 rFP on the attacker. Moving units impose -2 rFP on the attacker.

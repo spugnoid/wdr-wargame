@@ -138,7 +138,7 @@ The upper right corner of each counter shows three action values:
      - ⬡4 to ⬡6
    * - ▲  (triangle)
      - Mortar
-     - Special — see Section TBD
+     - Special — see Section 16 (Mortars and Smoke)
 
 
 3.5  Stacking Limits
@@ -149,7 +149,7 @@ The upper right corner of each counter shows three action values:
 
 **3.5.2**  Leaders do not count toward the stacking limit.
 
-**3.5.3**  Independently crewed weapon counters (HMG teams, mortar teams, AT gun teams) do not count toward the stacking limit when stacked beneath their parent squad.
+**3.5.3**  Independently crewed weapon counters (HMG teams, mortar teams, AT gun teams) do not count toward the stacking limit when stacked beneath their parent squad. A weapon counter's **parent squad** is the friendly squad it is currently stacked with; if stacked with more than one squad, the owning player designates which is the parent. Parenthood transfers simply by stacking with a different friendly squad.
 
 **3.5.4**  Weapon counters that have separated from their parent squad count as a combat unit for stacking purposes.
 
