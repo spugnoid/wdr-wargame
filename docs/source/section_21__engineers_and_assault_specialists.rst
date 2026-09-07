@@ -34,8 +34,8 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
      - 7
      - Specialist equipment, trained for close combat
    * - Morale
-     - 6–7
-     - Selected troops, high quality across most nations
+     - 6
+     - Selected troops — veteran/elite quality (Morale modifier +1) across most nations
 
 
 **21.1.3**  Engineer capability icons appear on the bottom support band. Each capability may be used a limited number of times per scenario. When expended, cover the icon with an EXPENDED strip — the same strip used for single-shot AT weapons.
@@ -80,7 +80,7 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
 
 **21.2.1**  Engineer units may attempt to breach obstacles that are impassable or prohibitively expensive for regular infantry.
 
-**21.2.2**  Breaching action: engineer unit adjacent to or in the obstacle hex, spend 1 AP. Roll 1d6 + engineer Morale vs breach threshold:
+**21.2.2**  Breaching action: engineer unit adjacent to or in the obstacle hex, spend 1 AP. Roll 1d6 + Morale modifier (Rule 15.2.1a) vs breach threshold. A veteran engineer squad (modifier +1) clears wire on 2+ and forces a reinforced bunker entrance only on a natural 6:
 
 .. list-table::
    :header-rows: 1
@@ -122,7 +122,7 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
 
 **21.3.3**  Not under fire: demolition succeeds automatically. No roll required.
 
-**21.3.4**  Under fire (any fire result received this turn): roll 1d6 + Morale vs 5. Failure — charges not set this turn, may retry. Success — demolition proceeds.
+**21.3.4**  Under fire (any fire result received this turn): roll 1d6 + Morale modifier vs 5. Failure — charges not set this turn, may retry. Success — demolition proceeds.
 
 **21.3.5**  Demolition targets and results:
 
@@ -158,7 +158,7 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
 
 **21.4.3**  Engineer units entering a minefield hex are not subject to the mine strike roll — they advance carefully with probe and detector.
 
-**21.4.4**  Mine clearing action: engineer unit in or adjacent to minefield hex, spend 1 AP. Roll 1d6 + Morale vs 5.
+**21.4.4**  Mine clearing action: engineer unit in or adjacent to minefield hex, spend 1 AP. Roll 1d6 + Morale modifier vs 5.
 
 **21.4.5**  Success: place BREACH marker — a safe lane has been cleared through the hex. Units using the BREACH marker are not subject to mine strike. Expend MINE icon.
 
@@ -284,7 +284,7 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
 
 **21.8.1**  Assault bridges are scenario-defined assets available to engineer units. Not all scenarios include them.
 
-**21.8.2**  Bridge deployment: engineer unit at water obstacle edge, spend 2 AP. Roll 1d6 + Morale vs 5 (vs 7 if under fire).
+**21.8.2**  Bridge deployment: engineer unit at water obstacle edge, spend 2 AP. Roll 1d6 + Morale modifier vs 5 (vs 7 if under fire).
 
 **21.8.3**  Success: bridge placed — BRDG marker at obstacle. All units may cross at normal movement cost. Expend BRDG capability.
 
