@@ -37,7 +37,9 @@ With Deepest Regret... uses a physical hidden information system to model the fo
 
 **14.2.1**  Each player has a hidden information chart with numbered slots beside the map. Each slot has a physical cover — a cup, opaque token, or small box.
 
-**14.2.2**  When a unit goes HIDDEN, its counter is placed in a numbered slot on the chart. The cover is placed over the slot. A blind marker with the matching number is placed on the map.
+**14.2.2**  When a unit goes HIDDEN, its counter is seated under one of a group of numbered covers **out of the opponent's sight** — behind a small screen, below the table edge, or with the covers face-down in hand — together with the empty covers of any dummies spawned in the same action. The whole group of covered slots is then placed on the chart **simultaneously**. Blind markers with the matching numbers go on the map. The opponent may know which group of numbers belongs together; nothing in the placement may reveal which number holds the counter.
+
+**14.2.2a**  Concealed seating is what the system's integrity rests on: a counter visibly placed into slot 4 while empty covers go on slots 5 and 6 is not hidden information, whatever the covers claim afterwards. If a seating is accidentally exposed, re-seat the group from scratch out of sight.
 
 **14.2.3**  Covered slots may not be touched by either player during play except when the rules require revelation. Physical integrity is maintained by the cover, not by trust.
 
@@ -75,7 +77,7 @@ With Deepest Regret... uses a physical hidden information system to model the fo
 -------------------
 
 
-**14.4.1**  Dummy markers are blank chart slots with covers — no unit counter underneath. They are physically identical to real blind markers.
+**14.4.1**  Dummy markers are blank chart slots with covers — no unit counter underneath. Their covers, slots, and map markers are physically identical to a real hidden unit's, and they are always seated and placed in the same concealed, simultaneous action as the real slot they were spawned with (Rule 14.2.2) — the opponent never observes which member of the group received the counter.
 
 **14.4.2**  Dummies must match the size category of the real unit they were spawned from. A single unit spawning dummies produces single-size dummies only.
 
@@ -93,9 +95,7 @@ With Deepest Regret... uses a physical hidden information system to model the fo
 
 **14.5.2**  Going hidden procedure:
 
-**14.5.3**  Place the unit counter in a numbered chart slot and cover it. Place the correct size blind marker at the unit's current map position.
-
-**14.5.4**  Immediately receive a free hidden impulse (see Rule 14.6) before the reaction window opens.
+**14.5.3**  Immediately receive a free hidden impulse (see Rule 14.6) before the reaction window opens. The chart seating and all marker placement happen inside that impulse, as one concealed, simultaneous commitment — the counter is never visibly placed into its slot first.
 
 14.6  Free Hidden Impulse
 -------------------------
@@ -103,11 +103,13 @@ With Deepest Regret... uses a physical hidden information system to model the fo
 
 **14.6.1**  When a unit goes hidden — either by spending 1 AP or as a free action after firing from a FIXED position — it immediately receives a free hidden impulse outside the normal AP economy.
 
-**14.6.2**  During the free hidden impulse the owning player, in order:
+**14.6.2**  During the free hidden impulse the owning player, out of the opponent's sight, seats the unit counter under one numbered cover and prepares 2 empty (dummy) covers, then commits everything at once:
 
-**14.6.3**  Moves the real blind marker up to M# hexes along any plausible route following terrain movement costs.
+**14.6.3**  Places all three covered slots on the chart simultaneously (Rule 14.2.2), and places the three matching numbered blind markers on the map simultaneously.
 
-**14.6.4**  Places 2 dummy markers at the unit's last spotted position or adjacent hexes.
+**14.6.4**  One marker (the owning player knows which; the opponent must not be able to tell) is placed up to M# hexes from the unit's last known position along any plausible route following terrain movement costs; each other marker is placed anywhere the real unit could legally have reached under the same constraint — including its last known position. Because every marker in the group obeys the same placement envelope, marker geometry reveals nothing about which is real.
+
+*NOTE: earlier drafts placed the real counter into its slot in the open, spawned visibly-empty dummy covers, and moved the real marker before the dummies existed — in face-to-face play the opponent simply watched, and the three-marker uncertainty this system exists to create never existed. Every leak has the same fix: assignment happens out of sight, and everything that could distinguish group members is committed simultaneously under a shared constraint.*
 
 **14.6.5**  May move each dummy marker up to M# hexes along any plausible route.
 
