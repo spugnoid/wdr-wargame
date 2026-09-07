@@ -165,24 +165,29 @@ Vehicle counters display the following fields:
 
 **17.5.1**  Vehicle facing is tracked by orienting the counter's printed facing arrow toward one of the six hex sides of the vehicle's current hex.
 
-**17.5.2**  Facing arcs relative to the facing arrow direction:
+**17.5.2**  Facing arcs are the six 60° wedges of the map radiating from the vehicle's hex, one per hexside, extended to **any range** — each wedge contains the adjacent hex through that hexside and every hex beyond it in that sixth of the map:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - **Arc**
-     - **Hexes covered**
+     - **Wedges covered**
      - **AV used**
    * - FRONT
-     - 1 hex directly ahead (arrow direction)
+     - The wedge through the faced hexside (arrow direction)
      - F value
    * - SIDE
-     - 2 hexes to each side (4 hexes total)
+     - The two wedges adjacent to FRONT and the two adjacent to REAR (four wedges)
      - S value
    * - REAR
-     - 1 hex directly behind (opposite arrow)
+     - The wedge through the opposite hexside
      - R value
+
+
+**17.5.2a**  The attacker's arc is the wedge containing the attacker's hex. A hex lying exactly on the spine between two wedges counts as the wedge **less favourable to the target** (the attacker's choice of the two AVs' better side): a spine between FRONT and SIDE resolves as SIDE, between SIDE and REAR as REAR. At adjacent range this reduces exactly to the old adjacent-hex table — one hex ahead is FRONT, one behind is REAR, the four others SIDE.
+
+*NOTE: a 60° front means oblique fire at any range strikes SIDE armour — positioning and facing matter at 1,000 yards as much as at 40. The historical-matchup table (Rule 18.12) states its engagements as head-on (attacker in the FRONT wedge); an attacker manoeuvred onto a flank uses the Side AVs, which is the point.*
 
 
 **17.5.3**  When a vehicle moves, its facing changes to match the direction of movement unless the player explicitly declares a pivot.
