@@ -75,9 +75,13 @@ Each game turn proceeds through three phases in the following order:
 
 **5.3.1**  Both players roll 1d6 and add any applicable leader bonus. The higher result wins initiative for this turn. Re-roll ties.
 
-**5.3.2**  The initiative winner acts first in each impulse, wins all reaction timing ties, and receives +1 RP for this turn.
+**5.3.2**  The initiative winner acts first in each impulse and wins all reaction timing ties. Initiative grants tempo, not resources — both sides' RP pools are computed identically (Rule 5.3.4).
 
 **5.3.3**  Action Points (AP) are calculated as: AP = 1 (base) + Σ CMD ratings of all functional leaders. See Section 12 for full leader rules.
+
+**5.3.3a**  NCO floor: a side with **no functional leaders** that still has at least 3 unbroken combat units on the map receives AP = 2 (and thus RP = 1) — junior NCOs take over enough to keep the force fighting, at half or less of a typical led pool. With fewer than 3 unbroken combat units remaining, the base AP = 1 stands: the remnant is beyond coordination.
+
+    *See also: Rule 12.3.4 (functional leaders), Rule 12.3.3.*
 
 **5.3.4**  Reaction Points (RP) are calculated: RP = round(AP / 2), minimum 1.
 
