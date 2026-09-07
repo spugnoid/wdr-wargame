@@ -198,7 +198,7 @@ Morale break behaviour differed significantly by nation and period. These differ
      - Moderate Morale, factor 0.45
    * - Japan throughout
      - Rarely routed, fanatical holds
-     - High Morale, factor 0.2 — threshold almost never reached
+     - High Morale, factor 0.8 — collapse check almost never reached
 
 
 15.7  Scenario End Conditions
