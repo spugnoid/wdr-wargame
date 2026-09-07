@@ -159,7 +159,7 @@ The upper right corner of each counter shows three action values:
 ------------------------
 
 
-Small markers are placed on or beside unit counters to track their current state. All markers are removed during the Recovery Phase at the start of each turn.
+Small markers are placed on or beside unit counters to track their current state. Action markers (MOVED, FIRE 1/2/3, ASSAULT, OPPORTUNITY, CARELESS) are removed during the Recovery Phase at the start of each turn; status markers (SUPPRESSED, PINNED, and the like) persist until removed by their own rules — a recovery roll, a rally, or the condition ending (Rules 5.2.2–5.2.4).
 
 .. list-table::
    :header-rows: 1
