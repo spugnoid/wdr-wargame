@@ -88,7 +88,7 @@ Section 11 — Prisoners and Surrender
 
 **11.6.1**  Secured prisoner markers (escorted off-map) generate Intelligence Points for the campaign.
 
-**11.6.2**  1 Intelligence Point is generated per secured POW marker per campaign turn.
+**11.6.2**  1 Intelligence Point is awarded per secured POW marker, **once**, at the moment it is secured. Prisoners are interrogated when taken — they are not a renewable resource, and a stockpile of early captures does not compound across a long campaign.
 
 **11.6.3**  Intelligence Points may be spent between scenarios for the following benefits:
 
@@ -103,4 +103,4 @@ Section 11 — Prisoners and Surrender
    * - 2 points
      - Reveal the starting position of one enemy unit in the next scenario
    * - 3 points
-     - Gain bonus replacement points equal to the prisoner count
+     - Gain bonus replacement points equal to the prisoner count *[TBD — replacement points await the campaign economy design (Rule 13.2.2); this benefit is unavailable until then]*
