@@ -11,6 +11,8 @@ The full procedure for any fire combat action:
 
 **8.1.1**  All units firing at the same target as part of one Fire action form a single fire group, regardless of ⬡h interval (Rule 8.3).
 
+**8.1.1a**  A unit with multiple fire lines fires **all** of them in one Fire action: each line computes its own effective rFP at the target's range (Rule 8.2) and the values join the fire group's sum like separate firers. A single fire action never splits a unit's lines across different targets. Exception: a sniper's deliberate-targeting shot (Rule 20.2) uses the sniper line alone and never groups.
+
 **8.1.2**  For each firing unit, calculate the effective rFP at that unit's own firing range (Rule 8.2).
 
 **8.1.3**  Apply intervening terrain penalties and any other modifiers (elevation, exposure status, etc.) to each unit's effective rFP individually — each firer uses its own range and its own line of sight.
@@ -38,6 +40,8 @@ The full procedure for any fire combat action:
 **8.2.3**  Range 0 (same hex) and range 1 (adjacent hex) both use the full rFP value with no falloff reduction.
 
 **8.2.4**  Example: A fire line reading 7 ⬡4 -1 at range 9 hexes. Effective rFP = 7 − (1 × floor(8 / 4)) = 7 − 2 = 5.
+
+**8.2.5**  A fire line whose effective rFP after **all** modifiers (falloff, intervening terrain, smoke, status and exposure penalties) is 0 or less contributes nothing: it adds nothing to a fire group's sum, and if no line in the group has a positive effective rFP, no attack occurs and no FIRE marker is placed. Effective rFP never goes below 0 for any purpose — a deeply degraded line cannot drag a group's total down.
 
 8.3  Grouping by Interval
 -------------------------
@@ -181,7 +185,7 @@ The full procedure for any fire combat action:
 ------------------------
 
 
-**8.9.1**  Fire at range 1 (adjacent hex) receives a +2 bonus to effective rFP before the Resolution Strip lookup.
+**8.9.1**  Fire at range 1 (adjacent hex) receives a +2 bonus to effective rFP (applied before any Resolution Strip lookup, for grouped fire).
 
 **8.9.2**  Fire at range 0 (same hex, close assault entry fire) receives a +3 bonus to effective rFP. See Section 9 for close assault procedure.
 
