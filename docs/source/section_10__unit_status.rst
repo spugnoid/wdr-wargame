@@ -22,7 +22,7 @@ Units may be in one of the following status levels at any time. Status is tracke
      - Full
      - Normal
    * - Suppressed
-     - Half M# (round down)
+     - Half M# (round down, minimum 1)
      - At -2 rFP
      - At -1 rFP
      - -2
@@ -100,7 +100,7 @@ Units may be in one of the following status levels at any time. Status is tracke
 
 **10.5.3**  The DISPERSED marker is not a combat unit. It cannot fire, move, or react. It exists solely to indicate that men are physically present in that hex.
 
-**10.5.4**  A Dispersed unit that is not captured may attempt to rally during the Recovery Phase: roll 1d6 + Morale - 2 vs threshold 8. On success, the counter returns to play at rear face (reduced strength) in the hex of the friendly RALLY POINT marker with the fewest hexes between it and the hex where this unit's own DISPERSED marker sits (Rule 12.6a), or in the hex where the DISPERSED marker was if no friendly RALLY POINT marker exists anywhere on the map. The DISPERSED marker is removed from its hex either way. On failure, the unit is captured (Rule 11.2a) and does not receive another rally attempt this scenario.
+**10.5.4**  A Dispersed unit that is not captured may attempt to rally during the Recovery Phase: roll 1d6 + Morale modifier (Rule 15.2.1a) vs threshold 5. On success, the counter returns to play at rear face (reduced strength) in the hex of the friendly RALLY POINT marker with the fewest hexes between it and the hex where this unit's own DISPERSED marker sits (Rule 12.6a), or in the hex where the DISPERSED marker was if no friendly RALLY POINT marker exists anywhere on the map. The DISPERSED marker is removed from its hex either way. On failure, the unit is captured (Rule 11.2a) and does not receive another rally attempt this scenario.
 
     *See also: Rule 11.2a (Administrative Capture), Rule 12.6a (Rally Point Action).*
 
@@ -120,17 +120,21 @@ Units may be in one of the following status levels at any time. Status is tracke
 
 **10.6.3**  A routing unit must move D3 hexes directly away from the nearest visible enemy unit each time it is activated. Movement follows the most cover-heavy route available.
 
+**10.6.3a**  Rout movement is self-executing: when the owning player passes for the final time in the Action Phase (Rule 5.6.2), every friendly routing unit that was not activated this turn immediately makes its Rule 10.6.3 move at no AP cost — fleeing men do not wait for orders, and a routing counter can never simply be parked. Activating a routing unit earlier in the turn (1 AP) remains legal to control **when** in the turn it moves; the flight itself is not optional.
+
 **10.6.4**  A routing unit cannot fire, cannot react, and cannot be used for any action except movement.
 
 **10.6.5**  A routing unit that reaches the friendly map edge is removed from the map and placed in the BROKEN zone of the Casualty Track with a white CI cause marker.
 
-**10.6.6**  A routing unit that reaches a hex containing a functional friendly leader may attempt an immediate rally: roll 1d6 + Morale vs leader RAL value. Success removes the ROUTING marker and the unit resumes normal status. Failure — the unit continues routing.
+**10.6.6**  A routing unit that reaches a hex containing a functional friendly leader may attempt an immediate rally: roll 1d6 + Morale modifier (Rule 15.2.1a) vs the leader's RAL value + 1. Success removes the ROUTING marker and the unit resumes normal status. Failure — the unit continues routing. Rallying a routing unit is as hard as rallying a pinned one, but a good leader in the path of the rout is far better odds than the Recovery Phase roll (Rule 10.6.7, threshold 6).
 
-**10.6.7**  During the Recovery Phase, routing units may attempt to rally at threshold 12 (roll 1d6 + Morale ≥ 12). A leader within command radius adds their CMD rating to this roll. Without a leader, a regular unit (Morale 5) rallies from rout only on a roll of 6 — routed troops rarely recover themselves; leaders bring them back.
+**10.6.7**  During the Recovery Phase, routing units may attempt to rally at threshold 6 (roll 1d6 + Morale modifier ≥ 6, Rule 15.2.1a). A leader within command radius adds their CMD rating to this roll. Without a leader, a regular unit (modifier +0) rallies from rout only on a roll of 6 — routed troops rarely recover themselves; leaders bring them back.
 
 **10.6.8**  A routing unit counts toward the force's CI total for Force Morale purposes (see Section 15.4).
 
 **10.6.9**  A unit with a ROUTING marker (Rule 10.6.2) still on the map when the scenario ends is captured (Rule 11.2a).
+
+**10.6.10**  Routing supersedes Suppressed and Pinned. When a ROUTING marker is placed, remove any SUPPRESSED or PINNED marker — the -3 Defence penalty of the Routing state (Rule 10.1) is flat and never stacks with other status penalties. A routing unit that receives a further Suppressed or Pinned result absorbs it with no additional effect (compare Rule 10.3.5); a Casualty result applies normally (step loss, or CI if already reduced). Routing units make **no** further Section 15 morale checks — a unit already fleeing cannot break twice; its remaining decision points are the rally rolls of Rules 10.6.6 and 10.6.7.
 
     *See also: Rule 11.2a (Administrative Capture), Rule 15.5.7 (Force Morale collapse is a scoring abstraction and does not itself place a ROUTING marker or trigger this rule).*
 

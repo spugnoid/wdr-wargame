@@ -12,9 +12,9 @@ Appendix A — Resolution Strip Quick Reference
    * - 2
      - 2
    * - 3
-     - 4
+     - 3
    * - 4
-     - 5
+     - 4
    * - 5
      - 5
    * - 6
@@ -43,4 +43,4 @@ Appendix A — Resolution Strip Quick Reference
      - 12 (maximum)
 
 
-Single-unit fire never uses this strip — use effective rFP directly as Resolution FP (Rule 8.4.1). Consult this table only when multiple units are combined into a fire group (Rule 8.4.2).
+Single-unit fire never uses this strip — use effective rFP directly as Resolution FP (Rule 8.4.1). Consult this table only when multiple units are combined into a fire group (Rule 8.4.2). Summed values between listed entries round down to the nearest listed row: summed effective rFP 11 uses the row for 10 (Resolution FP 8).

@@ -29,6 +29,7 @@ from .formulas import (
     area_weighted_av,
     base_hit_probability,
     classify_hit_location,
+    silhouette_bounds,
     crew_quality_hit_cap,
     crossing_target_ratio,
     fit_gun_curve,
@@ -522,8 +523,26 @@ def write_hit_location_reference_csv(
     already used for the AV-vs-Capped columns (diameter_mm=75.0
     representative attacker). A real per-gun table is a reasonable future
     expansion, not built in this pilot -- see design spec open items.
+
+    The scatter is conditioned on actually striking the profile: Rule
+    18.6a consults this table only after the Gunnery Roll confirms a
+    hit, so each profile's zone-geometry bounding box (silhouette_bounds)
+    rejects off-target samples before classification. Unconditioned, the
+    raw scatter counted clean misses as "neither" and inflated that
+    share several-fold at realistic hit percentages -- and made the split
+    look strongly range-dependent when the conditional split barely is.
+
+    One row per (vehicle, profile): the conditional split moves only a
+    couple of points across the full range-band and crew-quality grid
+    (where a confirmed hit lands is governed by the plate's geometry,
+    not by how hard the shot was to make), so the table is computed once
+    per profile at a representative mid-range engagement and printed on
+    the player aid card. This also makes the attacker's identity
+    irrelevant at the table -- an infantry AT penetration (which has no
+    crew quality) rolls against the same two thresholds.
     """
-    bands = [100, 250, 500, 750, 1000, 1500, 2000, 2500]
+    representative_range_m = 500
+    representative_quality = "regular"
     fit = curves[representative_gun_id]
 
     zones_by_vehicle_profile: dict[tuple[str, str], list[HitZone]] = {}
@@ -533,24 +552,25 @@ def write_hit_location_reference_csv(
     with open(out_path, "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerow(
-            ["vehicle", "profile", "crew_quality", "range_m", "mobility_pct", "gun_pct", "neither_pct",
+            ["vehicle", "profile", "mobility_pct", "gun_pct", "neither_pct",
              "neither_below", "mobility_at_or_above"]
         )
         for (vehicle, profile), zones in zones_by_vehicle_profile.items():
-            for quality in ALL_CREW_QUALITIES:
-                for range_m in bands:
-                    hit_pct = hit_probability(fit.muzzle_velocity_fps, fit.k_factor, range_m, quality)
-                    split = classify_hit_location(
-                        zones, hit_pct, rng=np.random.default_rng(_HIT_LOCATION_RNG_SEED)
-                    )
-                    thresholds = hit_location_thresholds(split)
-                    writer.writerow(
-                        [
-                            vehicle, profile, quality, range_m,
-                            round(split["mobility"], 1), round(split["gun"], 1), round(split["neither"], 1),
-                            thresholds.neither_threshold, thresholds.gun_threshold,
-                        ]
-                    )
+            hit_pct = hit_probability(
+                fit.muzzle_velocity_fps, fit.k_factor, representative_range_m, representative_quality
+            )
+            split = classify_hit_location(
+                zones, hit_pct, rng=np.random.default_rng(_HIT_LOCATION_RNG_SEED),
+                silhouette=silhouette_bounds(zones),
+            )
+            thresholds = hit_location_thresholds(split)
+            writer.writerow(
+                [
+                    vehicle, profile,
+                    round(split["mobility"], 1), round(split["gun"], 1), round(split["neither"], 1),
+                    thresholds.neither_threshold, thresholds.gun_threshold,
+                ]
+            )
 
 
 def main(diameter_mm: float = 75.0) -> None:

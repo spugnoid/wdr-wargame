@@ -34,8 +34,8 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
      - 7
      - Specialist equipment, trained for close combat
    * - Morale
-     - 6–7
-     - Selected troops, high quality across most nations
+     - 6
+     - Selected troops — veteran/elite quality (Morale modifier +1) across most nations
 
 
 **21.1.3**  Engineer capability icons appear on the bottom support band. Each capability may be used a limited number of times per scenario. When expended, cover the icon with an EXPENDED strip — the same strip used for single-shot AT weapons.
@@ -80,7 +80,7 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
 
 **21.2.1**  Engineer units may attempt to breach obstacles that are impassable or prohibitively expensive for regular infantry.
 
-**21.2.2**  Breaching action: engineer unit adjacent to or in the obstacle hex, spend 1 AP. Roll 1d6 + engineer Morale vs breach threshold:
+**21.2.2**  Breaching action: engineer unit adjacent to or in the obstacle hex, spend 1 AP. Roll 1d6 + Morale modifier (Rule 15.2.1a) vs breach threshold. A veteran engineer squad (modifier +1) clears wire on 2+ and forces a reinforced bunker entrance only on a natural 6:
 
 .. list-table::
    :header-rows: 1
@@ -122,7 +122,7 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
 
 **21.3.3**  Not under fire: demolition succeeds automatically. No roll required.
 
-**21.3.4**  Under fire (any fire result received this turn): roll 1d6 + Morale vs 5. Failure — charges not set this turn, may retry. Success — demolition proceeds.
+**21.3.4**  Under fire (any fire result received this turn): roll 1d6 + Morale modifier vs 5. Failure — charges not set this turn, may retry. Success — demolition proceeds.
 
 **21.3.5**  Demolition targets and results:
 
@@ -137,7 +137,7 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
    * - Building — heavy
      - Reduced to building light (+5 cover → +4 cover)
    * - Building — light
-     - Reduced to rubble (+4 cover)
+     - Reduced to rubble (+4 cover — occupant cover unchanged, but movement cost worsens to 2 and the hex no longer blocks LOS as a solid building, Rule 4.4.2)
    * - Rubble
      - Reduced to open ground (+0 cover) — cleared
    * - Fortification / bunker
@@ -158,7 +158,7 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
 
 **21.4.3**  Engineer units entering a minefield hex are not subject to the mine strike roll — they advance carefully with probe and detector.
 
-**21.4.4**  Mine clearing action: engineer unit in or adjacent to minefield hex, spend 1 AP. Roll 1d6 + Morale vs 5.
+**21.4.4**  Mine clearing action: engineer unit in or adjacent to minefield hex, spend 1 AP. Roll 1d6 + Morale modifier vs 5.
 
 **21.4.5**  Success: place BREACH marker — a safe lane has been cleared through the hex. Units using the BREACH marker are not subject to mine strike. Expend MINE icon.
 
@@ -170,7 +170,7 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
 ------------------
 
 
-**21.5.1**  The flamethrower is a short-range area weapon that ignores cover. It was most effective in clearing fortifications, bunkers, and buildings where conventional fire was ineffective.
+**21.5.1**  The flamethrower is a short-range area weapon that largely negates cover (cover modifiers are halved — Rule 21.5.3). It was most effective in clearing fortifications, bunkers, and buildings where conventional fire was ineffective.
 
 **21.5.2**  Flamethrower fire line:
 
@@ -205,7 +205,7 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
 
 **21.5.4**  Burning marker: when a flamethrower attack produces a Suppressed result or better, place a BURNING marker in the target hex in addition to the combat result.
 
-**21.5.5**  Burning hex effects: at the start of each activation by a unit in a BURNING hex, that unit takes an automatic rFP 3 attack (no roll — just apply result thresholds to margin). Additionally all units in a BURNING hex suffer -2 CON (fire reveals position).
+**21.5.5**  Burning hex effects: at the start of each activation by a unit in a BURNING hex, that unit takes a fire attack with Resolution FP 3 — roll 1d6+1d8+1d12 normally against the unit's Defence (no cover modifier: the fire is in the cover with them). This attack is exempt from the Long Range Cap (Rule 8.7) — flame kills at any "range". Additionally all units in a BURNING hex suffer -2 CON (fire reveals position).
 
 **21.5.6**  Extinguishing fire: a unit in a BURNING hex may spend 1 AP to attempt to extinguish. Roll 1d6 on 4+ fire is extinguished, BURNING marker removed. On 1-3 fire continues.
 
@@ -284,7 +284,7 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
 
 **21.8.1**  Assault bridges are scenario-defined assets available to engineer units. Not all scenarios include them.
 
-**21.8.2**  Bridge deployment: engineer unit at water obstacle edge, spend 2 AP. Roll 1d6 + Morale vs 5 (vs 7 if under fire).
+**21.8.2**  Bridge deployment: engineer unit at water obstacle edge, spend 2 AP. Roll 1d6 + Morale modifier vs 5 (vs 7 if under fire).
 
 **21.8.3**  Success: bridge placed — BRDG marker at obstacle. All units may cross at normal movement cost. Expend BRDG capability.
 
@@ -351,48 +351,3 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
      - 7
      - 6
      - Similar to British — strong logistics engineering
-
-
-.. list-table::
-   :header-rows: 1
-   :widths: auto
-
-   * - **Summed Effective rFP**
-     - **Resolution FP**
-   * - 1
-     - 1
-   * - 2
-     - 2
-   * - 3
-     - 4
-   * - 4
-     - 5
-   * - 5
-     - 5
-   * - 6
-     - 6
-   * - 7
-     - 7
-   * - 8
-     - 7
-   * - 9
-     - 8
-   * - 10
-     - 8
-   * - 12
-     - 9
-   * - 15
-     - 9
-   * - 18
-     - 10
-   * - 24
-     - 11
-   * - 30
-     - 11
-   * - 40
-     - 12
-   * - 50+
-     - 12 (maximum)
-
-
-Values between listed entries: round down to the nearest listed value. Example: summed effective rFP of 11 uses the row for 10 (Resolution FP 8).

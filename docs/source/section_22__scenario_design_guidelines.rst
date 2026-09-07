@@ -286,7 +286,7 @@ Every scenario sheet must include the following parameters. Players read these b
      - Both sides may place any unit as FIXED. High hidden unit density — spotting and information are primary tactical challenges.
 
 
-**22.8.5**  Limit FIXED dummy markers to a number equal to actual FIXED units — one dummy per real FIXED unit. More dummies than real units becomes implausible and tedious.
+**22.8.5**  FIXED units have no markers at all until they act (Rule 14.7.1), so there is no such thing as a FIXED dummy marker. This guideline instead limits **recorded decoy positions**: a scenario may let the defender record up to one decoy position per real FIXED unit on the record sheet — a decoy behaves like a FIXED unit's recorded hex for Rule 14.7.7 (an enemy entering it halts and the "position" is revealed as empty) but can never fire or transition. More decoys than real units becomes implausible and tedious.
 
 22.9  Setup Zone Guidelines
 ---------------------------
@@ -369,15 +369,15 @@ The following parameters represent the Farmhouse at Prokhorovka test scenario us
    * - Soviet forces
      - 1 × GDS 43 (veteran) · 1 × RIF 43 (regular) · 1 × DP-28 team · 1 × Soviet Guards Platoon Leader CMD3
    * - Force ratio
-     - 5 German vs 3 Soviet — approximately 1.7:1 adjusted for quality
+     - 4 German combat units vs 3 Soviet (leaders not counted, Rule 22.2.2) — adjusted for quality per Rule 22.2.3: German 2×1.5 + 2×1.0 = 5.0 vs Soviet 1×1.5 + 2×1.0 = 3.5, approximately **1.4:1**
    * - Force Morale (Germans)
-     - 5 × 0.45 (mixed) = 2 — rounds to 2
+     - floor(2×0.5 + 2×0.4) = floor(1.8) = **1** (weighted average, Rule 22.3.3)
    * - Force Morale (Soviets)
-     - 3 × 0.45 (mixed) = 1 — minimum 1
+     - floor(1×0.5 + 2×0.4) = floor(1.3) = **1** (minimum 1)
    * - German setup zone
-     - Columns A–B
+     - Column A only
    * - Soviet setup zone
-     - Columns E–F
+     - Column F only (4-hex separation, meeting Rule 22.9.3's infantry minimum)
    * - German objective
      - Occupy hex E3 (heavy building) by end of Turn 4
    * - Soviet objective
@@ -386,3 +386,6 @@ The following parameters represent the Farmhouse at Prokhorovka test scenario us
      - Soviets may place DP-28 team as FIXED
    * - Special conditions
      - None
+
+
+*NOTE: this parameter block is recomputed to follow this section's own rules — the original draft counted the platoon leader as a combat unit, used a flat 0.45 factor instead of 22.3.3's weighted average, and placed setup zones 2 hexes apart against 22.9.3's 4-hex minimum. At this skirmish's size both Force Morale values floor to 1, so the first CI unit on either side triggers a collapse check — small engagements are brittle by construction, which suits a 4-turn farmhouse fight; designers wanting more resilience at this scale should add units, not inflate the factor.*

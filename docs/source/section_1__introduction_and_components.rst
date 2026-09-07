@@ -123,7 +123,7 @@ The following terms are used throughout this document. Each term is defined here
 
 **D3 —**  Roll 1d6, halve, round up: results 1–3. Used for rout movement and mortar dispersion distance.
 
-**Fire group —**  All firing units sharing the same ⬡h interval value — or units with different ⬡h combined within the smallest interval's range (Rule 8.3.4a) — resolved as a single attack. Effective rFP is calculated per unit and summed (Rule 8.3.2); units sharing a hex may sum rFP and -f values first (Rule 8.3.3).
+**Fire group —**  All units firing at the same target as part of one Fire action, regardless of ⬡h interval, resolved as a single attack. Effective rFP is calculated per unit and summed (Rule 8.3.2); units sharing a hex and ⬡h may sum rFP and -f values first (Rule 8.3.3).
 
 **Cover modifier —**  A bonus added to the defender's Defence value based on terrain occupied.
 
@@ -139,7 +139,7 @@ The following terms are used throughout this document. Each term is defined here
 
 **Pinned —**  A status condition preventing movement and severely degrading fire effectiveness.
 
-**Exposure —**  The condition of a unit that has moved and fired in the same impulse, or fired from open ground a second time. Exposed units may be targeted by opportunity fire.
+**Exposure —**  Two distinct conditions (Rule 6.6): **Exposed** — took a Move and Fire (Assault) action this turn; opportunity fire against it takes no penalty. **Firing Exposed** — fired a second or later time this turn while in open ground; opportunity fire against it takes -1 rFP. Both invite opportunity fire (1 RP).
 
 **AP —**  Action Points. The resource controlling how many units the active player may activate per turn.
 
@@ -175,7 +175,7 @@ The following terms are used throughout this document. Each term is defined here
 
 **Free hidden impulse —**  A movement phase granted immediately when a unit goes hidden, outside the normal AP economy, used to reposition the blind marker and spawn dummies.
 
-**Morale check —**  A roll made when a unit experiences a stress trigger. Roll 1d6 + Morale vs break threshold. Failure produces a Break or Rout result.
+**Morale check —**  A roll made when a unit experiences a stress trigger. Roll 1d6 + Morale modifier (Morale − 5, Rule 15.2.1a) vs break threshold. Failure produces a Break or Rout result.
 
 **Break —**  A psychological CI result. Unit removed to BROKEN zone of Casualty Track without necessarily taking physical casualties. Marked with white CI cause marker.
 
@@ -203,7 +203,7 @@ The following terms are used throughout this document. Each term is defined here
 
 **SMOKE marker —**  A marker placed when smoke rounds land. Numbered 1–3 indicating dissipation step. Each step reduces concealment and intervening fire penalty.
 
-**AV —**  Armour Value. Effective armour protection in millimetres, already resolved at design time (slope, cast/rolled deficiency, high-hardness, flaw, and face-hardening corrections all folded in). Every vehicle prints separate AV-vs-Capped and AV-vs-Tungsten values for each of its Hull and Turret profiles — see Rule 17.2. HEAT does not get its own printed AV; it uses the universal HEAT reference table (Rule 17.2.7) applied to the vehicle's raw armour thickness instead.
+**AV —**  Armour Value. Effective armour protection in millimetres, already resolved at design time (slope, cast/rolled deficiency, high-hardness, flaw, and face-hardening corrections all folded in). Every vehicle prints separate AV-vs-Capped, AV-vs-Tungsten, and AV-vs-HEAT values for each of its Hull and Turret profiles — see Rule 17.2.
 
 **Hull / Turret profile —**  The two independently-printed armour profiles on a split-AV vehicle counter. Which profile a shot resolves against is determined by the Gunnery Roll (Rule 18.1a), not by the attacker's choice.
 

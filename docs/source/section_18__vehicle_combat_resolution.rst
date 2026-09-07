@@ -27,7 +27,7 @@ Vehicle combat uses a dedicated resolution sequence that determines whether a ro
 
 **18.1a.1**  Every vehicle-mounted gun counter prints a Gunnery Table: a Miss Threshold and a Hull Threshold for each range band, already calculated for that vehicle's own Crew Quality (Rule 18.1a.2). No separate lookup, chart, or calculation is required at the table — read the row for the actual range.
 
-*Example format (values illustrative — 88mm KwK36, Regular crew):*
+*Example (88mm KwK36, Regular crew — the actual computed rows from* ``vehicle_fire_thresholds_output.csv``):*
 
 .. list-table::
    :header-rows: 1
@@ -35,8 +35,12 @@ Vehicle combat uses a dedicated resolution sequence that determines whether a ro
 
    * - **Range**
      - **Result**
-   * - 0–750m
+   * - 100m
      - Roll < 12: Miss. Roll 12–13: Turret. Roll ≥ 14: Hull.
+   * - 250–500m
+     - Roll < 12: Miss. Roll 12–14: Turret. Roll ≥ 15: Hull.
+   * - 750m
+     - Roll < 13: Miss. Roll 13–15: Turret. Roll ≥ 16: Hull.
    * - 1000m
      - Roll < 16: Miss. Roll 16–17: Turret. Roll ≥ 18: Hull.
    * - 1500m
@@ -45,6 +49,9 @@ Vehicle combat uses a dedicated resolution sequence that determines whether a ro
      - Roll < 25: Miss. Roll 25: Turret. Roll ≥ 26: Hull.
    * - 2500m+
      - Automatic miss. No roll required.
+
+
+**18.1a.1a**  Blank thresholds: a band with no printed Miss Threshold is an **automatic miss** (the shot is beyond the dice combination's resolution floor). A band with a Miss Threshold but no Hull Threshold means every hit at that range strikes the **Turret** — at extreme range only the taller profile presents. The Gunnery Table prints its own band set (typically 100/250/500/750/1000/1500/2000/2500m); the PEN lines use Rule 17.3.1's bands — the two are read independently.
 
 
 **18.1a.2**  Crew Quality is derived from the firing vehicle's own Morale value (Rule 17.3.6): Morale 7+ = Elite, Morale 6 = Veteran, Morale 5 = Regular, Morale 3–4 = Green, Morale 2 or less = Militia. This is fixed at counter-design time, not chosen or looked up during play.
@@ -80,7 +87,7 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
    * - **Condition**
      - **Outcome**
      - **Proceed to**
-   * - Effective PEN ≥ AV + 3
+   * - Effective PEN ≥ AV + 10
      - Automatic penetration — no roll needed
      - Full penetration damage table
    * - Effective PEN ≥ AV
@@ -89,9 +96,12 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
    * - Effective PEN < AV
      - Non-penetrating hit — roll 1d6
      - Non-penetrating hit table
-   * - Effective PEN < AV − 3
+   * - Effective PEN < AV − 10
      - Bounce — no effect
      - No further resolution
+
+
+*NOTE: the ±10mm margins restore the width the outcome bands had before the millimetre migration (the original ±3 was in the old 1-point≈10mm scale and was never rescaled — a 6mm total window against PEN values that move 8–10mm per range band made nearly every matchup a binary auto-penetration or bounce, and Rules 18.3/18.4 almost never fired). ±10mm is comparable to real penetration scatter at these armour thicknesses and keeps the Contested and Non-penetrating bands live at exactly the ranges where engagements were historically uncertain.*
 
 
 18.2a  Shatter Gap (Optional Rule)
@@ -101,6 +111,8 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
 *If this module is in use for the scenario:*
 
 **18.2a.1**  Before applying Rule 18.2, check Shatter Gap if all of the following hold: (a) the firing ammunition is Capped, Uncapped AP, or Soviet APBC nature (not Tungsten/APDS, not HEAT); (b) the attacking gun's printed calibre (mm) does not exceed the target's AV in the profile/arc being hit.
+
+*NOTE: condition (b) is a deliberate at-table simplification of the sourced eligibility ratio (shatter applies from T/D ≥ 0.8, i.e. calibre up to 1.25× AV). The simplified test exempts a narrow band of shots the source says could shatter (e.g. an 88mm gun against an 80mm plate); the calculation tool implements the full ratio — see* ``shatter_gap_failure`` *in* ``counters/armor_calc/formulas.py``.*
 
 **18.2a.2**  If 18.2a.1's conditions hold, look up the target's AV on the Shatter Gap Table (player aid card) to find its Shatter Window — a lower and upper PEN value.
 
@@ -205,6 +217,10 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
      - Catastrophic kill — vehicle Eliminated
 
 
+**18.6.1a**  A natural 6 on the damage roll is always a Catastrophic kill, regardless of modifiers. A round inside the fighting compartment can find ammunition or fuel no matter how experienced the crew — negative modifiers shift the odds, they do not confer immunity.
+
+*NOTE: without this rule, the veteran-crew modifier (-1) made Elimination arithmetically impossible for any gun under 88mm firing non-HEAT ammunition at a veteran-crewed vehicle (maximum modified roll 5) — a Sherman 76, T-34/85, or SU-85 could never destroy a German vehicle outright, while historically 75mm-class penetrations brewed up tanks routinely. The natural-6 floor gives every full penetration a minimum 1-in-6 chance of a kill.*
+
 **18.6.2**  Full penetration modifiers applied to the damage roll:
 
 .. list-table::
@@ -215,10 +231,10 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
      - **Modifier**
    * - HEAT warhead (Panzerfaust, PIAT, Bazooka, HEAT round)
      - +1
-   * - HE direct hit (howitzer, infantry gun)
-     - -1
-   * - Large calibre round (88mm+, 122mm+)
+   * - Large calibre round (88–120mm)
      - +1
+   * - Very large calibre round (122mm+)
+     - +2
    * - Crew quality veteran or elite
      - -1 (experienced crew better at surviving hits)
    * - Vehicle already damaged (on rear face)
@@ -229,7 +245,7 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
 --------------------
 
 
-**18.6a.1**  Whenever Rule 18.5.1 or 18.6.1 produces a "Component damage — vehicle Casualty" result, roll 1d6+1d8+1d12 (the same combination used for every other attack, Rule 8.5.1) against the target vehicle's own Hit Location Table (Rule 17.7) for the profile that was hit (Hull or Turret, per the Gunnery Roll's own determination, Rule 18.1a) and the actual range to target.
+**18.6a.1**  Whenever Rule 18.5.1 or 18.6.1 produces a "Component damage — vehicle Casualty" result, roll 1d6+1d8+1d12 (the same combination used for every other attack, Rule 8.5.1) against the target vehicle's own Hit Location Table (Rule 17.7) for the profile that was hit (Hull or Turret, per the Gunnery Roll's own determination, Rule 18.1a — Hull for infantry AT weapons, Rule 18.9). One threshold pair per profile covers every range and attacker.
 
 **18.6a.2**  If the roll is below the Neither Threshold, the hit landed somewhere non-critical — downgrade the result from Casualty to Pinned (Rule 18.7) instead. The round penetrated, but nothing essential was destroyed.
 
@@ -255,7 +271,7 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
      - **Effect on vehicle**
    * - Suppressed (crew shock)
      - Suppressed
-     - Fires at -2 PEN/rFP. Moves at half M#. Bail-out check each Recovery Phase.
+     - Fires at -20 PEN (mm) and -2 rFP. Moves at half M#. Bail-out check each Recovery Phase.
    * - Pinned (buttoned up)
      - Pinned
      - MG only at -4. Cannot move. -2 OBS. Cannot spot hidden units. -1 morale checks. Bail-out check each Recovery Phase.
@@ -276,11 +292,29 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
 
 **18.8.1**  Vehicles fire against infantry using their MG fire line or HE capability. Both use standard fire resolution (Section 8) against infantry Defence values.
 
-**18.8.2**  MG fire: uses MG rFP ⬡h -f notation, resolves against infantry defence + cover. Range 0 bonus (+3 rFP) applies at adjacent range.
+**18.8.2**  MG fire: uses MG rFP ⬡h -f notation, resolves against infantry defence + cover. The standard close-range bonuses apply: +3 rFP at range 0 (same hex, Rule 8.9.2), +2 rFP at range 1 (adjacent, Rule 8.9.1).
 
 **18.8.3**  HE fire: uses the flat HE rFP value. No falloff — HE effectiveness is constant regardless of range. Cover modifier applies but is reduced by 1 step (same as mortar indirect fire against buildings and reverse slopes).
 
 **18.8.4**  HE rFP derivation formula (resolved in spreadsheet): HE rFP = round(gun calibre in mm / 20). Examples: 37mm = 2, 75mm = 4, 88mm = 4, 105mm = 5, 122mm = 6.
+
+**18.8.5**  Fire against vehicles as soft targets: open-topped vehicles (the ○— symbol, Rule 17.1) and unarmoured (soft) vehicles can be attacked by HE, MG/small-arms fire (range 0–1 only), mortar blast (Rule 16.7.8), and grenades as if they were infantry, using a class Defence value — no per-vehicle stat is printed:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - **Vehicle class**
+     - **Defence vs soft-target fire**
+   * - Truck / soft vehicle
+     - 6
+   * - Open-topped armoured vehicle (○—)
+     - 8
+
+
+A Casualty result or better eliminates a soft vehicle; against an open-topped armoured vehicle it is a vehicle Casualty (Rule 18.6a applies if a table exists, else Rule 17.1.1).
+
+**18.8.6**  HE direct fire against a **closed** AFV never rolls on the penetration tables: resolve one roll on the Non-Penetrating Hit table (Rule 18.4), at +1 for guns of 105mm and larger — blast and concussion can suppress a crew but not open the tank. Damage to closed AFVs comes only through AP/HEAT penetration (Rule 18.2), overrun (18.11), Molotovs (18.10), and engineer attacks (Section 21).
 
 18.9  Infantry Anti-Tank Weapons
 --------------------------------
@@ -305,49 +339,52 @@ Infantry AT weapons do not use the Gunnery Roll (Rule 18.1a.8) — they always h
      - —
      - No AT capability
    * - LMG / HMG
-     - 1
+     - 10 mm
      - 0–1 hex
      - Light vehicles only at point blank
    * - AT rifle (Boys, PzB 39)
-     - 3 ⬡2 -1
+     - 30 mm, −10 per 2 hexes beyond hex 1
      - 0–8 hex
      - Light armour only — ineffective vs medium tanks
    * - Panzerfaust 30
-     - 14 (flat)
+     - 140 mm (flat)
      - 0–2 hex
      - Hard range limit. Single shot — EXPENDED strip placed after use.
    * - Panzerfaust 60
-     - 14 (flat)
+     - 140 mm (flat)
      - 0–4 hex
      - Hard range limit. Single shot — EXPENDED strip placed after use.
    * - Panzerfaust 100
-     - 14 (flat)
+     - 140 mm (flat)
      - 0–6 hex
      - Hard range limit. Single shot — EXPENDED strip placed after use.
    * - Panzerschreck (RPzB 54)
-     - 12 (flat)
+     - 120 mm (flat)
      - 0–6 hex
-     - Reloadable. -1 effective rFP per 2 hexes (accuracy degradation).
+     - Reloadable HEAT — flat PEN inside the hard range limit.
    * - PIAT
-     - 10 (flat)
+     - 100 mm (flat)
      - 0–6 hex
-     - British. Reloadable. -1 rFP per 2 hexes.
+     - British. Reloadable HEAT — flat PEN inside the hard range limit.
    * - Bazooka M1A1
-     - 9 (flat)
+     - 90 mm (flat)
      - 0–8 hex
-     - US. Reloadable. -1 rFP per 2 hexes.
+     - US. Reloadable HEAT — flat PEN inside the hard range limit.
    * - AT grenade bundle
-     - 4 (flat)
+     - 40 mm (flat)
      - 0 hex
      - Same hex only — close assault.
    * - Magnetic mine (Hafthohlladung)
-     - 6 (flat)
+     - 60 mm (flat)
      - 0 hex
      - Engineer unit required. Same hex only.
    * - Molotov cocktail
      - Special
      - 0–1 hex
      - Rear arc only. Engine fire on 4–6. See Rule 18.10.
+
+
+*NOTE: PEN values in this table are 0°-equivalent millimetres, the same scale as every AV and gun PEN in the game (the pre-migration point values, 1 point ≈ 10mm, appeared here unconverted through v0.9.2 — under which every weapon on this list bounced off every vehicle in the roster). The HEAT weapons' accuracy degradation is modelled entirely by their hard range limits (Rule 17.3.3), not by a falloff on PEN — the old "-1 rFP per 2 hexes" notes were left over from a resolution path these weapons no longer use.*
 
 
 **18.9.1**  EXPENDED strip: when a single-shot AT weapon is fired, place an EXPENDED strip over the weapon band on the infantry counter. The band is covered for the remainder of the scenario. The strip is a reusable component — same width as all support weapon bands.
@@ -362,7 +399,7 @@ Infantry AT weapons do not use the Gunnery Roll (Rule 18.1a.8) — they always h
 
 **18.10.2**  On landing: roll 1d6. On 1-3: no effect (fire suppressed or misses engine). On 4-6: engine fire — vehicle Pinned immediately.
 
-**18.10.3**  Each subsequent Recovery Phase while engine fire is active: roll 1d6. On 1-3: crew extinguishes fire — remove Pinned status. On 4-5: fire continues — vehicle remains Pinned. On 6: fire spreads — vehicle takes full penetration damage roll (crew bails or catastrophic kill).
+**18.10.3**  Each subsequent Recovery Phase while engine fire is active: roll 1d6. On 1-3: crew extinguishes fire — remove Pinned status. On 4-5: fire continues — vehicle remains Pinned. On 6: fire spreads — roll on the Full Penetration Damage table (Rule 18.6.1) with a +1 modifier; its full range of outcomes (Suppressed through Eliminated) applies.
 
 18.11  Overrun
 --------------
@@ -386,7 +423,7 @@ Overrun's pre-entry defensive fire does not use the Gunnery Roll (Rule 18.1a.8) 
 --------------------------------------
 
 
-**Re-run against the current system.** Each matchup now checks the attacker's PEN (fitted gun curve, `counters/armor_calc/`) against **both** the target's Hull and Turret AV-vs-Capped independently — the single blended "Front AV" this table originally validated no longer exists as a concept. Panzerfaust rows use a flat PEN of 140mm — the direct millimetre conversion of the original system's flat "PEN 14" figure (1 PEN point ≈ 10mm), not a re-sourced value; infantry AT weapons remain out of scope for the rebuilt ballistics tool (Rule 18.9) and resolve against Hull only, never Turret (no Gunnery Roll). This table checks penetration outcome only, the same scope the original table had — it does not check Gunnery Roll hit probability, which was separately calibrated against real data during that mechanism's own build (Rule 18.1a).
+**Re-run against the current system, following the game's own reading procedure.** Each matchup reads PEN at the next lower printed range band exactly as Rule 17.3.1 directs players to (an earlier revision of this table computed PEN at exact ranges — a procedure the players never use — which produced three verdicts the table itself would contradict at the table), applies the ±10mm outcome margins of Rule 18.2, and checks against **both** the target's Hull and Turret AV-vs-Capped independently — the single blended "Front AV" this table originally validated no longer exists as a concept. Panzerfaust rows use the flat 140mm PEN now printed in Rule 18.9 (the direct millimetre conversion of the original system's flat "PEN 14", not a re-sourced value); infantry AT weapons resolve against Hull only, never Turret (no Gunnery Roll). This table checks penetration outcome only, the same scope the original table had — it does not check Gunnery Roll hit probability, which was separately calibrated against real data during that mechanism's own build (Rule 18.1a).
 
 .. list-table::
    :header-rows: 1
@@ -432,8 +469,8 @@ Overrun's pre-entry defensive fire does not use the Gunnery Roll (Rule 18.1a.8) 
      - 400 yds
      - Front
      - Auto penetration
-     - Bounce
-     - Cannot reliably penetrate — see note (c)
+     - Non-penetrating hit
+     - Cannot reliably penetrate the turret, hull now vulnerable — see note (c)
    * - T-34 Model 1943 vs Panzer IV H
      - 120 yds
      - Front
@@ -468,7 +505,7 @@ Overrun's pre-entry defensive fire does not use the Gunnery Roll (Rule 18.1a.8) 
 
 **Notes on genuine changes from the original (pre-rebuild) table:**
 
-**(a) Sherman 75mm vs Tiger I side, 320 yds** — the original table called this "Auto penetration." The rebuilt numbers put it at Contested instead: PEN 83.0mm vs. AV 80.1mm (both Hull and Turret side happen to share the same 80.1mm figure) — clears AV, but by less than the 3mm margin Rule 18.2 requires for automatic penetration (83.0 vs. the 83.1 threshold). This is a razor's-edge case, not a real reversal — "penetrates side armour" is still the correct story, just "very likely, roll needed" rather than "guaranteed."
+**(a) Sherman 75mm vs Tiger I side, 320 yds** — the original table called this "Auto penetration." Under the band-read procedure (320 yds ≈ 293m reads the 250m row: PEN 84.1mm) against AV 80.1mm (both Hull and Turret side share the figure), the shot clears AV by 4mm — inside the ±10mm Contested window of Rule 18.2. "Penetrates side armour" is still the correct story, just "very likely, roll needed" rather than "guaranteed."
 
 **(b) Panzer IV H vs T-34 Model 1943, 320 yds** — the most substantive change. The original table called this "Contested," matching a "results were historically uncertain" narrative. The rebuilt KwK40 L48 gun curve — fitted to 5 independent historical data points at <1.2% error, the highest-confidence curve in the roster — puts PEN at 126.8mm against a 93.7mm Hull AV and 55.8mm Turret AV: a comfortable, unambiguous Automatic Penetration against both profiles, not a coin-flip. This is not obviously a regression: the long-barrelled 75mm L48 (KwK40) on the Panzer IV H was specifically prized by German crews for being able to reliably defeat T-34 frontal armour at real combat ranges, unlike the earlier short-barrelled 75mm it replaced — arguably the rebuilt system's more decisive result is the more historically accurate one, and the original "uncertain" calibration may have undersold the L48's real capability. Flagged for Rod's own judgement rather than silently resolved either way.
 
@@ -515,9 +552,9 @@ Overrun's pre-entry defensive fire does not use the Gunnery Roll (Rule 18.1a.8) 
    * - T-70 vs Panzer IV H
      - 200 yds
      - Front
+     - Contested
      - Bounce
-     - Auto penetration
-     - Correct ✓ — see note (e); T-70's 45mm gun cannot beat PzIV's face-hardened glacis but still defeats the thinner, unprotected turret
+     - Plausible ✓ — see note (e); T-70's 45mm APBC has only a contested chance against the glacis at point-blank and cannot beat the turret at its own small calibre
    * - KV-1S vs Panzer IV H
      - 300 yds
      - Front
@@ -528,8 +565,8 @@ Overrun's pre-entry defensive fire does not use the Gunnery Roll (Rule 18.1a.8) 
      - 500 yds
      - Front
      - Auto penetration
-     - Bounce
-     - Plausible ✓ — see note (f); KV-1S's hull was thinned relative to the original KV-1 for speed, but its turret protection was largely retained
+     - Non-penetrating hit
+     - Plausible ✓ — see note (f); KV-1S's hull was thinned relative to the original KV-1 for speed, but its turret protection was largely retained (band-read PEN 128.4 vs turret AV 129.1 — a rattling near-miss, not a clean deflection)
    * - SU-85 vs Tiger I
      - 400 yds
      - Front
@@ -556,6 +593,6 @@ Overrun's pre-entry defensive fire does not use the Gunnery Roll (Rule 18.1a.8) 
      - Correct ✓ — the weakest gun in the roster, at unusually long range, still trivially defeats the half-track's 14.3mm armour. Included only to confirm the last untested roster vehicle behaves as expected; no real ambiguity to resolve here
 
 
-**(e) T-70 vs Panzer IV H — a real methodology bug caught and fixed during this extension, not a subtle judgement call.** The first pass of this matchup compared T-70's 45mm APBC gun against Panzer IV's `av_vs_capped_mm` roster column and got Automatic Penetration against the Hull — which would have been wrong. That column bakes in the face-hardening correction for a **Capped**-family attacker (Rule 17.2.3) specifically; T-70's 45mm fires Soviet APBC ammunition, an entirely different nose shape, for which face-hardening does not apply the same way (`face_hardened_multiplier("apbc") = 1.0`, a documented gap — no correction rather than a wrong one). Recomputing Panzer IV's Hull Front directly for an APBC attacker (bypassing the mismatched column) gives 83.2mm, not 64.9mm — enough to flip the Hull result from Automatic Penetration to Bounce. **Fixed since this table was first written.** `VehiclePlateRow.resolve_av()` in `counters/armor_calc/pipeline.py` was hardcoded to the Capped family — it now takes an explicit `family` parameter (defaulting to "capped", so `write_roster_csv`'s printed columns are unaffected). A future matchup or validation script needing the correct AV for an APBC or uncapped-AP attacker should call `resolve_av(diameter, hardness_table, family="apbc")` directly rather than reading `av_vs_capped_mm` off the roster CSV. The printed counter still shows only two AV columns (vs. Capped, vs. Tungsten) — APBC and uncapped AP remain rare enough as attacker families that a third and fourth printed column isn't warranted, consistent with the "least granular means necessary" design principle (§2) — but the underlying tool can no longer silently give a wrong answer when one is actually needed for a specific check. 3 new regression tests (`tests/test_pipeline.py`), 72 total passing.
+**(e) T-70 vs Panzer IV H — a real methodology bug caught and fixed during this extension, not a subtle judgement call.** The first pass of this matchup compared T-70's 45mm APBC gun against Panzer IV's `av_vs_capped_mm` roster column — which would have been wrong. That column bakes in the face-hardening correction for a **Capped**-family attacker (Rule 17.2.3) specifically; T-70's 45mm fires Soviet APBC ammunition, an entirely different nose shape, for which face-hardening does not apply the same way (`face_hardened_multiplier("apbc") = 1.0`, a documented gap — no correction rather than a wrong one). Recomputing Panzer IV's front plates for a 45mm APBC attacker (bypassing the mismatched column, and at the attacker's own calibre rather than the roster's 75mm reference diameter) gives Hull 83.9mm and Turret 106.6mm — against a band-read PEN of 86.3mm (200 yds reads the 0m row), a Contested Hull shot and a clean Turret Bounce under the ±10mm margins. **Fixed since this table was first written.** `VehiclePlateRow.resolve_av()` in `counters/armor_calc/pipeline.py` was hardcoded to the Capped family — it now takes an explicit `family` parameter (defaulting to "capped", so `write_roster_csv`'s printed columns are unaffected). A future matchup or validation script needing the correct AV for an APBC or uncapped-AP attacker should call `resolve_av(diameter, hardness_table, family="apbc")` directly rather than reading `av_vs_capped_mm` off the roster CSV. The printed counter still shows only two AV columns (vs. Capped, vs. Tungsten) — APBC and uncapped AP remain rare enough as attacker families that a third and fourth printed column isn't warranted, consistent with the "least granular means necessary" design principle (§2) — but the underlying tool can no longer silently give a wrong answer when one is actually needed for a specific check. Regression tests cover the family parameter in `tests/test_pipeline.py`.
 
 **(f) KV-1S matchups borrow gun curves, not vehicle-specific ones.** KV-1S historically mounted the 76.2mm ZIS-5 gun, not the F-34 this table uses — but ZIS-5 is a direct evolution of F-34 with closely comparable ballistic performance, and no separate ZIS-5 curve has been fitted in this roster. Similarly, SU-85's 85mm D-5S gun is modelled using the T-34/85's D-5T curve — the same gun family, tank- vs. self-propelled-mounted. StuG III's matchup uses Panzer IV's KwK40 curve directly, which is not an approximation — StuG III Ausf G by this point mounted the identical 7.5cm StuK 40 L/48. These substitutions are reasonable but unverified against separately-sourced data for the specific gun models named — flagged rather than presented as equally certain to the guns with their own fitted curves.

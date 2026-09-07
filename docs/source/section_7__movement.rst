@@ -43,8 +43,8 @@ Section 7 — Movement
      - M3
      - Lighter load, higher initiative
    * - Sniper team
-     - M2
-     - Careful but unencumbered by crew weapon
+     - M1
+     - Deliberate, concealed movement — snipers do not run (Section 20)
 
 
 **7.1.4**  A unit may always enter any single terrain hex regardless of its movement cost, even if that cost exceeds its remaining M# for that activation. The unit simply cannot move further that activation.
@@ -73,6 +73,9 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
    * - Ditch / sunken road
      - 1
      - Natural movement axis
+   * - Road
+     - 1
+     - And enables the road bonus (Rule 7.2.1)
    * - Building — ground floor entry
      - 1
      - Per floor entered including ground
@@ -82,9 +85,9 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
    * - Light woods
      - 2
      - Full activation for M2 unit
-   * - Hedgerow (crossing)
-     - 2
-     - Full activation for M2 unit
+   * - Hedgerow (hexside crossing)
+     - +1
+     - Added to cost of hex being entered (open hex through hedgerow = 2 MP total)
    * - Rubble
      - 2
      - Unstable footing
@@ -94,7 +97,7 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
    * - Dense woods
      - 3
      - Exceeds M2 — entire activation consumed
-   * - Wall / fence (crossing)
+   * - Wall / fence (hexside crossing)
      - +1
      - Added to cost of hex being entered
    * - Elevation gain (per level uphill)
@@ -115,7 +118,9 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
    A squad crossing open ground into light woods. Movement cost is
    labeled per hex entered.
 
-**7.2.1**  Road movement special rule: a unit moving exclusively along road hexes for its entire activation may move 3 hexes instead of its normal M#. One hex of off-road movement cancels the road bonus for that entire activation.
+**7.2.1**  Road movement special rule: a unit moving exclusively along road hexes for its entire activation may move **M# + 1** hexes. One hex of off-road movement cancels the road bonus for that entire activation. The road bonus does not stack with Careless Movement (Rule 7.4.1) — declare one or the other.
+
+*NOTE: earlier drafts gave a flat 3 hexes on roads, which tripled an M1 weapon team's speed while giving an M2 squad only 50% — M#+1 scales the benefit to the mover.*
 
 **7.2.2**  Elevation interaction example: a unit with M2 moving uphill one level into open ground costs 1 (terrain) + 1 (elevation) = 2 MP — the full activation for one hex. Two levels uphill in one activation is impossible for a standard M2 unit.
 
@@ -131,9 +136,9 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
 
 **7.3.3**  A unit with an ASSAULT marker may still use remaining fire actions (FIRE 2, FIRE 3) in subsequent impulses from a stationary position but may not move again this turn.
 
-**7.3.4**  A unit may fire and then move by taking a Fire action followed by a Move action in the same activation. Place FIRE 1 marker, then ASSAULT marker. The unit may not fire again after moving.
+**7.3.4**  The Assault action's move and fire may be taken in either order — bound then fire, or fire then bound. Either way, place the ASSAULT marker only: it subsumes the fire (Rule 6.5.3), and no FIRE 1 marker is placed alongside it. Remaining rights are identical in both orders.
 
-**7.3.5**  In both cases (move then fire, fire then move), the unit is considered Exposed for the remainder of the reaction window.
+**7.3.5**  In both cases the unit is Exposed (Rule 6.6.1): until its own reaction window closes if it ends the action in cover +2 or better, until the end of the turn otherwise.
 
 7.4  Careless Movement
 ----------------------
@@ -153,13 +158,13 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
 ---------------------------
 
 
-**7.5.1**  A unit that is currently in the process of moving (MOVED marker placed, unit in transit) is a moving target.
+**7.5.1**  A unit that is currently in the process of moving (MOVED marker placed, unit in transit) is a moving target. Opportunity fire against a moving target is declared at an interruption point — whenever the unit enters a new hex during its move (Rule 5.5.3) — and resolves before the unit moves further.
 
 **7.5.2**  Opportunity fire against a moving target applies -2 rFP to the attacker.
 
 **7.5.3**  If opportunity fire produces No Effect, the moving unit continues normally.
 
-**7.5.4**  If opportunity fire produces Suppressed, the moving unit loses 1 MP before continuing.
+**7.5.4**  If opportunity fire produces Suppressed, the moving unit loses 1 MP before continuing. That loss is the only effect on the current move — the Suppressed halving of M# (Rule 10.1) applies from the unit's next Move action, never retroactively to MP already allocated.
 
 **7.5.5**  If opportunity fire produces Pinned or worse, the moving unit stops immediately. Remaining MP are lost.
 

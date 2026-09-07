@@ -7,7 +7,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
 ---------------------------
 
 
-**19.1.1**  Vehicle morale checks use the same procedure as infantry: roll 1d6 + vehicle Morale vs break threshold. A leader within command radius adds their CMD rating to the roll.
+**19.1.1**  Vehicle morale checks use the same procedure as infantry: roll 1d6 + the crew's Morale modifier (Rule 15.2.1a) vs break threshold. A leader within command radius adds their CMD rating to the roll.
 
 **19.1.2**  Vehicle-specific morale triggers:
 
@@ -19,19 +19,19 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - **Break Threshold**
      - **Notes**
    * - Receives any penetrating hit this turn
-     - 7
+     - 4
      - Crew shaken by internal damage
    * - Infantry support eliminated within 2 hexes
-     - 6
+     - 3
      - Crew exposed without protection
    * - Adjacent friendly vehicle eliminated
-     - 5
+     - 2
      - Witnessing catastrophic kill nearby
    * - Leader vehicle eliminated
-     - 6
+     - 3
      - Loss of command
    * - Buttoned up (Pinned) for 2 consecutive turns
-     - 6
+     - 3
      - Prolonged isolation and stress
 
 
@@ -53,14 +53,14 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - **Bail-out threshold**
      - **Notes**
    * - Suppressed
-     - 8
+     - 3
      - Crew shaken but vehicle functional
    * - Pinned (buttoned up)
-     - 6
-     - Isolation and immobility accelerate decision to bail
+     - 4
+     - Isolation and immobility accelerate the decision to bail — the harder check
 
 
-**19.2.2**  Roll 1d6 + vehicle Morale vs threshold. Leader CMD adds to roll as normal.
+**19.2.2**  Roll 1d6 + the crew's Morale modifier (Rule 15.2.1a) vs threshold. Leader CMD adds to roll as normal.
 
 **19.2.3**  Success: crew holds. Vehicle status unchanged.
 
@@ -72,7 +72,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
 
 **19.2.7**  Place a CREW counter in the same hex. The CREW counter represents the bailed-out crew.
 
-**19.2.8**  The CREW counter immediately routes using infantry routing rules — moves D3 hexes away from the nearest visible enemy unit. Place ROUTING marker on CREW counter.
+**19.2.8**  The CREW counter immediately routs using infantry routing rules — moves D3 hexes away from the nearest visible enemy unit. Place ROUTING marker on CREW counter.
 
 **19.2.9**  The CREW counter follows all infantry routing rules (Section 10.6) for subsequent turns including rally attempts.
 
@@ -112,7 +112,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
 
 **19.4.2**  Vehicle capture requires a CREW counter of the capturing nation — representing trained vehicle crew waiting for a replacement vehicle. Regular infantry cannot crew an unfamiliar vehicle without specialist training.
 
-**19.4.3**  Capture attempt: move the CREW counter into the vehicle hex (costs 1 AP). Roll 1d6 + crew quality modifier vs threshold 5.
+**19.4.3**  Capture attempt: move the CREW counter into the vehicle hex (costs 1 AP). Roll 1d6 + the CREW counter's Morale modifier (Rule 15.2.1a) vs threshold 5.
 
 .. list-table::
    :header-rows: 1
@@ -168,7 +168,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
 
 **19.6.5**  Loss of infantry support trigger (Rule 19.1.2) has no infantry equivalent. Combined arms doctrine exists specifically because tank crews were vulnerable without infantry screening against close-range AT threats. The game enforces this doctrine mechanically — tanks that advance without infantry face genuine morale risk.
 
-**19.6.6**  Vehicle cascade rule: when a vehicle is eliminated within 2 hexes of another friendly vehicle, the surviving vehicle must make a cascade morale check at threshold 5 ONLY if it is not currently Pinned (buttoned up). A Pinned vehicle's crew cannot see the catastrophic kill outside. This asymmetry between buttoned and unbuttoned vehicles is historically accurate and tactically significant.
+**19.6.6**  Vehicle cascade rule: when a vehicle is eliminated within 2 hexes of another friendly vehicle, the surviving vehicle must make a cascade morale check at threshold 2 (Rule 15.4.2, same as infantry cascade) ONLY if it is not currently Pinned (buttoned up). A Pinned vehicle's crew cannot see the catastrophic kill outside. This asymmetry between buttoned and unbuttoned vehicles is historically accurate and tactically significant.
 
 19.7  Representative 1943 Vehicle Counters
 ------------------------------------------

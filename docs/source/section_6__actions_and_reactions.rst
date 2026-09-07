@@ -5,11 +5,13 @@ Section 6 — Actions and Reactions
 ------------------
 
 
-**6.1.1**  Spending 1 AP activates one unit or stack for that impulse.
+**6.1.1**  Spending 1 AP activates one unit or stack for that impulse. An activation permits exactly **one** action from the Section 6.3 table.
 
-**6.1.2**  An activated unit may take all of its available actions (up to its F# rate and M# allowance) within that single impulse.
+**6.1.2**  A unit may be activated more than once per turn, in separate impulses, each activation costing 1 AP and granting one action. A unit's total actions per turn are limited by its action markers (Rule 6.5): one Move action (MOVED), fire actions up to its F# rate (FIRE 1/2/3), and so on. A unit with no legal action remaining may not be activated.
 
-**6.1.3**  A unit may only be activated once per turn by the AP system. However, it may respond to enemy actions using opportunity fire (see Section 6.4) even if it has already been activated.
+    *See also: Rule 6.5.2 (marker limits), Rule 5.5.1 (one action per impulse).*
+
+**6.1.3**  Reactions (Section 6.4) are not activations: a unit may react during an enemy impulse regardless of how many times it has been activated this turn, subject to the marker limits of Rule 6.2.3.
 
 6.2  Reaction Points
 --------------------
@@ -19,7 +21,7 @@ Section 6 — Actions and Reactions
 
 **6.2.2**  RP expenditure does not require unit activation. Any eligible unit may react if RP are available, regardless of whether it has already been activated this turn.
 
-**6.2.3**  Reacting with opportunity fire consumes one of the reacting unit's F# fire actions for the turn.
+**6.2.3**  Reacting with opportunity fire consumes one of the reacting unit's F# fire actions for the turn: place the unit's next FIRE marker (FIRE 1/2/3) as for any fire, plus the OPPORTUNITY marker to show a reaction fire occurred this turn. A unit may react with opportunity fire more than once per turn while fire actions and RP remain — the OPPORTUNITY marker is informational, not a limit.
 
 6.3  Action Types
 -----------------
@@ -48,7 +50,7 @@ The following actions are available to the active player. Each costs 1 AP unless
      - Declare close assault against adjacent occupied enemy hex. See Section 9.
    * - Rally
      - 1
-     - Leader attempts to rally one adjacent suppressed or pinned unit. See Section 12.
+     - Leader attempts to rally one suppressed or pinned unit within command radius. See Rule 12.6.
    * - Deploy Weapon
      - 1
      - Remove MOBILE marker from a weapon counter. Unit may not fire this impulse.
@@ -69,7 +71,7 @@ The following actions are available to the active player. Each costs 1 AP unless
      - Move one dummy marker independently (free if real unit in same group also moves this turn).
    * - Leader Action
      - 1
-     - Leader moves, coordinates, provides a fire bonus to an adjacent unit, or places a RALLY POINT marker.
+     - Leader moves, coordinates, provides a fire bonus to a fire group within command radius (Rule 12.7), or places a RALLY POINT marker.
 
 
 6.4  Reaction Types
@@ -87,7 +89,7 @@ The following reactions are available to the non-active player during the reacti
      - **Trigger Condition**
    * - Opportunity Fire
      - 1
-     - Enemy unit moves into LOS, or enemy unit becomes Exposed (see Rule 6.6).
+     - Enemy unit moves within or into LOS (declared at an interruption point, Rule 5.5.3), or enemy unit becomes Exposed (see Rule 6.6).
    * - Defensive Fire
      - 1
      - Enemy unit declares Close Assault against a friendly unit.
@@ -101,9 +103,9 @@ The following reactions are available to the non-active player during the reacti
 
 **6.4.1**  Interrupt procedure: the declared enemy action is placed on hold. The interrupting player executes one complete action with one eligible friendly unit (normal action rules and action markers apply). The held action then resolves.
 
-**6.4.2**  If the interrupting action renders the held action illegal — the target is destroyed or no longer in line of sight, or the acting unit is Suppressed or Pinned — the acting player retains the AP and may declare a different action instead, consistent with Rule 5.5.5.
+**6.4.2**  If the interrupting action renders the held action illegal — the target is destroyed or no longer in line of sight, or the acting unit is Suppressed or Pinned — the acting player retains the AP and may declare a different action instead, consistent with Rule 5.5.2.
 
-**6.4.3**  An Interrupt may not itself be interrupted. Other reactions (Opportunity Fire, Defensive Fire, Spot Roll) may trigger off the interrupting action normally if their conditions are met.
+**6.4.3**  During an Interrupt, the players' roles swap fully for that one action: the original active player becomes the reacting player and may spend their own RP on reactions to the interrupting action (Opportunity Fire, Defensive Fire, Spot Roll), using the same timing windows of Rule 5.5. An Interrupt may not itself be interrupted.
 
 **6.4.4**  Limit: one Interrupt per declared enemy action.
 
@@ -115,7 +117,7 @@ The following reactions are available to the non-active player during the reacti
 
 **6.5.2**  A unit may not take an action for which it already has a marker unless the rules explicitly permit it (e.g., a unit with F3 may place FIRE 1, then FIRE 2, then FIRE 3 on separate impulses).
 
-**6.5.3**  The ASSAULT marker replaces both a MOVED and FIRE 1 marker. A unit with an ASSAULT marker may still use remaining fire actions (FIRE 2, FIRE 3) from stationary positions but may not move again this turn.
+**6.5.3**  The ASSAULT marker replaces both a MOVED and FIRE 1 marker — it records one move and one fire, regardless of which came first. A unit with an ASSAULT marker may still use remaining fire actions (FIRE 2, FIRE 3) in later impulses from its current position, but may not move again this turn. The two orderings (move-then-fire, fire-then-move) leave identical marker states and identical remaining rights — the marker cannot record order, so the rules do not depend on it.
 
 **6.5.4**  All action markers are removed during the Recovery Phase at the start of the following turn.
 
@@ -123,13 +125,13 @@ The following reactions are available to the non-active player during the reacti
 -------------------
 
 
-**6.6.1**  A unit becomes Exposed when it takes a Move and Fire action (ASSAULT marker placed). The Exposed condition persists until the unit spends a Move action to reach terrain with cover modifier +2 or higher, or until the end of the current turn.
+**6.6.1**  A unit becomes Exposed when it takes a Move and Fire action (ASSAULT marker placed). Duration depends on where the unit ends its action: in terrain with cover modifier +2 or higher, the Exposed condition ends when the reaction window of the unit's own impulse closes (the bound into cover is briefly exposed, then covered); in lower cover, it persists until the end of the current turn. There is no mid-turn escape by moving — an ASSAULT-marked unit cannot move again (Rule 6.5.3).
 
-**6.6.2**  A unit firing from open ground (cover modifier +0) for the second time from the same position in the same turn becomes Firing Exposed after its second fire action.
+**6.6.2**  A unit firing from open ground (cover modifier +0) for the second or later time in the same turn becomes Firing Exposed after that fire action. No position tracking is required — the FIRE markers already count the unit's fires, and a unit that moved between fires carries an ASSAULT marker and is fully Exposed anyway (Rule 6.6.1).
 
 **6.6.3**  First fire from any position this turn is not Firing Exposed regardless of terrain.
 
-**6.6.4**  An Exposed unit may be targeted by opportunity fire (1 RP cost) at any point while it remains Exposed.
+**6.6.4**  An Exposed unit may be targeted by opportunity fire (1 RP cost) during any reaction window or interruption point (Rule 5.5) while it remains Exposed.
 
 **6.6.5**  Opportunity fire against an Exposed unit uses full fire resolution with no penalty to the attacker's rFP.
 

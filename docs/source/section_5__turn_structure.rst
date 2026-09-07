@@ -27,11 +27,11 @@ Each game turn proceeds through three phases in the following order:
 
 **5.2.1**  The Recovery Phase occurs at the start of each game turn before any actions are taken.
 
-**5.2.2**  All action markers (MOVED, FIRE 1/2/3, ASSAULT, OPPORTUNITY) are removed from all counters.
+**5.2.2**  All action markers (MOVED, FIRE 1/2/3, ASSAULT, OPPORTUNITY, CARELESS) are removed from all counters.
 
 **5.2.3**  Each unit with a SUPPRESSED or PINNED status marker attempts a recovery roll.
 
-**5.2.4**  Recovery roll procedure: roll 1d6 and add the unit's Morale value. Compare to the recovery threshold for the unit's current status.
+**5.2.4**  Recovery roll procedure: roll 1d6 and add the unit's Morale modifier (Rule 15.2.1a). Compare to the recovery threshold for the unit's current status.
 
 .. list-table::
    :header-rows: 1
@@ -41,21 +41,33 @@ Each game turn proceeds through three phases in the following order:
      - **Recovery Threshold**
      - **Notes**
    * - Suppressed
-     - 8
-     - Roll + Morale ≥ 8 to recover
+     - 3
+     - Roll + Morale modifier ≥ 3 to recover
    * - Pinned
-     - 10
-     - Roll + Morale ≥ 10 to recover
+     - 5
+     - Roll + Morale modifier ≥ 5 to recover
    * - Casualty + Suppressed
-     - 11
-     - Roll + Morale ≥ 11 to recover suppression (step loss remains)
+     - 6
+     - Roll + Morale modifier ≥ 6 to recover suppression (step loss remains)
 
 
-**5.2.5**  Recovery is never automatic. A regular unit (Morale 5) recovers from Suppressed on a roll of 3+ (67%) and from Pinned on 5+ (33%). An elite unit (Morale 6) recovers on 2+ (83%) and 4+ (50%) respectively. A leader's CMD bonus (Rule 5.2.6) can make recovery certain — this is deliberate: morale quality and leadership, not time alone, determine how quickly a force shakes off fire effects.
+**5.2.5**  Recovery is never automatic. A regular unit (modifier +0) recovers from Suppressed on a roll of 3+ (67%) and from Pinned on 5+ (33%). An elite unit (modifier +1) recovers on 2+ (83%) and 4+ (50%) respectively. A leader's CMD bonus (Rule 5.2.6) can make recovery certain — this is deliberate: morale quality and leadership, not time alone, determine how quickly a force shakes off fire effects.
 
 **5.2.6**  A leader adjacent to a recovering unit adds their CMD rating to the recovery roll during the Recovery Phase. For mid-turn rally using the Rally action, use the RAL threshold instead (see Rule 12.6).
 
 **5.2.7**  Units may not attempt recovery mid-turn. Recovery occurs only during this phase unless a leader spends 1 AP to rally an adjacent unit (see Section 12).
+
+**5.2.8**  Recovery Phase internal sequence — resolve in this order (several subsystems act "during the Recovery Phase"; when order matters, this list governs):
+
+1. Remove action markers (Rule 5.2.2).
+2. Prisoner escape attempts for under-guarded groups (Rule 11.4.2).
+3. CONTACT markers age one step; COLD markers are removed (Rule 14.8.2).
+4. Suppressed/Pinned recovery rolls (Rules 5.2.3–5.2.4) and vehicle bail-out checks (Rule 19.2.1).
+5. Molotov engine-fire rolls (Rule 18.10.3).
+6. Routing units attempt rally (Rule 10.6.7).
+7. Dispersed units attempt rally (Rule 10.5.4).
+
+*Escapes precede rallies (prisoners slip away while the line is still disorganised); status recovery precedes rout and dispersed rallies so a just-recovered leader's CMD is available to them.*
 
 5.3  Command Phase
 ------------------
@@ -87,17 +99,19 @@ Each game turn proceeds through three phases in the following order:
 ---------------------
 
 
-Each impulse proceeds as follows:
+Each impulse proceeds through three timing steps. Reactions occur only at the moments these steps define.
 
-**5.5.1**  Active player declares and executes one action (costs 1 AP) or passes.
+**5.5.1**  Declaration: the active player declares one action (costs 1 AP), naming the acting unit and, where relevant, the target or intended path — or passes.
 
-**5.5.2**  After the action executes, a reaction window opens.
+**5.5.2**  Declaration window: after the declaration but before the action resolves, the non-active player may spend RP on reactions that respond to the declaration itself — Defensive Fire against a declared Close Assault, an Interrupt, or Opportunity Fire against an eligible target already in LOS (including an Exposed unit). Reactions in this window resolve before the declared action. If a declaration-window reaction leaves the acting unit Suppressed or Pinned, or renders the declared action illegal (target destroyed, LOS lost), the declared action is cancelled; the active player retains the AP and may declare a different action.
 
-**5.5.3**  The non-active player may spend RP to react. Multiple reactions may be taken in one window if sufficient RP are available.
+    *See also: Rule 6.4.2 (the same cancellation rule for Interrupts).*
 
-**5.5.4**  The reaction window closes. The next impulse begins with the opposing player as active.
+**5.5.3**  Resolution: the action resolves. A Move action (or the move portion of an Assault action) resolves hex by hex — each time the moving unit enters a new hex, an interruption point occurs: the non-active player may spend RP on Opportunity Fire against the moving unit (and take any free spot rolls, Rule 7.4.3) before it moves further. Results of fire at an interruption point apply per Rules 7.5.3–7.5.5.
 
-**5.5.5**  Opportunity fire declared before an action executes (pre-action reaction) resolves before the declared action. If the pre-action reaction suppresses or pins the acting unit, the declared action may be cancelled. The acting player still retains the AP but may spend it on a different action.
+**5.5.4**  Post-action window: after the action resolves, the non-active player may spend RP on reactions triggered by the action's outcome — for example, Opportunity Fire against a unit that is now Exposed, or a Spot Roll against a unit that fired or became visible. Multiple reactions may be taken in one window if sufficient RP are available.
+
+**5.5.5**  All windows close. The next impulse begins with the opposing player as active.
 
 5.6  Passing
 ------------

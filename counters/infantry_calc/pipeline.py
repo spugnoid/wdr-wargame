@@ -154,13 +154,32 @@ def _resolve_practical_rpm(slot: UnitWeaponSlot, weapon: WeaponRow) -> float:
     return slot.practical_rpm_override if slot.practical_rpm_override is not None else weapon.practical_rpm
 
 
-def _fire_line_notation(slot: UnitWeaponSlot, weapon: WeaponRow, quality: Quality) -> str:
+def _fire_line_notation(
+    slot: UnitWeaponSlot,
+    weapon: WeaponRow,
+    quality: Quality,
+    interval_override: int | None = None,
+) -> str:
     practical_rpm = _resolve_practical_rpm(slot, weapon)
     rfp = weapon_rfp(slot.count, practical_rpm, weapon.weapon_class, quality)
     if rfp < MIN_RFP:
         return "omit (rFP too low)"
-    interval = fire_interval_hexes(weapon.max_range_yds, rfp)
+    # Rule 3.2.6: the ⬡h interval is identical on both counter faces --
+    # weapon physics do not change with crew size. A rear face passes the
+    # front face's interval here so a reduced crew's lower rFP changes
+    # only the height of the falloff curve, never its step spacing.
+    interval = (
+        interval_override
+        if interval_override is not None
+        else fire_interval_hexes(weapon.max_range_yds, rfp)
+    )
     return f"{_NOTATION_PREFIX[weapon.weapon_class]}{rfp} ⬡{interval} -{_FALLOFF}"
+
+
+def _base_unit_id(unit_id: str) -> str:
+    """Strip the trailing _F/_R face suffix so front and rear rows of the
+    same unit share a key."""
+    return unit_id[:-2] if unit_id.endswith(("_F", "_R")) else unit_id
 
 
 def write_infantry_roster_csv(
@@ -174,6 +193,22 @@ def write_infantry_roster_csv(
     the table: read the row for this unit, done.
     """
     weapons_by_name = {w.name: w for w in weapons}
+
+    # Front-face intervals, keyed by (base unit id, weapon name), so rear
+    # faces can reuse them (Rule 3.2.6 -- see _fire_line_notation).
+    front_intervals: dict[tuple[str, str], int | None] = {}
+    for unit in units:
+        if unit.face != "F":
+            continue
+        for slot in unit.loadout:
+            weapon = weapons_by_name[slot.weapon_name]
+            rfp = weapon_rfp(
+                slot.count, _resolve_practical_rpm(slot, weapon), weapon.weapon_class, unit.quality
+            )
+            if rfp >= MIN_RFP:
+                front_intervals[(_base_unit_id(unit.unit_id), weapon.name)] = fire_interval_hexes(
+                    weapon.max_range_yds, rfp
+                )
 
     with open(out_path, "w", newline="") as f:
         writer = csv.writer(f)
@@ -191,7 +226,16 @@ def write_infantry_roster_csv(
             morale = unit_morale(unit.quality)
 
             fire_lines = [
-                _fire_line_notation(slot, weapons_by_name[slot.weapon_name], unit.quality)
+                _fire_line_notation(
+                    slot,
+                    weapons_by_name[slot.weapon_name],
+                    unit.quality,
+                    interval_override=(
+                        front_intervals.get((_base_unit_id(unit.unit_id), slot.weapon_name))
+                        if unit.face == "R"
+                        else None
+                    ),
+                )
                 for slot in unit.loadout
             ]
             fire_lines += [""] * (3 - len(fire_lines))

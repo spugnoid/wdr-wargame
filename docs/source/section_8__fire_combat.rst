@@ -9,7 +9,9 @@ Fire combat in With Deepest Regret... uses a single unified resolution procedure
 
 The full procedure for any fire combat action:
 
-**8.1.1**  Group all firing units by ⬡h interval value (or see Rule 8.3.4a for mixed-interval groups within the smallest ⬡h's range).
+**8.1.1**  All units firing at the same target as part of one Fire action form a single fire group, regardless of ⬡h interval (Rule 8.3).
+
+**8.1.1a**  A unit with multiple fire lines fires **all** of them in one Fire action: each line computes its own effective rFP at the target's range (Rule 8.2) and the values join the fire group's sum like separate firers. A single fire action never splits a unit's lines across different targets. Exception: a sniper's deliberate-targeting shot (Rule 20.2) uses the sniper line alone and never groups.
 
 **8.1.2**  For each firing unit, calculate the effective rFP at that unit's own firing range (Rule 8.2).
 
@@ -39,39 +41,25 @@ The full procedure for any fire combat action:
 
 **8.2.4**  Example: A fire line reading 7 ⬡4 -1 at range 9 hexes. Effective rFP = 7 − (1 × floor(8 / 4)) = 7 − 2 = 5.
 
+**8.2.5**  A fire line whose effective rFP after **all** modifiers (falloff, intervening terrain, smoke, status and exposure penalties) is 0 or less contributes nothing: it adds nothing to a fire group's sum, and if no line in the group has a positive effective rFP, no attack occurs and no FIRE marker is placed. Effective rFP never goes below 0 for any purpose — a deeply degraded line cannot drag a group's total down.
+
 8.3  Grouping by Interval
 -------------------------
 
 
-**8.3.1**  When multiple units fire at the same target in the same impulse, units sharing the same ⬡h interval value may be combined into a single fire group.
+**8.3.1**  When multiple units fire at the same target in the same impulse as part of one Fire action, they combine into a single fire group. Grouping is not optional and has no ⬡h restriction: the per-unit method of Rule 8.3.2 is well-defined for any mix of fire lines, because each unit's falloff is computed on its own printed curve before the values are summed.
 
-    *See also: Rule 8.3.4a (units with different ⬡h values may also combine, within a narrower range condition).*
+    *See also: Rule 8.8 (attacks that cannot group — reaction fire, sniper deliberate targeting, separate fire actions).*
 
 **8.3.2**  To form a fire group: each unit first calculates its own effective rFP (falloff at its own range per Rule 8.2, plus its own intervening terrain and modifiers). Sum the effective rFP values. The group is resolved as a single attack using the summed value.
 
-**8.3.3**  Same-hex shortcut: when every unit in the group occupies the same hex, all firers share an identical range and line of sight. The group may instead sum rFP values and f values first — expressed as (total rFP) ⬡h −(total f) — and apply the falloff formula once to the summed values. This produces a result identical to the per-unit calculation (Rule 8.3.6).
-
-**8.3.4**  Units with different ⬡h values may combine into a single fire group only under the conditions given in Rule 8.3.4a. Otherwise, units with different ⬡h intervals cannot be combined — each fires as a separate attack (Rule 8.8).
+**8.3.3**  Same-hex shortcut: when every unit in the group occupies the same hex **and shares the same ⬡h interval**, all firers share an identical range, line of sight, and falloff step. The group may instead sum rFP values and f values first — expressed as (total rFP) ⬡h −(total f) — and apply the falloff formula once to the summed values. This produces a result identical to the per-unit calculation (Rule 8.3.6). Mixed-⬡h groups simply use the per-unit method of Rule 8.3.2; the shortcut is a convenience, never a requirement.
 
 **8.3.5**  Example (same-hex shortcut): Three units in the same hex with fire lines 6 ⬡4 -1, 8 ⬡4 -1, and 5 ⬡4 -1 form a group: 19 ⬡4 -3. At range 5, effective rFP = 19 − (3 × floor(4/4)) = 19 − 3 = 16.
 
-**8.3.6**  Mathematical proof of the shortcut: for units sharing a hex, the falloff term floor(max(0, range − 1) / h) is identical for every firer — it depends only on range and h. It therefore distributes across the sum: Σ(rFPᵢ − fᵢ × k) = ΣrFPᵢ − (Σfᵢ) × k. The equivalence holds at all ranges, but only when range and intervening terrain are identical for all firers. Units firing from different hexes have different ranges and different sight lines — their effective rFP must be computed per unit before summing (Rule 8.3.2).
+**8.3.6**  Mathematical proof of the shortcut: for units sharing a hex, the falloff term floor(max(0, range − 1) / h) is identical for every firer — it depends only on range and h. It therefore distributes across the sum: Σ(rFPᵢ − fᵢ × k) = ΣrFPᵢ − (Σfᵢ) × k. The equivalence holds at all ranges, but only when range, ⬡h, and intervening terrain are identical for all firers. Units firing from different hexes or with different ⬡h have different falloff terms — their effective rFP must be computed per unit before summing (Rule 8.3.2).
 
-8.3.4a  Mixed-Interval Combining
---------------------------------
-
-
-**8.3.4a.1**  Units with different ⬡h values may form a single fire group provided every combining unit's firing range does not exceed the smallest ⬡h value among them. This is a single test against the group's smallest ⬡h, not each unit's own ⬡h individually — it can be stricter than any one unit's own falloff step would require, since a unit with a larger ⬡h may still be excluded by a smaller-⬡h groupmate's threshold.
-
-**8.3.4a.2**  Because every combining unit is, by this condition, still at its full printed rFP, form the group by summing each unit's full rFP directly — no falloff calculation is required for this group's Resolution FP.
-
-**8.3.4a.3**  The moment any unit's range exceeds the group's smallest ⬡h value — not necessarily that unit's own ⬡h — the group can no longer combine by this method. This happens as soon as the smallest-⬡h member itself crosses its own falloff step, even if other members with larger ⬡h haven't crossed theirs yet. The group reverts to separate attacks (Rule 8.8) for that impulse.
-
-**8.3.4a.4**  This does not extend the same-hex shortcut (Rule 8.3.3), which remains valid only for units sharing both hex and ⬡h. Mixed-interval groups always sum full rFP values directly per 8.3.4a.2.
-
-    *See also: Rule 8.8.1 (separate-attack fallback once any unit's range exceeds the group's smallest ⬡h).*
-
-**8.3.4a.5**  Example: a ⬡4 -2 unit (rFP 7) and two ⬡5 -1 units (rFP 5 each) all fire at a target 4 hexes away — within the group's smallest ⬡h (4), so they combine: total rFP = 7+5+5 = 17, resolved as one group. At 5 hexes, the range now exceeds the group's smallest ⬡h (4) — even though the ⬡5 units individually haven't reached their own falloff step yet — so the group can no longer combine. This holds even if the units fire from different hexes at different individual ranges: the test is always against the smallest ⬡h in the group, not each unit's own. Resolve as two separate attacks instead: the two ⬡5 units combine as usual (same ⬡h), the ⬡4 unit fires alone, and the results combine per Rule 8.8.2.
+**8.3.7**  Example (mixed intervals): a ⬡4 -2 unit (rFP 7) and two ⬡5 -1 units (rFP 5 each) fire at a target 6 hexes away. Per unit: 7 − 2×floor(5/4) = 5; each 5 − 1×floor(5/5) = 4. Summed effective rFP = 5 + 4 + 4 = 13 → Resolution Strip.
 
 8.4  Resolution Strip
 ---------------------
@@ -81,7 +69,7 @@ The full procedure for any fire combat action:
 
 **8.4.2**  When multiple units are combined into a fire group (Rule 8.3), always consult the Resolution Strip to determine the Resolution FP. The strip applies logarithmic compression to concentrated fire, reflecting diminishing returns from massed volume. This ensures that dice remain meaningful at all firepower levels.
 
-**8.4.3**  The Resolution Strip is printed on the player aid card for quick reference.
+**8.4.3**  The Resolution Strip is printed on the player aid card for quick reference. Summed values between listed entries round down to the nearest listed row (a summed effective rFP of 11 uses the row for 10, Resolution FP 8). The strip is the identity up to 7 — compression only begins where massed fire does.
 
 .. list-table::
    :header-rows: 1
@@ -94,9 +82,9 @@ The full procedure for any fire combat action:
    * - 2
      - 2
    * - 3
-     - 4
+     - 3
    * - 4
-     - 5
+     - 4
    * - 5
      - 5
    * - 6
@@ -165,11 +153,25 @@ The full procedure for any fire combat action:
 -------------------
 
 
-**8.7.1**  When the effective rFP after all modifiers (falloff, intervening terrain, other penalties) is 3 or less, the maximum possible result is Pinned regardless of the dice roll margin.
+**8.7.1**  When the effective rFP after all modifiers (falloff, intervening terrain, other penalties) is low, the maximum possible result is capped regardless of the dice roll margin:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - **Effective rFP**
+     - **Maximum result**
+   * - 1–2
+     - Suppressed
+   * - 3
+     - Pinned
+   * - 4+
+     - Uncapped
+
 
 **8.7.2**  This represents the physical reality that long-range harassing fire suppresses and occasionally pins but rarely causes casualties.
 
-**8.7.3**  The long range cap applies after all modifiers have been calculated. A unit with effective rFP 4 or higher is not subject to the cap.
+**8.7.3**  The long range cap applies after all modifiers have been calculated. The two-band grading removes the old cliff at rFP 3/4, where a single point of intervening penalty toggled a firer between "can never inflict a casualty" and the full table including Broken.
 
 **8.7.4**  Sniper exemption:  Sniper fire lines (weapon class icon ╌○) are exempt from the long range cap when deliberate targeting is declared (see Rule 20.2). Full result thresholds apply regardless of effective rFP. A sniper firing without declaring a deliberate target is treated as normal area fire and the cap applies normally.
 
@@ -181,21 +183,23 @@ The full procedure for any fire combat action:
 -----------------------------------------
 
 
-**8.8.1**  When two or more separate fire groups attack the same target hex in the same impulse — different ⬡h intervals beyond what Rule 8.3.4a permits, or units firing from different hexes that cannot be grouped — resolve each attack separately.
+**8.8.1**  Fire directed at the same target in the same impulse that cannot form one fire group resolves as separate attacks. This occurs only when the attacks come through different resolution paths: a declared Fire action plus reaction fire (opportunity or defensive fire) resolving in the same window, a sniper's deliberate-targeting shot (Rule 20.2, which never groups), or fire from separate fire actions in the same impulse (e.g. an Interrupt). Units contributing to the same Fire action always group (Rule 8.3.1).
 
-    *See also: Rule 8.3.4a (mixed-interval combining within the smallest ⬡h's range).*
-
-**8.8.2**  After all attacks are resolved, combine the results as follows: take the highest single result; for each additional attack that beats the target's defence, step the result up once on the result track.
+**8.8.2**  After all attacks are resolved, combine the results as follows: take the highest single result; each additional attack whose **own result is Pinned or better** steps the combined result up once, to a **maximum of two step-ups** regardless of the number of attacks.
 
 **8.8.3**  Result step order: Suppressed → Pinned → Casualty → Casualty+Suppressed → Broken.
 
-**8.8.4**  An additional attack that does not beat the target's defence adds no step-up even if the primary attack produced a result.
+**8.8.4**  An additional attack whose own result is No Effect or Suppressed adds no step-up.
+
+**8.8.5**  The combined result may never exceed the most severe result any single contributing attack was itself permitted to inflict. In particular, if every contributing attack was capped (Rule 8.7), the combined result remains capped at the **highest** cap among them — step-ups cannot manufacture casualties that no individual attack could cause.
+
+    *See also: Rule 8.7 (Long Range Cap).*
 
 8.9  Adjacent Fire Bonus
 ------------------------
 
 
-**8.9.1**  Fire at range 1 (adjacent hex) receives a +2 bonus to effective rFP before the Resolution Strip lookup.
+**8.9.1**  Fire at range 1 (adjacent hex) receives a +2 bonus to effective rFP (applied before any Resolution Strip lookup, for grouped fire).
 
 **8.9.2**  Fire at range 0 (same hex, close assault entry fire) receives a +3 bonus to effective rFP. See Section 9 for close assault procedure.
 
@@ -207,6 +211,6 @@ The full procedure for any fire combat action:
 
 **8.10.1**  See Section 6.6 for the full Firing Exposed rules and trigger conditions.
 
-**8.10.2**  Summary: Move and fire (ASSAULT) = Exposed. Second fire from open ground same position = Firing Exposed. First fire from any position = not Exposed.
+**8.10.2**  Summary: Move and fire (ASSAULT) = Exposed. Second or later fire this turn while in open ground = Firing Exposed. First fire from any position = not Exposed.
 
 **8.10.3**  Exposed units may be targeted by opportunity fire at 1 RP cost. Firing Exposed units impose -1 rFP on the attacker. Moving units impose -2 rFP on the attacker.

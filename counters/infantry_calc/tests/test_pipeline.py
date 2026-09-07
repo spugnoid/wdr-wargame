@@ -182,3 +182,14 @@ class TestWriteInfantryRosterCsv:
         assert row["fire_line_1"] == "─● 7 ⬡3 -1"
         assert row["fire_line_2"] == "omit (rFP too low)"
         assert row["fire_line_3"] == "≡ 3 ⬡2 -1"
+
+    def test_rear_face_reuses_front_face_interval(self, tmp_path):
+        """Rule 3.2.6: the ⬡h interval is identical on both counter faces
+        -- weapon physics do not change with crew size. DP-28 team's
+        reduced crew has a lower rFP (5 vs 7), which naively recomputes
+        to ⬡5; the printed rear face must keep the front face's ⬡3 so a
+        crew casualty lowers the whole curve instead of flattening it
+        (at ⬡5 the reduced team equalled the full team at range 10)."""
+        rows = self._rows_by_unit_id(tmp_path)
+        assert rows["SOV_DP28_1943.3_F"]["fire_line_1"] == "─● 7 ⬡3 -1"
+        assert rows["SOV_DP28_1943.3_R"]["fire_line_1"] == "─● 5 ⬡3 -1"

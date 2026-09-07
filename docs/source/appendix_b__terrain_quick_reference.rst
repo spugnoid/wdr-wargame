@@ -17,14 +17,18 @@ Appendix B — Terrain Quick Reference
      - +1
      - -1
      - 1
-   * - Wall / fence
+   * - Road
+     - +0
+     - 0
+     - 1 (enables road bonus, Rule 7.2.1)
+   * - Wall / fence (hexside — Rule 4.1.3)
      - +2
      - 0
      - +1 to cross
-   * - Hedgerow
+   * - Hedgerow (hexside — Rule 4.1.3)
      - +2
-     - -1
-     - 2
+     - -1 per hexside
+     - +1 to cross
    * - Light woods
      - +3
      - -2
@@ -41,10 +45,10 @@ Appendix B — Terrain Quick Reference
      - +4
      - -2
      - 1
-   * - Reverse slope
+   * - Reverse slope (position, not terrain — Rule 4.4.4; cover vs indirect fire only)
      - +4
      - N/A
-     - 1
+     - —
    * - Rubble
      - +4
      - 0
@@ -65,3 +69,19 @@ Appendix B — Terrain Quick Reference
      - N/A
      - -3
      - 1
+   * - Shallow stream
+     - +0
+     - 0
+     - 2
+   * - Crest hexside crossed at firer's level (grazing, Rule 4.4a.5)
+     - N/A
+     - -1 per crest hexside
+     - —
+   * - Elevation gain (per level uphill)
+     - N/A
+     - N/A
+     - +1 to hex entered
+   * - River / cliff
+     - N/A
+     - N/A
+     - Impassable except at crossings

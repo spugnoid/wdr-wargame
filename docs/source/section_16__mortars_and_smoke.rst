@@ -88,7 +88,9 @@ All mortar counters use M1 F2 (mobile) or M0 F2 (deployed). Mortar teams must de
 ----------------
 
 
-**16.3.1**  Each mortar's base AMO value is printed on its counter. At scenario setup, the owning player secretly rolls 1d6-1 and adds the result to base AMO. This total is the actual ammunition available, recorded privately. The opponent never sees this value.
+**16.3.1**  Each mortar's base AMO value is printed on its counter. Base AMO rounds are certain — no roll, no private record. All uncertainty about total supply lives in the extended ammunition table (Rule 16.3.3), which begins only after the base rounds are spent.
+
+*NOTE: earlier drafts also added a secret 1d6−1 bonus recorded privately at setup. Two mechanisms cannot both govern the same supply — a player who rolled +5 secret rounds could still be forced dry by a first extended-table roll of 1 — and the extended table alone already provides hidden, variable ammunition without any private bookkeeping. The secret roll is removed.*
 
 **16.3.2**  Each fire mission (HE or smoke) expends 1 AMO. HE and smoke ammunition are tracked on the same AMO count unless the scenario specifies separate pools.
 
@@ -114,7 +116,7 @@ All mortar counters use M1 F2 (mobile) or M0 F2 (deployed). Mortar teams must de
 ---------------------
 
 
-**16.4.1**  Mortars may fire in three modes, each with different accuracy and delay:
+**16.4.1**  Mortars may fire in five modes, each with different accuracy and delay:
 
 .. list-table::
    :header-rows: 1
@@ -128,7 +130,7 @@ All mortar counters use M1 F2 (mobile) or M0 F2 (deployed). Mortar teams must de
    * - Observed fire
      - Friendly unit (FO) with LOS to target hex spends 1 AP to call mission
      - +0
-     - 2 impulses (81mm) / 1 impulse (60mm)
+     - 1 impulse (light, 50–60mm) / 2 impulses (medium, 81–82mm) / 3 impulses (heavy, 120mm)
      - FO leader adds OBS rating to ACC
    * - Registered target
      - Target hex pre-designated at scenario setup (limit 2 per mortar)
@@ -152,7 +154,7 @@ All mortar counters use M1 F2 (mobile) or M0 F2 (deployed). Mortar teams must de
      - Slip required
 
 
-**16.4.2**  Effective ACC = mortar ACC + mode modifier + FO leader OBS (if applicable).
+**16.4.2**  Effective ACC = mortar ACC + mode modifier + FO leader OBS (if applicable). If effective ACC is 0 or less, skip the accuracy roll — the round disperses automatically (Rule 16.6.3). Firing in such a mode is legal but wildly inaccurate.
 
 **16.4.3**  Minimum range applies in all modes — a mortar cannot target a hex closer than its RNG minimum regardless of mode.
 
@@ -200,7 +202,7 @@ All mortar counters use M1 F2 (mobile) or M0 F2 (deployed). Mortar teams must de
 
 **16.7.3**  Cover modifiers apply — units in cover are protected from indirect fire.
 
-**16.7.4**  Reverse slope and building cover are each reduced by 1 step — indirect fire angles over and into these positions. Reverse slope +4 becomes +3. Building heavy +5 becomes +4.
+**16.7.4**  Reverse slope (a position, Rule 4.4.4) and building cover are each reduced by 1 step — indirect fire angles over and into these positions. Reverse slope +4 becomes +3. Building heavy +5 becomes +4.
 
 **16.7.5**  No range falloff — mortar rFP is flat regardless of range to target. The dispersion system handles accuracy at range; lethality on impact is constant.
 
@@ -208,13 +210,17 @@ All mortar counters use M1 F2 (mobile) or M0 F2 (deployed). Mortar teams must de
 
 **16.7.7**  Hidden units in the blast area: blast effect applies regardless of visibility. A dummy marker in the blast hex produces no effect. A real hidden unit takes the blast effect and is automatically revealed — the explosion nearby discloses the position.
 
+**16.7.8**  Vehicles in the blast area: an open-topped vehicle (the ○— symbol, Rule 17.1) or unarmoured vehicle takes the blast as a normal fire attack against its class Defence (Rule 18.8.5), like infantry. A closed AFV takes no damage from mortar blast, but its crew must pass a check (1d6 + Morale modifier, Rule 15.2.1a) or the vehicle is Suppressed — threshold 3, or 4 against 120mm-class blast. Mortars never roll on the Section 18 penetration tables.
+
+    *See also: Rule 17.1 (open-top symbol), Rule 19.1 (vehicle morale checks).*
+
 16.8  Adjustment Fire
 ---------------------
 
 
 **16.8.1**  After a round disperses, the FO may call an adjustment mission.
 
-**16.8.2**  Write a new slip with the adjusted target hex. Adjustment delay is always 1 impulse regardless of mortar type. Effective ACC for the adjustment is the original ACC + 2 (crew is already set up and ranged in).
+**16.8.2**  Write a new slip with the adjusted target hex. Adjustment delay is always 1 impulse regardless of mortar type. Effective ACC for the adjustment is the original mission's effective ACC (Rule 16.4.2, including its mode modifier) + 2 (crew is already set up and ranged in).
 
 **16.8.3**  Only one adjustment is permitted per fire mission. After adjustment, the mission is either fire for effect or cancelled.
 

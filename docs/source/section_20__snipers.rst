@@ -43,7 +43,7 @@ Sniper rules differ from standard infantry fire in three fundamental ways: they 
      - Small team, hard to spot but lightly equipped
 
 
-**20.1.3**  Sniper ammunition follows the same secret bonus system as mortars (Rule 16.3). Base AMO is 4. At scenario setup the owning player secretly rolls 1d6-1 and adds to base AMO. Past base AMO, roll the extended ammunition table each shot.
+**20.1.3**  Sniper ammunition follows the same system as mortars (Rule 16.3). Base AMO is 4 — certain, with no roll or private record. Past base AMO, roll the extended ammunition table each shot.
 
 20.2  Deliberate Targeting
 --------------------------
@@ -99,8 +99,6 @@ Sniper rules differ from standard infantry fire in three fundamental ways: they 
 
    * - **Condition**
      - **CON modifier**
-   * - Stationary, not fired this turn
-     - +2
    * - Dense woods or entrenchment
      - +3
    * - Light woods or building
@@ -113,8 +111,13 @@ Sniper rules differ from standard infantry fire in three fundamental ways: they 
      - -2 (more controlled shot, less signature)
    * - Night scenario
      - +3
+   * - Smoke per hex intervening between spotter and sniper
+     - +2 (same value as Rule 14.9.7)
    * - Fired from same position twice this scenario
      - -2 (position partially known)
+
+
+*NOTE: the old "stationary, not fired this turn +2" row is deleted — the detection roll only ever occurs because the sniper fired this turn (Rule 20.3.2), so the condition could never hold in the roll it modified.*
 
 
 **20.3.5**  Detection result:
@@ -139,7 +142,7 @@ Sniper rules differ from standard infantry fire in three fundamental ways: they 
 ------------------------------------
 
 
-**20.5.1**  When a sniper CONTACT marker (crosshair) exists anywhere on the map, all friendly units within 6 hexes of that marker suffer:
+**20.5.1**  When a sniper CONTACT marker (crosshair) exists anywhere on the map, all units of the side that placed it — the side the sniper is shooting at — within 6 hexes of that marker suffer:
 
 **20.5.2**  Movement reduction: all movement at M# -1 (minimum 1).
 
@@ -226,4 +229,4 @@ Sniper rules differ from standard infantry fire in three fundamental ways: they 
      - Scoped M1903A4 Springfield
 
 
-*NOTE: All nations use identical fire line values — sniper effectiveness at this scale is determined more by position, patience, and target selection than by weapon differences. Quality differentials are encoded in Morale values and the AMO secret bonus. A veteran sniper with Morale 7 recovers from suppression automatically and passes detection checks more reliably.*
+*NOTE: All nations use identical fire line values — sniper effectiveness at this scale is determined more by position, patience, and target selection than by weapon differences. Quality differentials are encoded in Morale values and the extended-ammunition rolls past base AMO. A veteran sniper with Morale 7 recovers from suppression automatically and passes detection checks more reliably.*

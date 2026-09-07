@@ -71,19 +71,19 @@ The upper right corner of each counter shows three action values:
      - **Standard Action Values**
      - **Notes**
    * - Rifle squad
-     - M1 F2 G3
+     - M2 F2 G3
      - 
    * - SMG squad
-     - M1 F2 G3
+     - M2 F2 G3
      - 
    * - Panzergrenadier squad
-     - M1 F2 G4
+     - M2 F2 G4
      - Higher grenade value reflects assault doctrine
    * - Guards rifle squad
-     - M1 F2 G4
+     - M2 F2 G4
      - 
    * - LMG team
-     - M1 F3 G2
+     - M2 F3 G2
      - Sustained fire capability
    * - HMG team (deployed)
      - M0 F3 G1
@@ -95,7 +95,7 @@ The upper right corner of each counter shows three action values:
      - M1 F1 G0
      - One careful shot per turn
    * - Leader
-     - M2 F1 G0
+     - M3 F1 G0
      - High mobility, rarely fires directly
 
 
@@ -138,7 +138,7 @@ The upper right corner of each counter shows three action values:
      - ⬡4 to ⬡6
    * - ▲  (triangle)
      - Mortar
-     - Special — see Section TBD
+     - Special — see Section 16 (Mortars and Smoke)
 
 
 3.5  Stacking Limits
@@ -149,7 +149,7 @@ The upper right corner of each counter shows three action values:
 
 **3.5.2**  Leaders do not count toward the stacking limit.
 
-**3.5.3**  Independently crewed weapon counters (HMG teams, mortar teams, AT gun teams) do not count toward the stacking limit when stacked beneath their parent squad.
+**3.5.3**  Independently crewed weapon counters (HMG teams, mortar teams, AT gun teams) do not count toward the stacking limit when stacked beneath their parent squad. A weapon counter's **parent squad** is the friendly squad it is currently stacked with; if stacked with more than one squad, the owning player designates which is the parent. Parenthood transfers simply by stacking with a different friendly squad.
 
 **3.5.4**  Weapon counters that have separated from their parent squad count as a combat unit for stacking purposes.
 
@@ -159,7 +159,7 @@ The upper right corner of each counter shows three action values:
 ------------------------
 
 
-Small markers are placed on or beside unit counters to track their current state. All markers are removed during the Recovery Phase at the start of each turn.
+Small markers are placed on or beside unit counters to track their current state. Action markers (MOVED, FIRE 1/2/3, ASSAULT, OPPORTUNITY, CARELESS) are removed during the Recovery Phase at the start of each turn; status markers (SUPPRESSED, PINNED, and the like) persist until removed by their own rules — a recovery roll, a rally, or the condition ending (Rules 5.2.2–5.2.4).
 
 .. list-table::
    :header-rows: 1

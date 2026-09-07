@@ -80,6 +80,8 @@ All leaders have M3 F1 — movement allowance 3, fire rate 1. Leaders move faste
 
 **12.3.3**  A side with no functional leaders has AP = 1. One activation per turn — the minimum needed to prevent complete paralysis.
 
+**12.3.4**  **Functional** means: on the map, and not Eliminated, Evacuated, Captured, or Routing. Wounded (rear-face) leaders are functional at their reduced ratings. A Suppressed leader is functional in every respect. A **Pinned** leader still contributes CMD to the AP pool (the command structure exists even while its officer is face-down) but may not take Rally or Leader Actions and does not add CMD to any other unit's rolls until recovered — pinned command does not project.
+
 **12.3.4**  Example: German platoon with one CMD 3 platoon leader and two CMD 2 squad leaders: AP = 1 + 3 + 2 + 2 = 8, RP = 4.
 
 **12.3.5**  A wounded or eliminated leader immediately reduces the AP pool for the remainder of the turn.
@@ -154,11 +156,11 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
 
 **12.6.1**  A leader spending 1 AP on Rally selects one Suppressed or Pinned unit within command radius. That unit immediately attempts a recovery roll outside the normal Recovery Phase.
 
-**12.6.2**  The unit rolls 1d6 + Morale and compares to the leader's RAL value (not the standard threshold).
+**12.6.2**  The unit rolls 1d6 + Morale modifier (Rule 15.2.1a) and compares to a target derived from the leader's RAL value: **RAL − 1** to recover from Suppressed, **RAL + 1** to recover from Pinned.
 
-**12.6.3**  If the roll meets or exceeds the RAL value, the unit recovers from its current status.
+**12.6.3**  If the roll meets or exceeds the target, the unit recovers from its current status.
 
-**12.6.4**  RAL values by leader quality:
+**12.6.4**  RAL values by leader quality. Percentages are for a regular unit (modifier +0); the standard Recovery Phase thresholds for comparison are 3 (Suppressed, 67%) and 5 (Pinned, 33%):
 
 .. list-table::
    :header-rows: 1
@@ -169,16 +171,16 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
      - **Effect**
    * - CMD 1 / Poor
      - 5
-     - Suppressed recovery harder than standard; Pinned unchanged
+     - Suppressed target 4 (50%) — worse than waiting for the Recovery Phase; Pinned target 6 (17%) — cannot reliably rally pinned units
    * - CMD 2 / Regular
      - 4
-     - Same as standard suppressed threshold
+     - Suppressed target 3 (67%) — the standard threshold, bought mid-turn; Pinned target 5 (33%) — standard
    * - CMD 3 / Veteran
      - 3
-     - Suppressed automatic for Morale 4+; Pinned frequently succeeds
+     - Suppressed target 2 (83%, automatic for veterans); Pinned target 4 (50%) — frequently succeeds
    * - CMD 3 / Elite
      - 2
-     - Near-automatic suppressed recovery; Pinned usually succeeds
+     - Suppressed target 1 — automatic for green and better; Pinned target 3 (67%) — usually succeeds
 
 
 12.6a  Rally Point Action
@@ -205,7 +207,7 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
 
 **12.7.3**  Multiple leaders cannot stack fire coordination bonuses on the same fire group in the same impulse. The highest single CMD bonus applies.
 
-**12.7.4**  A hidden leader cannot Direct Fire — command requires visible presence to coordinate a fire group effectively.
+**12.7.4**  A HIDDEN leader's command is limited to what silence permits: they contribute CMD to the AP pool (Rule 12.3.1 — planning happens off-map) and add CMD to rolls of units **in their own hex only**. Every other leader function — Direct Fire coordination, Rally, Inspire, Leader Actions, command radius to other hexes, and the Recovery Phase CMD bonus of Rule 5.2.6 for units outside their hex — requires the leader to be VISIBLE: shouting orders across a field reveals the shouter. A hidden leader may reveal voluntarily at the start of any friendly impulse (remove the blind marker) to use these functions.
 
 12.8  Assault Coordination
 --------------------------
@@ -263,6 +265,8 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
 **12.9.2**  If the leader is hit, flip the leader counter to its wounded rear face. A wounded leader continues to function but at reduced effectiveness.
 
 **12.9.3**  If the hex contains only the leader (no subordinate units), the leader is automatically hit — no roll needed.
+
+**12.9.4**  Suppressed and Pinned results against a hex containing both a leader and combat units apply to a combat unit, never to the leader — the allocation roll of Rule 12.9.1 exists only for Casualty or worse. A leader **alone** in a hex takes Suppressed and Pinned results personally, with the usual markers and recovery rolls; while Pinned, Rule 12.3.4's projection limits apply.
 
 12.10  Wounded Leaders
 ----------------------

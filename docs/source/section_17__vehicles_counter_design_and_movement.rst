@@ -71,15 +71,45 @@ Vehicle counters display the following fields:
 
 **17.2.2**  Every vehicle counter with a separate turret (TRAV 1 or higher) prints **two independent profiles** — Hull and Turret — each with its own Front/Side/Rear AV. Which profile a shot resolves against is determined by the Gunnery Roll (Rule 18.1a), not chosen by the attacker. Casemate vehicles (TRAV 0) print Hull values only (Rule 17.1.2).
 
-**17.2.3**  Each arc of each profile prints **two AV values**, not one: AV-vs-Capped (for APC/APCBC and uncapped AP rounds) and AV-vs-Tungsten (for HVAP/APCR/APDS rounds). Uncapped and capped kinetic rounds have measurably different slope sensitivity, and tungsten rounds lose relative effectiveness faster than capped rounds as impact angle increases — a single AV number cannot represent both accurately.
+**17.2.3**  Each arc of each profile prints **three AV values**: AV-vs-Capped (for APC/APCBC rounds), AV-vs-Tungsten (for HVAP/APCR/APDS rounds), and AV-vs-HEAT (for all shaped-charge attacks — Rule 17.2.4). Uncapped and capped kinetic rounds have measurably different slope sensitivity, tungsten rounds lose relative effectiveness faster as impact angle increases, and HEAT ignores velocity entirely — one number cannot represent them all.
 
-**17.2.4**  HEAT does not get its own printed AV. Instead, apply the HEAT Reference Table (Rule 17.2.7) to the vehicle's raw armour thickness (printed in the vehicle's technical data, not on the tactical counter) — this is the one case where a small amount of arithmetic replaces a printed value, because HEAT's effective resistance depends on raw thickness and angle only, not on the attacking projectile's diameter, and so cannot be pre-resolved per attacker the way kinetic AV can.
+**17.2.3a**  Uncapped AP and Soviet APBC attackers also use the AV-vs-Capped value — **except** against face-hardened plates (marked FH on the counter), where the printed Capped figure bakes in a correction that applies to capped noses only. Against the roster's face-hardened plates, an APBC or uncapped-AP attacker uses these values instead:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - **Face-hardened plate**
+     - **AV vs Capped (printed)**
+     - **AV vs APBC**
+     - **AV vs Uncapped AP**
+   * - Panzer IV Ausf H — Hull Front
+     - 64.9
+     - 83.2
+     - 101.2
+   * - Panzer IV Ausf H — Hull Side
+     - 23.8
+     - 30.4
+     - 35.7
+   * - Panzer III Ausf M — Hull Front
+     - 51.4
+     - 59.9
+     - 69.6
+   * - StuG III Ausf G — Hull Side
+     - 23.8
+     - 30.4
+     - 35.7
+
+
+*NOTE: face-hardening is a real penalty for capped rounds (the cap defeats the hardened face), no correction at all for APBC, and a real bonus for uncapped AP (the hardened face shatters the unprotected nose) — reusing the Capped column for those attackers understated these four plates by 30–70%. Values above use the same 75mm reference diameter as the printed columns; a validation script needing exact attacker-diameter figures calls* ``resolve_av(diameter, hardness_table, family=...)`` *directly (see Rule 18.12 note (e)).*
+
+**17.2.4**  HEAT attacks compare their flat PEN directly against the printed **AV-vs-HEAT** value for the struck profile and arc — no arithmetic at the table. Because HEAT's effective resistance depends only on the plate (thickness and angle), never on the attacker, one printed number per arc covers every HEAT weapon in the game — it is the one AV that is genuinely attacker-independent.
 
 **17.2.5**  AV, PEN, and the Gunnery Table are all computed by the project's calculation tool (`counters/armor_calc/`) from sourced ballistics data, not derived by formula at the table. See that tool's own documentation for the full physics — nothing beyond the printed numbers is needed to play.
 
 **17.2.6**  Slope, material quality, hardness, and flaw corrections are all already resolved into the printed AV (Rule 17.2.1) — there is no separate step for players to apply any of them.
 
-**17.2.7**  HEAT Reference Table — multiplier to apply to a vehicle's raw armour thickness at the actual impact angle (interpolate between listed angles):
+**17.2.7**  HEAT Reference Table — designer reference only (the multipliers from which the printed AV-vs-HEAT values are computed; never consulted during play):
 
 .. list-table::
    :header-rows: 1
@@ -92,7 +122,7 @@ Vehicle counters display the following fields:
    * - 15°
      - 1.04
    * - 30°
-     - 1.15
+     - 1.16
    * - 45°
      - 1.41
    * - 60°
@@ -107,9 +137,9 @@ Vehicle counters display the following fields:
 ------------------------
 
 
-**17.3.1**  Penetration values (PEN) are printed as 0°-equivalent millimetres at a small set of range bands (typically 250/500/750/1000/1500/2000m), not as a single value with falloff notation. Read the row for the actual range to target, using the next lower printed band if the exact range falls between two listed bands.
+**17.3.1**  Penetration values (PEN) are printed as 0°-equivalent millimetres at a small set of range bands (typically 0/250/500/750/1000/1500/2000m), not as a single value with falloff notation. Read the row for the actual range to target, using the next lower printed band if the exact range falls between two listed bands — a shot at less than 250m reads the 0m (point-blank) row.
 
-**17.3.2**  A gun prints one PEN line per ammunition nature it historically carried — Capped, Uncapped AP, or Tungsten (HVAP/APCR/APDS) — up to two or three lines. The firing player freely chooses which loaded nature to fire with each shot, tracked via the existing AMO/secret-bonus ammunition plumbing for any premium (Tungsten) rounds.
+**17.3.2**  A gun prints one PEN line per ammunition nature it historically carried — Capped, Uncapped AP, or Tungsten (HVAP/APCR/APDS) — up to two or three lines. The firing player freely chooses which loaded nature to fire with each shot, tracked via the extended-ammunition mechanism (Rule 16.3.3) for any premium (Tungsten) rounds: the scenario states the vehicle's base Tungsten load; past it, roll the extended table per shot.
 
 **17.3.3**  HEAT weapons (Panzerfaust, PIAT, Bazooka, HEAT rounds) have flat penetration values — no range bands. Their accuracy degrades with range through hard range limits (Rule 18.9), not through penetration reduction.
 
@@ -165,24 +195,29 @@ Vehicle counters display the following fields:
 
 **17.5.1**  Vehicle facing is tracked by orienting the counter's printed facing arrow toward one of the six hex sides of the vehicle's current hex.
 
-**17.5.2**  Facing arcs relative to the facing arrow direction:
+**17.5.2**  Facing arcs are the six 60° wedges of the map radiating from the vehicle's hex, one per hexside, extended to **any range** — each wedge contains the adjacent hex through that hexside and every hex beyond it in that sixth of the map:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - **Arc**
-     - **Hexes covered**
+     - **Wedges covered**
      - **AV used**
    * - FRONT
-     - 1 hex directly ahead (arrow direction)
+     - The wedge through the faced hexside (arrow direction)
      - F value
    * - SIDE
-     - 2 hexes to each side (4 hexes total)
+     - The two wedges adjacent to FRONT and the two adjacent to REAR (four wedges)
      - S value
    * - REAR
-     - 1 hex directly behind (opposite arrow)
+     - The wedge through the opposite hexside
      - R value
+
+
+**17.5.2a**  The attacker's arc is the wedge containing the attacker's hex. A hex lying exactly on the spine between two wedges counts as the wedge **less favourable to the target** (the attacker's choice of the two AVs' better side): a spine between FRONT and SIDE resolves as SIDE, between SIDE and REAR as REAR. At adjacent range this reduces exactly to the old adjacent-hex table — one hex ahead is FRONT, one behind is REAR, the four others SIDE.
+
+*NOTE: a 60° front means oblique fire at any range strikes SIDE armour — positioning and facing matter at 1,000 yards as much as at 40. The historical-matchup table (Rule 18.12) states its engagements as head-on (attacker in the FRONT wedge); an attacker manoeuvred onto a flank uses the Side AVs, which is the point.*
 
 
 **17.5.3**  When a vehicle moves, its facing changes to match the direction of movement unless the player explicitly declares a pivot.
@@ -233,7 +268,7 @@ Casemate vehicles (TRAV 0) never receive a TRAVERSED marker; they have no separa
      - Road only effectively — see terrain table
 
 
-**17.6.2**  Vehicle terrain movement costs:
+**17.6.2**  Vehicle terrain movement costs (see Rule 17.6.2a for bog checks):
 
 .. list-table::
    :header-rows: 1
@@ -268,7 +303,7 @@ Casemate vehicles (TRAV 0) never receive a TRAVERSED marker; they have no separa
      - 3
      - 3
      - Impassable
-     - Vehicles bog or cannot enter
+     - Bog check for tracked vehicles — Rule 17.6.2a
    * - Hedgerow
      - 2
      - 3
@@ -311,6 +346,10 @@ Casemate vehicles (TRAV 0) never receive a TRAVERSED marker; they have no separa
      - 
 
 
+**17.6.2a**  Bog check: when a tracked vehicle enters a dense woods hex, roll 1d6 after paying the movement cost: on 1–2 the vehicle bogs — place a BOGGED marker; it cannot move (M0) but fights normally. To free a bogged vehicle, spend a full activation working it loose and roll 1d6: on 4+ remove the BOGGED marker (+1 to the roll if a friendly vehicle is adjacent to tow). A vehicle still bogged at scenario end is treated as abandoned in place (Rule 19.3) if enemy units control the hex area, else recovered.
+
+**17.6.2b**  Reverse movement: a vehicle may back directly into the hex behind it (its rear-wedge adjacent hex) without changing facing, at **double** the terrain's MP cost per hex. This is how a casemate tank destroyer disengages without exposing its side or rear armour.
+
 **17.6.3**  Vehicle LOS: vehicles are larger than infantry. Any unit with LOS to a vehicle's hex automatically has LOS to the vehicle through up to 2 hexes of light woods or 1 hex of dense woods. Normal LOS rules apply beyond these limits.
 
 17.7  Hit Location
@@ -319,16 +358,6 @@ Casemate vehicles (TRAV 0) never receive a TRAVERSED marker; they have no separa
 
 **17.7.1**  Vehicles with a Hit Location Table printed (Tiger I Ausf E and Sherman M4A1 (75mm), this edition — see Rule 18.6a) resolve MOB kill vs. GUN kill by roll rather than free choice, for Front-arc hits only — this edition's tables cover only that arc. Side- and Rear-arc hits on these vehicles, and all hits on vehicles without a printed Hit Location Table, continue to use the owning player's judgement call (Rule 17.1.1) until a table covering that arc is built.
 
-**17.7.2**  The table gives a Neither Threshold and a Mobility Threshold for each range band and crew quality, already resolved for the specific attacking gun class used to build it. No calculation is required at the table — read the row for the actual range and the firing vehicle's own Crew Quality (Rule 18.1a.2).
+**17.7.2**  The table gives one **Neither Threshold** and one **Mobility Threshold** per profile (Hull, Turret), printed on the player aid card — a single pair of numbers, valid at every range and for every attacker. The split is conditional on the shot having already hit the profile (the Gunnery Roll settled that), and where a confirmed hit lands on a plate is governed by the plate's own geometry, not by how hard the shot was to make — so range, attacker crew quality, and attacker identity all drop out. An infantry AT penetration (Panzerfaust, Rule 18.9) rolls against the same two thresholds.
 
-*Example format (values illustrative, drawn from this session's actual computed output for Tiger I's Hull profile, Regular crew — see* `hit_location_output.csv` *for the full table):*
-
-.. list-table::
-   :header-rows: 1
-
-   * - Range
-     - Result
-   * - 100–750m
-     - Roll below Neither Threshold: Neither (Casualty downgrades to Pinned). Roll at or above Mobility Threshold: MOB kill. Between the two: GUN kill.
-   * - 1000m+
-     - Same procedure, using that range band's own printed thresholds — dispersion widens with range, so the Neither band grows.
+*Read: roll below the Neither Threshold — Neither (Casualty downgrades to Pinned, Rule 18.6a.2). Roll at or above the Mobility Threshold — MOB kill. Between the two — GUN kill. A profile with no printed Mobility Threshold (e.g. a turret with no mobility-critical systems) can never produce a MOB kill. See* ``hit_location_output.csv`` *for the computed values.*
