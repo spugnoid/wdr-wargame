@@ -107,7 +107,7 @@ Vehicle counters display the following fields:
 ------------------------
 
 
-**17.3.1**  Penetration values (PEN) are printed as 0°-equivalent millimetres at a small set of range bands (typically 250/500/750/1000/1500/2000m), not as a single value with falloff notation. Read the row for the actual range to target, using the next lower printed band if the exact range falls between two listed bands.
+**17.3.1**  Penetration values (PEN) are printed as 0°-equivalent millimetres at a small set of range bands (typically 0/250/500/750/1000/1500/2000m), not as a single value with falloff notation. Read the row for the actual range to target, using the next lower printed band if the exact range falls between two listed bands — a shot at less than 250m reads the 0m (point-blank) row.
 
 **17.3.2**  A gun prints one PEN line per ammunition nature it historically carried — Capped, Uncapped AP, or Tungsten (HVAP/APCR/APDS) — up to two or three lines. The firing player freely chooses which loaded nature to fire with each shot, tracked via the existing AMO/secret-bonus ammunition plumbing for any premium (Tungsten) rounds.
 
