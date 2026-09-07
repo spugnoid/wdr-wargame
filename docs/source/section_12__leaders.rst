@@ -78,7 +78,7 @@ All leaders have M3 F1 — movement allowance 3, fire rate 1. Leaders move faste
 
 **12.3.2**  RP = round(AP / 2), minimum 1. This formula is unchanged from Section 5.3.
 
-**12.3.3**  A side with no functional leaders has AP = 1. One activation per turn — the minimum needed to prevent complete paralysis.
+**12.3.3**  A side with no functional leaders has AP = 2 while at least 3 unbroken combat units remain (the NCO floor, Rule 5.3.3a), and AP = 1 below that. Losing every leader remains crippling — half or less of a typical led pool — but a platoon does not freeze solid because its officers are down.
 
 **12.3.4**  **Functional** means: on the map, and not Eliminated, Evacuated, Captured, or Routing. Wounded (rear-face) leaders are functional at their reduced ratings. A Suppressed leader is functional in every respect. A **Pinned** leader still contributes CMD to the AP pool (the command structure exists even while its officer is face-down) but may not take Rally or Leader Actions and does not add CMD to any other unit's rolls until recovered — pinned command does not project.
 
