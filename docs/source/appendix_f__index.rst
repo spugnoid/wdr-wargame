@@ -507,7 +507,7 @@ resolution sequence  ..........  8.1
 
 grouping by ⬡h interval  ..........  8.3.1
 
-mixed-interval combining  ..........  8.3.4a
+mixed-interval combining  ..........  8.3.1 (no restriction)
 
 summing rFP and f  ..........  8.3.2
 
@@ -1091,7 +1091,7 @@ weapon counters exempt  ..........  3.5.3
 
 sum rFP and f, keep h  ..........  8.3.2
 
-valid within same ⬡h, or mixed ⬡h within the smallest interval  ..........  8.3.4, 8.3.4a
+valid for any mix of ⬡h intervals  ..........  8.3.1, 8.3.2
 
 **Support weapon band**  ..........  1.4, 3.4
 
