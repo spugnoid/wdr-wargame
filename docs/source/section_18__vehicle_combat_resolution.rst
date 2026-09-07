@@ -205,6 +205,10 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
      - Catastrophic kill — vehicle Eliminated
 
 
+**18.6.1a**  A natural 6 on the damage roll is always a Catastrophic kill, regardless of modifiers. A round inside the fighting compartment can find ammunition or fuel no matter how experienced the crew — negative modifiers shift the odds, they do not confer immunity.
+
+*NOTE: without this rule, the veteran-crew modifier (-1) made Elimination arithmetically impossible for any gun under 88mm firing non-HEAT ammunition at a veteran-crewed vehicle (maximum modified roll 5) — a Sherman 76, T-34/85, or SU-85 could never destroy a German vehicle outright, while historically 75mm-class penetrations brewed up tanks routinely. The natural-6 floor gives every full penetration a minimum 1-in-6 chance of a kill.*
+
 **18.6.2**  Full penetration modifiers applied to the damage roll:
 
 .. list-table::
