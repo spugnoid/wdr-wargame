@@ -286,7 +286,7 @@ Every scenario sheet must include the following parameters. Players read these b
      - Both sides may place any unit as FIXED. High hidden unit density — spotting and information are primary tactical challenges.
 
 
-**22.8.5**  Limit FIXED dummy markers to a number equal to actual FIXED units — one dummy per real FIXED unit. More dummies than real units becomes implausible and tedious.
+**22.8.5**  FIXED units have no markers at all until they act (Rule 14.7.1), so there is no such thing as a FIXED dummy marker. This guideline instead limits **recorded decoy positions**: a scenario may let the defender record up to one decoy position per real FIXED unit on the record sheet — a decoy behaves like a FIXED unit's recorded hex for Rule 14.7.7 (an enemy entering it halts and the "position" is revealed as empty) but can never fire or transition. More decoys than real units becomes implausible and tedious.
 
 22.9  Setup Zone Guidelines
 ---------------------------

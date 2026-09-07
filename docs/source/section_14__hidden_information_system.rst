@@ -133,6 +133,8 @@ With Deepest Regret... uses a physical hidden information system to model the fo
 
 **14.7.6**  The surprise of the first FIXED fire applies a +2 rFP bonus to that fire action, representing the target's unpreparedness. This bonus applies only to the first fire from the FIXED position.
 
+**14.7.7**  A FIXED unit cannot be spotted — it has no marker on the map and nothing for a spot roll to target. It is revealed only by its own fire or movement (Rules 14.7.2–14.7.5), or when an enemy unit attempts to enter its recorded hex: the FIXED unit is revealed immediately as VISIBLE in its hex, and the entering unit halts in the hex it currently occupies with its remaining MP lost — it has walked into a prepared position. The revealed unit's +2 surprise bonus (Rule 14.7.6) still applies to its first fire.
+
 14.8  Contact Markers
 ---------------------
 
@@ -171,7 +173,7 @@ With Deepest Regret... uses a physical hidden information system to model the fo
 --------------
 
 
-**14.9.1**  Spotting is the process of identifying a hidden or fixed unit. A successful spot roll reveals the unit — its blind marker is removed and its counter is placed on the map.
+**14.9.1**  Spotting is the process of identifying a hidden unit's marker. A successful spot roll reveals the unit — its blind marker is removed and its counter is placed on the map (or, for a dummy, announced and removed, Rule 14.4.3). FIXED units cannot be spotted (Rule 14.7.7).
 
 **14.9.2**  Automatic spotting — no roll required:
 
@@ -202,44 +204,45 @@ With Deepest Regret... uses a physical hidden information system to model the fo
      - Blast briefly reveals nearby units
 
 
-**14.9.6**  Spot roll procedure: roll 1d6, add OBS modifiers, subtract CON modifiers. If result is 0 or greater, the target is spotted.
+**14.9.6**  Spot roll procedure: roll 1d6, add OBS modifiers, subtract CON modifiers. If the result is **4 or greater**, the target is spotted.
 
-**14.9.7**  Concealment modifiers (CON) — defender:
+*NOTE: earlier drafts spotted on 0+, under which a Spot Action (+3 OBS) spotted a stationary unit in a building automatically and swept the board of markers in one action — the hidden system's uncertainty never survived contact with a single 1 AP action. At 4+, that same attempt succeeds 33% of the time per action: concealment decays under observation instead of evaporating.*
+
+**14.9.7**  Concealment modifiers (CON). Every modifier is computable from the **map alone** — the marker's hex, its observed movement history this turn, and scenario conditions — so a dummy's CON is always exactly the CON a real unit under that marker would have, and announcing it reveals nothing (a spot roll against a marker whose owner must consult hidden unit state would itself leak whether the marker is real):
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
-   * - **Condition**
+   * - **Condition (all map-observable)**
      - **CON Modifier**
-   * - Open ground
+   * - Marker's hex: open ground
      - 0
-   * - Crops / tall grass
+   * - Marker's hex: crops / tall grass
      - +1
-   * - Light woods
+   * - Marker's hex: light woods
      - +2
-   * - Dense woods
+   * - Marker's hex: dense woods
      - +3
-   * - Building
+   * - Marker's hex: building
      - +2
-   * - Entrenchment
+   * - Marker's hex: entrenchment
      - +3
-   * - Stationary, not fired this turn
+   * - Marker has not moved this turn
      - +2
-   * - Careful movement (normal move)
+   * - Marker moved normally this turn
      - +0
-   * - Careless movement
+   * - Marker moved carelessly this turn
      - -2
-   * - Moving through dense woods or rubble
+   * - Marker moved through dense woods or rubble this turn
      - -1 (unavoidable noise)
-   * - Fired this turn
-     - -3
-   * - Suppressed or pinned
-     - -1
    * - Night scenario
      - +3
    * - Smoke per intervening hex
      - +2
+
+
+*NOTE: "fired this turn" and "suppressed/pinned" no longer appear here — a unit that fires is revealed automatically (Rule 14.9.3) and needs no spot roll, and a hidden unit taking fire results is revealed by the blast rules (Rule 16.7.7); neither state can belong to a marker still on the map.*
 
 
 **14.9.8**  Observation modifiers (OBS) — spotter:
@@ -278,7 +281,7 @@ With Deepest Regret... uses a physical hidden information system to model the fo
 
 **14.10.3**  The Spot Action represents deliberate, methodical observation — scanning terrain, watching for movement, listening. Leaders and scouts are particularly effective when taking this action.
 
-**14.10.4**  A unit taking a Spot Action may attempt spot rolls against all hidden markers within its LOS range at no RP cost. Each marker is rolled against separately.
+**14.10.4**  A unit taking a Spot Action chooses **one** marker within its LOS and attempts a spot roll against it at no RP cost. Additional markers this turn require RP (Rule 14.9.5) — the +3 Spot Action bonus applies to those rolls too, but observation is a searchlight, not a floodlight: sweeping a whole treeline takes turns, not one action.
 
 14.11  Sound Spotting
 ---------------------
