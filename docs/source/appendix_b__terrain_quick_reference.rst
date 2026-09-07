@@ -17,6 +17,10 @@ Appendix B — Terrain Quick Reference
      - +1
      - -1
      - 1
+   * - Road
+     - +0
+     - 0
+     - 1 (enables road bonus, Rule 7.2.1)
    * - Wall / fence (hexside — Rule 4.1.3)
      - +2
      - 0
@@ -65,3 +69,19 @@ Appendix B — Terrain Quick Reference
      - N/A
      - -3
      - 1
+   * - Shallow stream
+     - +0
+     - 0
+     - 2
+   * - Crest hexside crossed at firer's level (grazing, Rule 4.4a.5)
+     - N/A
+     - -1 per crest hexside
+     - —
+   * - Elevation gain (per level uphill)
+     - N/A
+     - N/A
+     - +1 to hex entered
+   * - River / cliff
+     - N/A
+     - N/A
+     - Impassable except at crossings

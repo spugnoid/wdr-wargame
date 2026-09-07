@@ -153,11 +153,25 @@ The full procedure for any fire combat action:
 -------------------
 
 
-**8.7.1**  When the effective rFP after all modifiers (falloff, intervening terrain, other penalties) is 3 or less, the maximum possible result is Pinned regardless of the dice roll margin.
+**8.7.1**  When the effective rFP after all modifiers (falloff, intervening terrain, other penalties) is low, the maximum possible result is capped regardless of the dice roll margin:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - **Effective rFP**
+     - **Maximum result**
+   * - 1–2
+     - Suppressed
+   * - 3
+     - Pinned
+   * - 4+
+     - Uncapped
+
 
 **8.7.2**  This represents the physical reality that long-range harassing fire suppresses and occasionally pins but rarely causes casualties.
 
-**8.7.3**  The long range cap applies after all modifiers have been calculated. A unit with effective rFP 4 or higher is not subject to the cap.
+**8.7.3**  The long range cap applies after all modifiers have been calculated. The two-band grading removes the old cliff at rFP 3/4, where a single point of intervening penalty toggled a firer between "can never inflict a casualty" and the full table including Broken.
 
 **8.7.4**  Sniper exemption:  Sniper fire lines (weapon class icon ╌○) are exempt from the long range cap when deliberate targeting is declared (see Rule 20.2). Full result thresholds apply regardless of effective rFP. A sniper firing without declaring a deliberate target is treated as normal area fire and the cap applies normally.
 
@@ -177,7 +191,7 @@ The full procedure for any fire combat action:
 
 **8.8.4**  An additional attack whose own result is No Effect or Suppressed adds no step-up.
 
-**8.8.5**  The combined result may never exceed the most severe result any single contributing attack was itself permitted to inflict. In particular, if every contributing attack was subject to the Long Range Cap (Rule 8.7), the combined result remains capped at Pinned — step-ups cannot manufacture casualties that no individual attack could cause.
+**8.8.5**  The combined result may never exceed the most severe result any single contributing attack was itself permitted to inflict. In particular, if every contributing attack was capped (Rule 8.7), the combined result remains capped at the **highest** cap among them — step-ups cannot manufacture casualties that no individual attack could cause.
 
     *See also: Rule 8.7 (Long Range Cap).*
 

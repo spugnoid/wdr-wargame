@@ -529,3 +529,8 @@ E.88  The Worked Scenario Example Now Follows Its Own Section
 -------------------------------------------------------------
 
 *Design note: 22.11 is the template scenario designers will copy, and it violated its own section four ways: the platoon leader was counted as a combat unit (against 22.2.2), Force Morale used a flat 0.45 instead of 22.3.3's weighted average (2×0.5+2×0.4 floors to 1, not 2), the setup zones sat 2 hexes apart against 22.9.3's 4-hex infantry minimum, and the printed 1.7:1 quality-adjusted ratio was unreproducible from 22.2.3's multipliers (the real figure is 5.0:3.5 ≈ 1.4:1). All four are recomputed in place with the arithmetic shown, and the honest consequence is kept rather than hidden: at 3–4 units both Force Morale values floor to the minimum, so the first CI triggers a collapse check — small engagements are brittle by construction, noted as such for designers. (22.3.3's factor list spanning only 0.3–0.6 while 15.6 assigns national factors outside that band was already noted in E.70.)*
+
+E.89  A Graduated Long Range Cap
+--------------------------------
+
+*Design note: the flat cap (rFP ≤ 3 → maximum Pinned) created a cliff its own Rule 8.7.3 drew attention to: one point of intervening penalty — a crops hex — toggled a firer between "can never inflict a casualty" and the full result table including Broken. The cap is now two bands (rFP 1–2 → maximum Suppressed; 3 → maximum Pinned; 4+ uncapped), which grades the transition and slightly strengthens the cap's own story: fire degraded to a trickle can pin nobody, only keep heads down. Rule 8.8.5's combined-result ceiling follows the highest cap among contributing attacks. The sniper deliberate-targeting exemption (8.7.4) is unchanged.*

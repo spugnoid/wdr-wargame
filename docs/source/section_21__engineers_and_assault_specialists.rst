@@ -137,7 +137,7 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
    * - Building — heavy
      - Reduced to building light (+5 cover → +4 cover)
    * - Building — light
-     - Reduced to rubble (+4 cover)
+     - Reduced to rubble (+4 cover — occupant cover unchanged, but movement cost worsens to 2 and the hex no longer blocks LOS as a solid building, Rule 4.4.2)
    * - Rubble
      - Reduced to open ground (+0 cover) — cleared
    * - Fortification / bunker
