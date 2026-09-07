@@ -71,15 +71,45 @@ Vehicle counters display the following fields:
 
 **17.2.2**  Every vehicle counter with a separate turret (TRAV 1 or higher) prints **two independent profiles** — Hull and Turret — each with its own Front/Side/Rear AV. Which profile a shot resolves against is determined by the Gunnery Roll (Rule 18.1a), not chosen by the attacker. Casemate vehicles (TRAV 0) print Hull values only (Rule 17.1.2).
 
-**17.2.3**  Each arc of each profile prints **two AV values**, not one: AV-vs-Capped (for APC/APCBC and uncapped AP rounds) and AV-vs-Tungsten (for HVAP/APCR/APDS rounds). Uncapped and capped kinetic rounds have measurably different slope sensitivity, and tungsten rounds lose relative effectiveness faster than capped rounds as impact angle increases — a single AV number cannot represent both accurately.
+**17.2.3**  Each arc of each profile prints **three AV values**: AV-vs-Capped (for APC/APCBC rounds), AV-vs-Tungsten (for HVAP/APCR/APDS rounds), and AV-vs-HEAT (for all shaped-charge attacks — Rule 17.2.4). Uncapped and capped kinetic rounds have measurably different slope sensitivity, tungsten rounds lose relative effectiveness faster as impact angle increases, and HEAT ignores velocity entirely — one number cannot represent them all.
 
-**17.2.4**  HEAT does not get its own printed AV. Instead, apply the HEAT Reference Table (Rule 17.2.7) to the vehicle's raw armour thickness (printed in the vehicle's technical data, not on the tactical counter) — this is the one case where a small amount of arithmetic replaces a printed value, because HEAT's effective resistance depends on raw thickness and angle only, not on the attacking projectile's diameter, and so cannot be pre-resolved per attacker the way kinetic AV can.
+**17.2.3a**  Uncapped AP and Soviet APBC attackers also use the AV-vs-Capped value — **except** against face-hardened plates (marked FH on the counter), where the printed Capped figure bakes in a correction that applies to capped noses only. Against the roster's face-hardened plates, an APBC or uncapped-AP attacker uses these values instead:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - **Face-hardened plate**
+     - **AV vs Capped (printed)**
+     - **AV vs APBC**
+     - **AV vs Uncapped AP**
+   * - Panzer IV Ausf H — Hull Front
+     - 64.9
+     - 83.2
+     - 101.2
+   * - Panzer IV Ausf H — Hull Side
+     - 23.8
+     - 30.4
+     - 35.7
+   * - Panzer III Ausf M — Hull Front
+     - 51.4
+     - 59.9
+     - 69.6
+   * - StuG III Ausf G — Hull Side
+     - 23.8
+     - 30.4
+     - 35.7
+
+
+*NOTE: face-hardening is a real penalty for capped rounds (the cap defeats the hardened face), no correction at all for APBC, and a real bonus for uncapped AP (the hardened face shatters the unprotected nose) — reusing the Capped column for those attackers understated these four plates by 30–70%. Values above use the same 75mm reference diameter as the printed columns; a validation script needing exact attacker-diameter figures calls* ``resolve_av(diameter, hardness_table, family=...)`` *directly (see Rule 18.12 note (e)).*
+
+**17.2.4**  HEAT attacks compare their flat PEN directly against the printed **AV-vs-HEAT** value for the struck profile and arc — no arithmetic at the table. Because HEAT's effective resistance depends only on the plate (thickness and angle), never on the attacker, one printed number per arc covers every HEAT weapon in the game — it is the one AV that is genuinely attacker-independent.
 
 **17.2.5**  AV, PEN, and the Gunnery Table are all computed by the project's calculation tool (`counters/armor_calc/`) from sourced ballistics data, not derived by formula at the table. See that tool's own documentation for the full physics — nothing beyond the printed numbers is needed to play.
 
 **17.2.6**  Slope, material quality, hardness, and flaw corrections are all already resolved into the printed AV (Rule 17.2.1) — there is no separate step for players to apply any of them.
 
-**17.2.7**  HEAT Reference Table — multiplier to apply to a vehicle's raw armour thickness at the actual impact angle (interpolate between listed angles):
+**17.2.7**  HEAT Reference Table — designer reference only (the multipliers from which the printed AV-vs-HEAT values are computed; never consulted during play):
 
 .. list-table::
    :header-rows: 1

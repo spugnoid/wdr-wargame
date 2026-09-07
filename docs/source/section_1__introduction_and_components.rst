@@ -203,7 +203,7 @@ The following terms are used throughout this document. Each term is defined here
 
 **SMOKE marker —**  A marker placed when smoke rounds land. Numbered 1–3 indicating dissipation step. Each step reduces concealment and intervening fire penalty.
 
-**AV —**  Armour Value. Effective armour protection in millimetres, already resolved at design time (slope, cast/rolled deficiency, high-hardness, flaw, and face-hardening corrections all folded in). Every vehicle prints separate AV-vs-Capped and AV-vs-Tungsten values for each of its Hull and Turret profiles — see Rule 17.2. HEAT does not get its own printed AV; it uses the universal HEAT reference table (Rule 17.2.7) applied to the vehicle's raw armour thickness instead.
+**AV —**  Armour Value. Effective armour protection in millimetres, already resolved at design time (slope, cast/rolled deficiency, high-hardness, flaw, and face-hardening corrections all folded in). Every vehicle prints separate AV-vs-Capped, AV-vs-Tungsten, and AV-vs-HEAT values for each of its Hull and Turret profiles — see Rule 17.2.
 
 **Hull / Turret profile —**  The two independently-printed armour profiles on a split-AV vehicle counter. Which profile a shot resolves against is determined by the Gunnery Roll (Rule 18.1a), not by the attacker's choice.
 
