@@ -68,20 +68,7 @@ Each scenario has a Recovery Window value printed in its scenario parameters. Th
 -------------------------------------
 
 
-For each counter in the Casualty Track, roll 1d6 and add a Morale modifier based on the unit's Morale value:
-
-.. list-table::
-   :header-rows: 1
-   :widths: auto
-
-   * - **Unit Morale**
-     - **Roll Modifier**
-   * - 1–3
-     - -1
-   * - 4–5
-     - +0
-   * - 6+
-     - +1
+For each counter in the Casualty Track, roll 1d6 and add the unit's Morale modifier (Morale − 5, Rule 15.2.1a).
 
 
 BROKEN zone recovery (Days window or better):

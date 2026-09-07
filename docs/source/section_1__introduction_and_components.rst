@@ -175,7 +175,7 @@ The following terms are used throughout this document. Each term is defined here
 
 **Free hidden impulse —**  A movement phase granted immediately when a unit goes hidden, outside the normal AP economy, used to reposition the blind marker and spawn dummies.
 
-**Morale check —**  A roll made when a unit experiences a stress trigger. Roll 1d6 + Morale vs break threshold. Failure produces a Break or Rout result.
+**Morale check —**  A roll made when a unit experiences a stress trigger. Roll 1d6 + Morale modifier (Morale − 5, Rule 15.2.1a) vs break threshold. Failure produces a Break or Rout result.
 
 **Break —**  A psychological CI result. Unit removed to BROKEN zone of Casualty Track without necessarily taking physical casualties. Marked with white CI cause marker.
 

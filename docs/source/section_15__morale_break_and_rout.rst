@@ -17,23 +17,22 @@ Most WWII engagements ended not with one side physically eliminated but with one
      - **Break Threshold**
      - **Notes**
    * - Receives Casualty + Suppressed result
-     - 7
+     - 4
      - Step loss under sustained fire
    * - Pinned for a second consecutive turn
-     - 6
+     - 3
      - Prolonged suppression without relief
    * - Adjacent friendly unit becomes CI or begins Routing
-     - 5
+     - 2
      - Witnessing comrades break
    * - Leader in same hex is eliminated
-     - 6
+     - 3
      - Loss of command and cohesion
    * - Any of the above while already Suppressed
-     - Threshold -2
-     - Compounding stress
+     - Threshold +2
+     - Compounding stress makes the check harder
 
-
-**15.1.2**  Multiple triggers in the same impulse require only one morale check, at the lowest (hardest) threshold among all triggers.
+**15.1.2**  Multiple triggers in the same impulse require only one morale check, at the highest (hardest) threshold among all triggers.
 
 **15.1.3**  A unit in Normal status that has not fired or moved this turn adds +1 to its morale check roll — steadiness under fire.
 
@@ -41,7 +40,32 @@ Most WWII engagements ended not with one side physically eliminated but with one
 ----------------------------
 
 
-**15.2.1**  Roll 1d6 and add the unit's Morale value. Compare to the break threshold.
+**15.2.1**  Roll 1d6 and add the unit's **Morale modifier**. Compare to the break threshold.
+
+**15.2.1a**  The Morale modifier is the unit's Morale value minus 5. It applies to every 1d6 quality check in these rules — morale checks, recovery rolls, rally rolls, and engineer skill rolls — wherever a rule says "1d6 + Morale modifier".
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - **Quality**
+     - **Morale**
+     - **Morale Modifier**
+   * - Militia
+     - 3
+     - -2
+   * - Green
+     - 4
+     - -1
+   * - Regular
+     - 5
+     - +0
+   * - Veteran / Elite
+     - 6
+     - +1
+
+
+    *NOTE: earlier drafts rolled 1d6 + the full Morale value. With Morale spanning only 3–6 and thresholds of 5–7, regular and better troops could never fail most checks — the scale was inert. The modifier form keeps the same quality spread while placing thresholds in honest 1d6 space, where a threshold of 4 means a regular unit holds half the time.*
 
 **15.2.2**  If the roll meets or exceeds the threshold: the unit holds. No effect. The check is resolved and discarded.
 
@@ -81,13 +105,13 @@ Most WWII engagements ended not with one side physically eliminated but with one
 
 **15.4.1**  When a unit Breaks or begins Routing, every friendly unit within 2 hexes that has LOS to the breaking unit's hex must immediately make a cascade morale check.
 
-**15.4.2**  Cascade morale check threshold: 5.
+**15.4.2**  Cascade morale check threshold: 2.
 
-**15.4.3**  Roll 1d6 + Morale vs 5. Apply the suppressed modifier if applicable (-2 to threshold = threshold 3 while suppressed). A leader within command radius adds CMD rating to the roll.
+**15.4.3**  Roll 1d6 + Morale modifier vs 2. Apply the suppressed modifier if applicable (+2 to threshold = threshold 4 while suppressed). A leader within command radius adds CMD rating to the roll.
 
-**15.4.4**  A veteran unit with Morale 6 rolling minimum (1) scores 7 vs threshold 5 — automatic cascade success. Veteran units are essentially immune to cascade from a single break.
+**15.4.4**  A veteran unit (modifier +1) rolling minimum (1) scores 2 vs threshold 2 — automatic cascade success. Veteran units are immune to cascade from a single break unless suppressed (threshold 4: they then hold on 3+, 67%).
 
-**15.4.5**  A green unit with Morale 3 needs a roll of 2 or higher — usually holds but not certain.
+**15.4.5**  A green unit (modifier -1) needs a roll of 3 or higher (67%) — usually holds but not certain. A militia unit (modifier -2) holds on 4+ (50%).
 
 **15.4.6**  The cascade is designed to be survivable in normal circumstances. Its danger is in compounding — multiple simultaneous breaks produce multiple simultaneous cascade checks, and failure probabilities multiply.
 

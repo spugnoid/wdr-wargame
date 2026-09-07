@@ -77,7 +77,7 @@ Section 9 — Close Assault
 
 **9.6.1**  After any melee turn in which a unit takes a Casualty result or worse, the affected unit must pass a morale check or attempt to withdraw.
 
-**9.6.2**  Morale check: Roll 1d6 + unit Morale vs. the break threshold for the result suffered.
+**9.6.2**  Morale check: Roll 1d6 + Morale modifier (Rule 15.2.1a) vs. the break threshold for the result suffered.
 
 .. list-table::
    :header-rows: 1
@@ -86,9 +86,9 @@ Section 9 — Close Assault
    * - **Result Suffered**
      - **Break Threshold**
    * - Casualty
-     - 8
+     - 3
    * - Casualty + Suppressed
-     - 6
+     - 4
    * - Broken (last unit of side eliminated)
      - N/A — side eliminated
 

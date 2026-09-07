@@ -31,7 +31,7 @@ Each game turn proceeds through three phases in the following order:
 
 **5.2.3**  Each unit with a SUPPRESSED or PINNED status marker attempts a recovery roll.
 
-**5.2.4**  Recovery roll procedure: roll 1d6 and add the unit's Morale value. Compare to the recovery threshold for the unit's current status.
+**5.2.4**  Recovery roll procedure: roll 1d6 and add the unit's Morale modifier (Rule 15.2.1a). Compare to the recovery threshold for the unit's current status.
 
 .. list-table::
    :header-rows: 1
@@ -41,17 +41,17 @@ Each game turn proceeds through three phases in the following order:
      - **Recovery Threshold**
      - **Notes**
    * - Suppressed
-     - 8
-     - Roll + Morale ≥ 8 to recover
+     - 3
+     - Roll + Morale modifier ≥ 3 to recover
    * - Pinned
-     - 10
-     - Roll + Morale ≥ 10 to recover
+     - 5
+     - Roll + Morale modifier ≥ 5 to recover
    * - Casualty + Suppressed
-     - 11
-     - Roll + Morale ≥ 11 to recover suppression (step loss remains)
+     - 6
+     - Roll + Morale modifier ≥ 6 to recover suppression (step loss remains)
 
 
-**5.2.5**  Recovery is never automatic. A regular unit (Morale 5) recovers from Suppressed on a roll of 3+ (67%) and from Pinned on 5+ (33%). An elite unit (Morale 6) recovers on 2+ (83%) and 4+ (50%) respectively. A leader's CMD bonus (Rule 5.2.6) can make recovery certain — this is deliberate: morale quality and leadership, not time alone, determine how quickly a force shakes off fire effects.
+**5.2.5**  Recovery is never automatic. A regular unit (modifier +0) recovers from Suppressed on a roll of 3+ (67%) and from Pinned on 5+ (33%). An elite unit (modifier +1) recovers on 2+ (83%) and 4+ (50%) respectively. A leader's CMD bonus (Rule 5.2.6) can make recovery certain — this is deliberate: morale quality and leadership, not time alone, determine how quickly a force shakes off fire effects.
 
 **5.2.6**  A leader adjacent to a recovering unit adds their CMD rating to the recovery roll during the Recovery Phase. For mid-turn rally using the Rally action, use the RAL threshold instead (see Rule 12.6).
 
