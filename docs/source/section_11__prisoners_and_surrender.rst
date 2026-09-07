@@ -42,7 +42,11 @@ Section 11 — Prisoners and Surrender
 
 **11.3.4**  A guarding unit fires at -2 rFP on all fire actions.
 
-**11.3.5**  Guard scaling: 1–2 POW markers require 1 guard unit. 3–4 POW markers require 2 guard units. 5 or more POW markers require a dedicated escort element — at least 2 guard units, neither of which may take any offensive action.
+**11.3.5**  Guard scaling: all POW markers in a single hex form one **prisoner group**. A group of 1–2 POW markers requires 1 guard unit; 3–4 markers require 2 guard units; 5 or more require a dedicated escort element — at least 2 guard units, neither of which may take any offensive action. A guard unit covers a group if it is in the group's hex or adjacent to it; a guard unit counts toward only one group at a time (owning player assigns).
+
+**11.3.6**  Assume Guard action (1 AP): any friendly combat unit in or adjacent to a prisoner group's hex may take a GUARD marker. This is how additional guards are added to meet Rule 11.3.5's scaling, and how guard duty is transferred — the relieved unit may remove its own GUARD marker in the same impulse at no cost once the replacement's marker is placed.
+
+**11.3.7**  Releasing prisoners: a guarding unit may remove its GUARD marker at the start of any friendly impulse at no cost, abandoning its group. An under-guarded or unguarded group makes escape rolls per Rule 11.4 — walking away from prisoners has consequences, but no unit is ever locked into guard duty by the rules.
 
 11.4  Escape Attempts
 ---------------------
@@ -50,7 +54,7 @@ Section 11 — Prisoners and Surrender
 
 **11.4.1**  Each turn that prisoners are held without the required number of guard units, an escape attempt occurs.
 
-**11.4.2**  Roll 1d6 at the start of the Recovery Phase for each unguarded prisoner group.
+**11.4.2**  Roll 1d6 at the start of the Recovery Phase for each prisoner group (Rule 11.3.5) that lacks its required guard count.
 
 .. list-table::
    :header-rows: 1
@@ -59,9 +63,9 @@ Section 11 — Prisoners and Surrender
    * - **Roll**
      - **Result**
    * - 1–2
-     - Prisoners escape — POW marker removed, no campaign benefit to captor
+     - Prisoners escape — the POW marker is removed and each captured counter it represents returns to the **owning** player's Casualty Track, BROKEN zone, with a white CI cause marker (they got away as scattered men, not a fighting unit) — eligible for between-scenario recovery (Rule 13.3). The captor loses all campaign value.
    * - 3–4
-     - Prisoners remain but are unruly — adjacent friendly units suffer -1 Morale this turn
+     - Prisoners remain but are unruly — the captor's units in or adjacent to the group's hex suffer -1 to all morale checks and recovery rolls until the end of the current turn
    * - 5–6
      - Prisoners remain quietly
 
