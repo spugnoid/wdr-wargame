@@ -82,9 +82,9 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
    * - Light woods
      - 2
      - Full activation for M2 unit
-   * - Hedgerow (crossing)
-     - 2
-     - Full activation for M2 unit
+   * - Hedgerow (hexside crossing)
+     - +1
+     - Added to cost of hex being entered (open hex through hedgerow = 2 MP total)
    * - Rubble
      - 2
      - Unstable footing
@@ -94,7 +94,7 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
    * - Dense woods
      - 3
      - Exceeds M2 — entire activation consumed
-   * - Wall / fence (crossing)
+   * - Wall / fence (hexside crossing)
      - +1
      - Added to cost of hex being entered
    * - Elevation gain (per level uphill)

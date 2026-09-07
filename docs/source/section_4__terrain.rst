@@ -9,6 +9,8 @@ Section 4 — Terrain
 
 **4.1.2**  A hex may contain only one terrain type for game purposes. When a hex contains mixed terrain, the dominant terrain type is used.
 
+**4.1.3**  Hexside terrain: walls, fences, and hedgerows are linear features printed on **hexsides**, not hexes. A hexside feature provides its cover modifier only against fire whose line of fire crosses that hexside into the unit's hex — a squad behind a wall is protected from the field beyond it, not from fire coming through its own gate side. Hexside cover does not stack with the hex's own terrain cover: use the better of the two. Crossing a hexside feature costs movement per the Rule 7.2 table; its intervening-fire penalty applies once per such hexside the line of fire crosses (Rule 4.3).
+
 4.2  Cover Modifiers
 --------------------
 
@@ -28,12 +30,12 @@ Cover modifiers are added to the defender's Defence value when resolving fire co
    * - Crops / tall grass
      - +1
      - Concealment, minimal protection
-   * - Wall / fence
+   * - Wall / fence (hexside — Rule 4.1.3)
      - +2
-     - Low cover, protects prone troops
-   * - Hedgerow / bocage edge
+     - Only vs fire crossing that hexside; not cumulative with hex cover
+   * - Hedgerow / bocage (hexside — Rule 4.1.3)
      - +2
-     - Partial cover
+     - Only vs fire crossing that hexside; not cumulative with hex cover
    * - Light woods / orchard
      - +3
      - Scattered trees and undergrowth
@@ -84,7 +86,7 @@ Cover modifiers are added to the defender's Defence value when resolving fire co
      - 0
    * - Crops / tall grass
      - -1
-   * - Hedgerow / bocage
+   * - Hedgerow / bocage (per hexside crossed — Rule 4.1.3)
      - -1
    * - Light woods
      - -2

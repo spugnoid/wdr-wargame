@@ -17,14 +17,14 @@ Appendix B — Terrain Quick Reference
      - +1
      - -1
      - 1
-   * - Wall / fence
+   * - Wall / fence (hexside — Rule 4.1.3)
      - +2
      - 0
      - +1 to cross
-   * - Hedgerow
+   * - Hedgerow (hexside — Rule 4.1.3)
      - +2
-     - -1
-     - 2
+     - -1 per hexside
+     - +1 to cross
    * - Light woods
      - +3
      - -2
