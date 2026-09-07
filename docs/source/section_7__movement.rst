@@ -73,6 +73,9 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
    * - Ditch / sunken road
      - 1
      - Natural movement axis
+   * - Road
+     - 1
+     - And enables the road bonus (Rule 7.2.1)
    * - Building — ground floor entry
      - 1
      - Per floor entered including ground
@@ -115,7 +118,9 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
    A squad crossing open ground into light woods. Movement cost is
    labeled per hex entered.
 
-**7.2.1**  Road movement special rule: a unit moving exclusively along road hexes for its entire activation may move 3 hexes instead of its normal M#. One hex of off-road movement cancels the road bonus for that entire activation.
+**7.2.1**  Road movement special rule: a unit moving exclusively along road hexes for its entire activation may move **M# + 1** hexes. One hex of off-road movement cancels the road bonus for that entire activation. The road bonus does not stack with Careless Movement (Rule 7.4.1) — declare one or the other.
+
+*NOTE: earlier drafts gave a flat 3 hexes on roads, which tripled an M1 weapon team's speed while giving an M2 squad only 50% — M#+1 scales the benefit to the mover.*
 
 **7.2.2**  Elevation interaction example: a unit with M2 moving uphill one level into open ground costs 1 (terrain) + 1 (elevation) = 2 MP — the full activation for one hex. Two levels uphill in one activation is impossible for a standard M2 unit.
 
@@ -159,7 +164,7 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
 
 **7.5.3**  If opportunity fire produces No Effect, the moving unit continues normally.
 
-**7.5.4**  If opportunity fire produces Suppressed, the moving unit loses 1 MP before continuing.
+**7.5.4**  If opportunity fire produces Suppressed, the moving unit loses 1 MP before continuing. That loss is the only effect on the current move — the Suppressed halving of M# (Rule 10.1) applies from the unit's next Move action, never retroactively to MP already allocated.
 
 **7.5.5**  If opportunity fire produces Pinned or worse, the moving unit stops immediately. Remaining MP are lost.
 

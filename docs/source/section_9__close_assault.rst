@@ -71,7 +71,7 @@ Section 9 — Close Assault
 
 **9.5.1**  If both sides survive the Entry Fire Phase, the attacker remains in the hex. Melee continues into subsequent turns automatically — no AP is required to continue a melee already in progress.
 
-**9.5.2**  At the start of each subsequent turn (during the Recovery Phase), units engaged in melee attempt recovery normally. Melee then resumes during the Action Phase.
+**9.5.2**  At the start of each subsequent turn (during the Recovery Phase), units engaged in melee attempt recovery normally. Melee Continuation then resolves **once per turn, immediately after the Command Phase and before the first impulse of the Action Phase** — locked-in fighting is settled before either commander spends AP on anything else. No AP is required (Rule 9.5.1).
 
 **9.5.3**  During Melee Continuation turns, both sides fire simultaneously at range 0 with no cover modifier. Apply the range 0 bonus (+3 rFP) to both sides.
 

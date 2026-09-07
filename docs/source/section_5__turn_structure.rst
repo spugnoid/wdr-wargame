@@ -57,6 +57,18 @@ Each game turn proceeds through three phases in the following order:
 
 **5.2.7**  Units may not attempt recovery mid-turn. Recovery occurs only during this phase unless a leader spends 1 AP to rally an adjacent unit (see Section 12).
 
+**5.2.8**  Recovery Phase internal sequence — resolve in this order (several subsystems act "during the Recovery Phase"; when order matters, this list governs):
+
+1. Remove action markers (Rule 5.2.2).
+2. Prisoner escape attempts for under-guarded groups (Rule 11.4.2).
+3. CONTACT markers age one step; COLD markers are removed (Rule 14.8.2).
+4. Suppressed/Pinned recovery rolls (Rules 5.2.3–5.2.4) and vehicle bail-out checks (Rule 19.2.1).
+5. Molotov engine-fire rolls (Rule 18.10.3).
+6. Routing units attempt rally (Rule 10.6.7).
+7. Dispersed units attempt rally (Rule 10.5.4).
+
+*Escapes precede rallies (prisoners slip away while the line is still disorganised); status recovery precedes rout and dispersed rallies so a just-recovered leader's CMD is available to them.*
+
 5.3  Command Phase
 ------------------
 

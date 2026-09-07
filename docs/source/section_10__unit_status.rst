@@ -22,7 +22,7 @@ Units may be in one of the following status levels at any time. Status is tracke
      - Full
      - Normal
    * - Suppressed
-     - Half M# (round down)
+     - Half M# (round down, minimum 1)
      - At -2 rFP
      - At -1 rFP
      - -2
