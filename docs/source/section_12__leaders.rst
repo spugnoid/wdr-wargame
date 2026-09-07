@@ -207,7 +207,7 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
 
 **12.7.3**  Multiple leaders cannot stack fire coordination bonuses on the same fire group in the same impulse. The highest single CMD bonus applies.
 
-**12.7.4**  A hidden leader cannot Direct Fire — command requires visible presence to coordinate a fire group effectively.
+**12.7.4**  A HIDDEN leader's command is limited to what silence permits: they contribute CMD to the AP pool (Rule 12.3.1 — planning happens off-map) and add CMD to rolls of units **in their own hex only**. Every other leader function — Direct Fire coordination, Rally, Inspire, Leader Actions, command radius to other hexes, and the Recovery Phase CMD bonus of Rule 5.2.6 for units outside their hex — requires the leader to be VISIBLE: shouting orders across a field reveals the shouter. A hidden leader may reveal voluntarily at the start of any friendly impulse (remove the blind marker) to use these functions.
 
 12.8  Assault Coordination
 --------------------------

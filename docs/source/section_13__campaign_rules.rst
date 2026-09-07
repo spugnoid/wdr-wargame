@@ -98,6 +98,8 @@ BROKEN zone recovery (Days window or better):
      - Returns as rear face
 
 
+**13.3.1**  Leaders in the BROKEN zone (eliminated or evacuated, Rule 12.10.2) roll on the same table: read "returns as rear face" as returning on the **wounded** face, and "returns at full strength" as returning unwounded. A wounded leader who finished the scenario on the map heals — flip to the front face — in a Days or Extended window; in a shorter window the wound carries into the next scenario.
+
 13.4  Combining Half Squads
 ---------------------------
 

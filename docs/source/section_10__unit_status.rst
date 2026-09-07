@@ -120,6 +120,8 @@ Units may be in one of the following status levels at any time. Status is tracke
 
 **10.6.3**  A routing unit must move D3 hexes directly away from the nearest visible enemy unit each time it is activated. Movement follows the most cover-heavy route available.
 
+**10.6.3a**  Rout movement is self-executing: when the owning player passes for the final time in the Action Phase (Rule 5.6.2), every friendly routing unit that was not activated this turn immediately makes its Rule 10.6.3 move at no AP cost — fleeing men do not wait for orders, and a routing counter can never simply be parked. Activating a routing unit earlier in the turn (1 AP) remains legal to control **when** in the turn it moves; the flight itself is not optional.
+
 **10.6.4**  A routing unit cannot fire, cannot react, and cannot be used for any action except movement.
 
 **10.6.5**  A routing unit that reaches the friendly map edge is removed from the map and placed in the BROKEN zone of the Casualty Track with a white CI cause marker.
