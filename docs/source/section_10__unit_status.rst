@@ -132,6 +132,8 @@ Units may be in one of the following status levels at any time. Status is tracke
 
 **10.6.9**  A unit with a ROUTING marker (Rule 10.6.2) still on the map when the scenario ends is captured (Rule 11.2a).
 
+**10.6.10**  Routing supersedes Suppressed and Pinned. When a ROUTING marker is placed, remove any SUPPRESSED or PINNED marker — the -3 Defence penalty of the Routing state (Rule 10.1) is flat and never stacks with other status penalties. A routing unit that receives a further Suppressed or Pinned result absorbs it with no additional effect (compare Rule 10.3.5); a Casualty result applies normally (step loss, or CI if already reduced). Routing units make **no** further Section 15 morale checks — a unit already fleeing cannot break twice; its remaining decision points are the rally rolls of Rules 10.6.6 and 10.6.7.
+
     *See also: Rule 11.2a (Administrative Capture), Rule 15.5.7 (Force Morale collapse is a scoring abstraction and does not itself place a ROUTING marker or trigger this rule).*
 
 10.7  Combat Ineffective

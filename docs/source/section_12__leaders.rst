@@ -80,6 +80,8 @@ All leaders have M3 F1 — movement allowance 3, fire rate 1. Leaders move faste
 
 **12.3.3**  A side with no functional leaders has AP = 1. One activation per turn — the minimum needed to prevent complete paralysis.
 
+**12.3.4**  **Functional** means: on the map, and not Eliminated, Evacuated, Captured, or Routing. Wounded (rear-face) leaders are functional at their reduced ratings. A Suppressed leader is functional in every respect. A **Pinned** leader still contributes CMD to the AP pool (the command structure exists even while its officer is face-down) but may not take Rally or Leader Actions and does not add CMD to any other unit's rolls until recovered — pinned command does not project.
+
 **12.3.4**  Example: German platoon with one CMD 3 platoon leader and two CMD 2 squad leaders: AP = 1 + 3 + 2 + 2 = 8, RP = 4.
 
 **12.3.5**  A wounded or eliminated leader immediately reduces the AP pool for the remainder of the turn.
@@ -263,6 +265,8 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
 **12.9.2**  If the leader is hit, flip the leader counter to its wounded rear face. A wounded leader continues to function but at reduced effectiveness.
 
 **12.9.3**  If the hex contains only the leader (no subordinate units), the leader is automatically hit — no roll needed.
+
+**12.9.4**  Suppressed and Pinned results against a hex containing both a leader and combat units apply to a combat unit, never to the leader — the allocation roll of Rule 12.9.1 exists only for Casualty or worse. A leader **alone** in a hex takes Suppressed and Pinned results personally, with the usual markers and recovery rolls; while Pinned, Rule 12.3.4's projection limits apply.
 
 12.10  Wounded Leaders
 ----------------------
