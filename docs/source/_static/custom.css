@@ -226,3 +226,111 @@ footer,
 footer .rst-footer-buttons a {
   color: var(--olive);
 }
+
+/* ----------------------------------------------------------------------
+   Rule cross-linking: hover popups and click-to-split-pane
+   (behaviour lives in rule_links.js; this is presentation only)
+   ---------------------------------------------------------------------- */
+
+/* A linkified "Rule X.Y.Z" reference reads as a link but stays visually
+   quiet -- these appear dozens of times per page and should not read
+   like a wall of blue text. */
+a.rule-ref {
+  color: var(--olive-dark);
+  border-bottom: 1px dotted var(--khaki-dark);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a.rule-ref:hover {
+  color: var(--ordnance-red);
+  border-bottom-color: var(--ordnance-red);
+}
+
+/* Hover preview popup */
+
+.rule-popup {
+  position: absolute;
+  z-index: 10000;
+  max-width: 320px;
+  padding: 0.6em 0.8em;
+  background: var(--cream);
+  border: 1px solid var(--khaki-dark);
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  font-size: 0.85em;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.rule-popup strong {
+  color: var(--olive-dark);
+}
+
+/* Split-pane overlay: covers the viewport without disturbing the
+   underlying page, which keeps its scroll position for when the
+   overlay closes. */
+
+#rule-split-view {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--olive-dark);
+}
+
+#rule-split-view[hidden] {
+  display: none;
+}
+
+.rule-split-pane {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-left: 2px solid var(--khaki-dark);
+}
+
+.rule-split-pane:first-of-type {
+  border-left: none;
+}
+
+#rule-split-close {
+  position: fixed;
+  top: 0.5em;
+  right: 0.5em;
+  z-index: 10001;
+  padding: 0.4em 0.8em;
+  background: var(--cream);
+  color: var(--ink);
+  border: 1px solid var(--khaki-dark);
+  border-radius: 3px;
+  font-size: 0.85em;
+  cursor: pointer;
+}
+
+#rule-split-close:hover {
+  background: var(--ordnance-red);
+  color: var(--cream);
+}
+
+/* Momentary highlight when a split pane jumps to a rule */
+
+.rule-ref-target {
+  animation: rule-ref-flash 2.5s ease-out;
+}
+
+@keyframes rule-ref-flash {
+  0% { background-color: var(--khaki-light); }
+  100% { background-color: transparent; }
+}
+
+/* Below this width, JS skips hover popups and split-pane entirely and
+   rule references behave as plain same-tab anchor links -- this rule
+   only needs to make sure nothing built for the wide layout leaks
+   through if it somehow did fire. */
+@media (max-width: 900px) {
+  #rule-split-view {
+    display: none !important;
+  }
+}

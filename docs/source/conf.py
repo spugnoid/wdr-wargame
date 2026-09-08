@@ -1,6 +1,11 @@
 # Configuration file for the Sphinx documentation builder.
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+import os
+import sys
+
+sys.path.insert(0, os.path.abspath('_ext'))
+
 project = 'With Deepest Regret...'
 copyright = '2026, Rod Peters'
 author = 'Rod Peters'
@@ -9,6 +14,7 @@ version = '0.9.3'
 
 extensions = [
     'sphinx.ext.autosectionlabel',
+    'rule_anchors',
 ]
 
 # Make autosectionlabel unique per document (needed since many sections
@@ -22,8 +28,12 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
-# Field-manual reskin (olive/khaki/aged-paper) over the default RTD blue/white
+# Field-manual reskin (olive/khaki/aged-paper) over the default RTD blue/white,
+# plus the cross-linking/hover-preview/split-pane behaviour for rule
+# references (rule_anchors extension provides the anchors and manifest this
+# script depends on).
 html_css_files = ['custom.css']
+html_js_files = ['rule_links.js']
 
 # Numbered figure/table support for future use (maps, counter diagrams)
 numfig = True
