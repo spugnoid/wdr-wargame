@@ -68,7 +68,9 @@ Vehicle combat uses a dedicated resolution sequence that determines whether a ro
 
 **18.1a.8**  A Gunnery Roll is not required for anti-infantry fire (Rule 18.8), infantry anti-tank weapons (Rule 18.9), or Overrun (Rule 18.11) — those retain their existing resolution procedures unchanged.
 
-**18.1a.9**  Rule 6.6.7's existing −2 rFP penalty for opportunity fire against a moving target does not stack with Rule 18.1a.6 when the target is a vehicle — the Gunnery Roll's own crossing-target adjustment replaces it for vehicle targets specifically. Rule 6.6.7 continues to apply exactly as written when the target is infantry.
+**18.1a.9**  Rule 7.5.2's existing −2 rFP penalty for opportunity fire against a moving target does not stack with Rule 18.1a.6 when the target is a vehicle — the Gunnery Roll's own crossing-target adjustment replaces it for vehicle targets specifically (Rule 7.5.2a states this same exception from the movement side). Rule 7.5.2 continues to apply exactly as written when the target is infantry.
+
+    *Note: vehicles use their own MOVED marker (Rule 18.1a.6) tracking whether they have moved this turn — a simpler, unchanged concept distinct from the infantry MOVED/FIRED marker of Rule 6.5.1, which the Section 17-19 vehicle rules do not use.*
 
 *NOTE: The Gunnery Roll reuses the exact 1d6+1d8+1d12 combination already rolled for every other attack in the game rather than introducing new dice. Below the dice combination's resolution floor (rarer than about 0.17%, the probability of rolling the single maximum value), a shot is an automatic miss rather than requiring an unrollable threshold.*
 

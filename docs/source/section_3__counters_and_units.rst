@@ -59,7 +59,7 @@ The upper right corner of each counter shows three action values:
 
 **3.3.1**  M# — Move allowance.  The number of hexes the unit may move per activation. M0 means the unit cannot move in its current state (e.g., a deployed HMG).
 
-**3.3.2**  F# — Fire rate.  The number of fire actions the unit may take per turn.
+**3.3.2**  F# — Fire rate.  The number of fire actions the unit may take per turn. *Interim note: a unit's actual turn structure (one full-effect fire, or two reduced Assault fires, or — for a stationary machine gun — repeated full-effect fire under ROF) is governed by Rule 6.3/6.6, not by this printed value. F# predates that rule and is not currently consulted by it; reconciling the two is a planned counter-data review.*
 
 **3.3.3**  G# — Grenade value.  The unit's effectiveness in the grenade phase of close assault. Used only during close assault resolution (see Section 9).
 
@@ -159,7 +159,7 @@ The upper right corner of each counter shows three action values:
 ------------------------
 
 
-Small markers are placed on or beside unit counters to track their current state. Action markers (MOVED, FIRE 1/2/3, ASSAULT, OPPORTUNITY, CARELESS) are removed during the Recovery Phase at the start of each turn; status markers (SUPPRESSED, PINNED, and the like) persist until removed by their own rules — a recovery roll, a rally, or the condition ending (Rules 5.2.2–5.2.4).
+Small markers are placed on or beside unit counters to track their current state. Action markers (ASSAULT, FIRED 1/2/3, MOVED/FIRED, OPPORTUNITY, CARELESS) are removed during the Recovery Phase at the start of each turn; status markers (SUPPRESSED, PINNED, and the like) persist until removed by their own rules — a recovery roll, a rally, or the condition ending (Rules 5.2.2–5.2.4).
 
 .. list-table::
    :header-rows: 1
@@ -167,16 +167,16 @@ Small markers are placed on or beside unit counters to track their current state
 
    * - **Marker**
      - **Meaning**
-   * - MOVED
-     - Unit has used its move action this turn
-   * - FIRE 1
-     - Unit has used its first fire action this turn
-   * - FIRE 2
-     - Unit has used its second fire action this turn
-   * - FIRE 3
-     - Unit has used its third fire action this turn
    * - ASSAULT
-     - Unit has used a move-and-fire or fire-and-move action this turn
+     - Unit has taken one Assault part-action this turn; one remains (Rule 6.3.3)
+   * - FIRED 1
+     - Stationary ROF-greater-than-1 weapon has fired once this turn (Rule 6.6)
+   * - FIRED 2
+     - Fired twice this turn
+   * - FIRED 3
+     - Fired three times this turn (tripod HMG only)
+   * - MOVED/FIRED
+     - Unit is done for the turn — no further movement or fire (Rule 6.7 covers remaining defensive rights)
    * - OPPORTUNITY
      - Unit has used an opportunity fire reaction this turn
    * - SUPPRESSED
