@@ -1,7 +1,7 @@
 Section 13 — Campaign Rules
 ===========================
 
-*[ TBD: One piece of the campaign economy remains undesigned: EM's downward half (Rule 13.5.2). Everything else in this section, including the generic branching campaign framework (Rule 13.5), is complete — authoring an actual campaign's specific scenarios and branch tables is campaign-specific content the framework supports but does not itself provide. ]*
+*[ Note: the campaign economy is complete. Authoring an actual campaign's specific scenarios and branch tables (Rule 13.5) is campaign-specific content the framework supports but does not itself provide. ]*
 
 13.1  Casualty Track
 --------------------
@@ -151,7 +151,9 @@ The campaign consists of a series of scenarios linked by a branching structure (
 
 **13.5.2b**  EM applies to any counter with a printed Quality rating — combat units, weapon teams, and vehicle crews alike (Rule 19.6.1). A unit fielded at Militia can, over a long campaign, reach Veteran/Elite after three separate 3-scenario CI-free streaks (9 CI-free scenarios total, with the streak resetting on every intervening CI).
 
-*[ TBD: this rule covers only EM's upward, combat-experience half. EM "reflecting combat experience gained **or lost**" (Rule 1.3) and Rule 19.6.1's "quality degrades with replacement crew" both name a downward half — a unit or vehicle crew losing EM steps — that is not yet designed. Treat EM as strictly non-negative until that half is defined. See design note E.102. ]*
+**13.5.2c**  EM is lost, not just gained: it resets to zero whenever a counter is diluted with replacement personnel. A unit formed by Combining Half Squads (13.4) is a newly-raised Composite counter with no shared combat history — it starts at EM +0, regardless of either source counter's accumulated EM, on top of whatever quality 13.4.3 already assigns it. A vehicle re-crewed from the replacement pool after losing its original crew (Rule 19.6.1) likewise resets to EM +0.
+
+**13.5.2d**  Ordinary casualties, a bad recovery roll, or being rendered CI do not by themselves cost EM — only combining or re-crewing does (13.5.2c). This keeps EM loss tied to a single, unambiguous event rather than a second parallel bad-performance tracker alongside the CI-free streak (13.5.2) and the Composite marker's own -1 Morale penalty (13.4.4), which already covers a freshly-combined unit's shakiness in the short term. See design note E.104.
 
 **13.5.3**  A campaign is authored as a set of **nodes**, each one linking a single scenario to a **branch table**: an assignment of every outcome grade (13.5.1) to either another node or to **END**. A campaign always designates one node as its **start**.
 

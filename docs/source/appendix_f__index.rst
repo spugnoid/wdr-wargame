@@ -471,6 +471,8 @@ covers used capability icon or weapon band  ..........  18.9.1
 
 promotion via CI-free streak  ..........  13.5.2a, E.101
 
+reset on replacement dilution  ..........  13.5.2c, E.104
+
 **Exposure rules — eliminated**  ..........  E.94
 
 reactions are momentary, resolved at the triggering action  ..........  6.2.3, E.94
