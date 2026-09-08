@@ -28,9 +28,15 @@
  *      your place in the book while the other pane becomes your lookup
  *      surface. (An earlier version sent both panes to the same target,
  *      which collapsed the point of having two of them.)
- *   5. On narrow/touch viewports, all of the above is skipped in favour
+ *   5. If the rule a pane just jumped to has a hidden ".. container::
+ *      rule-guide" block right after it (authored in the RST -- see
+ *      showGuideIfAvailable below), that block is shown in place of the
+ *      raw rule paragraph for that one target, in that one pane only.
+ *      Everything else on the page renders normally.
+ *   6. On narrow/touch viewports, all of the above is skipped in favour
  *      of plain single-tab anchor navigation -- nothing new to break on
- *      mobile.
+ *      mobile. A plain anchor jump always shows the raw rule text; the
+ *      guide swap is a split-pane-only enhancement.
  *
  * Hover previews are only wired on the top-level document, not inside
  * the split-pane iframes -- a deliberate scope cut, noted so it isn't
@@ -257,12 +263,37 @@
   }
 
   function highlightTarget(doc, hash) {
-    if (!hash) return;
+    if (!hash) return null;
     var el = doc.getElementById(hash.slice(1));
-    if (!el) return;
+    if (!el) return null;
     el.scrollIntoView({ block: 'center' });
     el.classList.add('rule-ref-target');
     setTimeout(function () { el.classList.remove('rule-ref-target'); }, 2500);
+    return el;
+  }
+
+  // Right pane: guide-or-raw. A rule authored with a ".. container::
+  // rule-guide" block immediately after it (hidden by CSS during normal
+  // reading -- see custom.css) gets that block shown here IN PLACE OF
+  // the raw rule paragraph, but only inside a split pane, and only for
+  // the specific rule that pane just jumped to. Everything else on the
+  // page -- neighbouring rules, tables, cross-references -- renders
+  // normally; only the one targeted paragraph is swapped.
+  function resetGuideSwaps(doc) {
+    var guides = doc.querySelectorAll('.rule-guide');
+    for (var i = 0; i < guides.length; i++) {
+      guides[i].style.display = '';
+      var raw = guides[i].previousElementSibling;
+      if (raw) raw.style.display = '';
+    }
+  }
+
+  function showGuideIfAvailable(targetEl) {
+    if (!targetEl) return;
+    var guide = targetEl.nextElementSibling;
+    if (!guide || !guide.classList.contains('rule-guide')) return;
+    targetEl.style.display = 'none';
+    guide.style.display = 'block';
   }
 
   function wireFrame(frame, otherFrame, manifest) {
@@ -270,7 +301,20 @@
       var doc = frame.contentDocument;
       if (!doc || !doc.body) return; // about:blank or cross-origin (shouldn't happen, same-origin site)
       linkifyRoot(doc.body, manifest);
-      highlightTarget(doc, frame.contentWindow.location.hash);
+
+      // Jumping to a second target on a page already loaded in this pane
+      // (very common -- most rule cross-references stay within the same
+      // section) changes only the iframe's URL fragment, which does NOT
+      // fire a fresh 'load' event in the browser. Re-run the
+      // highlight/guide-swap step on 'hashchange' too, so the second (and
+      // every subsequent) same-page jump is handled, not just the first.
+      function jumpToCurrentHash() {
+        resetGuideSwaps(doc);
+        var targetEl = highlightTarget(doc, frame.contentWindow.location.hash);
+        showGuideIfAvailable(targetEl);
+      }
+      jumpToCurrentHash();
+      frame.contentWindow.addEventListener('hashchange', jumpToCurrentHash);
 
       doc.body.addEventListener('click', function (e) {
         var link = e.target.closest('a.rule-ref');
