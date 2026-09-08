@@ -19,9 +19,9 @@ ASSAULT marker  ..........  6.5.1, 6.3.3
 
 FIRED 1/2/3 markers (ROF weapons)  ..........  6.5.1, 6.6
 
-MOVED/FIRED marker  ..........  6.5.1
+MOVED/FIRED marker (shared two-sided marker with CARELESS)  ..........  6.5.1, 3.6
 
-OPPORTUNITY marker  ..........  6.2.3
+CARELESS marker  ..........  7.4.2, 3.6
 
 removal (Recovery Phase)  ..........  5.2.2, 6.5.4
 
@@ -307,7 +307,7 @@ not necessarily dead  ..........  10.7.2
 
 **Command radius**  ..........  12.2.1
 
-**Composite unit marker**  ..........  13.4.4
+**Composite unit (roster-sheet notation)**  ..........  13.4.4
 
 **CON (concealment value)**  ..........  14.9.7
 
@@ -317,7 +317,7 @@ sniper base CON  ..........  20.3.4
 
 **CONTACT marker**  ..........  14.8
 
-decay states (fresh/recent/cold)  ..........  14.8.2
+decay states (CONTACT/STALE, two-sided)  ..........  14.8.2
 
 sniper type (crosshair)  ..........  20.4.3
 

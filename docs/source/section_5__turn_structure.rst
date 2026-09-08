@@ -27,7 +27,7 @@ Each game turn proceeds through three phases in the following order:
 
 **5.2.1**  The Recovery Phase occurs at the start of each game turn before any actions are taken.
 
-**5.2.2**  All action markers (ASSAULT, FIRED 1/2/3, MOVED/FIRED, OPPORTUNITY, CARELESS) are removed from all counters.
+**5.2.2**  All action markers (ASSAULT, FIRED 1/2/3, MOVED/FIRED, CARELESS) are removed from all counters.
 
 **5.2.3**  Each unit with a SUPPRESSED or PINNED status marker attempts a recovery roll.
 

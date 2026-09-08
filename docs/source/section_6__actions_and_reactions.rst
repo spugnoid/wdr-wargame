@@ -162,7 +162,7 @@ The following reactions are available to the non-active player during a reaction
 
 **6.5.3**  A unit's Regular or Assault economy and its ROF track never apply at once: a weapon firing under ROF (Rule 6.6) never carries an ASSAULT marker, and a unit carrying ASSAULT is, by definition, not exercising ROF this turn.
 
-**6.5.4**  All action markers (ASSAULT, FIRED 1/2/3, MOVED/FIRED, OPPORTUNITY, CARELESS) are removed during the Recovery Phase at the start of the following turn.
+**6.5.4**  All action markers (ASSAULT, FIRED 1/2/3, MOVED/FIRED, CARELESS) are removed during the Recovery Phase at the start of the following turn.
 
 6.6  ROF Weapons — Stationary Machine Guns
 ---------------------------------------------

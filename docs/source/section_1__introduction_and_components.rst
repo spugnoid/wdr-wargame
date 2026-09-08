@@ -43,7 +43,11 @@ The game does not glorify war. The ordinary soldiers of every nation were not ev
      - 1
    * - Custom dice: 1×d6, 1×d8, 1×d12 per player
      - 2 sets
-   * - Action markers (ASSAULT, FIRED 1/2/3, MOVED/FIRED, OPPORTUNITY, CARELESS)
+   * - ASSAULT markers
+     - TBD
+   * - FIRED marker — one rotating dial per unit, showing 1/2/3 (Rule 6.6)
+     - TBD
+   * - MOVED/FIRED-CARELESS markers — two-sided (Rule 3.6, Rule 7.4.2)
      - TBD
    * - Status markers (SUPPRESSED, PINNED, MOBILE)
      - TBD
@@ -57,7 +61,7 @@ The game does not glorify war. The ordinary soldiers of every nation were not ev
      - TBD
    * - Dummy markers — single/small/large sizes, nation-neutral
      - TBD
-   * - CONTACT markers — three states (fresh/recent/cold)
+   * - CONTACT markers — two-sided (CONTACT/STALE, Rule 14.8.2)
      - TBD
    * - Hidden information chart with numbered slots and physical covers (cups or opaque tokens)
      - 1 per player

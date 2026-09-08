@@ -159,7 +159,9 @@ The upper right corner of each counter shows three action values:
 ------------------------
 
 
-Small markers are placed on or beside unit counters to track their current state. Action markers (ASSAULT, FIRED 1/2/3, MOVED/FIRED, OPPORTUNITY, CARELESS) are removed during the Recovery Phase at the start of each turn; status markers (SUPPRESSED, PINNED, and the like) persist until removed by their own rules — a recovery roll, a rally, or the condition ending (Rules 5.2.2–5.2.4).
+Small markers are placed on or beside unit counters to track their current state. Action markers (ASSAULT, FIRED 1/2/3, MOVED/FIRED, CARELESS) are removed during the Recovery Phase at the start of each turn; status markers (SUPPRESSED, PINNED, and the like) persist until removed by their own rules — a recovery roll, a rally, or the condition ending (Rules 5.2.2–5.2.4).
+
+FIRED 1/2/3 is one physical component: a rotating dial marker showing "1", "2", or "3", not three separate chits. MOVED/FIRED and CARELESS are likewise one physical component — a two-sided marker — since Careless Movement (Rule 7.4) is only ever taken as a Regular Move action, which always ends the unit's turn; a unit is never MOVED/FIRED-without-CARELESS-info-loss and CARELESS-without-MOVED/FIRED at once, so a unit is never in a state needing both faces shown simultaneously (Rule 7.4.2). See design notes E.96–E.97.
 
 .. list-table::
    :header-rows: 1
@@ -176,9 +178,9 @@ Small markers are placed on or beside unit counters to track their current state
    * - FIRED 3
      - Fired three times this turn (tripod HMG only)
    * - MOVED/FIRED
-     - Unit is done for the turn — no further movement or fire (Rule 6.7 covers remaining defensive rights)
-   * - OPPORTUNITY
-     - Unit has used an opportunity fire reaction this turn
+     - Unit is done for the turn — no further movement or fire (Rule 6.7 covers remaining defensive rights). Front face of the shared MOVED/FIRED-CARELESS marker.
+   * - CARELESS
+     - Unit moved M#+1 hexes this turn and suffers -2 CON for the remainder of it (Rule 7.4). Reverse face of the shared MOVED/FIRED-CARELESS marker — always accompanies MOVED/FIRED, never appears alone.
    * - SUPPRESSED
      - Unit is suppressed (see Section 10.2)
    * - PINNED
