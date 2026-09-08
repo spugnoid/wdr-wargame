@@ -9,23 +9,71 @@ Vehicle combat uses a dedicated resolution sequence that determines whether a ro
 
 **18.1.1**  When a weapon fires at a vehicle, resolve in this order:
 
+.. container:: rule-guide
+
+   **Why:** Fixes vehicle combat's resolution into one strict, numbered sequence so both players always resolve a shot the same six steps in the same order, regardless of how complex the underlying penetration math gets — the sequence itself never varies.
+
+   **Example:** Every vehicle-vs-vehicle shot, whatever gun or ammunition is involved, works through the same six steps (Rules 18.1.2-18.1.7) in the same order — Gunnery Roll first, damage application last, always.
+
 **18.1.2**  Step 1: Gunnery Roll. Roll to determine whether the round hits the target at all and, if so, whether it strikes the Hull or Turret profile. See Rule 18.1a. **If the result is a Miss, resolution ends here — the round has no further effect.**
+
+.. container:: rule-guide
+
+   **Why:** Puts the hit-or-miss question first and lets a Miss short-circuit the whole rest of the sequence, since there's no point calculating arcs, PEN, or damage for a shot that never connected at all.
+
+   **Example:** A Gunnery Roll that comes up Miss ends resolution immediately — the attacker doesn't proceed to Step 2 or any later step, since nothing further needs to happen.
 
 **18.1.3**  Step 2: Determine arc. Identify whether the attacker is in the target's front, side, or rear arc **of whichever profile (Hull or Turret) the Gunnery Roll selected in Step 1.** Use the corresponding AV value from that profile — AV-vs-Capped or AV-vs-Tungsten, matching the ammunition nature fired (Rule 17.2.3).
 
+.. container:: rule-guide
+
+   **Why:** Determines the arc specifically against whichever profile the Gunnery Roll already picked, not some separate averaged concept — the Hull's own facing arc and the Turret's own facing arc (via any TRAVERSED marker, Rule 17.5.5) can point in different directions on the same vehicle.
+
+   **Example:** If the Gunnery Roll selected the Turret profile, the attacker's arc is determined relative to the turret's own facing (via its TRAVERSED marker, if any) — not the hull's facing arrow, even if those two happen to differ.
+
 **18.1.4**  Step 3: Check TRAV. Confirm target vehicle's TRAV rating allows it to be engaged this turn. If TRAV is insufficient to cover the attacker's hex, the vehicle cannot return fire this impulse.
+
+.. container:: rule-guide
+
+   **Why:** Checks whether the target vehicle can even shoot back at this point in the sequence, since a target caught in an arc its own gun can't currently cover (Rule 17.4) is genuinely unable to return fire this impulse — this step is about the target's return capability, not the incoming shot's own resolution.
+
+   **Example:** A TRAV 1 vehicle already facing forward that's engaged from its rear arc cannot traverse far enough to return fire this impulse — Step 3 confirms that limitation before any return-fire question comes up.
 
 **18.1.5**  Step 4: Calculate effective PEN at range — read the printed PEN line for the ammunition nature fired at the actual range band (Rule 17.3.1).
 
+.. container:: rule-guide
+
+   **Why:** Reads the attacking round's actual penetrating power straight off its printed PEN line at the real range band, since that number — already computed from sourced ballistics (Rule 17.3.7) — is exactly what the later comparison against AV needs.
+
+   **Example:** A gun firing Tungsten ammunition at 750m reads its printed Tungsten PEN value at the 750m band (or the next lower band if 750m isn't itself printed) — that becomes the effective PEN carried into Step 5.
+
 **18.1.6**  Step 5: Check Shatter Gap and Schürzen if applicable (Rules 18.2a, 18.2b — optional/situational), then compare effective PEN to target AV and determine penetration outcome (Rule 18.2).
 
+.. container:: rule-guide
+
+   **Why:** Applies the two situational modifiers (Shatter Gap, Schürzen) before the core PEN-vs-AV comparison, since both of them change the effective numbers going into that comparison rather than adjusting its result afterward — order matters here.
+
+   **Example:** A HEAT attack against a Schürzen-protected side arc has its effective PEN halved (Rule 18.2b.2) before comparison, not after — the halved value is what actually gets compared to the target's AV in the Rule 18.2 outcome table.
+
 **18.1.7**  Step 6: Apply result using the vehicle damage table.
+
+.. container:: rule-guide
+
+   **Why:** Closes the sequence with a single final step — applying whatever damage table the penetration outcome pointed to — so every shot, however it resolved, ends the same way: reading off and applying a damage result.
+
+   **Example:** A shot that resolved as a Full Penetration in Step 5 proceeds here to the Full Penetration Damage table (Rule 18.6), while a Contested roll that came up Partial Penetration instead proceeds to the Partial Penetration table (Rule 18.5) — different tables, same final step in the sequence.
 
 18.1a  Gunnery Roll
 --------------------
 
 
 **18.1a.1**  Every vehicle-mounted gun counter prints a Gunnery Table: a Miss Threshold and a Hull Threshold for each range band, already calculated for that vehicle's own Crew Quality (Rule 18.1a.2). No separate lookup, chart, or calculation is required at the table — read the row for the actual range.
+
+.. container:: rule-guide
+
+   **Why:** Pre-bakes crew quality directly into each vehicle's own printed thresholds, the same design philosophy as the rest of Section 17-18's printed values — a player just reads two numbers off the counter for the actual range, with no calculation step of their own.
+
+   **Example:** A player firing a specific gun at a specific range simply reads that gun's own printed Miss and Hull thresholds for that range band and rolls — the crew-quality adjustment behind those numbers was already applied when the counter was designed.
 
 *Example (88mm KwK36, Regular crew — the actual computed rows from* ``vehicle_fire_thresholds_output.csv``):*
 
@@ -53,22 +101,76 @@ Vehicle combat uses a dedicated resolution sequence that determines whether a ro
 
 **18.1a.1a**  Blank thresholds: a band with no printed Miss Threshold is an **automatic miss** (the shot is beyond the dice combination's resolution floor). A band with a Miss Threshold but no Hull Threshold means every hit at that range strikes the **Turret** — at extreme range only the taller profile presents. The Gunnery Table prints its own band set (typically 100/250/500/750/1000/1500/2000/2500m); the PEN lines use Rule 17.3.1's bands — the two are read independently.
 
+.. container:: rule-guide
+
+   **Why:** Gives blank cells in the Gunnery Table a real, deliberate meaning rather than an error state — a range too far for any roll to succeed becomes an automatic miss, and a range where only the taller Turret profile is realistically visible simply never rolls Hull, reflecting genuine long-range engagement geometry.
+
+   **Example:** A vehicle's Gunnery Table showing no Hull Threshold at 1500m means every hit that range achieves strikes the Turret — the target's lower hull profile isn't a realistic target to hit at that distance.
+
 
 **18.1a.2**  Crew Quality is derived from the firing vehicle's own Morale value (Rule 17.3.6): Morale 7+ = Elite, Morale 6 = Veteran, Morale 5 = Regular, Morale 3–4 = Green, Morale 2 or less = Militia. This is fixed at counter-design time, not chosen or looked up during play.
 
+.. container:: rule-guide
+
+   **Why:** Restates Rule 17.3.6's Morale-to-Crew-Quality mapping here specifically because it's the value that determined the printed Gunnery Table numbers a player is about to use — fixed permanently at design time so there's never a question of which quality tier applies mid-game.
+
+   **Example:** A vehicle counter printed with Morale 5 has Regular Crew Quality baked into its Gunnery Table forever — nothing that happens to the vehicle during play changes which crew-quality tier its printed thresholds reflect.
+
 **18.1a.3**  Roll 1d6+1d8+1d12 (the same combination used for every other fire attack, Rule 8.5.1) and compare to the Miss Threshold and Hull Threshold for the actual range to target, using the next lower printed range band if the exact range falls between two listed bands.
+
+.. container:: rule-guide
+
+   **Why:** Reuses the game's one universal dice combination (Rule 8.5.1) for the Gunnery Roll rather than introducing a separate roll type just for vehicle combat, keeping the game's whole fire-resolution system built on the same underlying randomness.
+
+   **Example:** A Gunnery Roll and an ordinary infantry Fire action both roll the same 1d6+1d8+1d12 combination — only the target numbers and outcome table differ between the two.
 
 **18.1a.4**  If the roll is below the Miss Threshold, the round misses. No further resolution — the round has struck terrain, passed over the target, or otherwise failed to connect.
 
+.. container:: rule-guide
+
+   **Why:** Ends resolution cleanly at the first failure point, since a shot that missed the target entirely has nothing further to determine — no profile, no arc, no damage — matching Step 1's own instruction in Rule 18.1.2.
+
+   **Example:** A roll below the Miss Threshold simply means the round didn't connect at all — no further table or roll follows, the attack simply had no effect this impulse.
+
 **18.1a.5**  If the roll meets or exceeds the Hull Threshold, the round strikes the target's Hull profile. If the roll is at or above the Miss Threshold but below the Hull Threshold, the round strikes the Turret profile instead. Proceed to Rule 18.1.3 using the indicated profile. Casemate vehicles (TRAV 0, no separate turret) always resolve against Hull regardless of roll — see Rule 17.1.2.
+
+.. container:: rule-guide
+
+   **Why:** Uses the same roll to decide both whether the shot connects and which profile it hits, since a single roll naturally produces a range of outcomes — a very high roll representing a solid, centered hit (Hull, typically the harder target to actually connect with cleanly) and a marginal hit landing on the more exposed Turret.
+
+   **Example:** A roll that clears the Hull Threshold sends the shot against the target's Hull profile; a roll that only clears the lower Miss Threshold instead sends it against the Turret — but a casemate vehicle with no separate turret always resolves against Hull either way.
 
 **18.1a.6**  Crossing target: if the target vehicle has a MOVED marker this turn and the attacker's line of fire falls in the target's Side arc, read the Gunnery Table one range band longer than the actual range (e.g. a shot at 750m against a crossing target uses the 1000m row instead).
 
+.. container:: rule-guide
+
+   **Why:** Makes a moving vehicle genuinely harder to hit from the side rather than adjusting the odds with a flat modifier — reading a longer, harder-to-hit range band captures that a vehicle crossing an attacker's field of fire is a fleeting, difficult shot, using the same table rather than a separate calculation.
+
+   **Example:** A vehicle that moved this turn, engaged from the side at an actual range of 750m, has that shot resolved using the Gunnery Table's 1000m row instead — a strictly harder threshold, reflecting the difficulty of hitting a crossing target.
+
 **18.1a.7**  Follow-up shot: if the firing unit's previous fire action this turn targeted the same vehicle and the firing unit has not moved since, read the Gunnery Table one range band shorter than the actual range (minimum: the shortest printed band). If both Rule 18.1a.6 and 18.1a.7 apply to the same shot, apply the crossing adjustment first, then the follow-up adjustment, to the resulting band.
+
+.. container:: rule-guide
+
+   **Why:** Rewards a stationary gun re-engaging the exact same target with an easier effective range band, since a crew that already has the target ranged in and hasn't had to reposition genuinely shoots more accurately on a repeat shot — and fixes the order of operations for the rare case where both adjustments apply to the same shot.
+
+   **Example:** A stationary gun firing a second shot at the same vehicle it already engaged this turn reads its Gunnery Table one band shorter than the actual range; if that same target is also crossing (Rule 18.1a.6), the crossing adjustment lengthens the band first, and only then does the follow-up adjustment shorten the resulting band.
 
 **18.1a.8**  A Gunnery Roll is not required for anti-infantry fire (Rule 18.8), infantry anti-tank weapons (Rule 18.9), or Overrun (Rule 18.11) — those retain their existing resolution procedures unchanged.
 
+.. container:: rule-guide
+
+   **Why:** Scopes the entire Gunnery Roll mechanism to vehicle-vs-vehicle gunnery specifically, leaving anti-infantry fire, infantry AT weapons, and Overrun to their own already-established resolution procedures — those situations don't involve one vehicle's gun trying to hit another vehicle's armor profile, so the Gunnery Roll's hit/profile question doesn't apply.
+
+   **Example:** A tank firing its MG at infantry uses ordinary fire resolution (Section 8) against infantry Defence, with no Gunnery Roll involved at all — the Gunnery Roll is reserved for gun-vs-vehicle engagements.
+
 **18.1a.9**  Rule 7.5.2's existing −2 rFP penalty for opportunity fire against a moving target does not stack with Rule 18.1a.6 when the target is a vehicle — the Gunnery Roll's own crossing-target adjustment replaces it for vehicle targets specifically (Rule 7.5.2a states this same exception from the movement side). Rule 7.5.2 continues to apply exactly as written when the target is infantry.
+
+.. container:: rule-guide
+
+   **Why:** Prevents double-penalizing a moving vehicle target with both the general moving-target rFP penalty and the vehicle-specific crossing-target band adjustment, since both mechanisms exist to model the same underlying difficulty — hitting a moving target — and applying both would overstate that difficulty for vehicles specifically.
+
+   **Example:** Opportunity fire against a moving vehicle target applies only the Gunnery Table's crossing-target band shift (Rule 18.1a.6), not also the ordinary -2 rFP moving-target penalty; that same opportunity fire against moving infantry still applies the standard -2 rFP penalty exactly as Rule 7.5.2 always has.
 
     *Note: vehicles use their own MOVED marker (Rule 18.1a.6) tracking whether they have moved this turn — a simpler, unchanged concept distinct from the infantry MOVED/FIRED marker of Rule 6.5.1, which the Section 17-19 vehicle rules do not use.*
 
@@ -114,13 +216,37 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
 
 **18.2a.1**  Before applying Rule 18.2, check Shatter Gap if all of the following hold: (a) the firing ammunition is Capped, Uncapped AP, or Soviet APBC nature (not Tungsten/APDS, not HEAT); (b) the attacking gun's printed calibre (mm) does not exceed the target's AV in the profile/arc being hit.
 
+.. container:: rule-guide
+
+   **Why:** Scopes Shatter Gap to exactly the ammunition natures and calibre-to-armor ratio where the real phenomenon actually occurs — a projectile that shatters on impact rather than penetrating is specific to certain nose shapes and specific ratios of shell diameter to plate thickness, not a universal risk for every shot.
+
+   **Example:** A Tungsten round never checks Shatter Gap at all, regardless of calibre or target armor — condition (a) excludes it outright, since Shatter Gap is specifically a kinetic-AP-family phenomenon.
+
 *NOTE: condition (b) is a deliberate at-table simplification of the sourced eligibility ratio (shatter applies from T/D ≥ 0.8, i.e. calibre up to 1.25× AV). The simplified test exempts a narrow band of shots the source says could shatter (e.g. an 88mm gun against an 80mm plate); the calculation tool implements the full ratio — see* ``shatter_gap_failure`` *in* ``counters/armor_calc/formulas.py``.*
 
 **18.2a.2**  If 18.2a.1's conditions hold, look up the target's AV on the Shatter Gap Table (player aid card) to find its Shatter Window — a lower and upper PEN value.
 
+.. container:: rule-guide
+
+   **Why:** Derives the specific PEN range where shattering occurs from the target's own AV, since the phenomenon depends on the relationship between the round's energy and the plate's resistance — a window keyed to AV captures that relationship without a separate calculation at the table.
+
+   **Example:** A target with a given AV has a specific Shatter Window looked up from the player aid card — a different target AV produces a different window, since the shatter phenomenon shifts with the plate's own resistance.
+
 **18.2a.3**  If effective PEN falls within the Shatter Window (inclusive), the shot is forced to a Non-Penetrating Hit (Rule 18.4), regardless of what Rule 18.2 would otherwise indicate. Proceed directly to 18.4 — do not consult 18.2 or 18.3 for this shot.
 
+.. container:: rule-guide
+
+   **Why:** Overrides whatever the normal PEN-vs-AV comparison would have produced when the shot falls inside the shatter window, since a projectile shattering on impact fails to penetrate regardless of how favorable the raw numbers otherwise looked — the physical reality of the round breaking apart takes precedence over the arithmetic.
+
+   **Example:** A shot whose effective PEN would normally qualify as an Automatic Penetration under Rule 18.2, but which falls inside the target's Shatter Window, is instead forced to Non-Penetrating Hit — the shatter phenomenon overrides the numbers.
+
 **18.2a.4**  If effective PEN falls outside the Shatter Window (either below it, or above it), resolve normally via Rule 18.2 — Shatter Gap does not apply.
+
+.. container:: rule-guide
+
+   **Why:** Confirms Shatter Gap only intervenes within its specific window, not universally — a shot too weak or too powerful for the shatter phenomenon to matter resolves through the ordinary PEN-vs-AV comparison unaffected.
+
+   **Example:** A shot whose effective PEN is well above the target's Shatter Window (comfortably exceeding it) resolves through Rule 18.2 normally, likely as an Automatic Penetration — the round is powerful enough that the shatter risk simply doesn't apply at that PEN level.
 
 *NOTE: This can only ever make an otherwise-favorable shot worse, never better — it has no effect on shots where PEN < AV already.*
 
@@ -130,9 +256,27 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
 
 **18.2b.1**  A vehicle counter with a Schürzen marker on a given Hull or Turret Side arc has standoff skirt armour protecting that arc against HEAT specifically.
 
+.. container:: rule-guide
+
+   **Why:** Marks Schürzen as a printed, arc-specific feature rather than a blanket vehicle-wide bonus, since real standoff skirt armor was historically mounted only on specific arcs of specific vehicles — the marker records exactly which arcs actually had it.
+
+   **Example:** A vehicle counter with a Schürzen marker only on its Hull Side arc gets no protection benefit on its Turret Side or Rear arcs — the marker is precise about which arc the historical skirt armor actually covered.
+
 **18.2b.2**  Before comparing effective PEN to AV (Rule 18.2), if the attack (a) uses HEAT ammunition of any kind — gun-fired HEAT round, Panzerfaust, Bazooka, PIAT — and (b) targets a Side arc bearing a Schürzen marker, halve the attacking weapon's effective PEN (round down) before proceeding.
 
+.. container:: rule-guide
+
+   **Why:** Models standoff armor's real mechanism — detonating a shaped charge early, before it reaches the main plate — as a straightforward PEN reduction applied before the normal comparison, since that's functionally what standoff armor does to a HEAT jet's effectiveness.
+
+   **Example:** A Panzerfaust with 140mm PEN striking a Schürzen-protected Side arc has its effective PEN halved to 70mm (round down) before that value is ever compared against the target's AV-vs-HEAT.
+
 **18.2b.3**  Schürzen has no effect on Capped, Uncapped AP, Soviet APBC, or Tungsten/APDS attacks, and no effect on any arc other than the marked Side arc.
+
+.. container:: rule-guide
+
+   **Why:** Limits Schürzen's protection strictly to HEAT attacks against the specific marked arc, since standoff armor's real defensive mechanism (premature shaped-charge detonation) simply doesn't work against solid kinetic rounds or against arcs the historical skirt plates didn't actually cover.
+
+   **Example:** A Tungsten round striking that same Schürzen-marked Side arc gets no PEN reduction at all — the marker's benefit applies exclusively to HEAT-family attacks, never to kinetic ones.
 
 
 18.3  Contested Penetration Roll
@@ -140,6 +284,12 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
 
 
 **18.3.1**  When effective PEN equals or exceeds AV but is less than AV + 3, roll 1d6:
+
+.. container:: rule-guide
+
+   **Why:** Gives the narrow band where PEN and AV are closely matched a genuine roll rather than a fixed outcome, since real close-margin shots historically produced mixed results — sometimes bouncing, sometimes partially or fully penetrating — reflecting real variance in impact angle and plate quality within nominally identical armor.
+
+   **Example:** A shot whose effective PEN just barely reaches or slightly exceeds the target's AV rolls 1d6 rather than automatically succeeding — even a "sufficient" shot in this narrow band has genuine uncertainty.
 
 .. list-table::
    :header-rows: 1
@@ -165,6 +315,12 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
 
 **18.4.1**  A round that strikes but cannot penetrate may still affect the crew through spalling, concussion, and psychological shock. Roll 1d6:
 
+.. container:: rule-guide
+
+   **Why:** Gives a non-penetrating hit a small but real chance of consequence rather than treating it as a complete non-event, since a heavy round striking armor without breaking through can still genuinely rattle the crew inside through concussion and spalling, even without the armor being defeated.
+
+   **Example:** A round that fails to penetrate still rolls 1d6 for crew effect — most results mean nothing happened, but a high roll can still Suppress the vehicle's crew even though the armor held.
+
 .. list-table::
    :header-rows: 1
    :widths: auto
@@ -182,6 +338,12 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
 
 
 **18.5.1**  A partially penetrating round causes significant crew disturbance and possible damage. Roll 1d6:
+
+.. container:: rule-guide
+
+   **Why:** Gives a partial penetration a meaningfully worse range of outcomes than a mere non-penetrating hit (Rule 18.4), since a round that actually broke through some armor — even without fully entering the crew compartment — does real, sometimes serious damage, up to and including a genuine Casualty result.
+
+   **Example:** A partially penetrating round's roll can range from crew shock all the way up to component damage (a vehicle Casualty) — a strictly more dangerous spread of outcomes than the mostly-harmless non-penetrating hit table.
 
 .. list-table::
    :header-rows: 1
@@ -203,6 +365,12 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
 
 **18.6.1**  A fully penetrating round enters the crew compartment and causes serious damage. Roll 1d6 and apply modifiers:
 
+.. container:: rule-guide
+
+   **Why:** Gives Full Penetration the widest and most dangerous outcome range of any damage table, up to outright vehicle Elimination, since a round that fully enters the crew compartment has genuinely defeated the armor entirely — this is the point where the worst possible outcomes become live.
+
+   **Example:** A full penetration's modified roll can land anywhere from crew shock (Suppressed) up through a Catastrophic kill — a much wider and worse range of possible outcomes than a partial penetration's table (Rule 18.5.1) allows.
+
 .. list-table::
    :header-rows: 1
    :widths: auto
@@ -221,9 +389,21 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
 
 **18.6.1a**  A natural 6 on the damage roll is always a Catastrophic kill, regardless of modifiers. A round inside the fighting compartment can find ammunition or fuel no matter how experienced the crew — negative modifiers shift the odds, they do not confer immunity.
 
+.. container:: rule-guide
+
+   **Why:** Guarantees every full penetration at least some minimum chance of a catastrophic outcome no matter how many negative modifiers stack against it, since a round genuinely inside the crew compartment can always get unlucky and find ammunition or fuel — no amount of crew skill makes elimination truly impossible.
+
+   **Example:** A veteran-crewed vehicle with the -1 modifier still suffers a Catastrophic kill on a natural roll of 6, even though its modified total might otherwise never reach the elimination threshold — the natural-6 floor bypasses the modifier entirely.
+
 *NOTE: without this rule, the veteran-crew modifier (-1) made Elimination arithmetically impossible for any gun under 88mm firing non-HEAT ammunition at a veteran-crewed vehicle (maximum modified roll 5) — a Sherman 76, T-34/85, or SU-85 could never destroy a German vehicle outright, while historically 75mm-class penetrations brewed up tanks routinely. The natural-6 floor gives every full penetration a minimum 1-in-6 chance of a kill.*
 
 **18.6.2**  Full penetration modifiers applied to the damage roll:
+
+.. container:: rule-guide
+
+   **Why:** Shifts the full-penetration damage roll based on real factors that affect how catastrophic a penetration actually is — bigger warheads and larger calibres tend to do more damage once inside, veteran crews are better trained at damage control and escape, and an already-damaged vehicle has less redundancy left to absorb a second hit.
+
+   **Example:** A very large calibre HEAT round (+1 for HEAT, +2 for 122mm+) striking an already-damaged vehicle (+1) stacks all three modifiers onto its roll, making a Catastrophic kill considerably more likely than the same penetration against a fresh, veteran-crewed vehicle (-1).
 
 .. list-table::
    :header-rows: 1
@@ -249,11 +429,35 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
 
 **18.6a.1**  Whenever Rule 18.5.1 or 18.6.1 produces a "Component damage — vehicle Casualty" result, roll 1d6+1d8+1d12 (the same combination used for every other attack, Rule 8.5.1) against the target vehicle's own Hit Location Table (Rule 17.7) for the profile that was hit (Hull or Turret, per the Gunnery Roll's own determination, Rule 18.1a — Hull for infantry AT weapons, Rule 18.9). One threshold pair per profile covers every range and attacker.
 
+.. container:: rule-guide
+
+   **Why:** Only triggers the hit-location roll for the specific "Component damage" outcome from the damage tables, since that's the one result genuinely ambiguous between MOB kill and GUN kill — other outcomes (Suppressed, Pinned, Eliminated) already fully determine themselves without needing a further location check.
+
+   **Example:** A partial penetration rolling "Crew pinned" needs no hit-location roll at all — only if that same table instead rolled "Component damage" would this rule's hit-location procedure come into play to decide MOB versus GUN kill.
+
 **18.6a.2**  If the roll is below the Neither Threshold, the hit landed somewhere non-critical — downgrade the result from Casualty to Pinned (Rule 18.7) instead. The round penetrated, but nothing essential was destroyed.
+
+.. container:: rule-guide
+
+   **Why:** Gives the hit-location roll a genuine third outcome — not every penetrating hit finds something worth destroying, so a low roll downgrades what would have been a Casualty result into a lesser Pinned status, reflecting a hit that did real damage but missed anything mission-critical.
+
+   **Example:** A "Component damage" result that then rolls below the Neither Threshold on the hit-location check ends up as Pinned rather than the originally-indicated Casualty — the penetration happened, but nothing vital was hit.
 
 **18.6a.3**  If the roll is at or above the Mobility Threshold, the hit is a MOB kill. If the roll is at or above the Neither Threshold but below the Mobility Threshold, the hit is a GUN kill.
 
+.. container:: rule-guide
+
+   **Why:** Splits the remaining roll range between the two possible Casualty outcomes using a single pair of thresholds, so the same roll that already determined "something critical was hit" (clearing the Neither Threshold) also determines exactly which critical system it was.
+
+   **Example:** A roll that clears the Neither Threshold but falls short of the Mobility Threshold produces a GUN kill; a roll that clears the higher Mobility Threshold instead produces a MOB kill — one roll, two thresholds, three possible outcomes total including Rule 18.6a.2's Neither case.
+
 **18.6a.4**  This rule applies only to Front-arc hits on vehicles whose Hit Location Table has actually been built (Tiger I Ausf E and Sherman M4A1 (75mm), this edition) — this edition's tables cover only that arc. Side- and Rear-arc hits on these vehicles, and all hits on any other vehicle, use Rule 17.1.1's owning-player judgement call instead.
+
+.. container:: rule-guide
+
+   **Why:** Restates the scope limit already established in Rule 17.7.1 here specifically where the hit-location roll procedure lives, since this is the moment a player needs to know whether to roll or simply choose — Front-arc hits on the two covered vehicles roll, everything else still falls back to judgment.
+
+   **Example:** A Sherman M4A1 hit in its Front arc rolls against its printed Hit Location Table; that same Sherman hit in its Side or Rear arc, or any hit on a vehicle without a printed table at all, still uses the owning player's own judgment call instead.
 
 *NOTE: This can only ever make an outcome different from what free choice would have picked — it has no effect on whether a Casualty occurs in the first place (Rule 18.5/18.6 are unchanged), only on which specific outcome follows one. A hit that resolves to "Neither" is a real, sourced consequence of this system, not an edge case being carved out: it reflects that not every penetrating hit finds something critical to destroy.*
 
@@ -263,6 +467,12 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
 
 
 **18.7.1**  Vehicle damage states mirror infantry status bands for system consistency:
+
+.. container:: rule-guide
+
+   **Why:** Maps vehicle damage onto the same conceptual ladder as infantry status (Suppressed, Pinned, Casualty, Broken) so a player already familiar with infantry rules can apply the same intuition to vehicles, even though the specific mechanical effects differ to fit a vehicle's own capabilities.
+
+   **Example:** A vehicle's Suppressed state parallels an infantry unit's Suppressed status conceptually (a temporary combat-effectiveness hit), even though its specific mechanical penalties — reduced PEN, halved movement, a bail-out check — are vehicle-specific rather than the infantry rFP/movement penalties of Rule 10.2.
 
 .. list-table::
    :header-rows: 1
@@ -294,13 +504,43 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
 
 **18.8.1**  Vehicles fire against infantry using their MG fire line or HE capability. Both use standard fire resolution (Section 8) against infantry Defence values.
 
+.. container:: rule-guide
+
+   **Why:** Keeps a vehicle's anti-infantry fire on the same ordinary fire-resolution system used everywhere else (Section 8) — the whole point of the Gunnery Roll and armor-penetration mechanics is for gun-vs-vehicle engagements, not for a tank shooting at infantry.
+
+   **Example:** A tank firing its MG at an infantry squad rolls fire combat exactly as any other MG fire line would (Section 8), comparing against the squad's Defence and cover — no Gunnery Roll or penetration table is involved.
+
 **18.8.2**  MG fire: uses MG rFP ⬡h -f notation, resolves against infantry defence + cover. The standard close-range bonuses apply: +3 rFP at range 0 (same hex, Rule 8.9.2), +2 rFP at range 1 (adjacent, Rule 8.9.1).
+
+.. container:: rule-guide
+
+   **Why:** Treats a vehicle's MG exactly like any other MG fire line, complete with the usual close-range bonuses, since the weapon and its resolution mechanics don't change just because it happens to be mounted on a vehicle rather than carried by infantry.
+
+   **Example:** A vehicle's mounted MG firing at an adjacent infantry unit gets the same +2 rFP close-range bonus (Rule 8.9.1) that any infantry MG team would get firing at the same range.
 
 **18.8.3**  HE fire: uses the flat HE rFP value. No falloff — HE effectiveness is constant regardless of range. Cover modifier applies but is reduced by 1 step (same as mortar indirect fire against buildings and reverse slopes).
 
+.. container:: rule-guide
+
+   **Why:** Gives HE fire the same flat, range-independent lethality as mortar blast (Rule 16.7.5) and applies the same reduced-cover treatment against certain protected positions (Rule 16.7.4), since a tank's HE shell striking a target behaves physically the same way a mortar round's blast does.
+
+   **Example:** A tank's HE fire against a target in a building applies that building's cover reduced by one step, just as a mortar's blast effect would against the same target in the same position (Rule 16.7.4).
+
 **18.8.4**  HE rFP derivation formula (resolved in spreadsheet): HE rFP = round(gun calibre in mm / 20). Examples: 37mm = 2, 75mm = 4, 88mm = 4, 105mm = 5, 122mm = 6.
 
+.. container:: rule-guide
+
+   **Why:** Derives a gun's HE effectiveness directly from its calibre with a simple formula, so every gun's printed HE rFP has a consistent, explicable basis rather than being independently chosen per weapon — a bigger shell reliably carries more explosive filler and thus more anti-infantry effect.
+
+   **Example:** As printed: a 75mm gun's HE rFP is round(75/20) = round(3.75) = 4, and an 88mm gun's is round(88/20) = round(4.4) = 4 — two different calibres landing at the same HE rFP because the formula rounds them to the same result.
+
 **18.8.5**  Fire against vehicles as soft targets: open-topped vehicles (the ○— symbol, Rule 17.1) and unarmoured (soft) vehicles can be attacked by HE, MG/small-arms fire (range 0–1 only), mortar blast (Rule 16.7.8), and grenades as if they were infantry, using a class Defence value — no per-vehicle stat is printed:
+
+.. container:: rule-guide
+
+   **Why:** Treats genuinely unprotected or lightly-protected vehicles like infantry for targeting purposes, since a soft-skinned truck or an open-topped half-track offers essentially the same vulnerability profile as troops in the open — one shared class Defence value avoids needing a bespoke stat printed on every such vehicle.
+
+   **Example:** A soft-skinned truck caught by small-arms fire at range 1 is attacked exactly as an infantry unit would be, using the printed class Defence of 6 (Rule 18.8.5 table) rather than any vehicle-specific armor value — it has none to check.
 
 .. list-table::
    :header-rows: 1
@@ -317,6 +557,12 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
 A Casualty result or better eliminates a soft vehicle; against an open-topped armoured vehicle it is a vehicle Casualty (Rule 18.6a applies if a table exists, else Rule 17.1.1).
 
 **18.8.6**  HE direct fire against a **closed** AFV never rolls on the penetration tables: resolve one roll on the Non-Penetrating Hit table (Rule 18.4), at +1 for guns of 105mm and larger — blast and concussion can suppress a crew but not open the tank. Damage to closed AFVs comes only through AP/HEAT penetration (Rule 18.2), overrun (18.11), Molotovs (18.10), and engineer attacks (Section 21).
+
+.. container:: rule-guide
+
+   **Why:** Blocks HE from ever penetrating a closed, armored vehicle's armor, since real high-explosive rounds don't reliably breach solid armor the way dedicated AP or HEAT rounds do — the best HE can do to a buttoned-up tank is rattle the crew, never actually damage the vehicle itself.
+
+   **Example:** A large-calibre HE round fired directly at a closed AFV rolls once on the Non-Penetrating Hit table (with a +1 bonus if 105mm or larger) — no matter how big the shell, it cannot produce a Casualty or Elimination result against that closed vehicle through this rule alone.
 
 18.9  Infantry Anti-Tank Weapons
 --------------------------------
@@ -391,7 +637,19 @@ Infantry AT weapons do not use the Gunnery Roll (Rule 18.1a.8) — they always h
 
 **18.9.1**  EXPENDED strip: when a single-shot AT weapon is fired, place an EXPENDED strip over the weapon band on the infantry counter. The band is covered for the remainder of the scenario. The strip is a reusable component — same width as all support weapon bands.
 
+.. container:: rule-guide
+
+   **Why:** Marks a single-shot weapon as permanently used up with a simple physical cover on the counter, since a Panzerfaust genuinely cannot be reloaded once fired — the EXPENDED strip is a durable, reusable component doing the same job across every support weapon that has a one-time-use band.
+
+   **Example:** A squad's Panzerfaust band gets covered with an EXPENDED strip the moment it's fired — for the rest of the scenario, that band is simply unavailable, with no further tracking needed than glancing at the counter.
+
 **18.9.2**  Panzerfaust, Bazooka, and PIAT are HEAT weapons for the purposes of Rule 18.2b (Schürzen) — halve their effective PEN against a Side arc bearing a Schürzen marker, same as any other HEAT attack.
+
+.. container:: rule-guide
+
+   **Why:** Confirms explicitly that infantry-carried shaped-charge weapons trigger the same standoff-armor protection as gun-fired HEAT rounds, since their underlying physics (a shaped-charge jet) is identical regardless of whether the weapon is vehicle-mounted or shoulder-fired.
+
+   **Example:** A Panzerfaust fired at a Schürzen-protected Side arc has its 140mm PEN halved to 70mm before comparison, exactly as a gun-fired HEAT round would in the same situation (Rule 18.2b.2).
 
 18.10  Molotov Cocktail
 -----------------------
@@ -399,9 +657,27 @@ Infantry AT weapons do not use the Gunnery Roll (Rule 18.1a.8) — they always h
 
 **18.10.1**  The Molotov cocktail can only target the engine deck — rear arc only, range 0-1 hex.
 
+.. container:: rule-guide
+
+   **Why:** Restricts the Molotov to the one place it could realistically be thrown to good effect — a tank's rear engine deck at very close range — since it's an improvised, thrown weapon with no ability to defeat frontal or side armor and no meaningful range beyond arm's reach.
+
+   **Example:** An infantry unit adjacent to a vehicle's rear can throw a Molotov at its engine deck; that same unit standing adjacent to the vehicle's front or side has no legal Molotov target at all — the weapon simply doesn't work from those arcs.
+
 **18.10.2**  On landing: roll 1d6. On 1-3: no effect (fire suppressed or misses engine). On 4-6: engine fire — vehicle Pinned immediately.
 
+.. container:: rule-guide
+
+   **Why:** Gives an improvised weapon like a Molotov real but unreliable odds — better than half the time it fails to actually catch the engine on fire, reflecting how genuinely hit-or-miss a thrown bottle of flaming liquid is against a moving armored target.
+
+   **Example:** A Molotov thrown at a vehicle's engine deck starts an engine fire on a roll of 4, 5, or 6 — a coin-flip-ish chance, not a guaranteed effect, for what is fundamentally an improvised weapon.
+
 **18.10.3**  Each subsequent Recovery Phase while engine fire is active: roll 1d6. On 1-3: crew extinguishes fire — remove Pinned status. On 4-5: fire continues — vehicle remains Pinned. On 6: fire spreads — roll on the Full Penetration Damage table (Rule 18.6.1) with a +1 modifier; its full range of outcomes (Suppressed through Eliminated) applies.
+
+.. container:: rule-guide
+
+   **Why:** Turns an ongoing engine fire into a recurring risk each Recovery Phase rather than a one-time effect, since a real vehicle fire genuinely can be extinguished, can smolder on, or can spread catastrophically — and a spreading fire reaching the Full Penetration Damage table means even an improvised Molotov carries some real chance of ultimately destroying the vehicle.
+
+   **Example:** A vehicle Pinned by an engine fire rolls again each Recovery Phase: most results either clear the fire or leave it burning (still Pinned), but a roll of 6 escalates all the way to the Full Penetration Damage table — meaning even a Molotov's fire can, rarely, end in the vehicle's outright Elimination.
 
 18.11  Overrun
 --------------
@@ -411,15 +687,51 @@ Overrun's pre-entry defensive fire does not use the Gunnery Roll (Rule 18.1a.8) 
 
 **18.11.1**  A vehicle may declare an overrun when moving into a hex occupied by enemy infantry. The vehicle must have sufficient MP remaining to enter the hex.
 
+.. container:: rule-guide
+
+   **Why:** Frames Overrun as an aggressive movement declaration into an occupied hex rather than a ranged attack, since it models a vehicle physically driving into a position to crush or scatter defenders directly — the MP requirement ensures the vehicle can actually complete the entry, not just start it.
+
+   **Example:** A vehicle with enough remaining MP to enter an enemy-occupied hex can declare an overrun into it; a vehicle with insufficient MP left cannot declare one against that hex this activation.
+
 **18.11.2**  Pre-entry defensive fire: before the vehicle enters the hex, the defending infantry may spend 1 RP to fire AT weapons at the approaching vehicle. This is resolved at range 1 (adjacent). Vehicle fires MG simultaneously at infantry.
+
+.. container:: rule-guide
+
+   **Why:** Gives defending infantry one last chance to strike the vehicle before it actually arrives in their hex, with both sides firing simultaneously — the defenders' desperate AT shot and the vehicle's own suppressive MG fire both happen in the same moment, neither side getting to react to the other's outcome first.
+
+   **Example:** As a vehicle closes in for an overrun, the defending infantry spends 1 RP to fire their AT weapon at it while the vehicle's MG fires back at the infantry — both resolve together, before the vehicle has actually entered the hex.
 
 **18.11.3**  After pre-entry fire resolves, the defending infantry must pass a morale check at threshold 5 or immediately rout.
 
+.. container:: rule-guide
+
+   **Why:** Tests whether the defenders can psychologically withstand a vehicle bearing down on their position after the pre-entry exchange, since having an armored vehicle physically closing on your hex is a serious morale test independent of whatever the pre-entry fire actually accomplished.
+
+   **Example:** Infantry that survives the pre-entry fire exchange unharmed still must pass this morale check — surviving the shooting doesn't automatically mean holding your ground against an oncoming tank.
+
 **18.11.4**  If infantry routs: vehicle enters hex unopposed.
+
+.. container:: rule-guide
+
+   **Why:** Lets a successful overrun complete cleanly once the defenders break and flee, since routing infantry (Section 10.6) is no longer a combat-effective obstacle to the vehicle's entry — there's nothing left in the hex still capable of resisting.
+
+   **Example:** Infantry that fails its Rule 18.11.3 morale check and routs immediately clears the way — the vehicle simply enters the now-vacated hex without further opposition.
 
 **18.11.5**  If infantry holds: vehicle enters hex. Both sides are now in the same hex. Close combat continues each subsequent impulse — infantry fires AT weapons at range 0, vehicle fires MG at range 0. No cover modifiers apply. Range 0 bonus (+3 rFP) applies to the vehicle MG. Both sides resolve simultaneously.
 
+.. container:: rule-guide
+
+   **Why:** Turns a successful morale check into ongoing point-blank close combat rather than stopping the vehicle outside the hex, since holding infantry that doesn't rout is now sharing a hex with an enemy vehicle at the closest possible range — a genuinely desperate, simultaneous fight neither side can easily disengage from.
+
+   **Example:** Infantry that holds against the overrun continues trading fire with the vehicle every subsequent impulse at range 0, with no cover protecting either side and the vehicle's MG getting its full close-range bonus — both sides keep resolving simultaneously until someone breaks or the vehicle withdraws.
+
 **18.11.6**  Vehicle withdrawal from overrun hex: costs the vehicle's full remaining M# to exit. The vehicle is considered to have used its entire activation withdrawing.
+
+.. container:: rule-guide
+
+   **Why:** Makes disengaging from a close-combat overrun hex expensive — the vehicle's entire remaining movement, using up its whole activation — since extracting from point-blank range under fire genuinely isn't a quick or free maneuver.
+
+   **Example:** A vehicle locked in overrun close combat that wants out must spend its full remaining M# just to exit the hex, consuming the rest of that activation entirely — it cannot withdraw and then also do something else that same turn.
 
 18.12  Historical Matchup Verification
 --------------------------------------
