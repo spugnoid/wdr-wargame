@@ -23,8 +23,11 @@
  *      iframes) instead of navigating away -- the left pane keeps your
  *      place, the right pane jumps to the target, both fully independent
  *      readers. Once both panes exist, clicking a rule reference in
- *      either one updates the OTHER pane's target as well, while the
- *      clicked pane still follows the link normally.
+ *      either one sends only the OTHER pane to that target -- the pane
+ *      you clicked in stays exactly where it was, so it keeps working as
+ *      your place in the book while the other pane becomes your lookup
+ *      surface. (An earlier version sent both panes to the same target,
+ *      which collapsed the point of having two of them.)
  *   5. On narrow/touch viewports, all of the above is skipped in favour
  *      of plain single-tab anchor navigation -- nothing new to break on
  *      mobile.
@@ -273,9 +276,10 @@
         var link = e.target.closest('a.rule-ref');
         if (!link) return;
         e.preventDefault();
-        var href = link.getAttribute('href');
-        otherFrame.src = href;
-        frame.contentWindow.location.href = href;
+        // Send only the OTHER pane to the target -- the pane you're
+        // reading stays put, so it keeps working as a lookup surface
+        // instead of both panes converging on the same page.
+        otherFrame.src = link.getAttribute('href');
       });
     });
   }
