@@ -467,7 +467,9 @@ representative counters 1943  ..........  21.9
 
 covers used capability icon or weapon band  ..........  18.9.1
 
-**Experience Modifier (EM)**  ..........  1.3
+**Experience Modifier (EM)**  ..........  1.3, 13.5.2
+
+promotion via CI-free streak  ..........  13.5.2a, E.101
 
 **Exposure rules — eliminated**  ..........  E.94
 
@@ -943,11 +945,21 @@ four levels  ..........  13.2
 
 loser reduced one step  ..........  13.2.1
 
+resupply tiers  ..........  13.2.2, E.100
+
 **Registered target (mortar)**  ..........  16.4.1
 
 limit 2 per mortar  ..........  16.4.1
 
 reduced delay  ..........  16.4.1
+
+**Replacement Points**  ..........  13.2.2a, E.100
+
+bump a recovery roll one tier  ..........  13.2.2a
+
+do not carry over between campaign turns  ..........  13.2.2a
+
+**Resupply**  ..........  13.2.2, E.100
 
 **Resolution FP**  ..........  1.3, 8.4
 
