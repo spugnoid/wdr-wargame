@@ -1,7 +1,7 @@
 Section 13 — Campaign Rules
 ===========================
 
-*[ TBD: Two pieces of the campaign economy remain undesigned: EM's downward half (Rule 13.5.2) and the full branching campaign structure (Rule 13.5) — the actual tree of linked scenarios is campaign-specific authored content, not a generic rule, and is left to each campaign's own design. Everything else in this section is complete. ]*
+*[ TBD: One piece of the campaign economy remains undesigned: EM's downward half (Rule 13.5.2). Everything else in this section, including the generic branching campaign framework (Rule 13.5), is complete — authoring an actual campaign's specific scenarios and branch tables is campaign-specific content the framework supports but does not itself provide. ]*
 
 13.1  Casualty Track
 --------------------
@@ -141,11 +141,9 @@ BROKEN zone recovery (Days window or better):
 ----------------------------------
 
 
-*[ TBD: Full branching campaign design to be completed. Framework below. ]*
+The campaign consists of a series of scenarios linked by a branching structure (13.5.3–13.5.7). The outcome of each scenario (decisive victory, marginal victory, draw, marginal defeat, decisive defeat) determines which scenario follows.
 
-The campaign consists of a series of scenarios linked by a branching tree structure. The outcome of each scenario (decisive victory, marginal victory, draw, marginal defeat, decisive defeat) determines which scenario follows.
-
-**13.5.1**  Outcome grades, until the full campaign design lands, map from the scenario's own end state (Rules 15.7, 22.6): a win by Force Morale collapse or with at least **twice** the loser's victory points is a **decisive victory**; any other win is a **marginal victory**; equal victory points at the turn limit is a **draw**. Defeats mirror the victories from the loser's side.
+**13.5.1**  Outcome grades map from the scenario's own end state (Rules 15.7, 22.6): a win by Force Morale collapse or with at least **twice** the loser's victory points is a **decisive victory**; any other win is a **marginal victory**; equal victory points at the turn limit is a **draw**. Defeats mirror the victories from the loser's side.
 
 **13.5.2**  A unit's Experience Modifier (EM, Rule 1.3) begins at +0 for every counter fielded at its printed quality. Track a **CI-free streak** on the unit's roster sheet: it increases by one at the end of any scenario the unit finishes without being rendered CI (broken, dispersed, or captured — Rule 13.1), and resets to zero the instant the unit is rendered CI in a scenario.
 
@@ -154,5 +152,15 @@ The campaign consists of a series of scenarios linked by a branching tree struct
 **13.5.2b**  EM applies to any counter with a printed Quality rating — combat units, weapon teams, and vehicle crews alike (Rule 19.6.1). A unit fielded at Militia can, over a long campaign, reach Veteran/Elite after three separate 3-scenario CI-free streaks (9 CI-free scenarios total, with the streak resetting on every intervening CI).
 
 *[ TBD: this rule covers only EM's upward, combat-experience half. EM "reflecting combat experience gained **or lost**" (Rule 1.3) and Rule 19.6.1's "quality degrades with replacement crew" both name a downward half — a unit or vehicle crew losing EM steps — that is not yet designed. Treat EM as strictly non-negative until that half is defined. See design note E.102. ]*
+
+**13.5.3**  A campaign is authored as a set of **nodes**, each one linking a single scenario to a **branch table**: an assignment of every outcome grade (13.5.1) to either another node or to **END**. A campaign always designates one node as its **start**.
+
+**13.5.4**  A branch table's five outcome grades need not each name a different node — the scenario designer may route multiple grades to the same next node (e.g. both victory grades to one node, both defeat grades to another, draw to a third), or route all five to distinct nodes, entirely at the designer's discretion. Every grade must route somewhere; a branch table with a grade left unassigned is incomplete.
+
+**13.5.5**  More than one node's branch table may point to the same next node. A campaign is therefore not required to be a strict tree — different paths through it may reconverge — but it may never point back to a node already visited earlier in the same playthrough's path (no cycles). This keeps the total scenarios a designer must author manageable as a campaign grows deeper, without ever letting a campaign run forever.
+
+**13.5.6**  Playing a campaign: begin at the start node and play its scenario. Determine the outcome grade (13.5.1) from a side nominated by the campaign's own design (its "reference side" — e.g. the historical attacker, or Side A) and consult that node's branch table. If it names another node, that node's scenario is played next, applying the Recovery Window and between-scenario steps (13.2–13.4) for the campaign turn between them. If it names END, the campaign is over.
+
+**13.5.7**  The side that won the terminal scenario — by the same outcome grade (13.5.1) used throughout — wins the campaign. A terminal scenario ending in a draw is a drawn campaign.
 
 A winning campaign branch should produce momentum — better recovery time, intelligence from prisoners, and eventually unit experience (13.5.2). A losing branch should produce compounding pressure — no recovery time, degraded units, forced to fight with what remains.

@@ -229,7 +229,7 @@ extinguishing  ..........  21.5.6
 
 **Campaign rules**  ..........  S.13
 
-branching structure  ..........  13.5
+branching structure (nodes, branch tables, DAG)  ..........  13.5.3–13.5.7, E.103
 
 between-scenario recovery rolls  ..........  13.3
 
