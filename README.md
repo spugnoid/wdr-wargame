@@ -107,4 +107,4 @@ Note: the game's mechanics (formulas, procedures, result tables as *ideas*) are 
 
 ## Status
 
-Rules of Play: v0.9.2, working draft. See `docs/source/appendix_e__design_notes.rst` for the full design-decision log.
+Rules of Play: v0.9.3, working draft. See `docs/source/appendix_e__design_notes.rst` for the full design-decision log.

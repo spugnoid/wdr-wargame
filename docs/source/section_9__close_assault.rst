@@ -7,7 +7,12 @@ Section 9 — Close Assault
 
 **9.1.1**  A unit may declare a close assault against an enemy unit in an adjacent hex. This costs 1 AP.
 
-**9.1.2**  The assaulting unit must be completely fresh (M# > 0, and no ASSAULT, FIRED, or MOVED/FIRED marker present this turn — Rule 6.3.2).
+**9.1.2**  The assaulting unit must have M# > 0 and no FIRED or MOVED/FIRED marker present this turn, and must declare under one of two paths:
+
+- **Fresh declaration**: a completely fresh unit (no ASSAULT marker either) may declare Close Assault freely, as its own Regular action (Rule 6.3.2).
+- **ASSAULT-marked declaration**: a unit already carrying the ASSAULT marker (one part-action already spent this turn) may declare Close Assault as its **second** part-action only if a leader is present in its hex — either coordinating that unit alone, or activating it together with other units in the same stack (Rule 6.1.1). A unit already carrying ASSAULT with no leader present may still take its second part-action (an ordinary Assault Move or Assault Fire), but may not initiate a close assault with it.
+
+See Rule 6.3.3.
 
 **9.1.3**  A Suppressed or Pinned unit may not declare a close assault.
 

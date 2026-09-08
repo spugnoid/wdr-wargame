@@ -4,8 +4,8 @@
 project = 'With Deepest Regret...'
 copyright = '2026, Rod Peters'
 author = 'Rod Peters'
-release = '0.9.2'
-version = '0.9.2'
+release = '0.9.3'
+version = '0.9.3'
 
 extensions = [
     'sphinx.ext.autosectionlabel',
