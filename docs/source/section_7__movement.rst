@@ -142,13 +142,13 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
 
 **7.4.1**  A unit may declare Careless Movement when spending a Move action. The unit moves M#+1 hexes instead of its normal M# allowance.
 
-**7.4.2**  Place a CARELESS marker on the unit. The unit suffers -2 CON (concealment) for the remainder of this turn.
+**7.4.2**  Place the unit's MOVED/FIRED marker CARELESS-side up. The unit suffers -2 CON (concealment) for the remainder of this turn. Careless Movement is only ever taken as a Regular Move action, which already ends the unit's turn as MOVED/FIRED (Rule 6.3.2) — so this one physical marker, shown CARELESS-side up, carries both facts at once (Rule 3.6).
 
 **7.4.3**  Any enemy unit with LOS to the moving unit may attempt a free spot roll during the movement reaction window. This spot roll costs no RP.
 
 **7.4.4**  Careless movement represents troops moving quickly without tactical caution — appropriate in areas the owning player believes are safe. It is always risky if enemy units are present.
 
-**7.4.5**  The CARELESS marker is removed during the Recovery Phase.
+**7.4.5**  The marker is removed during the Recovery Phase, along with all other action markers (Rule 5.2.2).
 
 7.5  Moving Target Modifier
 ---------------------------

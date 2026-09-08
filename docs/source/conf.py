@@ -9,8 +9,8 @@ sys.path.insert(0, os.path.abspath('_ext'))
 project = 'With Deepest Regret...'
 copyright = '2026, Rod Peters'
 author = 'Rod Peters'
-release = '0.9.3'
-version = '0.9.3'
+release = '0.9.4'
+version = '0.9.4'
 
 extensions = [
     'sphinx.ext.autosectionlabel',

@@ -139,33 +139,26 @@ With Deepest Regret... uses a physical hidden information system to model the fo
 ---------------------
 
 
-**14.8.1**  When a spotted unit successfully goes hidden during play, a CONTACT marker is placed at the hex where it was last seen.
+**14.8.1**  When a spotted unit successfully goes hidden during play, a CONTACT marker is placed CONTACT-side up at the hex where it was last seen.
 
-**14.8.2**  CONTACT markers advance through three states, one step per Recovery Phase:
+**14.8.2**  The marker is a two-sided flip token, one flip per Recovery Phase:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - **State**
-     - **Appearance**
      - **Age**
      - **Meaning**
-   * - FRESH
-     - Bright marker, solid symbol
-     - Current turn
-     - Recent intelligence — unit was here this turn
-   * - RECENT
-     - Dimmed or flipped marker
-     - 1 turn old
-     - Unit likely has moved from this position
-   * - COLD
-     - Faded or different colour
+   * - CONTACT
+     - Placed this turn or the last
+     - Recent intelligence — unit was here this turn or last
+   * - STALE
      - 2 turns old
-     - Outdated — removed end of this Recovery Phase
+     - Outdated — removed at the end of this Recovery Phase
 
 
-**14.8.3**  COLD markers are removed at the end of the Recovery Phase in which they become cold.
+**14.8.3**  At the first Recovery Phase after placement, flip the marker to its STALE face. At the following Recovery Phase, remove it. This is the same three-turn information lifespan as before, just two states instead of three — see design note E.99.
 
 **14.8.4**  CONTACT markers are not combat units. They have no game effect beyond conveying information age.
 

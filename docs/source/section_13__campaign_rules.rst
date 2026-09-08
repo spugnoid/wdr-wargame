@@ -110,7 +110,7 @@ BROKEN zone recovery (Days window or better):
 
 **13.4.3**  If both combining units share the same quality level, the combined unit returns at that quality. If they differ, the combined unit uses the lower quality. If the quality gap exceeds one step, combination is not permitted.
 
-**13.4.4**  Combined units receive a Composite marker. Composite units have -1 Morale until they complete one full scenario without being rendered CI.
+**13.4.4**  Record the combined unit as Composite on its roster/OB sheet entry — no physical marker is placed on the map. A Composite unit has -1 Morale until it completes one full scenario without being rendered CI, at which point the notation is cleared from the roster sheet. See design note E.98.
 
 13.5  Branching Campaign Structure
 ----------------------------------
