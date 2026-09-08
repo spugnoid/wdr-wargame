@@ -52,7 +52,7 @@ A unit may react more than once per turn while it still has an unspent part-acti
      - One attack at full effective rFP (Section 8). → MOVED/FIRED — unless the firing weapon is a stationary weapon with ROF greater than 1 (Rule 6.6), which is marked FIRED 1 instead and may fire again.
    * - Close Assault
      - 1
-     - Declare close assault against an adjacent occupied enemy hex. Requires a completely fresh unit (no ASSAULT, FIRED, or MOVED/FIRED marker present this turn). See Section 9.
+     - Declare close assault against an adjacent occupied enemy hex. A completely fresh unit (no ASSAULT, FIRED, or MOVED/FIRED marker present this turn) may declare freely. See Section 9 and Rule 6.3.3 for the ASSAULT-marked case.
    * - Rally
      - 1
      - Leader attempts to rally one suppressed or pinned unit within command radius. See Rule 12.6.
@@ -94,6 +94,9 @@ A unit may react more than once per turn while it still has an unspent part-acti
    * - Assault Fire
      - 1
      - One attack at half effective rFP, rounded down — the halving is applied to the final effective rFP after falloff, terrain, and status modifiers (Rule 8.2.5 governs a result of 0 or less).
+   * - Close Assault
+     - 1
+     - Available only to a unit already carrying the ASSAULT marker (one part-action already spent), as its **second** part-action, and only with a leader present — in the assaulting unit's hex, either coordinating that unit alone or activating it together with other units in the same stack (Rule 6.1.1). Without a leader present, an ASSAULT-marked unit may not declare Close Assault this turn — its second part-action must be an ordinary Assault Move or Assault Fire. See Rule 9.1.2.
 
 
 After a unit's **first** part-action this turn (of either kind, in either order), place the ASSAULT marker: one part-action spent, one remains — a move or a fire, whichever the player chooses. After the **second** part-action, remove ASSAULT and place MOVED/FIRED. Legal sequences include Assault Move → Assault Fire, Assault Fire → Assault Move, and Assault Fire → Assault Fire; a unit may also take Assault Move → Assault Move, though for most infantry this covers no more ground than a single Regular Move at half the AP efficiency.
