@@ -334,3 +334,34 @@ a.rule-ref:hover {
     display: none !important;
   }
 }
+
+/* Guide & Example boxes: authored in the RST directly after a rule as
+   ".. container:: rule-guide", hidden during normal single-page reading
+   (rule_links.js toggles one into view -- in place of the raw rule
+   paragraph -- inside a split pane when that rule is the pane's target;
+   see the "Right pane: guide-or-raw" comment in that file). Hidden by
+   default rather than removed from the page so a plain anchor jump on
+   mobile, and the hover-preview popup, both still show only the raw
+   rule text -- the guide is a split-pane-only enhancement. */
+.rule-guide {
+  display: none;
+  margin: 0.6em 0 1em;
+  padding: 0.6em 0.9em;
+  background: var(--paper-alt);
+  border: 1px solid var(--khaki);
+  border-left: 4px solid var(--olive);
+  border-radius: 2px;
+  font-size: 0.95em;
+}
+
+.rule-guide p {
+  margin: 0.4em 0;
+}
+
+.rule-guide p:first-child {
+  margin-top: 0;
+}
+
+.rule-guide p:last-child {
+  margin-bottom: 0;
+}
