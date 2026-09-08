@@ -126,19 +126,15 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
 
 **7.2.3**  Building floor interaction example: a unit with M2 entering a building at ground floor (1 MP) and moving to the first floor (1 MP) uses its entire activation. It cannot reach the second floor without starting adjacent to the building at the start of the activation.
 
-7.3  Moving and Firing
-----------------------
+7.3  The Assault Bound
+------------------------
 
 
-**7.3.1**  A unit may move and fire in the same impulse by taking a Move and Fire (Assault) action. This costs 1 AP and places the ASSAULT marker.
+**7.3.1**  Rule 6.3.3 defines the Assault economy in full — up to two part-actions (Assault Move, Assault Fire) at reduced effect, in either order, marked with ASSAULT after the first and MOVED/FIRED after the second. This rule covers only the movement-specific detail of the Assault Move part-action.
 
-**7.3.2**  The move portion of an Assault action is limited to 1 hex regardless of M# — the unit bounds to a new position and fires from there.
+**7.3.2**  An Assault Move bounds the unit exactly 1 hex regardless of M#, paying that hex's terrain cost under the ordinary rules (Rule 7.1.4 — a unit may always enter a single hex regardless of cost, even if it exceeds what a full move would otherwise afford).
 
-**7.3.3**  A unit with an ASSAULT marker may still use remaining fire actions (FIRE 2, FIRE 3) in subsequent impulses from a stationary position but may not move again this turn.
-
-**7.3.4**  The Assault action's move and fire may be taken in either order — bound then fire, or fire then bound. Either way, place the ASSAULT marker only: it subsumes the fire (Rule 6.5.3), and no FIRE 1 marker is placed alongside it. Remaining rights are identical in both orders.
-
-**7.3.5**  In both cases the unit is Exposed (Rule 6.6.1): until its own reaction window closes if it ends the action in cover +2 or better, until the end of the turn otherwise.
+**7.3.3**  A unit may take an Assault Move as either its first or second part-action; two Assault Moves in the same turn are legal (2 hexes total across two impulses) but for most infantry cover no more ground than a single Regular Move (Rule 6.3.2) at twice the AP cost.
 
 7.4  Careless Movement
 ----------------------
@@ -158,9 +154,11 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
 ---------------------------
 
 
-**7.5.1**  A unit that is currently in the process of moving (MOVED marker placed, unit in transit) is a moving target. Opportunity fire against a moving target is declared at an interruption point — whenever the unit enters a new hex during its move (Rule 5.5.3) — and resolves before the unit moves further.
+**7.5.1**  A unit currently resolving a Move or Assault Move action, before that action fully completes, is a moving target. Opportunity fire against a moving target is declared at an interruption point — whenever the unit enters a new hex during its move (Rule 5.5.3) — and resolves before the unit moves further.
 
 **7.5.2**  Opportunity fire against a moving target applies -2 rFP to the attacker.
+
+**7.5.2a**  Exception: when the target is a vehicle, this penalty does not stack with the Gunnery Roll's own crossing-target adjustment (Rule 18.1a.6/18.1a.9) — the vehicle-specific adjustment replaces it. Rule 7.5.2 applies exactly as written when the target is infantry.
 
 **7.5.3**  If opportunity fire produces No Effect, the moving unit continues normally.
 
@@ -178,4 +176,4 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
 
 **7.6.3**  Removing the MOBILE marker (deploying the weapon) costs 1 AP. The weapon may not fire in the same impulse it deploys.
 
-**7.6.4**  Adding the MOBILE marker (limbering the weapon) costs 1 AP. The weapon may not fire in the same impulse it limbers.
+**7.6.4**  Adding the MOBILE marker (limbering the weapon) costs 1 AP. The weapon may not fire in the same impulse it limbers. A weapon that expended its printed ROF this turn (Rule 6.6) may not limber until the following turn.

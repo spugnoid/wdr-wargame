@@ -15,13 +15,13 @@ states (ABANDONED, DAMAGED, DESTROYED)  ..........  19.3.1
 
 **Action markers**  ..........  3.6, 6.5
 
-ASSAULT marker  ..........  6.5.3, 7.3
+ASSAULT marker  ..........  6.5.1, 6.3.3
 
-FIRE 1/2/3 markers  ..........  6.5.2
+FIRED 1/2/3 markers (ROF weapons)  ..........  6.5.1, 6.6
 
-MOVED marker  ..........  6.3
+MOVED/FIRED marker  ..........  6.5.1
 
-OPPORTUNITY marker  ..........  6.3
+OPPORTUNITY marker  ..........  6.2.3
 
 removal (Recovery Phase)  ..........  5.2.2, 6.5.4
 
@@ -155,13 +155,13 @@ deployment procedure  ..........  21.8.2
 
 destruction  ..........  21.8.6
 
-**Assault fire (move and fire)**  ..........  6.3, 7.3
+**Assault fire (move and fire)**  ..........  6.3.3, 7.3
 
 1 hex move limit  ..........  7.3.2
 
-ASSAULT marker placed  ..........  6.5.3
+ASSAULT marker placed  ..........  6.3.3
 
-Exposure triggered  ..........  7.3.5
+half effective rFP  ..........  6.3.3, 2.5
 
 **AT rifle**  ..........  18.9
 
@@ -469,15 +469,9 @@ covers used capability icon or weapon band  ..........  18.9.1
 
 **Experience Modifier (EM)**  ..........  1.3
 
-**Exposure rules**  ..........  6.6
+**Exposure rules — eliminated**  ..........  E.94
 
-Firing Exposed (second fire from open ground)  ..........  6.6.2
-
-first fire not exposed  ..........  6.6.3
-
-Move and Fire always exposed  ..........  6.6.1
-
-opportunity fire cost vs exposed unit  ..........  6.6.4
+reactions are momentary, resolved at the triggering action  ..........  6.2.3, E.94
 
 **F**
 
@@ -527,7 +521,9 @@ fields  ..........  16.12
 
 **Fire rate (F#)**  ..........  3.3.2
 
-**Firing Exposed — see Exposure rules**  ..........  6.6.2
+superseded by ROF / Assault economy pending counter review  ..........  3.3.2, 6.6.6
+
+**Firing Exposed — eliminated**  ..........  E.94
 
 **FIXED units**  ..........  14.7
 
@@ -825,7 +821,9 @@ requires radio operator/FO  ..........  16.11.3
 
 free vs careless movement  ..........  7.4.3
 
-trigger: enemy moves into LOS or Exposed  ..........  6.4
+trigger: enemy moves into LOS or fires  ..........  6.4
+
+marking consequences (Assault Fire or ROF pip)  ..........  6.2.3
 
 **Out of command**  ..........  12.4
 
@@ -1031,9 +1029,9 @@ victory conditions  ..........  22.6
 
 **Sealed slip — see Fire mission slip**  ..........  16.5
 
-**Skulking — eliminated by design**  ..........  E.8
+**Skulking — eliminated by design**  ..........  E.8, E.94
 
-Exposure system fix  ..........  6.6, E.8
+momentary reactions replace the Exposure system  ..........  6.2.3, E.94
 
 **Smoke**  ..........  16.9, 16.10
 

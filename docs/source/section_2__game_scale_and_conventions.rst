@@ -54,3 +54,13 @@ With Deepest Regret... uses a specific counter notation for firepower and fallof
 **2.4.5**  Example:  A fire line reading 7 ⬡4 -1 means: base FP 7, loses 1 FP for every 4 hexes of range beyond hex 1.
 
 **2.4.6**  The [icon] preceding the rFP value identifies the weapon class. See Section 3.1 for weapon class icons.
+
+2.5  Rounding Conventions
+--------------------------
+
+
+**2.5.1**  Unless a specific rule states otherwise, **halve, round down** is this game's standard convention wherever a value is halved (minimum 1 where a rule says so explicitly, e.g. Suppressed movement, Rule 10.1).
+
+**2.5.2**  Rules already using this convention before it was stated here: Suppressed movement (half M#, round down, minimum 1, Rule 10.1), grenade-phase cover (halved, round down, Rule 9.3.5), flamethrower cover (halved, round down, Rule 21.5.3), and Assault Fire (half effective rFP, round down, Rule 6.3.3).
+
+**2.5.3**  Reaction Points (RP = round(AP / 2), Rule 5.3.4) is a deliberate, separately-made choice and is not affected by this convention — it keeps its own rounding.

@@ -7,7 +7,7 @@ Section 9 — Close Assault
 
 **9.1.1**  A unit may declare a close assault against an enemy unit in an adjacent hex. This costs 1 AP.
 
-**9.1.2**  The assaulting unit must have a Move action available (M# > 0 and no MOVED or ASSAULT marker placed this turn).
+**9.1.2**  The assaulting unit must be completely fresh (M# > 0, and no ASSAULT, FIRED, or MOVED/FIRED marker present this turn — Rule 6.3.2).
 
 **9.1.3**  A Suppressed or Pinned unit may not declare a close assault.
 
@@ -25,7 +25,7 @@ Section 9 — Close Assault
 
 **9.2.1**  Before the Grenade Phase begins, the defending player may choose voluntary withdrawal.
 
-**9.2.2**  Voluntary withdrawal is available only if: the defending unit is not Suppressed or Pinned; a clear withdrawal hex exists (not blocked, not occupied by enemy); and the defending unit has not already fired this turn (no FIRE **or ASSAULT** marker present — an ASSAULT marker records a fire, Rule 6.5.3).
+**9.2.2**  Voluntary withdrawal is available only if: the defending unit is not Suppressed or Pinned; a clear withdrawal hex exists (not blocked, not occupied by enemy); and the defending unit is completely fresh this turn (no ASSAULT, FIRED, or MOVED/FIRED marker present). A unit that has already acted — even just to move — has already shown itself engaged and no longer qualifies for a bloodless withdrawal.
 
 **9.2.3**  On voluntary withdrawal, the defender moves 1 hex away from the assaulting unit's approach direction. The attacker occupies the vacated hex unopposed. No combat occurs.
 

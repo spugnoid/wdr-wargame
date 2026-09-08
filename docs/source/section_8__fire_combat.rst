@@ -207,12 +207,10 @@ The full procedure for any fire combat action:
 
 **8.9.3**  These bonuses represent the dramatically increased effectiveness of close-range fire.
 
-8.10  Firing Exposed
---------------------
+8.10  Assault and Reaction Fire
+---------------------------------
 
 
-**8.10.1**  See Section 6.6 for the full Firing Exposed rules and trigger conditions.
+**8.10.1**  Assault Fire (Rule 6.3.3) and reaction fire (Rule 6.2.3) are ordinary fire attacks resolved by this section, at half effective rFP rather than full — nothing else about their resolution differs. A stationary ROF-greater-than-1 weapon's reaction (Rule 6.6) is a full-effective-rFP attack instead, exactly like its own Regular Fire.
 
-**8.10.2**  Summary: Move and fire (ASSAULT) = Exposed. Second or later fire this turn while in open ground = Firing Exposed. First fire from any position = not Exposed.
-
-**8.10.3**  Exposed units may be targeted by opportunity fire at 1 RP cost. Firing Exposed units impose -1 rFP on the attacker. Moving units impose -2 rFP on the attacker.
+**8.10.2**  A moving unit's own fire is unaffected by this rule — it is the attacker in that exchange, not the target. The -2 rFP penalty for firing *at* a moving target is Rule 7.5.2.

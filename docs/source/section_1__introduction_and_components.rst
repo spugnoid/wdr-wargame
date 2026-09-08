@@ -43,9 +43,9 @@ The game does not glorify war. The ordinary soldiers of every nation were not ev
      - 1
    * - Custom dice: 1×d6, 1×d8, 1×d12 per player
      - 2 sets
-   * - Action markers (MOVED, FIRE 1/2/3, ASSAULT, OPPORTUNITY, CARELESS)
+   * - Action markers (ASSAULT, FIRED 1/2/3, MOVED/FIRED, OPPORTUNITY, CARELESS)
      - TBD
-   * - Status markers (SUPPRESSED, PINNED, MOBILE, EXPOSED)
+   * - Status markers (SUPPRESSED, PINNED, MOBILE)
      - TBD
    * - Prisoner (POW) markers per nation
      - TBD
@@ -139,7 +139,13 @@ The following terms are used throughout this document. Each term is defined here
 
 **Pinned —**  A status condition preventing movement and severely degrading fire effectiveness.
 
-**Exposure —**  Two distinct conditions (Rule 6.6): **Exposed** — took a Move and Fire (Assault) action this turn; opportunity fire against it takes no penalty. **Firing Exposed** — fired a second or later time this turn while in open ground; opportunity fire against it takes -1 rFP. Both invite opportunity fire (1 RP).
+**Regular action —**  A unit's full-effect option for its turn: one Move at full M#, or one Fire at full effective rFP. Ends the unit's turn (MOVED/FIRED) except for a stationary weapon exercising ROF (Rule 6.6). See Rule 6.3.
+
+**Assault economy —**  A unit's reduced-effect alternative to a Regular action: up to two part-actions (Assault Move, 1 hex regardless of M#; Assault Fire, half effective rFP) in either order. Rule 6.3.3.
+
+**ROF —**  Rate of Fire. The number of times a stationary weapon (deployed HMG: 3; bipod-mounted LMG/MMG: 2) may fire at full effective rFP in one turn. Rule 6.6. Distinct from the printed F# value, which this rule does not consult.
+
+**MOVED/FIRED —**  The marker showing a unit is done for the turn — no further movement or fire, though it retains close-combat defense and, if it is the target of a close assault, Desperate Fire (Rule 6.7).
 
 **AP —**  Action Points. The resource controlling how many units the active player may activate per turn.
 
