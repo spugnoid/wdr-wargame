@@ -20,6 +20,16 @@ rule number to the HTML page it lives on, e.g. ``{"6.3.3":
 "section_6__actions_and_reactions.html", ...}``. The client-side JS fetches
 this once per page load to resolve a rule mention to a URL before it can
 turn it into a link.
+
+Sphinx may read documents in parallel worker processes (``sphinx-build
+-j``, which is what Read the Docs' hosted builder uses); each worker gets
+its own copy of the environment, so data a doctree-read handler stashes
+directly on ``app.env`` (as ``rule_locations`` is here) is invisible to the
+main process unless explicitly merged back via the ``env-merge-info``
+event -- without it, a parallel build silently produces an empty manifest
+even though a plain sequential ``sphinx-build`` works fine.
+``env-purge-doc`` similarly drops a document's stale
+entries before an incremental rebuild re-reads it. See design note E.100.
 """
 
 from __future__ import annotations
@@ -76,6 +86,30 @@ def _collect_rule_ids(app, doctree):
         app.env.rule_locations[rule_number] = docname
 
 
+def _purge_rule_locations(app, env, docname):
+    """env-purge-doc handler: drop this document's previously recorded rule
+    numbers before an incremental rebuild's doctree-read repopulates them --
+    otherwise a rule renumbered or removed from an edited document leaves a
+    stale entry in the manifest pointing at the wrong page."""
+    locations = getattr(env, "rule_locations", None)
+    if not locations:
+        return
+    for rule_number in [rn for rn, dn in locations.items() if dn == docname]:
+        del locations[rule_number]
+
+
+def _merge_rule_locations(app, env, docnames, other):
+    """env-merge-info handler: a parallel read (sphinx-build -j) collects
+    rule_locations in each worker's own environment copy; merge each
+    worker's data back into the main environment after the read phase.
+    Required for the manifest to come out complete under parallel builds --
+    Read the Docs' hosted builder uses one, even though this repo's own
+    sequential test build never exercised the gap."""
+    if not hasattr(env, "rule_locations"):
+        env.rule_locations = {}
+    env.rule_locations.update(getattr(other, "rule_locations", {}))
+
+
 def _write_manifest(app, exception):
     """build-finished handler: dump the accumulated manifest as JSON into
     the build's _static directory, docname -> html filename."""
@@ -93,5 +127,7 @@ def _write_manifest(app, exception):
 
 def setup(app):
     app.connect("doctree-read", _collect_rule_ids)
+    app.connect("env-purge-doc", _purge_rule_locations)
+    app.connect("env-merge-info", _merge_rule_locations)
     app.connect("build-finished", _write_manifest)
     return {"version": "1.0", "parallel_read_safe": True, "parallel_write_safe": True}
