@@ -31,7 +31,7 @@ movement or fire this turn). Three paths lead there:
     in 7.3.2, kept as-is (a deliberate choice: the assault bound is a
     rush to the next position, not half a road march).
   - **Assault Fire**: one attack at **half effective rFP, rounded down**
-    *(where the halving applies: Open Point B)*.
+    (applied after falloff/terrain/status modifiers — §Resolved-A).
 - After the **first** part-action: place the **ASSAULT** marker (one
   part-action spent; one remains — move or fire, either kind).
 - After the **second**: → MOVED/FIRED.
@@ -69,7 +69,7 @@ movement or fire this turn). Three paths lead there:
   remaining may **react** during an enemy impulse at the Rule 5.5 timing
   points (declaration window, movement interruption points, post-action
   window) against an action that draws fire — moving into a hex, firing,
-  becoming Exposed.
+  or any other fire-drawing action (Exposure is eliminated, §7).
 - Reaction fire costs the reacting player **1 RP** (the existing RP
   economy stands) and costs the reacting unit **no impulse and no AP** —
   but it marks the unit exactly as if it had taken that fire on its own
