@@ -46,6 +46,26 @@
     return window.matchMedia(MOBILE_QUERY).matches;
   }
 
+  function isInOwnSplitPane() {
+    // This same script runs again, independently, every time a page loads
+    // inside one of our own split-view iframes (it's the same site, so the
+    // iframe's <script src="rule_links.js"> tag fires its own boot() just
+    // like a normal top-level page load). Left unguarded, that second copy
+    // would attach its own click-to-split handler on top of wireFrame's
+    // (below), which already fully owns navigation and linkification for
+    // pane content -- the two would race, and on a wide-enough pane (a
+    // pane's own width, not the outer window's, decides isMobile() here)
+    // the pane's own copy can boot a nested split view of its own, seen
+    // briefly before wireFrame's navigation tears it back down. Detecting
+    // "I am one of our own panes" and skipping self-boot entirely removes
+    // the race instead of relying on timing.
+    try {
+      return !!(window.frameElement && window.frameElement.classList.contains('rule-split-pane'));
+    } catch (e) {
+      return false; // cross-origin frameElement access (shouldn't happen, same-origin site)
+    }
+  }
+
   function loadManifest() {
     if (!manifestPromise) {
       // _static/ is always a sibling of the current page's directory
@@ -288,6 +308,7 @@
   // ---- Boot -------------------------------------------------------------
 
   document.addEventListener('DOMContentLoaded', function () {
+    if (isInOwnSplitPane()) return; // wireFrame() (this file, above) already owns this page's behavior
     var content = document.querySelector('.rst-content') || document.body;
     loadManifest().then(function (manifest) {
       if (!manifest || Object.keys(manifest).length === 0) return;
