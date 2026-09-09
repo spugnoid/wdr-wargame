@@ -1,0 +1,12 @@
+{# The field-manual reskin (custom.css) is a fixed light palette with no
+   dark variant. Without this, browsers that auto-darken untagged pages
+   (e.g. Chrome's "Auto Dark Mode for Web Contents") repaint our
+   deliberately light-on-dark table headers on top of their own dark
+   heuristic, leaving header text unreadable. Declaring color-scheme
+   tells the browser this page's light theme is intentional so it
+   leaves our colors alone. #}
+{% extends "!layout.html" %}
+{% block extrahead %}
+  {{ super() }}
+  <meta name="color-scheme" content="light">
+{% endblock %}

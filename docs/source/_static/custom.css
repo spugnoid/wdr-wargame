@@ -5,6 +5,10 @@
    than these. */
 
 :root {
+  /* Light-only palette -- see docs/source/_templates/layout.html for the
+     matching color-scheme meta tag that stops browsers auto-darkening it. */
+  color-scheme: light;
+
   --paper: #f2eee1;
   --paper-alt: #e9e2ce;
   --olive: #4b5320;
