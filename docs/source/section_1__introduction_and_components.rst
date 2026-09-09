@@ -45,7 +45,7 @@ The game does not glorify war. The ordinary soldiers of every nation were not ev
      - 2 sets
    * - ASSAULT markers
      - TBD
-   * - FIRED marker — one rotating dial per unit, showing 1/2/3 (Rule 6.6)
+   * - FIRED 1/2/3 markers — progression of three chits per unit (Rule 3.6, Rule 6.6)
      - TBD
    * - MOVED/FIRED-CARELESS markers — two-sided (Rule 3.6, Rule 7.4.2)
      - TBD

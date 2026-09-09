@@ -269,7 +269,7 @@ The upper right corner of each counter shows three action values:
 
 Small markers are placed on or beside unit counters to track their current state. Action markers (ASSAULT, FIRED 1/2/3, MOVED/FIRED, CARELESS) are removed during the Recovery Phase at the start of each turn; status markers (SUPPRESSED, PINNED, and the like) persist until removed by their own rules — a recovery roll, a rally, or the condition ending (Rules 5.2.2–5.2.4).
 
-FIRED 1/2/3 is one physical component: a rotating dial marker showing "1", "2", or "3", not three separate chits. MOVED/FIRED and CARELESS are likewise one physical component — a two-sided marker — since Careless Movement (Rule 7.4) is only ever taken as a Regular Move action, which always ends the unit's turn; a unit is never MOVED/FIRED-without-CARELESS-info-loss and CARELESS-without-MOVED/FIRED at once, so a unit is never in a state needing both faces shown simultaneously (Rule 7.4.2). See design notes E.96–E.97.
+FIRED 1/2/3 is a progression of three physical chits — one showing "1", the next "2", the next "3" — swapped in as a stationary ROF weapon's fire count climbs this turn, standard practice for tracking a step count on a physical counter. MOVED/FIRED and CARELESS, by contrast, are one physical component — a two-sided marker — since Careless Movement (Rule 7.4) is only ever taken as a Regular Move action, which always ends the unit's turn; a unit is never MOVED/FIRED-without-CARELESS-info-loss and CARELESS-without-MOVED/FIRED at once, so a unit is never in a state needing both faces shown simultaneously (Rule 7.4.2). See design notes E.96–E.97.
 
 .. list-table::
    :header-rows: 1
