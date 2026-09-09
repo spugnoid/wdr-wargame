@@ -13,16 +13,16 @@ Section 9 — Close Assault
 
    **Example:** Squad Alpha is adjacent to Squad Bravo's hex and has AP remaining this impulse. Declaring Close Assault costs Alpha 1 AP, the same as any other Regular action (Rule 6.3.2) — there is no separate "melee surcharge."
 
-**9.1.2**  The assaulting unit must have M# > 0 and no FIRED or MOVED/FIRED marker present this turn, and must declare under one of two paths:
+**9.1.2**  The assaulting unit must have M# > 0, no FIRED or MOVED/FIRED marker present this turn, and a leader present in its hex to direct the assault — either coordinating that unit alone or activating it together with other units in the same stack (Rule 6.1.1). Closing with the enemy and physically entering a contested hex is a directed, coordinated action, never a rifleman's own spontaneous initiative, so this requirement applies no matter which of the two declaration paths below the unit uses. A unit with no leader present may still take any other action it's otherwise eligible for, but may not initiate a close assault.
 
 .. container:: rule-guide
 
-   **Why:** Distinguishes a genuinely fresh unit's freedom to charge into melee from an ASSAULT-marked unit's need for leader coordination — this stops a unit that already spent part of its turn on something else from spontaneously escalating to close assault on its own initiative (see design note E.95).
+   **Why:** Requires leader coordination for every close assault, fresh or ASSAULT-marked alike (see design note E.105, amending E.95's fresh-unit exception) — even a unit that hasn't done anything else yet this turn doesn't charge on its own initiative the instant it's adjacent to the enemy. The two-path split below is only about **which part-action** the assault costs, not about whether a leader is required at all.
 
-   **Example:** Rifle Squad Alpha took an Assault Move this turn and now carries the ASSAULT marker. It's adjacent to an enemy-occupied hex, and a leader is in Alpha's hex. Alpha may spend its second part-action to declare Close Assault against that hex. If no leader were present, Alpha's second part-action could only be an ordinary Assault Move or Assault Fire — it could not initiate the assault this turn.
+   **Example:** Rifle Squad Alpha is completely fresh (no ASSAULT marker) and adjacent to Bravo's hex, with Sergeant Krebs (CMD 1) present in its hex. Alpha may declare Close Assault as its own Regular action. Had Krebs not been there, Alpha could still fire or move this turn like any other unit, but could not initiate the assault — no matter how fresh it was.
 
-- **Fresh declaration**: a completely fresh unit (no ASSAULT marker either) may declare Close Assault freely, as its own Regular action (Rule 6.3.2).
-- **ASSAULT-marked declaration**: a unit already carrying the ASSAULT marker (one part-action already spent this turn) may declare Close Assault as its **second** part-action only if a leader is present in its hex — either coordinating that unit alone, or activating it together with other units in the same stack (Rule 6.1.1). A unit already carrying ASSAULT with no leader present may still take its second part-action (an ordinary Assault Move or Assault Fire), but may not initiate a close assault with it.
+- **Fresh declaration**: a completely fresh unit (no ASSAULT marker) may declare Close Assault as its own Regular action (Rule 6.3.2).
+- **ASSAULT-marked declaration**: a unit already carrying the ASSAULT marker (one part-action already spent this turn) may declare Close Assault as its **second** part-action only.
 
 See Rule 6.3.3.
 
@@ -33,6 +33,14 @@ See Rule 6.3.3.
    **Why:** A Suppressed or Pinned unit is already struggling to function under fire; letting it launch a coordinated charge would contradict what those statuses represent — men keeping their heads down, not advancing.
 
    **Example:** Squad Alpha is currently Suppressed from a previous turn's fire. Even though it is otherwise eligible (fresh, adjacent to an enemy hex), Alpha cannot declare Close Assault until it recovers from Suppressed (Rule 5.2).
+
+**9.1.3a**  A unit on its reduced (rear) face must pass a morale check before it may declare a close assault: roll 1d6 + Morale modifier against a threshold of 3 (Rule 15.2), with any leader CMD bonus in command radius applying as normal (Rule 15.2.4). A full-strength unit needs no such check. If the check fails, Close Assault is not declared and the unit's Action Point is not spent — the same outcome as an assault cancelled by Defensive Fire (Rule 9.1.5) — and the unit may act normally some other way this impulse.
+
+.. container:: rule-guide
+
+   **Why:** A full-strength squad going forward together still has the numbers and mutual confidence to close the last few metres; a unit that has already taken a step loss is asking fewer, more exposed men to do something far more dangerous than firing from cover — the same psychological gap Section 15 already models for every other stress trigger in the game, just applied at the moment of decision rather than after a result lands. Threshold 3 deliberately reuses the existing Suppressed recovery threshold (Rule 5.2) rather than introducing a new number to memorize — a Regular unit's odds here (67%) are already familiar from recovery rolls.
+
+   **Example:** Alpha, on its reduced face after an earlier step loss, is adjacent to Bravo's hex with AP remaining. Before declaring Close Assault it rolls 1d6 + Morale modifier against threshold 3. A Regular unit's Morale modifier of +0 needs a 3 or better — a roll of 2 fails, and Alpha may not declare the assault this impulse, though its Action Point is untouched and it may act some other way instead. A fresh, full-strength unit in the same position could declare immediately with no check at all.
 
 **9.1.4**  Close assault consists of up to three phases: Grenade Phase, Entry Fire Phase, and Melee Continuation (if both sides survive).
 
