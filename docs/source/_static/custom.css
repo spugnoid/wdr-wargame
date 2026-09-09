@@ -159,6 +159,17 @@
   border-color: var(--khaki-dark);
 }
 
+/* Header cell text is docutils-wrapped as <th><p><strong>...</strong></p></th>;
+   the generic ".rst-content p { color: var(--ink) }" rule above matches that
+   inner <p> directly (not merely inherited from <th>), so it wins over the
+   cream color set on the <th> itself regardless of specificity -- a direct
+   match always beats an inherited value. Re-assert cream on the actual
+   text-bearing descendants. */
+.rst-content table.docutils thead th p,
+.rst-content table.docutils thead th strong {
+  color: var(--cream) !important;
+}
+
 .rst-content table.docutils td {
   background: var(--paper);
   border-color: var(--khaki-light);
