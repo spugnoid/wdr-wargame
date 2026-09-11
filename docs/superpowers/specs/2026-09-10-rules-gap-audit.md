@@ -439,3 +439,92 @@ what a finished game needs:
 - Force Morale factors, action economy, close assault stacking, hit
   location, spotting rebalance — all had open questions at some point in
   Appendix E's history, all resolved by later notes and current rule text.
+
+## Update — 2026-09-11 (part 2): what having 5 nations now surfaces
+
+Both commits from today's work (Night Combat/Weather/F#-ROF merge, and
+the TOE compilation/counter-data pass) are pushed to `origin/main`. This
+is a fresh sweep of what's outstanding as of that push, prompted directly
+by "what else is outstanding or missing" — checked against current repo
+state, not recalled from earlier in this doc.
+
+### New: the rulebook's own example rosters are now lopsided
+
+Now that infantry_calc covers 5 nations, several of the rulebook's own
+illustrative rosters only cover 2-4 of them — a genuine inconsistency
+that didn't exist before today, because before today Germany and the
+USSR really were the only nations with real data behind them:
+
+- **Section 15.6 (National Morale Characteristics)** has rows for
+  Germany (x2 periods), USSR (x2 periods), US, and Japan — **no United
+  Kingdom row at all**, despite the UK now having a fully-sourced TOE and
+  being cited elsewhere in the rules (engineers, snipers, weapons). A UK
+  force today falls back to the generic quality-based factor table
+  (Rule 22.3.3) with no national flavor, unlike every other nation.
+- **Section 12.11 (Representative Leader Counters)** — German and Soviet
+  only. No US, UK, or Japanese leader counters exist anywhere in the
+  document.
+- **Section 16.2 (Representative Mortar Counters)** — German and Soviet
+  only, despite the TOE research now describing the US 60mm M2, UK
+  2-inch and 3-inch mortars, and Japan's Type 89 grenade discharger in
+  real detail.
+- **Section 20.7 (Sniper Counters)** — has German, Soviet (x2), British,
+  and US. Missing Japan (a historically significant gap — Japanese
+  snipers were a well-documented Pacific-theater factor).
+- **Section 21.9 (Engineer Counters)** — has German (x2), Soviet (x2),
+  British, and US. Missing Japan.
+
+None of this is a bug from today's work — these rosters were always
+illustrative examples, not meant to be exhaustive, and adding a nation to
+`infantry_calc` doesn't obligate the rulebook to add matching leader/
+sniper/engineer/mortar examples. But the asymmetry is now visible in a
+way it wasn't before, and closing it (at least for UK/Japan, the two
+nations missing from the most tables) is a natural, well-scoped follow-up
+now that the TOE docs exist to source it from.
+
+### Flagged during the counter-data pass, still open
+
+- **Panzergrenadier Squad's real loadout** (2 LMG + 1 Panzerschreck per
+  `counters/toe/germany_1943.md`, KStN 1114) differs substantially from
+  the single LMG currently in `units.csv` — deliberately not corrected
+  because the source research itself had lower confidence on that unit's
+  exact personnel reconciliation. Needs either a decision to accept the
+  research as-is and correct it, or a follow-up pass to firm up the
+  headcount question first.
+- **Soviet "Pattern B" squad** (2x DP-28, 5 rifles, same 9 men and 2
+  PPSh-41 as the modeled "Pattern A") is documented in the TOE research
+  as equally common but not modeled as its own counter — a candidate
+  addition, not a correction.
+- **US Light Machine Gun Squad's rFP (6) vs. German MG42 HMG Team's (9)**
+  — a real, sourced gap (the M1919A4's practical rate of fire is under
+  half the MG42's), flagged for a deliberate look rather than assumed
+  correct or wrong.
+
+### Unchanged from before today (still genuinely open)
+
+- **Vehicle roster**: `armor_calc` still has no British guns or vehicles
+  modelled — unaffected by today's work, which only touched
+  `infantry_calc`. British tanks (Cromwell, early Churchill) appear in
+  the rules' general movement-class tables but have no AV/PEN/Gunnery
+  treatment.
+- **Year-band coverage**: every nation's TOE and counter data is a single
+  1943 snapshot. Section 15.6 itself already references other periods
+  (Germany 1941-42/1944-45, USSR 1941/1943+) that have no organizational
+  or counter data behind them at all.
+- **Component list quantities** (Rule 1.2) — still almost entirely TBD;
+  unchanged, still legitimately deferred to playtesting.
+- **Appendix F index staleness** — left open per explicit instruction,
+  not re-checked today.
+- **Towed artillery** (PAK40, US 57mm/British 6-pounder/etc. as infantry-
+  facing AT guns rather than vehicle-mounted guns) — still out of scope
+  for both calc tools.
+
+### Not gaps — explicitly deferred, not missing
+
+- Operational scale — confirmed as a deliberately sequenced future
+  companion manual (E.107), not an open item.
+- Weather changing mid-scenario — explicitly considered and deferred as
+  separate, larger scope than what was asked (E.108).
+- Night Combat's own out-of-scope list (moon-phase visibility tiers,
+  vehicle IR/thermal sighting, a blind/double-blind CP role, [OPS]
+  interaction) — all flagged in E.106 as deliberate, bounded exclusions.
