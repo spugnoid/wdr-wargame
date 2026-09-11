@@ -278,6 +278,28 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
 
    **Example:** A Tungsten round striking that same Schürzen-marked Side arc gets no PEN reduction at all — the marker's benefit applies exclusively to HEAT-family attacks, never to kinetic ones.
 
+18.2c  Sidehill Exposure (Optional Rule)
+--------------------------------------------
+
+*If this module is in use for the scenario:*
+
+*Design note: a vehicle sitting broadside across a sidehill, engaged by a shot arriving roughly perpendicular to the slope's fall line, doesn't present its plates the way the printed AVs assume — the whole hull has rolled with the ground. Its Side plate straightens toward vertical (losing whatever slope protection it had), and its deck's plane rotates enough that the same shot can graze across the normally near-invulnerable top edge instead. This module captures both without inventing a new roll or a new modifier number, reusing the crest-hexside geometry already established for elevation LOS (Rule 4.4a.1) and the target's own printed Top AV where one exists (Rule 17.2a). See design note E.120.*
+
+**18.2c.1**  Broadside-to-Slope: before comparing PEN to AV (Rule 18.2), check whether the target is Broadside-to-Slope to this shot — all of the following must hold: (a) the Gunnery Roll (Rule 18.1a) selected a Side arc, on either profile; (b) that Side arc's hexside is also a crest hexside of the target's own hex (Rule 4.4a.1); (c) the attacker is on the low side of that hexside.
+
+.. container:: rule-guide
+
+   **Why:** Scopes the condition tightly to the exact geometry the phenomenon actually requires — a Side-arc hit, specifically across the one hexside where the ground itself changes level, from specifically the downhill direction — rather than a vague "on a slope" trigger that would apply far more often than the real effect does.
+
+   **Example:** A tank sitting with its side facing a ridge crest, engaged by an enemy positioned below that same crest, is Broadside-to-Slope; that same tank engaged from its front, or from a direction with no crest hexside at all, is not.
+
+**18.2c.2**  If 18.2c.1 holds and the struck profile has a printed Top AV (Rule 17.2a) matching the ammunition family fired, resolve the hit against whichever of that profile's Side AV or Top AV is lower, instead of Side AV alone. If the struck profile has no printed Top AV, resolve normally against Side AV — Broadside-to-Slope has no effect on an unmodelled plate.
+
+.. container:: rule-guide
+
+   **Why:** Lets the attacker exploit whichever of the two real, already-printed numbers is actually weaker, rather than inventing a separate reduction percentage — the whole point of the sidehill condition is that the defender's own printed Side and Top figures were never both meant to apply to the same shot at once, and the worse of the two is what the round genuinely finds.
+
+   **Example:** A Tiger sitting Broadside-to-Slope is hit on its Hull Side arc: printed Hull Side AV-vs-Capped is 80mm, printed Hull Top AV-vs-Capped is 25mm — the shot resolves against 25mm, not 80mm, because the sidehill condition means the round is grazing the exposed deck edge, not striking the tough side plate square-on.
 
 18.3  Contested Penetration Roll
 --------------------------------

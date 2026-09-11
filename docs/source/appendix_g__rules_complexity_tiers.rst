@@ -75,13 +75,13 @@ G.2  Tier by Section
      -
    * - 16 — Mortars and Smoke
      - Standard
-     -
+     - Heavy Mortar/Artillery vs. Top Armour (16.7.8a) is Advanced (Optional Rule)
    * - 17 — Vehicles: Counter Design and Movement
      - Standard
-     - Bypass Movement (17.6a) is Advanced (Optional Rule)
+     - Bypass Movement (17.6a), Top Armour (17.2a), and Hull-Down Position (17.6b) are Advanced (Optional Rule)
    * - 18 — Vehicle Combat Resolution
      - Standard
-     - Shatter Gap (18.2a), Schürzen (18.2b), and per-vehicle Hit Location (18.6a) are Advanced — each already scoped as optional or partial-coverage in its own rule text
+     - Shatter Gap (18.2a), Schürzen (18.2b), Sidehill Exposure (18.2c), and per-vehicle Hit Location (18.6a) are Advanced — each already scoped as optional or partial-coverage in its own rule text
    * - 19 — Vehicle Morale, Bailout, and Capture
      - Standard
      -
@@ -140,6 +140,18 @@ Every module below carries its own "(Optional Rule)" header and an "If this modu
    * - Mass Assault
      - 9.8a
      - Successive close assaults against the same hex wear the defender down
+   * - Top Armour
+     - 17.2a
+     - Prints a Hull/Turret Top AV where sourced, for use by Sidehill Exposure below
+   * - Hull-Down Position
+     - 17.6b
+     - A stationary vehicle at a crest hexside makes its Hull untargetable from the low side
+   * - Sidehill Exposure
+     - 18.2c
+     - A vehicle broadside across a slope can be hit on its weaker Side or Top AV, whichever is lower
+   * - Heavy Mortar/Artillery vs. Top Armour
+     - 16.7.8a
+     - 120mm-class+ HE has a small chance to mobility-kill a closed AFV via its engine deck, never a full penetration
    * - Night Combat
      - Section 23
      - Ambient visibility, illumination, and their knock-on effects across other sections

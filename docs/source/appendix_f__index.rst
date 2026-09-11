@@ -653,6 +653,18 @@ slope immunity  ..........  17.2.6
 
 cover reduced 1 step vs buildings  ..........  18.8.3
 
+**Heavy Mortar/Artillery vs. Top Armour (Optional Rule)**  ..........  16.7.8a, App.G
+
+mobility kill only, never penetration  ..........  16.7.8a.1
+
+120mm-class threshold  ..........  16.7.8a.2
+
+**Hull-Down Position (Optional Rule)**  ..........  17.6b, App.G
+
+lost on movement  ..........  17.6b.3
+
+Turret-only exposure from low side  ..........  17.6b.2
+
 flat rFP no falloff  ..........  18.8.3
 
 rFP derivation formula  ..........  18.8.4
@@ -1127,6 +1139,12 @@ victory conditions  ..........  22.6
 
 **Sealed slip — see Fire mission slip**  ..........  16.5
 
+**Sidehill Exposure (Optional Rule)**  ..........  18.2c, App.G
+
+Broadside-to-Slope condition  ..........  18.2c.1
+
+resolves against lower of Side/Top AV  ..........  18.2c.2
+
 **Skulking — eliminated by design**  ..........  E.8, E.94
 
 momentary reactions replace the Exposure system  ..........  6.2.3, E.94
@@ -1236,6 +1254,12 @@ one turn ~2–5 minutes  ..........  2.2.1
 abbreviation WDR  ..........  E.45
 
 universal opening of death notifications  ..........  E.45
+
+**Top Armour (Optional Rule)**  ..........  17.2a, App.G
+
+never a direct Gunnery Roll option  ..........  17.2a.2
+
+used by Sidehill Exposure and Heavy Mortar/Artillery modules  ..........  18.2c, 16.7.8a
 
 **Traverse rating (TRAV)**  ..........  17.4
 

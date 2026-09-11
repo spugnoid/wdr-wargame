@@ -410,6 +410,31 @@ All mortar counters use M1 F1 (mobile) or M0 F2 (deployed) — F2 while deployed
 
     *See also: Rule 17.1 (open-top symbol), Rule 19.1 (vehicle morale checks).*
 
+16.7.8a  Heavy Mortar/Artillery vs. Top Armour (Optional Rule)
+-------------------------------------------------------------------
+
+*If this module is in use for the scenario:*
+
+*Design note: real WWII mortar and light-artillery HE had no meaningful capability to penetrate a tank's top armour outright — every source checked (casualty studies, ordnance engineering references, contemporary doctrine) agrees HE fire against tanks was a suppression/button-up tool, never a killing mechanism, and no documented incident of a mortar round penetrating a tank's roof was found. Where the record does support real teeth beyond suppression is narrower: heavy ordnance occasionally disabling a tank's mobility through unarmoured engine-deck grilles and louvres, not through the armour plate itself. This rule is scoped to exactly that, not to a general top-armour-penetration capability. See* ``counters/toe/mortar_vs_top_armor_research.md`` *and design note E.120.*
+
+**16.7.8a.1**  When a 120mm-class mortar or larger-calibre HE mission (a heavier off-map artillery mission, Rule 16.11, flagged as such in the scenario's own parameters) lands in a closed AFV's hex, roll 1d6 in addition to Rule 16.7.8's crew Suppression check: on a natural 1, the vehicle suffers a Mobility Kill (flip to its MOB KILL rear face, Rule 17.1.1) — the blast has disabled an exposed engine-deck grille, louvre, or running-gear component, not penetrated the deck plate. This check never uses Rule 18.2's PEN-vs-AV comparison and is unaffected by whether the vehicle has a printed Top AV (Rule 17.2a) at all.
+
+.. container:: rule-guide
+
+   **Why:** Gives heavy mortar/artillery fire the one real capability the historical record actually supports — a mobility kill through an unarmoured weak point — without dressing it up as armour penetration, which the same record says essentially never happened.
+
+   **Example:** A 120mm mortar round lands in a Panzer IV's hex. Its crew rolls for Suppression as normal (Rule 16.7.8); separately, a 1d6 is rolled for this check — only a natural 1 immobilises the vehicle, and even then only its mobility, not its crew or gun.
+
+**16.7.8a.2**  This check does not apply to mortars or HE below 120mm-class. Lighter ordnance is suppression-only against a closed AFV exactly as Rule 16.7.8 already states, with no Mobility Kill chance at all — the historical record found no credible capability for lighter rounds to disable a tank's mobility this way.
+
+.. container:: rule-guide
+
+   **Why:** Keeps the mobility-kill chance confined to the one ordnance class the research found even marginally plausible, rather than letting it creep down to smaller mortars where the evidence doesn't support it at all.
+
+   **Example:** An 81mm mortar round landing in the same hex only ever triggers Rule 16.7.8's Suppression check — this rule's 1d6 Mobility Kill roll is never made for anything lighter than 120mm-class.
+
+**16.7.8a.3**  A vehicle already displaying its MOB KILL or GUN KILL rear face is unaffected by this check — it has nothing further to lose to a mobility kill specifically.
+
 16.8  Adjustment Fire
 ---------------------
 

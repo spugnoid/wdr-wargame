@@ -894,3 +894,77 @@ clean rebuild (double-checked the new design-note prose byte-for-byte
 for the same asterisk-adjacent-to-backtick nesting failure as part 8 —
 clean this time). None used the optional-module treatment — each
 closes a real gap in the base game, not an added layer of chrome.
+
+## Update — 2026-09-11 (part 11): Top Armour and Sidehill Exposure — a new Advanced module, two research passes deep
+
+A follow-on design conversation from the same playtest, not the play
+itself: what happens to a tank sitting broadside across a sidehill,
+hit by a shot roughly perpendicular to the slope's fall line? The
+whole hull rolls with the ground — Side armor straightens toward
+vertical (loses its slope protection), and the deck's plane rotates
+enough that the same shot can graze the normally invulnerable top
+edge instead. Confirmed as distinct from trunnion cant (a firer-side
+aiming effect, not a target-armor effect) and from the existing
+elevation modifiers (Rule 4.5, which is about firer/target height
+difference, not the target's own ground tilt). Built as a new
+Advanced (Optional Rule) module on the designer's call.
+
+**This exposed a bigger gap first: no vehicle in the roster had a Top
+armor profile at all**, and Section 16 flatly said "mortars never roll
+on the Section 18 penetration tables" — top armor had never mattered
+to anything. Two research passes ran before any rule text was
+written:
+
+- **Vehicle top/deck armor thickness** (`counters/toe/vehicle_top_armor_1943.md`):
+  usable, cited data for 9 of 14 roster vehicles (Panzer IV's turret
+  roof reinforcement is the single best-cited figure in the pass —
+  Jentz & Doyle, *Panzer Tracts No. 4*, p.50; Tiger, KV-1S, T-34's
+  hull roof, Panther, both Shermans, Churchill also usable). The rest
+  — Panzer III, StuG III, T-34/85, T-70's turret roof, SU-85,
+  Cromwell — came back genuinely unsourced or too disputed, and were
+  left blank rather than guessed at, same convention as
+  `hardness_table.csv`'s missing nations. One popular claim was
+  checked and debunked: Panther's turret roof was never actually
+  thickened to 30-40mm on the real tank — that traces to the unbuilt
+  Panther II project and a static bunker variant.
+- **Mortar/artillery HE vs. top armor** (`counters/toe/mortar_vs_top_armor_research.md`):
+  the designer initially asked for mortars to be able to attack top
+  armor outright. The research came back against a general
+  penetration capability — a naval-ordnance caliber-fraction formula
+  only clears WWII deck thickness for the heaviest mortars against the
+  thinnest decks; no citable incident of a mortar penetrating a tank
+  roof was found (even checking Michael Wittmann's Tiger, which turned
+  out to be a Firefly or rocket kill, not a mortar); and every
+  casualty study checked (ORO-T-117, British 21st Army Group ORS, the
+  Dupuy Institute) puts HE/mortar fire at 3-13% of tank losses against
+  AP gunfire's dominant share, with doctrine describing mortars as a
+  suppression/button-up tool throughout. Presented with this, the
+  designer chose the historically-scoped version over the stronger
+  mechanic they'd originally asked for.
+
+**What got built, once the research was in hand:**
+
+- Rule 17.2a (Top Armour) — a printed Hull/Turret Top AV, modelled
+  flat (vertical_deg=0) rather than through the normal slope-multiplier
+  machinery, since both trigger mechanisms below only ever need the
+  plate's worst-case near-perpendicular resistance.
+- Rule 18.2c (Sidehill Exposure) — Broadside-to-Slope condition
+  (Side arc facing a crest hexside, attacker on the low side) resolves
+  the hit against whichever of Side AV or Top AV is lower, reusing two
+  already-printed numbers instead of inventing a reduction percentage.
+- Rule 17.6b (Hull-Down Position) — added alongside it on the
+  designer's explicit insistence ("we absolutely need hull down"): a
+  stationary vehicle at a crest hexside makes its Hull completely
+  untargetable from the low side, the flip side of the same geometry.
+- Rule 16.7.8a (Heavy Mortar/Artillery vs. Top Armour) — the
+  historically-scoped mortar mechanic: 120mm-class+ HE gets a narrow
+  1-in-6 mobility-kill check (an implied engine-deck/grille hit), never
+  a PEN-vs-AV roll, never anything for lighter ordnance.
+
+Design note E.120, Appendix G/F updated (new module registered), all
+four rules cross-checked byte-for-byte for the part-8/part-10 asterisk-
+adjacent-to-backtick RST failure — clean this time, no fix needed.
+Test suite: 114 passing (up from 110), including coverage that Tiger's
+Hull Top loads dramatically weaker than its Hull Side (the whole point
+of the module) and that every unsourced vehicle correctly has no Top
+rows at all.

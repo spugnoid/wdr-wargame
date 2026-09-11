@@ -82,8 +82,12 @@ class TestBritishVehicleLoading:
         vehicles = load_vehicles()
         churchill = [v for v in vehicles if v.vehicle == "Churchill Mk VII"]
         cromwell = [v for v in vehicles if v.vehicle == "Cromwell Mk IV"]
-        # 2 profiles (Hull/Turret) x 3 arcs (Front/Side/Rear) each
-        assert len(churchill) == 6
+        # 2 profiles (Hull/Turret) x 3 arcs (Front/Side/Rear) each, plus a
+        # Hull/Turret Top pair added for the Sidehill Exposure optional
+        # module (Rule 18.2c) -- Churchill has sourced Top data, Cromwell
+        # does not (counters/toe/vehicle_top_armor_1943.md), so only
+        # Churchill's count includes the extra 2 rows.
+        assert len(churchill) == 8
         assert len(cromwell) == 6
         assert all(v.nation == "British" and v.era == "1943" for v in churchill + cromwell)
 
@@ -113,6 +117,64 @@ class TestBritishVehicleLoading:
         av = plate.resolve_av(76.2, hardness_table, family="capped")
         assert av < plate.thickness_mm
         assert av == pytest.approx(69.8, abs=0.5)
+
+
+class TestTopArmorLoading:
+    """Session finding (a combined-arms playtest surfaced the sidehill/
+    broadside-to-slope exposure question, then a follow-up design
+    conversation added a proper mortar/artillery treatment): no vehicle in
+    this roster had a Top (deck/roof) profile at all before this pass. Real,
+    cited top-armor data now exists for 9 of the 14 roster vehicles
+    (counters/toe/vehicle_top_armor_1943.md); the rest are an honest gap,
+    same convention as hardness_table.csv's missing nations -- a lookup
+    miss means "not modeled yet," not zero or an invented value. Top plates
+    are modeled flat (vertical_deg=0), representing the worst-case
+    near-perpendicular hit these plates are only ever exposed to under the
+    Sidehill Exposure optional rule (18.2c) or, historically, plunging
+    fire -- not the near-90-degree obliquity a normal horizontal shot would
+    see against a flat deck."""
+
+    def test_tiger_hull_top_loads_and_is_much_weaker_than_hull_side(self):
+        """The whole point of the Sidehill Exposure module: Tiger's hull
+        side was famously tough (matched good Allied test plate per its own
+        sourced note), but its deck was ordinary 25mm plate -- comparing
+        against the weaker of the two should be a dramatic difference for
+        exactly this vehicle."""
+        hardness_table = load_hardness_table()
+        vehicles = load_vehicles()
+        top = next(v for v in vehicles if v.vehicle == "Tiger I Ausf E" and v.profile == "Hull" and v.arc == "Top")
+        side = next(v for v in vehicles if v.vehicle == "Tiger I Ausf E" and v.profile == "Hull" and v.arc == "Side")
+        assert top.thickness_mm == 25
+        assert top.vertical_deg == 0
+        av_top = top.resolve_av(75.0, hardness_table, family="capped")
+        av_side = side.resolve_av(75.0, hardness_table, family="capped")
+        assert av_top == pytest.approx(24.7, abs=0.5)
+        assert av_top < av_side / 2
+
+    def test_panzer_iv_turret_top_uses_reinforced_1943_figure(self):
+        hardness_table = load_hardness_table()
+        vehicles = load_vehicles()
+        top = next(v for v in vehicles if v.vehicle == "Panzer IV Ausf H" and v.profile == "Turret" and v.arc == "Top")
+        assert top.thickness_mm == 16
+        av = top.resolve_av(75.0, hardness_table, family="capped")
+        assert av == pytest.approx(15.8, abs=0.3)
+
+    def test_vehicles_without_sourced_top_data_have_no_top_rows(self):
+        """Panzer III, StuG III, T-34/85, SU-85, and Cromwell all came back
+        genuinely unsourced or disputed for top armor -- confirms none of
+        them got a guessed-at row rather than an honest gap."""
+        vehicles = load_vehicles()
+        for name in ["Panzer III Ausf M", "StuG III Ausf G", "T-34/85 (late 1943)", "SU-85", "Cromwell Mk IV"]:
+            tops = [v for v in vehicles if v.vehicle == name and v.arc == "Top"]
+            assert tops == [], f"{name} should have no Top rows (unsourced)"
+
+    def test_t34_1943_turret_top_intentionally_absent(self):
+        """The two candidate turret-roof figures found (20mm vs. 56mm) were
+        too far apart to pick between -- Hull Top is sourced, Turret Top is
+        deliberately not."""
+        vehicles = load_vehicles()
+        rows = [v for v in vehicles if v.vehicle == "T-34 Model 1943" and v.arc == "Top"]
+        assert [r.profile for r in rows] == ["Hull"]
 
 
 class TestHitZoneLoading:

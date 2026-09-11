@@ -199,6 +199,29 @@ Vehicle counters display the following fields:
 
    **Example:** A basic penetration check just compares PEN to AV as this section describes; only if the target has Schürzen or the table is using the optional Shatter Gap rule does a player need to consult Rule 18.2a or 18.2b for an additional step afterward.
 
+17.2a  Top Armour (Optional Rule)
+-----------------------------------
+
+*If this module is in use for the scenario:*
+
+*Design note: no vehicle in this roster printed a Top arc at all before this module — every plate was Front, Side, or Rear (Rule 17.2.2). Top AV exists to support Rule 18.2c (Sidehill Exposure) and Rule 16.7.8a (heavy mortar/artillery vs. top armour); a group not using either of those never needs this stat. See design note E.120.*
+
+**17.2a.1**  A vehicle may print a fourth arc, Top, for its Hull and/or Turret profile — the horizontal deck or roof plate, computed and printed exactly like any other arc (Rule 17.2.1, 17.2.3): AV-vs-Capped, AV-vs-Tungsten, and AV-vs-HEAT. Top AV is printed only where a real, cited thickness exists for that specific vehicle and profile — a vehicle or profile with no printed Top AV simply has none, the same "lookup miss means not modelled, not zero" convention this project already uses for missing hardness data (`counters/armor_calc/data/hardness_table.csv`).
+
+.. container:: rule-guide
+
+   **Why:** Treats an unprinted Top AV as an honest gap rather than inventing a plausible-looking placeholder number, consistent with how every other under-sourced figure in this project is handled — a vehicle designer who later finds a citable figure can add the row without touching anything else.
+
+   **Example:** Tiger I Ausf E prints a Hull Top and Turret Top AV (both sourced); Panzer III Ausf M prints neither (disputed sources, no primary tiebreaker found) — a shot that would otherwise use Panzer III's Top AV under Rule 18.2c simply has no Top AV to compare against, and resolves against Side AV alone.
+
+**17.2a.2**  Top AV is never a fourth option in an ordinary Gunnery Roll (Rule 18.1a) — the Hull/Turret split (Rule 18.1a.5) still only ever resolves to Hull or Turret. Top AV comes into play only as a substitution under Rule 18.2c, or as the flavour (not the mechanic) behind Rule 16.7.8a's mobility-kill check.
+
+.. container:: rule-guide
+
+   **Why:** Keeps the base Gunnery Roll exactly as simple as it has always been — a third printed arc would otherwise imply a three-way hit-location roll for every single shot, which is far more table overhead than the narrow, conditional cases Top AV actually needs to cover.
+
+   **Example:** An ordinary tank-vs-tank shot at normal range never even considers Top AV — it resolves Hull or Turret exactly as Rule 18.1a already describes, whether or not the target has a printed Top AV at all.
+
 17.3  Penetration Values
 ------------------------
 
@@ -593,6 +616,37 @@ Casemate vehicles (TRAV 0) never receive a TRAVERSED marker; they have no separa
    **Why:** Bypass represents skirting around what a hex contains, not ignoring physical facts about what a vehicle can cross at all — a river or cliff genuinely impassable to a given vehicle type stays impassable no matter how the vehicle tries to approach it.
 
    **Example:** A vehicle cannot Bypass its way across a River/cliff hex it could never enter under Rule 17.6.2 in the first place — Bypass only ever applies to hexes the vehicle could otherwise legally enter directly.
+
+17.6b  Hull-Down Position (Optional Rule)
+-------------------------------------------
+
+*If this module is in use for the scenario:*
+
+*Design note: real tank doctrine's single most basic defensive posture — back the hull below a crest so only the turret shows — had no rule of its own; a vehicle's Hull profile was always just as targetable as its Turret regardless of terrain. See design note E.120.*
+
+**17.6b.1**  A stationary, turreted vehicle (Rule 17.2.2 — casemate vehicles have no separate Turret profile to hide behind) occupying a hex with a crest hexside (Rule 4.4a.1) may declare Hull-Down, 1 AP, oriented toward one specific low-side hexside of that crest. Declaring Hull-Down does not place a MOVED marker and does not prevent the vehicle from also firing this turn (Rule 17.4.1a).
+
+.. container:: rule-guide
+
+   **Why:** Costs a real action rather than being a free, automatic consequence of terrain, since a crew actually has to manoeuvre the vehicle into the precise position for this to work — but doesn't compete with the vehicle's ability to shoot the same turn, since real hull-down tanks fought from that position, they didn't just hide in it.
+
+   **Example:** A Tiger stops at a ridge crest and spends 1 AP declaring Hull-Down facing the enemy-held low ground beyond it, then spends a second AP firing its main gun at a target across that same crest — both actions legal in the same turn.
+
+**17.6b.2**  While Hull-Down, every Gunnery Roll (Rule 18.1a) against this vehicle from an attacker on the low side of the declared hexside resolves as a Turret hit automatically — skip Rule 18.1a.5's Hull/Turret split entirely for such a shot. Attacks from any other direction are unaffected.
+
+.. container:: rule-guide
+
+   **Why:** Models the real protection hull-down positioning provides — the hull is physically behind the crest and cannot be struck from that direction at all, not merely somewhat protected — by removing the Hull option from the roll rather than adding a cover modifier that a strong enough shot could still overcome.
+
+   **Example:** An enemy tank below the crest fires at a Hull-Down vehicle and, whatever the Gunnery Roll would otherwise indicate, the shot resolves against Turret AV — Hull AV is simply not in play from that direction while the position holds.
+
+**17.6b.3**  Hull-Down is lost the instant the vehicle moves or pivots (Rule 17.5.4) — it must be re-declared the next time the vehicle is stationary at a qualifying crest hexside.
+
+.. container:: rule-guide
+
+   **Why:** Ties the position to the vehicle's actual physical stance rather than letting it persist as a standing bonus, since the moment the vehicle moves it is no longer sitting in the exact spot that made the position work.
+
+   **Example:** A Hull-Down vehicle that repositions one hex to react to a flanking threat loses Hull-Down immediately — even though it moved for good tactical reasons, it must find and declare a new qualifying position before the protection applies again.
 
 17.7  Hit Location
 -------------------
