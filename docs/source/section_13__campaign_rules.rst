@@ -17,13 +17,13 @@ The Casualty Track is a designated area beside the map. It has four zones: BROKE
      - **Counter Placement**
      - **Face**
    * - BROKEN
-     - Units rendered CI by ranged fire (Rule 10.4.3), psychological breaks from failed morale checks (Rules 10.4.4, 15.3.2), units routed off the friendly map edge (Rule 10.6.5), and escaped prisoners returning to their owner (Rule 11.4.2)
-     - Front face up if full strength when broken; rear face up if reduced
+     - Units rendered CI by ranged fire (Rule 10.4.3), psychological breaks from failed morale checks (Rules 10.4.4, 15.3.2), units routed off the friendly map edge (Rule 10.6.5), escaped prisoners returning to their owner (Rule 11.4.2), and ABANDONED or DAMAGED vehicle hulls not captured by the enemy (Rule 19.3.1)
+     - Front face up if full strength when broken; rear face up if reduced. For a vehicle hull: "front face" means ABANDONED (functional, no crew), "rear face" means DAMAGED (MOB or GUN kill) — see Rule 13.3.2.
    * - DISPERSED
      - Units rendered CI by close assault or melee morale failure (Rule 10.5.1) — in-scenario holding only; every Dispersed unit rallies or is captured by scenario end (Rule 11.2a), so this zone is always empty between scenarios
      - Front face up if full strength when dispersed; rear face up if reduced (Rule 10.5.1)
    * - CAPTURED
-     - Accepted surrenders (Rule 11.2) and administrative captures (Rule 11.2a)
+     - Accepted surrenders (Rule 11.2), administrative captures (Rule 11.2a), and ABANDONED vehicle hulls successfully captured in-scenario (Rule 19.4)
      - Front face up
    * - GUARD
      - Not a zone for counters — used to track which units have GUARD markers
@@ -160,6 +160,16 @@ BROKEN zone recovery (Days window or better):
    **Why:** Reuses the single BROKEN-zone recovery table for leaders (relabeling its outcomes) rather than a separate leader table, while adding one leader-specific detail — a wounded leader who stayed on the map (not sent to BROKEN) can still heal on its own given enough recovery time, distinct from the roll-based table entirely.
 
    **Example:** A leader who ended the scenario wounded but still on the map (not eliminated or evacuated) simply flips back to their healthy front face automatically during a Days or Extended Recovery Window — no roll needed, unlike a BROKEN-zone leader who must roll on the 13.3 table.
+
+**13.3.2**  Vehicle hulls in the BROKEN zone (ABANDONED or DAMAGED, not captured — Rule 13.1) roll on the same table using the crew's own Morale modifier (the same reuse Rule 19.4.3 already makes for capture attempts), reading the front/rear columns as ABANDONED and DAMAGED respectively: "no recovery" means the hull is written off and removed from the campaign's vehicle pool; "returns as rear face" means the hull returns, but DAMAGED — it needs a further Days-or-better Recovery Window before it can be fielded, rolling again next campaign turn; "returns at full strength" means the hull returns fully repaired. A recovered hull needs a CREW counter assigned before its next scenario, from the replacement pool if its original crew did not survive — Rule 13.5.2c's EM reset applies exactly as it already does for any re-crewed vehicle.
+
+.. container:: rule-guide
+
+   **Why:** Rule 13.5.2b already gave vehicle crews the same campaign mechanics as infantry (Experience Modifier, quality progression), but nothing repaired the vehicle's own hull between scenarios — a DAMAGED or ABANDONED tank simply had no path back into the campaign at all, unlike everything else the Casualty Track already tracks. Reusing the identical table (rather than a new one) keeps the campaign layer's recovery logic in one place, and routing a recovered hull through the existing re-crewing rule means this doesn't invent a second EM mechanic alongside the one Rule 13.5.2c already provides.
+
+   **Example:** A DAMAGED Panzer IV (regular crew quality, Morale modifier +0) rolls a 6 on the BROKEN-zone table — reading the "rear face" column for a DAMAGED hull, that's "returns as rear face," so the hull comes back but is still not battle-ready; it needs one more Days-or-better Recovery Window before it can be issued to a scenario, and whatever crew mans it then is assigned (and EM-reset, Rule 13.5.2c) from the replacement pool like any other re-crewed vehicle.
+
+    *See also: Rule 19.3.1 (ABANDONED/DAMAGED vehicle states), Rule 19.4 (capture — the path that removes a hull from this table entirely), Rule 13.5.2c (EM reset on re-crewing).*
 
 13.4  Combining Half Squads
 ---------------------------

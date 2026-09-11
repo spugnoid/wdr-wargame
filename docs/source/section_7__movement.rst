@@ -106,12 +106,9 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
    * - Road
      - 1
      - And enables the road bonus (Rule 7.2.1)
-   * - Building — ground floor entry
+   * - Building (ground floor entry)
      - 1
-     - Per floor entered including ground
-   * - Building — each additional floor
-     - 1
-     - Stairs and ladders slow under fire
+     - Floors above ground have no separate entry cost — see Rule 7.2a
    * - Light woods
      - 2
      - Full activation for M2 unit
@@ -166,13 +163,38 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
 
    **Example:** An M2 unit moving uphill one level into open ground pays 1 (open ground) + 1 (elevation gain) = 2 MP for that single hex — its entire activation, even though open ground alone would only cost 1.
 
-**7.2.3**  Building floor interaction example: a unit with M2 entering a building at ground floor (1 MP) and moving to the first floor (1 MP) uses its entire activation. It cannot reach the second floor without starting adjacent to the building at the start of the activation.
+**7.2.3**  *Superseded — see Rule 7.2a.* Climbing within a building is no longer priced in Movement Points; it is its own AP-costing action (Rule 6.3.2, Change Floor).
+
+7.2a  Building Floors
+-----------------------
+
+*Design note: Rule 7.2's table used to charge MP for "each additional floor" entered, and 7.2.3 worked through an example of a unit spending its whole MP allowance just climbing — but "floor" never appeared anywhere else in the rules. Nothing tracked which floor a unit ended up on, and nothing depended on it: the cost was real, the consequence wasn't. Confirmed with the designer: floor-to-floor movement becomes its own action, 1 AP per floor, rather than a line item in a Move's MP budget — and floor now does something once a unit is actually on one. See design note E.114.*
+
+**7.2a.1**  A building hex may have more than one floor, as printed on the map or set in the scenario's own setup instructions. A unit entering a building hex from outside starts on the ground floor, at the hex's normal terrain MP cost (Rule 7.2) — there is no separate MP cost for the floors above it.
 
 .. container:: rule-guide
 
-   **Why:** Works through the building-specific case of the same stacking principle — floors are charged like additional hexes entered, so a multi-story building can consume an entire activation just climbing, even without moving horizontally at all.
+   **Why:** Keeps the horizontal move into a building costing exactly what any other terrain entry costs, since climbing floors is now a wholly separate action rather than a component folded into the Move's own MP total.
 
-   **Example:** An M2 unit entering a building's ground floor (1 MP) and continuing to the first floor (1 MP) has spent its full 2 MP allowance. It cannot reach the second floor this activation, regardless of how much of its M# it "should" have left by hex count alone.
+   **Example:** A unit moving into a building hex pays the building's normal 1 MP entry cost, arrives on the ground floor, and its M# is otherwise unaffected by however many floors that building happens to have.
+
+**7.2a.2**  Changing floors is its own action (Rule 6.3.2, Change Floor): 1 AP moves a unit exactly one floor, up or down, within its current building hex. It does not mark the unit MOVED/FIRED — the unit may act normally, including changing floor again, in a later activation this same turn, the same exception already granted to Deploy/Limber Weapon (Rule 6.3.2).
+
+.. container:: rule-guide
+
+   **Why:** Pricing every floor at its own AP, rather than folding several floors into one action, keeps climbing a real, separately-chosen cost at every step — a unit bound for the third floor genuinely commits three activations' worth of AP to get there, exactly as reaching it used to cost three MP under the old rule, just charged in the currency that actually has consequences (AP, not MP a Move never gets to spend elsewhere anyway).
+
+   **Example:** A unit on the ground floor spends 1 AP to reach the first floor, then a second 1-AP activation later in the same turn to reach the second floor — two activations, two floors, with AP left over (if any) still available for a Move or Fire action afterward.
+
+**7.2a.3**  A unit on a floor above ground applies Rule 14.9.8's Elevated OBS bonus (+1 for one floor above the target, +2 for two or more) when spotting or observing, using its floor number as its elevation for that purpose only. Floors do not otherwise block or degrade LOS between units in the same building, or between a building's occupants and the outside — the building's own terrain cover values already govern that.
+
+.. container:: rule-guide
+
+   **Why:** Gives the climb a real, historically grounded payoff — observers and snipers favouring upper floors is a genuine WWII tactical reality — without building a parallel LOS-blocking system for building interiors that nobody asked for; reusing the existing Elevated OBS bonus (Rule 14.9.8) is the smallest change that makes the AP cost mean something.
+
+   **Example:** A sniper team on a building's second floor gets +2 OBS (two floors up) on top of any other applicable modifiers when attempting to spot a target outside — the same bonus a unit on a two-level hilltop would get over a target in the valley below, just earned by climbing stairs instead of a hillside.
+
+    *See also: Rule 14.9.8 (the Elevated OBS bonus this rule reuses), Rule 6.3.2 (the Change Floor action).*
 
 7.3  The Assault Bound
 ------------------------

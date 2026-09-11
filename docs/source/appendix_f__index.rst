@@ -175,6 +175,8 @@ condition: PEN ≥ AV + 3  ..........  18.2
 
 **B**
 
+**Basic entrenchment — see Fortification building**  ..........  21.7a
+
 **Bail-out (vehicle)**  ..........  19.2
 
 CREW counter placed  ..........  19.2.7
@@ -223,6 +225,12 @@ vs Rout  ..........  15.3
 
 bonuses by phase  ..........  21.6.2
 
+**Building floors**  ..........  7.2a
+
+Change Floor action (1 AP per floor)  ..........  6.3.2, 7.2a.2
+
+Elevated OBS bonus while on an upper floor  ..........  7.2a.3, 14.9.8
+
 **Burning marker**  ..........  21.5.4
 
 duration  ..........  21.5.7
@@ -240,6 +248,10 @@ extinguishing  ..........  21.5.6
 branching structure (nodes, branch tables, DAG)  ..........  13.5.3–13.5.7, E.103
 
 between-scenario recovery rolls  ..........  13.3
+
+leader recovery (relabeled table)  ..........  13.3.1
+
+vehicle hull recovery (relabeled table)  ..........  13.3.2
 
 combining half squads  ..........  13.4
 
@@ -584,6 +596,10 @@ threshold advances on pass  ..........  15.5.6
 times and results  ..........  21.7.4
 
 under fire interruption  ..........  21.7.3
+
+**Basic entrenchment (any unit) — see Fortification building**  ..........  21.7a
+
+capped at Entrenchment — deeper stages remain engineer-only  ..........  21.7a.2
 
 **Forward observer (FO)**  ..........  1.3, 16.4.1
 
@@ -1266,6 +1282,8 @@ buttoned up isolation  ..........  19.1.3, 19.6.3
 triggers and thresholds  ..........  19.1.2
 
 **Vehicle movement**  ..........  17.6
+
+**Vehicle recovery (between-scenario, hull) — see Recovery Rolls**  ..........  13.3.2
 
 allowances by type  ..........  17.6.1
 

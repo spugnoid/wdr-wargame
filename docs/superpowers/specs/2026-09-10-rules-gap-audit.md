@@ -613,3 +613,41 @@ specifically, rather than a "Section 21" citation that was only ever a
 quarter true.
 
 Both fixes build clean under `sphinx -W`.
+
+## Update — 2026-09-11 (part 5): genre comparison against ASL and similar games
+
+Asked "anything else ASL or other games address that we haven't." Checked
+10 genre-standard tactical-wargame features against actual current rule
+text. Most of ASL's famous exhaustiveness turned out to be deliberate,
+defensible minimalism already matching this project's own stated design
+philosophy (weapon jamming, vehicle bypass movement, a distinct "Human
+Wave" mass-assault bonus, pre-registered defensive fire for direct-fire
+guns — all confirmed absent and judged not worth the added bookkeeping).
+Water crossings and rubble/craters are partial-by-design, consistent with
+patterns already used elsewhere in this document.
+
+Three were real, and the designer asked all three fixed (design note
+E.114 has the full record):
+
+- **Building floors were a phantom mechanic** — Rule 7.2 charged MP for
+  climbing floors, but "floor" appeared nowhere else in the document; the
+  cost had no consequence at all. Fixed by making floor-to-floor movement
+  its own action (a new Change Floor entry, Rule 6.3.2, 1 AP per floor)
+  rather than an MP line item, which also gave the document a natural
+  place to hang a real consequence: a unit on an upper floor now gets the
+  existing Elevated OBS bonus (Rule 14.9.8) when spotting.
+- **Only engineers could dig in** — genuinely odd for a project this
+  invested in historical grounding, since ordinary WWII infantry dug
+  foxholes constantly without engineer support. New Rule 21.7a extends
+  Rule 21.7's entrenchment procedure to any unit, at double the
+  engineer's time and capped below what deeper fortification work
+  requires — a specialist stays meaningfully better, not just present.
+- **Vehicle hulls had no between-scenario recovery** — vehicle *crews*
+  already had full campaign treatment (EM, quality, re-crewing), but a
+  DAMAGED or ABANDONED hull had no path back into the campaign at all.
+  New Rule 13.3.2 reuses Rule 13.3's existing recovery table exactly the
+  way Rule 13.3.1 already does for leaders (relabeling columns, not
+  building a second table), and routes a recovered hull through the
+  crew mechanics that already exist rather than inventing new ones.
+
+All three build clean under `sphinx -W`.

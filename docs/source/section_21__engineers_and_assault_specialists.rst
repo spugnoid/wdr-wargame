@@ -506,6 +506,35 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
 
    **Example:** Alpha's engineer squad alone needs 4 turns to build a full fortification from an entrenchment, but with a second engineer squad joining the same position, that drops to 2 turns — though a third squad couldn't push it below the 1-turn minimum per stage.
 
+21.7a  Basic Entrenchment (Any Unit)
+----------------------------------------
+
+*Design note: Rule 21.7 has always been engineer-only, but real WWII infantry dug their own foxholes constantly, without waiting for engineer support — a project this invested in historical grounding had no way for an ordinary rifle squad to dig in at all. This rule closes that gap by extending Rule 21.7's own procedure to any combat unit, capped below what specialist tools and training buy an engineer. See design note E.114.*
+
+**21.7a.1**  Any combat unit (not only engineers) may dig a basic entrenchment in open ground, following Rule 21.7.2's procedure exactly (full activation each turn; Rule 21.7.3's under-fire loss applies identically) but requiring **4 turns** instead of an engineer's 2 (Rule 21.7.4) — ordinary infantry lack an engineer's specialist tools and training.
+
+.. container:: rule-guide
+
+   **Why:** Doubling the engineer's time keeps entrenchment achievable for any unit while preserving a real, meaningful reason to still want an engineer present for it — twice as long, spent immobile and undefended, is a genuine cost for going it alone.
+
+   **Example:** Rifle Squad Bravo, with no engineer available, digs open ground into an entrenchment (+0 to +6 cover) over 4 uninterrupted turns — the same result Alpha's engineer squad would reach in 2, at twice the exposure.
+
+**21.7a.2**  A non-engineer unit cannot improve a position beyond Entrenchment — Fortification, Reinforced Building, and Field Position (Rule 21.7.4's other rows) remain engineer-only.
+
+.. container:: rule-guide
+
+   **Why:** Keeps the deeper fortification work a genuine engineer specialty — digging a foxhole is within any soldier's basic training, but reinforcing a building or building a proper bunker position calls for tools and technique ordinary infantry doesn't carry.
+
+   **Example:** Bravo's squad can dig open ground into an entrenchment on its own, but cannot then upgrade that entrenchment into a full fortification — that stage requires an engineer unit to arrive and take over the work under Rule 21.7.4.
+
+**21.7a.3**  Multiple non-engineer units working the same position halve the time required, matching Rule 21.7.5's minimum-1-turn floor. An engineer unit joining a non-engineer effort on the same position uses the engineer's own faster 2-turn baseline instead (Rule 21.7.5) — a specialist directing the work always sets the pace, not just adds hands to it.
+
+.. container:: rule-guide
+
+   **Why:** Extends Rule 21.7.5's combined-effort math to the non-engineer case for consistency, while keeping an engineer's arrival meaningfully better than just another pair of hands — bringing the actual expertise resets the clock to the specialist's own faster rate rather than merely nudging the amateur rate down further.
+
+   **Example:** Two rifle squads digging together halve their 4-turn basic entrenchment time to 2 turns; if an engineer squad joins that same effort instead of a second rifle squad, the position digs in at the engineer's own 2-turn baseline (Rule 21.7.5), not a blended rate between the two unit types.
+
 21.8  Assault Bridge
 --------------------
 

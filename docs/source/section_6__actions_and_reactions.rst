@@ -125,6 +125,9 @@ A unit may react more than once per turn while it still has an unspent part-acti
    * - Leader Action
      - 1
      - Leader moves, coordinates, provides a fire bonus to a fire group within command radius (Rule 12.7), or places a RALLY POINT marker. → MOVED/FIRED.
+   * - Change Floor (Building)
+     - 1
+     - Move exactly one floor, up or down, within the unit's current building hex. See Rule 7.2a. Does not by itself end the unit's turn — a unit may still act normally (including changing floor again) in a later activation this turn.
 
 
 **6.3.3**  Assault part-actions (each costs 1 AP; a fresh unit may take one as its first part-action of the turn):
