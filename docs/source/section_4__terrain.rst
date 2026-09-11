@@ -29,6 +29,14 @@ Section 4 — Terrain
 
    **Example:** Alpha, defending behind a wall, gets its +2 cover (Rule 4.2) against Squad Bravo firing from across the wall, but gets no benefit from that same wall against a different enemy firing from Alpha's own side of it.
 
+**4.1.3a**  Anti-tank ditch: a hex terrain type representing a deliberately dug vehicle obstacle, distinct from Ditch / Sunken Road (Rule 4.2) even though the two share the same cover and intervening-fire values. Infantry treat an Anti-tank ditch hex exactly as Ditch / Sunken Road for cover, intervening penalty, and movement cost (Rules 4.2, 4.3, 7.2). Vehicles cannot enter an Anti-tank ditch hex at all except through one the scenario has marked as a crossing point (Rule 17.6.2's table) — the obstacle is built to defeat vehicles specifically, not foot troops.
+
+.. container:: rule-guide
+
+   **Why:** Gives a genuine vehicle obstacle its own terrain type rather than overloading Ditch / Sunken Road, since the two are physically different things with the same battlefield silhouette — a sunken road is a everyday terrain feature that happens to give cover, while an anti-tank ditch is purpose-built military engineering that a sunken road's own printed movement cost (1 MP, passable to everyone) would badly understate.
+
+   **Example:** A scenario recreating a real anti-tank ditch marks one hex along its length as a crossing point (a collapsed section, an engineer-built ramp, a place tanks were observed to force their way through); vehicles may enter and cross only there, while infantry cross anywhere along the ditch's length at ordinary Ditch / Sunken Road cost.
+
 4.2  Cover Modifiers
 --------------------
 
@@ -60,6 +68,9 @@ Cover modifiers are added to the defender's Defence value when resolving fire co
    * - Ditch / sunken road
      - +3
      - Natural defilade
+   * - Anti-tank ditch (Rule 4.1.3a)
+     - +3
+     - Vehicle-impassable except at a marked crossing — same cover as Ditch / Sunken Road for infantry
    * - Dense woods
      - +4
      - Heavy vegetation and tree mass
@@ -201,6 +212,14 @@ Cover modifiers are added to the defender's Defence value when resolving fire co
    **Why:** Gives elevation a precise, printed value and names the specific boundary (the crest hexside) where it changes, since every rule that follows in this subsection — blocking, blind zones, grazing fire — depends on being able to point at exactly where a level change occurs.
 
    **Example:** A hex printed as level 1 sitting next to a level-0 hex has a crest hexside between them; that specific hexside is what Rule 4.4a.5's grazing-fire penalty and Rule 4.4a.4's blind-zone rule both key off.
+
+**4.4a.1a**  Elevation levels are not limited to hills. A raised, roughly linear feature crossing otherwise-flat ground — a railway embankment, a raised causeway, a canal dyke — is modelled the same way: assign it a higher elevation level than the surrounding ground, with any gap in it (a level crossing, a breach) simply a same-level hex that carries no crest hexside of its own.
+
+.. container:: rule-guide
+
+   **Why:** Confirms this section's elevation and crest mechanics (Rules 4.4a.2-4.4a.5) are a general tool for any raised terrain, not a hill-specific system that leaves a designer with nowhere to put a linear obstacle that isn't a hill — the mechanics (a level change, a crest hexside, a blind zone beyond it) apply identically whether the high ground is a ridge or a stretch of railway embankment.
+
+   **Example:** A rail embankment running the length of a scenario map is set to elevation level 1 against the level-0 ground either side of it; a single hex left at level 0 within that line models the one place a road or track crosses it, exactly as a gap in a ridgeline would.
 
 **4.4a.2**  An intervening hex whose level is **equal to or higher than the higher** of the firer's and target's levels blocks LOS (Rule 4.4.2). Two units on top of the same hill see each other normally — hexes at their shared level on the hill mass between them block per this rule only if higher than both.
 

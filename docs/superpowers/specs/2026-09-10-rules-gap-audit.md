@@ -843,3 +843,54 @@ followed by a backtick with no separating space, inside an
 already-open italic span — fixed by matching the already-working
 pattern elsewhere in this document exactly: always put a space between
 a closing `*` and the inline-literal backtick that follows it).
+
+## Update — 2026-09-11 (part 10): three rules gaps found by actually playing a scenario, fixed
+
+Asked to build a map, set up a combined-arms engagement, and play a
+few turns to see how the rules actually perform — a different kind of
+QA pass than any prior part of this session, which had all been
+text-only audits. Built "Counterattack at Oktyabrsky," a Panzer IV/
+T-34 extension of the rulebook's own Farmhouse at Prokhorovka scenario
+(Rule 22.11), grounded in real, cited terrain from the actual 12 July
+1943 morning (Oktyabrsky State Farm, the 15-foot anti-tank ditch at
+the base of Hill 252.2, the rail embankment). Played 4 of 6 turns with
+every combat roll made live (1d6+1d8+1d12 / 1d6 via Python `random`),
+delivered as an artifact with the map, order of battle, full turn log,
+and findings.
+
+Three genuine rules gaps surfaced — none wrong on the page, all
+invisible to a text-only read because they only bite when a player
+actually needs the missing piece mid-turn:
+
+**Vehicle move-then-fire was never stated as its own rule.** Section
+6.3.1 gives infantry a strict Move-OR-Fire choice per turn. Vehicles
+obviously don't work that way, and two existing rules already assumed
+the reader knew it (17.4.2's TRAV−1-if-moved penalty; an aside buried
+in 18.1a.9) without ever stating the actual entitlement. Fixed with
+new Rule 17.4.1a (one Move action and one Fire action per turn, either
+order, moving doesn't end a vehicle's turn) and a one-line cross-
+reference at 6.3.1a.
+
+**No terrain type existed for a real anti-tank ditch.** Appendix B's
+"Ditch / Sunken Road" is walkable by everyone, including vehicles —
+there was nothing for the kind of ditch Soviet tanks are documented
+driving straight into at Prokhorovka, and the playtest scenario had to
+invent a Special Condition to model it. Fixed with new Rule 4.1.3a:
+identical cover/movement cost to Ditch / Sunken Road for infantry, but
+impassable to every vehicle class except at a marked crossing point
+(reusing the same impassable-except-at-crossings pattern River/Cliff
+already has in Rule 17.6.2's table).
+
+**Railway embankments turned out not to be a gap at all.** They
+seemed to fit neither the terrain table nor the elevation/crest system
+(Rule 4.4a), which reads as hill-specific in its own examples — but
+the crest/blind-zone/grazing-fire mechanics already work for any level
+change, hill or not. Fixed with new Rule 4.4a.1a, which just says so:
+a raised linear feature is assigned a higher elevation level than its
+surroundings, no new terrain type or numbers needed.
+
+All three: design note E.119, Appendix F index entries, `sphinx -W`
+clean rebuild (double-checked the new design-note prose byte-for-byte
+for the same asterisk-adjacent-to-backtick nesting failure as part 8 —
+clean this time). None used the optional-module treatment — each
+closes a real gap in the base game, not an added layer of chrome.

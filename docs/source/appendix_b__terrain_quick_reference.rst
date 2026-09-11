@@ -37,6 +37,10 @@ Appendix B — Terrain Quick Reference
      - +3
      - 0
      - 1
+   * - Anti-tank ditch (Rule 4.1.3a)
+     - +3
+     - 0
+     - 1 (infantry) — impassable to vehicles except at a marked crossing (Rule 17.6.2)
    * - Dense woods
      - +4
      - -3

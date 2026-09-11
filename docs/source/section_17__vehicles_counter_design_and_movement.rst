@@ -271,6 +271,14 @@ Vehicle counters display the following fields:
 
    **Example:** A fast-turreted TRAV 3 vehicle can engage any target regardless of hull facing, but that same hull's armor facing arcs (Rule 17.5.2) still determine which AV value an incoming shot uses based on the hull's actual orientation — the two never interact.
 
+**17.4.1a**  A vehicle does not follow Rule 6.3.1's Regular/Assault split. In a single turn it may take one Move action and one Fire action (Rule 6.3.2, 1 AP each), in either order — a vehicle's Move does not place a MOVED/FIRED marker and does not by itself end its turn. A vehicle instead tracks only whether it has moved this turn, via its own MOVED marker (Rule 18.1a.6) — a simpler, separate concept from the infantry MOVED/FIRED marker (Rule 6.5.1), which vehicles do not use. A vehicle that has both moved and fired this turn may not move or fire again. If the Fire action comes after the Move action, it is subject to Rule 17.4.2's TRAV penalty; a Fire action taken before the vehicle has moved this turn is not.
+
+.. container:: rule-guide
+
+   **Why:** States outright, as its own rule, an exception that otherwise has to be pieced together from two of its own side effects — Rule 17.4.2's TRAV-minus-one-if-moved penalty and the Gunnery Roll's crossing-target adjustment (Rule 18.1a.6) both only make sense once a reader already knows a vehicle can move and then fire in the same turn, something Section 6 never says and a vehicle counter's own action economy shouldn't require piecing together from elsewhere.
+
+   **Example:** A Panzer IV spends 1 AP to move 3 hexes toward a firing position, then spends a second AP later in the turn to fire at a target it can now see — perfectly legal, and exactly what real tank tactics call for, unlike a rifle squad which would already be MOVED/FIRED after the move alone.
+
 .. list-table::
    :header-rows: 1
    :widths: auto
@@ -503,7 +511,12 @@ Casemate vehicles (TRAV 0) never receive a TRAVERSED marker; they have no separa
      - 1
      - 2
      - 2
-     - 
+     -
+   * - Anti-tank ditch (Rule 4.1.3a)
+     - 1
+     - Impassable*
+     - Impassable*
+     - \*Except at a marked crossing point, entered at this row's ordinary tracked/wheeled cost
    * - Shallow stream
      - 2
      - 2

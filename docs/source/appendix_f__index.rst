@@ -465,6 +465,8 @@ minimum 1 after all modifiers  ..........  4.3.5
 
 cover modifier for uphill target  ..........  4.5.2
 
+not limited to hills — embankments, causeways  ..........  4.4a.1a
+
 rFP bonus for elevated firer  ..........  4.5.1
 
 **Eliminated result**  ..........  8.6
@@ -1213,6 +1215,8 @@ recovery threshold 8 (Suppressed)  ..........  5.2.4, 10.2.3
 
 **Terrain**  ..........  S.4
 
+anti-tank ditch (vehicle-impassable)  ..........  4.1.3a, 17.6.2
+
 cover modifiers table  ..........  4.2, App.B
 
 intervening terrain table  ..........  4.3, App.B
@@ -1236,6 +1240,8 @@ universal opening of death notifications  ..........  E.45
 **Traverse rating (TRAV)**  ..........  17.4
 
 casemate TRAV 0  ..........  17.4.1
+
+move-then-fire action economy  ..........  17.4.1a
 
 movement penalty TRAV −1  ..........  17.4.2
 
@@ -1296,6 +1302,10 @@ representative 1943 roster  ..........  19.7
 buttoned up isolation  ..........  19.1.3, 19.6.3
 
 triggers and thresholds  ..........  19.1.2
+
+**Vehicle move and fire (action economy)**  ..........  17.4.1a
+
+does not use Regular/Assault split — see Regular and Assault Actions  ..........  6.3.1a
 
 **Vehicle movement**  ..........  17.6
 

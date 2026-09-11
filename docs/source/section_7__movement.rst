@@ -103,6 +103,9 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
    * - Ditch / sunken road
      - 1
      - Natural movement axis
+   * - Anti-tank ditch (Rule 4.1.3a)
+     - 1
+     - Same as Ditch / Sunken Road for infantry — vehicles cannot enter except at a marked crossing (Rule 17.6.2)
    * - Road
      - 1
      - And enables the road bonus (Rule 7.2.1)

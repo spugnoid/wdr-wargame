@@ -77,6 +77,14 @@ A unit may react more than once per turn while it still has an unspent part-acti
 
    **Example:** Alpha takes a Regular Move this turn (full M#). It cannot later also take an Assault Fire part-action — Regular and Assault are mutually exclusive for the whole turn, decided by whichever the unit does first.
 
+**6.3.1a**  Vehicles do not follow this Regular/Assault split. See Rule 17.4.1a for the vehicle action economy.
+
+.. container:: rule-guide
+
+   **Why:** Flags the exception at the point a reader would otherwise assume it's universal, rather than leaving it to be inferred from a vehicle-specific rule elsewhere (Rule 17.4.2's TRAV penalty) that only makes sense once the exception is already known.
+
+   **Example:** A rifle squad that moves this turn is MOVED/FIRED and done; a Panzer IV that moves the same turn is not — it may still take a separate Fire action later in the turn, per Rule 17.4.1a.
+
 **6.3.2**  Regular actions (each costs 1 AP unless noted; each ends the unit's turn — MOVED/FIRED — except where an action's own rule says otherwise):
 
 .. container:: rule-guide
