@@ -107,15 +107,17 @@ MG fire line  ..........  18.8.2
 
 **Anti-tank weapons (infantry)**  ..........  18.9
 
-AT grenade bundle  ..........  18.9
+AT grenade bundle  ..........  18.9, 18.9a
 
 AT rifle  ..........  18.9
 
 Bazooka  ..........  18.9
 
+close-range use against a vehicle (Close Assault) — see Close assault, against a vehicle  ..........  18.9a
+
 EXPENDED strip after use  ..........  18.9.1
 
-magnetic mine  ..........  18.9
+magnetic mine  ..........  18.9, 18.9a
 
 Molotov cocktail  ..........  18.10
 
@@ -281,11 +283,15 @@ four zones  ..........  13.1
 
 **Close assault**  ..........  S.9
 
+against a vehicle  ..........  18.9a
+
 declaration and eligibility  ..........  9.1
 
 entry fire phase  ..........  9.4
 
 grenade phase  ..........  9.3
+
+mutual elimination (both sides at once)  ..........  9.3.8, 9.4.7
 
 melee continuation  ..........  9.5
 

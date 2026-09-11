@@ -13,6 +13,8 @@ Section 9 — Close Assault
 
    **Example:** Squad Alpha is adjacent to Squad Bravo's hex and has AP remaining this impulse. Declaring Close Assault costs Alpha 1 AP, the same as any other Regular action (Rule 6.3.2) — there is no separate "melee surcharge."
 
+    *See also: Rule 18.9a (Close Assault Against a Vehicle) — when the target hex holds only enemy vehicles, this same declaration leads to a different resolution than Rules 9.3-9.4.*
+
 **9.1.2**  The assaulting unit must have M# > 0, no FIRED or MOVED/FIRED marker present this turn, and a leader present in its hex to direct the assault — either coordinating that unit alone or activating it together with other units in the same stack (Rule 6.1.1). Closing with the enemy and physically entering a contested hex is a directed, coordinated action, never a rifleman's own spontaneous initiative, so this requirement applies no matter which of the two declaration paths below the unit uses. A unit with no leader present may still take any other action it's otherwise eligible for, but may not initiate a close assault.
 
 .. container:: rule-guide
@@ -42,7 +44,7 @@ See Rule 6.3.3.
 
    **Example:** Alpha, on its reduced face after an earlier step loss, is adjacent to Bravo's hex with AP remaining. Before declaring Close Assault it rolls 1d6 + Morale modifier against threshold 3. A Regular unit's Morale modifier of +0 needs a 3 or better — a roll of 2 fails, and Alpha may not declare the assault this impulse, though its Action Point is untouched and it may act some other way instead. A fresh, full-strength unit in the same position could declare immediately with no check at all.
 
-**9.1.4**  Close assault consists of up to three phases: Grenade Phase, Entry Fire Phase, and Melee Continuation (if both sides survive).
+**9.1.4**  Close assault consists of up to three phases: Grenade Phase, Entry Fire Phase, and Melee Continuation (if both sides survive). Exception: a close assault declared against a hex containing only enemy vehicles resolves as a single exchange instead (Rule 18.9a) — none of these three phases apply.
 
 .. container:: rule-guide
 
@@ -166,6 +168,16 @@ See Rule 6.3.3.
 
    **Example:** Alpha is eliminated in the Grenade Phase. Alpha's counter is removed from play; Bravo remains in its hex, undisturbed by any Entry Fire.
 
+**9.3.8**  If both sides are eliminated simultaneously in the Grenade Phase, both counters are removed. The hex is empty.
+
+.. container:: rule-guide
+
+   **Why:** Rules 9.3.6 and 9.3.7 each cover one side being wiped out alone, but the Grenade Phase is explicitly simultaneous (9.3.1) and can produce a mutually fatal roll on both sides at once — this closes that gap the same way Rule 9.4.7 already closes it one phase later for Entry Fire (that rule's own Why-note calls out "the specific case the grenade-phase rules don't address," which was this one). "Both sides" reads correctly whether each side is a single unit or a full stack (Rule 9.8) — the hex is emptied of combat units on whichever side(s) had every participant eliminated or Dispersed by the same phase's results.
+
+   **Example:** Both Alpha and Bravo suffer margin-23+ results simultaneously in the Grenade Phase. Both counters are removed (Dispersed, per Rule 9.1.6); the hex is left empty, and the Entry Fire Phase never occurs.
+
+    *See also: Rule 9.4.7 (the identical case for Entry Fire).*
+
 9.4  Entry Fire Phase
 ---------------------
 
@@ -222,9 +234,11 @@ See Rule 6.3.3.
 
 .. container:: rule-guide
 
-   **Why:** Covers the specific case the grenade-phase rules (9.3.6/9.3.7) don't address — mutual destruction — so no ambiguity remains about who "wins" a hex nobody survives.
+   **Why:** Covers mutual destruction in Entry Fire specifically — Rule 9.3.8 covers the identical case one phase earlier, in the Grenade Phase.
 
    **Example:** Both Alpha and Bravo suffer Broken-equivalent results simultaneously in Entry Fire. Both counters are removed; the hex is left empty of combat units.
+
+    *See also: Rule 9.3.8 (the identical case for the Grenade Phase).*
 
 9.5  Melee Continuation
 -----------------------

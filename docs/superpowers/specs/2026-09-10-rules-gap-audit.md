@@ -566,3 +566,50 @@ real open item**, just a labeled one now instead of an absence.
 same Morale (6) as the regular row above it, breaking the veteran-gets-
 +1 pattern every other paired row in the document follows. Corrected to
 7. Found while adding the Japan row directly beneath it.
+
+## Update — 2026-09-11 (part 4): two overlooked rules mechanics, found and fixed
+
+Asked directly "are there any rules overlooked" — a different question
+from stubs/TBDs/rosters (already covered above). Dispatched a fresh-eyes
+review scoped explicitly to exclude everything already known. It found
+two real gaps, both confirmed against actual rule text before being
+reported (not just plausible-looking), and both are now fixed. Design
+note E.113 has the full record.
+
+**1. Close Assault had no mutual-elimination rule for the Grenade Phase.**
+Rules 9.3.6/9.3.7 each cover one side alone being wiped out; nothing
+covered both at once, even though the phase is explicitly simultaneous.
+The confirming evidence was already in the document: Rule 9.4.7 exists
+purely to patch this same hole one phase later (Entry Fire), and its own
+rule-guide says so outright. Fixed with a new Rule 9.3.8, mirroring
+9.4.7 exactly, worded generically enough to also cover Rule 9.8 stacks
+without a separate patch.
+
+**2. Nothing let infantry attack a vehicle at close quarters — the
+satchel-charge case had no procedure at all.** More evidence was already
+sitting in the document than the first gap: Rule 18.9's own weapons
+table has always listed an AT grenade bundle and a magnetic mine at "0
+hex — same hex only," which only makes sense if infantry can end up
+sharing a hex with an enemy vehicle — but nothing said how, or what
+happens next. Rule 18.8.6 compounded this, crediting "engineer attacks
+(Section 21)" as one of four ways a closed AFV takes damage, when
+Section 21's only vehicle-capable action is the flamethrower. (Checked
+and ruled out first: Rule 18.8.5's soft-target fire looked like a
+candidate fix but is explicitly scoped to open-topped/unarmoured
+vehicles only — not the closed-AFV case actually in question.)
+
+Fixed with a new Rule 18.9a, which connects two systems that already
+existed rather than building a third: Close Assault (Rule 9.1) can now
+be declared against a vehicle-only hex, keeping its existing declaration
+gate (leader present, Suppressed/Pinned exclusion, the reduced-face
+check, Defensive Fire) but substituting a single PEN-vs-AV exchange —
+resolved through Section 18's own infantry-AT machinery, not Section 9's
+infantry-vs-infantry dice thresholds. Targets Rear arc (same "point-blank
+means the weak point" principle as the flamethrower and Molotov rules)
+and is simultaneous with the vehicle's own MG fire (reusing Overrun's
+already-established precedent for exactly this situation). Rule 18.8.6's
+cross-reference is corrected to name this rule and the flamethrower
+specifically, rather than a "Section 21" citation that was only ever a
+quarter true.
+
+Both fixes build clean under `sphinx -W`.

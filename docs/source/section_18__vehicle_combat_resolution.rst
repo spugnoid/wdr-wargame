@@ -556,7 +556,7 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
 
 A Casualty result or better eliminates a soft vehicle; against an open-topped armoured vehicle it is a vehicle Casualty (Rule 18.6a applies if a table exists, else Rule 17.1.1).
 
-**18.8.6**  HE direct fire against a **closed** AFV never rolls on the penetration tables: resolve one roll on the Non-Penetrating Hit table (Rule 18.4), at +1 for guns of 105mm and larger — blast and concussion can suppress a crew but not open the tank. Damage to closed AFVs comes only through AP/HEAT penetration (Rule 18.2), overrun (18.11), Molotovs (18.10), and engineer attacks (Section 21).
+**18.8.6**  HE direct fire against a **closed** AFV never rolls on the penetration tables: resolve one roll on the Non-Penetrating Hit table (Rule 18.4), at +1 for guns of 105mm and larger — blast and concussion can suppress a crew but not open the tank. Damage to closed AFVs comes only through AP/HEAT penetration (Rule 18.2), overrun (18.11), Molotovs (18.10), and close-range infantry attacks (Rule 18.9a — includes engineer-specific weapons such as the magnetic mine, and the flamethrower's own vehicle rule, Rule 21.5.8).
 
 .. container:: rule-guide
 
@@ -621,11 +621,11 @@ Infantry AT weapons do not use the Gunnery Roll (Rule 18.1a.8) — they always h
    * - AT grenade bundle
      - 40 mm (flat)
      - 0 hex
-     - Same hex only — close assault.
+     - Same hex only — Close Assault Against a Vehicle, Rule 18.9a.
    * - Magnetic mine (Hafthohlladung)
      - 60 mm (flat)
      - 0 hex
-     - Engineer unit required. Same hex only.
+     - Engineer unit required. Same hex only — Rule 18.9a.
    * - Molotov cocktail
      - Special
      - 0–1 hex
@@ -650,6 +650,45 @@ Infantry AT weapons do not use the Gunnery Roll (Rule 18.1a.8) — they always h
    **Why:** Confirms explicitly that infantry-carried shaped-charge weapons trigger the same standoff-armor protection as gun-fired HEAT rounds, since their underlying physics (a shaped-charge jet) is identical regardless of whether the weapon is vehicle-mounted or shoulder-fired.
 
    **Example:** A Panzerfaust fired at a Schürzen-protected Side arc has its 140mm PEN halved to 70mm before comparison, exactly as a gun-fired HEAT round would in the same situation (Rule 18.2b.2).
+
+18.9a  Close Assault Against a Vehicle
+------------------------------------------
+
+*Design note: Rule 18.9's own table has always listed the AT grenade bundle and magnetic mine at "0 hex — same hex only," implying an infantry unit can end up sharing a hex with an enemy vehicle to use them — but nothing ever said how it gets there or what happens once it does. Rule 18.8.6 has likewise always credited "engineer attacks (Section 21)" as one of the four ways a closed AFV takes damage, when the only vehicle-capable engineer action that actually exists is the flamethrower (Rule 21.5.8). This rule closes both gaps at once, reusing Close Assault's own declaration machinery and Overrun's already-established simultaneous-fire principle rather than building a parallel system. See design note E.113.*
+
+**18.9a.1**  A unit may declare Close Assault (Rule 9.1) against a hex containing only enemy vehicles — the same declaration requirements apply (a leader present, Rule 9.1.2; not Suppressed/Pinned, Rule 9.1.3; the reduced-face nerve check, Rule 9.1.3a; Defensive Fire, Rule 9.1.5). A vehicle cannot throw grenades back or hold a firing line the way an infantry defender can, so the Grenade Phase and Entry Fire Phase (Rules 9.3-9.4) do not apply — this rule replaces both with a single exchange.
+
+.. container:: rule-guide
+
+   **Why:** Reuses Close Assault's existing declaration gate (leader coordination, Suppressed/Pinned exclusion, the reduced-face check, the defender's one chance at Defensive Fire) rather than inventing a second gate for the vehicle case, since the decision to close on an enemy position at grenade range is the same tactical moment whether that position holds infantry or a tank — only what happens once the attacker arrives differs.
+
+   **Example:** Squad Alpha, with a leader present and a magnetic mine still unexpended, declares Close Assault against an adjacent hex containing a single enemy tank and no infantry. The declaration costs 1 AP exactly as any other Close Assault would; the defending player may still spend 1 RP on Defensive Fire before the exchange below resolves.
+
+**18.9a.2**  The assaulting unit selects one weapon eligible at 0-hex range from Rule 18.9's table (an AT grenade bundle; a magnetic mine, engineer unit required; or any other carried weapon whose printed range band includes 0 hexes) and resolves it against the vehicle's Rear arc AV — closing to point-blank range means approaching from whatever angle exposes the weakest armor, the same principle already established for the flamethrower (Rule 21.5.8) and the Molotov cocktail (Rule 18.10.1). This resolves as an ordinary infantry AT attack (Rule 18.9): no Gunnery Roll, flat PEN vs AV.
+
+.. container:: rule-guide
+
+   **Why:** Sends the actual damage resolution through Section 18's existing PEN-vs-AV machinery rather than Section 9's infantry-vs-infantry dice-and-threshold system, since a satchel charge or mine breaching armor and a grenade duel suppressing riflemen are physically different events that already have their own correct resolution procedures — this rule's job is only to connect Close Assault's declaration to the right one.
+
+   **Example:** Alpha's magnetic mine (60mm PEN, flat) resolves against the tank's Rear AV exactly as if fired at range 0 under Rule 18.9 — no Gunnery Roll, no hit-location ambiguity beyond what Rule 18.6a already provides for a Casualty result.
+
+**18.9a.3**  Simultaneously, the target vehicle may fire its hull or coaxial MG (if any) at the assaulting unit at range 0, resolved as ordinary anti-infantry fire (Rule 18.8) — the same simultaneous-exchange principle already established for Overrun's pre-entry defensive fire (Rule 18.11.2). A vehicle under direct point-blank assault does not simply wait to be attacked.
+
+.. container:: rule-guide
+
+   **Why:** Reuses Overrun's own precedent for exactly this situation — infantry and a vehicle in point-blank contact — rather than treating the vehicle as a passive target for the one moment closest to a real melee this system has for it.
+
+   **Example:** The same instant Alpha's mine resolves against the tank's rear, the tank's hull MG fires back at Alpha at range 0 under ordinary anti-infantry fire rules — neither side sees the other's result before its own is already committed.
+
+**18.9a.4**  If the vehicle is eliminated or immobilised (a Casualty result or worse), the assault succeeds — apply Rule 9.3.6 (the attacker enters the hex; no further phase occurs). Otherwise the assaulting unit — if it survived the vehicle's return fire — withdraws to its original hex: an intact enemy vehicle still holds the ground, and there is no reason to remain exposed at point-blank range for another impulse.
+
+.. container:: rule-guide
+
+   **Why:** An infantry unit closing on a tank has one purpose — disable it — and no reason to occupy its hex if that fails, unlike infantry-vs-infantry close assault where holding the contested hex is itself the point; withdrawing automatically avoids inventing a reason for the attacker to just stand next to a still-functioning tank until the next impulse.
+
+   **Example:** Alpha's mine bounces (a Bounce or Non-Penetrating Hit result) and Alpha itself survives the tank's return MG fire. Alpha withdraws to its original hex at the end of the exchange — the tank remains where it was, undamaged and still holding the contested hex.
+
+    *See also: Rule 18.9 (the weapon table this rule resolves against), Rule 21.5.8 (the flamethrower's parallel rear-arc treatment), Rule 18.11.2 (Overrun's simultaneous-fire precedent).*
 
 18.10  Molotov Cocktail
 -----------------------
