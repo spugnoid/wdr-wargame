@@ -578,8 +578,8 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
      - G5
      - DEMO BRH MINE FLAM
      - 7
-     - 6
-     - Full assault pioneer capability including flamethrower
+     - 7
+     - Full assault pioneer capability including flamethrower. Morale corrected 6->7 2026-09-11 -- veteran quality should read higher than the regular row below it, matching the pattern every other veteran/regular pair in this document follows (found while adding the Japan row beneath this table).
    * - German Pioneer squad (Pioniere) — regular
      - ╌ 5 ⬡4 -1
      - G5
@@ -615,3 +615,10 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
      - 7
      - 6
      - Similar to British — strong logistics engineering
+   * - Japanese Engineers (Kōhei) — regular *[rough estimate — see note]*
+     - ╌ 4 ⬡4 -1
+     - G4
+     - DEMO MINE FLAM
+     - 6
+     - 6
+     - *[Rough estimate, not TOE-researched like this table's other rows — flagged for a dedicated research pass before treating it as settled. No BRDG: IJA engineering doctrine emphasised fortification, tunnelling, and demolition (well documented, esp. Pacific island defences) over Western-style mechanized bridging. FLAM included on the strength of the man-portable Type 93/Type 100 flamethrower's documented IJA/SNLF infantry use.]*

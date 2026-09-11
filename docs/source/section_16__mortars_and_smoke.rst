@@ -82,6 +82,34 @@ All mortar counters use M1 F1 (mobile) or M0 F2 (deployed) — F2 while deployed
      - 8
      - 9
      - Heavy mortar — battalion asset
+   * - US 60mm M2
+     - ⬡5-50
+     - 1
+     - 3
+     - 8
+     - 5
+     - Squad/company mortar — max range (2,000 yd, sourced) rivals a medium mortar, but a genuinely longer minimum range trades away German/Soviet 50mm-class close-support flexibility
+   * - UK 2-inch
+     - ⬡1-12
+     - 1
+     - 2
+     - 6
+     - 3
+     - Platoon mortar — shortest range and lightest bomb of any mortar here; also the platoon's illumination source (Rule 23.3)
+   * - UK 3-inch
+     - ⬡3-70
+     - 1
+     - 3
+     - 10
+     - 7
+     - Company/battalion mortar — RNG reflects the 1943 "Long Range" propellant upgrade (sourced), exceeding contemporary German/Soviet medium mortars
+   * - Japan Type 89 (50mm)
+     - ⬡1-18
+     - 1
+     - 2
+     - 8
+     - 3
+     - Platoon "grenade discharger" ("knee mortar") — lighter shell than German/Soviet 50mm-class mortars despite comparable range
 
 
 16.3  Ammunition

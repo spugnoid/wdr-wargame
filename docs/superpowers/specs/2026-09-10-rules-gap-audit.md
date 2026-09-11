@@ -528,3 +528,41 @@ now that the TOE docs exist to source it from.
 - Night Combat's own out-of-scope list (moon-phase visibility tiers,
   vehicle IR/thermal sighting, a blind/double-blind CP role, [OPS]
   interaction) — all flagged in E.106 as deliberate, bounded exclusions.
+
+## Update — 2026-09-11 (part 3): closed four of the five roster gaps
+
+Design note E.112 has the full record. Closed:
+
+- **Section 15.6** — added a UK national morale row (factor 0.45).
+- **Section 12.11** — added Platoon Leader (Regular) for US, UK, and
+  Japan, deliberately identical to the existing Soviet row (leader
+  competence is quality-tier-driven, not nation-specific by design).
+  Broadened the section's intro text, previously scoped to "the 1943
+  Eastern Front test scenarios."
+- **Section 20.7** — added a Japanese veteran sniper.
+- **Section 16.2** — added US 60mm M2, UK 2-inch, UK 3-inch, and the
+  Japanese Type 89 grenade discharger, with real web-verified max-range
+  figures. Two genuinely interesting, sourced findings, not just filled-
+  in blanks: the US 60mm's range rivals German/Soviet *medium* mortars
+  despite being a light squad weapon (traded off against a real, longer
+  minimum range); the UK 3-inch's 1943 "Long Range" propellant upgrade
+  genuinely outranges German/Soviet medium mortars of the same year.
+  ACC/AMO/rFP for all four are estimated by analogy to this table's
+  existing rows (there's no calculation pipeline behind Section 16.2 the
+  way `infantry_calc` backs Section 3) — flagged as a lower confidence
+  tier than the range figures.
+
+**Left at lower confidence, deliberately:** Section 21.9 gets a Japanese
+Engineers row, but marked as a rough estimate pending its own dedicated
+TOE-style research pass — a quick check surfaced real facts about IJA
+combat engineering (fortification/tunnelling work, man-portable
+flamethrowers) but nothing at the organizational depth the other four
+nations' infantry TOEs received. Printing a flagged estimate was judged
+better than leaving Japan the only nation missing from this table, but
+it shouldn't be read as settled the way the other rows are — **still a
+real open item**, just a labeled one now instead of an absence.
+
+**Bug fixed in passing:** the German veteran Pioneer squad printed the
+same Morale (6) as the regular row above it, breaking the veteran-gets-
++1 pattern every other paired row in the document follows. Corrected to
+7. Found while adding the Japan row directly beneath it.

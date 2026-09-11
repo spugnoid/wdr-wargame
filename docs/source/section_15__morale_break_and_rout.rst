@@ -352,6 +352,9 @@ Morale break behaviour differed significantly by nation and period. These differ
    * - US 1944–45
      - Generally steady, good recovery
      - Moderate Morale, factor 0.45
+   * - UK 1943–45
+     - Steady, professional regular army; later-war infantry replacement quality strained by manpower shortages
+     - Moderate Morale, factor 0.45
    * - Japan throughout
      - Rarely routed, fanatical holds
      - High Morale, factor 0.8 — collapse check almost never reached

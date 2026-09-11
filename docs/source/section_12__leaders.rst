@@ -524,7 +524,7 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
 ------------------------------------------
 
 
-The following counters are provided for the 1943 Eastern Front test scenarios:
+The following counters are representative examples across the nations this document covers, for 1943 test scenarios. CMD/OBS/RAL/ASL/Defence are quality-tier stats (Rule 12.2, 12.6.4) and deliberately do not vary by nation — national differences are carried by Force Morale factors (Rule 15.6) and unit-level data (Section 3, `counters/infantry_calc/`), not by individual leader competence. A Platoon Leader (Regular) is therefore the identical stat line for every nation below; only the counter's own printed nationality and unit ID differ.
 
 .. list-table::
    :header-rows: 1
@@ -564,6 +564,27 @@ The following counters are provided for the 1943 Eastern Front test scenarios:
      - 3
      - +1
      - 7
+     - 6
+   * - US Platoon Leader (Regular) — US PLT 43
+     - 2
+     - 2
+     - 4
+     - +1
+     - 6
+     - 6
+   * - UK Platoon Leader (Regular) — UK PLT 43
+     - 2
+     - 2
+     - 4
+     - +1
+     - 6
+     - 6
+   * - Japanese Platoon Leader (Regular) — JPN PLT 43
+     - 2
+     - 2
+     - 4
+     - +1
+     - 6
      - 6
 
 

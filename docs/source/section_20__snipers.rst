@@ -395,6 +395,12 @@ Sniper rules differ from standard infantry fire in three fundamental ways: they 
      - 6
      - 4
      - Scoped M1903A4 Springfield
+   * - Japanese sniper (veteran)
+     - ╌○ 3 ⬡6 -1
+     - 4
+     - 7
+     - 4
+     - Scoped Type 97/99 Arisaka — well-documented Pacific theatre marksmen, often fighting from concealed tree or spider-hole positions
 
 
 *NOTE: All nations use identical fire line values — sniper effectiveness at this scale is determined more by position, patience, and target selection than by weapon differences. Quality differentials are encoded in Morale values and the extended-ammunition rolls past base AMO. A veteran sniper with Morale 7 recovers from suppression automatically and passes detection checks more reliably.*
