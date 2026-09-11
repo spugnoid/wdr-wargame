@@ -58,13 +58,15 @@ class TestLoadUnits:
     (each Front/Rear, 12 rows) plus 4 new units added the same day from
     counters/toe/*_1943.md (US Rifle Squad, UK Rifle Section, Japan Rifle
     Squad, US Light Machine Gun Squad -- each Front/Rear, 8 more rows),
-    20 rows total. The German Grenadier Squad and Soviet Guards Rifle
-    Squad rows were also corrected 2026-09-11 against newly-sourced TOE
-    research -- see their own `notes` column and design note E.110."""
+    plus a Soviet Rifle Squad (Pattern B) added shortly after (Front/Rear,
+    2 more rows), 22 rows total. The German Grenadier Squad, German
+    Panzergrenadier Squad, and Soviet Guards Rifle Squad rows were also
+    corrected against newly-sourced TOE research -- see their own `notes`
+    column and design notes E.110/E.116."""
 
-    def test_loads_all_twenty_rows(self):
+    def test_loads_all_twenty_two_rows(self):
         units = load_units()
-        assert len(units) == 20
+        assert len(units) == 22
 
     def test_gren_43_front_face_matches_the_anchor_unit(self):
         """Corrected 2026-09-11: manpower_full 9->10 and a third weapon
@@ -162,7 +164,7 @@ class TestWriteInfantryRosterCsv:
 
     def test_writes_one_row_per_unit(self, tmp_path):
         rows = self._rows_by_unit_id(tmp_path)
-        assert len(rows) == 20
+        assert len(rows) == 22
 
     def test_gren_43_front_face_matches_the_worked_example(self, tmp_path):
         """The MG42 LMG line is untouched by the 2026-09-11 correction --
@@ -303,3 +305,26 @@ class TestWriteInfantryRosterCsv:
         rows = self._rows_by_unit_id(tmp_path)
         assert rows["US_MG_1919_1943.3_F"]["fire_line_1"] == "═● 6 ⬡6 -1"
         assert rows["GER_MG42_1943.3_F"]["fire_line_1"] == "═● 9 ⬡6 -1"
+
+    def test_panzergrenadier_squad_now_shows_two_lmg(self, tmp_path):
+        """Corrected 2026-09-11 per counters/toe/germany_1943.md (KStN
+        1114): the squad carries 2x LMG, not 1 -- a real, visible change
+        from the previous 1x MG42 + 6x MP40 loadout, which had no KStN
+        citation behind it. The single MP40 (veteran quality) now clears
+        MIN_RFP where the Grenadier Squad's own single MP40 (regular
+        quality) doesn't -- a quality-tier difference surviving the
+        correction, not a new inconsistency."""
+        rows = self._rows_by_unit_id(tmp_path)
+        row = rows["GER_PZGR_1943.3_F"]
+        assert row["fire_line_1"] == "─● 11 ⬡2 -1"
+        assert row["fire_line_3"] == "≡ 2 ⬡3 -1"
+
+    def test_soviet_pattern_b_squad_loads_and_computes(self, tmp_path):
+        """New 2026-09-11 per counters/toe/soviet_union_1943.md: the
+        second of two equally-common 1943 Soviet squad patterns (2x
+        DP-28 instead of Pattern A's 1x) -- a real, higher rFP than
+        Pattern A's own DP-28 line (SOV_RIFSQ_1943.3_F's ─● 7 ⬡3 -1)."""
+        rows = self._rows_by_unit_id(tmp_path)
+        row = rows["SOV_RIFSQ_B_1943.3_F"]
+        assert row["fire_line_1"] == "─● 9 ⬡3 -1"
+        assert row["fire_line_3"] == "≡ 3 ⬡2 -1"

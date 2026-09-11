@@ -85,15 +85,16 @@ itself has no source column, so it's recorded here instead):
 ## Known gaps (see design spec §5 for the full list)
 
 - **Scope: infantry squads and organic support teams only.** As of 2026-09-11
-  this covers 10 unit types across 4 nations (German Grenadier/Panzergrenadier/
-  MG42-team, Soviet Guards-rifle/Rifle/DP-28-team, US Rifle Squad/Light Machine
-  Gun Squad, UK Rifle Section, Japan Rifle Squad), 1943 only. Flagged, not yet
-  modeled: the German Panzergrenadier squad's real loadout per
-  `counters/toe/germany_1943.md` (2 LMG + 1 Panzerschreck, not the 1 LMG
-  currently in `units.csv`) and the Soviet "Pattern B" squad variant (2x DP-28)
-  documented alongside the Pattern A squad already modeled. Scaling to
-  additional nations/years beyond this is future work, using this same
-  pipeline shape.
+  this covers 11 unit types across 4 nations (German Grenadier/Panzergrenadier/
+  MG42-team, Soviet Guards-rifle/Rifle Pattern A/Rifle Pattern B/DP-28-team, US
+  Rifle Squad/Light Machine Gun Squad, UK Rifle Section, Japan Rifle Squad),
+  1943 only. The German Panzergrenadier squad's loadout was corrected the same
+  day per `counters/toe/germany_1943.md` (now 2 LMG + MP40 leader; the squad's
+  organic Panzerschreck resolves through the existing flat-PEN infantry AT
+  weapons table, Rule 18.9, not through this pipeline's rFP formula), and the
+  Soviet "Pattern B" squad variant (2x DP-28) was added alongside the existing
+  Pattern A squad — see design note E.116. Scaling to additional nations/years
+  beyond this is future work, using this same pipeline shape.
 - **Towed artillery is explicitly out of scope.** Support guns not mounted on a
   vehicle (PAK40, field howitzers, etc.) would reuse `armor_calc`'s gun-curve-fitting
   machinery — not built this phase.

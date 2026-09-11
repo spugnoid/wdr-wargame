@@ -705,3 +705,37 @@ diagrams were produced in this pass; the existing `maps/` SVG tool would
 need real extension work (it currently renders flat hex-grid scenes only
 — 2 terrain types, 2 factions — not vehicle silhouettes or flowcharts)
 before most of the budgeted diagrams could actually be generated.
+
+## Update — 2026-09-11 (part 7): cleared two counter-data backlog items; version bumped
+
+Resolved the two items E.111 had deliberately left open (design note
+E.116):
+
+- **Panzergrenadier Squad** corrected to 2x MG42 LMG + MP40 leader per
+  `counters/toe/germany_1943.md`'s KStN 1114 citation (confirmed at
+  platoon level — 6 LMG / 3 squads = 2 each). Its organic Panzerschreck
+  deliberately gets no weapon-loadout slot in `infantry_calc` — it
+  already resolves correctly through the existing infantry AT weapons
+  table (Rule 18.9), which uses PEN-vs-AV, not this pipeline's rFP
+  formula. The previous loadout (1 MG42 + 6 MP40, cited only to
+  "Nafziger OOB," no KStN reference) may have described the separate,
+  still-unverified armored/SPW company variant instead — flagged as a
+  candidate for its own future row rather than assumed simply wrong.
+- **Soviet Rifle Squad (Pattern B)** added as a full sibling to the
+  existing squad (now relabeled Pattern A) — 2x DP-28 instead of 1x, a
+  real documented variant covering the other half of a platoon's four
+  squads, not a hypothetical addition.
+
+Test suite: 152 passing (up from 150). `infantry_roster_output.csv`
+regenerated; builds clean under `sphinx -W`.
+
+**Also**: bumped `docs/source/conf.py`'s version to 0.9.8, covering this
+entire session's rules-content changes (no prior commit this session had
+touched it — there's no automated trigger and no written policy for
+when to bump, which is itself worth knowing for next time). Added a
+short code comment recording that it's a manual per-session patch
+counter with no semver contract beyond that.
+
+**Still open**: proper TOE-depth research for Japan's combat engineers
+(the Section 21.9 roster row is still a flagged rough estimate) —
+research dispatched, not yet returned as of this entry.
