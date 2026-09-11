@@ -644,10 +644,6 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
      - 7
      - 6
      - Similar to British — strong logistics engineering
-   * - Japanese Engineers (Kōhei) — regular *[rough estimate — see note]*
-     - ╌ 4 ⬡4 -1
-     - G4
-     - DEMO MINE FLAM
-     - 6
-     - 6
-     - *[Rough estimate, not TOE-researched like this table's other rows — flagged for a dedicated research pass before treating it as settled. No BRDG: IJA engineering doctrine emphasised fortification, tunnelling, and demolition (well documented, esp. Pacific island defences) over Western-style mechanized bridging. FLAM included on the strength of the man-portable Type 93/Type 100 flamethrower's documented IJA/SNLF infantry use.]*
+
+
+*Japan is deliberately absent from this table — not an oversight, and not the same kind of gap as an unfinished roster row. Dedicated research (``counters/toe/japan_engineers_1943.md``) found that Imperial Japanese Army combat engineers had no genuine squad-level, infantry-adjacent unit comparable to the German/Soviet/British/US entries above: engineers were concentrated in a division-level engineer regiment, sub-allotted by whole company (~250 men) to a supporting infantry regiment — TM-E 30-480's own words, "designed for sub-allotment, one to each infantry regiment." Below platoon (~50 men, itself thinly documented), no sourced manpower or equipment breakdown exists at all. Printing a squad-scale "Japanese Engineers" row here, at the same stat resolution as the other four nations, would misrepresent a real organizational difference as a missing data point. A scenario needing IJA combat-engineer capability at the squad scale this table otherwise uses should stat a Rifle Squad (Rule 3.3.3's Japan example, or ``JPN_RIFSQ_1943.3`` in ``counters/infantry_calc/``) with the DEMO capability added — small demolition charges and bangalore torpedoes are well documented as engineer-relevant IJA equipment even at the sourcing depth available — but without this table's building-assault bonuses (Rule 21.6.2), which represent a specific squad-level bunker-clearance doctrine no source in this pass documented for Japan at that scale. See design note E.117.*

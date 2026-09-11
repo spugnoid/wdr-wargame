@@ -739,3 +739,43 @@ counter with no semver contract beyond that.
 **Still open**: proper TOE-depth research for Japan's combat engineers
 (the Section 21.9 roster row is still a flagged rough estimate) —
 research dispatched, not yet returned as of this entry.
+
+## Update — 2026-09-11 (part 8): Japan's engineers don't fit this table — resolved by removing the row, not filling it in
+
+The dispatched research (`counters/toe/japan_engineers_1943.md`) came
+back with a finding bigger than a confidence problem: it's a genuine
+organizational scale mismatch, not a documentation gap. Confirmed
+against a primary source (TM-E 30-480, directly quoted): Imperial
+Japanese Army combat engineers were concentrated in a division-level
+engineer regiment, sub-allotted by **whole company** (~250 men, "one to
+each infantry regiment," TM-E's own words) to supporting infantry —
+there is no sourced IJA unit smaller than a company that plays the role
+a German/Soviet/British/US engineer *squad* plays in Section 21.9's
+table. Below platoon (~50 men, itself thinly documented), no manpower or
+equipment breakdown exists in the source at all.
+
+**Resolution: the Japanese Engineers row is removed, not corrected.**
+Printing a squad-scale stat line for something that didn't organizationally
+exist at squad scale would misrepresent a real difference between armies
+as a missing data point — exactly the failure mode this project's own
+"honest TBD" posture exists to avoid. Section 21.9 now carries a prose
+note explaining why Japan is absent and naming the real reason, plus a
+documented fallback for a scenario designer who genuinely needs IJA
+combat-engineer capability at the squad scale: stat a Rifle Squad with
+DEMO added (well-documented IJA equipment) but without the building-
+assault bonuses, which represent a doctrine no source documents for
+Japan at that scale. Design note E.117 has the full record.
+
+Two secondary corrections fell out of the same research: the removed
+row's "no BRDG" claim was wrong (TM-E documents a real, if smaller-scale,
+IJA assault-bridging capability — man-portable bridges, pontons,
+trestle bridges, a prefabricated steel truss bridge), and the Type 93/100
+flamethrower's organizational home (engineers vs. dedicated chemical
+troops) is genuinely ambiguous in the primary source itself, flagged as
+unresolved rather than smoothed over.
+
+Also fixed in the same pass: two RST markup bugs in the new content
+(bold nested inside an already-italicized paragraph, which docutils
+doesn't support and silently mis-renders rather than erroring cleanly)
+that only surfaced on a full clean rebuild — `sphinx -W` had reported
+them as warnings-as-errors, caught before commit. Builds clean now.
