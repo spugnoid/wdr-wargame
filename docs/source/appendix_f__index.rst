@@ -179,6 +179,8 @@ condition: PEN ≥ AV + 3  ..........  18.2
 
 **Bail-out (vehicle)**  ..........  19.2
 
+**Bypass Movement (Optional Rule)**  ..........  17.6a, App.G
+
 CREW counter placed  ..........  19.2.7
 
 thresholds  ..........  19.2.1
@@ -242,6 +244,8 @@ extinguishing  ..........  21.5.6
 **Buttoned up — see Pinned (vehicle)**  ..........  18.7
 
 **C**
+
+**Complexity tiers (Base/Standard/Advanced)**  ..........  App.G
 
 **Campaign rules**  ..........  S.13
 
@@ -757,7 +761,13 @@ sniper exemption  ..........  8.7.4, 20.2.6
 
 **M**
 
+**Malfunction (weapon) — see Weapon Malfunction**  ..........  8.12
+
 **Maps (SVG generated)**  ..........  1.5.4, 1.5.5
+
+**Mass Assault (Optional Rule)**  ..........  9.8a, App.G
+
+cumulative Defence penalty per prior assault this turn  ..........  9.8a.1
 
 hex size recommendations  ..........  1.5.5
 
@@ -902,6 +912,12 @@ morale check threshold 5  ..........  18.11.3
 pre-entry defensive fire  ..........  18.11.2
 
 **P**
+
+**Pre-Registered Defensive Fire (Optional Rule)**  ..........  8.13, App.G
+
+reuses mortar's 2-hex registration limit  ..........  8.13.1, 16.4.1
+
+reuses Gunnery Table follow-up band-shortening  ..........  8.13.2, 18.1a.7
 
 **Penetration (PEN)**  ..........  17.3
 
@@ -1302,6 +1318,12 @@ types  ..........  22.6.2
 **VISIBLE state**  ..........  1.3, 14.1
 
 **W**
+
+**Weapon Malfunction (Optional Rule)**  ..........  8.12, App.G
+
+triggers on natural 1-and-1 (d6, d8) on the attack's own roll  ..........  8.12.1
+
+repair (1 AP, 1d6 vs 5-6)  ..........  8.12.3
 
 **Weather**  ..........  S.24
 

@@ -415,3 +415,34 @@ See Rule 6.3.3.
    **Example:** A leader is stacked with a combat unit that gets eliminated in melee, leaving the leader alone with the enemy in the hex. The leader is administratively captured (Rule 11.2a) rather than continuing to fight.
 
     *See also: Rule 11.2a (Administrative Capture), Rule 3.5.1 (stacking limit — 3 combat units).*
+
+9.8a  Mass Assault (Optional Rule)
+----------------------------------------
+
+*If this module is in use for the scenario:*
+
+*Design note: Rule 3.5.1's stacking cap already limits how much force can mass in one hex, and Rule 9.8.2 already sums a stack's own G#/rFP linearly — but nothing rewards the historically real, historically loaded tactic of committing several separate assaults in succession against the same position, the "human wave" most associated with Eastern Front fighting in this game's own calibration period. Deliberately not modeled as bigger stacking numbers (Rule 3.5.1 stays exactly as written) — modeled instead as attrition on the defender across successive, separate assaults. See design note E.115.*
+
+**9.8a.1**  A defending hex that has already been the target of one or more Close Assaults this turn — win, lose, or ongoing, per Rule 9.8.1's "separate hexes... separate impulses" framing — applies a cumulative **-1 to its Defence** in the Grenade Phase and Entry Fire Phase for each such prior assault, to a maximum of **-3**.
+
+.. container:: rule-guide
+
+   **Why:** Models a position worn down by successive, unrelieved attacks rather than by a single overwhelming charge — the same defenders (or their replacements) facing a third assault in one turn are genuinely more rattled and depleted than they were facing the first, independent of how many bodies any single wave actually threw at them.
+
+   **Example:** A defending hex survives one Close Assault this turn, then faces a second from a different adjacent hex. That second assault's Grenade Phase and Entry Fire rolls both resolve against the defender's Defence at -1; a third assault the same turn would apply -2, and so on to the -3 cap.
+
+**9.8a.2**  This penalty resets at the start of each new turn. A defender that survived a wave of assaults faces no lingering penalty on a later turn's fresh attacks against the same position.
+
+.. container:: rule-guide
+
+   **Why:** Keeps the penalty tied to a single turn's sustained pressure rather than becoming a permanent scar on a position, since a defender that survives the night has had time to reorganize before the next attack actually comes.
+
+   **Example:** A hex assaulted three times on Turn 4 (reaching the full -3 penalty) defends at its normal, unpenalized Defence value if assaulted again on Turn 5.
+
+**9.8a.3**  This is deliberately not a numbers bonus within a single hex — Rule 3.5.1's 3-combat-unit stacking cap is unaffected. Mass Assault rewards committing several separate assaulting stacks across a turn, not piling more units into one.
+
+.. container:: rule-guide
+
+   **Why:** Keeps this module additive to the existing stacking and combined-attack math rather than creating a second way to inflate a single assault's numbers — the tactical idea this rule captures is genuinely about successive waves, not a bigger single wave, and conflating the two would double-count the same historical phenomenon two different ways.
+
+   **Example:** A side that wants to exploit Mass Assault must actually commit multiple separate stacks from multiple hexes across the turn — massing all its available units into one 3-unit stack for a single assault gains nothing from this rule that Rule 9.8.2's ordinary summed attack didn't already provide.

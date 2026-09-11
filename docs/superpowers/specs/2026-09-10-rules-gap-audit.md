@@ -651,3 +651,57 @@ E.114 has the full record):
   crew mechanics that already exist rather than inventing new ones.
 
 All three build clean under `sphinx -W`.
+
+## Update — 2026-09-11 (part 6): the 4 confirmed-absent features, added as optional modules; complexity tiers; page count
+
+Asked to incorporate the four ASL-standard features E.113 had confirmed
+absent (weapon jamming, vehicle Bypass movement, a mass-assault bonus,
+pre-registered direct fire) — explicitly as labeled optional chrome, not
+folded into the base rules — and to set up a Base/Standard/Advanced
+complexity-tier structure. Design note E.115 has the full record.
+
+**Four new modules**, each following Rule 18.2a's (Shatter Gap) existing
+"(Optional Rule)" header convention exactly, each reusing existing
+numbers rather than inventing new ones:
+- **Weapon Malfunction (Rule 8.12)** — reuses the attack's own dice
+  (natural 1-and-1 on the d6/d8, ~2.1% of shots); infantry-carried
+  automatic weapons only, vehicle guns untouched.
+- **Pre-Registered Defensive Fire (Rule 8.13)** — reuses Rule 16.4.1's
+  2-hex mortar registration limit and Rule 18.1a.7's existing follow-up-
+  shot band-shortening mechanic.
+- **Bypass Movement (Rule 17.6a)** — a vehicle can skirt a hex's
+  obstacles (open-ground MP cost, no bog check) at the cost of no cover
+  and no Overrun eligibility from that hex.
+- **Mass Assault (Rule 9.8a)** — successive close assaults against the
+  same hex in one turn apply a cumulative Defence penalty (-1 each,
+  capped at -3, resetting per turn) — deliberately not a stacking-cap
+  change, to avoid double-modeling the same idea two ways.
+
+**New Appendix G (Rules Complexity Tiers)** classifies every section as
+Base (needed for a complete game), Standard (the depth most groups will
+settle into), or Advanced (pick-and-choose optional modules, each
+labeled in its own rule text) — plus a single-table menu of every
+Advanced module in the document, old and new.
+
+**Page count estimate**, given directly to the user in this session
+(not written into the rules themselves, since it's a production
+question, not a rules question): current player-facing content
+(Sections 1-24 + Appendices A-D/F/G, excluding Appendix E's ~23,750
+words of designer-only commentary) is **~117,000 words**. At a
+realistic modern hobby-wargame layout density (~550-650 words/page,
+this project's prose runs far more explanatory per rule than ASL's
+terse style, so ASL's own ~1,000 words/page density doesn't apply),
+that's roughly **195-215 pages of body text**. Only one actual diagram
+exists in the whole document today (the Section 7 movement SVG) despite
+at least 15-20 genuinely spatial concepts that would need one in a
+finished, polished edition (elevation/crest LOS, vehicle facing arcs,
+dispersion-direction compass, turn/close-assault sequence flowcharts,
+vehicle hit-location silhouettes, a full counter/marker legend, a sample
+scenario map walkthrough) — budgeted at roughly **12-15 additional
+pages**, plus **3-4 pages** of front-matter overhead (title page, table
+of contents). **Total estimate: roughly 210-260 pages**, central estimate
+**~230 pages**. This is a planning estimate, not a layout — no new
+diagrams were produced in this pass; the existing `maps/` SVG tool would
+need real extension work (it currently renders flat hex-grid scenes only
+— 2 terrain types, 2 factions — not vehicle silhouettes or flowcharts)
+before most of the budgeted diagrams could actually be generated.

@@ -41,3 +41,4 @@ Version |release| — built |today|
    appendix_d__counter_notation_reference
    appendix_e__design_notes
    appendix_f__index
+   appendix_g__rules_complexity_tiers

@@ -479,4 +479,68 @@ The full procedure for any fire combat action:
 
     *See also: Rule 23.1 (Ambient Visibility), Rule 24.1 (Weather — General), Rule 23.2 (Illumination), Rule 8.7 (Long Range Cap — a separate, still-applicable rule).*
 
+8.12  Weapon Malfunction (Optional Rule)
+--------------------------------------------
+
+*If this module is in use for the scenario:*
+
+*Design note: automatic weapons jamming under sustained fire is one of the most recognisable pieces of tactical-wargame chrome (Advanced Squad Leader's Malfunction result is the best-known example), and a real historical phenomenon — but it adds a check to every single automatic-weapon shot in the game, which is exactly the kind of table overhead the base game deliberately avoids. Scoped as optional for that reason, not because the phenomenon isn't real. See design note E.115.*
+
+**8.12.1**  Whenever a unit fires a weapon with class lmg, hmg, or smg (Rule 6.6.2's mount-type table, or the printed weapon_class on the fire line), check for malfunction using the same 1d6+1d8+1d12 roll already made for the attack: if the 1d6 **and** the 1d8 both show their minimum value (1 and 1), regardless of the 1d12 or the attack's own result, the weapon malfunctions. This reuses the existing roll — no second roll, no new dice.
+
+.. container:: rule-guide
+
+   **Why:** Piggybacks on the dice already being rolled for the attack itself rather than adding a separate malfunction check, keeping the added overhead to "notice one more thing about a roll you were making anyway" instead of a whole extra procedure. The 1-and-1 trigger on two of the three dice gives a modest, ASL-comparable frequency (1/6 × 1/8 = 1/48, about 2.1% of shots) without needing a new die or a lookup table.
+
+   **Example:** A unit fires its LMG and rolls 1d6=1, 1d8=1, 1d12=7. The attack itself resolves normally against the rolled total, but because both the d6 and d8 came up 1, the weapon also malfunctions — both facts are read off the same single roll.
+
+**8.12.2**  The shot that triggers a malfunction still resolves normally against its target — the weapon fires and then jams, not the reverse. Place a MALFUNCTION marker on the counter; that weapon's fire line contributes 0 rFP (as if omitted) to any fire group until repaired.
+
+.. container:: rule-guide
+
+   **Why:** A jam happens as a mechanical consequence of firing, not instead of it — the round already fired is already downrange regardless of what the action does next, matching the real sequence of events a stoppage actually follows.
+
+   **Example:** A unit's LMG line contributes its usual rFP to this attack despite malfunctioning on the same roll; on every subsequent attack until repaired, that same line contributes nothing, exactly as if it had been omitted from the counter.
+
+**8.12.3**  Repair: at the start of a later activation, the unit may spend 1 AP attempting to clear the malfunction instead of moving or firing. Roll 1d6: on 5-6 the MALFUNCTION marker is removed; on 1-4 it remains (retry in a later activation). A weapon that has failed **three** repair attempts in the same scenario is permanently disabled — place an EXPENDED strip (Rule 18.9.1's component) over that weapon band for the rest of the scenario.
+
+.. container:: rule-guide
+
+   **Why:** Gives a malfunction a real in-scenario cost (an AP spent not fighting, for uncertain odds) without making it a permanent loss on the first bad roll, while the three-strikes cap reflects that some stoppages genuinely can't be cleared in the field, matching the same permanence Rule 18.9.1's EXPENDED strip already gives a spent single-shot weapon.
+
+   **Example:** A unit spends 1 AP repairing its jammed HMG and rolls a 3 — still jammed, one failed attempt recorded. If it fails two more attempts across the scenario, the HMG is permanently disabled; only the printed rear-face profile (if any) remains usable for that counter.
+
+*NOTE: this module deliberately does not touch vehicle-mounted weapons (Section 18's own Gunnery Roll and damage tables already have their own, more detailed resolution machinery) — it covers infantry-carried and independently-crewed automatic weapons only.*
+
+8.13  Pre-Registered Defensive Fire (Optional Rule)
+--------------------------------------------------------
+
+*If this module is in use for the scenario:*
+
+*Design note: Rule 16.4.1 already lets a mortar pre-designate up to two target hexes for a real accuracy bonus (Registered Target). Direct-fire weapons — an HMG, an AT gun, a defending tank in a prepared position — had no equivalent, even though boresighting a likely approach is exactly the kind of preparation real defenders actually did. Reuses the mortar rule's own registration limit and the Gunnery Roll's own existing band-shortening idiom rather than inventing new numbers. See design note E.115.*
+
+**8.13.1**  During scenario setup, a weapon that will not move for the rest of the scenario (a deployed HMG, an AT gun, or a vehicle the scenario designates as fixed/dug-in) may pre-register up to **2 hexes** within its printed range — the same limit Rule 16.4.1 already sets for mortar Registered Target.
+
+.. container:: rule-guide
+
+   **Why:** Reuses the mortar rule's own limit rather than choosing a new number, since the underlying tactical idea — a small number of pre-ranged spots, not the whole field of fire — is identical whether the weapon lobs a shell indirectly or fires flat.
+
+   **Example:** A dug-in Panzer IV pre-registers the two hexes covering a likely road approach into its position before the scenario begins — no more than two, matching the mortar rule it borrows from.
+
+**8.13.2**  The first shot fired at a target in a pre-registered hex this scenario gains a bonus: an infantry/HMG attack (Section 8) treats the target as one hex closer for falloff purposes; a vehicle or AT gun's attack (Section 18) shortens its Gunnery Table band by one step, exactly as Rule 18.1a.7's follow-up-shot adjustment already does. Only the first shot at that hex gains this — it represents a known distance and aiming point, not a standing accuracy bonus for the rest of the scenario.
+
+.. container:: rule-guide
+
+   **Why:** Reuses Rule 18.1a.7's existing band-shortening mechanic for the vehicle case rather than adding a second way to adjust the Gunnery Table, and scopes the infantry case to the same falloff-shortening idiom already used elsewhere — a pre-ranged shot is mechanically identical to a follow-up shot in everything that matters: the gunner already knows the range.
+
+   **Example:** A pre-registered AT gun's first shot at a tank entering its registered hex reads the Gunnery Table one band shorter than the actual range, exactly as a genuine follow-up shot would — the second shot at that same hex gets no further bonus.
+
+**8.13.3**  Pre-registration is lost — the marker is removed — the instant the weapon moves, exactly as a mortar's Registered Target assumes a fixed firing position throughout.
+
+.. container:: rule-guide
+
+   **Why:** Ties the bonus to the same fixed-position assumption the mortar version already makes, since a weapon that repositions no longer has a genuinely pre-ranged shot at its old registered hex.
+
+   **Example:** An AT gun that limbers and moves to a new position loses both of its pre-registered hexes — reaching that bonus again means registering new hexes from wherever it stops next, if the scenario still allows it.
+
    **Example:** A unit taking an Assault Move and then firing on its next activation is not itself penalized for having moved earlier — its own fire is judged solely by whether it's a Regular or Assault Fire (this rule). A -2 rFP penalty only applies to whoever is shooting at a currently-moving target (Rule 7.5.2), a completely separate situation.

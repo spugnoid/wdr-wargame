@@ -550,6 +550,37 @@ Casemate vehicles (TRAV 0) never receive a TRAVERSED marker; they have no separa
 
    **Example:** A unit with LOS to a hex containing 1 hex of intervening dense woods can still see a vehicle sitting there, even though that same amount of dense woods might have fully blocked LOS to an infantry unit under the normal blocking rules.
 
+17.6a  Bypass Movement (Optional Rule)
+-------------------------------------------
+
+*If this module is in use for the scenario:*
+
+*Design note: every vehicle move fully enters a hex and takes on that hex's full terrain cost and risk (including Rule 17.6.2a's bog check) — there was no way to skirt an obstacle rather than drive through it, the way Advanced Squad Leader's Bypass rule lets a vehicle hug a hex's edge instead of its center. Scoped as optional because the trade-off it adds (speed and safety for cover and combat capability) is exactly the kind of extra declared choice the base game deliberately keeps out of ordinary movement. See design note E.115.*
+
+**17.6a.1**  A vehicle entering a hex may declare Bypass instead of an ordinary move into it: pay open ground's MP cost (1) regardless of the hex's actual terrain, and skip Rule 17.6.2a's bog check entirely for that hex.
+
+.. container:: rule-guide
+
+   **Why:** Models a vehicle skirting along a hex's edge — around a building, through a gap in a wall line, along a track through rough ground — rather than actually driving through whatever fills the hex's center, which is exactly the maneuver that avoids both the terrain's usual cost and its usual risk.
+
+   **Example:** A vehicle bypassing a dense-woods hex pays 1 MP and never rolls the Rule 17.6.2a bog check, instead of the terrain's normal 3+ MP cost and bog risk it would face entering the hex directly.
+
+**17.6a.2**  A vehicle that bypassed a hex gains no terrain cover bonus there (treated as being in the open for Defence purposes while in that hex) and may not declare Overrun (Rule 18.11) from it this activation — it has skirted past the position, not engaged it.
+
+.. container:: rule-guide
+
+   **Why:** A vehicle that never actually drove into a position hasn't earned that position's cover, and hasn't physically confronted whatever might be occupying it — bypass buys speed and safety from the terrain itself at the cost of any tactical benefit that terrain would otherwise have offered.
+
+   **Example:** A vehicle bypassing a building hex is attacked as if it were sitting in open ground, with none of the building's printed cover value — and cannot declare an Overrun against infantry in that same hex this activation, having gone around them rather than at them.
+
+**17.6a.3**  Bypass is not available for a hex that is Impassable to that vehicle type regardless of terrain (Rule 17.6.2's table) — Bypass avoids an obstacle's cost and risk, not genuine impassability.
+
+.. container:: rule-guide
+
+   **Why:** Bypass represents skirting around what a hex contains, not ignoring physical facts about what a vehicle can cross at all — a river or cliff genuinely impassable to a given vehicle type stays impassable no matter how the vehicle tries to approach it.
+
+   **Example:** A vehicle cannot Bypass its way across a River/cliff hex it could never enter under Rule 17.6.2 in the first place — Bypass only ever applies to hexes the vehicle could otherwise legally enter directly.
+
 17.7  Hit Location
 -------------------
 
