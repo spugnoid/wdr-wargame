@@ -59,3 +59,17 @@ them directly in Excel/Sheets to review, or hand-edit the inputs under
   M34A1 gun mount) — computed by hand from the extracted source data, not
   derived by this pipeline. If more vehicles get real thickness-map data,
   this should become a proper area-weighting function instead.
+- British 6pdr/17pdr K-factors (`guns.csv`) are not independently sourced,
+  unlike every other gun in this file — no published value was found, so
+  each was instead derived by a constrained least-squares search against
+  its own calibration data (see design note E.118). A lower-confidence
+  methodology tier than the rest of the roster; flagged in each row's
+  `confidence_note`, not hidden.
+- Churchill/Cromwell armor data has two open sourcing conflicts, flagged in
+  `vehicles.csv`'s own notes rather than silently resolved: Churchill's
+  stepped-glacis middle/lower plate angles aren't sourced (Hull Front uses
+  only the well-cited, fully-vertical top plate), and Cromwell's hull
+  side/rear and turret front thicknesses vary across sources by several mm.
+- Sherman Firefly (17pdr on a Sherman hull) is not modelled — the 17pdr gun
+  curve now exists, but no Firefly-specific armor/mounting data has been
+  added.

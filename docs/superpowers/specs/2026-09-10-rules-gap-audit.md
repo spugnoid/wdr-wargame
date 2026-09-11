@@ -779,3 +779,67 @@ Also fixed in the same pass: two RST markup bugs in the new content
 doesn't support and silently mis-renders rather than erroring cleanly)
 that only surfaced on a full clean rebuild — `sphinx -W` had reported
 them as warnings-as-errors, caught before commit. Builds clean now.
+
+## Update — 2026-09-11 (part 9): British 6pdr/17pdr and Churchill/Cromwell — the last major nation-coverage gap
+
+Section 17's own intro text had said "no British guns modelled yet"
+since `armor_calc`'s original build-out. Closed: the 6-pounder and
+17-pounder guns, plus Churchill Mk VII and Cromwell Mk IV (the two
+vehicles that mount them at the roster's 1943 baseline), are now in the
+roster with full sourcing.
+
+The two source PDFs the rest of this project's ballistics data came
+from are gitignored and weren't present in this environment — a real
+constraint, not a shortcut. A dispatched research pass
+(`counters/toe/british_vehicles_1943.md`) found the same book's (Bird &
+Livingston 2001) calibration data quoted directly, with page citations,
+inside Wikipedia's own articles on both guns — a defensible but
+one-step-removed sourcing chain, flagged as such in every new row's
+`confidence_note`.
+
+**No published K-factor exists for either gun**, unlike every other row
+in `guns.csv`. Treating K as a free parameter and searching for the
+best power-law fit against the (unusually rich — 5 to 11 point)
+calibration data found a numerically excellent but physically absurd
+solution for the 6pdr first (K≈253, exponent=15.8, when every other gun
+in the file has an exponent of 1.2–1.8) — caught before being accepted,
+and fixed by constraining the search to a physically-plausible exponent
+band (0.8–3.0). Final accepted values: 6pdr APCBC K=1495 (exponent
+2.67), 17pdr APCBC K=1971 (exponent 1.24 — inside the band without the
+constraint needing to bind), 17pdr APDS K=1514 (exponent 1.72), all
+fitting their own calibration data to well under 0.5% error. This is a
+new, explicitly lower-confidence methodology tier than every other gun
+in the roster, documented as such rather than presented at equal
+confidence.
+
+**Two historical sanity checks, now permanent regression tests**: the
+17pdr's well-documented ability to kill a Tiger I frontally at combat
+range holds exactly (150.6mm PEN at 1000m vs. Tiger's 102.0mm Hull
+Front AV-vs-Capped clears the Rule 18.2 Automatic-Penetration threshold
+comfortably). The 6pdr's opposite reputation — effective only at very
+short range — holds with more precision than expected: Automatic
+Penetration at 100m, merely Contested by 500m, a clean Bounce by 1000m.
+
+Churchill and Cromwell armor data both carry open source conflicts
+(Churchill's stepped-glacis lower-plate angles unsourced; Cromwell's
+hull side/rear and turret front thicknesses genuinely disagree across
+sources by several mm) — resolved by preferring the better-cited figure
+and flagging the disagreement in `vehicles.csv`'s own notes, the same
+convention already used for the Panzergrenadier's ambiguous headcount
+(part 7). APDS is sourced as entering British service March 1944,
+technically outside the 1943 baseline era — the gun curve is built and
+tested regardless, fielding it is left to the designer's own call.
+
+Design note E.118 has the full record. Updated `counters/armor_calc/README.md`'s
+"Known gaps" section and Section 17's intro text (now flags Sherman
+Firefly, not "no British guns," as the remaining British-side gap).
+
+Test suite: 110 passing (up from 102) — 5 new gun-curve tests including
+both historical sanity checks (`test_formulas.py`), 3 new vehicle-loading
+tests (`test_pipeline.py`). Full `sphinx -W` clean rebuild confirmed
+after fixing one new instance of the same asterisk-adjacent-to-backtick
+RST nesting failure documented in part 8 (a stray `*` immediately
+followed by a backtick with no separating space, inside an
+already-open italic span — fixed by matching the already-working
+pattern elsewhere in this document exactly: always put a space between
+a closing `*` and the inline-literal backtick that follows it).

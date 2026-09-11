@@ -112,6 +112,130 @@ class TestGunCurveFits:
             assert fit.pen_0deg(r) == pytest.approx(float(exp), rel=0.005)
 
 
+class TestBritishGunCurveFits:
+    """British 6pdr/17pdr K-factors are not sourced (unlike every other gun
+    in guns.csv) -- no published value was found, so each was instead found
+    via a constrained least-squares search (see design note E.118 and
+    guns.csv's own confidence_note for these rows): search over K, reject
+    any fit whose exponent falls outside this project's other guns'
+    physically-plausible range (0.8-3.0), keep the K minimizing max % error
+    among the physically-plausible candidates. An unconstrained search over
+    the 6pdr's narrow 5-point calibration set found a mathematically-better
+    fit (K=253, 0.32% error) but with exponent=15.8 -- recognized as a
+    degenerate, non-physical solution and rejected. These tests pin the
+    accepted constrained-search results so a future refit can't silently
+    drift back toward that degenerate regime."""
+
+    def test_6pdr_apcbc_matches_bird_livingston_data(self):
+        """5-pt fit at 0deg obliquity vs Bird & Livingston 2001 pp.60/62
+        (via Wikipedia). K-factor found by constrained search, not sourced."""
+        fit = fit_gun_curve(
+            muzzle_velocity_fps=2730,
+            k_factor=1495,
+            calibration_ranges_m=[100, 500, 1000, 1500, 2000],
+            calibration_pens_mm=[115, 103, 90, 78, 68],
+            calibration_angle_deg=0,
+            projectile_diameter_mm=57,
+        )
+        assert fit.confidence == "fitted"
+        # exponent must stay within the physically-plausible band the search
+        # was constrained to -- this is the whole point of the constraint.
+        assert 0.8 <= fit.exponent <= 3.0
+        expected_0deg = effective_0deg_resistance(
+            np.array([115.0, 103.0, 90.0, 78.0, 68.0]), 57, 0.0
+        )
+        for r, exp in zip([100, 500, 1000, 1500, 2000], expected_0deg):
+            assert fit.pen_0deg(r) == pytest.approx(float(exp), rel=0.004)
+
+    def test_17pdr_apcbc_matches_bird_livingston_data(self):
+        """11-pt fit vs RHA at 0deg obliquity -- richest calibration set of
+        any gun in guns.csv. Unlike the 6pdr, this fit's exponent (~1.24)
+        landed inside the physically-plausible band without the constraint
+        needing to bind."""
+        ranges = [100, 250, 500, 750, 1000, 1250, 1500, 1750, 2000, 2500, 3000]
+        pens = [174, 170, 163, 156, 150, 143, 137, 132, 126, 116, 107]
+        fit = fit_gun_curve(
+            muzzle_velocity_fps=2900,
+            k_factor=1971,
+            calibration_ranges_m=ranges,
+            calibration_pens_mm=pens,
+            calibration_angle_deg=0,
+            projectile_diameter_mm=76.2,
+        )
+        assert fit.confidence == "fitted"
+        assert fit.exponent == pytest.approx(1.24, abs=0.02)
+        expected_0deg = effective_0deg_resistance(np.array(pens, dtype=float), 76.2, 0.0)
+        for r, exp in zip(ranges, expected_0deg):
+            assert fit.pen_0deg(r) == pytest.approx(float(exp), rel=0.004)
+
+    def test_17pdr_apds_matches_bird_livingston_data(self):
+        """APDS entered British service March 1944 -- outside this
+        project's nominal 1943 vehicle era, per the sourcing note; the gun
+        curve itself is still tested here since it's project data
+        regardless of which vehicles are currently allowed to mount it."""
+        ranges = [100, 250, 500, 750, 1000, 1250, 1500, 1750, 2000, 2500, 3000]
+        pens = [275, 268, 256, 244, 233, 223, 213, 204, 194, 178, 162]
+        fit = fit_gun_curve(
+            muzzle_velocity_fps=3950,
+            k_factor=1514,
+            calibration_ranges_m=ranges,
+            calibration_pens_mm=pens,
+            calibration_angle_deg=0,
+            projectile_diameter_mm=76.2,
+            family="apds",
+        )
+        assert fit.confidence == "fitted"
+        expected_0deg = effective_0deg_resistance(np.array(pens, dtype=float), 76.2, 0.0, family="apds")
+        for r, exp in zip(ranges, expected_0deg):
+            assert fit.pen_0deg(r) == pytest.approx(float(exp), rel=0.003)
+
+    def test_17pdr_apcbc_penetrates_tiger_hull_front_at_1000m(self):
+        """Historical sanity check: the 17pdr's ability to kill a Tiger I
+        frontally at combat range is one of the best-documented facts about
+        WW2 British anti-tank gunnery -- this must hold in the model or the
+        new data is wrong regardless of how well it fits its own source
+        table. Tiger I Ausf E Hull Front AV-vs-Capped = 102.0mm (existing
+        roster data, roster_output.csv); Rule 18.2's +10mm
+        automatic-penetration margin -> 112.0mm threshold."""
+        ranges = [100, 250, 500, 750, 1000, 1250, 1500, 1750, 2000, 2500, 3000]
+        pens = [174, 170, 163, 156, 150, 143, 137, 132, 126, 116, 107]
+        fit = fit_gun_curve(
+            muzzle_velocity_fps=2900,
+            k_factor=1971,
+            calibration_ranges_m=ranges,
+            calibration_pens_mm=pens,
+            calibration_angle_deg=0,
+            projectile_diameter_mm=76.2,
+        )
+        tiger_hull_front_av = 102.0
+        assert fit.pen_0deg(1000) >= tiger_hull_front_av + 10
+
+    def test_6pdr_apcbc_penetrates_tiger_hull_front_only_at_point_blank(self):
+        """Historical sanity check, the other side of the same coin: the
+        6pdr's real reputation was that it could kill a Tiger I frontally
+        only at very short range, and became ineffective well before the
+        17pdr did. Checked against all three of Rule 18.2's outcome bands
+        (Automatic Penetration / Contested / Bounce) rather than a single
+        point, since the 6pdr's whole story here is how fast it falls off:
+        Automatic Penetration at 100m, merely Contested by 500m (not yet a
+        clean failure), and a clean Bounce by 1000m -- a materially
+        different range profile from the 17pdr's comfortable 1000m+ kill,
+        which is exactly the historical contrast these two guns are known
+        for."""
+        fit = fit_gun_curve(
+            muzzle_velocity_fps=2730,
+            k_factor=1495,
+            calibration_ranges_m=[100, 500, 1000, 1500, 2000],
+            calibration_pens_mm=[115, 103, 90, 78, 68],
+            calibration_angle_deg=0,
+            projectile_diameter_mm=57,
+        )
+        tiger_hull_front_av = 102.0
+        assert fit.pen_0deg(100) >= tiger_hull_front_av + 10  # Automatic Penetration
+        assert tiger_hull_front_av <= fit.pen_0deg(500) < tiger_hull_front_av + 10  # Contested
+        assert fit.pen_0deg(1000) < tiger_hull_front_av - 10  # Bounce
+
+
 class TestSlopeMultipliers:
     def test_zero_angle_is_no_multiplier(self):
         assert slope_multiplier(0.0, 1.0, "capped") == pytest.approx(1.0, abs=0.01)

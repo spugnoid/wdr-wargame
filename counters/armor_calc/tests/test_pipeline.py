@@ -68,6 +68,53 @@ class TestResolveAvFamilyParameter:
         assert av_capped != pytest.approx(av_tungsten)
 
 
+class TestBritishVehicleLoading:
+    """British guns/vehicles (6pdr, 17pdr, Churchill Mk VII, Cromwell Mk IV)
+    were the last major nation-coverage gap flagged in the rules text and
+    design spec -- see counters/toe/british_vehicles_1943.md and design
+    note E.118 for full sourcing. Unlike every other gun in guns.csv, the
+    6pdr/17pdr K-factors are not independently sourced (see
+    TestBritishGunCurveFits in test_formulas.py for that methodology and
+    its own regression coverage); these tests instead cover that the
+    vehicle armor data loads correctly and resolves to sane AV figures."""
+
+    def test_churchill_and_cromwell_load_with_expected_profile_count(self):
+        vehicles = load_vehicles()
+        churchill = [v for v in vehicles if v.vehicle == "Churchill Mk VII"]
+        cromwell = [v for v in vehicles if v.vehicle == "Cromwell Mk IV"]
+        # 2 profiles (Hull/Turret) x 3 arcs (Front/Side/Rear) each
+        assert len(churchill) == 6
+        assert len(cromwell) == 6
+        assert all(v.nation == "British" and v.era == "1943" for v in churchill + cromwell)
+
+    def test_churchill_hull_front_is_thick_but_unsloped(self):
+        """Churchill VII's hull front (152mm, 0deg) was a deliberately
+        heavy, flat plate -- Wikipedia's own text calls it 'not sloped,
+        reducing its effectiveness.' Confirms the near-vertical plate isn't
+        accidentally getting a slope bonus it shouldn't have."""
+        hardness_table = load_hardness_table()
+        vehicles = load_vehicles()
+        plate = next(v for v in vehicles if v.vehicle == "Churchill Mk VII" and v.profile == "Hull" and v.arc == "Front")
+        assert plate.thickness_mm == 152
+        assert plate.vertical_deg == 0
+        av = plate.resolve_av(76.2, hardness_table, family="capped")
+        assert av == pytest.approx(153.1, abs=0.5)
+
+    def test_cromwell_turret_front_cast_penalty_applies(self):
+        """Cromwell's turret is cast (a single hexagonal casting per
+        counters/toe/british_vehicles_1943.md) -- its resolved AV must come
+        out below the raw 76.7mm plate thickness, matching this project's
+        existing cast-deficiency treatment for every other cast turret."""
+        hardness_table = load_hardness_table()
+        vehicles = load_vehicles()
+        plate = next(v for v in vehicles if v.vehicle == "Cromwell Mk IV" and v.profile == "Turret" and v.arc == "Front")
+        assert plate.cast
+        assert plate.thickness_mm is not None
+        av = plate.resolve_av(76.2, hardness_table, family="capped")
+        assert av < plate.thickness_mm
+        assert av == pytest.approx(69.8, abs=0.5)
+
+
 class TestHitZoneLoading:
     """Session finding (design spec, hit-location system): neither project
     source provides interior vehicle layout diagrams -- hit_zones.csv is

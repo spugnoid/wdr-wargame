@@ -3,7 +3,7 @@ Section 17 — Vehicles: Counter Design and Movement
 
 Vehicles in With Deepest Regret... are represented by individual counters at tactical scale (one counter = one vehicle) and section counters at operational scale (one counter = 3-5 vehicles). The same counter design serves both scales — scenario rules define which resolution mode applies.
 
-*Vehicle AV, PEN, and Gunnery Table values are computed by the project's calculation tool (*`counters/armor_calc/`*) from sourced ballistics data (Rule 17.2.5, 17.3.7) and cross-checked against a historical-matchup table covering the full roster (Rule 18.12) — not hand-derived placeholders. See that tool's own README and* `docs/superpowers/specs/2026-07-04-armored-combat-penetration-physics-design.md` *for the full sourcing and validation detail, including the roster's own known gaps (e.g. no British guns modelled yet).*
+*Vehicle AV, PEN, and Gunnery Table values are computed by the project's calculation tool (*`counters/armor_calc/`*) from sourced ballistics data (Rule 17.2.5, 17.3.7) and cross-checked against a historical-matchup table covering the full roster (Rule 18.12) — not hand-derived placeholders. See that tool's own README and* `docs/superpowers/specs/2026-07-04-armored-combat-penetration-physics-design.md` *for the full sourcing and validation detail, including the roster's own known gaps (e.g. Sherman Firefly not yet modelled).*
 
 17.1  Vehicle Counter Layout
 ----------------------------
