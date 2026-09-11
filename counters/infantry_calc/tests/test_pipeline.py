@@ -7,11 +7,15 @@ from infantry_calc.pipeline import load_units, load_weapons, write_infantry_rost
 
 class TestLoadWeapons:
     """Weapon reference data: name, class, rates of fire, max range.
-    Source: infantry-counter-design spreadsheet's UNIT CALC and UNIT
-    ROSTER sheets' weapon-loadout columns, deduplicated to one row per
-    distinct weapon."""
+    The original 7 are from the infantry-counter-design spreadsheet's
+    UNIT CALC and UNIT ROSTER sheets. The 9 added 2026-09-11 (M1 Garand
+    through Arisaka Type 38/99) support the US/UK/Japan rows added the
+    same day from counters/toe/*_1943.md; their practical RPM and max
+    range figures are sourced to real-world small-arms references (see
+    counters/infantry_calc/README.md's sourcing notes for each), not
+    transcribed from the original design spreadsheet."""
 
-    def test_loads_all_seven_pilot_weapons(self):
+    def test_loads_all_sixteen_weapons(self):
         weapons = load_weapons()
         names = {w.name for w in weapons}
         assert names == {
@@ -22,6 +26,15 @@ class TestLoadWeapons:
             "MP40",
             "PPSh-41",
             "DP-28",
+            "M1 Garand",
+            "M1903 Springfield",
+            "M1918A2 BAR",
+            "M1919A4",
+            "Bren",
+            "Lee-Enfield",
+            "Sten",
+            "Type 96/99 LMG",
+            "Arisaka Type 38/99",
         }
 
     def test_mg42_lmg_matches_the_worked_example(self):
@@ -41,34 +54,46 @@ class TestLoadWeapons:
 
 
 class TestLoadUnits:
-    """The pilot roster: 6 units (German Grenadier/Panzergrenadier/MG42
-    team, Soviet Guards Rifle/Rifle/DP-28 team), each with a Front and
-    Rear face -- 12 rows total. Source: infantry-counter-design
-    spreadsheet's UNIT ROSTER sheet."""
+    """The roster as of 2026-09-11: the original 6 German/Soviet units
+    (each Front/Rear, 12 rows) plus 4 new units added the same day from
+    counters/toe/*_1943.md (US Rifle Squad, UK Rifle Section, Japan Rifle
+    Squad, US Light Machine Gun Squad -- each Front/Rear, 8 more rows),
+    20 rows total. The German Grenadier Squad and Soviet Guards Rifle
+    Squad rows were also corrected 2026-09-11 against newly-sourced TOE
+    research -- see their own `notes` column and design note E.110."""
 
-    def test_loads_all_twelve_rows(self):
+    def test_loads_all_twenty_rows(self):
         units = load_units()
-        assert len(units) == 12
+        assert len(units) == 20
 
     def test_gren_43_front_face_matches_the_anchor_unit(self):
+        """Corrected 2026-09-11: manpower_full 9->10 and a third weapon
+        slot (MP40 x1, the squad leader's personal weapon -- present in
+        every source checked but absent from the original transcription)
+        added, per counters/toe/germany_1943.md. f_number corrected 2->1
+        per design note E.109 (F#/ROF merge). The MG42 LMG slot itself
+        (count=1, practical_rpm=300) is untouched -- it remains the
+        system's calibration anchor."""
         units = {u.unit_id: u for u in load_units()}
         gren_f = units["GER_GREN_1943.3_F"]
         assert gren_f.nation == "Germany"
         assert gren_f.unit_type == "Grenadier Squad"
         assert gren_f.face == "F"
         assert gren_f.quality == "regular"
-        assert gren_f.manpower_full == 9
-        assert gren_f.manpower_reduced == 4
+        assert gren_f.manpower_full == 10
+        assert gren_f.manpower_reduced == 5
         assert gren_f.m_number == 2
-        assert gren_f.f_number == 2
+        assert gren_f.f_number == 1
         assert gren_f.g_number == 3
         assert gren_f.verify_status == "ANCHOR"
-        assert len(gren_f.loadout) == 2
+        assert len(gren_f.loadout) == 3
         assert gren_f.loadout[0].weapon_name == "MG42 LMG (bipod)"
         assert gren_f.loadout[0].count == 1
         assert gren_f.loadout[0].practical_rpm_override is None
         assert gren_f.loadout[1].weapon_name == "Kar98k"
-        assert gren_f.loadout[1].count == 8
+        assert gren_f.loadout[1].count == 7
+        assert gren_f.loadout[2].weapon_name == "MP40"
+        assert gren_f.loadout[2].count == 1
 
     def test_weapon_team_rear_face_has_a_practical_rpm_override(self):
         """GER_MG42_1943.3_R: 2-man reduced crew, same MG42 HMG but a
@@ -95,8 +120,12 @@ class TestLoadUnits:
 
     def test_a_units_source_citation_is_preserved(self):
         units = {u.unit_id: u for u in load_units()}
-        assert units["GER_GREN_1943.3_F"].source == "Nafziger OOB, TM-E 30-451"
-        assert units["SOV_GDSRIF_1943.3_F"].source == "STAVKA TO&E 1943"
+        assert units["GER_GREN_1943.3_F"].source == (
+            "Nafziger OOB, TM-E 30-451, MIS Special Series No.9; counters/toe/germany_1943.md"
+        )
+        assert units["SOV_GDSRIF_1943.3_F"].source == (
+            "Red Army shtat 04/551 (Dec 1942, as amended 1943); counters/toe/soviet_union_1943.md"
+        )
 
     def test_invalid_face_value_raises_value_error(self, tmp_path):
         """Confirm that face must be exactly 'F' or 'R', not any other value."""
@@ -133,27 +162,42 @@ class TestWriteInfantryRosterCsv:
 
     def test_writes_one_row_per_unit(self, tmp_path):
         rows = self._rows_by_unit_id(tmp_path)
-        assert len(rows) == 12
+        assert len(rows) == 20
 
     def test_gren_43_front_face_matches_the_worked_example(self, tmp_path):
+        """The MG42 LMG line is untouched by the 2026-09-11 correction --
+        still the calibration anchor, still rFP 7. The Kar98k line stays
+        at the same rFP (3) despite the count dropping 8->7 (log
+        compression rounds both to the same integer). The corrected
+        MP40 line (the previously-missing squad leader's weapon) computes
+        to a real value but is too low-volume (1 SMG) to clear MIN_RFP --
+        it reads 'omit', so the printed counter's visible fire lines are
+        unchanged even though the underlying data now correctly models
+        the weapon."""
         rows = self._rows_by_unit_id(tmp_path)
         row = rows["GER_GREN_1943.3_F"]
         assert row["fire_line_1"] == "─● 7 ⬡4 -1"
         assert row["fire_line_2"] == "╌ 3 ⬡5 -1"
+        assert row["fire_line_3"] == "omit (rFP too low)"
         assert row["defence"] == "8"
         assert row["morale"] == "5"
         assert row["m_number"] == "2"
-        assert row["f_number"] == "2"
+        assert row["f_number"] == "1"
         assert row["g_number"] == "3"
 
-    def test_gren_43_rear_face_defence_is_front_minus_two(self, tmp_path):
-        """4x Kar98k alone computes to rFP 1 -- below MIN_RFP (2), so this
-        fire line reads 'omit', not a printed '1 ⬡15 -1' notation (matches
-        the source spreadsheet's own UNIT ROSTER cell BX5)."""
+    def test_gren_43_rear_face_now_clears_min_rfp(self, tmp_path):
+        """Corrected 2026-09-11: the rear face's rifleman count rose from
+        4 to 5 (manpower_reduced 4->5, matching the corrected 10-man front
+        face's established pattern of losing exactly the crew-served
+        weapons on the reduced face, same as every other squad in this
+        roster). 5x Kar98k clears MIN_RFP (2) where 4x didn't -- this is a
+        real, visible change to the printed counter, not just a metadata
+        correction: the reduced-strength Grenadier squad now has an actual
+        fire line instead of 'omit'."""
         rows = self._rows_by_unit_id(tmp_path)
         row = rows["GER_GREN_1943.3_R"]
         assert row["defence"] == "6"
-        assert row["fire_line_1"] == "omit (rFP too low)"
+        assert row["fire_line_1"] == "╌ 2 ⬡5 -1"
 
     def test_mg42_team_rear_face_uses_the_practical_rpm_override(self, tmp_path):
         """This unit's loadout entry overrides practical RPM to 250
@@ -193,3 +237,69 @@ class TestWriteInfantryRosterCsv:
         rows = self._rows_by_unit_id(tmp_path)
         assert rows["SOV_DP28_1943.3_F"]["fire_line_1"] == "─● 7 ⬡3 -1"
         assert rows["SOV_DP28_1943.3_R"]["fire_line_1"] == "─● 5 ⬡3 -1"
+
+    def test_dp28_team_f_number_is_two_not_three(self, tmp_path):
+        """Corrected 2026-09-11 per design note E.109: a bipod-mounted LMG
+        team's F# (Rule 6.6.2) is 2, matching the same rule's LMG team
+        row -- 3 is reserved for a tripod HMG team."""
+        rows = self._rows_by_unit_id(tmp_path)
+        assert rows["SOV_DP28_1943.3_F"]["f_number"] == "2"
+
+    def test_guards_rifle_squad_now_matches_the_standard_rifle_squad(self, tmp_path):
+        """Corrected 2026-09-11 per counters/toe/soviet_union_1943.md:
+        no distinct Guards squad organization was found in the sourced
+        Red Army shtat documents, so the Guards Rifle Squad's loadout now
+        matches the standard Rifle Squad exactly -- only the quality tier
+        (veteran vs. regular) distinguishes them, which is enough on its
+        own to produce different computed values (higher rFP here than
+        SOV_RIFSQ_1943.3_F's ─● 7 ⬡3 -1, and a Mosin-Nagant line that
+        clears MIN_RFP for veteran quality where it didn't for regular)."""
+        rows = self._rows_by_unit_id(tmp_path)
+        row = rows["SOV_GDSRIF_1943.3_F"]
+        assert row["fire_line_1"] == "─● 8 ⬡3 -1"
+        assert row["fire_line_2"] == "╌ 3 ⬡4 -1"
+        assert row["fire_line_3"] == "≡ 4 ⬡1 -1"
+
+    def test_us_rifle_squad_garand_outperforms_bolt_action_rifle_lines(self, tmp_path):
+        """New 2026-09-11, from counters/toe/united_states_1943.md. The
+        M1 Garand's semi-automatic practical rate of fire (45 rpm) is
+        roughly 3x a bolt-action rifle's (Kar98k/Lee-Enfield/Mosin, all
+        12-15 rpm) -- a real, historically-attested US infantry firepower
+        advantage that should show up as a materially higher rifle-line
+        rFP here (8) than the German Grenadier Squad's Kar98k line (3) at
+        an even larger headcount (10 vs 7)."""
+        rows = self._rows_by_unit_id(tmp_path)
+        row = rows["US_RIFSQ_1943.3_F"]
+        assert row["fire_line_1"] == "─● 5 ⬡3 -1"
+        assert row["fire_line_2"] == "╌ 8 ⬡2 -1"
+        assert row["fire_line_3"] == "omit (rFP too low)"
+        assert row["f_number"] == "1"
+
+    def test_uk_rifle_section_loads_and_computes(self, tmp_path):
+        """New 2026-09-11, from counters/toe/united_kingdom_1943.md."""
+        rows = self._rows_by_unit_id(tmp_path)
+        row = rows["UK_RIFSEC_1943.3_F"]
+        assert row["fire_line_1"] == "─● 4 ⬡4 -1"
+        assert row["fire_line_2"] == "╌ 3 ⬡5 -1"
+        assert row["fire_line_3"] == "omit (rFP too low)"
+
+    def test_japan_rifle_squad_loads_and_computes(self, tmp_path):
+        """New 2026-09-11, from counters/toe/japan_1943.md."""
+        rows = self._rows_by_unit_id(tmp_path)
+        row = rows["JPN_RIFSQ_1943.3_F"]
+        assert row["fire_line_1"] == "─● 4 ⬡6 -1"
+        assert row["fire_line_2"] == "╌ 3 ⬡4 -1"
+
+    def test_us_1919_team_rfp_well_below_mg42_hmg_team(self, tmp_path):
+        """New 2026-09-11. The M1919A4's practical rate of fire (150 rpm,
+        sourced) is well under half the MG42's (350 rpm) -- a real,
+        historically-attested gap (the MG42's belt-fed rate of fire was
+        legendary precisely because contemporary Allied MMGs were much
+        slower) that produces a correspondingly large rFP gap (6 vs 9)
+        between otherwise-parallel tripod HMG team counters. Flagged here
+        deliberately -- this is a real game-balance difference between
+        the US and German MMG teams, not a copy-paste oversight, and is
+        worth a human sanity check before either counter is finalized."""
+        rows = self._rows_by_unit_id(tmp_path)
+        assert rows["US_MG_1919_1943.3_F"]["fire_line_1"] == "═● 6 ⬡6 -1"
+        assert rows["GER_MG42_1943.3_F"]["fire_line_1"] == "═● 9 ⬡6 -1"

@@ -6,3 +6,12 @@ Mosin-Nagant,rifle,15,12,500
 MP40,smg,500,90,200
 PPSh-41,smg,900,100,200
 DP-28,lmg,600,250,900
+M1 Garand,rifle,50,45,600
+M1903 Springfield,rifle,20,15,600
+M1918A2 BAR,lmg,550,130,600
+M1919A4,hmg,450,150,1500
+Bren,lmg,510,120,600
+Lee-Enfield,rifle,30,15,600
+Sten,smg,500,90,200
+Type 96/99 LMG,lmg,550,120,900
+Arisaka Type 38/99,rifle,15,12,500

@@ -1,13 +1,21 @@
 unit_id,nation,unit_type,year_bracket,face,quality,fire_line_1,fire_line_2,fire_line_3,defence,morale,m_number,f_number,g_number,verify_status
-GER_GREN_1943.3_F,Germany,Grenadier Squad,1943.3,F,regular,─● 7 ⬡4 -1,╌ 3 ⬡5 -1,,8,5,2,2,3,ANCHOR
-GER_GREN_1943.3_R,Germany,Grenadier Squad (reduced),1943.3,R,regular,omit (rFP too low),,,6,5,2,2,2,ANCHOR
-GER_PZGR_1943.3_F,Germany,Panzergrenadier Squad,1943.3,F,veteran,─● 8 ⬡3 -1,≡ 8 ⬡1 -1,,9,6,2,2,4,PRELIMINARY
-GER_PZGR_1943.3_R,Germany,Panzergrenadier Squad (reduced),1943.3,R,veteran,≡ 5 ⬡1 -1,,,7,6,2,2,3,PRELIMINARY
+GER_GREN_1943.3_F,Germany,Grenadier Squad,1943.3,F,regular,─● 7 ⬡4 -1,╌ 3 ⬡5 -1,omit (rFP too low),8,5,2,1,3,ANCHOR
+GER_GREN_1943.3_R,Germany,Grenadier Squad (reduced),1943.3,R,regular,╌ 2 ⬡5 -1,,,6,5,2,1,2,ANCHOR
+GER_PZGR_1943.3_F,Germany,Panzergrenadier Squad,1943.3,F,veteran,─● 8 ⬡3 -1,≡ 8 ⬡1 -1,,9,6,2,1,4,PRELIMINARY
+GER_PZGR_1943.3_R,Germany,Panzergrenadier Squad (reduced),1943.3,R,veteran,≡ 5 ⬡1 -1,,,7,6,2,1,3,PRELIMINARY
 GER_MG42_1943.3_F,Germany,MG42 HMG Team,1943.3,F,regular,═● 9 ⬡6 -1,,,5,5,0,3,1,PRELIMINARY
 GER_MG42_1943.3_R,Germany,MG42 HMG Team (reduced crew),1943.3,R,regular,═● 8 ⬡6 -1,,,3,5,0,3,1,PRELIMINARY
-SOV_GDSRIF_1943.3_F,Soviet Union,Guards Rifle Squad,1943.3,F,veteran,─● 8 ⬡3 -1,≡ 7 ⬡1 -1,,8,6,2,2,4,PRELIMINARY
-SOV_GDSRIF_1943.3_R,Soviet Union,Guards Rifle Squad (reduced),1943.3,R,veteran,≡ 4 ⬡1 -1,,,6,6,2,2,3,PRELIMINARY
-SOV_RIFSQ_1943.3_F,Soviet Union,Rifle Squad,1943.3,F,regular,─● 7 ⬡3 -1,omit (rFP too low),≡ 3 ⬡2 -1,8,5,2,2,3,PRELIMINARY
-SOV_RIFSQ_1943.3_R,Soviet Union,Rifle Squad (reduced),1943.3,R,regular,omit (rFP too low),,,6,5,2,2,2,PRELIMINARY
-SOV_DP28_1943.3_F,Soviet Union,DP-28 LMG Team,1943.3,F,regular,─● 7 ⬡3 -1,,,5,5,0,3,2,PRELIMINARY
-SOV_DP28_1943.3_R,Soviet Union,DP-28 LMG Team (reduced crew),1943.3,R,regular,─● 5 ⬡3 -1,,,3,5,0,3,1,PRELIMINARY
+SOV_GDSRIF_1943.3_F,Soviet Union,Guards Rifle Squad,1943.3,F,veteran,─● 8 ⬡3 -1,╌ 3 ⬡4 -1,≡ 4 ⬡1 -1,8,6,2,1,3,PRELIMINARY
+SOV_GDSRIF_1943.3_R,Soviet Union,Guards Rifle Squad (reduced),1943.3,R,veteran,omit (rFP too low),,,6,6,2,1,2,PRELIMINARY
+SOV_RIFSQ_1943.3_F,Soviet Union,Rifle Squad,1943.3,F,regular,─● 7 ⬡3 -1,omit (rFP too low),≡ 3 ⬡2 -1,8,5,2,1,3,PRELIMINARY
+SOV_RIFSQ_1943.3_R,Soviet Union,Rifle Squad (reduced),1943.3,R,regular,omit (rFP too low),,,6,5,2,1,2,PRELIMINARY
+SOV_DP28_1943.3_F,Soviet Union,DP-28 LMG Team,1943.3,F,regular,─● 7 ⬡3 -1,,,5,5,0,2,2,PRELIMINARY
+SOV_DP28_1943.3_R,Soviet Union,DP-28 LMG Team (reduced crew),1943.3,R,regular,─● 5 ⬡3 -1,,,3,5,0,2,1,PRELIMINARY
+US_RIFSQ_1943.3_F,United States,Rifle Squad,1943.3,F,regular,─● 5 ⬡3 -1,╌ 8 ⬡2 -1,omit (rFP too low),9,5,2,1,3,PRELIMINARY
+US_RIFSQ_1943.3_R,United States,Rifle Squad (reduced),1943.3,R,regular,╌ 6 ⬡2 -1,,,7,5,2,1,2,PRELIMINARY
+UK_RIFSEC_1943.3_F,United Kingdom,Rifle Section,1943.3,F,regular,─● 4 ⬡4 -1,╌ 3 ⬡5 -1,omit (rFP too low),8,5,2,1,3,PRELIMINARY
+UK_RIFSEC_1943.3_R,United Kingdom,Rifle Section (reduced),1943.3,R,regular,╌ 2 ⬡5 -1,,,6,5,2,1,2,PRELIMINARY
+JPN_RIFSQ_1943.3_F,Japan,Rifle Squad,1943.3,F,regular,─● 4 ⬡6 -1,╌ 3 ⬡4 -1,,10,5,2,1,3,PRELIMINARY
+JPN_RIFSQ_1943.3_R,Japan,Rifle Squad (reduced),1943.3,R,regular,omit (rFP too low),,,8,5,2,1,2,PRELIMINARY
+US_MG_1919_1943.3_F,United States,Light Machine Gun Squad,1943.3,F,regular,═● 6 ⬡6 -1,,,6,5,0,3,1,PRELIMINARY
+US_MG_1919_1943.3_R,United States,Light Machine Gun Squad (reduced crew),1943.3,R,regular,═● 4 ⬡6 -1,,,4,5,0,3,1,PRELIMINARY
