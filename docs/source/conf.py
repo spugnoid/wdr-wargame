@@ -9,8 +9,13 @@ sys.path.insert(0, os.path.abspath('_ext'))
 project = 'With Deepest Regret...'
 copyright = '2026, Rod Peters'
 author = 'Rod Peters'
-release = '0.9.7'
-version = '0.9.7'
+# Bump on any commit (or batch of commits in one session) that changes
+# rules content -- there's no automated trigger for this, it's a manual
+# edit, so it's easy to forget across a long session. No project-wide
+# semver contract beyond that; this has just been a plain patch counter
+# since 0.9.2.
+release = '0.9.8'
+version = '0.9.8'
 
 extensions = [
     'sphinx.ext.autosectionlabel',
