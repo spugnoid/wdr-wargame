@@ -183,6 +183,12 @@ triggers  ..........  19.1.2
 
 **Bazooka**  ..........  18.9
 
+**Bog check / BOGGED marker**  ..........  17.6.2a
+
+extended to any hex under Rain/Mud  ..........  24.2.2
+
+recovery (activation + 1d6 vs 4, tow bonus)  ..........  17.6.2a
+
 **Blind markers**  ..........  14.3
 
 dummy markers  ..........  14.4
@@ -523,9 +529,9 @@ anti-cheat function  ..........  16.5.4, E.31
 
 fields  ..........  16.12
 
-**Fire rate (F#)**  ..........  3.3.2
+**Fire rate (F#) — same stat as ROF, see E.109**  ..........  3.3.2, 6.6
 
-superseded by ROF / Assault economy pending counter review  ..........  3.3.2, 6.6.6
+values by mount type (1/2/3)  ..........  6.6.2
 
 **Firing Exposed — eliminated**  ..........  E.94
 
@@ -550,6 +556,12 @@ cover halved  ..........  21.5.3
 fire line stats  ..........  21.5.2
 
 vehicle targets (engine deck)  ..........  21.5.8
+
+**Flare pistol (illumination) — see Night Combat**  ..........  23.4
+
+2 uses per scenario per unit/leader  ..........  23.4.2
+
+**Fog — see Weather**  ..........  24.4
 
 **Force Morale**  ..........  15.5
 
@@ -645,6 +657,20 @@ mobile M1  ..........  3.3.1
 
 **I**
 
+**ILLUM marker — see Night Combat**  ..........  23.2
+
+drift  ..........  23.6
+
+fade (starshell vs handheld)  ..........  23.3.4, 23.4.4
+
+radius equals current step  ..........  23.3.3
+
+**Illumination — see Night Combat**  ..........  23.2
+
+lit hex treated as daylight  ..........  23.2.1
+
+sources (starshell, flare pistol, searchlight)  ..........  23.3, 23.4, 23.5
+
 **Impulse sequence**  ..........  5.5
 
 both pass = Action Phase ends  ..........  5.6.2
@@ -657,7 +683,7 @@ reaction window  ..........  5.5.2–5.5.4
 
 **Initiative**  ..........  5.3.1
 
-+1 RP to winner  ..........  5.3.2
+buys tempo only, not RP (see E.91)  ..........  5.3.2
 
 roll 1d6, higher wins  ..........  5.3.1
 
@@ -797,6 +823,20 @@ step order  ..........  8.8.3
 
 **National morale characteristics**  ..........  15.6
 
+**Night Combat**  ..........  S.23
+
+ambient visibility (2-hex cap)  ..........  23.1
+
+command radius at night  ..........  12.2.4
+
+night fire eligibility  ..........  8.11
+
+night movement risk check  ..........  7.7
+
+night infiltration bonus (close assault)  ..........  9.3.2a
+
+superseded framework — see Rule 14.11.5  ..........  E.106
+
 **No effect result**  ..........  8.6
 
 margin below 0  ..........  8.6, App.C
@@ -817,7 +857,7 @@ requires radio operator/FO  ..........  16.11.3
 
 **Operational scale**  ..........  2.1.2
 
-[OPS] notation  ..........  2.1.2
+deferred to a future companion manual — see E.107  ..........  2.1.2, E.107
 
 **Opportunity fire**  ..........  6.4
 
@@ -894,6 +934,8 @@ Panzer Tracts  ..........  17.3.6
 **Psychological break — see Break (morale)**  ..........  10.4.4
 
 **R**
+
+**Rain/Mud — see Weather**  ..........  24.2
 
 **Rally action (leader)**  ..........  12.6
 
@@ -1023,6 +1065,8 @@ captured if still routing at scenario end  ..........  10.6.9, 11.2a
 
 **Scenario design guidelines**  ..........  S.22
 
+special conditions checklist (Night, weather, etc.)  ..........  22.10
+
 checklist  ..........  22.10
 
 example parameters (Prokhorovka)  ..........  22.11
@@ -1056,6 +1100,8 @@ dissipation (per hex roll)  ..........  16.10.1
 dissipation steps (THICK/THINNING/DISSIPATING)  ..........  16.10.2
 
 intervening penalty per step  ..........  16.10.2
+
+**Snow — see Weather**  ..........  24.3
 
 **Sniper counters**  ..........  S.20
 
@@ -1219,6 +1265,12 @@ allowances by type  ..........  17.6.1
 
 terrain costs table  ..........  17.6.2
 
+**Vehicle searchlight — see Night Combat**  ..........  23.5
+
+reuses TRAV arc  ..........  23.5.1
+
+reveals vehicle when used  ..........  23.5.3
+
 **Victory conditions**  ..........  22.6
 
 types  ..........  22.6.2
@@ -1226,6 +1278,18 @@ types  ..........  22.6.2
 **VISIBLE state**  ..........  1.3, 14.1
 
 **W**
+
+**Weather**  ..........  S.24
+
+fixed for the whole scenario  ..........  24.1.1
+
+interaction with Night  ..........  24.1.2
+
+Rain/Mud  ..........  24.2
+
+Snow  ..........  24.3
+
+Fog  ..........  24.4
 
 **Weapon class icons**  ..........  3.4.4
 

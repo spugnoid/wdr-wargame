@@ -483,6 +483,8 @@ With Deepest Regret... uses a physical hidden information system to model the fo
      - -1 (unavoidable noise)
    * - Night scenario
      - +3
+   * - Fog (Rule 24.4.2)
+     - +2
    * - Smoke per intervening hex
      - +2
 
@@ -594,13 +596,15 @@ With Deepest Regret... uses a physical hidden information system to model the fo
 
    **Example:** A unit that moves carelessly takes a single -2 CON penalty that already accounts for both the visual exposure and the noise it makes — sound spotting availability doesn't stack an extra penalty for the same careless move.
 
-**14.11.5**  Night scenarios: sound becomes the primary detection method. Visual spot range is reduced to 1-2 hexes maximum. All sound-based CON penalties are doubled. Full night rules are a separate design task — this rule establishes the framework.
+**14.11.5**  *Superseded by Rule 23.1 — see design note E.106.* Night scenarios shift detection's balance toward sound: visual spot range is capped, and two of the sound-based CON penalties above are doubled. Section 23 states the finished framework in full, including illumination as a real mechanic.
 
 .. container:: rule-guide
 
-   **Why:** Shifts detection's whole balance toward hearing rather than sight once visual range collapses at night, doubling sound penalties to make noise the dominant way units actually get spotted — while honestly flagging that the full night-scenario ruleset is still a future design task, not yet complete here.
+   **Why:** This rule originally established night detection as a framework and explicitly deferred the full ruleset. Rule 23.1 now provides that ruleset — the same shift toward sound-based detection, with the visual cap and doubled penalties stated as exact numbers rather than a range.
 
-   **Example:** In a night scenario, a unit moving carelessly (normally -2 CON) suffers -4 CON instead under the doubled sound penalty, while visual detection is capped to spotting only within 1-2 hexes regardless of how good the spotter's OBS is.
+   **Example:** A night scenario's spotting is now resolved entirely under Rule 23.1: a 2-hex hard cap on visual spot attempts, and the dense-woods/rubble and careless-movement CON rows doubled — with Rule 23.2's illumination able to cancel both effects in a lit hex.
+
+    *See also: Rule 23.1 (Ambient Visibility, the finished rule), Rule 23.2 (Illumination).*
 
 14.12  FIXED Unit Transition Summary
 ------------------------------------

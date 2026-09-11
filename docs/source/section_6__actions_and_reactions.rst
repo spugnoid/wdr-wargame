@@ -272,17 +272,17 @@ The following reactions are available to the non-active player during a reaction
 
    **Example:** At the start of the Recovery Phase, every ASSAULT, FIRED 1/2/3, MOVED/FIRED, and CARELESS marker on the map is removed at once, regardless of when each was placed during the previous turn.
 
-6.6  ROF Weapons — Stationary Machine Guns
----------------------------------------------
+6.6  F# and Rate of Fire — Stationary Weapons
+-------------------------------------------------
 
 
-**6.6.1**  Some weapons may fire more than once per turn while stationary — **ROF** (Rate of Fire), a property of the weapon itself, distinct from the printed F# value on the counter. F# is not consulted by this rule; it remains on the counter pending a full counter-data review (Rule 6.6.6).
+**6.6.1**  Some weapons may fire more than once per turn while stationary — the printed F# value on the counter (Rule 3.3.2), which **is** the weapon's Rate of Fire (ROF), not a separate number from it. F# is keyed to mount type, per the table below.
 
 .. container:: rule-guide
 
-   **Why:** Separates ROF (a weapon-class property this specific rule defines) from the printed F# stat (a different, currently-unconsulted number), explicitly flagging the two are not yet reconciled rather than silently overloading F# with a new meaning.
+   **Why:** F# and ROF used to be two different numbers claiming to describe the same thing; design note E.109 merged them into the one printed stat this rule reads directly, rather than a separate rules-text value the counter's own printed number had nothing to do with.
 
-   **Example:** A tripod HMG's printed F# value plays no role in determining its ROF of 3 — that number comes entirely from Rule 6.6.2's table, keyed to the weapon's mount type.
+   **Example:** A tripod HMG's printed F3 is the same number Rule 6.6.2's table would assign it by mount type — reading the counter and reading the table give the identical answer, because they're now the same fact.
 
 **6.6.2**  ROF by weapon:
 
@@ -305,6 +305,9 @@ The following reactions are available to the non-active player during a reaction
    * - LMG team, and any bipod- or light-tripod-mounted MG, while stationary
      - 2
      - The bipod position buys one extra burst over the ordinary economy — but only while planted; see Rule 6.6.4.
+   * - Mortar, deployed (Section 16)
+     - 2
+     - Same deploy/limber system as an HMG (Rule 7.6); a planted baseplate supports a second fire mission the way a bipod supports a second burst. Mobile mortars use the row below.
    * - Any other unit, or any weapon in transit
      - 1
      - One full-effect fire is the unit's entire turn (Rule 6.3.2); the Assault economy (Rule 6.3.3) is its only path to a second, reduced shot.
@@ -334,13 +337,13 @@ The following reactions are available to the non-active player during a reaction
 
    **Example:** A tripod HMG fires all three of its ROF shots this turn (reaching MOVED/FIRED). Its crew cannot also Limber the weapon this same turn — that must wait until next turn.
 
-**6.6.6**  *[Interim note: F# as printed on infantry and weapon-team counters predates this rule and is not currently used by it. A full counter-data review to reconcile F# with ROF, and to extend ROF to weapon types not yet covered here, is a planned future pass — see Appendix E, design note recording this redesign.]*
+**6.6.6**  *Resolved — see design note E.109.* F# and ROF are one stat, not two: the printed F# value on any counter is read directly from the Rule 6.6.2 table for that weapon's mount type. A weapon type not yet listed in that table (a future addition to the counter mix, such as a towed AT gun) has no defined rate yet and needs a new row added when it's designed — not a second, separate stat to reconcile against.
 
 .. container:: rule-guide
 
-   **Why:** This is an explicit, flagged interim state rather than a silent gap — the rule tells the reader directly that F#'s relationship to ROF is unresolved, so a future revision doesn't have to guess whether the current omission was intentional.
+   **Why:** Closes out what was an explicitly flagged interim state rather than leaving it to quietly age — F#'s relationship to ROF is no longer unresolved, it's the same number. What remains genuinely open is narrower and more honest: extending Rule 6.6.2's table to weapon classes it doesn't cover yet, which is ordinary future counter design, not a reconciliation debt.
 
-   **Example:** A weapon type not yet listed in 6.6.2's table (some future addition to the counter mix) has no defined ROF under this rule yet — the interim note flags that as a known, tracked gap rather than an oversight.
+   **Example:** Adding a towed AT gun to the roster later means adding a row to Rule 6.6.2's table (and printing that value as its F#) — there's no separate F#-vs-ROF question to resolve for it, only the ordinary design question of what its stationary rate of fire should be.
 
 6.7  Desperate Fire and Close-Combat Defense
 -----------------------------------------------

@@ -333,3 +333,17 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
    **Why:** Mirrors 7.6.3 for the reverse action, and cross-references the same ROF-expenditure restriction already established in Rule 6.6.5, so the two "packing up" rules — Section 6's ROF-specific one and this general one — stay consistent with each other.
 
    **Example:** A weapon counter spends 1 AP to add its MOBILE marker (limber). If that weapon expended its printed ROF earlier this turn, it cannot limber until next turn — the same restriction Rule 6.6.5 already states for ROF weapons specifically.
+
+7.7  Night Movement Risk
+-------------------------
+
+
+**7.7.1**  A Move or Assault Move at night that takes a unit beyond the Rule 23.1 visibility cap from where it started, and not entirely through a lit hex (Rule 23.2), requires a check: roll 1d6 + Morale modifier against threshold 3 — the same threshold already used for Suppressed recovery (Rule 5.2.4) and the reduced-face close-assault nerve check (Rule 9.1.3a). On failure, the unit stops 2 hexes short of its intended hex — a fixed shortfall, not randomly determined — though its full movement allowance is still spent.
+
+.. container:: rule-guide
+
+   **Why:** Reuses a threshold players already know rather than adding a new number to memorise, and makes the failure consequence a fixed, unambiguous shortfall instead of a further roll — a unit that loses its way in the dark ends up somewhere predictable, not somewhere else the dice have to determine.
+
+   **Example:** A Regular unit (Morale modifier +0) moving 4 hexes at night with no lit hex along the way rolls 1d6 against threshold 3 — a 67% pass rate, the same odds as an ordinary Suppressed recovery roll. On a failure, it stops after only 2 hexes of movement despite having paid for all 4.
+
+    *See also: Rule 23.1 (the visibility cap this rule is measured against), Rule 23.2 (illumination that removes the check entirely along a lit route).*

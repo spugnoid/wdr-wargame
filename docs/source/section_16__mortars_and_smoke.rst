@@ -30,7 +30,7 @@ Mortar counters display four specialist stats in addition to standard Defence an
      - Base ammunition per scenario. Secret bonus added at setup. See Rule 16.3.
 
 
-All mortar counters use M1 F2 (mobile) or M0 F2 (deployed). Mortar teams must deploy before firing — same deploy/limber rules as HMG teams (Section 7.6).
+All mortar counters use M1 F1 (mobile) or M0 F2 (deployed) — F2 while deployed is the mortar's ROF, per Rule 6.6.2. Mortar teams must deploy before firing — same deploy/limber rules as HMG teams (Section 7.6).
 
 16.2  Representative Mortar Counters — 1943
 -------------------------------------------
@@ -98,13 +98,13 @@ All mortar counters use M1 F2 (mobile) or M0 F2 (deployed). Mortar teams must de
 
 *NOTE: earlier drafts also added a secret 1d6−1 bonus recorded privately at setup. Two mechanisms cannot both govern the same supply — a player who rolled +5 secret rounds could still be forced dry by a first extended-table roll of 1 — and the extended table alone already provides hidden, variable ammunition without any private bookkeeping. The secret roll is removed.*
 
-**16.3.2**  Each fire mission (HE or smoke) expends 1 AMO. HE and smoke ammunition are tracked on the same AMO count unless the scenario specifies separate pools.
+**16.3.2**  Each fire mission (HE, smoke, or Illum — Rule 23.3.1) expends 1 AMO. All three round types are tracked on the same AMO count unless the scenario specifies separate pools.
 
 .. container:: rule-guide
 
-   **Why:** Draws ammunition down by mission, not by round type, so a mortar that alternates between HE and smoke missions depletes the same shared pool — the scenario has to explicitly call out separate pools if HE and smoke should be tracked independently.
+   **Why:** Draws ammunition down by mission, not by round type, so a mortar that alternates between HE, smoke, and Illum missions depletes the same shared pool — the scenario has to explicitly call out separate pools if any round type should be tracked independently.
 
-   **Example:** A mortar with AMO 8 that fires 3 HE missions and 2 smoke missions has used 5 of its 8 AMO total, leaving 3 — the smoke missions drew from the same count as the HE ones unless the scenario says otherwise.
+   **Example:** A mortar with AMO 8 that fires 3 HE missions, 2 smoke missions, and 1 Illum mission has used 6 of its 8 AMO total, leaving 2 — the Illum mission drew from the same count as the others unless the scenario says otherwise.
 
 **16.3.3**  When the mortar has fired its base AMO rounds, rather than announcing exhaustion, the owning player rolls on the extended ammunition table for each subsequent mission:
 
@@ -445,6 +445,26 @@ All mortar counters use M1 F2 (mobile) or M0 F2 (deployed). Mortar teams must de
    **Why:** Keeps each smoke marker's dissipation roll (Rule 16.10.1) independent per hex, so a screen from one mission and a screen from another (or even different hexes from the same mission) can thin out at different rates rather than all clearing in lockstep.
 
    **Example:** Two smoke missions called at different times, or even different hexes from the same BLT radius, each roll their own dissipation independently — one hex's smoke might clear while an adjacent hex's smoke from the same mission is still THICK.
+
+16.9a  Illumination Rounds
+----------------------------
+
+
+**16.9a.1**  Illum rounds (Rule 23.3.1) follow the same targeting, sealed slip, delay, and dispersion procedures as HE and smoke rounds (Rules 16.4-16.6). On landing, an Illum round places an ILLUM marker rather than a SMOKE marker, per Rule 23.3.3.
+
+.. container:: rule-guide
+
+   **Why:** A third round type reuses the exact same delivery machinery as the first two rather than needing its own — only what the round does on landing is genuinely different, and that difference (light instead of blast or concealment) is specified in Section 23 rather than duplicated here.
+
+   **Example:** An Illum mission is called, sealed, delayed, and rolled for dispersion exactly like an HE or smoke mission at the same range and mode — only on arrival does it diverge, placing an ILLUM marker (Rule 23.3.3) instead of a HE blast or a SMOKE marker.
+
+**16.9a.2**  An Illum round's marker fades and drifts under Section 23's own rules (Rules 23.3.4, 23.6), not under Rule 16.10's smoke dissipation table.
+
+.. container:: rule-guide
+
+   **Why:** Keeps illumination's lifecycle in Section 23 where its full context (drift, the handheld and searchlight variants) lives, rather than splitting one marker type's behaviour across two sections.
+
+   **Example:** An ILLUM marker placed by a mortar mission fades on Section 23's 1-3/6 roll (Rule 23.3.4), not the 1-2/6 roll Rule 16.10.1 uses for SMOKE markers — the two marker types share a delivery pipeline but not a lifecycle.
 
 16.10  Smoke Dissipation
 ------------------------

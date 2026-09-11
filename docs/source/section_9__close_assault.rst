@@ -116,6 +116,16 @@ See Rule 6.3.3.
 
    **Example:** Attacker has G3. Defender holds a building (cover +6, halved to +3 in the Grenade Phase per 9.3.5) with Defence 5. Attacker rolls 1d6=4, 1d8=5, 1d12=8 (17) + G3 = 20. Threshold = Defence 5 + half-cover 3 = 8. Margin = 20 − 8 = 12 → **Pinned** (9–13 band, Rule 8.6/Appendix C).
 
+**9.3.2a**  If the assaulting unit's blind marker had not been spotted (Rule 14.9.6) at the moment it declared Close Assault, its Grenade Phase roll (9.3.2) gets **+3** — reusing the existing +3 figure (Rule 9.4.2's range-0 entry-fire bonus, Rule 14.10.2's Spot Action bonus) rather than inventing a new constant.
+
+.. container:: rule-guide
+
+   **Why:** A defender who never saw the assault coming gets no chance to brace for it — the same infiltration advantage night and concealment already model everywhere else in the hidden-information system, applied at the one moment concealment matters most. No new tracking is needed: this reads the hidden-info state (spotted or not) that already exists the instant Close Assault is declared.
+
+   **Example:** A unit that closed the whole distance under cover of darkness without ever being spotted declares Close Assault and rolls its Grenade Phase attack (9.3.2) at +3 — the same bonus a Spot Action or a range-0 entry-fire shot already carries elsewhere in the rules. A unit that was spotted at any point before declaring gets no such bonus, regardless of how dark the scenario is.
+
+    *See also: Rule 14.9.6 (the spot state this bonus reads), Rule 23.1 (why concealment is easier to keep at night in the first place).*
+
 **9.3.3**  Defender grenade attack (simultaneous): Roll 1d6+1d8+1d12 + defender's G# value. Compare against attacker's Defence value. No cover modifier applies to the attacker — they are in the open approaching.
 
 .. container:: rule-guide

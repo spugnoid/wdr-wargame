@@ -101,13 +101,13 @@ The upper right corner of each counter shows three action values:
 
    **Example:** A deployed HMG team prints M0 F3 G1 — it can still fire and use grenades in an assault, but cannot move until it's limbered (switching to its M1 F0 G0 mobile profile).
 
-**3.3.2**  F# — Fire rate.  The number of fire actions the unit may take per turn. *Interim note: a unit's actual turn structure (one full-effect fire, or two reduced Assault fires, or — for a stationary machine gun — repeated full-effect fire under ROF) is governed by Rule 6.3/6.6, not by this printed value. F# predates that rule and is not currently consulted by it; reconciling the two is a planned counter-data review.*
+**3.3.2**  F# — Rate of Fire (ROF).  The number of full-effect fire actions the unit may take per turn while stationary, read directly from Rule 6.6.2's table: **1** for the great majority of units — a single Regular Fire ends their turn (Rule 6.3.2), with the reduced-effect Assault economy (Rule 6.3.3) as their only path to a second, weaker shot — **2** for a bipod- or light-tripod-mounted MG or a deployed mortar, **3** for a tripod-deployed MG. A unit that moves this turn never fires at more than F1 regardless of its printed value (Rule 6.6.4).
 
 .. container:: rule-guide
 
-   **Why:** Documents F# honestly as a legacy printed value that the current action-economy rules (6.3/6.6) don't actually read, rather than silently pretending it's still authoritative — a player consulting a counter shouldn't be misled about what governs its turn structure today.
+   **Why:** F# and ROF were, for a long stretch of this document's history, two different numbers claiming to describe the same thing — a printed stat nothing consulted, and a separate rules-text value nothing printed. Design note E.109 merged them: there is exactly one number, it is printed on the counter, and Rule 6.6.2 is simply where its value comes from for any given weapon class.
 
-   **Example:** A rifle squad's printed F2 doesn't mean "exactly two fires, no more, no less" under the current rules — its actual options (one full Fire, two Assault Fires, etc.) come from Rule 6.3/6.6, and F2 is not consulted to decide between them.
+   **Example:** A rifle squad prints F1 — its printed value and Rule 6.6.2's "any other unit" row are the same fact stated once. A tripod HMG prints F3, matching the tripod row exactly; a bipod LMG prints F2, matching the bipod row. None of these numbers need a separate lookup to know what they mean.
 
 **3.3.3**  G# — Grenade value.  The unit's effectiveness in the grenade phase of close assault. Used only during close assault resolution (see Section 9).
 
@@ -125,23 +125,23 @@ The upper right corner of each counter shows three action values:
      - **Standard Action Values**
      - **Notes**
    * - Rifle squad
-     - M2 F2 G3
-     - 
+     - M2 F1 G3
+     -
    * - SMG squad
-     - M2 F2 G3
-     - 
+     - M2 F1 G3
+     -
    * - Panzergrenadier squad
-     - M2 F2 G4
+     - M2 F1 G4
      - Higher grenade value reflects assault doctrine
    * - Guards rifle squad
-     - M2 F2 G4
-     - 
+     - M2 F1 G4
+     -
    * - LMG team
-     - M2 F3 G2
-     - Sustained fire capability
+     - M2 F2 G2
+     - Bipod ROF (Rule 6.6.2) — sustained fire while stationary
    * - HMG team (deployed)
      - M0 F3 G1
-     - Cannot move while deployed
+     - Cannot move while deployed; tripod ROF (Rule 6.6.2)
    * - HMG team (mobile)
      - M1 F0 G0
      - Cannot fire while mobile

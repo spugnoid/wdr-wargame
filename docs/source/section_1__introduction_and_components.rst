@@ -75,6 +75,8 @@ The game does not glorify war. The ordinary soldiers of every nation were not ev
      - Included in scenario booklet
    * - SMOKE markers — numbered 1–3 showing current dissipation step
      - TBD
+   * - ILLUM markers — numbered 1–3 showing current step/radius, used for starshell and handheld flare illumination (Rule 23.3, 23.4)
+     - TBD
    * - Fire mission slips — pre-printed paper slips for sealed mortar/artillery orders
      - TBD — suggest 20 per scenario
    * - Mortar registered target markers — placed at pre-registered hexes
@@ -82,6 +84,8 @@ The game does not glorify war. The ordinary soldiers of every nation were not ev
    * - CREW counters — vehicle crew without vehicle, per nation
      - TBD
    * - ABANDONED vehicle markers
+     - TBD
+   * - BOGGED markers — tracked vehicle immobilised (Rule 17.6.2a, 24.2.2)
      - TBD
    * - EXPENDED strips — covers support weapon bands when weapon is used
      - TBD — one size fits all support weapon bands
@@ -147,7 +151,7 @@ The following terms are used throughout this document. Each term is defined here
 
 **Assault economy —**  A unit's reduced-effect alternative to a Regular action: up to two part-actions (Assault Move, 1 hex regardless of M#; Assault Fire, half effective rFP) in either order. Rule 6.3.3.
 
-**ROF —**  Rate of Fire. The number of times a stationary weapon (deployed HMG: 3; bipod-mounted LMG/MMG: 2) may fire at full effective rFP in one turn. Rule 6.6. Distinct from the printed F# value, which this rule does not consult.
+**ROF / F# —**  Rate of Fire — one stat, one printed value (Rule 3.3.2), not two. The number of times a unit may fire at full effective rFP in one turn while stationary: 1 for the great majority of units (any further fire comes only from the reduced-effect Assault economy, Rule 6.3.3), 2 for a bipod- or light-tripod-mounted MG, 3 for a tripod-deployed MG, 2 for a deployed mortar (Rule 6.6.2). See design note E.109 for the correction that merged these.
 
 **MOVED/FIRED —**  The marker showing a unit is done for the turn — no further movement or fire, though it retains close-combat defense and, if it is the target of a close assault, Desperate Fire (Rule 6.7).
 

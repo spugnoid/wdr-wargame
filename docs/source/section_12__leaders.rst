@@ -86,6 +86,16 @@ All leaders have M3 F1 — movement allowance 3, fire rate 1. Leaders move faste
 
    **Example:** An elite leader and a veteran leader both have CMD 3 and the same 3-hex radius and AP contribution, but the elite leader's better RAL, ASL, and OBS values (Rule 12.6.4, 12.8.2) make them noticeably more effective in play.
 
+**12.2.4**  At night, a leader's command radius (Rule 12.2.1) is **+1 hex** — sound carries farther than sight in still air. Issuing a command to a unit beyond the leader's *normal daytime* radius applies the Rule 14.9.7 careless-movement CON penalty, doubled per Rule 23.1.3, to the leader's own hex for spotting purposes only: no CARELESS marker is placed, no movement occurs, and none of Rule 7.4's other consequences of actual Careless Movement apply.
+
+.. container:: rule-guide
+
+   **Why:** Extended reach at night costs concealment, not a status — a leader shouting orders to the edge of that extra hex is exactly as loud and exposed as a unit moving carelessly, without actually having moved or triggering any of Careless Movement's other effects (Rule 7.4). Borrowing the existing -4 value keeps this a reused number, not a new one to remember.
+
+   **Example:** A CMD 2 leader (normal daytime radius 2, Rule 12.2.1 table) reaches 3 hexes at night. Commanding a unit at 3 hexes applies -4 CON to the leader's own hex for spotting purposes this turn; commanding a unit within the normal 2-hex radius carries no such penalty.
+
+    *See also: Rule 23.1.3 (the doubled penalty this rule borrows), Rule 7.4 (Careless Movement, whose other effects explicitly do not apply here).*
+
 12.3  Action Point Generation
 -----------------------------
 

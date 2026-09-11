@@ -247,4 +247,10 @@ Section 11 — Prisoners and Surrender
    * - 2 points
      - Reveal the starting position of one enemy unit in the next scenario
    * - 3 points
-     - Gain bonus replacement points equal to the prisoner count *[TBD — replacement points await the campaign economy design (Rule 13.2.2); this benefit is unavailable until then]*
+     - Gain 1 Replacement Point (Rule 13.2.2a), spent the same way as any other
+
+.. container:: rule-guide
+
+   **Why:** Now that Rule 13.2.2a defines what a Replacement Point actually does, this row is enabled at a flat 1 point rather than the original draft's "equal to the prisoner count" — scaling with prisoner count would let a single lopsided scenario's captures outweigh the flat 1-per-campaign-turn baseline Resupply already provides (Rule 13.2 table), breaking the scarcity that design note E.100 deliberately built in. Confirmed with the designer.
+
+   **Example:** A side spends 3 of its banked Intelligence Points between scenarios to gain 1 Replacement Point, then spends that point after a BROKEN-zone recovery roll exactly as it would spend one issued by Resupply (Rule 13.2.2a) — the source of the point doesn't change how it's used.

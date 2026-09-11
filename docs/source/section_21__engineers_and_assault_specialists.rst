@@ -34,8 +34,8 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
      - M1
      - Heavy equipment limits speed
    * - F#
-     - F2
-     - Standard fire capability
+     - F1
+     - Standard fire capability — engineers are an ordinary (non-ROF) unit
    * - G#
      - G5
      - High — specialist assault equipment

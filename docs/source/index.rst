@@ -33,6 +33,8 @@ Version |release| — built |today|
    section_20__snipers
    section_21__engineers_and_assault_specialists
    section_22__scenario_design_guidelines
+   section_23__night_combat
+   section_24__weather
    appendix_a__resolution_strip_quick_reference
    appendix_b__terrain_quick_reference
    appendix_c__result_thresholds

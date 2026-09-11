@@ -13,21 +13,21 @@ Section 2 — Game Scale and Conventions
 
    **Example:** At tactical scale, a target 3 hexes away (Rule 2.3.1) is roughly 120 yards distant — close enough that most small-arms fire lines haven't started falling off yet (Rule 2.4.3).
 
-**2.1.2**  Operational scale:  One hex equals 250 yards. This scale is used for platoon and company level engagements with armour emphasis. Rules specific to the operational scale are identified with the notation [OPS].
+**2.1.2**  Operational scale:  One hex equals 250 yards, for platoon- and company-level engagements with an armour emphasis. Operational scale is planned as a separate companion manual, developed after this tactical ruleset is finalised — reusing this document's core resolution formulas and procedures, with counters representing larger formations (platoons or equivalent) in place of squads. No operational-scale rules exist in this document; the 250-yard figure is recorded here only to fix what "operational scale" means once that manual is written. See design note E.107.
 
 .. container:: rule-guide
 
-   **Why:** Lets the same hex-and-counter system represent a much larger battlefield for platoon/company-level armour engagements, without rewriting every rule — only the [OPS] tag needs checking to know a rule changes at this scale.
+   **Why:** Deliberately sequences operational scale behind the tactical ruleset rather than developing them in parallel — every operational-scale formula (movement allowance, range bands, turn duration) would need rederiving from whatever the tactical values finally settle at, the same way Rule 7.1.2's tactical movement allowance was itself derived from impulse timing. Building it first would mean rebuilding it every time a tactical number changed during this ruleset's own development.
 
-   **Example:** A unit's printed range values don't change between scales, but what they represent does: range 3 at operational scale covers roughly 750 yards, ground that would take over six tactical-scale hexes to cross.
+   **Example:** A unit's printed range values don't change between scales, but what they represent does: range 3 at operational scale would cover roughly 750 yards, ground that takes over six tactical-scale hexes to cross — but the formulas that turn that printed range into an actual combat result belong to the companion manual, not this document.
 
 **2.1.3**  All range values on counters are expressed in hexes appropriate to the current map scale.
 
 .. container:: rule-guide
 
-   **Why:** Keeps range values scale-relative rather than fixed, since the same printed range on a counter means a very different real-world distance depending on whether it's read on a tactical or operational map (Rules 2.1.1-2.1.2).
+   **Why:** Keeps range values scale-relative rather than fixed, since the same printed range on a counter would mean a very different real-world distance depending on whether it's read on a tactical or (future) operational map (Rules 2.1.1-2.1.2).
 
-   **Example:** A fire line printed with a range-3 falloff step means the same 3 hexes whether the counter is used in a tactical-scale scenario or an [OPS] operational-scale one — only the real-world distance behind those 3 hexes changes.
+   **Example:** A fire line printed with a range-3 falloff step means the same 3 hexes at any scale this system is ever played at — only the real-world distance behind those 3 hexes changes.
 
 *NOTE: Yards are used rather than metres because primary source data for WWII weapons — US, British, and German — is predominantly expressed in yards. Soviet data is in metres, but rounding error at game scale is negligible.*
 

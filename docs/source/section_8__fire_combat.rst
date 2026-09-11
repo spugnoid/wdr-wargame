@@ -465,4 +465,18 @@ The full procedure for any fire combat action:
 
    **Why:** Clarifies a scope boundary so this rule — about a unit's own reduced-effect fire — isn't confused with the different, defender-side moving-target penalty in Rule 7.5.2: one concerns the firer's own economy, the other concerns firing at a target that happens to be moving.
 
+8.11  Reduced-Visibility Fire Eligibility
+--------------------------------------------
+
+
+**8.11.1**  A unit may not declare fire combat against a target beyond the active visibility cap — night's (Rule 23.1) or a declared Weather condition's (Rules 24.2.1, 24.3.1, 24.4.1) — unless the target's hex is lit (Rule 23.2). Where more than one cap is active (Rule 24.1.2), the most restrictive governs. This is a flat eligibility gate, independent of the Long Range Cap (Rule 8.7) — that rule still does its own separate job of capping *results* for weak effective rFP once a target is in range; this rule is about whether the attack may be declared at all.
+
+.. container:: rule-guide
+
+   **Why:** Keeps two genuinely different questions separate — whether a target can be engaged at all given how far the battlefield can currently be seen, and, once it can, how weak fire at long range is allowed to resolve — rather than folding a detection limit into a rule that was built to cap combat outcomes. Stated once, generically, rather than as a separate near-identical rule per condition, since night, fog, and precipitation all create the same kind of eligibility gate and differ only in their printed hex number.
+
+   **Example:** Under Fog (1-hex cap), a unit may not declare fire at an unlit target 2 hexes away — the same flat prohibition Night's 2-hex cap would apply at a longer range. The same target inside a starshell's light radius (Rule 23.3) is a legal target, subject to the ordinary rules (including 8.7) exactly as it would be at any range in daylight — illumination cancels night, but not a Weather cap (Rule 24.1.2).
+
+    *See also: Rule 23.1 (Ambient Visibility), Rule 24.1 (Weather — General), Rule 23.2 (Illumination), Rule 8.7 (Long Range Cap — a separate, still-applicable rule).*
+
    **Example:** A unit taking an Assault Move and then firing on its next activation is not itself penalized for having moved earlier — its own fire is judged solely by whether it's a Regular or Assault Fire (this rule). A -2 rFP penalty only applies to whoever is shooting at a currently-moving target (Rule 7.5.2), a completely separate situation.
