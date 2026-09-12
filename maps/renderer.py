@@ -31,6 +31,10 @@ MARGIN = 60.0
 TERRAIN_FILL = {
     "open": PAPER,
     "light_woods": OLIVE_DARK,
+    "crops": KHAKI,
+    "ditch_sunken_road": OLIVE,
+    "building_heavy": INK,
+    "rubble": KHAKI_DARK,
 }
 
 FACTION_FILL = {

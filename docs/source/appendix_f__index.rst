@@ -245,7 +245,7 @@ extinguishing  ..........  21.5.6
 
 **C**
 
-**Complexity tiers (Base/Standard/Advanced)**  ..........  App.G
+**Complexity tiers (Basic/Standard/Advanced)**  ..........  App.G
 
 **Campaign rules**  ..........  S.13
 

@@ -29,6 +29,20 @@
   background: var(--paper) !important;
 }
 
+/* Bump body text up from the theme's hardcoded 16px baseline. The theme
+   sets `html { font-size: 16px }` as its root and, separately, an
+   explicit `p { font-size: 16px }` that doesn't just inherit from that
+   root -- both have to be overridden for the increase to actually reach
+   paragraph text, not just the elements that merely inherit from html. */
+
+html {
+  font-size: 18px;
+}
+
+.rst-content p {
+  font-size: 18px;
+}
+
 .wy-body-for-nav,
 .rst-content {
   color: var(--ink);

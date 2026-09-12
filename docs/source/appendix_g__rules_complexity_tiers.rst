@@ -1,22 +1,22 @@
 Appendix G — Rules Complexity Tiers
 ====================================
 
-This appendix sorts the rules into three tiers — **Base**, **Standard**, and **Advanced** — so a group can choose how much of the system to bring to the table without hunting through 24 sections to work that out for themselves. Nothing here changes what any rule says; it only labels how essential each part is to a complete, satisfying game.
+This appendix sorts the rules into three tiers — **Basic**, **Standard**, and **Advanced** — so a group can choose how much of the system to bring to the table without hunting through 24 sections to work that out for themselves. Nothing here changes what any rule says; it only labels how essential each part is to a complete, satisfying game.
 
 G.1  What Each Tier Means
 --------------------------
 
-**Base** is everything needed to play a complete game to a fair, historically plausible result: the resolution engine (fire combat, close assault, morale), the action economy (AP/RP, leaders, the Regular/Assault split), core unit and terrain rules, and enough scenario structure to set one up. A group playing Base rules only is playing the real game, not a simplified preview of it — nothing in Base is a placeholder for something "more real" in a higher tier.
+**Basic** is everything needed to play a complete game to a fair, historically plausible result: the resolution engine (fire combat, close assault, morale), the action economy (AP/RP, leaders, the Regular/Assault split), core unit and terrain rules, and enough scenario structure to set one up. A group playing Basic rules only is playing the real game, not a simplified preview of it — nothing in Basic is a placeholder for something "more real" in a higher tier.
 
-**Standard** adds the tactical depth and historical texture most groups will want once Base rules feel comfortable: specialist unit types (snipers, engineers), support weapons (mortars/smoke), vehicles and their own combat system, the hidden-information system's core (blind markers, basic spotting), and prisoner handling. This is the tier most ongoing groups will settle into as their normal way of playing — richer than Base, not yet chasing edge-case simulation fidelity.
+**Standard** adds the tactical depth and historical texture most groups will want once Basic rules feel comfortable: specialist unit types (snipers, engineers), support weapons (mortars/smoke), vehicles and their own combat system, the hidden-information system's core (blind markers, basic spotting), and prisoner handling. This is the tier most ongoing groups will settle into as their normal way of playing — richer than Basic, not yet chasing edge-case simulation fidelity.
 
-**Advanced** is optional chrome: modules that add real simulation detail or historical nuance at a real cost in table overhead, meant to be adopted individually, not as a block. Every Advanced-tier rule that lives inside an otherwise Base or Standard section is explicitly labeled **"(Optional Rule)"** in its own header, with an *"If this module is in use for the scenario"* line marking exactly where it begins — nothing at Advanced tier is silently assumed. A scenario (or a whole campaign) states in its own parameters which Advanced modules, if any, are in play; players never have to guess.
+**Advanced** is optional chrome: modules that add real simulation detail or historical nuance at a real cost in table overhead, meant to be adopted individually, not as a block. Every Advanced-tier rule that lives inside an otherwise Basic or Standard section is explicitly labeled **"(Optional Rule)"** in its own header, with an *"If this module is in use for the scenario"* line marking exactly where it begins — nothing at Advanced tier is silently assumed. A scenario (or a whole campaign) states in its own parameters which Advanced modules, if any, are in play; players never have to guess.
 
 .. container:: rule-guide
 
-   **Why:** Naming three tiers up front — rather than just scattering "(Optional Rule)" labels through the text — gives a new group an actual on-ramp: play Base, add Standard once it clicks, and treat every Advanced module as a separate, independent decision rather than an all-or-nothing "full rules" switch the way some tactical wargames present their own advanced content.
+   **Why:** Naming three tiers up front — rather than just scattering "(Optional Rule)" labels through the text — gives a new group an actual on-ramp: play Basic, add Standard once it clicks, and treat every Advanced module as a separate, independent decision rather than an all-or-nothing "full rules" switch the way some tactical wargames present their own advanced content.
 
-   **Example:** A group's first game uses Base rules only — no vehicles, no snipers, no hidden units — and plays a complete, fair scenario. Their second game adds Standard-tier vehicles and mortars because the scenario calls for combined arms. Their fifth game adds the Weapon Malfunction module (Rule 8.12) because they specifically want that texture, while still skipping Night Combat (Section 23) entirely because no scenario they're playing needs it.
+   **Example:** A group's first game uses Basic rules only — no vehicles, no snipers, no hidden units — and plays a complete, fair scenario. Their second game adds Standard-tier vehicles and mortars because the scenario calls for combined arms. Their fifth game adds the Weapon Malfunction module (Rule 8.12) because they specifically want that texture, while still skipping Night Combat (Section 23) entirely because no scenario they're playing needs it.
 
 G.2  Tier by Section
 ----------------------
@@ -29,40 +29,40 @@ G.2  Tier by Section
      - **Tier**
      - **Notes**
    * - 1 — Introduction and Components
-     - Base
+     - Basic
      -
    * - 2 — Game Scale and Conventions
-     - Base
+     - Basic
      -
    * - 3 — Counters and Units
-     - Base
+     - Basic
      -
    * - 4 — Terrain
-     - Base
-     - Elevation/LOS core (4.4a.1–4.4a.4) is Base; grazing fire (4.4a.5) is Standard
+     - Basic
+     - Elevation/LOS core (4.4a.1–4.4a.4) is Basic; grazing fire (4.4a.5) is Standard
    * - 5 — Turn Structure
-     - Base
+     - Basic
      -
    * - 6 — Actions and Reactions
-     - Base
+     - Basic
      - Includes ROF weapons (Rule 6.6) — central to how MG counters already work, not an add-on
    * - 7 — Movement
-     - Base
+     - Basic
      - Careless Movement (Rule 7.4) is Standard — a real tactical option, not required to play
    * - 8 — Fire Combat
-     - Base
+     - Basic
      - Weapon Malfunction (8.12) and Pre-Registered Defensive Fire (8.13) are Advanced (Optional Rule)
    * - 9 — Close Assault
-     - Base
+     - Basic
      - Close Assault Against a Vehicle (9.1/18.9a) is Standard (needs vehicles); Mass Assault (9.8a) is Advanced (Optional Rule)
    * - 10 — Unit Status
-     - Base
+     - Basic
      -
    * - 11 — Prisoners and Surrender
      - Standard
      -
    * - 12 — Leaders
-     - Base
+     - Basic
      - CMD feeds the AP formula directly (Rule 5.3.3) — not a bolt-on system
    * - 13 — Campaign Rules
      - Advanced
@@ -71,7 +71,7 @@ G.2  Tier by Section
      - Standard / Advanced
      - Blind markers and basic spotting (14.1–14.3, 14.9) are Standard; Dummy markers, CONTACT aging, and FIXED-unit ambushes (14.4, 14.6–14.8, 14.7) are Advanced
    * - 15 — Morale, Break, and Rout
-     - Base
+     - Basic
      -
    * - 16 — Mortars and Smoke
      - Standard
@@ -92,8 +92,8 @@ G.2  Tier by Section
      - Standard
      - Basic Entrenchment (21.7a) is available to any unit at Standard tier — it does not require the rest of Section 21's specialist capabilities
    * - 22 — Scenario Design Guidelines
-     - Base
-     - Needed to set up any scenario at all, including a Base-only one
+     - Basic
+     - Needed to set up any scenario at all, including a Basic-only one
    * - 23 — Night Combat
      - Advanced
      - An entire optional scenario-condition module
@@ -102,7 +102,7 @@ G.2  Tier by Section
      - An entire optional scenario-condition module
 
 
-**G.2.1**  A scenario's own parameters (Rule 22.x) state which tier it assumes and which specific Advanced modules, if any, are active — a scenario designer is free to write a Base-only scenario, a Standard scenario with two specific Advanced modules bolted on, or anything between.
+**G.2.1**  A scenario's own parameters (Rule 22.x) state which tier it assumes and which specific Advanced modules, if any, are active — a scenario designer is free to write a Basic-only scenario, a Standard scenario with two specific Advanced modules bolted on, or anything between.
 
 .. container:: rule-guide
 
