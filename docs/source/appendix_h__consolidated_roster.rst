@@ -351,6 +351,32 @@ H.1  Infantry and Weapon Team Roster
      - M0
      - F2
      - G1
+   * - 45mm Anti-tank Gun Team
+     - Soviet Union
+     - 1943.3
+     - regular
+     - F
+     - —
+     - —
+     - —
+     - 6
+     - 5
+     - M0
+     - F2
+     - G1
+   * - 57mm Anti-tank Gun Team M1
+     - United States
+     - 1943.3
+     - regular
+     - F
+     - —
+     - —
+     - —
+     - 6
+     - 5
+     - M0
+     - F2
+     - G1
 
 H.2  Vehicle Armour Roster
 -------------------------------
@@ -1382,3 +1408,15 @@ the ammunition nature actually fired.*
      - 93.9
      - 84.1
      - 67.5
+   * - usm1_57l50_ap
+     - fitted
+     - 140.3
+     - 124.1
+     - 109.7
+     - 97.0
+     - 85.7
+     - 75.8
+     - 67.0
+     - 59.2
+     - 52.4
+     - 40.9

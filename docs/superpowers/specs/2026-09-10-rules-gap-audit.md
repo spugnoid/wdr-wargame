@@ -1292,3 +1292,63 @@ plus two hardcoded row-count assertions bumped 22->24. Test suite:
 172 passing (up from 171). Caught and fixed one more asterisk-
 adjacent-to-backtick nesting bug while writing E.128. `sphinx -W`
 clean. Project memory updated with the new row count.
+
+## Update — 2026-09-11 (part 21): two more towed guns -- Soviet 45mm (free reuse) and US 57mm (needed its own fit)
+
+Continuing "build these out in logical order." Dispatched research in
+parallel for this roster's third and fourth towed anti-tank guns.
+
+Soviet 45mm M1937 (53-K): clean, free curve reuse. Sourced MV (760 m/s
+/ 2493 fps) matches the existing t70_45l46_apbc curve (fitted earlier
+this session for the T-70's tank gun) to the foot-per-second, barrel
+length matches exactly, and Wikipedia's own family history describes
+the tank gun as this exact towed design re-mounted with the same
+ammunition -- stronger evidence than this project's own existing
+KV-1S/SU-85/StuG III curve-reuse precedent. No new calibration data
+needed. Crew size (6) is this roster's weakest-sourced convergence --
+inferred only from a successor gun's uncited infobox and a tow
+tractor's troop capacity, not stated for the 53-K itself.
+
+US 57mm Gun M1: NOT a free reuse, despite being a licence-built copy
+of the British 6pdr on the identical L/50 barrel. In 1943 it fired
+only uncapped AP Shot M70, not the capped APCBC round already fitted
+as sixpdr_57l50_apcbc -- a real ammo-family difference (ap_uncapped,
+not capped) that flips the sign of the face-hardening correction
+(0.80x for capped -- a liability; 1.303x for uncapped AP -- a bonus).
+Fitted a new curve (usm1_57l50_ap, K=2400, 0.58% max error, this
+project's first fielded use of ap_uncapped) from a real Tank Archives
+calibration table. Checked against Panzer IV H's face-hardened hull
+front: the M1's 1943 ammunition is only Contested at 500-750m and
+Bounces beyond 1000m -- a genuine, physically-grounded illustration
+of why the US Army wanted the capped shell that arrived in 1944, not
+a design choice. guns.csv flagged so this 1943-specific row is never
+reused for a 1944+ entry (use sixpdr_57l50_apcbc instead by then).
+Crew size for this gun is genuinely unresolved (10/6/5, three
+conflicting sources) -- used 6 for cross-gun consistency, flagged
+in-row as not the best-sourced figure for this specific gun.
+
+New design note E.129. Both guns got units.csv rows following E.128's
+exact stat-block shape (SOV_45MMAT_1943.3_F, US_57MMAT_1943.3_F).
+Appendix H regenerated (26 infantry rows, 15 guns). New tests:
+TestUS57mmM1GunCurveFit (armor_calc) and
+TestUS57mmAgainstFaceHardenedPlate (the Panzer IV finding); the
+shared towed-gun stat-block test now covers all four guns. Test
+suite: 174 passing (up from 172).
+
+While writing E.129, hit and fixed several instances of the
+recurring asterisk/backtick RST nesting bug -- and, while chasing
+those down, also found and fixed two PRE-EXISTING leaks unrelated to
+today's edits (a stray "TO**&**E" bold-marker leak in an old design
+note, and a stray literal double-backtick pair around
+`counters/infantry_calc/` in the Japan-engineers note). Root-caused
+the nesting bug precisely this time rather than just pattern-matching
+on "asterisk touching backtick": docutils requires every inline
+markup start/end-string to satisfy its own preceded-by/followed-by
+whitespace rules independently, and an already-open italic run makes
+every nested code span's boundaries fail those rules unless explicitly
+closed-and-reopened around it (with or without a `\ ` escaped-space,
+depending on whether a visible space is wanted there). `sphinx -W`
+clean; verified via a full-document scan (not just the new section)
+for literal double-backtick pairs and suspicious asterisk contexts,
+not just the new section, given how many notes were touched this
+session.

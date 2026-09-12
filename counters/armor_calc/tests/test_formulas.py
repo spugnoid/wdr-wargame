@@ -301,6 +301,42 @@ class TestPAK40GunCurveFits:
         assert fit.pen_0deg(500) >= t34_hull_front_av + 10  # Automatic Penetration at typical combat range
 
 
+class TestUS57mmM1GunCurveFit:
+    """New 2026-09-11 (design note E.129, counters/toe/us_57mm_at_1943.md):
+    the US 57mm Gun M1 is a licence-built near-copy of the British 6pdr
+    (identical L/50 barrel), but in 1943 it fired only the uncapped AP Shot
+    M70, not the British APCBC round already fitted as sixpdr_57l50_apcbc --
+    a genuinely different ammo family (ap_uncapped, not capped), so the
+    existing British curve cannot be reused for a 1943-dated entry. K-factor
+    unsourced, same constrained-search methodology as the 6pdr/17pdr/PaK 40;
+    the same degenerate pattern recurred (see fit function's own docstring
+    precedent) and the constrained exponent (2.94) lands almost exactly on
+    PaK 40 PzGr 39's own constrained exponent, both near the top of the
+    0.8-3.0 physically-plausible band."""
+
+    def test_m70_ap_shot_matches_tank_archives_table(self):
+        """5-pt fit at 0deg obliquity ('at 90 degrees' in the source's own
+        convention -- this project's established reading of that phrasing,
+        see counters/toe/british_vehicles_1943.md) vs a Tank Archives blog
+        translating Soviet wartime Lend-Lease testing data."""
+        fit = fit_gun_curve(
+            muzzle_velocity_fps=2800,
+            k_factor=2400,
+            calibration_ranges_m=[100, 500, 1000, 1500, 2000],
+            calibration_pens_mm=[135, 112, 89, 70, 55],
+            calibration_angle_deg=0,
+            projectile_diameter_mm=57,
+            family="ap_uncapped",
+        )
+        assert fit.confidence == "fitted"
+        assert 0.8 <= fit.exponent <= 3.0
+        expected_0deg = effective_0deg_resistance(
+            np.array([135.0, 112.0, 89.0, 70.0, 55.0]), 57, 0.0, family="ap_uncapped"
+        )
+        for r, exp in zip([100, 500, 1000, 1500, 2000], expected_0deg):
+            assert fit.pen_0deg(r) == pytest.approx(float(exp), rel=0.006)
+
+
 class TestSlopeMultipliers:
     def test_zero_angle_is_no_multiplier(self):
         assert slope_multiplier(0.0, 1.0, "capped") == pytest.approx(1.0, abs=0.01)

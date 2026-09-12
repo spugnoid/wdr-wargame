@@ -68,6 +68,30 @@ class TestResolveAvFamilyParameter:
         assert av_capped != pytest.approx(av_tungsten)
 
 
+class TestUS57mmAgainstFaceHardenedPlate:
+    """New 2026-09-11 (design note E.129, counters/toe/us_57mm_at_1943.md):
+    the US 57mm Gun M1 fired only the uncapped AP Shot M70 in 1943 (the
+    capped M86/M85 shell didn't reach troops until late summer 1944) --
+    ammo_family=ap_uncapped, not capped. face_hardened_multiplier is a real
+    penalty for capped rounds but a real BONUS for uncapped AP (face-
+    hardening was originally designed to shatter uncapped shot; a cap
+    defeats that mechanism), so this gun's AV against a face-hardened German
+    plate is genuinely higher than the roster's own av_vs_capped_mm column
+    would suggest -- reading that column directly for this gun would
+    understate German protection, the same class of mistake note (e) in
+    Rule 18.12 already caught and fixed for the T-70's 45mm APBC gun."""
+
+    def test_panzer_iv_hull_front_av_is_much_higher_against_this_guns_uncapped_shot(self):
+        hardness_table = load_hardness_table()
+        vehicles = load_vehicles()
+        plate = next(
+            v for v in vehicles if v.vehicle == "Panzer IV Ausf H" and v.profile == "Hull" and v.arc == "Front"
+        )
+        av_capped = plate.resolve_av(57.0, hardness_table, family="capped")
+        av_ap_uncapped = plate.resolve_av(57.0, hardness_table, family="ap_uncapped")
+        assert av_ap_uncapped > av_capped + 30  # a real, large gap, not a rounding difference
+
+
 class TestBritishVehicleLoading:
     """British guns/vehicles (6pdr, 17pdr, Churchill Mk VII, Cromwell Mk IV)
     were the last major nation-coverage gap flagged in the rules text and

@@ -64,9 +64,9 @@ class TestLoadUnits:
     corrected against newly-sourced TOE research -- see their own `notes`
     column and design notes E.110/E.116."""
 
-    def test_loads_all_twenty_four_rows(self):
+    def test_loads_all_twenty_six_rows(self):
         units = load_units()
-        assert len(units) == 24
+        assert len(units) == 26
 
     def test_gren_43_front_face_matches_the_anchor_unit(self):
         """Corrected 2026-09-11: manpower_full 9->10 and a third weapon
@@ -165,7 +165,7 @@ class TestWriteInfantryRosterCsv:
 
     def test_writes_one_row_per_unit(self, tmp_path):
         rows = self._rows_by_unit_id(tmp_path)
-        assert len(rows) == 24
+        assert len(rows) == 26
 
     def test_gren_43_front_face_matches_the_worked_example(self, tmp_path):
         """The MG42 LMG line is untouched by the 2026-09-11 correction --
@@ -294,17 +294,24 @@ class TestWriteInfantryRosterCsv:
         assert row["fire_line_2"] == "╌ 3 ⬡4 -1"
 
     def test_towed_at_gun_teams_have_no_fire_lines_but_do_have_defence_and_morale(self, tmp_path):
-        """New 2026-09-11 (design notes E.123/E.127): the PaK 40 and 6pdr
-        towed anti-tank guns get a printed weapon-team stat block (Rule
-        17.1a.1) with no fire-line weapon slots -- their actual attack is
-        resolved via armor_calc's PEN/Gunnery Table and Rule 18.8.4's flat
-        HE formula, not this pipeline's RPM-based small-arms model. Both
-        guns share the same 6-man crew and Regular quality (independently
-        converging crew-size sourcing, an explicitly-hedged quality
-        inference for both -- see each gun's own counters/toe/*.md file),
-        so both rows should compute identical Defence/Morale/M#/F#."""
+        """New 2026-09-11 (design notes E.123/E.127/E.128/E.129): all four
+        towed anti-tank guns fielded this session (PaK 40, 6pdr, Soviet
+        45mm, US 57mm) get a printed weapon-team stat block (Rule 17.1a.1)
+        with no fire-line weapon slots -- their actual attack is resolved
+        via armor_calc's PEN/Gunnery Table and Rule 18.8.4's flat HE
+        formula, not this pipeline's RPM-based small-arms model. All four
+        use the same 6-man crew and Regular quality (a mix of independently-
+        converging sourcing, weaker family-inference, and a used-for-
+        consistency default depending on the gun -- see each gun's own
+        counters/toe/*.md file for its own confidence tier), so all four
+        rows should compute identical Defence/Morale/M#/F#."""
         rows = self._rows_by_unit_id(tmp_path)
-        for unit_id in ("GER_PAK40_1943.3_F", "UK_6PDR_1943.3_F"):
+        for unit_id in (
+            "GER_PAK40_1943.3_F",
+            "UK_6PDR_1943.3_F",
+            "SOV_45MMAT_1943.3_F",
+            "US_57MMAT_1943.3_F",
+        ):
             row = rows[unit_id]
             assert row["fire_line_1"] == ""
             assert row["fire_line_2"] == ""

@@ -71,3 +71,8 @@ pak40_75l46_apcr,100,143,30,"Nachrichtenblatt zur Panzerbeschusstafel 7.5cm Pak 
 pak40_75l46_apcr,500,120,30,"Nachrichtenblatt zur Panzerbeschusstafel 7.5cm Pak 40 L/46 (Nov 1942), via Wikipedia '7.5 cm Pak 40' -- PzGr 40 (APCR) table"
 pak40_75l46_apcr,1000,97,30,"Nachrichtenblatt zur Panzerbeschusstafel 7.5cm Pak 40 L/46 (Nov 1942), via Wikipedia '7.5 cm Pak 40' -- PzGr 40 (APCR) table"
 pak40_75l46_apcr,1500,77,30,"Nachrichtenblatt zur Panzerbeschusstafel 7.5cm Pak 40 L/46 (Nov 1942), via Wikipedia '7.5 cm Pak 40' -- PzGr 40 (APCR) table"
+usm1_57l50_ap,100,135,0,"Tank Archives ('6-pounder, American Style', 28 Jun 2019), translating Soviet wartime testing/evaluation of Lend-Lease equipment -- AP Shot M70 vs vertical armour ('at 90 degrees', this project's own established convention for that phrasing -- see counters/toe/british_vehicles_1943.md -- meaning 0deg obliquity, not independently re-confirmed for this specific source but consistent with every other period source using this phrasing in this project so far"
+usm1_57l50_ap,500,112,0,"Tank Archives, same source and convention as the 100m row"
+usm1_57l50_ap,1000,89,0,"Tank Archives, same source and convention as the 100m row"
+usm1_57l50_ap,1500,70,0,"Tank Archives, same source and convention as the 100m row"
+usm1_57l50_ap,2000,55,0,"Tank Archives, same source and convention as the 100m row"
