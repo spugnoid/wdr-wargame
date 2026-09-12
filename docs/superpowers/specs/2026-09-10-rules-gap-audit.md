@@ -1993,3 +1993,33 @@ New design note E.146. New file `deutsche_panzer_feist_1943.md`;
 addendum added to `vehicle_top_armor_1943.md` ruling this book out.
 No numeric vehicles.csv changes. Test suite unchanged at 177 passing.
 `sphinx -W` clean on the first build.
+
+## Update — 2026-09-12 (part 39): US Combat Engineers -- best-sourced engineer TOE found, roster gap left open
+
+Read Rottman's *US Combat Engineer 1941-1945* (Osprey Warrior 147,
+real text layer) as a documentation pass -- the project has no combat
+engineer squad row for any nation currently, not just the US. (An
+earlier Japanese-engineer research file had referred to "this
+project's existing German engineer roster entry" -- a direct check of
+units.csv this session found no such row exists; that was aspirational
+phrasing from an earlier pass, now corrected.)
+
+The book delivers the best-sourced engineer TOE found in this
+project's history: an explicitly dated 1943 table citing FM 5-5 (11
+Oct 1943), exact officer/EM counts battalion-to-squad, and a full
+named 13-man squad roster by specialty and rank. Also documented: the
+SCR-625 mine detector (platoon-HQ equipment, not squad-level; each
+squad carried only a hand probe) with real limitations against
+non-metallic mines, a large standardized demolition-charge inventory,
+and a bridging echelon above the engineer company -- a structural
+parallel to the Japanese finding.
+
+No units.csv row was added -- the data supports one, but doing it
+properly needs new weapons.csv entries this project doesn't have yet
+(bazooka, rifle grenade launchers, water-cooled M1917A1, mine
+probe/detector), each needing its own sourced figures. Documented
+fully instead of forcing a row through without that groundwork.
+
+New design note E.147. New file `us_combat_engineer_1943.md`. No
+numeric changes anywhere. Test suite unchanged at 177 passing.
+`sphinx -W` clean on the first build.
