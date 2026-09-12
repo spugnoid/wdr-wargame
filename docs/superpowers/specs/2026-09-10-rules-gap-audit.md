@@ -1919,3 +1919,28 @@ New design note E.143. No numeric units.csv changes -- manpower and
 quality stand exactly as before (Militia was already the right call),
 now backed by real citation instead of pure structural inference. Test
 suite unchanged at 177 passing. `sphinx -W` clean on the first build.
+
+## Update — 2026-09-12 (part 36): a second Firefly book, a third clean negative, one real correction
+
+Read Wojciech Gawrych's *Sherman VC Firefly* (Armor PhotoGallery #13),
+a walkaround/photo-reference volume, as a second attempt at the two
+questions E.142's wrong-book Fletcher read couldn't answer: the
+mantlet "+13mm" claim's provenance, and the three historical vignettes'
+(Wittmann, Tilly-sur-Seulles, Norrey-en-Bessin) true source. Both came
+back negative again -- no dimensioned mantlet figure, no combat
+narrative anywhere in the book. Both remain open, now narrowed by two
+independently ruled-out candidates.
+
+One real, actionable finding did turn up: caption 54 states the hull
+rear plate is sloped 20 degrees from vertical specifically on the
+M4A4/M4A6 hull -- the Firefly's own donor hull. The project's
+vehicles.csv Hull Rear row had never carried a sourced angle at all
+(only the 38mm thickness was an inference-by-extension figure); the
+angle sat at an unexamined flat 0 degrees. Corrected to 20 degrees,
+thickness left unchanged.
+
+New design note E.144. New file `firefly_gawrych_1944.md`, addendum to
+`sherman_firefly_1944.md`. Regenerated armor_calc's roster_output.csv
+and Appendix H for the one changed row (Hull Rear AV: 37.7/38.0/38.0 ->
+39.7/43.1/40.4). Test suite unchanged at 177 passing. `sphinx -W`
+clean on the first build.
