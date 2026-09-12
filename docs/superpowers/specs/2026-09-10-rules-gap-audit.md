@@ -1491,3 +1491,70 @@ TestSixPdrAPDSGunCurveFit. Test suite: 176 passing (up from 175).
 memory applied correctly). Note: the purchased reference PDFs
 themselves are not committed -- `*.pdf` is already gitignored, correctly
 keeping paid third-party content out of the repo.
+
+## Update — 2026-09-12 (part 25): reading this project's own foundational source directly, for the first time
+
+Rod obtained a copy of Bird & Livingston (2001), *WWII Ballistics: Armor
+and Gunnery* -- one of this project's own two original data sources,
+cited dozens of times throughout guns.csv/vehicles.csv/counters/toe/*.md,
+but until now only ever cited secondhand via Wikipedia. Dispatched a
+background agent to read the 234-page image-only scan directly,
+prioritizing K-factors, the flaw-multiplier chapter, and cross-validation
+of existing formulas.
+
+**Finding one: real K-factors for six of seven unsourced-K guns.** Pages
+84-85 have a genuine per-projectile K-factor table. Matched and replaced:
+6pdr APCBC (1495->2722), 6pdr APDS (1650->2828), 17pdr APCBC
+(1971->1686), 17pdr APDS (1514->1705), PaK 40 APCBC (1954->2400), PaK 40
+APCR (2356->3395) -- all six upgraded from this project's lowest
+confidence tier (constrained least-squares guesses) to real sourced
+values. The Soviet 45mm's own constrained-search K (3613) matched the
+book's table exactly -- independent validation the earlier methodology
+wasn't just getting lucky. US M1 57mm's AP Shot M70 has no matching MV in
+this table, remains unsourced. The book's own K-factor formula and
+generic fallback exponent (1.4283) both matched formulas.py exactly.
+Refitting all six against existing calibration data: comparable or
+better fits, all exponents unconstrained-plausible, every existing
+historical sanity check still holds.
+
+**Finding two, more consequential: Ch.6 directly answers the Sherman
+glacis QC question this session called an honest non-finding (E.126).**
+Ch.6 opens with the exact sentence and date that research pass searched
+for and couldn't find: "Prior to October, 1943, American armor
+production and quality control permitted flawed armor to occur in many
+tanks, which includes almost all 56 degree glacis Shermans." A worked
+example follows directly on the M4A1: 51mm at 53 degrees, medium flaws,
+vs. the unflawed post-fix 63.5mm@47deg redesign. Cross-confirmed by
+Ch.14's own three-column M4-series table. This project's Sherman M4A1
+row (51mm@47deg, no flaw) matched neither of the book's own documented
+configurations -- a hybrid with no independent citation for the 47deg
+figure. Corrected to 51mm@53deg, flaw_severity=medium (AV-vs-Capped:
+76.7mm -> 79.7mm). Checked against both existing Rule 18.12 matchups
+involving this vehicle -- both remain comfortably unaffected (guns clear
+the old AV by 40mm+). M4A3(76mm)'s 64mm@47deg row is unaffected and
+correctly stays unflawed. Addendum recorded in
+sherman_glacis_qc_1943.md itself (not rewritten) explaining what
+happened: the earlier pass was honest given secondary sources only;
+reading the primary source directly isn't optional once a copy exists.
+
+**Finding three: every existing formula cross-validated, no corrections
+needed.** Cast-deficiency formula (Ch.5) character-for-character
+identical to formulas.py. Flaw-multiplier and tungsten slope charts
+(Ch.6, Ch.16) match within normal chart-reading tolerance. Bonus unused
+lead: a 1943 Kubinka test record of the Soviet F-34 failing to
+penetrate Tiger E side armor "even at 200 meters" -- a real historical
+validation point not yet built into Rule 18.12.
+
+Not reached this pass: Appendix 5 ("General Quality of Panther Armor"),
+the German AFV table in Ch.14 (could hold Top/Roof data for this
+roster's remaining top-armor gaps), and roughly half of Ch.14 overall --
+flagged as the natural next read, not claimed to contain nothing.
+
+New design note E.133, new research file
+counters/toe/wwii_ballistics_direct_read_1943.md. Six K-factors replaced
+in guns.csv, one vehicle plate corrected in vehicles.csv, three test
+classes updated (TestBritishGunCurveFits, TestPAK40GunCurveFits,
+TestSixPdrAPDSGunCurveFit) with sourced-not-guessed docstrings. Appendix
+H and all armor_calc outputs regenerated. Test suite: 176 passing,
+unchanged in count -- a correctness pass, not a coverage pass.
+`sphinx -W` clean.

@@ -51,25 +51,32 @@ them directly in Excel/Sheets to review, or hand-edit the inputs under
 
 ## Known gaps (see design spec §7 for the full list)
 
-- Flaw multiplier (Ch.6) is implemented and applied where sourced (Panther
-  Ausf G hull front carries a medium-severity correction). A "pre-Oct-1943
-  Sherman glacis QC issue" was researched as a candidate second application
-  (`counters/toe/sherman_glacis_qc_1943.md`) and came back a partial non-
-  finding: real US armor QC problems from this era exist, but none converges
-  into a single, dateable, Sherman-glacis-specific defect comparable to
-  Panther's sourced ~50%-of-production figure. See design note E.126 —
-  not applied to either existing Sherman roster row on current sourcing.
+- Flaw multiplier (Ch.6) is implemented and applied where sourced: Panther
+  Ausf G hull front (medium severity) and, as of 2026-09-12 (design note
+  E.133), Sherman M4A1's own hull front (51mm@53°, medium severity) — a
+  direct read of Bird & Livingston's own Ch.6 text superseded an earlier
+  session's honest non-finding (`counters/toe/sherman_glacis_qc_1943.md`,
+  design note E.126) that had searched secondary sources only and
+  concluded no Sherman-glacis-specific defect data existed. It did, in
+  this project's own foundational source, previously only ever cited
+  secondhand via Wikipedia. The M4A3(76mm) row's 64mm@47° glacis remains
+  correctly unflawed — it's the book's own post-October-1943 redesign.
 - `av_override_mm` in vehicles.csv is a manual escape hatch for plates that
   don't reduce to "one thickness at one angle" (Tiger's mantlet, Sherman's
   M34A1 gun mount) — computed by hand from the extracted source data, not
   derived by this pipeline. If more vehicles get real thickness-map data,
   this should become a proper area-weighting function instead.
-- British 6pdr/17pdr K-factors (`guns.csv`) are not independently sourced,
-  unlike every other gun in this file — no published value was found, so
-  each was instead derived by a constrained least-squares search against
-  its own calibration data (see design note E.118). A lower-confidence
-  methodology tier than the rest of the roster; flagged in each row's
-  `confidence_note`, not hidden.
+- British 6pdr/17pdr and PaK 40 K-factors (`guns.csv`) were unsourced for
+  most of this project's history — no published value could be found via
+  secondary/Wikipedia-only research, so each was derived by a constrained
+  least-squares search against its own calibration data (design note
+  E.118). As of 2026-09-12 (design note E.133) all six of these rows (6pdr
+  APCBC/APDS, 17pdr APCBC/APDS, PaK 40 APCBC/APCR) were upgraded to real
+  values read directly from Bird & Livingston's own Ch.18 "Ballistic K
+  Factors" table — the constrained-search methodology remains documented
+  as a fallback for any future gun that still lacks a published K-factor
+  (the US 57mm M1's AP Shot M70 still does; no matching muzzle velocity
+  was found in the book's own table for that round).
 - Churchill/Cromwell armor data has two open sourcing conflicts, flagged in
   `vehicles.csv`'s own notes rather than silently resolved: Churchill's
   stepped-glacis middle/lower plate angles aren't sourced (Hull Front uses

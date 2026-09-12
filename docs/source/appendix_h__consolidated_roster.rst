@@ -814,9 +814,9 @@ H.2  Vehicle Armour Roster
    * - Sherman M4A1 (75mm)
      - Hull
      - Front
-     - 76.7
-     - 109.2
-     - 74.8
+     - 79.7
+     - 118.8
+     - 84.7
      - —
      - —
    * - Sherman M4A1 (75mm)

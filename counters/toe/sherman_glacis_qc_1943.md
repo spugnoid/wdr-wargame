@@ -275,3 +275,37 @@ of thing that would help pick "small" vs. "medium" vs. "large") was found.
    apparent origin of the "October 1943 / Sherman front plates" phrasing and would
    be worth a direct read (via an account, cache, or archive snapshot) before
    treating that date as settled either way.
+
+## Addendum, 2026-09-12: this document's own honest non-finding was superseded by reading the primary source directly (design note E.133)
+
+Open Question #4 above named the exact next step: "direct access to Bird & Livingston
+Ch.6's actual text... is the single most likely place a real, modelable answer would
+live." A copy of the book was obtained and read directly this session. It was right.
+
+Ch.6 opens with the sentence this document's own research pass searched for across
+multiple secondary sources and could not find: **"Prior to October, 1943, American
+armor production and quality control permitted flawed armor to occur in many tanks,
+which includes almost all 56° glacis Shermans."** It then gives a worked numerical
+example directly on this project's own `Sherman M4A1 (75mm)` roster row — "The M4A1
+had an all-cast hull and mid-glacis armor was 51mm at 53°," with a medium flaw
+multiplier applied — contrasted explicitly against the unflawed post-October-1943
+63.5mm@47° redesign (the configuration this project's `M4A3 (76mm)` row already
+correctly represents, unflawed).
+
+This document's own §1/§2/§4 conclusions (no Sherman-glacis-specific flaw-rate
+statistic found, "October 1943" unconfirmed as a Sherman-specific date) were reached
+honestly from the sources actually reachable in that research pass — every one of
+which was secondary (Livingston's own later internet forum posts, Wikipedia,
+aggregator sites), never the book those forum posts themselves were written about.
+The book had both the exact date and a vehicle-specific worked example the whole
+time; the gap was never in the historical record, only in this project's access to
+its own foundational source. `vehicles.csv`'s `Sherman M4A1 (75mm)` Hull Front row
+has been corrected (51mm@53°, `flaw_severity=medium`, up from 51mm@47° with no flaw
+— a hybrid of the book's own two documented configurations that matched neither).
+See design note E.133 for the full correction and its effect on the vehicle's AV.
+
+This is worth recording as a methodology lesson as much as a data correction: this
+project's "honest non-finding" convention (E.126, matching the Sherman-glacis case)
+is the right response when secondary sources genuinely don't have an answer — but it
+is not a substitute for reading the primary source directly when a copy becomes
+available, and should be revisited rather than treated as permanently settled.

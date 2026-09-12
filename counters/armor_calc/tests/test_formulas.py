@@ -113,33 +113,32 @@ class TestGunCurveFits:
 
 
 class TestBritishGunCurveFits:
-    """British 6pdr/17pdr K-factors are not sourced (unlike every other gun
-    in guns.csv) -- no published value was found, so each was instead found
-    via a constrained least-squares search (see design note E.118 and
-    guns.csv's own confidence_note for these rows): search over K, reject
-    any fit whose exponent falls outside this project's other guns'
-    physically-plausible range (0.8-3.0), keep the K minimizing max % error
-    among the physically-plausible candidates. An unconstrained search over
-    the 6pdr's narrow 5-point calibration set found a mathematically-better
-    fit (K=253, 0.32% error) but with exponent=15.8 -- recognized as a
-    degenerate, non-physical solution and rejected. These tests pin the
-    accepted constrained-search results so a future refit can't silently
-    drift back toward that degenerate regime."""
+    """British 6pdr/17pdr K-factors were unsourced through most of this
+    session (no published value found via secondary/Wikipedia-only
+    research, so each was found via a constrained least-squares search --
+    see design note E.118 and the project's own history for that
+    methodology). Design note E.133 (2026-09-12) replaced all four of these
+    guesses with real values read directly from Bird & Livingston's own
+    Ch.18 "Ballistic K Factors" table (pp.84-85) -- the book itself, not a
+    secondary citation of it. The fitted exponents changed as a result
+    (each K implies a different velocity-vs-range curve, which the
+    least-squares fit re-anchors around), but the resulting pen_0deg(range)
+    predictions barely moved, since the fit is still anchored to the same
+    calibration points regardless of which K produced it."""
 
     def test_6pdr_apcbc_matches_bird_livingston_data(self):
         """5-pt fit at 0deg obliquity vs Bird & Livingston 2001 pp.60/62
-        (via Wikipedia). K-factor found by constrained search, not sourced."""
+        (via Wikipedia for the calibration points). K-factor sourced
+        directly from the book's own Ch.18 table ('6PR L52 APCBC', K=2722)."""
         fit = fit_gun_curve(
             muzzle_velocity_fps=2730,
-            k_factor=1495,
+            k_factor=2722,
             calibration_ranges_m=[100, 500, 1000, 1500, 2000],
             calibration_pens_mm=[115, 103, 90, 78, 68],
             calibration_angle_deg=0,
             projectile_diameter_mm=57,
         )
         assert fit.confidence == "fitted"
-        # exponent must stay within the physically-plausible band the search
-        # was constrained to -- this is the whole point of the constraint.
         assert 0.8 <= fit.exponent <= 3.0
         expected_0deg = effective_0deg_resistance(
             np.array([115.0, 103.0, 90.0, 78.0, 68.0]), 57, 0.0
@@ -149,21 +148,20 @@ class TestBritishGunCurveFits:
 
     def test_17pdr_apcbc_matches_bird_livingston_data(self):
         """11-pt fit vs RHA at 0deg obliquity -- richest calibration set of
-        any gun in guns.csv. Unlike the 6pdr, this fit's exponent (~1.24)
-        landed inside the physically-plausible band without the constraint
-        needing to bind."""
+        any gun in guns.csv. K-factor sourced directly from the book's own
+        Ch.18 table ('17 PR APCBC', K=1686)."""
         ranges = [100, 250, 500, 750, 1000, 1250, 1500, 1750, 2000, 2500, 3000]
         pens = [174, 170, 163, 156, 150, 143, 137, 132, 126, 116, 107]
         fit = fit_gun_curve(
             muzzle_velocity_fps=2900,
-            k_factor=1971,
+            k_factor=1686,
             calibration_ranges_m=ranges,
             calibration_pens_mm=pens,
             calibration_angle_deg=0,
             projectile_diameter_mm=76.2,
         )
         assert fit.confidence == "fitted"
-        assert fit.exponent == pytest.approx(1.24, abs=0.02)
+        assert fit.exponent == pytest.approx(1.446, abs=0.02)
         expected_0deg = effective_0deg_resistance(np.array(pens, dtype=float), 76.2, 0.0)
         for r, exp in zip(ranges, expected_0deg):
             assert fit.pen_0deg(r) == pytest.approx(float(exp), rel=0.004)
@@ -172,12 +170,14 @@ class TestBritishGunCurveFits:
         """APDS entered British service March 1944 -- outside this
         project's nominal 1943 vehicle era, per the sourcing note; the gun
         curve itself is still tested here since it's project data
-        regardless of which vehicles are currently allowed to mount it."""
+        regardless of which vehicles are currently allowed to mount it.
+        K-factor sourced directly from the book's own Ch.18 table
+        ('17Pdr APDS', K=1705)."""
         ranges = [100, 250, 500, 750, 1000, 1250, 1500, 1750, 2000, 2500, 3000]
         pens = [275, 268, 256, 244, 233, 223, 213, 204, 194, 178, 162]
         fit = fit_gun_curve(
             muzzle_velocity_fps=3950,
-            k_factor=1514,
+            k_factor=1705,
             calibration_ranges_m=ranges,
             calibration_pens_mm=pens,
             calibration_angle_deg=0,
@@ -201,7 +201,7 @@ class TestBritishGunCurveFits:
         pens = [174, 170, 163, 156, 150, 143, 137, 132, 126, 116, 107]
         fit = fit_gun_curve(
             muzzle_velocity_fps=2900,
-            k_factor=1971,
+            k_factor=1686,
             calibration_ranges_m=ranges,
             calibration_pens_mm=pens,
             calibration_angle_deg=0,
@@ -224,7 +224,7 @@ class TestBritishGunCurveFits:
         for."""
         fit = fit_gun_curve(
             muzzle_velocity_fps=2730,
-            k_factor=1495,
+            k_factor=2722,
             calibration_ranges_m=[100, 500, 1000, 1500, 2000],
             calibration_pens_mm=[115, 103, 90, 78, 68],
             calibration_angle_deg=0,
@@ -239,19 +239,20 @@ class TestBritishGunCurveFits:
 class TestPAK40GunCurveFits:
     """The project's first towed anti-tank gun (Rule 17.1a) -- no vehicle
     counter accompanies these rows, since a towed gun has no armour of its
-    own (see counters/toe/pak40_1943.md). Both K-factors are unsourced,
-    same constrained-search methodology as the British 6pdr/17pdr: an
-    unconstrained search hits the identical degenerate pattern (K=223,
-    exponent=25.75 for PzGr 39) as the 6pdr did, rejected for the same
-    reason."""
+    own (see counters/toe/pak40_1943.md). Both K-factors were unsourced
+    through most of this session (a constrained least-squares search, same
+    methodology as the British 6pdr/17pdr, was used as a stand-in); design
+    note E.133 (2026-09-12) replaced both with real values read directly
+    from Bird & Livingston's own Ch.18 "Ballistic K Factors" table."""
 
     def test_pzgr39_apcbc_matches_period_german_document(self):
         """4-pt fit at 30deg obliquity vs the Nachrichtenblatt zur
         Panzerbeschusstafel (Nov 1942), independently corroborated within
-        1-2mm by Panzerworld's separate citation."""
+        1-2mm by Panzerworld's separate citation. K-factor sourced directly
+        from Ch.18's own table ('75L46 APCBC', K=2400)."""
         fit = fit_gun_curve(
             muzzle_velocity_fps=2592,
-            k_factor=1954,
+            k_factor=2400,
             calibration_ranges_m=[100, 500, 1000, 1500],
             calibration_pens_mm=[108, 96, 80, 64],
             calibration_angle_deg=30,
@@ -268,10 +269,12 @@ class TestPAK40GunCurveFits:
         Muzzle velocity (990 m/s) is the German-document figure; a second
         source (Aberdeen/British Ordnance Board) gives 933 m/s instead, a
         real ~3% discrepancy not resolved -- used the value matching the
-        calibration data's own source for internal consistency."""
+        calibration data's own source for internal consistency; Bird &
+        Livingston's own table uses 990 m/s (3247 fps) too. K-factor
+        sourced directly from Ch.18's own table ('75L46 APCR', K=3395)."""
         fit = fit_gun_curve(
             muzzle_velocity_fps=3248,
-            k_factor=2356,
+            k_factor=3395,
             calibration_ranges_m=[100, 500, 1000, 1500],
             calibration_pens_mm=[143, 120, 97, 77],
             calibration_angle_deg=30,
@@ -291,7 +294,7 @@ class TestPAK40GunCurveFits:
         Front AV-vs-Capped = 93.7mm (existing roster data)."""
         fit = fit_gun_curve(
             muzzle_velocity_fps=2592,
-            k_factor=1954,
+            k_factor=2400,
             calibration_ranges_m=[100, 500, 1000, 1500],
             calibration_pens_mm=[108, 96, 80, 64],
             calibration_angle_deg=30,
@@ -302,22 +305,22 @@ class TestPAK40GunCurveFits:
 
 
 class TestSixPdrAPDSGunCurveFit:
-    """New 2026-09-12 (design note E.132): 6pdr APDS calibration data was
-    already sourced and cited in counters/toe/british_vehicles_1943.md
-    during this session's original British-vehicles research pass, but
-    never added to guns.csv -- surfaced by a cross-check against purchased
-    Canadian Army TOE reference material naming 6pdr APDS as standard
-    1944-45 ammunition. K-factor unsourced, same constrained-search
-    methodology as every other unpublished-K gun in this roster; this one
-    landed comfortably inside the physically-plausible band without the
-    constraint needing to bind, unlike the 6pdr's own APCBC row."""
+    """6pdr APDS calibration data was already sourced and cited in
+    counters/toe/british_vehicles_1943.md during this session's original
+    British-vehicles research pass, but never added to guns.csv -- surfaced
+    by a cross-check against purchased Canadian Army TOE reference material
+    naming 6pdr APDS as standard 1944-45 ammunition (design note E.132).
+    K-factor was briefly unsourced (a constrained least-squares stand-in)
+    before design note E.133 (2026-09-12), the same day, replaced it with
+    a real value read directly from Bird & Livingston's own Ch.18 table."""
 
     def test_apds_matches_bird_and_livingston_table(self):
-        """5-pt fit at 0deg obliquity vs Bird & Livingston 2001 pp.60/62,
-        the tightest fit of any unpublished-K-factor gun in this file."""
+        """5-pt fit at 0deg obliquity vs Bird & Livingston 2001 pp.60/62.
+        K-factor sourced directly from Ch.18's own table ('6PR APDS',
+        K=2828)."""
         fit = fit_gun_curve(
             muzzle_velocity_fps=4000,
-            k_factor=1650,
+            k_factor=2828,
             calibration_ranges_m=[100, 500, 1000, 1500, 2000],
             calibration_pens_mm=[177, 160, 140, 123, 108],
             calibration_angle_deg=0,
