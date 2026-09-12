@@ -1168,3 +1168,33 @@ this" note now says "built same day, here's how to keep it in sync").
 No test changes -- documentation generator, not a calculation change.
 `sphinx -W` clean, table row counts verified against source CSVs
 (22 infantry / 103 vehicle plates / 14 guns).
+
+## Update — 2026-09-11 (part 17): Firefly earns its place in Rule 18.12's historical matchup table
+
+Continuing "build these out in logical order." The Sherman Firefly
+(E.122) was added with historical validation data already gathered
+in `counters/toe/sherman_firefly_1944.md` but never used -- three
+real vignettes where a 17pdr-armed Firefly beat a German heavy the
+standard Shermans in this roster can't. Closed that loop rather than
+leaving it as unused research-file prose.
+
+Only one of the three vignettes was solid enough for a table row: the
+Wittmann engagement (Saint-Aignan-de-Cramesnil, 8 August 1944 --
+Trooper Joe Ekins credited with all three Tiger kills his troop could
+see), converging across four independent sources on unit/date/range.
+The other two (Tilly-sur-Seulles, Norrey-en-Bessin) are single-sourced
+with no range or arc given -- would have meant inventing a range to
+get a row, not done.
+
+Band-read the existing Rule 18.12 procedure against Firefly's already-
+built roster row and Tiger I's existing one: ~700m reads the 500m
+band, 17pdr APCBC PEN 150.6mm vs Tiger Hull Front 102.0mm (Automatic
+Penetration, 48.6mm clear) and Turret Front 143.0mm (Contested, 7.6mm
+over) -- consistent with three kills in one action without needing
+the mantlet to cooperate.
+
+New design note E.125. No test or data changes -- documentation-only
+extension of an existing verification table using values already
+computed by the existing pipelines. `sphinx -W` clean, checked the
+new section's rendered HTML for the usual asterisk/backtick nesting
+bug (none found).
