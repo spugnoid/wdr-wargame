@@ -1970,3 +1970,26 @@ addenda added to `vehicle_top_armor_1943.md` and
 future session doesn't re-check it. No numeric vehicles.csv/guns.csv
 changes -- nothing here was a citable figure. Test suite unchanged at
 177 passing. `sphinx -W` clean on the first build.
+
+## Update — 2026-09-12 (part 38): a second general reference, same structural wall, three more questions closed out
+
+Read Uwe Feist's *Deutsche Panzer 1917-1945* (bilingual photo-and-spec
+compendium, image scan, no text layer) against three German-armor
+top/roof disputes: Panzer III Ausf M's disputed hull-top/turret-roof
+figures, StuG III Ausf G's still-narrowed roof gap (E.138, E.141), and
+Panzer IV Ausf H's roof figure/construction method. All three came
+back clean negatives for the same structural reason as E.145's
+Encyclopedia of Weapons of WWII pass: this book's spec blocks never
+include an armor-thickness line for any vehicle, anywhere -- a second,
+independent confirmation of the same genre problem, not a coincidence
+tied to one title.
+
+Two captions came close without helping: Panzer III Ausf M's caption
+describes March 1943 Schürzen (correctly identified as unrelated to
+top armor), and Panzer IV Ausf H's caption re-confirms the already-
+known 30mm appliqué plate without adding anything new.
+
+New design note E.146. New file `deutsche_panzer_feist_1943.md`;
+addendum added to `vehicle_top_armor_1943.md` ruling this book out.
+No numeric vehicles.csv changes. Test suite unchanged at 177 passing.
+`sphinx -W` clean on the first build.

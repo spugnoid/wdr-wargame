@@ -182,6 +182,20 @@ exactly as open as before this pass; no further StuG III-titled candidate
 is known to be in the reference library. See
 `counters/toe/stug3_osprey_1940_42_1943.md`.
 
+**Update 2026-09-12, design note E.146: a third general reference checked and
+ruled out, for Panzer III Ausf M, StuG III Ausf G, and Panzer IV Ausf H
+top armor all at once.** Uwe Feist's *Deutsche Panzer 1917-1945* (a
+bilingual photo-and-spec-sheet compendium) was read for all three vehicles.
+Clean negative across the board — same structural pattern already found in
+the Encyclopedia of Weapons of WWII (design note E.145): every vehicle's
+spec block has no armor-thickness line at all, for any vehicle, anywhere.
+Panzer III Ausf M's caption mentions the March 1943 Schürzen addition (not
+a top-armor figure); Panzer IV Ausf H's caption confirms the already-known
+30mm appliqué frontal plate (not a roof figure, and doesn't address
+integral-vs-layered construction either way). None of the three disputed/
+open figures above are resolved or newly narrowed by this book. See
+`counters/toe/deutsche_panzer_feist_1943.md` for the full pass.
+
 ### Panther Ausf G
 
 | Plate | Thickness | Source | Confidence |
