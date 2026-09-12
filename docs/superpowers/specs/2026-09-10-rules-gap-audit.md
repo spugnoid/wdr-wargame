@@ -1693,3 +1693,44 @@ anecdote found, a fourth pass reaching the same conclusion.
 New design note E.136. No numeric guns.csv/vehicles.csv changes --
 crew-quality reasoning and scenario guidance only. Test suite unchanged
 at 176 passing. `sphinx -W` clean on the first build.
+
+## Update — 2026-09-12 (part 29): Cromwell/Churchill -- the most-cited unread source turns out empty
+
+Read Fletcher & Harley's *Cromwell Cruiser Tank 1942-50* in full (50
+pages, image scan) -- the single most-cited-but-unread source in this
+project's history (the existing Cromwell turret-front figure, 76.7mm,
+already carries a "p.12" citation to this exact book).
+
+Clean negative, same pattern as WWII Ballistics: this is a production/
+organizational/service-history monograph, never a hull/turret
+thickness-and-angle table for Cromwell, for anything. Churchill isn't
+in the book at all (different vehicle family).
+
+One concrete result: the existing "76.7mm, Fletcher & Harley 2006 p.12"
+citation could not be confirmed -- p.12 as read has no armor figure at
+all. Doesn't disprove 76.7mm (could be a different edition's
+pagination, or the citation may trace to Wikipedia's own infobox
+rather than a verified direct read) but is no longer strong evidence
+over the uncited 64mm alternative it was preferred over. Flagged in
+vehicles.csv's own note.
+
+A real construction detail found but not resolving anything: hull
+front/sides described as "made up from two thinner plates," Christie
+suspension "sandwiched between the inner and outer plates" -- circumstantial
+support for the already-flagged "two spaced plates" theory on Cromwell's
+hull side/rear, no thickness figures given.
+
+Two possible anecdotes spotted (mine vulnerability; a Cromwell
+surviving five PaK 40 hits at 274m) but not pinned down precisely
+enough to cite -- flagged for a dedicated re-read, not fabricated.
+
+Net: Cromwell/Churchill armor geometry is now confirmed unanswerable
+by either of the two most obviously-named sources in the library. A
+Panzer-Tracts-style detailed technical reference, not another
+general-history Osprey monograph, is the more promising remaining
+lead -- the same conclusion reached twice now.
+
+New design note E.137. One citation caveat added to vehicles.csv, no
+numeric changes. vehicle_top_armor_1943.md updated. Test suite
+unchanged at 176 passing. `sphinx -W` clean (two more asterisk-nesting
+leaks caught and fixed).

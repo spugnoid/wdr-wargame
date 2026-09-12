@@ -434,13 +434,24 @@ One well-documented, on-point incident/finding was located:
    searching, is probably needed).
 5. Cromwell Mk IV's hull top figure remains unfound, and its turret roof
    figure (carried in the existing British vehicles file) could not be
-   reconfirmed this session — a direct look at Fletcher & Harley (2006),
-   *Cromwell Cruiser Tank*, would likely resolve both. **Update 2026-09-12:
-   a copy of this exact book is now available in the project's reference
-   material** (also useful for the still-open Churchill/Cromwell mantlet-
-   weighted-treatment and Cromwell nose-plate questions flagged in
-   `counters/toe/british_vehicles_1943.md`'s 2026-09-12 addendum) — a strong
-   next candidate for a direct-read pass, not yet done.
+   reconfirmed. **Update 2026-09-12, design note E.137: Fletcher & Harley
+   (2006), *Cromwell Cruiser Tank*, has now been read directly, in full
+   (50 pages) — a clean negative, not a gap.** This is a production/
+   organizational/service-history monograph, not an armor-specification
+   reference: it has no hull/turret thickness-and-angle table anywhere,
+   for Cromwell or any other vehicle, the same pattern already confirmed
+   for *WWII Ballistics*'s Top/Roof gap (item 2 above). It also could not
+   confirm this project's own existing "76.7mm, Fletcher & Harley 2006
+   p.12" citation for Cromwell's turret front — p.12 as read has no
+   armor figure at all, flagged in `vehicles.csv`'s own note as a real,
+   unconfirmed citation rather than disproven. Cromwell's hull top/turret
+   roof, its nose-plate conflict, and the Churchill/Cromwell mantlet-
+   weighted-treatment question all remain open. A Panzer-Tracts-style
+   detailed technical reference, not a general-history Osprey monograph,
+   is now the more promising lead for British plate geometry, by the
+   same pattern observed twice in this project's library. See
+   `counters/toe/cromwell_churchill_fletcher_harley_1943.md` for the
+   full read.
 6. The tanks-encyclopedia.com article "1942 Combat Damage Analysis of the
    T-34 and T-70 Tanks" returned HTTP 403 this session and was not pursued
    — it's a plausible source for more historical top-armor-penetration
