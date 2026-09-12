@@ -1621,3 +1621,40 @@ New design note E.134. No numeric vehicles.csv values changed this pass
 reference data. No armor_calc output regeneration needed. Test suite
 unchanged at 176 passing. `sphinx -W` clean (one more asterisk-adjacent-
 backtick leak caught and fixed).
+
+## Update — 2026-09-12 (part 27): a third look at PaK 40 crew quality -- same branch-conflation trap, same honest answer
+
+Scanned the designer's growing reference collection for the best-fitting
+candidate to close the PaK 40's still-open crew-quality/fielding-date
+questions (E.130). Bryan Perrett's *Sturmartillerie & Panzerjager
+1939-45* (Osprey New Vanguard 034) looked like the strongest match found
+all session -- a whole-war history of the exact branch name. Read in
+full (48 pages).
+
+Answers neither question. The book's own "Panzerjager" means the
+self-propelled tank-destroyer vehicle family (Marder/Nashorn/Elefant/
+Jagdpanther/Jagdtiger), never the towed PaK 40 as its own weapon system
+-- the towed gun appears exactly once, bolted onto a Marder III. This
+is precisely the branch-conflation trap E.130's own research already
+flagged as a risk, caught immediately from the table of contents rather
+than after wasted effort.
+
+One real, inapplicable finding: p.11 gives a genuine, quotable
+crew-quality claim ("Assault artillerymen were all volunteers...elite
+of their service," 325 German Crosses in Gold, 140 Knight's Crosses) --
+but for Sturmgeschutz (assault gun) crews, a different branch this
+roster already has a StuG III row for. Recorded as a future lead, not
+applied -- this project's vehicle roster has no crew-quality field at
+all yet (a separate, already-flagged Appendix H gap). Three dated StuG
+III combat anecdotes (Leningrad Sept 1941, Rzhev Aug-Sept 1942) also
+found, flagged as a future Rule 18.12 candidate, unrelated to PaK 40.
+
+GER_PAK40_1943.3_F's quality=regular survives a third consecutive
+research pass unsourced. Forczyk's *Panzerjager vs KV-1* (in the
+reference collection, still unread) remains the best unexploited lead.
+
+New design note E.135, new research file
+counters/toe/pak40_sturmartillerie_panzerjager_book_1943.md, pointer
+added to GER_PAK40_1943.3_F's own units.csv row. No numeric data
+changes, no test count change (176 passing). `sphinx -W` clean on the
+first build.
