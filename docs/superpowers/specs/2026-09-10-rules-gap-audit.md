@@ -1352,3 +1352,38 @@ clean; verified via a full-document scan (not just the new section)
 for literal double-backtick pairs and suspicious asterisk contexts,
 not just the new section, given how many notes were touched this
 session.
+
+## Update — 2026-09-12 (part 22): PaK 40 crew-quality/fielding-date follow-up -- narrowed, not closed
+
+Continuing with bounded backlog items (per user direction after a
+check-in: keep going with items that don't need a new rule/architecture
+decision). Dispatched a follow-up on PaK 40's two remaining open
+questions from its original research (E.123).
+
+Crew quality: still not found, a fourth consecutive "not found" across
+every towed gun fielded this session -- itself a real pattern, not a
+per-gun gap. One useful negative result: the one "Panzerjager crew
+training" claim findable via casual/AI-assisted search turned out to
+be about self-propelled tank-destroyer crews, not towed-gun crews --
+recorded as a branch-conflation trap for next time. quality=regular
+stands, unchanged, still an explicitly-hedged default. One real,
+unread lead flagged for later: Forczyk's *Panzerjager vs KV-1* has a
+confirmed training-of-combatants section.
+
+Fielding date: narrowed but not closed. The Nafziger Collection (cross-
+corroborated across three independent mirrors) indexes Panzerjager/
+anti-tank authorized-strength documents dated 1/15/25 October and 1
+November 1943, including one captioned "12x 75mm PAK" and another
+titled "Infantry Tank Destroyer Company" -- consistent with the
+standard division's antitank company converting from 50mm to 75mm on
+paper in October 1943, about six weeks after the already-known 1
+September 1943 TM-E snapshot. Falls short of confirmed: only the
+Collection's index was accessible, not the KStN documents' own
+content, so the gun caliber is inferred from titles, not read
+directly.
+
+New design note E.130, matching the honest-non-finding treatment
+already used for the Sherman glacis QC flaw (E.126). No data or test
+changes -- research-only follow-up. `sphinx -W` clean, verified no
+markup nesting leaks on the first build (applying the fix pattern now
+recorded in project memory).
