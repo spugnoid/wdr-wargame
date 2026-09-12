@@ -1214,9 +1214,9 @@ H.2  Vehicle Armour Roster
    * - Sherman Firefly VC
      - Hull
      - Rear
-     - 37.7
-     - 38.0
-     - 38.0
+     - 39.7
+     - 43.1
+     - 40.4
      - —
      - —
    * - Sherman Firefly VC

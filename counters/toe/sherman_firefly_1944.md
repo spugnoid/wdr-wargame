@@ -415,9 +415,11 @@ mantlet claim — flagged as a worthwhile, but not yet done, follow-up.
 
 1. Exact hull-type breakdown (M4A4 vs. M4 vs. M4 Composite counts) of the
    ~2,100–2,200 total Fireflies converted was not found this session.
-2. M4A4-specific hull side/rear armor thickness (assumed 38 mm/38 mm by
+2. M4A4-specific hull side/rear armor *thickness* (assumed 38 mm/38 mm by
    extension from this project's other Sherman rows) was not independently
-   confirmed by a source naming the M4A4 specifically.
+   confirmed by a source naming the M4A4 specifically. (The hull rear *angle*
+   was resolved in the 2026-09-12 addendum below — Gawrych, caption 54, 20°
+   from vertical — thickness remains the open part of this question.)
 3. The small-hatch glacis's exact 51 mm/56°-from-vertical pairing was only
    corroborated at forum level this session — a direct look at Hunnicutt's own
    tables (not accessible via the pages fetched this session) would firm this
@@ -527,3 +529,22 @@ Full detail, page citations, and confidence notes in
 `counters/toe/firefly_fletcher_2008_1944.md` (filename kept from the original
 task despite the book turning out to be the 1997 title, not the 2008 one — see
 that file's own header for the correction).
+
+## Addendum, 2026-09-12: Gawrych's *Sherman VC Firefly* photo-reference (design note E.144)
+
+A second attempt to resolve the mantlet "+13mm" claim and the three historical
+vignettes, this time via Wojciech J. Gawrych's *Sherman VC Firefly* (Armor
+PhotoGallery #13, a walkaround/photo-reference book). Both questions again came
+back as clean negatives — this book has no dimensioned Firefly-specific
+mantlet figure and no combat-narrative content at all. Both remain open,
+narrowed by two ruled-out candidates rather than resolved.
+
+One genuinely new, actionable finding: caption 54 states the hull rear plate
+is sloped **20 degrees from vertical** specifically on the M4A4/M4A6 hull (the
+Firefly's donor hull). This project's `vehicles.csv` Hull Rear row previously
+carried an unsourced flat 0-degree angle (only the 38mm thickness was an
+inference-by-extension figure; the angle had no basis at all). **Applied**:
+angle corrected to 20 degrees, thickness left unchanged (still unconfirmed for
+the M4A4 specifically).
+
+Full detail in `counters/toe/firefly_gawrych_1944.md`.
