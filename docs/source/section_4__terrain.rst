@@ -91,6 +91,28 @@ Cover modifiers are added to the defender's Defence value when resolving fire co
      - Reinforced permanent structure
 
 
+*Sourcing note (E.152): this project's terrain table has no dedicated
+Jungle type — Pacific-theater scenarios currently reuse Dense woods
+(Cover +4, -3/hex intervening, MP 3) for jungle hexes. Dr Stephen Bull's*
+World War II Jungle Warfare Tactics *(Osprey Elite 151) was read
+specifically to check this: it gives real, repeated evidence that jungle
+engagement ranges collapsed to roughly 50-60 yards even for machine guns
+rated for far longer ranges ("long-range machine gun fire is not
+practised in jungle," p.20; a Vickers MMG's 3,000-yard effective range
+"rarely achievable... in forested terrain," p.59) — a moderate-confidence
+case that jungle's intervening penalty and LOS-block threshold (Rule
+4.4.3) could plausibly be harsher than Dense Woods if it were its own
+terrain type. But the book also insists jungle is not one terrain type at
+all — open-floor "primary" jungle it describes as often "crossed without
+too much difficulty," while thick "secondary" jungle requires cutting a
+path at a "quarter mile per hour" — which complicates folding "jungle"
+into a single new row as much as it supports adding one. No new terrain
+type, and no change to this table, Appendix B, or Rule 7.2, was made from
+this finding — see* ``counters/toe/jungle_warfare_rottman_1943.md`` *for
+full citations and a clearly-labeled, not-applied proposal for the
+coordinator's review.*
+
+
 4.3  Intervening Terrain
 ------------------------
 
