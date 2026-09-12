@@ -498,6 +498,8 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
      - Cover +4 → irregular cover, counts as entrenchment
 
 
+*Sourcing note (E.151): Gordon L. Rottman's* US World War II and Korean War Field Fortifications 1941-53 *(Osprey Fortress 29) gives two real, citable time figures for hasty positions — "hasty positions could be constructed quickly, usually under an hour, with infantry hand tools," and the most basic hasty position of all, the skirmisher trench, "could be dug in 10-12 minutes in soft soil" — both in roughly the same order of magnitude as this table's Entrenchment-stage turn counts, a moderate affirmation rather than a precise match. The book gives no equivalent figure for a full engineer Fortification; its only related data point ("a company remaining in a position for five or so days could develop a formidable defense") describes a far more developed end state than a single FORT-marker stage, making that stage's compression look larger by comparison — noted, not changed, since the book itself frames five days as the exception rather than the norm. See* ``counters/toe/us_field_fortifications_osprey029_1943.md`` *for full citations, including a flagged but unapplied tension over how closely the engineer-only cap in Rule 21.7a.2 matches the book's own (task-based, not depth-based) division of labor between infantry and engineers.*
+
 **21.7.5**  Place a FORT marker showing current state. Multiple engineer units working on the same position halve the time required (minimum 1 turn per stage).
 
 .. container:: rule-guide
