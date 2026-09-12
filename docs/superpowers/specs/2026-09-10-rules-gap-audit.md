@@ -1029,3 +1029,58 @@ deliberately left alone above this entry — it's dated development
 history a player never reads, not something the "doesn't exist,
 don't mention it" instruction was aimed at. `sphinx -W` clean, 162
 tests passing (prose/comment-only, no rule or value changed).
+
+## Update — 2026-09-11 (part 14): Sherman Firefly closes the roster's most-flagged single gap
+
+Asked to pick a backlog item and run it. Picked Sherman Firefly —
+flagged as a known gap since armor_calc's original build-out (README,
+Section 17's intro, E.118), and the 17-pdr gun curve already existed
+from the British-vehicles pass, needing only the vehicle side.
+Dispatched research (`counters/toe/sherman_firefly_1944.md`) before
+touching any data.
+
+**First departure from the 1943 baseline, done honestly.** Firefly
+entered British service ~Jan 1944, combat debut Normandy June 1944 —
+dated era="1944" rather than stretched to fit 1943.
+
+**Three real findings shaped the data:**
+- Standard conversion base was the M4A4 hull — welded, not riveted as
+  assumed going in — and M4A4 production ended before the Sherman
+  family's large-hatch glacis upgrade, so Firefly's hull front is the
+  earlier, steeper small-hatch plate (51mm@56°), distinct from the
+  existing M4A3(76mm) row's large-hatch 64mm@47°.
+- Turret is the standard M4 casting, reused and modified (recoil
+  system, mantlet, radio bustle, loader's hatch) — three sources agree
+  no wall-thickness change accompanied the conversion, so Turret Side
+  reuses the existing M4A1 figure (51mm) directly.
+- The radio relocation added a real, separately-sourced armoured
+  bustle box to the turret rear (51mm sides / 62mm rear, Sherman
+  Minutia) — Turret Rear = 62mm, a genuine improvement over the base
+  51mm wall, not a guess.
+
+**The mantlet needed a judgement call, flagged rather than guessed
+through.** The one well-cited figure (Fletcher's Osprey monograph, via
+a Wikipedia footnote) is "+13mm of protection" over the standard
+Sherman mantlet — but Wikipedia's own uncited "89mm maximum" infobox
+figure coincidentally matches this project's existing M4A1 mantlet
+override exactly, and the research explicitly warned against treating
+that coincidence as confirmation (different kinds of quantities: a
+flat uncited max vs. a pre-weighted hit-distribution average). Resolved
+as a documented stand-in: M4A1's own 89mm override + the sourced
++13mm = 102mm, not a fresh re-weighting (no source data available for
+that) and explicitly not the coincidentally-matching 89mm.
+
+**Left genuinely open:** hull side/rear (38mm, inferred by extension
+from the other two Sherman rows, not M4A4-specific-confirmed), and
+APDS availability timing for Firefly units specifically — real
+disagreement between the project's existing general "March 1944" date
+and an uncorroborated "August 1944" Firefly-specific claim. A scenario
+at the actual June 1944 combat debut should treat Firefly as
+APCBC-only until this firms up.
+
+New design note E.122. README and Section 17 intro updated (Firefly
+no longer listed as a gap; the intro's stale gap-pointer now names
+towed anti-tank guns instead). `sphinx -W` clean (checked the new
+note for the same asterisk-adjacent-to-backtick nesting failure from
+parts 8/10/12 — caught and fixed one instance before it shipped).
+Test suite: 118 passing (up from 114).

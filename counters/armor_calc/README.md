@@ -70,6 +70,11 @@ them directly in Excel/Sheets to review, or hand-edit the inputs under
   stepped-glacis middle/lower plate angles aren't sourced (Hull Front uses
   only the well-cited, fully-vertical top plate), and Cromwell's hull
   side/rear and turret front thicknesses vary across sources by several mm.
-- Sherman Firefly (17pdr on a Sherman hull) is not modelled — the 17pdr gun
-  curve now exists, but no Firefly-specific armor/mounting data has been
-  added.
+- Sherman Firefly (17pdr on a Sherman hull) is now modelled (`counters/toe/sherman_firefly_1944.md`)
+  — the roster's first 1944-dated vehicle, deliberately not forced into the
+  1943 baseline. Two things worth a scenario designer's attention: its
+  turret-front mantlet AV is a documented stand-in (the existing M4A1
+  mantlet override plus a sourced "+13mm" delta, not a fresh hit-distribution
+  re-weighting for the Firefly's own mantlet shape), and Firefly-specific
+  APDS availability timing is unresolved — a scenario set at the Normandy
+  debut (June 1944) should treat it as APCBC-only.

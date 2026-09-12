@@ -177,6 +177,67 @@ class TestTopArmorLoading:
         assert [r.profile for r in rows] == ["Hull"]
 
 
+class TestShermanFireflyLoading:
+    """Session finding: Sherman Firefly (the British 17-pdr-on-Sherman
+    conversion) was named as a known gap in this roster from the very
+    first armor_calc build-out (README "Known gaps", Section 17's own
+    intro text, design note E.118). It is a real 1944 vehicle -- entered
+    British service ~Jan 1944, combat debut Normandy June 1944 -- and is
+    deliberately dated era="1944", the roster's first departure from the
+    1943 baseline (not forced into 1943 for consistency's own sake). See
+    counters/toe/sherman_firefly_1944.md for full sourcing."""
+
+    def test_loads_with_expected_profile_count_and_era(self):
+        vehicles = load_vehicles()
+        rows = [v for v in vehicles if v.vehicle == "Sherman Firefly VC"]
+        assert len(rows) == 6
+        assert all(v.nation == "British" and v.era == "1944" for v in rows)
+
+    def test_hull_front_uses_small_hatch_glacis_not_large_hatch(self):
+        """The Firefly's M4A4 hull was never upgraded to the later
+        large-hatch glacis this project's existing M4A3(76mm) row uses
+        (64mm@47deg) -- it's the earlier, steeper small-hatch plate."""
+        vehicles = load_vehicles()
+        plate = next(v for v in vehicles if v.vehicle == "Sherman Firefly VC" and v.profile == "Hull" and v.arc == "Front")
+        assert plate.thickness_mm == 51
+        assert plate.vertical_deg == 56
+
+    def test_turret_front_mantlet_is_13mm_tougher_than_m4a1_baseline(self):
+        """The one well-cited, specific number this research pass found:
+        Fletcher's Osprey monograph credits the Firefly's mantlet with
+        '+13mm of protection' over the standard Sherman mantlet -- modelled
+        here as the existing M4A1 turret-front override (89mm) plus that
+        sourced delta, a documented stand-in rather than a fresh
+        hit-distribution re-weighting (which would need source data this
+        project doesn't have access to)."""
+        hardness_table = load_hardness_table()
+        vehicles = load_vehicles()
+        firefly_mantlet = next(
+            v for v in vehicles if v.vehicle == "Sherman Firefly VC" and v.profile == "Turret" and v.arc == "Front"
+        )
+        m4a1_mantlet = next(
+            v for v in vehicles if v.vehicle == "Sherman M4A1 (75mm)" and v.profile == "Turret" and v.arc == "Front"
+        )
+        assert m4a1_mantlet.av_override_mm is not None
+        assert firefly_mantlet.av_override_mm == pytest.approx(m4a1_mantlet.av_override_mm + 13, abs=0.01)
+        av_firefly = firefly_mantlet.resolve_av(76.2, hardness_table, family="capped")
+        av_m4a1 = m4a1_mantlet.resolve_av(76.2, hardness_table, family="capped")
+        assert av_firefly == pytest.approx(av_m4a1 + 13, abs=0.01)
+
+    def test_turret_rear_is_the_radio_bustle_box_not_the_base_wall(self):
+        """The radio relocated out of the hull into a new armoured bustle
+        box bolted to the turret rear (51mm sides / 62mm rear, Sherman
+        Minutia) -- a genuine, sourced improvement over the base M4
+        turret's 51mm rear wall, not a guess. Side wasn't touched (still
+        51mm, matching the base turret casting the Firefly reused)."""
+        vehicles = load_vehicles()
+        side = next(v for v in vehicles if v.vehicle == "Sherman Firefly VC" and v.profile == "Turret" and v.arc == "Side")
+        rear = next(v for v in vehicles if v.vehicle == "Sherman Firefly VC" and v.profile == "Turret" and v.arc == "Rear")
+        assert side.thickness_mm == 51
+        assert rear.thickness_mm == 62
+        assert rear.thickness_mm > side.thickness_mm
+
+
 class TestHitZoneLoading:
     """Session finding (design spec, hit-location system): neither project
     source provides interior vehicle layout diagrams -- hit_zones.csv is
