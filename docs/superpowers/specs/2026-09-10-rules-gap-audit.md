@@ -1138,3 +1138,33 @@ moved from "explicitly out of scope" to "now partially in scope").
 `sphinx -W` clean (caught and fixed two asterisk-adjacent-to-backtick
 instances before shipping, same recurring failure mode as parts
 8/10/12/14). Test suite: 121 passing (up from 118).
+
+## Update — 2026-09-11 (part 16): Appendix H — a generated roster, working through the backlog "in logical order"
+
+Asked to build out the remaining backlog in logical order. Started
+with the item flagged the session before: "eventually all the units
+and counter stats will need to be in an appendix." Built it same day
+rather than deferring further.
+
+New script `counters/generate_roster_appendix.py` reads the already-
+computed `infantry_calc`/`armor_calc` output CSVs directly and writes
+`docs/source/appendix_h__consolidated_roster.rst` whole — never hand-
+edited, same pattern this project already uses for its own CSV
+outputs and for `maps/pipeline.py`'s generated diagrams, one layer
+further up.
+
+Real scope decision made explicitly rather than silently: vehicle
+Gunnery Tables aren't included. A Gunnery Table needs a specific
+Crew Quality, derived from a vehicle's own printed Morale -- a value
+`vehicles.csv` doesn't track as structured data at all (every crew-
+quality assignment so far, e.g. the Oktyabrsky playtest's veteran
+Panzer IV crews, was a scenario-time choice, never roster data).
+Printing one here would mean inventing Morale values roster-wide --
+flagged as a real follow-up instead, in both the appendix's own
+preamble and project memory.
+
+New design note E.124. Project memory updated (the "eventually build
+this" note now says "built same day, here's how to keep it in sync").
+No test changes -- documentation generator, not a calculation change.
+`sphinx -W` clean, table row counts verified against source CSVs
+(22 infantry / 103 vehicle plates / 14 guns).

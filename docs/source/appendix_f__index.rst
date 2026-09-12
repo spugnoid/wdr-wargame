@@ -247,6 +247,8 @@ extinguishing  ..........  21.5.6
 
 **Complexity tiers (Basic/Standard/Advanced)**  ..........  App.G
 
+**Consolidated unit and vehicle roster — see Appendix H**  ..........  App.H
+
 **Campaign rules**  ..........  S.13
 
 branching structure (nodes, branch tables, DAG)  ..........  13.5.3–13.5.7, E.103

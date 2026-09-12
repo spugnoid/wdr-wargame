@@ -42,3 +42,4 @@ Version |release| — built |today|
    appendix_e__design_notes
    appendix_f__index
    appendix_g__rules_complexity_tiers
+   appendix_h__consolidated_roster

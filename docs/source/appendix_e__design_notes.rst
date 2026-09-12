@@ -830,3 +830,16 @@ E.123  The PaK 40 — This Roster's First Towed Anti-Tank Gun, and Why It Needed
 *Historical validation used the in-project cross-check the research itself recommended, rather than a named combat incident (none was found, dated and ranged, specific to this gun): PzGr 39 comfortably auto-penetrates T-34 Model 1943's hull front (93.7mm AV) at 500m, consistent with Wikipedia's own summary assessment that the PaK 40 was "effective against almost every Allied tank until the end of the war."*
 
 *Test suite: 121 passing (up from 118).*
+
+E.124  Appendix H — a Generated Roster, Not a Transcribed One
+------------------------------------------------------------------
+
+*Design note: asked to work through the backlog "in logical order," starting with the item the designer had specifically flagged the session before: "eventually all the units and counter stats will need to be in an appendix." Built the same day, not deferred further — the roster (22 infantry rows, 103 vehicle armour rows, 14 guns as of this writing) was already big enough that hand-transcribing it would be stale the next time any of it changed.*
+
+*The whole appendix is generated, never hand-edited — a new script,* ``counters/generate_roster_appendix.py``\ *, reads the already-computed* ``infantry_calc`` *and* ``armor_calc`` *output CSVs directly and writes* ``docs/source/appendix_h__consolidated_roster.rst`` *whole. This follows the project's own existing precedent exactly: the CSV outputs themselves are already generated, committed artifacts (not hand-edited), and* `maps/pipeline.py` *already generates the rulebook's own diagrams from YAML the same way — Appendix H is the same pattern one layer further up, turning already-generated data into already-generated prose.*
+
+*One real scope question came up building it, not before: should this appendix also print each vehicle's Gunnery Table (Rule 18.1a)? Decided no, and said so in the appendix's own preamble rather than silently omitting it. A Gunnery Table is keyed to a specific gun AND a specific Crew Quality (Rule 17.3.6), and Crew Quality is derived from a vehicle's own printed Morale — a value* `vehicles.csv` *does not track as structured data at all; every crew-quality assignment made so far (the Oktyabrsky playtest's veteran Panzer IV crews, regular T-34 crews) was a scenario-time choice, never roster data. Printing a Gunnery Table here would mean inventing a Morale value for every vehicle that doesn't have one yet — exactly the kind of silent, unrequested decision this project's whole culture exists to avoid. Flagged as a real, separate follow-up instead: if vehicle Morale ever becomes real roster data, the generator should grow a fourth table for it.*
+
+*Regenerating this appendix is a separate step from either pipeline's own run — a real risk of drift the appendix's own preamble states outright (regenerate after any roster change, commit alongside the data), and now also recorded in project memory so a future session checks for a stale Appendix H whenever a roster CSV changes.*
+
+*No test suite changes — this is a documentation generator, not a calculation change. Verified by inspection: table row counts match the source CSVs' row counts exactly (22/103/14), and* `sphinx -W` *builds clean.*
