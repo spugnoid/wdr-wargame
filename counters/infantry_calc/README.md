@@ -119,8 +119,31 @@ itself has no source column, so it's recorded here instead):
   17.1a describes no degraded-crew mechanic for a towed gun, unlike
   HMG/mortar teams). Other towed guns (field howitzers, Soviet 45mm, US
   57mm) are still future work; see each existing gun's own research file
-  for what's separately unsourced (PaK 40: divisional-vs-regimental 1943
-  fielding date; 6pdr: named crew roles).
+  for what's separately unsourced (PaK 40: crew quality, see below; 6pdr:
+  named crew roles).
+- **PaK 40's 1943 divisional fielding date is now answered — the honest
+  answer is that there wasn't one.** Four research passes this session
+  (`pak40_1943.md`, `pak40_crew_quality_and_fielding_date_followup.md`,
+  `pak40_sturmartillerie_panzerjager_book_1943.md`,
+  `pak40_forczyk_kv1_book_1943.md`, design notes E.123/E.130/E.135/E.136)
+  went looking for the date the standard infantry division's Panzerjäger-
+  Abteilung converted from 50mm to 75mm guns. Forczyk (2012) gives real,
+  archival-sourced, dated figures instead of a date: even at Kursk in July
+  1943, a typical division had only 5-8 heavy (7.5/7.62cm) guns against 12
+  5cm and 40 3.7cm guns — the old calibers remained the large majority ten
+  months after this project's already-known September 1943 TM-E snapshot.
+  This is consistent with, and quantifies, the earlier Nafziger-derived
+  "October 1943" KStN lead (E.130): those authorized-establishment
+  revisions were evidently changing what a division was *entitled to*, not
+  reporting what it already *had*. Net effect on this project: a 1943-dated
+  scenario fielding a "standard" division's Panzerjäger-Abteilung should
+  model PaK 38 (5cm) as the numerically dominant weapon, with PaK 40 as a
+  small "heavy platoon" addition — not a division uniformly re-equipped
+  with PaK 40. This project's own PaK 40 roster row remains correct as a
+  towed-gun entry (some divisions did have some PaK 40s by any 1943 date),
+  just not as an implied division-wide standard; a PaK 38 (5cm) roster row
+  is the natural next towed-gun candidate if a scenario designer wants the
+  numerically accurate mix, not yet built.
 - **Grenades and satchel charges are not derived stats.** Both already resolve via
   fixed, manually-assigned values (G# on the counter, Engineer's DEMO capability);
   they are not something derived from real-world weapon specs.

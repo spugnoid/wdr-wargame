@@ -1658,3 +1658,38 @@ counters/toe/pak40_sturmartillerie_panzerjager_book_1943.md, pointer
 added to GER_PAK40_1943.3_F's own units.csv row. No numeric data
 changes, no test count change (176 passing). `sphinx -W` clean on the
 first build.
+
+## Update — 2026-09-12 (part 28): PaK 40, fourth try -- real progress, still not a clean answer
+
+Read Forczyk's *Panzerjager vs KV-1: Eastern Front 1941-43* (80 pages)
+-- E.135's own recommended next step. Unlike Perrett's book, this one
+is genuinely about towed guns (PaK 36/38/40 vs KV-1/KV-2, 1941-43).
+Both open questions moved forward, neither closed cleanly.
+
+Crew quality: p.45 gives real, on-topic evidence -- "the Panzerjager
+were considered an elite... a large proportion of veterans" as of June
+1941. But p.47 documents a morale collapse against KV-1/T-34 that only
+partly recovered with PaK 40 arrivals in mid-1942, and p.74-75
+documents 45% losses among 1941-42 3.7cm PaK guns -- meaning much of
+any 1943 crew would be replacement-draft, not the original hand-picked
+cadre. quality=regular KEPT, not upgraded -- a considered decision
+informed by better evidence, not an unweighed default.
+
+Fielding date: p.70 gives a quantified answer instead of a date -- even
+at Kursk, July 1943, a typical division had only 5-8 heavy PaK guns
+against 12 5cm and 40 3.7cm guns. This completes rather than
+contradicts the earlier Nafziger "October 1943" lead: those KStN
+revisions changed what a division was entitled to, not what it already
+had. Real scenario-design implication recorded in infantry_calc/README.md:
+a historically accurate 1943 division should field mostly PaK 38 with
+a small PaK 40 "heavy platoon" -- PaK 38 flagged as the natural next
+towed-gun candidate, not built this pass.
+
+Bonus: a genuine internal contradiction within the one book (spec sheet
+says Crew: 8, prose describes a 6-role crew matching this project's
+existing figure exactly) -- not resolved. Still no dated towed-PaK-40
+anecdote found, a fourth pass reaching the same conclusion.
+
+New design note E.136. No numeric guns.csv/vehicles.csv changes --
+crew-quality reasoning and scenario guidance only. Test suite unchanged
+at 176 passing. `sphinx -W` clean on the first build.
