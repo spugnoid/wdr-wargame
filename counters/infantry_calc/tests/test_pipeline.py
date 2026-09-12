@@ -64,9 +64,9 @@ class TestLoadUnits:
     corrected against newly-sourced TOE research -- see their own `notes`
     column and design notes E.110/E.116."""
 
-    def test_loads_all_twenty_two_rows(self):
+    def test_loads_all_twenty_four_rows(self):
         units = load_units()
-        assert len(units) == 22
+        assert len(units) == 24
 
     def test_gren_43_front_face_matches_the_anchor_unit(self):
         """Corrected 2026-09-11: manpower_full 9->10 and a third weapon
@@ -165,7 +165,7 @@ class TestWriteInfantryRosterCsv:
 
     def test_writes_one_row_per_unit(self, tmp_path):
         rows = self._rows_by_unit_id(tmp_path)
-        assert len(rows) == 22
+        assert len(rows) == 24
 
     def test_gren_43_front_face_matches_the_worked_example(self, tmp_path):
         """The MG42 LMG line is untouched by the 2026-09-11 correction --
@@ -292,6 +292,27 @@ class TestWriteInfantryRosterCsv:
         row = rows["JPN_RIFSQ_1943.3_F"]
         assert row["fire_line_1"] == "─● 4 ⬡6 -1"
         assert row["fire_line_2"] == "╌ 3 ⬡4 -1"
+
+    def test_towed_at_gun_teams_have_no_fire_lines_but_do_have_defence_and_morale(self, tmp_path):
+        """New 2026-09-11 (design notes E.123/E.127): the PaK 40 and 6pdr
+        towed anti-tank guns get a printed weapon-team stat block (Rule
+        17.1a.1) with no fire-line weapon slots -- their actual attack is
+        resolved via armor_calc's PEN/Gunnery Table and Rule 18.8.4's flat
+        HE formula, not this pipeline's RPM-based small-arms model. Both
+        guns share the same 6-man crew and Regular quality (independently
+        converging crew-size sourcing, an explicitly-hedged quality
+        inference for both -- see each gun's own counters/toe/*.md file),
+        so both rows should compute identical Defence/Morale/M#/F#."""
+        rows = self._rows_by_unit_id(tmp_path)
+        for unit_id in ("GER_PAK40_1943.3_F", "UK_6PDR_1943.3_F"):
+            row = rows[unit_id]
+            assert row["fire_line_1"] == ""
+            assert row["fire_line_2"] == ""
+            assert row["fire_line_3"] == ""
+            assert row["defence"] == "6"
+            assert row["morale"] == "5"
+            assert row["m_number"] == "0"
+            assert row["f_number"] == "2"
 
     def test_us_1919_team_rfp_well_below_mg42_hmg_team(self, tmp_path):
         """New 2026-09-11. The M1919A4's practical rate of fire (150 rpm,

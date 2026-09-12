@@ -1258,3 +1258,37 @@ backtick nesting bug during its own write-up, same recurring class as
 prior parts). No test or data changes -- ballistics and appendix entry
 already existed; this session's work is the TOE research file and
 documenting the stat-block gap. `sphinx -W` clean.
+
+## Update — 2026-09-11 (part 20): closing the towed-gun stat-block gap for both PaK 40 and 6pdr
+
+E.127 flagged, but didn't fix, a real shared gap: neither the PaK 40
+nor the 6pdr had a printed weapon-team stat block (Defence/Morale/
+M#/F#, Rule 17.1a.1). Closed it same day rather than leaving it as a
+named follow-up.
+
+No new formula needed -- `unit_defence()`/`unit_morale()` already
+derive purely from `manpower_full`/`quality`, with no dependency on a
+unit having an actual weapon slot. Added `GER_PAK40_1943.3_F` and
+`UK_6PDR_1943.3_F` to `infantry_calc/data/units.csv` with all three
+weapon slots blank (correct: a towed gun's real attack goes through
+armor_calc's PEN/Gunnery Table and Rule 18.8.4's flat HE formula, not
+this pipeline's RPM-based small-arms model). Both rows: manpower_full
+6 (sourced, converging independently for both guns), quality=regular
+(an explicitly-hedged inference, not sourced, for either) -- both
+compute Defence 6 / Morale 5 / M0 / F2.
+
+Two things left as open questions rather than guessed at: G# has no
+formula anywhere in this project (every row's G# is designer-
+assigned) -- both new rows use G1 by analogy to this roster's tripod
+HMG teams. Neither row has a reduced/rear face -- Rule 17.1a describes
+no degraded-crew mechanic for a towed gun, unlike HMG/mortar teams,
+so none was invented.
+
+New design note E.128. Appendix H regenerated (24 infantry rows, up
+from 22). Both READMEs (infantry_calc, armor_calc-adjacent) updated
+to reflect the closed gap. New test
+(`test_towed_at_gun_teams_have_no_fire_lines_but_do_have_defence_and_morale`)
+plus two hardcoded row-count assertions bumped 22->24. Test suite:
+172 passing (up from 171). Caught and fixed one more asterisk-
+adjacent-to-backtick nesting bug while writing E.128. `sphinx -W`
+clean. Project memory updated with the new row count.

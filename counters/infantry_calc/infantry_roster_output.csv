@@ -21,3 +21,5 @@ JPN_RIFSQ_1943.3_F,Japan,Rifle Squad,1943.3,F,regular,─● 4 ⬡6 -1,╌ 3 ⬡
 JPN_RIFSQ_1943.3_R,Japan,Rifle Squad (reduced),1943.3,R,regular,omit (rFP too low),,,8,5,2,1,2,PRELIMINARY
 US_MG_1919_1943.3_F,United States,Light Machine Gun Squad,1943.3,F,regular,═● 6 ⬡6 -1,,,6,5,0,3,1,PRELIMINARY
 US_MG_1919_1943.3_R,United States,Light Machine Gun Squad (reduced crew),1943.3,R,regular,═● 4 ⬡6 -1,,,4,5,0,3,1,PRELIMINARY
+GER_PAK40_1943.3_F,Germany,PaK 40 Anti-tank Gun Team,1943.3,F,regular,,,,6,5,0,2,1,PRELIMINARY
+UK_6PDR_1943.3_F,United Kingdom,6pdr Anti-tank Gun Team,1943.3,F,regular,,,,6,5,0,2,1,PRELIMINARY

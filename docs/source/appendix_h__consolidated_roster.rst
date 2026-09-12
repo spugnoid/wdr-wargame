@@ -325,6 +325,32 @@ H.1  Infantry and Weapon Team Roster
      - M0
      - F3
      - G1
+   * - PaK 40 Anti-tank Gun Team
+     - Germany
+     - 1943.3
+     - regular
+     - F
+     - —
+     - —
+     - —
+     - 6
+     - 5
+     - M0
+     - F2
+     - G1
+   * - 6pdr Anti-tank Gun Team
+     - United Kingdom
+     - 1943.3
+     - regular
+     - F
+     - —
+     - —
+     - —
+     - 6
+     - 5
+     - M0
+     - F2
+     - G1
 
 H.2  Vehicle Armour Roster
 -------------------------------

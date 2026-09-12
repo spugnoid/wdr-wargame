@@ -102,22 +102,25 @@ itself has no source column, so it's recorded here instead):
   gun curve (`sixpdr_57l50_apcbc`, already in the roster from the earlier
   British-vehicles work, unlike PaK 40 which needed a fresh fit) and the same
   Rule 17.1a machinery — neither needs a vehicle counter at all, since a towed
-  gun has no armour. Both guns share the same real, still-open gap: **neither
-  has a printed weapon-team stat block** (Defence/Morale/M#/F#, Rule 17.1a.1)
-  the way an HMG or LMG team does. This pipeline derives Defence/Morale from
-  `manpower_full` and `quality` via `unit_defence()`/`unit_morale()`, but only
-  for `weapons.csv`-keyed, RPM-based small-arms fire — an HE-firing gun crew
-  doesn't fit that shape and was never added as a `units.csv` row for either
-  gun. Building that (a units.csv row with a blank/inapplicable weapon-fire
-  slot, or a small pipeline extension to handle HE-only weapon teams) is
-  shared infrastructure work for any future towed gun, not a per-gun task —
-  flagged here rather than under either gun's own research file. Crew size is
-  sourced for both (6 men, matching independently between the German and
-  British guns); a well-documented crew-quality tier is not, for either.
-  Other towed guns (field howitzers, Soviet 45mm, US 57mm) are still future
-  work; see each gun's own research file for what's separately unsourced
-  (PaK 40: divisional-vs-regimental 1943 fielding date; 6pdr: named crew
-  roles).
+  gun has no armour. Both guns now have a printed weapon-team stat block
+  (`GER_PAK40_1943.3_F`, `UK_6PDR_1943.3_F` in `units.csv`, design note
+  E.128) — a `units.csv` row with all three weapon slots left blank still
+  computes Defence/Morale from `manpower_full`/`quality` via
+  `unit_defence()`/`unit_morale()` correctly, since neither function
+  actually depends on a weapon slot existing; the blank slots just mean no
+  fire-line notation prints, which is correct since a towed gun's real
+  attack (PEN/Gunnery Table, HE line) is computed elsewhere, not by this
+  pipeline's RPM-based small-arms formula. Crew size is sourced for both (6
+  men, matching independently); quality (`regular` for both) is an
+  explicitly-hedged inference, not a sourced fact, per each row's own notes.
+  Two things are deliberately left unmodelled rather than guessed at: G# (no
+  formula exists anywhere in this project — see below — both rows use G1 by
+  analogy to this roster's tripod HMG teams) and a reduced/rear face (Rule
+  17.1a describes no degraded-crew mechanic for a towed gun, unlike
+  HMG/mortar teams). Other towed guns (field howitzers, Soviet 45mm, US
+  57mm) are still future work; see each existing gun's own research file
+  for what's separately unsourced (PaK 40: divisional-vs-regimental 1943
+  fielding date; 6pdr: named crew roles).
 - **Grenades and satchel charges are not derived stats.** Both already resolve via
   fixed, manually-assigned values (G# on the counter, Engineer's DEMO capability);
   they are not something derived from real-world weapon specs.
