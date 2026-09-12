@@ -1944,3 +1944,29 @@ New design note E.144. New file `firefly_gawrych_1944.md`, addendum to
 and Appendix H for the one changed row (Hull Rear AV: 37.7/38.0/38.0 ->
 39.7/43.1/40.4). Test suite unchanged at 177 passing. `sphinx -W`
 clean on the first build.
+
+## Update — 2026-09-12 (part 37): a general encyclopedia rules itself out for eight questions at once
+
+Read *The Encyclopedia of Weapons of World War II* (544pp, real text
+layer) against eight open questions in one pass: T-34/85 top armor,
+SU-85 top armor, T-34 Model 1943's hexagonal turret roof, Panzer III
+top armor, Cromwell's hull top/turret roof/nose-plate conflict,
+Churchill's stepped-glacis angles, the US 57mm M1's K-factor, and PaK
+40 crew quality. Every item came back a clean negative for a structural
+reason: this book's own AFV "Specification" blocks never list armor by
+plate or location for any tank, anywhere -- only a single overall
+thickness range in prose (Churchill "16-102mm," Cromwell "8-76mm,"
+T-34 "18-60mm"). Wrong genre of source for this project's entire
+current category of open questions, not a research failure.
+
+Two secondary findings: SU-85 doesn't even get its own entry (one
+sentence under the 85mm AA gun article), and German towed AT guns get
+full ballistic spec blocks while no Allied 6pdr/US 57mm M1 equivalent
+turned up despite an extensive search.
+
+New design note E.145. New file `encyclopedia_weapons_wwii_1943.md`;
+addenda added to `vehicle_top_armor_1943.md` and
+`cromwell_churchill_fletcher_harley_1943.md` ruling this book out so a
+future session doesn't re-check it. No numeric vehicles.csv/guns.csv
+changes -- nothing here was a citable figure. Test suite unchanged at
+177 passing. `sphinx -W` clean on the first build.

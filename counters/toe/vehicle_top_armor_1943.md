@@ -518,3 +518,11 @@ One well-documented, on-point incident/finding was located:
 7. T-34 Model 1943's turret roof (hexagonal turret) needs a real primary
    source — the two figures found (20mm vs. 56mm) are far enough apart that
    guessing between them would be worse than leaving it blank.
+8. **Update 2026-09-12, design note E.145**: *The Encyclopedia of Weapons of
+   World War II* (a general single-volume reference) was checked against
+   items 3 (T-34/85), 4 (SU-85), and 7 (T-34 Model 1943 turret roof) above,
+   plus Panzer III. Clean negative on all four — its AFV "Specification"
+   blocks never list armor by plate/location for any tank, only a single
+   overall thickness range in prose. Ruled out as a candidate for any
+   plate-level armor question in this project. See
+   `counters/toe/encyclopedia_weapons_wwii_1943.md` for the full pass.

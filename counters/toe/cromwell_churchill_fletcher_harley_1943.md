@@ -150,3 +150,11 @@ that citation's exact page and unit, rather than being taken from this summary.
    Osprey monograph) is now the more promising lead for Cromwell/Churchill plate
    geometry, by the same pattern already observed for Top/Roof data across two
    consecutive monographs in this project's library.
+5. **Update 2026-09-12, design note E.145**: *The Encyclopedia of Weapons of
+   World War II* (general single-volume reference) was checked for Cromwell's
+   hull top/turret roof/nose-plate conflict and Churchill's stepped-glacis
+   angles. Clean negative — only single overall armor-thickness ranges per
+   mark, no plate-level breakdown anywhere in the book. Ruled out as a
+   candidate; see `counters/toe/encyclopedia_weapons_wwii_1943.md`. The
+   Panzer-Tracts-style-reference recommendation in item 4 above stands
+   unchanged.
