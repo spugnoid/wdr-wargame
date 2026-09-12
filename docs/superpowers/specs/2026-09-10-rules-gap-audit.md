@@ -1797,3 +1797,33 @@ New design note E.139. No data or test changes -- a clean negative,
 ruling out one plausible candidate. vehicle_top_armor_1943.md updated.
 `sphinx -W` clean on the first build (avoided the recurring book-title-
 in-italics leak this time by not nesting emphasis around book titles).
+
+## Update — 2026-09-12 (part 32): Panzer IV Ausf H -- the first book this session to just confirm everything
+
+Read Perrett & Laurier's *Panzerkampfwagen IV Medium Tank 1936-1945*
+(49 pages, image scan) to check the long-flagged "widely-cited figure,
+not verified vs Panzer Tracts this session" caveat on Ausf H's Hull
+Front (80mm@10deg, face-hardened).
+
+Confirmed, with a labeled technical cutaway diagram -- the closest
+thing to a Panzer-Tracts-style spec diagram found in any non-Panzer-
+Tracts book this session. Four figures matched exactly: Hull Front
+80mm, Turret Front 50mm, Turret Side 30mm, Hull Side 30mm. Hull Front's
+confirmation includes a real, useful negative: body text explicitly
+calls the Ausf H's 80mm "integral," contrasted against the preceding
+Ausf G's 30mm bolt-on appliqué construction -- meaning the layered-
+plate correction just applied to StuG III (E.138) does NOT apply here,
+this is genuinely a single factory plate.
+
+Two loose ends recorded honestly rather than smoothed over: the
+book's own face-hardening evidence describes a captured Ausf E's MG
+mounting specifically, not the Ausf H's own glacis -- not a
+contradiction of the existing Bird & Livingston-sourced claim, just
+not an independent re-confirmation of it either. And one unresolved
+diagram callout ("20mm armour glasis plate") doesn't match anything in
+this project's data and couldn't be located precisely at this scan's
+resolution -- flagged, not guessed at.
+
+New design note E.140. No numeric vehicles.csv changes -- four
+citation upgrades. No armor_calc regeneration needed. Test suite
+unchanged at 177 passing. `sphinx -W` clean on the first build.
