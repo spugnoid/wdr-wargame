@@ -25,7 +25,15 @@ flagged this exact follow-up as needed (its own item 6).
   Wikipedia's Firefly article cites [ref 5] for the "+13 mm mantlet" claim; a
   specialist single-subject monograph, the strongest single citation chain
   traced this session, but only reached at second hand via Wikipedia's own
-  footnote, not read directly.)
+  footnote, not read directly. **Correction, 2026-09-12, design note E.142:
+  a PDF in the project's reference material labeled "Sherman VC M4A4
+  Firefly (David Fletcher)" was read directly this session and turned out
+  NOT to be this book — its own copyright page reads 1997, publisher
+  Darlington Productions ("Military Ordnance Special No. 19"), a different,
+  earlier Fletcher title on the same subject. This 2008 Osprey New Vanguard
+  141 book remains unread and is still the best candidate for the "+13mm"
+  claim's real source — see the addendum below for what the 1997 title
+  actually contained.**)
 - Wikipedia, "M4 Sherman variants" — https://en.wikipedia.org/wiki/M4_Sherman_variants
   (M4A4/"welded, lengthened hull" description, Chrysler A57 multibank engine,
   M4 Composite cast-front/welded-rear description)
@@ -465,3 +473,57 @@ Section 17/18's stats need to encode. Recorded here as a genuinely useful,
 dated data point for whoever writes a late-1944 scenario and wants historically
 grounded proportions rather than an arbitrary guess — a July 1944 scenario should
 field far fewer Fireflies per squadron than a December 1944 one.
+
+## Addendum, 2026-09-12: reading the (wrong, but real) Fletcher book directly (design note E.142)
+
+A PDF in the project's reference material labeled "Sherman VC M4A4 Firefly
+(David Fletcher)" was read directly this session, specifically to resolve the
+mantlet "+13mm" claim's provenance and the three historical vignettes' sourcing.
+It turned out to be a different Fletcher title than assumed above — its own
+copyright page reads 1997, publisher Darlington Productions ("Military Ordnance
+Special No. 19"), not the 2008 Osprey New Vanguard 141 book Wikipedia's own
+footnote names. The 2008 book remains unread. What the 1997 book actually
+contains:
+
+- **The mantlet "+13mm" claim is NOT in this book, at all.** Its entire mantlet
+  discussion (p.3) is functional/descriptive only (M34A1-style mount, co-axial
+  Browning, No.43 sight) with zero armor-thickness figures — two close-up photos
+  and two line drawings of the mantlet, none dimensioned. This project's
+  existing turret-front `av_override_mm` (the M4A1's own 89mm plus the sourced
+  "+13mm" delta) continues to carry its existing uncertainty flag — **narrowed,
+  not resolved**: one specific, highly plausible candidate source has now been
+  read in full and ruled out. The 2008 Osprey title remains the best next
+  candidate if the real source is ever tracked down.
+- **None of the three historical vignettes (Wittmann engagement, Tilly-sur-
+  Seulles, Norrey-en-Bessin) appear anywhere in this book.** A full 24-page read
+  found zero named combat incidents of any kind — this is a pure technical/photo
+  monograph, not a narrative unit history. Their real source remains
+  unidentified; this specific title is now ruled out as a candidate.
+- **APDS timing**: this book gives "summer of 1944" (p.5) — broader than, but
+  consistent with, the already-flagged unconfirmed "August 1944" claim. Also
+  newly noted: the same source states APDS "proved to be wildly inaccurate at
+  anything over 1,000 yards" even after it became available — a real
+  operational caveat, not a new project gap (PEN and to-hit are already
+  separate mechanics here).
+- **Ammunition stowage (77 rounds) independently confirmed with full positional
+  detail** (p.4): 5 ready-use + 20 horizontal under the turntable + 20 vertical
+  in a floor bin + 18 at 40° under the turret floor + 14 in the redundant
+  hull-MG-gunner's old position = 77 exactly, matching the figure already in
+  this file.
+- **New, not previously recorded**: turret ring dimensions (56.0" inner / 69.0"
+  outer diameter); a detailed Firefly production/fielding timeline (War Office
+  requirement raised from 2,100 to 3,100 by Jan 1945; 288 on strength in
+  Normandy by 24 June 1944; 699 converted by 31 July 1944) and a per-division
+  Firefly-holdings table for 21st Army Group at end of June 1944 (7th Armoured
+  36, 11th Armoured 36, Guards Armoured 36, Polish 1st Armoured 25) — useful
+  scenario-design context, not an armor-stat question; and real period
+  countermeasures against the Firefly's conspicuous long gun (painting the
+  outer barrel a lighter color, fitting a false muzzle brake partway down the
+  barrel, in Italy driving with the real gun reversed and a dummy 75mm tube on
+  the turret rear, using an ordinary 75mm Sherman as a "stalking horse" to draw
+  fire first) — genuine flavor material, not tied to any current rule.
+
+Full detail, page citations, and confidence notes in
+`counters/toe/firefly_fletcher_2008_1944.md` (filename kept from the original
+task despite the book turning out to be the 1997 title, not the 2008 one — see
+that file's own header for the correction).

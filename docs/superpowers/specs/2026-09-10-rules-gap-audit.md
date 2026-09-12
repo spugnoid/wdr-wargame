@@ -1849,3 +1849,39 @@ This closes out the reference library's StuG III-titled candidates for
 Top/Roof specifically. New design note E.141. No data or test changes
 -- one citation added, one scope-mismatch documented. `sphinx -W`
 clean on the first build.
+
+## Update — 2026-09-12 (part 34): the Firefly book wasn't the Firefly book -- a citation correction, not a dead end
+
+This project's Firefly research named Fletcher's 2008 Osprey New
+Vanguard 141 as the strongest lead for two open questions (the
+mantlet's "+13mm" delta provenance, and three historical vignettes'
+source) but had only ever reached it secondhand via a Wikipedia
+footnote. A PDF in the reference collection labeled with this exact
+vehicle/author was read directly -- and turned out to be a different
+Fletcher title: copyright 1997, Darlington Productions "Military
+Ordnance Special No. 19," not the 2008 Osprey book. A real citation-
+identification error, corrected rather than glossed over.
+
+Read in full anyway -- genuinely useful, just not for the two
+questions it was fetched for. The "+13mm" mantlet claim is not in this
+book at all (purely functional mantlet description, zero thickness
+figures). Same clean negative for all three historical vignettes (a
+full 24-page read found no combat narrative of any kind -- this is a
+technical/photo monograph). Both questions narrowed, not resolved: one
+plausible candidate ruled out each; the actual 2008 book remains the
+best next lead if ever acquired.
+
+Genuinely new, kept material: independent confirmation of the 77-round
+ammo stowage total with full positional breakdown; a "summer of 1944"
+APDS-availability statement consistent with the already-flagged
+"August 1944" claim, plus a real operational note that APDS was
+"wildly inaccurate over 1,000 yards" even once available; new turret-
+ring dimensions; a detailed production/fielding timeline and per-
+division Firefly-holdings table for 21st Army Group; genuine period
+flavor (painted barrels, false muzzle brakes, reversed-gun disguise,
+"stalking horse" tactics against the Firefly's telltale long gun).
+
+New design note E.142, citation corrected in sherman_firefly_1944.md,
+full addendum added. No numeric vehicles.csv changes -- every open
+question here is provenance, not a number. Test suite unchanged at
+177 passing. `sphinx -W` clean on the first build.
