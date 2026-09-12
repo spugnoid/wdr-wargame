@@ -13,11 +13,11 @@ Section 6 — Actions and Reactions
 
    **Example:** Alpha's player spends 1 AP to activate Alpha this impulse, choosing one action from the 6.3 table (e.g. Move). Alpha may not also Fire in the same impulse without spending a second AP in a later impulse.
 
-**6.1.2**  A unit may be activated more than once per turn, in separate impulses, each activation costing 1 AP. A unit's turn ends — no further movement or fire this turn — the moment it is marked MOVED/FIRED (Rule 6.5.4): a fresh unit reaches MOVED/FIRED after one Regular action (Rule 6.3.2) or after its second Assault part-action (Rule 6.3.3); a stationary weapon with ROF greater than 1 (Rule 6.6) reaches it only once its printed ROF is expended. A unit already MOVED/FIRED may not be activated again this turn (see Rule 6.7 for its remaining defensive rights).
+**6.1.2**  A unit may be activated more than once per turn, in separate impulses, each activation costing 1 AP. A unit's turn ends — no further movement or fire this turn — the moment it is marked MOVED/FIRED (Rule 6.5.4): a fresh unit reaches MOVED/FIRED after one Regular action (Rule 6.3.2) or after its second Assault part-action (Rule 6.3.3); a stationary weapon with F# greater than 1 (Rule 6.6) reaches it only once its printed F# is expended. A unit already MOVED/FIRED may not be activated again this turn (see Rule 6.7 for its remaining defensive rights).
 
 .. container:: rule-guide
 
-   **Why:** Names the actual stopping condition — the MOVED/FIRED marker — rather than a simple "once per turn" count, since some units (ROF weapons, Assault-economy units) legitimately activate more than once before reaching that state.
+   **Why:** Names the actual stopping condition — the MOVED/FIRED marker — rather than a simple "once per turn" count, since some units (F#-capable weapons, Assault-economy units) legitimately activate more than once before reaching that state.
 
    **Example:** A tripod HMG fires three times this turn (FIRED 1, FIRED 2, FIRED 3), each a separate 1-AP activation, before finally reaching MOVED/FIRED on its third shot. An ordinary rifle squad reaches MOVED/FIRED after just one Regular Fire.
 
@@ -59,11 +59,11 @@ Section 6 — Actions and Reactions
 
    **Example:** Bravo could have fired on Alpha crossing hex A but chose to hold. Once Alpha moves on to hex B, that specific opportunity is gone — Bravo's player cannot retroactively claim it — though hex B is a brand-new window Bravo may react to if it still has RP and capacity.
 
-  - A unit using the ordinary (non-ROF) economy reacts with an **Assault Fire** (Rule 6.3.3, half effective rFP): a fresh unit becomes ASSAULT-marked; an already ASSAULT-marked unit becomes MOVED/FIRED.
-  - A stationary weapon with ROF greater than 1 (Rule 6.6) reacts at **full effective rFP**, expending one FIRED pip.
+  - A unit using the ordinary (F1) economy reacts with an **Assault Fire** (Rule 6.3.3, half effective rFP): a fresh unit becomes ASSAULT-marked; an already ASSAULT-marked unit becomes MOVED/FIRED.
+  - A stationary weapon with F# greater than 1 (Rule 6.6) reacts at **full effective rFP**, expending one FIRED pip.
   - A unit already MOVED/FIRED may not react with Opportunity Fire (the sole exception is Desperate Fire against its own attackers, Rule 6.7.1).
 
-A unit may react more than once per turn while it still has an unspent part-action, ROF pip, or (for Desperate Fire) is the actual target of a close assault — reacting is limited by resources (RP) and remaining capacity, not by a fixed count.
+A unit may react more than once per turn while it still has an unspent part-action, F# pip, or (for Desperate Fire) is the actual target of a close assault — reacting is limited by resources (RP) and remaining capacity, not by a fixed count.
 
 6.3  Regular and Assault Actions
 ---------------------------------
@@ -105,7 +105,7 @@ A unit may react more than once per turn while it still has an unspent part-acti
      - Move one unit up to its M# movement allowance (Section 7). → MOVED/FIRED.
    * - Fire
      - 1
-     - One attack at full effective rFP (Section 8). → MOVED/FIRED — unless the firing weapon is a stationary weapon with ROF greater than 1 (Rule 6.6), which is marked FIRED 1 instead and may fire again.
+     - One attack at full effective rFP (Section 8). → MOVED/FIRED — unless the firing weapon is a stationary weapon with F# greater than 1 (Rule 6.6), which is marked FIRED 1 instead and may fire again.
    * - Close Assault
      - 1
      - Declare close assault against an adjacent occupied enemy hex. A completely fresh unit (no ASSAULT, FIRED, or MOVED/FIRED marker present this turn) may declare freely. See Section 9 and Rule 6.3.3 for the ASSAULT-marked case.
@@ -117,7 +117,7 @@ A unit may react more than once per turn while it still has an unspent part-acti
      - Remove MOBILE marker from a weapon counter. The weapon may not fire in the impulse it deploys, but is not otherwise marked — it may still take a Regular or Assault action (including Fire) in a later impulse this turn.
    * - Limber Weapon
      - 1
-     - Place MOBILE marker on a deployed weapon counter. The weapon may not fire in the impulse it limbers. A weapon that has expended its printed ROF this turn may not limber until the following turn (Rule 6.6.5).
+     - Place MOBILE marker on a deployed weapon counter. The weapon may not fire in the impulse it limbers. A weapon that has expended its printed F# this turn may not limber until the following turn (Rule 6.6.5).
    * - Accept Surrender
      - 1
      - Formally accept surrender of Dispersed enemy unit in same or adjacent hex. Place GUARD marker on accepting unit.
@@ -243,7 +243,7 @@ The following reactions are available to the non-active player during a reaction
 
    **Why:** Collects every action marker's meaning in one table so a player can read a counter's current marker and immediately know both what it's already done and what, if anything, it can still do.
 
-   **Example:** A unit displaying MOVED/FIRED has used its entire turn; one displaying ASSAULT has one part-action left; one displaying FIRED 2 (a ROF weapon) has one more shot available before reaching MOVED/FIRED.
+   **Example:** A unit displaying MOVED/FIRED has used its entire turn; one displaying ASSAULT has one part-action left; one displaying FIRED 2 (an F#-capable weapon) has one more shot available before reaching MOVED/FIRED.
 
 .. list-table::
    :header-rows: 1
@@ -254,12 +254,12 @@ The following reactions are available to the non-active player during a reaction
    * - ASSAULT
      - One Assault part-action spent this turn; one remains (Rule 6.3.3).
    * - FIRED 1 / FIRED 2 / FIRED 3
-     - A stationary ROF-greater-than-1 weapon has fired that many times this turn (Rule 6.6).
+     - A stationary F#-greater-than-1 weapon has fired that many times this turn (Rule 6.6).
    * - MOVED/FIRED
      - The unit is done for the turn — no further movement or fire (Rule 6.7 covers its remaining defensive rights).
 
 
-**6.5.2**  A unit displaying ASSAULT or a FIRED pip may be activated again this turn to take its remaining part-action or ROF fire; a unit displaying MOVED/FIRED may not.
+**6.5.2**  A unit displaying ASSAULT or a FIRED pip may be activated again this turn to take its remaining part-action or F# fire; a unit displaying MOVED/FIRED may not.
 
 .. container:: rule-guide
 
@@ -267,13 +267,13 @@ The following reactions are available to the non-active player during a reaction
 
    **Example:** Alpha carries ASSAULT. Its player may spend another 1 AP to activate it again for its second part-action. Bravo carries MOVED/FIRED and cannot be activated again this turn at all.
 
-**6.5.3**  A unit's Regular or Assault economy and its ROF track never apply at once: a weapon firing under ROF (Rule 6.6) never carries an ASSAULT marker, and a unit carrying ASSAULT is, by definition, not exercising ROF this turn.
+**6.5.3**  A unit's Regular or Assault economy and its F# track never apply at once: a weapon firing under F# (Rule 6.6) never carries an ASSAULT marker, and a unit carrying ASSAULT is, by definition, not exercising F# this turn.
 
 .. container:: rule-guide
 
-   **Why:** The two systems (Assault economy and ROF) are two different tracks that never overlap on the same unit in the same turn, closing off a potential combination — an ASSAULT-marked weapon later claiming ROF, or vice versa — that neither system was designed to interact with.
+   **Why:** The two systems (Assault economy and F#) are two different tracks that never overlap on the same unit in the same turn, closing off a potential combination — an ASSAULT-marked weapon later claiming F#, or vice versa — that neither system was designed to interact with.
 
-   **Example:** A tripod HMG firing under ROF is never marked ASSAULT — it uses the FIRED 1/2/3 track exclusively. A unit that has taken an Assault Move (ASSAULT marker) is, by definition, in the Assault economy, not exercising ROF.
+   **Example:** A tripod HMG firing under F# is never marked ASSAULT — it uses the FIRED 1/2/3 track exclusively. A unit that has taken an Assault Move (ASSAULT marker) is, by definition, in the Assault economy, not exercising F#.
 
 **6.5.4**  All action markers (ASSAULT, FIRED 1/2/3, MOVED/FIRED, CARELESS) are removed during the Recovery Phase at the start of the following turn.
 
@@ -287,28 +287,28 @@ The following reactions are available to the non-active player during a reaction
 -------------------------------------------------
 
 
-**6.6.1**  Some weapons may fire more than once per turn while stationary — the printed F# value on the counter (Rule 3.3.2), which **is** the weapon's Rate of Fire (ROF), not a separate number from it. F# is keyed to mount type, per the table below.
+**6.6.1**  Some weapons may fire more than once per turn while stationary — the printed F# value on the counter (Rule 3.3.2) determines how many times. F# is keyed to mount type, per the table below.
 
 .. container:: rule-guide
 
-   **Why:** F# and ROF used to be two different numbers claiming to describe the same thing; design note E.109 merged them into the one printed stat this rule reads directly, rather than a separate rules-text value the counter's own printed number had nothing to do with.
+   **Why:** F# used to be tracked as two different numbers claiming to describe the same thing — a printed stat and a separate rules-text value; design note E.109 merged them into the one printed stat this rule reads directly.
 
-   **Example:** A tripod HMG's printed F3 is the same number Rule 6.6.2's table would assign it by mount type — reading the counter and reading the table give the identical answer, because they're now the same fact.
+   **Example:** A tripod HMG's printed F3 is the same number Rule 6.6.2's table would assign it by mount type — reading the counter and reading the table give the identical answer, because they're the same fact.
 
-**6.6.2**  ROF by weapon:
+**6.6.2**  F# by weapon:
 
 .. container:: rule-guide
 
-   **Why:** Keys ROF specifically to the mount type — tripod vs. bipod vs. anything else — rather than to weapon class alone, since it's the pre-sighted, planted mount, not the gun itself, that buys the extra bursts.
+   **Why:** Keys F# specifically to the mount type — tripod vs. bipod vs. anything else — rather than to weapon class alone, since it's the pre-sighted, planted mount, not the gun itself, that buys the extra bursts.
 
-   **Example:** An HMG on its tripod gets ROF 3. The same class of gun, if printed as a bipod-mounted variant, only gets ROF 2 — and only while stationary (Rule 6.6.4).
+   **Example:** An HMG on its tripod gets F3. The same class of gun, if printed as a bipod-mounted variant, only gets F2 — and only while stationary (Rule 6.6.4).
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - **Weapon**
-     - **ROF (stationary)**
+     - **F# (stationary)**
      - **Notes**
    * - HMG team, deployed (tripod)
      - 3
@@ -324,37 +324,37 @@ The following reactions are available to the non-active player during a reaction
      - One full-effect fire is the unit's entire turn (Rule 6.3.2); the Assault economy (Rule 6.3.3) is its only path to a second, reduced shot.
 
 
-**6.6.3**  A stationary ROF-greater-than-1 weapon's Regular Fire is a full-effect attack (Rule 6.3.2); it is marked FIRED 1 rather than MOVED/FIRED, and while fire remains under its ROF it may be activated again this turn (1 AP each) for FIRED 2, then FIRED 3. Once its ROF is expended, mark MOVED/FIRED.
+**6.6.3**  A stationary F#-greater-than-1 weapon's Regular Fire is a full-effect attack (Rule 6.3.2); it is marked FIRED 1 rather than MOVED/FIRED, and while fire remains under its F# it may be activated again this turn (1 AP each) for FIRED 2, then FIRED 3. Once its F# is expended, mark MOVED/FIRED.
 
 .. container:: rule-guide
 
-   **Why:** Gives ROF weapons their own marker progression (FIRED 1/2/3) distinct from ASSAULT, since a ROF weapon's shots are all at full effect, unlike an Assault economy's reduced-effect part-actions — they need a different track to say so.
+   **Why:** Gives F#-capable weapons their own marker progression (FIRED 1/2/3) distinct from ASSAULT, since their shots are all at full effect, unlike an Assault economy's reduced-effect part-actions — they need a different track to say so.
 
-   **Example:** A tripod HMG (ROF 3) fires three separate times this turn, each a full-effect Regular Fire, marked FIRED 1, then FIRED 2, then FIRED 3 in turn. Only after the third shot does it become MOVED/FIRED.
+   **Example:** A tripod HMG (F3) fires three separate times this turn, each a full-effect Regular Fire, marked FIRED 1, then FIRED 2, then FIRED 3 in turn. Only after the third shot does it become MOVED/FIRED.
 
-**6.6.4**  ROF applies only in a turn the weapon has not moved. A weapon that takes any Move action this turn — Regular or Assault — is in the ordinary Assault economy for the rest of its turn: no weapon fires at ROF greater than 1 in a turn it moved. An LMG (or any bipod-capable MG) that chooses to move therefore fights like any other unit — one crewman operating it off the bipod, at half rFP.
-
-.. container:: rule-guide
-
-   **Why:** Ties the extra bursts specifically to staying planted — the moment a ROF weapon moves, whatever pre-sighting or range-carding gave it those extra shots is gone, so it drops to the ordinary Assault economy for the rest of that turn.
-
-   **Example:** An LMG team takes an Assault Move this turn. Even though it's a ROF-2 weapon while stationary, having moved it no longer qualifies — its only remaining option this turn is an ordinary Assault Fire at half rFP, not a second full-effect ROF shot.
-
-**6.6.5**  A deployed weapon that has expended its printed ROF this turn may not Limber (Rule 6.3.2) until the following turn — the crew is serving the gun, not packing it up.
+**6.6.4**  F# greater than 1 applies only in a turn the weapon has not moved. A weapon that takes any Move action this turn — Regular or Assault — is in the ordinary Assault economy for the rest of its turn: no weapon fires above F1 in a turn it moved. An LMG (or any bipod-capable MG) that chooses to move therefore fights like any other unit — one crewman operating it off the bipod, at half rFP.
 
 .. container:: rule-guide
 
-   **Why:** Reflects that a crew actively serving a gun at ROF this turn hasn't had the time or free hands to also break it down and pack it up — Limbering is a separate, incompatible activity from that turn's firing.
+   **Why:** Ties the extra bursts specifically to staying planted — the moment a weapon with F# greater than 1 moves, whatever pre-sighting or range-carding gave it those extra shots is gone, so it drops to the ordinary Assault economy for the rest of that turn.
 
-   **Example:** A tripod HMG fires all three of its ROF shots this turn (reaching MOVED/FIRED). Its crew cannot also Limber the weapon this same turn — that must wait until next turn.
+   **Example:** An LMG team takes an Assault Move this turn. Even though it's an F2 weapon while stationary, having moved it no longer qualifies — its only remaining option this turn is an ordinary Assault Fire at half rFP, not a second full-effect F# shot.
 
-**6.6.6**  *Resolved — see design note E.109.* F# and ROF are one stat, not two: the printed F# value on any counter is read directly from the Rule 6.6.2 table for that weapon's mount type. A weapon type not yet listed in that table (a future addition to the counter mix, such as a towed AT gun) has no defined rate yet and needs a new row added when it's designed — not a second, separate stat to reconcile against.
+**6.6.5**  A deployed weapon that has expended its printed F# this turn may not Limber (Rule 6.3.2) until the following turn — the crew is serving the gun, not packing it up.
 
 .. container:: rule-guide
 
-   **Why:** Closes out what was an explicitly flagged interim state rather than leaving it to quietly age — F#'s relationship to ROF is no longer unresolved, it's the same number. What remains genuinely open is narrower and more honest: extending Rule 6.6.2's table to weapon classes it doesn't cover yet, which is ordinary future counter design, not a reconciliation debt.
+   **Why:** Reflects that a crew actively serving a gun under F# this turn hasn't had the time or free hands to also break it down and pack it up — Limbering is a separate, incompatible activity from that turn's firing.
 
-   **Example:** Adding a towed AT gun to the roster later means adding a row to Rule 6.6.2's table (and printing that value as its F#) — there's no separate F#-vs-ROF question to resolve for it, only the ordinary design question of what its stationary rate of fire should be.
+   **Example:** A tripod HMG fires all three of its F# shots this turn (reaching MOVED/FIRED). Its crew cannot also Limber the weapon this same turn — that must wait until next turn.
+
+**6.6.6**  *Resolved — see design note E.109.* F# is read directly from the Rule 6.6.2 table for that weapon's mount type. A weapon type not yet listed in that table (a future addition to the counter mix, such as a towed AT gun) has no defined rate yet and needs a new row added when it's designed — not a second, separate stat to reconcile against.
+
+.. container:: rule-guide
+
+   **Why:** Closes out what was an explicitly flagged interim state rather than leaving it to quietly age — F# is no longer a separate, unresolved question, it comes straight from the table. What remains genuinely open is narrower and more honest: extending Rule 6.6.2's table to weapon classes it doesn't cover yet, which is ordinary future counter design, not a reconciliation debt.
+
+   **Example:** Adding a towed AT gun to the roster later means adding a row to Rule 6.6.2's table (and printing that value as its F#) — there's no separate question to resolve for it, only the ordinary design question of what its stationary rate of fire should be.
 
 6.7  Desperate Fire and Close-Combat Defense
 -----------------------------------------------

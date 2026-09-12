@@ -30,7 +30,7 @@ Mortar counters display four specialist stats in addition to standard Defence an
      - Base ammunition per scenario. Secret bonus added at setup. See Rule 16.3.
 
 
-All mortar counters use M1 F1 (mobile) or M0 F2 (deployed) — F2 while deployed is the mortar's ROF, per Rule 6.6.2. Mortar teams must deploy before firing — same deploy/limber rules as HMG teams (Section 7.6).
+All mortar counters use M1 F1 (mobile) or M0 F2 (deployed), per Rule 6.6.2. Mortar teams must deploy before firing — same deploy/limber rules as HMG teams (Section 7.6).
 
 16.2  Representative Mortar Counters — 1943
 -------------------------------------------

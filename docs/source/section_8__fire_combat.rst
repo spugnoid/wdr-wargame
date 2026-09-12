@@ -451,7 +451,7 @@ The full procedure for any fire combat action:
 ---------------------------------
 
 
-**8.10.1**  Assault Fire (Rule 6.3.3) and reaction fire (Rule 6.2.3) are ordinary fire attacks resolved by this section, at half effective rFP rather than full — nothing else about their resolution differs. A stationary ROF-greater-than-1 weapon's reaction (Rule 6.6) is a full-effective-rFP attack instead, exactly like its own Regular Fire.
+**8.10.1**  Assault Fire (Rule 6.3.3) and reaction fire (Rule 6.2.3) are ordinary fire attacks resolved by this section, at half effective rFP rather than full — nothing else about their resolution differs. A stationary F#-greater-than-1 weapon's reaction (Rule 6.6) is a full-effective-rFP attack instead, exactly like its own Regular Fire.
 
 .. container:: rule-guide
 

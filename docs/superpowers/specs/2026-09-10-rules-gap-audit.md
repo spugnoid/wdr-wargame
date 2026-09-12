@@ -968,3 +968,36 @@ Test suite: 114 passing (up from 110), including coverage that Tiger's
 Hull Top loads dramatically weaker than its Hull Side (the whole point
 of the module) and that every unsourced vehicle correctly has no Top
 rows at all.
+
+## Update — 2026-09-11 (part 12): F# and ROF fully consolidated — one name, not just one number
+
+Asked directly: consolidate F# and ROF, pick one, eliminate the other,
+globally. E.109 (much earlier in this session) had already resolved
+the two down to one *number* — the printed counter stat and the
+rules-text "Rate of Fire" concept had always been the same fact, just
+tracked independently until that note merged them. What E.109 left
+standing was two *names* for that one number: "F#" at the points a
+rule addressed the printed stat directly, "ROF" everywhere the prose
+described the underlying capability ("a stationary weapon firing under
+ROF," an "ROF-greater-than-1 weapon," an "ROF pip").
+
+F# is the name that survives — it's what's physically printed on the
+counter, in the same abbreviation family as every other table-side stat
+(rFP, M#, G#, CMD, OBS). Every live occurrence of "ROF" across Sections
+1, 3, 6, 7, 8, 16, and 21, and Appendix F's index, is replaced with the
+grammatically-adapted F# equivalent ("ROF weapon" → "F#-capable
+weapon," "non-ROF economy" → "F1," and so on). Section 6.6's own
+rule-guide text, which used to narrate *why* F# and ROF were being
+merged, is simplified now that there's nothing left to merge.
+
+Design note E.109 itself, and the handful of `counters/infantry_calc`
+CSV row notes and one test docstring that cite it by name, are
+deliberately untouched — dated historical records of a decision made
+when two names genuinely were in play, same as every other design note
+in this project. Rewriting them to erase the terminology they were
+actually resolving would falsify the record, not clarify it.
+
+New design note E.121. Prose-only change — no rule, number, or CSV
+value moved. `sphinx -W` clean (design-note prose double-checked for
+the same asterisk-adjacent-to-backtick nesting failure from parts 8/10
+— clean). Test suite unaffected: 162 passing.

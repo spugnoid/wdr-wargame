@@ -339,7 +339,7 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
 
 .. container:: rule-guide
 
-   **Why:** Makes MOBILE and "can fire" mutually exclusive by definition — a weapon being carried or towed isn't set up to shoot, matching Rule 6.6.4's parallel point that a moved ROF weapon drops out of its stationary firing mode.
+   **Why:** Makes MOBILE and "can fire" mutually exclusive by definition — a weapon being carried or towed isn't set up to shoot, matching Rule 6.6.4's parallel point that a moved F#-capable weapon drops out of its stationary firing mode.
 
    **Example:** A weapon counter still carrying its MOBILE marker cannot be declared as firing this turn, regardless of what its printed fire stats would otherwise allow — it must first deploy (7.6.3).
 
@@ -351,13 +351,13 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
 
    **Example:** A weapon counter spends 1 AP to remove its MOBILE marker (deploy). It cannot also fire in that same impulse — firing must wait for a later activation this turn.
 
-**7.6.4**  Adding the MOBILE marker (limbering the weapon) costs 1 AP. The weapon may not fire in the same impulse it limbers. A weapon that expended its printed ROF this turn (Rule 6.6) may not limber until the following turn.
+**7.6.4**  Adding the MOBILE marker (limbering the weapon) costs 1 AP. The weapon may not fire in the same impulse it limbers. A weapon that expended its printed F# this turn (Rule 6.6) may not limber until the following turn.
 
 .. container:: rule-guide
 
-   **Why:** Mirrors 7.6.3 for the reverse action, and cross-references the same ROF-expenditure restriction already established in Rule 6.6.5, so the two "packing up" rules — Section 6's ROF-specific one and this general one — stay consistent with each other.
+   **Why:** Mirrors 7.6.3 for the reverse action, and cross-references the same F#-expenditure restriction already established in Rule 6.6.5, so the two "packing up" rules — Section 6's F#-specific one and this general one — stay consistent with each other.
 
-   **Example:** A weapon counter spends 1 AP to add its MOBILE marker (limber). If that weapon expended its printed ROF earlier this turn, it cannot limber until next turn — the same restriction Rule 6.6.5 already states for ROF weapons specifically.
+   **Example:** A weapon counter spends 1 AP to add its MOBILE marker (limber). If that weapon expended its printed F# earlier this turn, it cannot limber until next turn — the same restriction Rule 6.6.5 already states for F#-capable weapons specifically.
 
 7.7  Night Movement Risk
 -------------------------

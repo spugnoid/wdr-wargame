@@ -101,11 +101,11 @@ The upper right corner of each counter shows three action values:
 
    **Example:** A deployed HMG team prints M0 F3 G1 — it can still fire and use grenades in an assault, but cannot move until it's limbered (switching to its M1 F0 G0 mobile profile).
 
-**3.3.2**  F# — Rate of Fire (ROF).  The number of full-effect fire actions the unit may take per turn while stationary, read directly from Rule 6.6.2's table: **1** for the great majority of units — a single Regular Fire ends their turn (Rule 6.3.2), with the reduced-effect Assault economy (Rule 6.3.3) as their only path to a second, weaker shot — **2** for a bipod- or light-tripod-mounted MG or a deployed mortar, **3** for a tripod-deployed MG. A unit that moves this turn never fires at more than F1 regardless of its printed value (Rule 6.6.4).
+**3.3.2**  F# — Rate of Fire.  The number of full-effect fire actions the unit may take per turn while stationary, read directly from Rule 6.6.2's table: **1** for the great majority of units — a single Regular Fire ends their turn (Rule 6.3.2), with the reduced-effect Assault economy (Rule 6.3.3) as their only path to a second, weaker shot — **2** for a bipod- or light-tripod-mounted MG or a deployed mortar, **3** for a tripod-deployed MG. A unit that moves this turn never fires at more than F1 regardless of its printed value (Rule 6.6.4).
 
 .. container:: rule-guide
 
-   **Why:** F# and ROF were, for a long stretch of this document's history, two different numbers claiming to describe the same thing — a printed stat nothing consulted, and a separate rules-text value nothing printed. Design note E.109 merged them: there is exactly one number, it is printed on the counter, and Rule 6.6.2 is simply where its value comes from for any given weapon class.
+   **Why:** F# was, for a long stretch of this document's history, tracked as two different numbers claiming to describe the same thing — a printed stat nothing consulted, and a separate rules-text value nothing printed. Design note E.109 merged them: there is exactly one number, it is printed on the counter, and Rule 6.6.2 is simply where its value comes from for any given weapon class.
 
    **Example:** A rifle squad prints F1 — its printed value and Rule 6.6.2's "any other unit" row are the same fact stated once. A tripod HMG prints F3, matching the tripod row exactly; a bipod LMG prints F2, matching the bipod row. None of these numbers need a separate lookup to know what they mean.
 
@@ -138,10 +138,10 @@ The upper right corner of each counter shows three action values:
      -
    * - LMG team
      - M2 F2 G2
-     - Bipod ROF (Rule 6.6.2) — sustained fire while stationary
+     - Bipod F# (Rule 6.6.2) — sustained fire while stationary
    * - HMG team (deployed)
      - M0 F3 G1
-     - Cannot move while deployed; tripod ROF (Rule 6.6.2)
+     - Cannot move while deployed; tripod F# (Rule 6.6.2)
    * - HMG team (mobile)
      - M1 F0 G0
      - Cannot fire while mobile
@@ -269,7 +269,7 @@ The upper right corner of each counter shows three action values:
 
 Small markers are placed on or beside unit counters to track their current state. Action markers (ASSAULT, FIRED 1/2/3, MOVED/FIRED, CARELESS) are removed during the Recovery Phase at the start of each turn; status markers (SUPPRESSED, PINNED, and the like) persist until removed by their own rules — a recovery roll, a rally, or the condition ending (Rules 5.2.2–5.2.4).
 
-FIRED 1/2/3 is a progression of three physical chits — one showing "1", the next "2", the next "3" — swapped in as a stationary ROF weapon's fire count climbs this turn, standard practice for tracking a step count on a physical counter. MOVED/FIRED and CARELESS, by contrast, are one physical component — a two-sided marker — since Careless Movement (Rule 7.4) is only ever taken as a Regular Move action, which always ends the unit's turn; a unit is never MOVED/FIRED-without-CARELESS-info-loss and CARELESS-without-MOVED/FIRED at once, so a unit is never in a state needing both faces shown simultaneously (Rule 7.4.2). See design notes E.96–E.97.
+FIRED 1/2/3 is a progression of three physical chits — one showing "1", the next "2", the next "3" — swapped in as a stationary F#-capable weapon's fire count climbs this turn, standard practice for tracking a step count on a physical counter. MOVED/FIRED and CARELESS, by contrast, are one physical component — a two-sided marker — since Careless Movement (Rule 7.4) is only ever taken as a Regular Move action, which always ends the unit's turn; a unit is never MOVED/FIRED-without-CARELESS-info-loss and CARELESS-without-MOVED/FIRED at once, so a unit is never in a state needing both faces shown simultaneously (Rule 7.4.2). See design notes E.96–E.97.
 
 .. list-table::
    :header-rows: 1
@@ -280,7 +280,7 @@ FIRED 1/2/3 is a progression of three physical chits — one showing "1", the ne
    * - ASSAULT
      - Unit has taken one Assault part-action this turn; one remains (Rule 6.3.3)
    * - FIRED 1
-     - Stationary ROF-greater-than-1 weapon has fired once this turn (Rule 6.6)
+     - Stationary F#-greater-than-1 weapon has fired once this turn (Rule 6.6)
    * - FIRED 2
      - Fired twice this turn
    * - FIRED 3

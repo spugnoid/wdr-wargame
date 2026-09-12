@@ -45,7 +45,7 @@ G.2  Tier by Section
      -
    * - 6 — Actions and Reactions
      - Basic
-     - Includes ROF weapons (Rule 6.6) — central to how MG counters already work, not an add-on
+     - Includes F#-capable weapons (Rule 6.6) — central to how MG counters already work, not an add-on
    * - 7 — Movement
      - Basic
      - Careless Movement (Rule 7.4) is Standard — a real tactical option, not required to play

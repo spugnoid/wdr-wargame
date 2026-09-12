@@ -17,7 +17,7 @@ states (ABANDONED, DAMAGED, DESTROYED)  ..........  19.3.1
 
 ASSAULT marker  ..........  6.5.1, 6.3.3
 
-FIRED 1/2/3 markers (ROF weapons)  ..........  6.5.1, 6.6
+FIRED 1/2/3 markers (F#-capable weapons)  ..........  6.5.1, 6.6
 
 MOVED/FIRED marker (shared two-sided marker with CARELESS)  ..........  6.5.1, 3.6
 
@@ -553,7 +553,7 @@ anti-cheat function  ..........  16.5.4, E.31
 
 fields  ..........  16.12
 
-**Fire rate (F#) — same stat as ROF, see E.109**  ..........  3.3.2, 6.6
+**Fire rate (F#)**  ..........  3.3.2, 6.6, E.109
 
 values by mount type (1/2/3)  ..........  6.6.2
 
@@ -913,7 +913,7 @@ free vs careless movement  ..........  7.4.3
 
 trigger: enemy moves into LOS or fires  ..........  6.4
 
-marking consequences (Assault Fire or ROF pip)  ..........  6.2.3
+marking consequences (Assault Fire or F# pip)  ..........  6.2.3
 
 **Out of command**  ..........  12.4
 
