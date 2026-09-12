@@ -273,6 +273,7 @@ Most WWII engagements ended not with one side physically eliminated but with one
      - Average of all units
      - Calculate per unit, sum, divide by count
 
+*Sourcing note (E.153): Steven J. Zaloga's* US Airborne Divisions in the ETO 1944-45 *(Osprey Battle Orders 25) was read to open a research thread on this project's complete absence of an Airborne/Paratrooper unit type — "airborne" appears in this project only as an exemplar in tables like this one, never as a structured roster row. The book gives real, citable support for parachute infantry specifically (volunteer recruitment, dedicated jump training, a historian's own judgment that "the excellent training and esprit de corps of the paratroopers helped to overcome the shortcomings in the tactics and divisional organization") but is equally explicit that glider infantry within the same airborne divisions were NOT an elite population — no jump training, no jump pay, "little separated the glider infantry... from ordinary infantry." This table's "airborne" exemplar is accurate for parachute infantry specifically but would overstate glider infantry if the two were ever broken out as separate Force Quality entries. No change made to this table — see* ``counters/toe/us_airborne_zaloga_1943.md`` *for full citations.*
 
 **15.5.3**  When the total count of CI units plus routing units reaches the Force Morale value, a Force Morale check is triggered immediately.
 

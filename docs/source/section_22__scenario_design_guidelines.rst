@@ -159,6 +159,7 @@ Every scenario sheet must include the following parameters. Players read these b
    * - Mixed — calculate weighted average
      - Sum (units × individual factor) ÷ total units
 
+*Sourcing note (E.153): Steven J. Zaloga's* US Airborne Divisions in the ETO 1944-45 *(Osprey Battle Orders 25) supports this table's "airborne" exemplar for parachute infantry specifically (volunteer recruitment, dedicated jump training, a historian's judgment that training and esprit de corps "helped to overcome the shortcomings" elsewhere in the formation) but documents that glider infantry within the same divisions were explicitly NOT trained, paid, or treated as an elite population — a real distinction this table's single "airborne" label doesn't carry. No change made to this table — see* ``counters/toe/us_airborne_zaloga_1943.md`` *for full citations.*
 
 **22.3.4**  Example: German force of 8 units, 3 veteran (factor 0.5) and 5 regular (factor 0.4). Force Morale = floor(3×0.5 + 5×0.4) = floor(3.5) = 3 (round down, minimum 1 — Rule 15.5.1).
 
