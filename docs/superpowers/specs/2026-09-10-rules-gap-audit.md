@@ -1771,3 +1771,29 @@ vehicle_top_armor_1943.md and vehicles.csv updated. Appendix H
 regenerated (row count unchanged, one figure corrected). Test suite:
 177 passing (up from 176). `sphinx -W` clean (one more asterisk-in-
 book-title nesting leak caught and fixed).
+
+## Update — 2026-09-12 (part 31): Panzer III's top armor -- a plausible candidate, ruled out
+
+A generically-named "Panzer III" title in the reference collection
+looked worth trying given Panzer Tracts No.8's success one book ago.
+It wasn't the right book: Culver's *Panzer III in Action*
+(Squadron/Signal, 1972) is a photo-caption album whose own
+introduction states "there is no text to speak of." Read in full (48
+pages) -- no armor-thickness data of any kind, for any plate, anywhere.
+Confirmed NOT to be, or cite, Panzer Tracts No. 3-3 (Jentz & Doyle),
+which remains the genuinely best-named and still-inaccessible source
+for this gap.
+
+One circumstantial, non-numeric corroboration: a caption independently
+confirms bolt-on face-hardened applique armor was added to Panzer III
+in response to the British 6pdr, consistent with (but not refining)
+the project's existing layered-plate treatment. One real, dated
+anecdote surfaced incidentally: Hauptmann Peter Frantz's StuG III unit
+destroyed 43 T-34s near Stanowoje, 14 March 1943 -- specific and dated
+but not detailed enough (no gun/range given) for a Rule 18.12 entry
+without more work.
+
+New design note E.139. No data or test changes -- a clean negative,
+ruling out one plausible candidate. vehicle_top_armor_1943.md updated.
+`sphinx -W` clean on the first build (avoided the recurring book-title-
+in-italics leak this time by not nesting emphasis around book titles).

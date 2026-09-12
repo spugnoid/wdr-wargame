@@ -440,7 +440,19 @@ One well-documented, on-point incident/finding was located:
    to read the closest proxy diagram's small callout numbers with confidence.
    *Panzer Tracts No. 3-3* (Pz III) and *No. 4-3* (Pz IV, beyond the p.50
    citation already found) remain inaccessible — still the likely path to
-   resolving Panzer III's own top-armor dispute.
+   resolving Panzer III's own top-armor dispute. **Update 2026-09-12: one
+   plausible-sounding candidate has been tried and ruled out.** A generically-
+   named "Panzer III" book in the project's reference material turned out to
+   be Culver, *Panzer III in Action* (Squadron/Signal, 1972) — a photo-caption
+   album whose own introduction states "there is no text to speak of," and
+   which contains no armor-thickness data of any kind, confirmed by a full
+   48-page direct read. It is not, and does not cite, *Panzer Tracts No.
+   3-3*, which remains genuinely inaccessible. One incidental non-armor find:
+   p.40 names a real, dated anecdote (Hauptmann Peter Frantz's StuG III unit
+   destroying 43 T-34s near Stanowoje, 14 March 1943) — not independently
+   verified or detailed enough (no specific range/gun given) for a Rule 18.12
+   entry yet, but a real lead if this project ever wants one for StuG III.
+   See `counters/toe/panzer3_top_armor_1943.md`.
 2. **RESOLVED 2026-09-12, design note E.134 — a clean negative, not a gap.**
    A direct read of Bird & Livingston's own Ch.14 "Armor Data for Selected
    Vehicles" (the book itself, not a secondhand transcription) found the
