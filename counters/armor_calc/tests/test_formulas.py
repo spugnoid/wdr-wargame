@@ -236,6 +236,71 @@ class TestBritishGunCurveFits:
         assert fit.pen_0deg(1000) < tiger_hull_front_av - 10  # Bounce
 
 
+class TestPAK40GunCurveFits:
+    """The project's first towed anti-tank gun (Rule 17.1a) -- no vehicle
+    counter accompanies these rows, since a towed gun has no armour of its
+    own (see counters/toe/pak40_1943.md). Both K-factors are unsourced,
+    same constrained-search methodology as the British 6pdr/17pdr: an
+    unconstrained search hits the identical degenerate pattern (K=223,
+    exponent=25.75 for PzGr 39) as the 6pdr did, rejected for the same
+    reason."""
+
+    def test_pzgr39_apcbc_matches_period_german_document(self):
+        """4-pt fit at 30deg obliquity vs the Nachrichtenblatt zur
+        Panzerbeschusstafel (Nov 1942), independently corroborated within
+        1-2mm by Panzerworld's separate citation."""
+        fit = fit_gun_curve(
+            muzzle_velocity_fps=2592,
+            k_factor=1954,
+            calibration_ranges_m=[100, 500, 1000, 1500],
+            calibration_pens_mm=[108, 96, 80, 64],
+            calibration_angle_deg=30,
+            projectile_diameter_mm=75,
+        )
+        assert fit.confidence == "fitted"
+        assert 0.8 <= fit.exponent <= 3.0
+        expected_0deg = effective_0deg_resistance(np.array([108.0, 96.0, 80.0, 64.0]), 75, 30.0)
+        for r, exp in zip([100, 500, 1000, 1500], expected_0deg):
+            assert fit.pen_0deg(r) == pytest.approx(float(exp), rel=0.021)
+
+    def test_pzgr40_apcr_matches_period_german_document(self):
+        """4-pt fit at 30deg obliquity, same source as the APCBC row.
+        Muzzle velocity (990 m/s) is the German-document figure; a second
+        source (Aberdeen/British Ordnance Board) gives 933 m/s instead, a
+        real ~3% discrepancy not resolved -- used the value matching the
+        calibration data's own source for internal consistency."""
+        fit = fit_gun_curve(
+            muzzle_velocity_fps=3248,
+            k_factor=2356,
+            calibration_ranges_m=[100, 500, 1000, 1500],
+            calibration_pens_mm=[143, 120, 97, 77],
+            calibration_angle_deg=30,
+            projectile_diameter_mm=75,
+            family="hvap76",
+        )
+        assert fit.confidence == "fitted"
+        expected_0deg = effective_0deg_resistance(np.array([143.0, 120.0, 97.0, 77.0]), 75, 30.0, family="hvap76")
+        for r, exp in zip([100, 500, 1000, 1500], expected_0deg):
+            assert fit.pen_0deg(r) == pytest.approx(float(exp), rel=0.007)
+
+    def test_pzgr39_penetrates_t34_hull_front_at_typical_combat_range(self):
+        """Historical sanity check: the PaK 40 was, per Wikipedia's own
+        summary assessment, 'effective against almost every Allied tank
+        until the end of the war' -- this should hold against the T-34,
+        the gun's most commonly-cited WW2 opponent. T-34 Model 1943 Hull
+        Front AV-vs-Capped = 93.7mm (existing roster data)."""
+        fit = fit_gun_curve(
+            muzzle_velocity_fps=2592,
+            k_factor=1954,
+            calibration_ranges_m=[100, 500, 1000, 1500],
+            calibration_pens_mm=[108, 96, 80, 64],
+            calibration_angle_deg=30,
+            projectile_diameter_mm=75,
+        )
+        t34_hull_front_av = 93.7
+        assert fit.pen_0deg(500) >= t34_hull_front_av + 10  # Automatic Penetration at typical combat range
+
+
 class TestSlopeMultipliers:
     def test_zero_angle_is_no_multiplier(self):
         assert slope_multiplier(0.0, 1.0, "capped") == pytest.approx(1.0, abs=0.01)

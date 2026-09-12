@@ -1261,6 +1261,14 @@ never a direct Gunnery Roll option  ..........  17.2a.2
 
 used by Sidehill Exposure and Heavy Mortar/Artillery modules  ..........  18.2c, 16.7.8a
 
+**Towed Anti-Tank Guns**  ..........  17.1a
+
+no AV, resolves as an ordinary weapon team when targeted  ..........  17.1a.2
+
+uses the Gunnery Roll and PEN-vs-AV vs. vehicles, like any vehicle-mounted gun  ..........  17.1a.3
+
+deploy/limber, F# 2 while deployed  ..........  17.1a.4, 6.6.2
+
 **Traverse rating (TRAV)**  ..........  17.4
 
 casemate TRAV 0  ..........  17.4.1

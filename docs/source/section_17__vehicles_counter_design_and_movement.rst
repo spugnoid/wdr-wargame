@@ -75,6 +75,41 @@ Vehicle counters display the following fields:
 
    **Example:** A StuG III (casemate, TRAV 0) resolves every incoming shot against its single set of Hull AV values — there's no possibility of a "Turret hit" outcome for this vehicle at all.
 
+17.1a  Towed Anti-Tank Guns
+-----------------------------
+
+**17.1a.1**  A towed anti-tank gun is a crew-served weapon team (Section 3), not a vehicle — it has no armour, no Hull/Turret profiles, and no MOB KILL/GUN KILL rear faces (Rule 17.1.1). Its counter prints a weapon team's usual fields (rFP/HE fire lines, Defence, Morale, M#, F#, per Section 3) plus a printed PEN line and Gunnery Table, exactly as a vehicle-mounted gun would (Rules 17.3, 18.1a) — everything else in this section that describes a vehicle's own protection simply does not apply to it.
+
+.. container:: rule-guide
+
+   **Why:** Gives a towed gun real anti-tank teeth — the same sourced ballistics and Gunnery Roll machinery every vehicle-mounted gun uses — without inventing a parallel weapon-team-with-armour concept that doesn't exist historically. A PaK 40 in a pit has excellent offence and essentially no protection of its own beyond the terrain it's sited in, and the counter should say exactly that.
+
+   **Example:** A PaK 40 counter prints a PEN line and a Gunnery Table identical in format to a Panzer IV's, but where the Panzer IV also prints six AV values across two profiles, the PaK 40 prints none at all — it has nothing to protect it but the hex it's dug into.
+
+**17.1a.2**  When targeted, a towed anti-tank gun resolves as an ordinary weapon team: Section 8 fire resolution against its own printed Defence and terrain cover, exactly like an HMG or mortar team. It has no AV to compare PEN against and cannot be "penetrated" — a Casualty result reduces it exactly as it would any other weapon team, and a Broken result eliminates it the same way.
+
+.. container:: rule-guide
+
+   **Why:** A towed gun's crew and equipment share a foxhole or gun pit, not an armoured hull — there is no physical armour plate for an incoming round to compare against, so the ordinary infantry-style margin table is the only resolution that makes physical sense, the same logic Rule 18.8.5 already applies to soft-skinned vehicles.
+
+   **Example:** An enemy tank's HE round lands on a PaK 40's position. It resolves as ordinary anti-infantry fire (Rule 18.8.1) against the gun's printed Defence and whatever cover its hex provides — never against an AV value, since it has none.
+
+**17.1a.3**  When firing at a vehicle, a towed anti-tank gun's attack uses the Gunnery Roll (Rule 18.1a) and the PEN-vs-AV comparison (Rule 18.2) exactly as a vehicle-mounted gun's would, reading its own printed Gunnery Table and PEN line. When firing at infantry, it uses its printed HE line under ordinary anti-infantry fire rules (Rule 18.8), at the same HE rFP = round(calibre/20) formula (Rule 18.8.4) every vehicle-mounted gun already uses.
+
+.. container:: rule-guide
+
+   **Why:** The Gunnery Roll's hit-probability model and the PEN-vs-AV comparison were never actually specific to being mounted on a vehicle — both depend only on the firing gun's own ballistics and the target vehicle's own armour, so a towed gun with the same real-world ballistics gets the identical, already-validated resolution rather than a separate system built just for it.
+
+   **Example:** A PaK 40 firing at a Sherman rolls its own Gunnery Table exactly as a Panzer IV would, then compares its printed PEN to the Sherman's AV under Rule 18.2 — nothing about the procedure changes because the gun sits in a pit instead of a turret.
+
+**17.1a.4**  A towed anti-tank gun deploys and limbers exactly as an HMG or mortar does (Rule 7.6): M0 and immobile while deployed, unable to fire while limbered for movement. Its F# is read from Rule 6.6.2's table like any other weapon.
+
+.. container:: rule-guide
+
+   **Why:** Reuses the deploy/limber system already built for exactly this situation — a crew-served weapon that trades mobility for sustained, accurate fire once planted — rather than inventing a parallel movement rule for one more weapon type that works the same way.
+
+   **Example:** A PaK 40 crew that limbers their gun to reposition cannot fire that same impulse, and cannot fire again at all until they deploy it once more (Rule 7.6) — identical to how an HMG team already handles the same trade-off.
+
 17.2  Armour Values
 -------------------
 

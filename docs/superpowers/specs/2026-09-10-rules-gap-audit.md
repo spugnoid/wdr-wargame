@@ -1084,3 +1084,57 @@ towed anti-tank guns instead). `sphinx -W` clean (checked the new
 note for the same asterisk-adjacent-to-backtick nesting failure from
 parts 8/10/12 — caught and fixed one instance before it shipped).
 Test suite: 118 passing (up from 114).
+
+## Update — 2026-09-11 (part 15): PaK 40 — the roster's first towed anti-tank gun
+
+Continued picking off the backlog: towed anti-tank guns, the gap
+Section 17's own intro pointed at after part 14 closed out Firefly.
+Picked the PaK 40 (the single most-named example across this
+project's own prior text -- infantry_calc's README, and Rule 6.6.6
+before its removal). Dispatched research
+(`counters/toe/pak40_1943.md`) before writing any rule.
+
+**Rules question came first, and turned out small.** A towed gun is
+a crew-served weapon team on defence (no armour, no Hull/Turret --
+ordinary Section 8 fire against its own Defence when targeted,
+deploy/limber like an HMG or mortar) but a vehicle gun on offence
+(the Gunnery Roll and PEN-vs-AV comparison were never actually
+specific to being turret-mounted -- they only ever depend on the
+gun's own ballistics and the target's armour). New Rule 17.1a says
+exactly that, plus a new F# table row (deployed = F2, same logic as
+a planted mortar). Almost nothing needed inventing.
+
+**No vehicles.csv row needed at all** -- a genuine first. The
+Gunnery Table and PEN line come entirely from guns.csv/
+gun_calibration.csv; vehicles.csv only ever supplied the *target's*
+armour, never the shooter's ballistics. A gun with no armour of its
+own simply has nothing to put there.
+
+**Data followed the now-familiar British-guns pattern:** real
+calibration data (a period German ordnance document, cross-checked
+within 1-2mm by a second independent source), no stated K-factor.
+Constrained least-squares fit hit the *exact same degenerate shape*
+as the 6pdr before it -- unconstrained search finds K=223 with
+exponent=25.75 for PzGr 39, rejected the same way. Constrained fit:
+K=1954 (PzGr 39 APCBC, max error 2.06%, a bit looser than this
+project's 5-point vehicle-gun fits for having one fewer point),
+K=2356 (PzGr 40 APCR, max error 0.66% -- first real use of the
+hvap76 stand-in family for a German gun).
+
+**Left open, not guessed:** PzGr 40's muzzle velocity has a real
+~3% discrepancy between sources (used the one matching its own
+calibration data); no source gives PaK 40 crews a quality tier, and
+the exact 1943 date the standard divisional battalion (as opposed to
+a separately-named "heavy" variant) converted from 50mm to 75mm guns
+wasn't pinned down.
+
+Historical validation via the in-project cross-check the research
+recommended: PzGr 39 auto-penetrates T-34 hull front at 500m,
+consistent with Wikipedia's summary that the PaK 40 was "effective
+against almost every Allied tank" of the war.
+
+New design note E.123. infantry_calc/README updated (towed AT guns
+moved from "explicitly out of scope" to "now partially in scope").
+`sphinx -W` clean (caught and fixed two asterisk-adjacent-to-backtick
+instances before shipping, same recurring failure mode as parts
+8/10/12/14). Test suite: 121 passing (up from 118).

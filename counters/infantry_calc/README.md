@@ -95,9 +95,15 @@ itself has no source column, so it's recorded here instead):
   Soviet "Pattern B" squad variant (2x DP-28) was added alongside the existing
   Pattern A squad — see design note E.116. Scaling to additional nations/years
   beyond this is future work, using this same pipeline shape.
-- **Towed artillery is explicitly out of scope.** Support guns not mounted on a
-  vehicle (PAK40, field howitzers, etc.) would reuse `armor_calc`'s gun-curve-fitting
-  machinery — not built this phase.
+- **Towed anti-tank guns are now partially in scope** (Rule 17.1a): the PaK 40
+  (`counters/toe/pak40_1943.md`, both PzGr 39 APCBC and PzGr 40 APCR gun curves
+  in `armor_calc/data/guns.csv`) is the first one built, reusing `armor_calc`'s
+  gun-curve-fitting machinery exactly as anticipated here — it needs no vehicle
+  counter at all, since a towed gun has no armour. Other towed guns (field
+  howitzers, other nations' anti-tank pieces) and its own 1943 crew/quality
+  stats are still future work; see the PaK 40 research file's own Open
+  Questions for what's left unsourced (crew morale/quality tier, exact
+  divisional-vs-regimental fielding date within 1943).
 - **Grenades and satchel charges are not derived stats.** Both already resolve via
   fixed, manually-assigned values (G# on the counter, Engineer's DEMO capability);
   they are not something derived from real-world weapon specs.

@@ -319,6 +319,9 @@ The following reactions are available to the non-active player during a reaction
    * - Mortar, deployed (Section 16)
      - 2
      - Same deploy/limber system as an HMG (Rule 7.6); a planted baseplate supports a second fire mission the way a bipod supports a second burst. Mobile mortars use the row below.
+   * - Towed anti-tank gun, deployed (Rule 17.1a)
+     - 2
+     - Same deploy/limber logic as a deployed mortar or bipod MG — the pre-sighted, planted mount buys the extra shot, not the gun itself. Limbered guns use the row below.
    * - Any other unit, or any weapon in transit
      - 1
      - One full-effect fire is the unit's entire turn (Rule 6.3.2); the Assault economy (Rule 6.3.3) is its only path to a second, reduced shot.
