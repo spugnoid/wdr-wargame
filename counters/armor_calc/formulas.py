@@ -87,9 +87,15 @@ def base_hit_probability(flight_time_s: float) -> float:
 # shared vs. what stays domain-specific.
 CrewQuality = Quality
 
-# Source: Bird & Livingston Ch.6/Appendix 7. Caps maximum hit probability by
-# crew quality, modelling human factors (fear, fatigue, stress) that a pure
-# ballistic dispersion model doesn't capture, particularly at short range.
+# Source: Bird & Livingston Appendix 6 (p.97) -- corrected 2026-09-12, design
+# note E.134: a direct read of the book found this table in Appendix 6, not
+# Appendix 7 as this comment previously said; the cited values themselves
+# (Elite 90%, Veteran 85%, Experienced 80%, Regular 75%, Green 65%, Militia
+# 50%) were already an exact match to the table below, confirming this
+# project's own prior transcription was correct even though its citation
+# wasn't. Caps maximum hit probability by crew quality, modelling human
+# factors (fear, fatigue, stress) that a pure ballistic dispersion model
+# doesn't capture, particularly at short range.
 _CREW_QUALITY_HIT_CAP: dict[CrewQuality, float] = {
     "elite": 0.90,
     "veteran": 0.85,  # "Experienced" (0.80 in the source) has no separate

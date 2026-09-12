@@ -1,4 +1,4 @@
-# Bird & Livingston, *WWII Ballistics: Armor and Gunnery* — First Direct Read
+# Bird & Livingston, *WWII Ballistics: Armor and Gunnery* — Direct Read (Complete)
 
 Research pass reading this project's own foundational armor-ballistics source
 directly for the first time. Bird, Lorrin Rexford & Livingston, Robert D. (2001).
@@ -14,17 +14,28 @@ already load-bearing for this project's own formulas and data.
 
 ## Coverage
 
-Read: Introduction, Ch.2 (slope multipliers, spot-check), Ch.5 (cast deficiency,
-in full), **Ch.6 (Armor Flaws, in full)**, Ch.12 (compound angle), Ch.13
-(Penetration Data intro, Soviet/K-factor tables), Ch.14 (USA AFV and Soviet AFV
-tables), Ch.18 (Projectile Velocity Estimation, both K-factor table pages).
+Two passes, same session (2026-09-12). **Pass 1** read: Introduction, Ch.2 (slope
+multipliers, spot-check), Ch.5 (cast deficiency, in full), Ch.6 (Armor Flaws, in
+full), Ch.12 (compound angle), Ch.13 (Penetration Data intro, Soviet/K-factor
+tables), Ch.14 (USA AFV and Soviet AFV tables only), Ch.18 (Projectile Velocity
+Estimation, both K-factor table pages). **Pass 2** read everything pass 1 didn't
+reach: Ch.1 (Intro), Ch.3 (Face-Hardened Armor), Ch.4 (High-Hardness Multipliers),
+Ch.7 (Shatter Gap), Ch.8 (Special Cast Armor Areas), Ch.9 (Spaced/Layered
+Armor/Edge Effects), Ch.10 (Edge Hits on Tiger E Mantlet), Ch.11 (Turret Hit
+Probability and Rounded Mantlets), Ch.13 (remainder — UK/German/US/Soviet/Italian
+tables in full), Ch.14 (remainder — German/British/Italian AFV tables, completing
+the chapter), Ch.15 (DeMarre Equation), Ch.16 (Penetration Probability), Ch.17
+(Tactics), Ch.19 (Gun Sight Magnification), Ch.20 (National Physics Lab Equation),
+Appendix 5 (General Quality of Panther Armor), Appendices 1–4 and 6–9, and the
+Errata Sheets.
 
-**Not reached this pass** — genuine gaps for a follow-up read, not claimed to be
-checked: Appendix 5 ("General Quality of Panther Armor," printed p.93), the German
-AFV table in Ch.14 (Panther/Tiger/Panzer III/IV/StuG III), and explicit Top/Roof
-armor rows for Panther/Tiger/T-34/T-70/SU-85 (the two Ch.14 tables actually read —
-USA AFV, Soviet AFV — don't have Top/Roof rows at all; they may exist elsewhere in
-Ch.14's roughly 14 printed pages, unreached this pass).
+**Not reached, either pass** — a genuine remaining gap, not claimed empty:
+Appendices 10–19 (printed roughly pp.105–123: gun elevation/descent angle, German
+armor acceptance testing, HE accuracy, ballistic tests, Soviet 122mm APBC data,
+shot placement, precise slope equations, moving-target accuracy, German slope
+curves, firing test validity) and the Bibliography. These are almost entirely
+accuracy/dispersion modeling, not armor-thickness or K-factor data — lower
+relevance to this project's current mechanics, but unread all the same.
 
 ## Finding 1: Real K-factors, for six of this project's seven unsourced-K guns
 
@@ -128,6 +139,100 @@ live-fire tests, failing again at 500m/60° or 100m/0° in September 1943 tests.
 real, dated data point that could feed a future Rule 18.12 matchup entry for the
 F-34 if one is ever added — not acted on this pass.
 
+## Finding 5 (pass 2): Top/Roof armor is not in this book at all — a clean negative
+
+Pass 1 left open whether the German AFV table (never found) or the rest of Ch.14
+might contain Top/Roof rows for Panther, Tiger, Panzer III/IV, StuG III, T-34, T-70,
+or SU-85. Pass 2 found and read the complete German AFV table (pp.65–68: Panzer
+III E/G/H/J/L/M, Panzer IV D/E/G/H/f1/f2, Panther D/A/G, Tiger E/B — Porsche and
+Henschel, Jagdtiger, Jagdpanther, Hetzer, StuG IIIG, StuG IV, JgPz IV) alongside the
+USA, Soviet, British, and Italian tables (pp.69–74, completing all four). **None of
+these tables, for any vehicle in any nation, includes a Top/Roof armor row.** This
+is a clean, confirmed negative — this project's still-open Top/Roof gaps
+(`counters/toe/vehicle_top_armor_1943.md`) are not answerable from this book, full
+stop, not merely "not yet checked." Future effort on that question should go
+directly to Panzer Tracts (Pz III/StuG III) or a dedicated Soviet armor
+encyclopedia, not back to this source — recorded as such in
+`vehicle_top_armor_1943.md`'s own Open Questions.
+
+## Finding 6 (pass 2): Tiger and Panther mantlet tables — one exact match, one confirmed-accurate-but-incomplete methodology, and a real limitation surfaced
+
+**Ch.10, "Edge Hits on Tiger E Mantlet" (p.42)**, is the actual source table this
+project's `vehicles.csv` cites for Tiger's Turret Front override. The 76mm-class row
+reads **143mm** — an exact match to this project's existing `av_override_mm=143.0`.
+The table also gives every other caliber against the same plate: 57mm→157, 85mm→139
+(APBC family) or 142 (AP family), 90mm→139, 100mm→133 (APBC) or 135 (AP), 122mm→119
+(APBC) or 121 (AP), 152mm→104 (APBC) or 105 (AP). **This project currently prints
+one flat override value (143mm) regardless of the attacking gun's own caliber** —
+accurate for the 76mm-class guns it was built around (17pdr, KwK40-class), but a
+real, now-quantified approximation for anything else in this roster that might ever
+be checked against Tiger's mantlet (the 57mm-class 6pdr would see 157mm, not 143mm
+— a 10% difference; an 85mm-class Soviet gun would see 139mm). Recorded in
+`vehicles.csv`'s own note as reference data; `resolve_av()`'s override mechanism
+would need to accept a caliber-keyed table rather than one flat value to actually
+use this — not built this pass, flagged as a real future extension.
+
+**Ch.11, "Turret Hit Probability and Rounded Mantlets" (pp.43–45)**, confirms this
+project's Panther angle-probability distribution exactly, to the tenth of a
+percent: 65–75°=20.0%, 50–60°=31.2%, 35–45°=24.8%, 20–30°=14.4%, 0–15°=9.6%. But
+this chapter gives hit-angle probabilities only, not a Tiger-style pre-computed
+combined-resistance table for Panther — this project's own weighted-average
+construction (design note E.118) remains the best available treatment, now
+confirmed to be built on an accurate input distribution rather than an unverified
+one, which is a real confidence upgrade even though the AV figure itself is
+unchanged.
+
+**A separate finding independently reconfirms an already-flagged Panther
+uncertainty**: Ch.14 (p.66) lists Panther G's "Turret Front: 110c @ 10" as a row
+**distinct from** "Mantlet: 100c rounded." Pass 1 already flagged this exact
+two-row listing as a possible separate plate the project's 249.2mm mantlet-only AV
+might understate; pass 2's independent second read found the same listing again,
+ruling out a first-pass misreading. This is now a confirmed, real feature of the
+primary source, not an artifact — still not chased down (how the two combine isn't
+stated in either read), and still flagged rather than guessed at.
+
+## Finding 7 (pass 2): Appendix 5 answers a different question than expected
+
+Appendix 5, "General Quality of Panther Armor" (pp.93–94), is not the source of
+this project's "~50% of production had some flaw severity" claim for Panther's
+glacis — that statistic is in Ch.14's own table note (p.66: "About half of Panthers
+with flawed glacis armor starting summer 1944"), now cited precisely in
+`vehicles.csv` (design note E.134). Appendix 5 instead compares firing-test
+penetration ranges against Panther's *non-glacis* areas (upper hull side, front
+nose) at Isigny and elsewhere, concluding those areas were "equivalent to U.S. good
+quality penetration test plate" — i.e. specifically **not** flawed, unlike the
+glacis. A genuinely different, if related, finding — recorded rather than
+conflated with the glacis statistic.
+
+One dating wrinkle worth carrying forward: Ch.14's own flaw statistic is pinned to
+production "starting summer 1944," while this roster dates Panther Ausf G to 1943
+(Ausf G production itself historically began March 1944) — an existing project
+convention, not something this pass changed, but the flaw statistic's own dating
+sits right at the edge of that convention rather than comfortably inside it.
+
+## Finding 8 (pass 2): two bonus corrections for British vehicles, and a confirmed-correct-but-mis-cited hit-probability table
+
+The British AFV table (p.73) gives two exact angles `counters/toe/
+british_vehicles_1943.md` had explicitly flagged as unsourced: **Churchill's lower
+nose plate, 140mm at 20°** (resolving that file's own Open Question #3), and a
+previously-unknown-to-this-project **Cromwell nose plate, 57mm at 20°** — which
+conflicts with a separate, already-flagged weak figure (~25mm) in the same file and
+isn't currently modeled as a distinct `vehicles.csv` row at all. See that file's own
+2026-09-12 addendum for the full account; neither triggered a `vehicles.csv` value
+change this pass (both need a design decision — a fuller multi-plate weighted
+treatment for Churchill, and a decision on how to represent Cromwell's apparent
+second plate — beyond what this reading pass alone should decide).
+
+Separately, Appendix 6 (p.97) has a named maximum-hit-probability-by-crew-quality
+table — Elite 90%, Veteran 85%, Experienced 80%, Regular 75%, Green 65%, Militia
+50% — that turns out to be **already correctly used** in this project's own
+`crew_quality_hit_cap()` (`formulas.py`), values matching exactly (down to folding
+the source's unused "Experienced" band into Veteran, already commented as such).
+The only error found was the citation itself: the code comment said "Ch.6/Appendix
+7," corrected to "Appendix 6" (design note E.134). A nice independent confirmation
+that this table was sourced correctly the first time, even though its citation
+wasn't quite right.
+
 ## Confidence Notes
 
 - **K-factor table (pp.84–85):** high confidence — a direct primary-source table
@@ -142,27 +247,47 @@ F-34 if one is ever added — not acted on this pass.
   confidence for Ch.5 (character-for-character formula match); moderate-high for
   the two chart-reading checks (hand-drawn charts read visually, not a printed
   table of exact values).
-- **Coverage caveat:** this was a targeted, prioritized read of a 234-page book,
-  not a cover-to-cover pass. Chapters/appendices not reached (Appendix 5, the
-  German AFV table, roughly half of Ch.14) may contain further corrections or
-  data this project hasn't yet applied.
+- **Pass 2 findings (Ch.10/11 mantlet tables, Ch.14 German/British/Italian AFV
+  tables, Appendix 5, Appendix 6):** high confidence — each read directly and, in
+  three cases (Tiger's 143mm, Panther's angle distribution, the crew-quality
+  hit-probability table), independently confirmed an existing project value
+  exactly rather than correcting it.
+- **Coverage caveat, updated:** two passes now cover the large majority of the
+  book's content-bearing chapters. Appendices 10–19 and the Bibliography remain
+  unread — plausible but lower-relevance gaps (dispersion/accuracy modeling, not
+  armor thickness or K-factors), not claimed to be checked.
 
 ## Open Questions / Gaps for Follow-up
 
-1. **Appendix 5 ("General Quality of Panther Armor," p.93) and the German AFV
-   table in Ch.14** were not reached this pass — the German AFV table in
-   particular could plausibly contain Top/Roof rows or K-factor-adjacent data for
-   Panther, Tiger, Panzer III/IV, and StuG III that would help close this
-   project's still-open top-armor gaps (`counters/toe/vehicle_top_armor_1943.md`).
-2. **The remainder of Ch.14** (roughly half its ~14 printed pages) was not read —
-   worth a dedicated follow-up specifically hunting for Top/Roof armor rows on any
-   vehicle, which neither of the two tables checked this pass had at all.
-3. **US M1 57mm's K-factor remains unsourced** — no muzzle velocity in the book's
+1. **Appendices 10–19 and the Bibliography were not reached by either pass** —
+   see the Coverage section above for what these appear to cover. Lower priority
+   than what's already been read, since none of it appears to be armor-thickness
+   or K-factor data, but a genuine remaining gap.
+2. **US M1 57mm's K-factor remains unsourced** — no muzzle velocity in the book's
    own K-factor table matched the AP Shot M70's 2800 fps. The constrained
    least-squares methodology (design note E.129) stands as this row's only
    available approach unless a different source is found.
-4. **Ch.2's slope-multiplier formulas were spot-checked, not exhaustively
-   verified** — a fuller read of this chapter's own worked examples (beyond the
-   single check done this pass) would be worth doing before treating this
-   project's `slope_multiplier()` as fully cross-validated rather than
-   probably-correct.
+3. **Tiger's per-caliber mantlet table (Ch.10) is not yet built into the
+   pipeline** — `resolve_av()`'s override mechanism only supports one flat value
+   per plate; using the right figure for a 57mm or 85mm-class attacker against
+   Tiger's mantlet (rather than reusing the 76mm-class 143mm figure) would need a
+   caliber-keyed override table, a real but unbuilt extension.
+4. **The separate Panther "Turret Front: 110c@10" plate is now confirmed real
+   (seen twice, independently) but still not chased down** — how it combines with
+   the 100mm mantlet figure isn't stated in either read of Ch.14.
+5. **Churchill's middle glacis plate (57mm) still has no angle in any source
+   checked** — the lower plate's angle is now known (140mm@20°, this pass), but a
+   full 3-plate weighted treatment needs the middle plate's angle too.
+6. **Cromwell's apparent second nose plate (57mm@20°, this pass) is not yet
+   represented in `vehicles.csv` at all**, and conflicts with an already-flagged
+   weak ~25mm figure from a different source — needs a design decision, not just
+   more research, on how (or whether) to model it.
+7. **A copy of Fletcher & Harley (2006), *Cromwell Cruiser Tank*, is now
+   available in the project's reference material** — the natural next book to
+   read, given it could resolve the Cromwell nose-plate conflict (#6), Churchill's
+   own remaining Open Questions, and the general Churchill/Cromwell
+   mantlet-weighted-treatment gap in one pass.
+8. **Ch.2's slope-multiplier formulas were only ever spot-checked (pass 1), never
+   exhaustively verified** — neither pass did a full read of this chapter's own
+   worked examples. Worth doing before treating this project's
+   `slope_multiplier()` as fully cross-validated rather than probably-correct.

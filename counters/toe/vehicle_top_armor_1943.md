@@ -411,9 +411,19 @@ One well-documented, on-point incident/finding was located:
    citation already found), and *No. 8* (StuG III) were not directly
    accessible this session — a dedicated look at these (Jentz/Doyle) would
    likely resolve the Panzer III and StuG III top-armor disputes.
-2. Bird & Livingston's Ch.14 "Armor Data for Selected Vehicles" table (the
-   book itself, not this project's prior partial transcriptions) has not
-   been checked directly for Top/Roof rows on Panther or Tiger.
+2. **RESOLVED 2026-09-12, design note E.134 — a clean negative, not a gap.**
+   A direct read of Bird & Livingston's own Ch.14 "Armor Data for Selected
+   Vehicles" (the book itself, not a secondhand transcription) found the
+   complete German, USA, Soviet, British, and Italian AFV tables (pp.65–74).
+   **None of these tables — for any vehicle in this project's roster or
+   otherwise — includes a Top/Roof armor row at all.** This is a clean,
+   confirmed negative: Panzer III/StuG III/T-34/T-70/SU-85 top armor (items
+   1, 3, 4, 6, 7 below) is not answerable from this book, full stop, not
+   merely "not yet checked here." Future effort on any of those should go
+   straight to the sources those items already name (Panzer Tracts, a
+   Zaloga & Grams or Solyankin/Pavlov Soviet title) rather than back to
+   this one. See `counters/toe/wwii_ballistics_direct_read_1943.md` for the
+   full read.
 3. T-34/85's own top armor (both hull and turret roof) is a real, unresolved
    gap — candidate figures exist (15–20mm range) but none traced to a
    citable source. A Zaloga & Grams title or a Solyankin/Pavlov Soviet armor
@@ -425,7 +435,12 @@ One well-documented, on-point incident/finding was located:
 5. Cromwell Mk IV's hull top figure remains unfound, and its turret roof
    figure (carried in the existing British vehicles file) could not be
    reconfirmed this session — a direct look at Fletcher & Harley (2006),
-   *Cromwell Cruiser Tank*, would likely resolve both.
+   *Cromwell Cruiser Tank*, would likely resolve both. **Update 2026-09-12:
+   a copy of this exact book is now available in the project's reference
+   material** (also useful for the still-open Churchill/Cromwell mantlet-
+   weighted-treatment and Cromwell nose-plate questions flagged in
+   `counters/toe/british_vehicles_1943.md`'s 2026-09-12 addendum) — a strong
+   next candidate for a direct-read pass, not yet done.
 6. The tanks-encyclopedia.com article "1942 Combat Damage Analysis of the
    T-34 and T-70 Tanks" returned HTTP 403 this session and was not pursued
    — it's a plausible source for more historical top-armor-penetration

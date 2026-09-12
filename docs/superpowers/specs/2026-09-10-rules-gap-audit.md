@@ -1558,3 +1558,66 @@ TestSixPdrAPDSGunCurveFit) with sourced-not-guessed docstrings. Appendix
 H and all armor_calc outputs regenerated. Test suite: 176 passing,
 unchanged in count -- a correctness pass, not a coverage pass.
 `sphinx -W` clean.
+
+## Update — 2026-09-12 (part 26): finishing the WWII Ballistics read
+
+Continuing directly from part 25. Dispatched a second background agent to
+read everything the first pass didn't reach: Ch.1, 3, 4, 7, 8, 9, 10, 11,
+the remainder of Ch.13/14, 15, 16, 17, 19, 20, Appendices 1-9, and the
+Errata sheets.
+
+**Most valuable single result: a clean negative.** Top/Roof armor is not
+in this book at all -- for any vehicle, any nation. The full German AFV
+table (Panzer III/IV, Panther, Tiger, derivatives, pp.65-68) was found
+and read, alongside the completed USA/Soviet/British/Italian tables
+(pp.69-74). None has a Top/Roof row for anything. This closes off this
+project's still-open Panzer III/StuG III/T-34/T-70/SU-85 top-armor gaps
+as a line of inquiry against this specific source -- future effort
+should go straight to Panzer Tracts or a Soviet armor encyclopedia.
+Recorded in vehicle_top_armor_1943.md so nobody re-checks this book for
+that question again.
+
+Tiger's mantlet table (Ch.10, p.42): 76mm-class row reads 143mm, an
+exact match to the existing av_override_mm. The table also has other
+calibers -- 57mm-class (this project's own 6pdr) reads 157mm, a real
+10% difference this roster has no mechanism to apply, since
+resolve_av()'s override path only stores one flat value per plate.
+Recorded as reference data; building a caliber-keyed override table is
+a real but unbuilt extension.
+
+Panther's angle-probability distribution (Ch.11, pp.43-45) matches
+exactly to the tenth of a percent -- confirms this project's own
+weighted-average construction (E.118) rests on an accurate input. The
+"Turret Front: 110c@10" second-plate finding from pass one was
+independently reconfirmed, ruling out a misread; still not resolved.
+
+Appendix 5 answers a different question than expected: not the source
+of Panther's "~50% flawed glacis" statistic (that's Ch.14 p.66, now
+cited precisely), but a separate finding that Panther's non-glacis
+areas were explicitly unflawed. A dating wrinkle surfaced: the flaw
+statistic is pinned to production "starting summer 1944," while this
+roster dates Panther Ausf G to 1943 -- an existing convention, not
+changed here, but worth knowing.
+
+Two British-vehicle gaps closed via the British AFV table (p.73):
+Churchill's long-missing lower-nose angle (140mm@20deg). One new gap
+opened: a Cromwell nose-plate figure (57mm@20deg) never modeled before,
+conflicting with an already-flagged weak ~25mm figure elsewhere --
+recorded as an open design question in british_vehicles_1943.md's new
+addendum, not resolved.
+
+A citation error caught on an already-correct value: crew_quality_hit_cap()
+was sourced correctly (exact match) but cited "Appendix 7" instead of
+the actual Appendix 6. Fixed.
+
+Genuinely unread: Appendices 10-19 and the Bibliography (~pp.105-123,
+mostly dispersion/accuracy modeling) -- lower priority, not claimed
+empty. Next natural book: Fletcher & Harley's Cromwell Cruiser Tank,
+already in the reference folder, directly relevant to the Cromwell/
+Churchill questions this pass reopened.
+
+New design note E.134. No numeric vehicles.csv values changed this pass
+-- every correction was a citation, a caveat, or newly-recorded
+reference data. No armor_calc output regeneration needed. Test suite
+unchanged at 176 passing. `sphinx -W` clean (one more asterisk-adjacent-
+backtick leak caught and fixed).

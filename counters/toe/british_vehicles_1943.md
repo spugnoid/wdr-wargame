@@ -341,3 +341,42 @@ and only the turret mantlet and the 17-pounder gun data above are actually new.
    referenced against this project's existing Sherman rows in `vehicles.csv`.
 7. The 17pdr APCBC muzzle-velocity discrepancy (2,900 vs 2,950 ft/s across two
    differently-cited tables in the same Wikipedia article) was not resolved.
+
+## Addendum, 2026-09-12: Churchill and Cromwell nose-plate angles found in Bird & Livingston's own British AFV table (design note E.134)
+
+A direct read of Bird & Livingston's own British AFV table (p.73 — see
+`counters/toe/wwii_ballistics_direct_read_1943.md` for the full read this
+addendum draws on) resolved Open Question #3 above and surfaced a new,
+conflicting data point for Cromwell's own nose plate.
+
+- **Churchill's lower nose plate**: the book's table gives **140mm at 20°**
+  from vertical. This matches the thickness already in this file's own table
+  (line "Hull Front (lower/nose)," 140mm) exactly, and supplies the missing
+  angle Open Question #3 named directly. This is real, useful data — but note
+  it resolves only the *lower* of the two previously-unangled plates; the
+  *middle* connecting plate (57mm, "nearly horizontal") still has no angle
+  in any source checked, in this session or the earlier one. A full
+  hit-distribution/area-weighted treatment of Churchill's stepped glacis
+  (comparable to Tiger/Panther's mantlet treatments) still needs that third
+  number before it could be built — not attempted this session; `vehicles.csv`
+  continues to use the single well-cited 152mm@0° top plate as the Hull
+  Front representative, now with the lower plate's angle recorded here as
+  known-but-not-yet-incorporated, not as a silent gap.
+- **Cromwell's nose plate**: the book's table gives **57mm at 20°** — a real,
+  better-sourced figure that **conflicts** with the existing weakly-sourced
+  entry in this file's own Cromwell table ("Hull Front (lower nose piece),"
+  ~25mm, sourced only to "a Wikipedia-internal, currently-commented-out
+  table," already flagged there as weak). The two entries may be measuring
+  different things (a genuinely different plate, or a different point on a
+  tapered nose casting) rather than being a straightforward correction of one
+  by the other — not resolved this session. Separately, this is a plate this
+  project's own `vehicles.csv` doesn't model as a distinct row at all: the
+  existing `Cromwell Mk IV` `Hull Front` entry (64mm@0°, per Fletcher & Harley
+  2006 p.12) represents only the main vertical driver's plate, matching the
+  book's own explicit note that this hull was "vertical, explicitly NOT
+  sloped like the Sherman glacis" — the 57mm@20° nose piece is evidently a
+  separate, additional plate not currently represented anywhere in this
+  project's roster. Recorded here as a real, newly-surfaced gap rather than
+  decided either way (whether to add it as a second `vehicles.csv` row, fold
+  it into a weighted treatment, or leave the single-plate simplification as
+  an accepted approximation is a design decision for whoever picks this up).
