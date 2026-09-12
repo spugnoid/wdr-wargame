@@ -1387,3 +1387,58 @@ already used for the Sherman glacis QC flaw (E.126). No data or test
 changes -- research-only follow-up. `sphinx -W` clean, verified no
 markup nesting leaks on the first build (applying the fix pattern now
 recorded in project memory).
+
+## Update — 2026-09-12 (part 23): Militia tier's first real unit -- British Home Guard, plus a genuine finding
+
+Continuing with bounded backlog items. Dispatched research for a real
+historical Militia-quality unit to finally exercise this project's
+Militia tier (defined in quality/tiers.py since early on, never used
+by any roster row).
+
+Investigated three candidates. German Volkssturm: the single most
+explicit quantified low-training claim found (some units committed
+after 10-14 days' instruction), but 13 months outside the 1943 window
+(formed Oct 1944) and no squad-scale TOE recoverable, only a
+battalion headcount. Soviet opolcheniye: worse on both counts -- 2
+years outside the window, and the "militia" designation itself was
+transitional, divisions redesignated as ordinary Rifle/Guards
+divisions within weeks to months, so no honestly-dated 1943
+opolcheniye unit exists at all.
+
+Adopted: British Home Guard, 1943 -- the only candidate needing no
+chronological stretch, and an already-covered nation. Militia
+classification is an honest inference from structural/doctrinal facts
+(static local-defense doctrine, 1942 compulsory enrolment of 42-51
+year-olds to fill under-strength units), not a stated historian's
+classification -- flagged as such. New rows UK_HOMEGUARD_1943.3_F/_R:
+an 8-man squad (1 BAR + 7 P17 Enfield rifles, a new weapons.csv row
+using the same generic bolt-action rate as Kar98k/Springfield/Mosin).
+
+Building it surfaced a genuine, un-massaged finding: both weapon lines
+round down to 0 rFP under the log-compressed weapon_rfp() formula at
+Militia's (uncalibrated) multiplier and are omitted -- this squad
+prints NO fire lines at all. Not a data error (a tripod HMG, or 3+
+LMGs together, still clears the floor at Militia) but a real
+consequence of pairing this specific, sourced composition with an
+admittedly-extrapolated quality constant. Recorded plainly rather than
+fixed by inflating the weapon count -- left for the designer to judge
+whether a Militia unit that can only occupy ground and fight in Close
+Assault is a legitimate design outcome or a sign the constant needs
+recalibrating.
+
+New design note E.131. Appendix H regenerated (28 infantry rows, up
+from 26). New test capturing the finding
+(test_militia_home_guard_squad_prints_no_fire_lines_at_all) plus
+row-count bumps (weapons 16->17, units 26->28). Test suite: 175
+passing (up from 174). `sphinx -W` clean -- caught and fixed one more
+asterisk-adjacent-to-backtick leak, first try this time using the
+pattern now recorded in project memory.
+
+Also note: the dispatched research agent for this task had an
+internal mishap mid-session (briefly confused about which task it was
+working on, then a separate/earlier instance of it overwrote its own
+finished output file with an unverifiable competing draft carrying
+invented page citations) -- the agent caught this itself, discarded
+the unverifiable version, and restored its own properly-sourced work
+with a provenance note explaining what happened. Surfaced here for
+visibility, not because it affected the final research quality.

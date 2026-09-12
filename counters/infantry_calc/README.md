@@ -127,5 +127,12 @@ itself has no source column, so it's recorded here instead):
 - **Militia quality tier (BTV/EM/MM = 0.36/0.81/0.81) is a computed extrapolation,
   not sourced.** The source spreadsheet only defines Green/Regular/Veteran/Elite.
   Militia continues the same multiplicative step one tier further (Green→Militia
-  mirrors Regular→Green). Worth revisiting once a real Militia-tier unit
-  (e.g. Volkssturm, opolcheniye) is added to the roster.
+  mirrors Regular→Green). Now exercised by a real roster row (`UK_HOMEGUARD_1943.3_F`,
+  the British Home Guard, design note E.131) — and the result is a real finding,
+  not a clean validation: this multiplier is severe enough under `weapon_rfp()`'s
+  log-compressed formula that a historically-sourced Home Guard squad (1 BAR + 7
+  bolt-action rifles) prints **zero** fire lines — both round down below `MIN_RFP`
+  and are omitted. A concentrated automatic weapon (a tripod HMG, or 3+ LMGs) still
+  clears the floor at Militia, so this isn't a universal "Militia units can't fire"
+  result, but it's a real, un-massaged consequence worth a designer's attention
+  before fielding more Militia-tier units with rifle-heavy loadouts specifically.

@@ -15,7 +15,7 @@ class TestLoadWeapons:
     counters/infantry_calc/README.md's sourcing notes for each), not
     transcribed from the original design spreadsheet."""
 
-    def test_loads_all_sixteen_weapons(self):
+    def test_loads_all_seventeen_weapons(self):
         weapons = load_weapons()
         names = {w.name for w in weapons}
         assert names == {
@@ -35,6 +35,7 @@ class TestLoadWeapons:
             "Sten",
             "Type 96/99 LMG",
             "Arisaka Type 38/99",
+            "P17 Enfield",
         }
 
     def test_mg42_lmg_matches_the_worked_example(self):
@@ -64,9 +65,9 @@ class TestLoadUnits:
     corrected against newly-sourced TOE research -- see their own `notes`
     column and design notes E.110/E.116."""
 
-    def test_loads_all_twenty_six_rows(self):
+    def test_loads_all_twenty_eight_rows(self):
         units = load_units()
-        assert len(units) == 26
+        assert len(units) == 28
 
     def test_gren_43_front_face_matches_the_anchor_unit(self):
         """Corrected 2026-09-11: manpower_full 9->10 and a third weapon
@@ -165,7 +166,7 @@ class TestWriteInfantryRosterCsv:
 
     def test_writes_one_row_per_unit(self, tmp_path):
         rows = self._rows_by_unit_id(tmp_path)
-        assert len(rows) == 26
+        assert len(rows) == 28
 
     def test_gren_43_front_face_matches_the_worked_example(self, tmp_path):
         """The MG42 LMG line is untouched by the 2026-09-11 correction --
@@ -292,6 +293,30 @@ class TestWriteInfantryRosterCsv:
         row = rows["JPN_RIFSQ_1943.3_F"]
         assert row["fire_line_1"] == "─● 4 ⬡6 -1"
         assert row["fire_line_2"] == "╌ 3 ⬡4 -1"
+
+    def test_militia_home_guard_squad_prints_no_fire_lines_at_all(self, tmp_path):
+        """New 2026-09-12 (design note E.131, counters/toe/militia_tier_validation_1943.md):
+        UK_HOMEGUARD_1943.3_F is this project's first roster row to use the
+        Militia quality tier -- previously defined in quality/tiers.py but
+        never exercised. A genuine, un-massaged finding from building it:
+        Militia's own multiplier (an uncalibrated extrapolation one
+        multiplicative step past Green, per formulas.py's own comment) is
+        severe enough under this pipeline's log-compressed rFP formula that
+        BOTH weapon lines (a single BAR, and 7 P17 Enfield rifles) round down
+        to 0 and are omitted -- not a data-entry mistake (a tripod HMG or a
+        3+-count LMG group at Militia still clears the MIN_RFP floor easily,
+        see TestWeaponRfp-style checks in test_formulas.py), but a real
+        consequence of this specific, historically-sourced squad composition
+        (a single automatic rifle plus bolt-action riflemen) combined with an
+        unvalidated quality constant. Recorded as a designer-facing finding,
+        not silently reconciled by inflating the sourced weapon count."""
+        rows = self._rows_by_unit_id(tmp_path)
+        row = rows["UK_HOMEGUARD_1943.3_F"]
+        assert row["fire_line_1"] == "omit (rFP too low)"
+        assert row["fire_line_2"] == "omit (rFP too low)"
+        assert row["fire_line_3"] == ""
+        assert row["defence"] == "4"
+        assert row["morale"] == "3"
 
     def test_towed_at_gun_teams_have_no_fire_lines_but_do_have_defence_and_morale(self, tmp_path):
         """New 2026-09-11 (design notes E.123/E.127/E.128/E.129): all four

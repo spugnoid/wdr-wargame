@@ -377,6 +377,32 @@ H.1  Infantry and Weapon Team Roster
      - M0
      - F2
      - G1
+   * - Home Guard Squad
+     - United Kingdom
+     - 1943.3
+     - militia
+     - F
+     - omit (rFP too low)
+     - omit (rFP too low)
+     - —
+     - 4
+     - 3
+     - M2
+     - F1
+     - G2
+   * - Home Guard Squad (reduced)
+     - United Kingdom
+     - 1943.3
+     - militia
+     - R
+     - omit (rFP too low)
+     - —
+     - —
+     - 2
+     - 3
+     - M2
+     - F1
+     - G1
 
 H.2  Vehicle Armour Roster
 -------------------------------

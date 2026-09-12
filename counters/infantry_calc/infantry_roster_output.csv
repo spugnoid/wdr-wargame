@@ -25,3 +25,5 @@ GER_PAK40_1943.3_F,Germany,PaK 40 Anti-tank Gun Team,1943.3,F,regular,,,,6,5,0,2
 UK_6PDR_1943.3_F,United Kingdom,6pdr Anti-tank Gun Team,1943.3,F,regular,,,,6,5,0,2,1,PRELIMINARY
 SOV_45MMAT_1943.3_F,Soviet Union,45mm Anti-tank Gun Team,1943.3,F,regular,,,,6,5,0,2,1,PRELIMINARY
 US_57MMAT_1943.3_F,United States,57mm Anti-tank Gun Team M1,1943.3,F,regular,,,,6,5,0,2,1,PRELIMINARY
+UK_HOMEGUARD_1943.3_F,United Kingdom,Home Guard Squad,1943.3,F,militia,omit (rFP too low),omit (rFP too low),,4,3,2,1,2,PRELIMINARY
+UK_HOMEGUARD_1943.3_R,United Kingdom,Home Guard Squad (reduced),1943.3,R,militia,omit (rFP too low),,,2,3,2,1,1,PRELIMINARY
