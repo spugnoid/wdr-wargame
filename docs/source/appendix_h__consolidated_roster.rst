@@ -598,8 +598,8 @@ H.2  Vehicle Armour Roster
    * - StuG III Ausf G
      - Hull
      - Front
-     - 87.1
-     - 92.0
+     - 64.0
+     - 69.4
      - 85.7
      - —
      - —

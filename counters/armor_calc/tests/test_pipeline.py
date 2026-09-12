@@ -92,6 +92,31 @@ class TestUS57mmAgainstFaceHardenedPlate:
         assert av_ap_uncapped > av_capped + 30  # a real, large gap, not a rounding difference
 
 
+class TestStuGIIILayeredHullFront:
+    """New 2026-09-12 (design note E.138, counters/toe/stug3_panzer_tracts_1943.md):
+    Panzer Tracts No.8 (Jentz & Doyle), the authoritative primary source for
+    this exact vehicle, states plainly (p.8-26) that the Ausf.G's frontal
+    armor is "50 mm base plate with 30 mm face-hardened plates bolted on" --
+    a layered composite, not the single homogeneous 80mm plate this project
+    had modelled by default absent a source. Same layered_plate_effective_
+    thickness() methodology already used for Panzer III's own hull front
+    (TestPartialFaceHardening), but with the face-hardened layer on the
+    OPPOSITE side (the thinner bolted-on applique, not the thicker base) --
+    face_hardened_fraction=30/80, not 50/70."""
+
+    def test_hull_front_is_layered_not_single_plate(self):
+        hardness_table = load_hardness_table()
+        vehicles = load_vehicles()
+        plate = next(
+            v for v in vehicles if v.vehicle == "StuG III Ausf G" and v.profile == "Hull" and v.arc == "Front"
+        )
+        av_layered = plate.resolve_av(75.0, hardness_table)
+        # the old single-80mm-plate model gave ~87.1mm -- the layered
+        # composite is a real, substantial reduction, not a rounding change.
+        assert av_layered < 70.0
+        assert av_layered == pytest.approx(64.0, abs=0.5)
+
+
 class TestBritishVehicleLoading:
     """British guns/vehicles (6pdr, 17pdr, Churchill Mk VII, Cromwell Mk IV)
     were the last major nation-coverage gap flagged in the rules text and

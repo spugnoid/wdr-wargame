@@ -143,6 +143,28 @@ specific sentence — could not confirm the attribution. Treat the whole
 10–17mm range as an approximate, secondary-sourced band, not a confirmed
 primary-source figure.
 
+**Update 2026-09-12, design note E.138: *Panzer Tracts No.8* itself has now
+been read directly.** It has dedicated "Armor Specifications" diagrams with
+labeled roof callouts for Ausf.A (p.8-6), Ausf.C-E (p.8-10), and Ausf.F/8
+(p.8-23) — but **not for the plain gun-armed Ausf.G this project's roster
+actually models**; the book's own page sequence jumps from the Ausf.F/8
+diagram straight to a *different* vehicle's (the Sturmhaubitze/howitzer
+Ausf.G) diagram, never giving the gun-armed Ausf.G its own labeled spec page.
+A best-effort read of the Ausf.F/8 diagram's roof callout (the closest
+available proxy) suggested ~16mm at a near-flat angle — directionally
+consistent with, not a precise confirmation of, the existing 10-17mm
+secondary-sourced band — but digit legibility at this scan's resolution
+wasn't good enough to treat as a confirmed correction. p.8-26 also states the
+Ausf.G introduced "a sloped middle section of the roof" as a new feature,
+meaning even a confirmed number would describe a real, non-flat roof
+geometry, not a single simple plate. **Net: still an open question, now
+narrowed** — a higher-resolution scan of this same book's four diagram pages
+(8-6, 8-10, 8-23, 8-35), read specifically for their small callout numbers,
+is the most promising concrete next step, ahead of any other source tried so
+far. See `counters/toe/stug3_panzer_tracts_1943.md` for the full read, which
+also resolved a *different* long-standing StuG III question (Hull Front's
+layered-plate construction — see this vehicle's own `vehicles.csv` note).
+
 ### Panther Ausf G
 
 | Plate | Thickness | Source | Confidence |
@@ -407,10 +429,18 @@ One well-documented, on-point incident/finding was located:
 
 ## Open Questions / Gaps for Follow-up
 
-1. *Panzer Tracts No. 3-3* (Pz III), *No. 4-3* (Pz IV, beyond the p.50
-   citation already found), and *No. 8* (StuG III) were not directly
-   accessible this session — a dedicated look at these (Jentz/Doyle) would
-   likely resolve the Panzer III and StuG III top-armor disputes.
+1. **Partially resolved 2026-09-12, design note E.138.** *Panzer Tracts No.8*
+   (StuG III) is now available and was read directly — it resolved a
+   *different* long-standing question (Hull Front's layered-plate
+   construction, 50mm base + 30mm face-hardened applique — see the StuG III
+   section below and this vehicle's `vehicles.csv` note) but did **not**
+   cleanly resolve the top-armor question: the book has the right kind of
+   labeled diagram, just not one specifically for the plain gun-armed Ausf.G
+   this project models, and this pass's scan resolution wasn't sharp enough
+   to read the closest proxy diagram's small callout numbers with confidence.
+   *Panzer Tracts No. 3-3* (Pz III) and *No. 4-3* (Pz IV, beyond the p.50
+   citation already found) remain inaccessible — still the likely path to
+   resolving Panzer III's own top-armor dispute.
 2. **RESOLVED 2026-09-12, design note E.134 — a clean negative, not a gap.**
    A direct read of Bird & Livingston's own Ch.14 "Armor Data for Selected
    Vehicles" (the book itself, not a secondhand transcription) found the

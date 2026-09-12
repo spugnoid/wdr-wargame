@@ -1734,3 +1734,40 @@ New design note E.137. One citation caveat added to vehicles.csv, no
 numeric changes. vehicle_top_armor_1943.md updated. Test suite
 unchanged at 176 passing. `sphinx -W` clean (two more asterisk-nesting
 leaks caught and fixed).
+
+## Update — 2026-09-12 (part 30): Panzer Tracts delivers -- just not on the question it was fetched for
+
+Read Jentz & Doyle's *Panzer Tracts No.8: Sturmgeschutz* (63 pages,
+image scan, StuG III's full Ausf.A-G lineage) -- the exact type of
+detailed technical reference the last two design notes both
+independently pointed to.
+
+**Real correction landed, on a different question.** StuG III Ausf G's
+Hull Front is a layered composite, stated directly in the primary
+source (p.8-26): "50 mm base plate with 30 mm face-hardened plates
+bolted on" -- this project's own vehicles.csv note had explicitly
+declined to guess at exactly this construction absent a source. Applied
+the same layered_plate_effective_thickness() methodology already used
+for Panzer III's own hull front, but with the hardened layer on the
+opposite side (StuG III's thinner bolted applique is hardened, not the
+thicker base). Effective thickness: 64.2mm (down from flat 80mm).
+AV-vs-Capped: 87.1mm -> 64.0mm, a real 23mm reduction. Checked against
+the roster's only StuG III Rule 18.12 matchup -- unaffected, StuG III
+is the shooter there, not the target.
+
+**The question it was actually fetched for -- Top/Roof armor -- narrowed
+but didn't close.** The book has exactly the right diagram structure
+(labeled "Armor Specifications" side-profiles with roof callouts) for
+Ausf.A/C-E/F-8 -- but never for the plain gun-armed Ausf.G this roster
+models; the page sequence jumps straight to a different vehicle's
+diagram (the howitzer-armed Sturmhaubitze Ausf.G). A best-effort read
+of the closest proxy (Ausf.F/8) suggested ~16mm, consistent with but
+not confirming the existing 10-17mm band -- scan resolution wasn't
+sharp enough on the small callout digits. A higher-resolution re-read
+of the same four diagram pages is now the clear next step.
+
+New design note E.138, new test TestStuGIIILayeredHullFront.
+vehicle_top_armor_1943.md and vehicles.csv updated. Appendix H
+regenerated (row count unchanged, one figure corrected). Test suite:
+177 passing (up from 176). `sphinx -W` clean (one more asterisk-in-
+book-title nesting leak caught and fixed).
