@@ -52,8 +52,13 @@ them directly in Excel/Sheets to review, or hand-edit the inputs under
 ## Known gaps (see design spec §7 for the full list)
 
 - Flaw multiplier (Ch.6) is implemented and applied where sourced (Panther
-  Ausf G hull front carries a medium-severity correction); pre-Oct-1943
-  Sherman glacis QC issues remain a known candidate not yet sourced.
+  Ausf G hull front carries a medium-severity correction). A "pre-Oct-1943
+  Sherman glacis QC issue" was researched as a candidate second application
+  (`counters/toe/sherman_glacis_qc_1943.md`) and came back a partial non-
+  finding: real US armor QC problems from this era exist, but none converges
+  into a single, dateable, Sherman-glacis-specific defect comparable to
+  Panther's sourced ~50%-of-production figure. See design note E.126 —
+  not applied to either existing Sherman roster row on current sourcing.
 - `av_override_mm` in vehicles.csv is a manual escape hatch for plates that
   don't reduce to "one thickness at one angle" (Tiger's mantlet, Sherman's
   M34A1 gun mount) — computed by hand from the extracted source data, not

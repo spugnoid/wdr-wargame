@@ -1198,3 +1198,30 @@ extension of an existing verification table using values already
 computed by the existing pipelines. `sphinx -W` clean, checked the
 new section's rendered HTML for the usual asterisk/backtick nesting
 bug (none found).
+
+## Update — 2026-09-11 (part 18): Sherman glacis QC flaw -- researched, honestly not modelled
+
+Dispatched research on this project's own named-but-unsourced gap:
+"pre-Oct-1943 Sherman glacis QC issues" as a second `flaw_multiplier`
+candidate (README, `counters/armor_calc/README.md`). Result is a
+partial non-finding, written up in full at
+`counters/toe/sherman_glacis_qc_1943.md`.
+
+Three real but distinct phenomena turned up, none matching the
+README's implied single dateable defect: (1) a real cast-vs-rolled
+ballistic deficiency for the M4A1, but already modelled separately
+via `cast_deficiency_multiplier` -- adding flaw_severity here would
+double-count it; (2) a general US-wide armor-quality limitation
+through November (not October) 1943, unquantified and not Sherman-
+glacis-specific; (3) a real small-hatch weld-seam shot-trap problem,
+corrected March-June 1943, but a geometry issue (closer to
+`av_override_mm` territory) that doesn't apply to either Sherman row
+in the current roster -- the M4A3 already models the post-fix design.
+
+No source gives "October 1943" specifically, and nothing gives a
+Sherman-specific defect-rate comparable to Panther's sourced ~50%
+figure. README corrected to describe the actual finding; new design
+note E.126 documents the dead end. No `flaw_severity` applied to
+either Sherman row -- an honest non-finding, not a forced guess.
+No test or data changes. `sphinx -W` clean, checked the new note's
+rendered HTML for the asterisk/backtick nesting bug (none found).
