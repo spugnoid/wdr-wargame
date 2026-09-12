@@ -165,6 +165,23 @@ far. See `counters/toe/stug3_panzer_tracts_1943.md` for the full read, which
 also resolved a *different* long-standing StuG III question (Hull Front's
 layered-plate construction — see this vehicle's own `vehicles.csv` note).
 
+**Update 2026-09-12, design note E.141: a second StuG III-titled book
+checked and ruled out for this specific question.** Doyle & Jentz,
+*Sturmgeschütz III Assault Gun 1940-42* (Osprey), was read in full — its own
+scope stops at the Ausf.E (explicitly "replaced by the Ausf.F in March
+1942"), never reaching the Ausf.F/8 or G this roster models. It does give a
+full early-series armor rundown (p.6: 10mm fighting-compartment roof at
+77-90°, 16mm rear deck, 15mm belly) but explicitly for the pre-appliqué
+Ausf.A-E production run — not usable as an Ausf.G proxy, the same
+scope-mismatch already anticipated before this book was read. One real
+bonus: p.38 independently corroborates (a second source, not just Panzer
+Tracts No.8) that bolt-on face-hardened applique armor was used "with every
+Sturmgeschütz Ausf.G" — narrative confirmation of the general mechanism,
+no thickness figures of its own. The Ausf.G's own Top/Roof figure remains
+exactly as open as before this pass; no further StuG III-titled candidate
+is known to be in the reference library. See
+`counters/toe/stug3_osprey_1940_42_1943.md`.
+
 ### Panther Ausf G
 
 | Plate | Thickness | Source | Confidence |

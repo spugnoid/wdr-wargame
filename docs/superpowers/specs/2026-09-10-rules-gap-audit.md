@@ -1827,3 +1827,25 @@ resolution -- flagged, not guessed at.
 New design note E.140. No numeric vehicles.csv changes -- four
 citation upgrades. No armor_calc regeneration needed. Test suite
 unchanged at 177 passing. `sphinx -W` clean on the first build.
+
+## Update — 2026-09-12 (part 33): StuG III's second book -- right family, wrong decade of production
+
+Read Doyle & Jentz's *Sturmgeschutz III Assault Gun 1940-42* (50
+pages, image scan) -- the last StuG III-titled book in the reference
+library, checked for the Ausf.G Top/Roof figure E.138 left narrowed.
+
+Its title is exact: the book's narrative ends with the Ausf.E
+"replaced by the Ausf.F in March 1942" -- the Ausf.F/8 and G this
+roster models never appear anywhere in the book. A real early-series
+armor rundown exists (10mm roof, 16mm rear deck, 15mm belly) but
+explicitly for the pre-appliqu Ausf.A-E run, not usable as an Ausf.G
+proxy. One bonus survives the scope mismatch: independent
+corroboration (a second, different source from Panzer Tracts No.8)
+that bolt-on face-hardened applique armor was used "with every
+Sturmgeschutz Ausf.G" -- strengthens confidence in the already-applied
+mechanism, no new thickness figure.
+
+This closes out the reference library's StuG III-titled candidates for
+Top/Roof specifically. New design note E.141. No data or test changes
+-- one citation added, one scope-mismatch documented. `sphinx -W`
+clean on the first build.
