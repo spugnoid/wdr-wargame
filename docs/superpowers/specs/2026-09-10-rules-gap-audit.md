@@ -1442,3 +1442,52 @@ invented page citations) -- the agent caught this itself, discarded
 the unverifiable version, and restored its own properly-sourced work
 with a provenance note explaining what happened. Surfaced here for
 visibility, not because it affected the final research quality.
+
+## Update — 2026-09-12 (part 24): checking our own work against purchased reference material
+
+Rod added a small folder of purchased reference material (MicroMark/
+Mark Bevis Canadian Army TOE lists, C3A and C28/C29, plus the full
+MicroMark sales catalogue) specifically to see how this project's own
+research holds up against an independent, professionally-compiled
+source. Reviewed and cross-checked against existing project work.
+
+Result: three research passes' worth of prior work (British vehicles,
+17pdr APDS, Sherman Firefly) held up without correction. One real gap
+found and closed:
+
+1. **6pdr APDS was missing from guns.csv despite already being sourced.**
+   Both Canadian documents list 6pdr APDS as standard 1944-45 ammo.
+   counters/toe/british_vehicles_1943.md already had a full 5-point
+   0-deg calibration table for it (Bird & Livingston 2001), gathered
+   during the original British-vehicles pass but never carried into
+   guns.csv. Fitted now: sixpdr_57l50_apds, K=1650, exponent 2.26
+   (comfortably inside the physically-plausible band), 0.22% max
+   error -- the tightest fit of any unpublished-K gun in this roster.
+   Same March-1944-service-entry in-scope caveat as the 17pdr's own
+   APDS row.
+
+2. **17pdr APDS fielding-date discrepancy flagged, not resolved.** Our
+   existing row says "March 1944" (War Office pamphlet). The Canadian
+   C3A document instead says "Oct 1944" for that specific unit. Both
+   could be true (general service-entry vs. this unit's actual issue
+   date) -- recorded in guns.csv's confidence note rather than picked.
+
+3. **Firefly-per-squadron ratio escalation** (a real, dated finding
+   from C28/C29: ~25% Firefly per troop in July-Aug 1944, "all but one
+   Squadron had 11x Firefly tanks" by Dec 1944) added as an addendum
+   to counters/toe/sherman_firefly_1944.md -- scenario-design flavor,
+   not a stat change.
+
+New design note E.132. Also recommends the MicroMark catalogue's
+German infantry-division lists (G63-G70, "German Infantry Division,
+1943, all theatres") as a plausible, cheap next lead for the still-open
+PaK 40 fielding-date question (E.130) -- division-level TOE lists of
+this kind typically include the organic anti-tank battalion's exact
+composition, per both Canadian examples reviewed here.
+
+Appendix H regenerated (16 guns, up from 15). New test
+TestSixPdrAPDSGunCurveFit. Test suite: 176 passing (up from 175).
+`sphinx -W` clean on the first build (markup nesting fix pattern from
+memory applied correctly). Note: the purchased reference PDFs
+themselves are not committed -- `*.pdf` is already gitignored, correctly
+keeping paid third-party content out of the repo.

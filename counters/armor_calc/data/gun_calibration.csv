@@ -76,3 +76,8 @@ usm1_57l50_ap,500,112,0,"Tank Archives, same source and convention as the 100m r
 usm1_57l50_ap,1000,89,0,"Tank Archives, same source and convention as the 100m row"
 usm1_57l50_ap,1500,70,0,"Tank Archives, same source and convention as the 100m row"
 usm1_57l50_ap,2000,55,0,"Tank Archives, same source and convention as the 100m row"
+sixpdr_57l50_apds,100,177,0,"Bird & Livingston 2001 pp.60/62, via Wikipedia 'Ordnance QF 6-pounder' -- versus vertical armour. Already sourced in counters/toe/british_vehicles_1943.md this session but never added to guns.csv until a reference-document cross-check (Canadian Army TOE lists, MicroMark/Mark Bevis) flagged 6pdr APDS as standard 1944-45 loadout and prompted the check."
+sixpdr_57l50_apds,500,160,0,"Bird & Livingston 2001 pp.60/62, same source and convention as the 100m row"
+sixpdr_57l50_apds,1000,140,0,"Bird & Livingston 2001 pp.60/62, same source and convention as the 100m row"
+sixpdr_57l50_apds,1500,123,0,"Bird & Livingston 2001 pp.60/62, same source and convention as the 100m row"
+sixpdr_57l50_apds,2000,108,0,"Bird & Livingston 2001 pp.60/62, same source and convention as the 100m row"

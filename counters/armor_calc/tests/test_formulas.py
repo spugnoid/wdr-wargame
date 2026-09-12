@@ -301,6 +301,38 @@ class TestPAK40GunCurveFits:
         assert fit.pen_0deg(500) >= t34_hull_front_av + 10  # Automatic Penetration at typical combat range
 
 
+class TestSixPdrAPDSGunCurveFit:
+    """New 2026-09-12 (design note E.132): 6pdr APDS calibration data was
+    already sourced and cited in counters/toe/british_vehicles_1943.md
+    during this session's original British-vehicles research pass, but
+    never added to guns.csv -- surfaced by a cross-check against purchased
+    Canadian Army TOE reference material naming 6pdr APDS as standard
+    1944-45 ammunition. K-factor unsourced, same constrained-search
+    methodology as every other unpublished-K gun in this roster; this one
+    landed comfortably inside the physically-plausible band without the
+    constraint needing to bind, unlike the 6pdr's own APCBC row."""
+
+    def test_apds_matches_bird_and_livingston_table(self):
+        """5-pt fit at 0deg obliquity vs Bird & Livingston 2001 pp.60/62,
+        the tightest fit of any unpublished-K-factor gun in this file."""
+        fit = fit_gun_curve(
+            muzzle_velocity_fps=4000,
+            k_factor=1650,
+            calibration_ranges_m=[100, 500, 1000, 1500, 2000],
+            calibration_pens_mm=[177, 160, 140, 123, 108],
+            calibration_angle_deg=0,
+            projectile_diameter_mm=57,
+            family="apds",
+        )
+        assert fit.confidence == "fitted"
+        assert 0.8 <= fit.exponent <= 3.0
+        expected_0deg = effective_0deg_resistance(
+            np.array([177.0, 160.0, 140.0, 123.0, 108.0]), 57, 0.0, family="apds"
+        )
+        for r, exp in zip([100, 500, 1000, 1500, 2000], expected_0deg):
+            assert fit.pen_0deg(r) == pytest.approx(float(exp), rel=0.006)
+
+
 class TestUS57mmM1GunCurveFit:
     """New 2026-09-11 (design note E.129, counters/toe/us_57mm_at_1943.md):
     the US 57mm Gun M1 is a licence-built near-copy of the British 6pdr

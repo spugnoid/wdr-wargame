@@ -436,3 +436,32 @@ mantlet claim — flagged as a worthwhile, but not yet done, follow-up.
    cross-checked against Fletcher (2008) directly, despite that book being the
    article's own best-attested source elsewhere — worth doing if this document
    is revisited.
+
+## Addendum, 2026-09-12: Firefly-per-squadron ratio (scenario-design note, not a stat change)
+
+Cross-checking against purchased Canadian Army TOE reference material (MicroMark/
+Mark Bevis, Lists C28/C29, "Canadian 4th Armoured Division, Jul 1944-Jan 1945")
+surfaced a dated Firefly-proliferation detail this file didn't previously capture:
+per-troop Firefly counts within a Sherman squadron rose sharply over the second half
+of 1944, not a flat ratio.
+
+- **July-August 1944**: 4 Troops per Squadron, each "3x Sherman V, 1x Sherman
+  Firefly Vc" — 1 Firefly per 4-tank troop (25%).
+- **August 1944 onward**: 4 Troops @ "2x Sherman V, 1-2x Sherman Firefly Vc," plus
+  a fifth troop of "3x Firefly Vc (by Dec 1944)" — roughly doubling to a
+  majority-Firefly troop mix within a squadron.
+- **By December 1944**: "all but one Squadron had 11x Firefly tanks" (per the
+  source's own Note (i)) — i.e. most squadrons in this specific division were
+  majority-Firefly by year's end, a dramatic escalation from the July landing
+  ratio four months earlier.
+
+This is real, dated, and specific to one division (4th Canadian Armoured), not
+independently confirmed against a second unit's TOE this session — treat as a
+single-source data point, not a general claim about every Sherman-equipped
+formation's Firefly ratio. Not a rules or stat change: this project models one
+Firefly counter and one standard-Sherman counter, and a scenario's Firefly count
+is already a scenario-design choice (Rule 22, scenario OOB), not something
+Section 17/18's stats need to encode. Recorded here as a genuinely useful,
+dated data point for whoever writes a late-1944 scenario and wants historically
+grounded proportions rather than an arbitrary guess — a July 1944 scenario should
+field far fewer Fireflies per squadron than a December 1944 one.
