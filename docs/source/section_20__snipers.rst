@@ -389,12 +389,18 @@ Sniper rules differ from standard infantry fire in three fundamental ways: they 
      - 7
      - 4
      - Scoped No.4 Mk I(T)
-   * - US sniper (regular)
+   * - US sniper (Army) — regular
      - ╌○ 3 ⬡6 -1
      - 4
      - 6
      - 4
-     - Scoped M1903A4 Springfield
+     - Scoped M1903A4 Springfield — Camp Perry's brief prewar course, little practical field training
+   * - US sniper (Marine Corps) — veteran
+     - ╌○ 3 ⬡6 -1
+     - 4
+     - 7
+     - 4
+     - Unertl-scoped '03 Springfield — dedicated Corps sniping school from December 1942
    * - Japanese sniper (veteran)
      - ╌○ 3 ⬡6 -1
      - 4
@@ -405,4 +411,4 @@ Sniper rules differ from standard infantry fire in three fundamental ways: they 
 
 *NOTE: All nations use identical fire line values — sniper effectiveness at this scale is determined more by position, patience, and target selection than by weapon differences. Quality differentials are encoded in Morale values and the extended-ammunition rolls past base AMO. A veteran sniper with Morale 7 recovers from suppression automatically and passes detection checks more reliably.*
 
-*Sourcing note (E.149): Martin Pegler's* The Military Sniper Since 1914 *(Osprey Elite 68) independently reconstructs this project's veteran/regular split — a mass but variably-trained Soviet program, a German program rebuilt in direct imitation of Soviet methods after 1941, and a British program neglected between the wars but recovered quickly all read as consistent with the Morale values above. The book also documents a real, uncaptured distinction between US Army snipers (weaker training and equipment) and US Marine Corps snipers (a dedicated school from December 1942, a better-performing rifle/scope pairing) — this project's single "US sniper — regular" row reflects the Army configuration only; a separate Marine Corps veteran-tier row is a well-sourced candidate left open for a future pass, not added here. See* ``counters/toe/military_sniper_pegler_1943.md`` *for full citations.*
+*Sourcing note (E.149): Martin Pegler's* The Military Sniper Since 1914 *(Osprey Elite 68) independently reconstructs this project's veteran/regular split — a mass but variably-trained Soviet program, a German program rebuilt in direct imitation of Soviet methods after 1941, and a British program neglected between the wars but recovered quickly all read as consistent with the Morale values above. The book also documents a real, previously-uncaptured distinction between US Army snipers (Camp Perry's brief prewar course, weaker training and equipment) and US Marine Corps snipers (a dedicated school from December 1942, a better-performing rifle/scope pairing) — the table above now carries both as separate rows rather than one row standing in for both services. Fire line is unchanged for the Marine Corps row: the book's own effective-range synthesis treats WWII bolt-action service sniping rifles as converging to a similar practical envelope regardless of the specific scope/rifle pairing, so the training/equipment gap is expressed the same way every other national quality gap already is in this table — through Morale, not the fire line. See* ``counters/toe/military_sniper_pegler_1943.md`` *for full citations.*

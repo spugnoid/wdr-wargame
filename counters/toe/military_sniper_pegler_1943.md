@@ -263,16 +263,15 @@ ammunition for snipers, not a specially manufactured sniper-only product.
 
 ## Open Questions / Gaps for Follow-up
 
-1. **US Marine Corps sniper as a distinct roster row** — the best-supported,
-   lowest-risk actionable finding in this pass. The book gives a clean,
-   dated, well-cited case that Army and Marine Corps snipers were trained
-   and equipped to different standards (Camp Perry brief course vs. a
-   dedicated Corps school from Dec 1942, and a demonstrably better
-   rifle/scope combination for the Marines). Adding a "US sniper (Marine
-   Corps) — veteran" row alongside the existing "US sniper (Army) —
-   regular" row is a real candidate for a future session, left open here
-   per this project's convention of not forcing roster changes into a
-   research-only pass.
+1. **RESOLVED, design note E.150.** US Marine Corps sniper added as a
+   distinct roster row — "US sniper (Marine Corps) — veteran" alongside
+   the relabeled "US sniper (Army) — regular" — citing the Corps's
+   dedicated sniping school (Dec 1942) and its better-performing
+   Unertl-scoped '03 Springfield. Fire line deliberately left identical
+   to every other row (see Finding 1: the book's own effective-range
+   synthesis doesn't support a fire-line distinction), so the gap is
+   expressed through Morale only, consistent with every other national
+   quality difference in this table.
 2. **AMO base of 4** remains entirely uncited by any source this project
    has read to date, this book included — still an open question needing
    either a primary-source doctrine manual or a different reference genre
