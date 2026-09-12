@@ -1885,3 +1885,37 @@ New design note E.142, citation corrected in sherman_firefly_1944.md,
 full addendum added. No numeric vehicles.csv changes -- every open
 question here is provenance, not a number. Test suite unchanged at
 177 passing. `sphinx -W` clean on the first build.
+
+## Update — 2026-09-12 (part 35): MacKenzie delivers the best crew-quality evidence found all session
+
+Read S.P. MacKenzie's *The Home Guard: A Military and Political
+History* (302 pages, real text layer, targeted at organizational/
+effectiveness chapters rather than cover-to-cover) -- the standard
+academic monograph this project's Militia-tier research had only ever
+reached secondhand via Wikipedia.
+
+Real result: the best crew-quality evidence found across every
+research pass this session. MacKenzie's Conclusion states plainly that
+German paratroops "would have been able to overwhelm the surrounding
+village platoons of more or less untrained Home Guards in short
+order" -- a direct historian's combat-value judgment, not an inference
+this project had to construct. Backed by quantified period data: a
+Gloucestershire platoon averaging under 10/20 at 200 yards in 1941; a
+Derbyshire battalion missing the target over a third of the time in
+1943; training fatalities from poor training and ammunition defects. A
+senior Home Guard commander's own verdict, quoted approvingly --
+"Whatever the fighting value of the Home Guard, it was a great
+national gesture and a great tonic" -- treats combat effectiveness as
+secondary to morale/manpower-substitution value.
+
+The section-vs-platoon terminology ambiguity is now understood (the
+word "section" is used in two genuinely different senses in
+MacKenzie's own text) but the exact headcounts this roster's squad row
+needs remain unconfirmed by this political/social history -- it never
+prints a TOE-style organization chart. bayonetstrength.uk remains the
+best lead for those specific numbers.
+
+New design note E.143. No numeric units.csv changes -- manpower and
+quality stand exactly as before (Militia was already the right call),
+now backed by real citation instead of pure structural inference. Test
+suite unchanged at 177 passing. `sphinx -W` clean on the first build.

@@ -1,0 +1,45 @@
+# Home Guard — S.P. MacKenzie, *The Home Guard: A Military and Political History* (Oxford University Press, 1995)
+
+## Sources
+
+- S.P. MacKenzie, *The Home Guard: A Military and Political History* (Oxford: Clarendon Press, 1995), 302pp. Academic monograph, real text layer (not a scan), used via `pdftotext`.
+- Chapters consulted: Ch.6 "On Guard, 1941–2" (spot-checked), Ch.7 "Waiting for Hitler, 1942–3" (printed pp.112–129, full), Ch.8 "An Uncertain Future, 1943–5" (printed pp.130–156, full), Conclusion (printed pp.176–185, full).
+- Note: this book's PDF-to-printed-page offset is *not* constant (drifts from +18 near Ch.6 to +33/34 by Ch.9/Conclusion, almost certainly due to unnumbered photo-plate inserts) — page numbers below are the book's own printed page numbers, cross-checked against in-text page-header OCR, not computed by fixed offset.
+- This pass targets two open questions from `militia_tier_validation_1943.md`'s "Candidate 3: British Home Guard" section.
+
+## Findings
+
+### 1. Organizational terminology (Open Question #1) — partially resolved
+
+This book is a political/social history, not a TOE reference, and it never prints a clean organization chart with unit-strength figures. It does, however, confirm the *vocabulary* is conventional British Army hierarchy, used consistently:
+
+- **Battalion → Company → Platoon → Section** is the standard chain referenced throughout (e.g., a passing reference to "everyone from the Prime Minister down to the lowliest section commander" being inundated with complaints, Ch.8 — treating "section commander" as the bottom rung of the command chain, below platoon and company commanders).
+- "Platoon" is the basic *tactical* sub-unit used for role differentiation: by 1942–3, "specialization had reached the point where in addition to mobile and static platoons, there were often medical teams, intelligence sections, catering parties, chemical warfare subsections, signalling parties, and even pigeon handlers" (Ch.7, p.~123). Note "section" is used here in a *second*, non-tactical sense — a specialist/functional team (intelligence section, chemical warfare subsection), not a maneuver sub-unit — alongside its tactical sense as the unit below a platoon. Both senses coexist in the source vocabulary, which is likely the actual root of the "section vs. platoon" ambiguity flagged in the validation file: the word "section" was used loosely for both a squad-sized tactical unit and an ad hoc specialist attachment.
+- Village-level combat units are called "platoons" in the one clearest tactical passage in the book (Conclusion, p.182): "the first clash of arms would have been between the Home Guards of villages such as Etchinghill, Postling, and Paddlesworth and parachute regiments of the 7th Fliegerdivision... the airborne troops would have had to move through one village after another, and fight a series of short, sharp engagements with the local Home Guard" — earlier on the same page these are explicitly called "village platoons."
+- **Not found**: the specific "25–30 man section" figure or the "battle platoon of 3 squads of ~8 men" figure from `militia_tier_validation_1943.md` do not appear verbatim anywhere in the chapters surveyed. This book cannot confirm or refute those specific numbers — it is the wrong source for unit-strength tables. A dedicated Home Guard TOE/uniform reference (e.g., an Osprey Men-at-Arms title) would be needed to pin the exact section/platoon establishment strengths.
+
+### 2. Quality/effectiveness assessment (Open Question #2, the important one) — resolved, with real citable material
+
+MacKenzie never states a single blunt "the Home Guard was [good/poor quality]" sentence, but the Conclusion (pp.180–183) assembles several concrete, quotable judgments that add up to a clear and usable assessment:
+
+- **Direct combat-value comparison** (p.181–182): describing what a hypothetical Sealion landing would have looked like, MacKenzie writes that "Luftwaffe parachute troops were highly trained, well-armed professionals who would have been able to overwhelm the surrounding village platoons of more or less untrained Home Guards in short order, as the more thoughtful volunteers came to realize." He quotes a volunteer: "It really makes cold shivers run down my spine at the thought of what we escaped." Older men "hastily grouped together and armed with a few shotguns and rifles would have been no match for" elite paratroops armed with sub-machine guns (this sentence is OCR-garbled in the extracted text but the sense is unambiguous from context).
+- **The force's own combat record was never tested**: "the Home Guard was never put to the test" (p.180) — there is no actual battle record to independently verify effectiveness; the assessment above is MacKenzie's own counterfactual judgment, not an after-action report.
+- **Marksmanship data** (Ch.7/8, p.~123–124): "the average range score at 200 yards under good conditions in the Painswick platoon in Gloucestershire during 1941... was just under ten out of twenty." Two companies of the 6th Derbyshire battalion in early 1943 did even worse — "one third of the shots miss[ed] the target" entirely even though "the conditions for shooting were not ideal." This is real, quantified, period-sourced marksmanship data usable as a training/quality proxy.
+- **Training casualties**: "By the end of 1944, eight Home Guard officers and nine other ranks were officially listed as having been killed in training" from "a mixture of poor training, a desire to experiment, and defects in ammunition" with grenades and sub-artillery (p.~124).
+- **The force's real wartime value was substitution, not front-line combat**: MacKenzie's summary judgment (p.183–184) is that the Home Guard's importance lay in freeing regulars for other duties — manning AA batteries (118,649 Home Guards seconded to AA Command by August 1944, "close to half all gun and rocket crews"), coastal defence, minefield maintenance, bomb disposal, and civil defence — allowing "at least 100,000 assorted gunners, signallers, and other specialist troops to be transferred to more aggressive tasks." This was "rarely glamorous" work, explicitly contrasted with a front-line combat role.
+- **A contemporary's own verdict, quoted approvingly** (p.183): General (retd.) Sir John Burnett-Stuart, commander of the 1st Aberdeenshire Battalion: "Whatever the fighting value of the Home Guard, it was a great national gesture and a great tonic. It was the outward and visible sign of the spirit of resistance." The phrasing "whatever the fighting value" is itself telling — even a sympathetic senior commander treats the force's combat effectiveness as beside the point next to its morale/political function.
+
+**Net assessment for game purposes**: this is real, citable support for a low-tier ("Militia") classification. The evidence consistently describes a static, poorly-marksman-trained, structurally under-armed force whose own supporters judged its value as morale/manpower-substitution rather than combat effectiveness, and whose few senior officers who considered the counterfactual combat case (Sealion) expected rapid defeat against professional troops. It is not a hostile assessment — MacKenzie is sympathetic to the Home Guard as an institution — but it does not support anything above the lowest quality tier for direct combat modeling.
+
+## Confidence Notes
+
+- All findings above are drawn from the book's own text with page numbers; none are inferred from indirect/secondary sources.
+- The Sealion "village platoons ... overwhelm ... in short order" passage (pp.181–182) is the single clearest, most directly quotable sentence found for a combat-effectiveness judgment in this entire research arc across all Home Guard sources consulted so far.
+- One short passage on p.182 is OCR-garbled (`obélite pal / Ale Utearmed with sub- / machine guns`) — the surrounding sentence structure and topic make the intended meaning unambiguous ("no match for [German] elite paratroopers armed with sub-machine guns"), but the exact original wording could not be recovered from this extraction and should not be quoted verbatim if a direct quotation is needed later.
+
+## Open Questions
+
+1. Exact Home Guard section/platoon establishment strengths (the "25–30 man section" vs "3 squads of ~8 men" figures) remain unconfirmed by this source — needs a dedicated TOE/uniform reference, not a political history.
+2. 1943-specific organizational/strength data beyond the AA-secondment figure (111,917 in AA units by May 1943; 118,649 by August 1944) was not specifically extracted in this pass — lower priority per the original directive, not pursued further.
+3. Officer-seniority-junior-to-Regular-Army-rule detail was not encountered in the chapters surveyed.
+4. Historical validation beyond AA/coastal gunnery (e.g., Northern Ireland IRA activity) was not encountered in the chapters surveyed; the Conclusion's ten additional "cadre battalions for Northern Ireland" (p.~140s, Ch.8) relate to postwar Cold War Home Guard reconstitution (1950s), not wartime IRA activity, and are not directly relevant to the 1943 unit being modeled.

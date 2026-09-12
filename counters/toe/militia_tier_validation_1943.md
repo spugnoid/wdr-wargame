@@ -526,12 +526,23 @@ the project's 1943 window; the Home Guard only needs (a). Concretely:
 
 ## Open Questions / Gaps for Follow-up
 
-1. **Home Guard**: MacKenzie's book itself was never reached directly this
-   session — a follow-up with library/Google Books access, or a direct look at
-   `bayonetstrength.uk` (this project's usual go-to British-Army TOE source,
-   not checked for Home Guard this session), would likely resolve both the
-   section-vs-platoon naming ambiguity and supply an actual quality/training
-   assessment quote instead of this document's structural inference.
+1. **Home Guard — PARTIALLY RESOLVED 2026-09-12, design note E.143.**
+   MacKenzie's book itself has now been read directly (see
+   `counters/toe/homeguard_mackenzie_1943.md`). It supplies exactly the
+   quality/training assessment this document lacked — his Conclusion
+   states German paratroops "would have been able to overwhelm the
+   surrounding village platoons of more or less untrained Home Guards in
+   short order," backed by real period marksmanship data (a Gloucestershire
+   platoon averaging under 10/20 at 200 yards in 1941). The section-vs-
+   platoon naming ambiguity is now understood, not fully resolved: MacKenzie
+   uses "section" in two distinct senses (a tactical sub-platoon unit, and
+   an unrelated functional/specialist team), which explains the confusion
+   without pinning down exact headcounts — this is a political/social
+   history, not a TOE reference, and it never prints the specific 25-30-man-
+   section or 8-man-squad figures this project's roster row actually needs.
+   `bayonetstrength.uk` (this project's usual go-to British-Army TOE source)
+   remains unchecked for Home Guard and is still the best remaining lead for
+   the exact establishment-strength numbers specifically.
 2. **Home Guard**: no 1943-specific (as opposed to 1940-baseline) battalion/
    company count, and no full 1943 weapons census (only the qualitative "near-
    universal issue by 1943" claim), was found — a designer wanting exact 1943
