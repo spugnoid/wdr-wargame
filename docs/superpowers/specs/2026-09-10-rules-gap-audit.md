@@ -1225,3 +1225,36 @@ note E.126 documents the dead end. No `flaw_severity` applied to
 either Sherman row -- an honest non-finding, not a forced guess.
 No test or data changes. `sphinx -W` clean, checked the new note's
 rendered HTML for the asterisk/backtick nesting bug (none found).
+
+## Update — 2026-09-11 (part 19): British 6pdr -- this roster's second towed anti-tank gun
+
+Continuing "build these out in logical order." The 6pdr was the
+cheapest remaining backlog item -- its gun curve
+(`sixpdr_57l50_apcbc`) already existed in `guns.csv` from the earlier
+British-vehicles work and was already printed in Appendix H, unused
+by any counter. Only crew/TOE facts needed research (full detail in
+`counters/toe/sixpdr_1943.md`).
+
+Crew size: 6, matching PaK 40 exactly, converging across four
+independent British sources. Two real coexisting 1943 organizational
+tiers found (infantry battalion Anti-tank Platoon, divisional Royal
+Artillery Anti-Tank Regiment). Recommended anecdote for a future Rule
+18.12 entry: the Robaa Valley ambush, Tunisia, 31 January 1943 (72nd
+A/T Regiment RA) -- deliberately not the more famous but contested
+"Tiger 131" story, whose own attribution (towed 6pdr vs. tank-mounted
+6pdr vs. captured gun vs. French 75) is disputed even in the Tank
+Museum's current research.
+
+Genuine finding, not previously called out clearly: neither the PaK
+40 nor the 6pdr has ever been given a printed weapon-team stat block
+(Defence/Morale/M#/F#, Rule 17.1a.1) -- the infantry_calc pipeline
+only derives those for RPM-based small-arms weapon teams via
+weapons.csv, a shape that doesn't fit an HE-firing gun crew. Recorded
+as shared infrastructure work in `counters/infantry_calc/README.md`
+rather than invented ad hoc for one gun.
+
+New design note E.127 (caught and fixed one asterisk-adjacent-to-
+backtick nesting bug during its own write-up, same recurring class as
+prior parts). No test or data changes -- ballistics and appendix entry
+already existed; this session's work is the TOE research file and
+documenting the stat-block gap. `sphinx -W` clean.

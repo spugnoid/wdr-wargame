@@ -97,13 +97,27 @@ itself has no source column, so it's recorded here instead):
   beyond this is future work, using this same pipeline shape.
 - **Towed anti-tank guns are now partially in scope** (Rule 17.1a): the PaK 40
   (`counters/toe/pak40_1943.md`, both PzGr 39 APCBC and PzGr 40 APCR gun curves
-  in `armor_calc/data/guns.csv`) is the first one built, reusing `armor_calc`'s
-  gun-curve-fitting machinery exactly as anticipated here — it needs no vehicle
-  counter at all, since a towed gun has no armour. Other towed guns (field
-  howitzers, other nations' anti-tank pieces) and its own 1943 crew/quality
-  stats are still future work; see the PaK 40 research file's own Open
-  Questions for what's left unsourced (crew morale/quality tier, exact
-  divisional-vs-regimental fielding date within 1943).
+  in `armor_calc/data/guns.csv`) was the first one built, and the British 6pdr
+  (`counters/toe/sixpdr_1943.md`) the second — reusing `armor_calc`'s existing
+  gun curve (`sixpdr_57l50_apcbc`, already in the roster from the earlier
+  British-vehicles work, unlike PaK 40 which needed a fresh fit) and the same
+  Rule 17.1a machinery — neither needs a vehicle counter at all, since a towed
+  gun has no armour. Both guns share the same real, still-open gap: **neither
+  has a printed weapon-team stat block** (Defence/Morale/M#/F#, Rule 17.1a.1)
+  the way an HMG or LMG team does. This pipeline derives Defence/Morale from
+  `manpower_full` and `quality` via `unit_defence()`/`unit_morale()`, but only
+  for `weapons.csv`-keyed, RPM-based small-arms fire — an HE-firing gun crew
+  doesn't fit that shape and was never added as a `units.csv` row for either
+  gun. Building that (a units.csv row with a blank/inapplicable weapon-fire
+  slot, or a small pipeline extension to handle HE-only weapon teams) is
+  shared infrastructure work for any future towed gun, not a per-gun task —
+  flagged here rather than under either gun's own research file. Crew size is
+  sourced for both (6 men, matching independently between the German and
+  British guns); a well-documented crew-quality tier is not, for either.
+  Other towed guns (field howitzers, Soviet 45mm, US 57mm) are still future
+  work; see each gun's own research file for what's separately unsourced
+  (PaK 40: divisional-vs-regimental 1943 fielding date; 6pdr: named crew
+  roles).
 - **Grenades and satchel charges are not derived stats.** Both already resolve via
   fixed, manually-assigned values (G# on the counter, Engineer's DEMO capability);
   they are not something derived from real-world weapon specs.
