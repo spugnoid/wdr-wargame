@@ -105,7 +105,7 @@ The upper right corner of each counter shows three action values:
 
 .. container:: rule-guide
 
-   **Why:** F# was, for a long stretch of this document's history, tracked as two different numbers claiming to describe the same thing — a printed stat nothing consulted, and a separate rules-text value nothing printed. Design note E.109 merged them: there is exactly one number, it is printed on the counter, and Rule 6.6.2 is simply where its value comes from for any given weapon class.
+   **Why:** Ties F# to a single authoritative source — Rule 6.6.2's mount-type table — rather than leaving it a number assigned by feel per counter, so every weapon's stationary fire rate traces back to one consistent rule.
 
    **Example:** A rifle squad prints F1 — its printed value and Rule 6.6.2's "any other unit" row are the same fact stated once. A tripod HMG prints F3, matching the tripod row exactly; a bipod LMG prints F2, matching the bipod row. None of these numbers need a separate lookup to know what they mean.
 

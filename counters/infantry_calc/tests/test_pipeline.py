@@ -73,7 +73,8 @@ class TestLoadUnits:
         slot (MP40 x1, the squad leader's personal weapon -- present in
         every source checked but absent from the original transcription)
         added, per counters/toe/germany_1943.md. f_number corrected 2->1
-        per design note E.109 (F#/ROF merge). The MG42 LMG slot itself
+        per design note E.109 (F# standardized against Rule 6.6.2's
+        table). The MG42 LMG slot itself
         (count=1, practical_rpm=300) is untouched -- it remains the
         system's calibration anchor."""
         units = {u.unit_id: u for u in load_units()}

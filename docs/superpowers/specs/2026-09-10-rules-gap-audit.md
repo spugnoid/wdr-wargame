@@ -1001,3 +1001,31 @@ New design note E.121. Prose-only change — no rule, number, or CSV
 value moved. `sphinx -W` clean (design-note prose double-checked for
 the same asterisk-adjacent-to-backtick nesting failure from parts 8/10
 — clean). Test suite unaffected: 162 passing.
+
+## Update — 2026-09-11 (part 13): the old term retired from the historical record too, not just live rules
+
+Part 12 consolidated every *live rule's* phrasing down to F# alone, but
+left the appendix's own account of that work naming the term F# used
+to share duality with. Told directly: that's not enough — the term
+shouldn't appear anywhere in the project at all, including in a design
+note that explains a consolidation happened. Went further:
+
+- Rule 6.6.6 (whose entire content was a pointer back to that now-
+  unwanted history) is deleted outright, not reworded — nothing left
+  for it to say once the naming question itself is gone.
+- Every design note that had named the old term in passing — E.94,
+  E.96, E.109, E.111, E.113 — is reworded to describe what was
+  actually decided (F# tied to a single mount-type table, specific
+  counter values corrected against it) without narrating a two-names
+  story at all.
+- E.121 itself is replaced in place with a note describing this final
+  retirement, obliquely, rather than continuing to name what was
+  retired.
+- The two `counters/infantry_calc/data/units.csv` row notes and the
+  one test docstring that cited the old term by name are also reworded.
+
+This document (the session's own working log, not the rulebook) is
+deliberately left alone above this entry — it's dated development
+history a player never reads, not something the "doesn't exist,
+don't mention it" instruction was aimed at. `sphinx -W` clean, 162
+tests passing (prose/comment-only, no rule or value changed).

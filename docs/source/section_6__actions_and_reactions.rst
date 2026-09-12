@@ -291,7 +291,7 @@ The following reactions are available to the non-active player during a reaction
 
 .. container:: rule-guide
 
-   **Why:** F# used to be tracked as two different numbers claiming to describe the same thing — a printed stat and a separate rules-text value; design note E.109 merged them into the one printed stat this rule reads directly.
+   **Why:** Ties the printed stat directly to a single authoritative source (the mount-type table below) rather than leaving a designer to assign it by feel per counter, so every weapon's stationary fire rate traces back to one consistent rule.
 
    **Example:** A tripod HMG's printed F3 is the same number Rule 6.6.2's table would assign it by mount type — reading the counter and reading the table give the identical answer, because they're the same fact.
 
@@ -347,14 +347,6 @@ The following reactions are available to the non-active player during a reaction
    **Why:** Reflects that a crew actively serving a gun under F# this turn hasn't had the time or free hands to also break it down and pack it up — Limbering is a separate, incompatible activity from that turn's firing.
 
    **Example:** A tripod HMG fires all three of its F# shots this turn (reaching MOVED/FIRED). Its crew cannot also Limber the weapon this same turn — that must wait until next turn.
-
-**6.6.6**  *Resolved — see design note E.109.* F# is read directly from the Rule 6.6.2 table for that weapon's mount type. A weapon type not yet listed in that table (a future addition to the counter mix, such as a towed AT gun) has no defined rate yet and needs a new row added when it's designed — not a second, separate stat to reconcile against.
-
-.. container:: rule-guide
-
-   **Why:** Closes out what was an explicitly flagged interim state rather than leaving it to quietly age — F# is no longer a separate, unresolved question, it comes straight from the table. What remains genuinely open is narrower and more honest: extending Rule 6.6.2's table to weapon classes it doesn't cover yet, which is ordinary future counter design, not a reconciliation debt.
-
-   **Example:** Adding a towed AT gun to the roster later means adding a row to Rule 6.6.2's table (and printing that value as its F#) — there's no separate question to resolve for it, only the ordinary design question of what its stationary rate of fire should be.
 
 6.7  Desperate Fire and Close-Combat Defense
 -----------------------------------------------

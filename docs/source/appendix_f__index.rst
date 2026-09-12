@@ -553,7 +553,7 @@ anti-cheat function  ..........  16.5.4, E.31
 
 fields  ..........  16.12
 
-**Fire rate (F#)**  ..........  3.3.2, 6.6, E.109
+**Fire rate (F#)**  ..........  3.3.2, 6.6
 
 values by mount type (1/2/3)  ..........  6.6.2
 
