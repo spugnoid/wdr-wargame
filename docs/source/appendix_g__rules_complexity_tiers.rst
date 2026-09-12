@@ -48,7 +48,7 @@ G.2  Tier by Section
      - Includes F#-capable weapons (Rule 6.6) — central to how MG counters already work, not an add-on
    * - 7 — Movement
      - Basic
-     - Careless Movement (Rule 7.4) is Standard — a real tactical option, not required to play
+     - Double-Timed Movement (Rule 7.4) and Cautious Movement (Rule 7.3a) are Standard — real tactical options, not required to play
    * - 8 — Fire Combat
      - Basic
      - Weapon Malfunction (8.12) and Pre-Registered Defensive Fire (8.13) are Advanced (Optional Rule)

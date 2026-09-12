@@ -33,7 +33,7 @@ Each game turn proceeds through three phases in the following order:
 
    **Example:** Alpha becomes Suppressed near the end of one turn. It gets its recovery roll at the very start of the next turn's Recovery Phase, before either side spends any Action Points.
 
-**5.2.2**  All action markers (ASSAULT, FIRED 1/2/3, MOVED/FIRED, CARELESS) are removed from all counters.
+**5.2.2**  All action markers (ASSAULT, FIRED 1/2/3, MOVED/FIRED, CAUTIOUS, DOUBLE-TIMED) are removed from all counters.
 
 .. container:: rule-guide
 

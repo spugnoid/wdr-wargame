@@ -95,13 +95,13 @@ Cover modifiers are added to the defender's Defence value when resolving fire co
 ------------------------
 
 
-**4.3.1**  Terrain hexes that the line of fire passes through between the firer's hex and the target's hex impose a per-hex penalty to the attacker's effective rFP.
+**4.3.1**  Terrain hexes that the line of fire passes through between the firer's hex and the target's hex impose a per-hex penalty to the attacker's eFP.
 
 .. container:: rule-guide
 
    **Why:** Applies terrain's degrading effect to the shot itself, separately from the target's own cover (Rule 4.2) — a bad line of sight through woods weakens the attack regardless of what the target is standing in.
 
-   **Example:** Alpha fires through a hex of light woods at Squad Bravo standing in open ground. Bravo gets no cover bonus from the woods (it isn't in that hex), but Alpha's effective rFP is still reduced for having fired through it.
+   **Example:** Alpha fires through a hex of light woods at Squad Bravo standing in open ground. Bravo gets no cover bonus from the woods (it isn't in that hex), but Alpha's eFP is still reduced for having fired through it.
 
 **4.3.2**  The firer's hex and the target's hex are not counted as intervening terrain.
 
@@ -127,7 +127,7 @@ Cover modifiers are added to the defender's Defence value when resolving fire co
 
    **Example:** A line of fire crossing one hex of light woods (-2) and one hedgerow hexside (-1) takes a combined penalty of -3, each terrain type's penalty calculated on its own hexes and then added together.
 
-**4.3.5**  Effective rFP can be driven to 0 or below by accumulated penalties. A fire line at 0 or less contributes nothing and cannot attack (Rule 8.2.5) — dense woods and layered smoke can genuinely stop fire.
+**4.3.5**  eFP can be driven to 0 or below by accumulated penalties. A fire line at 0 or less contributes nothing and cannot attack (Rule 8.2.5) — dense woods and layered smoke can genuinely stop fire.
 
 .. container:: rule-guide
 
@@ -140,7 +140,7 @@ Cover modifiers are added to the defender's Defence value when resolving fire co
    :widths: auto
 
    * - **Intervening Terrain**
-     - **rFP Penalty Per Hex**
+     - **eFP Penalty Per Hex**
    * - Open ground
      - 0
    * - Crops / tall grass
@@ -245,13 +245,13 @@ Cover modifiers are added to the defender's Defence value when resolving fire co
 
    **Example:** As worked in Rule 4.4a.6: a level-2 firer looking past an intermediate level-1 hex cannot see into the level-0 hex immediately behind that hex on the far side (the blind zone), but can see a level-0 hex farther beyond it.
 
-**4.4a.5**  Grazing fire: LOS traced at the firer's own level that crosses one or more crest hexsides (skimming a ridge line between same-level positions) suffers -1 effective rFP per crest hexside crossed (Rule 4.3 table).
+**4.4a.5**  Grazing fire: LOS traced at the firer's own level that crosses one or more crest hexsides (skimming a ridge line between same-level positions) suffers -1 eFP per crest hexside crossed (Rule 4.3 table).
 
 .. container:: rule-guide
 
    **Why:** Penalizes a shot that skims along uneven ground at the firer's own level, since a line of fire threading a ridge's ups and downs is realistically harder to keep clear than one crossing flat terrain, even when nothing outright blocks it.
 
-   **Example:** Alpha's shot at a same-level target crosses two crest hexsides along the way. That's a -2 effective rFP grazing-fire penalty (Rule 4.3 table), on top of any other intervening-terrain penalties on the same line.
+   **Example:** Alpha's shot at a same-level target crosses two crest hexsides along the way. That's a -2 eFP grazing-fire penalty (Rule 4.3 table), on top of any other intervening-terrain penalties on the same line.
 
 **4.4a.6**  Example: A fires from a level-2 hilltop at B on level 0, five hexes away, with a level-1 hex three hexes out along the line. B is visible (level 0, not adjacent to the level-1 hex on the far side). C, in the level-0 hex directly behind the level-1 hex, is in the crest blind zone — invisible to A, on A's reverse slope (Rule 4.4.4), and targetable by A's side only with indirect fire. C sees and fights normally against anything on its own side of the crest.
 
@@ -265,13 +265,13 @@ Cover modifiers are added to the defender's Defence value when resolving fire co
 -------------------------------
 
 
-**4.5.1**  Units firing from a higher elevation than their target receive a bonus to effective rFP.
+**4.5.1**  Units firing from a higher elevation than their target receive a bonus to eFP.
 
 .. container:: rule-guide
 
    **Why:** Rewards holding the high ground with a direct firepower bonus, on top of whatever LOS advantages elevation already grants (Rule 4.4a) — height doesn't just help a unit see, it helps its shots hit harder.
 
-   **Example:** Alpha firing from one level higher than Squad Bravo gets +1 effective rFP (Rule 4.5 table) added on top of its base fire line's value at that range.
+   **Example:** Alpha firing from one level higher than Squad Bravo gets +1 eFP (Rule 4.5 table) added on top of its base fire line's value at that range.
 
 **4.5.2**  Units firing at a target on higher ground treat the target's terrain cover as one step higher than printed.
 
@@ -288,9 +288,9 @@ Cover modifiers are added to the defender's Defence value when resolving fire co
    * - **Condition**
      - **Modifier**
    * - Firer 1 elevation level higher than target
-     - +1 effective rFP
+     - +1 eFP
    * - Firer 2 or more levels higher than target
-     - +2 effective rFP
+     - +2 eFP
    * - Target 1 level higher than firer
      - +1 to target cover modifier
    * - Target 2 or more levels higher than firer

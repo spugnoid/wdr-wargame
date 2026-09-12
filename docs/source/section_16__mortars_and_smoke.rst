@@ -366,7 +366,7 @@ All mortar counters use M1 F1 (mobile) or M0 F2 (deployed), per Rule 6.6.2. Mort
 
    **Why:** Keeps the normal terrain cover system (Rule 4.2) fully in effect against mortar fire, since good cover genuinely does protect against blast and shrapnel the same way it protects against direct fire — indirect fire doesn't bypass the cover mechanics wholesale.
 
-   **Example:** A unit in a foxhole (+6 cover) caught in a mortar's blast area still gets that +6 cover bonus against the blast's effective rFP, same as it would against a direct rifle shot.
+   **Example:** A unit in a foxhole (+6 cover) caught in a mortar's blast area still gets that +6 cover bonus against the blast's eFP, same as it would against a direct rifle shot.
 
 **16.7.4**  Reverse slope (a position, Rule 4.4.4) and building cover are each reduced by 1 step — indirect fire angles over and into these positions. Reverse slope +4 becomes +3. Building heavy +5 becomes +4.
 
@@ -549,7 +549,7 @@ All mortar counters use M1 F1 (mobile) or M0 F2 (deployed), per Rule 6.6.2. Mort
 
    **Why:** Ties smoke's game effect directly to its dissipation step, so a screen weakens gradually and predictably rather than being either fully effective or fully gone — both its firepower-blocking and its concealment bonus taper down together as the step decreases.
 
-   **Example:** Smoke at step 2 (THINNING) still gives -2 rFP per hex to fire passing through and +2 CON to units in it — noticeably weaker than fresh THICK smoke (-3/+3), but still meaningfully better than the almost-gone step 1 (-1/+1).
+   **Example:** Smoke at step 2 (THINNING) still gives -2 eFP per hex to fire passing through and +2 CON to units in it — noticeably weaker than fresh THICK smoke (-3/+3), but still meaningfully better than the almost-gone step 1 (-1/+1).
 
 .. list-table::
    :header-rows: 1
@@ -557,7 +557,7 @@ All mortar counters use M1 F1 (mobile) or M0 F2 (deployed), per Rule 6.6.2. Mort
 
    * - **Step**
      - **Name**
-     - **Intervening rFP Penalty**
+     - **Intervening eFP Penalty**
      - **CON Bonus (concealment)**
      - **Notes**
    * - 3
@@ -582,13 +582,13 @@ All mortar counters use M1 F1 (mobile) or M0 F2 (deployed), per Rule 6.6.2. Mort
      - Smoke has cleared
 
 
-**16.10.3**  SMOKE markers use the existing intervening terrain penalty system (Section 4.3). A unit firing through 2 hexes of THICK smoke suffers -6 rFP to its fire — effectively preventing accurate fire through a fresh smoke screen.
+**16.10.3**  SMOKE markers use the existing intervening terrain penalty system (Section 4.3). A unit firing through 2 hexes of THICK smoke suffers -6 eFP to its fire — effectively preventing accurate fire through a fresh smoke screen.
 
 .. container:: rule-guide
 
    **Why:** Plugs smoke into the same intervening-terrain penalty system already used for woods, buildings, and other obstructing terrain (Section 4.3), so smoke's fire-blocking effect stacks and calculates exactly like any other terrain penalty rather than needing a separate calculation.
 
-   **Example:** A fire line crossing 2 hexes of THICK smoke (-3 per hex, Rule 16.10.2) takes a total -6 rFP penalty, calculated the same way multiple hexes of any other terrain type would sum under Rule 4.3.3.
+   **Example:** A fire line crossing 2 hexes of THICK smoke (-3 per hex, Rule 16.10.2) takes a total -6 eFP penalty, calculated the same way multiple hexes of any other terrain type would sum under Rule 4.3.3.
 
 **16.10.4**  Units occupying a SMOKE hex add the smoke CON bonus to their concealment value for spotting purposes (Section 14.9).
 

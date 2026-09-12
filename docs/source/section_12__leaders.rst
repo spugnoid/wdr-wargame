@@ -86,15 +86,15 @@ All leaders have M3 F1 — movement allowance 3, fire rate 1. Leaders move faste
 
    **Example:** An elite leader and a veteran leader both have CMD 3 and the same 3-hex radius and AP contribution, but the elite leader's better RAL, ASL, and OBS values (Rule 12.6.4, 12.8.2) make them noticeably more effective in play.
 
-**12.2.4**  At night, a leader's command radius (Rule 12.2.1) is **+1 hex** — sound carries farther than sight in still air. Issuing a command to a unit beyond the leader's *normal daytime* radius applies the Rule 14.9.7 careless-movement CON penalty, doubled per Rule 23.1.3, to the leader's own hex for spotting purposes only: no CARELESS marker is placed, no movement occurs, and none of Rule 7.4's other consequences of actual Careless Movement apply.
+**12.2.4**  At night, a leader's command radius (Rule 12.2.1) is **+1 hex** — sound carries farther than sight in still air. Issuing a command to a unit beyond the leader's *normal daytime* radius applies the Rule 14.9.7 Double-Timed-movement CON penalty, doubled per Rule 23.1.3, to the leader's own hex for spotting purposes only: no DOUBLE-TIMED marker is placed, no movement occurs, and none of Rule 7.4's other consequences of actual Double-Timed Movement apply.
 
 .. container:: rule-guide
 
-   **Why:** Extended reach at night costs concealment, not a status — a leader shouting orders to the edge of that extra hex is exactly as loud and exposed as a unit moving carelessly, without actually having moved or triggering any of Careless Movement's other effects (Rule 7.4). Borrowing the existing -4 value keeps this a reused number, not a new one to remember.
+   **Why:** Extended reach at night costs concealment, not a status — a leader shouting orders to the edge of that extra hex is exactly as loud and exposed as a unit double-timing, without actually having moved or triggering any of Double-Timed Movement's other effects (Rule 7.4). Borrowing the existing -4 value keeps this a reused number, not a new one to remember.
 
    **Example:** A CMD 2 leader (normal daytime radius 2, Rule 12.2.1 table) reaches 3 hexes at night. Commanding a unit at 3 hexes applies -4 CON to the leader's own hex for spotting purposes this turn; commanding a unit within the normal 2-hex radius carries no such penalty.
 
-    *See also: Rule 23.1.3 (the doubled penalty this rule borrows), Rule 7.4 (Careless Movement, whose other effects explicitly do not apply here).*
+    *See also: Rule 23.1.3 (the doubled penalty this rule borrows), Rule 7.4 (Double-Timed Movement, whose other effects explicitly do not apply here).*
 
 12.3  Action Point Generation
 -----------------------------
@@ -213,7 +213,7 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
      - Leader moves up to M3 hexes following terrain movement costs.
      - N/A
    * - Direct Fire
-     - Add CMD rating as bonus rFP to one fire group this impulse. Applied after falloff and terrain, before Resolution Strip.
+     - Add CMD rating as bonus eFP to one fire group this impulse. Applied after falloff and terrain, before Resolution Strip.
      - Command radius
    * - Rally
      - One Suppressed or Pinned unit attempts mid-turn recovery at RAL threshold instead of standard threshold. See Rule 12.6.
@@ -331,21 +331,21 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
 ------------------------------
 
 
-**12.7.1**  A leader spending 1 AP on Direct Fire adds their CMD rating as bonus rFP to one fire group within command radius.
+**12.7.1**  A leader spending 1 AP on Direct Fire adds their CMD rating as bonus eFP to one fire group within command radius.
 
 .. container:: rule-guide
 
    **Why:** Gives a leader a direct way to boost a fire attack's raw firepower rather than just improving morale or coordination indirectly, spending the same 1 AP that any other Leader Action costs (Rule 12.5) so it competes with those other options for the leader's turn.
 
-   **Example:** A CMD 2 leader spending 1 AP on Direct Fire adds +2 bonus rFP to a nearby fire group's attack this impulse, on top of whatever effective rFP the firing units already contribute.
+   **Example:** A CMD 2 leader spending 1 AP on Direct Fire adds +2 bonus eFP to a nearby fire group's attack this impulse, on top of whatever eFP the firing units already contribute.
 
-**12.7.2**  The bonus is applied to the summed effective rFP after range falloff and terrain modifiers, before the Resolution Strip lookup. It participates in strip compression along with the rest of the group's rFP.
+**12.7.2**  The bonus is applied to the summed eFP after range falloff and terrain modifiers, before the Resolution Strip lookup. It participates in strip compression along with the rest of the group's rFP.
 
 .. container:: rule-guide
 
-   **Why:** Places the leader's bonus at a specific point in the fire-resolution sequence (Rule 8.1) — after the group's own falloff and terrain penalties are already applied, but before Resolution Strip compression — so the bonus behaves exactly like any other contribution to the group's summed rFP, not as a separate late modifier.
+   **Why:** Places the leader's bonus at a specific point in the fire-resolution sequence (Rule 8.1) — after the group's own falloff and terrain penalties are already applied, but before Resolution Strip compression — so the bonus behaves exactly like any other contribution to the group's summed eFP, not as a separate late modifier.
 
-   **Example:** A fire group's terrain-and-falloff-adjusted rFP sums to 7 before the leader's CMD 2 bonus; the bonus is added to make 9, and that combined total of 9 (not 7) is what gets looked up on the Resolution Strip (Rule 8.4).
+   **Example:** A fire group's terrain-and-falloff-adjusted eFP sums to 7 before the leader's CMD 2 bonus; the bonus is added to make 9, and that combined total of 9 (not 7) is what gets looked up on the Resolution Strip (Rule 8.4).
 
 **12.7.3**  Multiple leaders cannot stack fire coordination bonuses on the same fire group in the same impulse. The highest single CMD bonus applies.
 

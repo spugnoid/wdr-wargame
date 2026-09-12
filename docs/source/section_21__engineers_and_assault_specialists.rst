@@ -310,7 +310,7 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
 
    **Why:** The flamethrower's stat line is defined by extremes — very high rFP but a brutally steep range falloff — to model a weapon that is devastating up close and completely useless beyond a few dozen metres, unlike the more gradual falloff of rifle or MG fire.
 
-   **Example:** Alpha's flamethrower team, with rFP 8 and a falloff of -f 3, is lethal against a target 1 hex away but contributes zero effective rFP against anything at range 4 or beyond.
+   **Example:** Alpha's flamethrower team, with rFP 8 and a falloff of -f 3, is lethal against a target 1 hex away but contributes zero eFP against anything at range 4 or beyond.
 
 .. list-table::
    :header-rows: 1
@@ -355,13 +355,13 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
 
    **Example:** Alpha's flamethrower attack produces a Suppressed result against a squad in a building — beyond the Suppressed result itself, a BURNING marker is now placed in that hex, threatening further harm on subsequent turns.
 
-**21.5.5**  Burning hex effects: at the start of each activation by a unit in a BURNING hex, that unit takes a fire attack with Resolution FP 3 — roll 1d6+1d8+1d12 normally against the unit's Defence (no cover modifier: the fire is in the cover with them). This attack is exempt from the Long Range Cap (Rule 8.7) — flame kills at any "range". Additionally all units in a BURNING hex suffer -2 CON (fire reveals position).
+**21.5.5**  Burning hex effects: at the start of each activation by a unit in a BURNING hex, that unit takes a fire attack with FPr 3 — roll 1d6+1d8+1d12 normally against the unit's Defence (no cover modifier: the fire is in the cover with them). This attack is exempt from the Long Range Cap (Rule 8.7) — flame kills at any "range". Additionally all units in a BURNING hex suffer -2 CON (fire reveals position).
 
 .. container:: rule-guide
 
    **Why:** Removing the cover modifier reflects that a burning building or trench offers no protection from a fire that's already inside it, and exempting the attack from the Long Range Cap (Rule 8.7) makes sense since flame doesn't attack at "range" at all — it's already on top of the target; the CON penalty models how a burning hex is impossible to miss from a distance.
 
-   **Example:** A squad that stays in a BURNING hex takes a Resolution FP 3 attack against its full Defence with no cover credit at the start of every activation, and any attempt to remain hidden there suffers a -2 CON penalty from the visible fire.
+   **Example:** A squad that stays in a BURNING hex takes a FPr 3 attack against its full Defence with no cover credit at the start of every activation, and any attempt to remain hidden there suffers a -2 CON penalty from the visible fire.
 
 **21.5.6**  Extinguishing fire: a unit in a BURNING hex may spend 1 AP to attempt to extinguish. Roll 1d6 on 4+ fire is extinguished, BURNING marker removed. On 1-3 fire continues.
 

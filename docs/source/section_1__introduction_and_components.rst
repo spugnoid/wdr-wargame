@@ -47,7 +47,9 @@ The game does not glorify war. The ordinary soldiers of every nation were not ev
      - TBD
    * - FIRED 1/2/3 markers — progression of three chits per unit (Rule 3.6, Rule 6.6)
      - TBD
-   * - MOVED/FIRED-CARELESS markers — two-sided (Rule 3.6, Rule 7.4.2)
+   * - MOVED/FIRED-CAUTIOUS markers — two-sided (Rule 3.6, Rule 7.3a.2)
+     - TBD
+   * - MOVED/FIRED-DOUBLE-TIMED markers — two-sided (Rule 3.6, Rule 7.4.2)
      - TBD
    * - Status markers (SUPPRESSED, PINNED, MOBILE)
      - TBD
@@ -123,19 +125,19 @@ The following terms are used throughout this document. Each term is defined here
 
 **rFP —**  Raw Firepower. The base firepower value printed on a counter before range falloff is applied.
 
-**Effective rFP —**  Firepower after range falloff and terrain modifiers have been applied.
+**eFP —**  Effective Firepower. Firepower after range falloff and terrain modifiers have been applied.
 
-**Resolution FP —**  The value looked up on the Resolution Strip after summing effective rFP across a fire group. Used as the bonus added to the dice roll.
+**FPr —**  Resolution FP. The value looked up on the Resolution Strip after summing eFP across a fire group. Used as the bonus added to the dice roll.
 
 **Falloff —**  The reduction in rFP as range increases, governed by the ⬡h and -f values on the counter.
 
 **D3 —**  Roll 1d6, halve, round up: results 1–3. Used for rout movement and mortar dispersion distance.
 
-**Fire group —**  All units firing at the same target as part of one Fire action, regardless of ⬡h interval, resolved as a single attack. Effective rFP is calculated per unit and summed (Rule 8.3.2); units sharing a hex and ⬡h may sum rFP and -f values first (Rule 8.3.3).
+**Fire group —**  All units firing at the same target as part of one Fire action, regardless of ⬡h interval, resolved as a single attack. eFP is calculated per unit and summed (Rule 8.3.2); units sharing a hex and ⬡h may sum rFP and -f values first (Rule 8.3.3).
 
 **Cover modifier —**  A bonus added to the defender's Defence value based on terrain occupied.
 
-**Intervening terrain —**  Terrain hexes that the line of fire passes through between firer and target, reducing effective rFP.
+**Intervening terrain —**  Terrain hexes that the line of fire passes through between firer and target, reducing eFP.
 
 **CI —**  Combat Ineffective. A unit that has been eliminated from play for the scenario.
 
@@ -147,11 +149,13 @@ The following terms are used throughout this document. Each term is defined here
 
 **Pinned —**  A status condition preventing movement and severely degrading fire effectiveness.
 
-**Regular action —**  A unit's full-effect option for its turn: one Move at full M#, or one Fire at full effective rFP. Ends the unit's turn (MOVED/FIRED) except for a stationary weapon firing under F# (Rule 6.6). See Rule 6.3.
+**Regular action —**  A unit's full-effect option for its turn: one Move at full M#, or one Fire at full eFP. Ends the unit's turn (MOVED/FIRED) except for a stationary weapon firing under F# (Rule 6.6). See Rule 6.3.
 
-**Assault economy —**  A unit's reduced-effect alternative to a Regular action: up to two part-actions (Assault Move, 1 hex regardless of M#; Assault Fire, half effective rFP) in either order. Rule 6.3.3.
+**Advance movement —**  The default, undeclared way of taking a Move action: up to a unit's full M# allowance, spending Movement Points per the Rule 7.2 terrain chart. Rule 7.1.
 
-**F# —**  Rate of Fire. The number of times a unit may fire at full effective rFP in one turn while stationary: 1 for the great majority of units (any further fire comes only from the reduced-effect Assault economy, Rule 6.3.3), 2 for a bipod- or light-tripod-mounted MG, 3 for a tripod-deployed MG, 2 for a deployed mortar (Rule 6.6.2).
+**Assault economy —**  A unit's reduced-effect alternative to a Regular action: up to two part-actions (Assault Move, 1 hex regardless of M#; Assault Fire, half eFP) in either order. Rule 6.3.3.
+
+**F# —**  Rate of Fire. The number of times a unit may fire at full eFP in one turn while stationary: 1 for the great majority of units (any further fire comes only from the reduced-effect Assault economy, Rule 6.3.3), 2 for a bipod- or light-tripod-mounted MG, 3 for a tripod-deployed MG, 2 for a deployed mortar (Rule 6.6.2).
 
 **MOVED/FIRED —**  The marker showing a unit is done for the turn — no further movement or fire, though it retains close-combat defense and, if it is the target of a close assault, Desperate Fire (Rule 6.7).
 
@@ -185,7 +189,9 @@ The following terms are used throughout this document. Each term is defined here
 
 **Spot roll —**  A roll to detect a hidden unit: 1d6 + OBS modifiers vs CON modifiers. Success reveals the target.
 
-**Careless movement —**  A declared movement type granting +1 hex of movement at the cost of -2 CON and a free enemy spot attempt.
+**Double-Timed movement —**  A declared movement type granting +1 hex of movement at the cost of -2 CON and a free enemy spot attempt.
+
+**Cautious movement —**  A declared movement type bounding a unit to exactly 1 hex (or 1 floor) regardless of terrain cost, at the reward of +2 CON. The opposite trade-off from Double-Timed movement.
 
 **Free hidden impulse —**  A movement phase granted immediately when a unit goes hidden, outside the normal AP economy, used to reposition the blind marker and spawn dummies.
 
@@ -321,7 +327,7 @@ With Deepest Regret... is designed so that a player can resolve the majority of 
 
 **1.5.1**  Information on the counter — not in a table:  Every fire line encodes base firepower, falloff interval, and falloff loss — the complete information needed to calculate effective fire at any range without a lookup. Vehicle counters carry all three armour facing values and the complete penetration curve. Leaders carry all four command stats. No chart lookup is required for routine combat resolution.
 
-**1.5.2**  What remains on the player aid card:  The resolution strip (rFP to Resolution FP conversion for combined fire), result thresholds (memorised after a few games), terrain cover modifiers, and vehicle damage tables. These are the minimum necessary lookups. Everything else is on the counter.
+**1.5.2**  What remains on the player aid card:  The resolution strip (rFP to FPr conversion for combined fire), result thresholds (memorised after a few games), terrain cover modifiers, and vehicle damage tables. These are the minimum necessary lookups. Everything else is on the counter.
 
 **1.5.3**  Counter size:  Counters are produced at 0.75 inch (19mm) or 1 inch (25.4mm) — significantly larger than the wargame industry standard of 0.5 inch (12.7mm). The larger size makes all counter information readable without magnification. At 1 inch a counter has approximately four times the area of a standard counter — sufficient to display multiple fire lines, all action values, armour facings, and defence and morale values in comfortable reading size.
 

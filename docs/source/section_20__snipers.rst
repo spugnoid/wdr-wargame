@@ -125,7 +125,7 @@ Sniper rules differ from standard infantry fire in three fundamental ways: they 
 
    **Example:** Alpha's sniper declares deliberate targeting against a leader and rolls a Pinned result — the leader isn't specifically affected, but every unit in that hex is now Pinned.
 
-**20.2.6**  Long range cap exemption: when deliberate targeting is declared, the long range cap (Rule 8.7) does not apply. Full result thresholds are used regardless of effective rFP. See Rule 8.7.4.
+**20.2.6**  Long range cap exemption: when deliberate targeting is declared, the long range cap (Rule 8.7) does not apply. Full result thresholds are used regardless of eFP. See Rule 8.7.4.
 
 .. container:: rule-guide
 
@@ -278,13 +278,13 @@ Sniper rules differ from standard infantry fire in three fundamental ways: they 
 
    **Example:** Squad Bravo normally moves at M4 but is within 6 hexes of an active CONTACT marker, so its move this turn is capped at M3.
 
-**20.5.3**  Careless movement unavailable: no unit may declare careless movement while a sniper CONTACT marker is within 6 hexes.
+**20.5.3**  Double-Timed Movement unavailable: no unit may declare Double-Timed Movement while a sniper CONTACT marker is within 6 hexes.
 
 .. container:: rule-guide
 
-   **Why:** Careless movement represents units moving with minimal caution for speed — exactly the behaviour a known sniper threat suppresses, since no sensible unit sprints across open ground when a hidden marksman might be watching.
+   **Why:** Double-Timed Movement represents units moving with minimal caution for speed — exactly the behaviour a known sniper threat suppresses, since no sensible unit sprints across open ground when a hidden marksman might be watching. Cautious Movement (Rule 7.3a) remains fully available under the same threat — it's the opposite behaviour, and exactly what a sniper threat should encourage.
 
-   **Example:** Squad Bravo would normally declare careless movement to cross open ground quickly, but a CONTACT marker sits within 6 hexes — that option is unavailable this turn.
+   **Example:** Squad Bravo would normally declare Double-Timed Movement to cross open ground quickly, but a CONTACT marker sits within 6 hexes — that option is unavailable this turn; Bravo may still take Cautious Movement instead.
 
 **20.5.4**  This represents the historical reality that the mere knowledge of a sniper's presence changed how entire units moved — even soldiers who had not been fired at kept low, moved quickly between cover, and avoided open ground.
 

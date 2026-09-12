@@ -305,13 +305,13 @@ With Deepest Regret... uses a physical hidden information system to model the fo
 
    **Example:** A FIXED unit's very first shot from its prepared position can be followed immediately by Fire and Disperse at no AP cost; if that same unit is later caught in the open again and wants to hide once more, it must use the ordinary paid process (Rule 14.5.1) instead, since the free option is already spent.
 
-**14.7.6**  The surprise of the first FIXED fire applies a +2 rFP bonus to that fire action, representing the target's unpreparedness. This bonus applies only to the first fire from the FIXED position.
+**14.7.6**  The surprise of the first FIXED fire applies a +2 eFP bonus to that fire action, representing the target's unpreparedness. This bonus applies only to the first fire from the FIXED position.
 
 .. container:: rule-guide
 
    **Why:** Rewards the ambush value of a prepared position specifically on its opening shot, since that's the moment the target is genuinely caught unprepared — every subsequent shot from that same position no longer has the element of surprise once the enemy knows something is there.
 
-   **Example:** A FIXED unit's very first fire action, whichever option it later chooses (Rule 14.7.4 or 14.7.5), gets +2 rFP for that one shot; any fire the unit takes afterward, from any position, no longer carries that surprise bonus.
+   **Example:** A FIXED unit's very first fire action, whichever option it later chooses (Rule 14.7.4 or 14.7.5), gets +2 eFP for that one shot; any fire the unit takes afterward, from any position, no longer carries that surprise bonus.
 
 **14.7.7**  A FIXED unit cannot be spotted — it has no marker on the map and nothing for a spot roll to target. It is revealed only by its own fire or movement (Rules 14.7.2–14.7.5), or when an enemy unit attempts to enter its recorded hex: the FIXED unit is revealed immediately as VISIBLE in its hex, and the entering unit halts in the hex it currently occupies with its remaining MP lost — it has walked into a prepared position. The revealed unit's +2 surprise bonus (Rule 14.7.6) still applies to its first fire.
 
@@ -412,9 +412,9 @@ With Deepest Regret... uses a physical hidden information system to model the fo
 
 .. container:: rule-guide
 
-   **Why:** Lists the specific circumstances that earn a chance at spotting via a roll rather than automatic revelation, ranging from free triggers (careless movement, artillery blast) to a deliberate RP-costing attempt — different levels of exposure or effort produce different-cost opportunities to try.
+   **Why:** Lists the specific circumstances that earn a chance at spotting via a roll rather than automatic revelation, ranging from free triggers (Double-Timed Movement, artillery blast) to a deliberate RP-costing attempt — different levels of exposure or effort produce different-cost opportunities to try.
 
-   **Example:** An enemy unit moving carelessly into LOS gives a free spot-roll attempt at no RP cost, while a player who wants to make a deliberate attempt against a marker that hasn't done anything careless must spend 1 RP for that chance instead.
+   **Example:** An enemy unit taking Double-Timed Movement into LOS gives a free spot-roll attempt at no RP cost, while a player who wants to make a deliberate attempt against a marker that hasn't double-timed must spend 1 RP for that chance instead.
 
 .. list-table::
    :header-rows: 1
@@ -423,7 +423,7 @@ With Deepest Regret... uses a physical hidden information system to model the fo
    * - **Trigger**
      - **RP Cost**
      - **Notes**
-   * - Enemy unit moves carelessly into LOS
+   * - Enemy unit takes Double-Timed Movement into LOS
      - 0 — free
      - Noise and visibility — no RP required
    * - Opponent spends RP to spot
@@ -475,9 +475,11 @@ With Deepest Regret... uses a physical hidden information system to model the fo
      - +3
    * - Marker has not moved this turn
      - +2
-   * - Marker moved normally this turn
+   * - Marker moved normally (Advance Movement) this turn
      - +0
-   * - Marker moved carelessly this turn
+   * - Marker took Cautious Movement this turn
+     - +2
+   * - Marker took Double-Timed Movement this turn
      - -2
    * - Marker moved through dense woods or rubble this turn
      - -1 (unavoidable noise)
@@ -570,7 +572,7 @@ With Deepest Regret... uses a physical hidden information system to model the fo
 
    **Why:** Turns sound spotting off entirely once a firefight is loud enough nearby, since gunfire genuinely masks the sound of movement — a mechanism meant to model listening for footsteps and noise has to yield when there's a battle drowning everything else out.
 
-   **Example:** A unit moving carelessly near a hidden marker would normally suffer sound-based CON penalties (Rule 14.11.4), but if any unit fired within 5 hexes that same turn, those specifically sound-based penalties don't apply — the noise of the firefight already covers it.
+   **Example:** A unit taking Double-Timed Movement near a hidden marker would normally suffer sound-based CON penalties (Rule 14.11.4), but if any unit fired within 5 hexes that same turn, those specifically sound-based penalties don't apply — the noise of the firefight already covers it.
 
 **14.11.2**  When sound spotting is available, the following CON penalties apply in addition to normal modifiers:
 
@@ -588,13 +590,13 @@ With Deepest Regret... uses a physical hidden information system to model the fo
 
    **Example:** A unit moving through dense woods already takes the -1 CON noise penalty from the main table whether or not sound spotting conditions (Rule 14.11.1) are currently met — this rule doesn't add a second, separate -1 on top of that.
 
-**14.11.4**  Units moving carelessly: -2 CON (already included — the careless movement penalty covers both visual and audio signature).
+**14.11.4**  Units taking Double-Timed Movement: -2 CON (already included — the Double-Timed penalty covers both visual and audio signature). Units taking Cautious Movement: +2 CON (already included, Rule 14.9.7) — moving with deliberate care also reduces the mover's own noise signature.
 
 .. container:: rule-guide
 
-   **Why:** Confirms the careless-movement penalty already covers both what an observer would see and what they'd hear, so sound spotting doesn't need to apply that same -2 a second time on top of the visual penalty already in the main CON table.
+   **Why:** Confirms the Double-Timed penalty already covers both what an observer would see and what they'd hear, so sound spotting doesn't need to apply that same -2 a second time on top of the visual penalty already in the main CON table — and confirms the same is true of Cautious Movement's +2 in the other direction.
 
-   **Example:** A unit that moves carelessly takes a single -2 CON penalty that already accounts for both the visual exposure and the noise it makes — sound spotting availability doesn't stack an extra penalty for the same careless move.
+   **Example:** A unit taking Double-Timed Movement takes a single -2 CON penalty that already accounts for both the visual exposure and the noise it makes — sound spotting availability doesn't stack an extra penalty for the same double-timed move.
 
 **14.11.5**  *Superseded by Rule 23.1 — see design note E.106.* Night scenarios shift detection's balance toward sound: visual spot range is capped, and two of the sound-based CON penalties above are doubled. Section 23 states the finished framework in full, including illumination as a real mechanic.
 
@@ -602,7 +604,7 @@ With Deepest Regret... uses a physical hidden information system to model the fo
 
    **Why:** This rule originally established night detection as a framework and explicitly deferred the full ruleset. Rule 23.1 now provides that ruleset — the same shift toward sound-based detection, with the visual cap and doubled penalties stated as exact numbers rather than a range.
 
-   **Example:** A night scenario's spotting is now resolved entirely under Rule 23.1: a 2-hex hard cap on visual spot attempts, and the dense-woods/rubble and careless-movement CON rows doubled — with Rule 23.2's illumination able to cancel both effects in a lit hex.
+   **Example:** A night scenario's spotting is now resolved entirely under Rule 23.1: a 2-hex hard cap on visual spot attempts, and the dense-woods/rubble and Double-Timed-movement CON rows doubled — with Rule 23.2's illumination able to cancel both effects in a lit hex.
 
     *See also: Rule 23.1 (Ambient Visibility, the finished rule), Rule 23.2 (Illumination).*
 
@@ -628,12 +630,12 @@ With Deepest Regret... uses a physical hidden information system to model the fo
      - FIXED → VISIBLE
      - No
      - 0
-     - +2 rFP first fire only
+     - +2 eFP first fire only
    * - FIXED unit fires, disperses
      - FIXED → HIDDEN
      - Yes — free disperse
      - 0 (free)
-     - +2 rFP first fire only
+     - +2 eFP first fire only
    * - VISIBLE unit goes hidden
      - VISIBLE → HIDDEN
      - Yes — free hidden impulse

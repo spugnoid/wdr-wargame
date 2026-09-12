@@ -1,19 +1,19 @@
 Section 7 — Movement
 ====================
 
-7.1  Movement Allowance
+7.1  Advance Movement
 -----------------------
 
 
-**7.1.1**  A unit's movement allowance is its M# value. This is the maximum number of hexes it may move in a single Move action.
+**7.1.1**  A unit's movement allowance is its M# value. This is the maximum number of hexes it may move in a single Move action using Advance Movement — the default way of taking a Move action (Rule 6.3.2), spending Movement Points against the Rule 7.2 terrain chart. A unit may instead declare Cautious Movement (Rule 7.3a) or Double-Timed Movement (Rule 7.4) when it takes that same action.
 
 .. container:: rule-guide
 
-   **Why:** Ties movement allowance directly to the printed M# stat, keeping "how far can this unit move" a single, countable number rather than a formula.
+   **Why:** Ties movement allowance directly to the printed M# stat, keeping "how far can this unit move" a single, countable number rather than a formula, and names this default mode Advance Movement so it can be cross-referenced the same way its two declared alternatives (Cautious, Double-Timed) already are.
 
-   **Example:** A unit with M2 may move up to 2 hexes in a single Move action; it may choose to move fewer, but never more, in that one action.
+   **Example:** A unit with M2 may move up to 2 hexes in a single Move action under ordinary Advance Movement; it may choose to move fewer, but never more, in that one action.
 
-**7.1.2**  One impulse represents approximately 20-25 seconds of real time. At tactical double time (200 yards per minute) a squad can cover roughly 70-80 yards — approximately 2 hexes at 40 yards per hex. M2 is therefore the standard infantry movement allowance.
+**7.1.2**  One impulse represents approximately 20-25 seconds of real time. At a marching pace of tactical double time (200 yards per minute) — a historical marching cadence, not to be confused with the declared Double-Timed Movement of Rule 7.4 — a squad can cover roughly 70-80 yards — approximately 2 hexes at 40 yards per hex. M2 is therefore the standard infantry movement allowance under Advance Movement.
 
 .. container:: rule-guide
 
@@ -148,7 +148,7 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
    A squad crossing open ground into light woods. Movement cost is
    labeled per hex entered.
 
-**7.2.1**  Road movement special rule: a unit moving exclusively along road hexes for its entire activation may move **M# + 1** hexes. One hex of off-road movement cancels the road bonus for that entire activation. The road bonus does not stack with Careless Movement (Rule 7.4.1) — declare one or the other.
+**7.2.1**  Road movement special rule: a unit moving exclusively along road hexes for its entire activation may move **M# + 1** hexes. One hex of off-road movement cancels the road bonus for that entire activation. The road bonus does not stack with Double-Timed Movement (Rule 7.4.1) — declare one or the other. Cautious Movement (Rule 7.3a) gains nothing from the road bonus either, since it never moves more than 1 hex regardless of M#.
 
 .. container:: rule-guide
 
@@ -227,25 +227,62 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
 
    **Example:** An M2 rifle squad takes Assault Move, then Assault Move again (2 hexes total across two separate 1-AP activations) — the same 2 hexes a single Regular Move would have covered for half the AP cost.
 
-7.4  Careless Movement
-----------------------
+7.3a  Cautious Movement
+-----------------------
+
+*Design note: the third declared flavor of a Move action, alongside ordinary Advance Movement (Rule 7.1) and Double-Timed Movement (Rule 7.4) — the opposite trade from Double-Timed: a unit gives up almost all its ground for real concealment, instead of the reverse.*
+
+**7.3a.1**  A unit may declare Cautious Movement when spending a Move action (Rule 6.3.2). The unit moves exactly 1 hex — or, if changing floors within a building (Rule 7.2a), exactly 1 floor — regardless of that hex's or floor's terrain/MP cost. As with any other movement, a unit may never enter genuinely impassable/blocking terrain (Rule 7.2's River/cliff row, or any hexside the scenario marks impassable) except at a designated crossing.
+
+.. container:: rule-guide
+
+   **Why:** Gives Cautious Movement the same "ignore the cost of one hex" shape Rule 7.1.4 already grants every Move action, but caps it at a single hex or floor no matter how fast the unit's printed M# is — the entire point is deliberately slow, careful movement, not a cost-free bargain on an expensive hex.
+
+   **Example:** An M2 unit in a dense woods hex (3 MP) declares Cautious Movement to enter an adjacent Dense Woods hex — the 3 MP cost is irrelevant, since Cautious Movement never spends MP at all, but it still only reaches that one hex this activation, exactly as a unit with no terrain in its way would.
+
+**7.3a.2**  Place the unit's MOVED/FIRED marker CAUTIOUS-side up. The unit gains +2 CON (concealment) for the remainder of this turn. Cautious Movement is only ever taken as a Regular Move action, which already ends the unit's turn as MOVED/FIRED (Rule 6.3.2) — so this one physical marker, shown CAUTIOUS-side up, carries both facts at once (Rule 3.6), the same consolidation Double-Timed Movement's marker uses (Rule 7.4.2).
+
+.. container:: rule-guide
+
+   **Why:** Mirrors the Rule 3.6 marker consolidation Double-Timed Movement already uses, for the identical reason — Cautious Movement is only ever a Regular Move action, so a cautiously-moved unit is always MOVED/FIRED for that turn too, and one marker can honestly carry both facts.
+
+   **Example:** A unit takes Cautious Movement this turn. Its marker is flipped to the CAUTIOUS face rather than a separate token being added — that single marker means both "done for the turn" and "+2 CON" at once.
+
+**7.3a.3**  Cautious Movement represents troops moving deliberately and carefully — watching their footing, hugging cover, minimising exposure — at the cost of covering almost no ground. It is the direct opposite trade-off from Double-Timed Movement (Rule 7.4): concealment bought with distance, rather than distance bought with concealment.
+
+.. container:: rule-guide
+
+   **Why:** States the tactical judgment call in plain language, deliberately framed as Double-Timed Movement's mirror image, so the two declared movement types read as one coherent risk/reward pair rather than two unrelated special cases.
+
+   **Example:** A player uses Cautious Movement to edge a unit forward into a position with a clear field of fire while minimising the chance of being spotted first — accepting that the unit will barely move this turn in exchange for that improved concealment.
+
+**7.3a.4**  The marker is removed during the Recovery Phase, along with all other action markers (Rule 5.2.2).
+
+.. container:: rule-guide
+
+   **Why:** Gives the marker the same fixed one-turn lifetime as every other action marker, so the +2 CON bonus doesn't linger past the turn it was earned on.
+
+   **Example:** The CAUTIOUS-side marker placed this turn is removed, along with every other action marker, during the following turn's Recovery Phase.
+
+7.4  Double-Timed Movement
+--------------------------
 
 
-**7.4.1**  A unit may declare Careless Movement when spending a Move action. The unit moves M#+1 hexes instead of its normal M# allowance.
+**7.4.1**  A unit may declare Double-Timed Movement when spending a Move action. The unit moves M#+1 hexes instead of its normal M# allowance.
 
 .. container:: rule-guide
 
    **Why:** Is the one case where a Move action gains extra distance (M#+1) rather than merely avoiding a penalty, in exchange for the concealment cost defined in 7.4.2 — speed traded directly for being seen.
 
-   **Example:** An M2 unit declaring Careless Movement may move up to 3 hexes (M#+1) this activation, instead of the normal 2.
+   **Example:** An M2 unit declaring Double-Timed Movement may move up to 3 hexes (M#+1) this activation, instead of the normal 2.
 
-**7.4.2**  Place the unit's MOVED/FIRED marker CARELESS-side up. The unit suffers -2 CON (concealment) for the remainder of this turn. Careless Movement is only ever taken as a Regular Move action, which already ends the unit's turn as MOVED/FIRED (Rule 6.3.2) — so this one physical marker, shown CARELESS-side up, carries both facts at once (Rule 3.6).
+**7.4.2**  Place the unit's MOVED/FIRED marker DOUBLE-TIMED-side up. The unit suffers -2 CON (concealment) for the remainder of this turn. Double-Timed Movement is only ever taken as a Regular Move action, which already ends the unit's turn as MOVED/FIRED (Rule 6.3.2) — so this one physical marker, shown DOUBLE-TIMED-side up, carries both facts at once (Rule 3.6).
 
 .. container:: rule-guide
 
-   **Why:** Explains why Careless Movement gets away with sharing its physical marker with MOVED/FIRED (the Rule 3.6 consolidation) — since it's only ever taken as a Regular Move action, a carelessly-moved unit is always MOVED/FIRED for that turn too, so one marker can honestly carry both facts.
+   **Why:** Explains why Double-Timed Movement gets away with sharing its physical marker with MOVED/FIRED (the Rule 3.6 consolidation) — since it's only ever taken as a Regular Move action, a double-timed unit is always MOVED/FIRED for that turn too, so one marker can honestly carry both facts.
 
-   **Example:** A unit takes Careless Movement this turn. Its marker is flipped to the CARELESS face rather than a separate token being added — that single marker means both "done for the turn" and "-2 CON" at once.
+   **Example:** A unit takes Double-Timed Movement this turn. Its marker is flipped to the DOUBLE-TIMED face rather than a separate token being added — that single marker means both "done for the turn" and "-2 CON" at once.
 
 **7.4.3**  Any enemy unit with LOS to the moving unit may attempt a free spot roll during the movement reaction window. This spot roll costs no RP.
 
@@ -253,15 +290,15 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
 
    **Why:** Gives the -2 CON penalty a real, immediate consequence — a free spot attempt right when the risk is taken — rather than a passive stat that only matters if someone happens to check later.
 
-   **Example:** An enemy unit with LOS to the carelessly-moving unit gets a free spot roll during the movement reaction window, at no RP cost, specifically because of the Careless declaration.
+   **Example:** An enemy unit with LOS to the double-timing unit gets a free spot roll during the movement reaction window, at no RP cost, specifically because of the Double-Timed declaration.
 
-**7.4.4**  Careless movement represents troops moving quickly without tactical caution — appropriate in areas the owning player believes are safe. It is always risky if enemy units are present.
+**7.4.4**  Double-Timed Movement represents troops moving quickly without tactical caution — appropriate in areas the owning player believes are safe. It is always risky if enemy units are present.
 
 .. container:: rule-guide
 
-   **Why:** States the tactical judgment call in plain language — Careless Movement is for ground the owning player genuinely believes is clear, not a free speed boost to use reflexively regardless of enemy presence.
+   **Why:** States the tactical judgment call in plain language — Double-Timed Movement is for ground the owning player genuinely believes is clear, not a free speed boost to use reflexively regardless of enemy presence.
 
-   **Example:** A player uses Careless Movement to rush a unit across open ground behind their own lines, judged safe from enemy observation — using the same declaration to rush across a contested field would carry real spotting risk.
+   **Example:** A player uses Double-Timed Movement to rush a unit across open ground behind their own lines, judged safe from enemy observation — using the same declaration to rush across a contested field would carry real spotting risk.
 
 **7.4.5**  The marker is removed during the Recovery Phase, along with all other action markers (Rule 5.2.2).
 
@@ -269,7 +306,7 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
 
    **Why:** Gives the marker the same fixed one-turn lifetime as every other action marker, so the -2 CON penalty doesn't linger past the turn it was earned on.
 
-   **Example:** The CARELESS-side marker placed this turn is removed, along with every other action marker, during the following turn's Recovery Phase.
+   **Example:** The DOUBLE-TIMED-side marker placed this turn is removed, along with every other action marker, during the following turn's Recovery Phase.
 
 7.5  Moving Target Modifier
 ---------------------------
@@ -283,13 +320,13 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
 
    **Example:** A unit taking a 2-hex Move is a moving target only while that Move action is still resolving; once it completes and the unit is stationary again, it is no longer a moving target for this rule's purposes.
 
-**7.5.2**  Opportunity fire against a moving target applies -2 rFP to the attacker.
+**7.5.2**  Opportunity fire against a moving target applies -2 eFP to the attacker.
 
 .. container:: rule-guide
 
    **Why:** Gives moving targets a flat accuracy penalty against opportunity fire, reflecting that a unit in motion is a harder target than one holding still — this is the infantry-side version of what 18.1a.6/18.1a.9 handle separately for vehicles (see 7.5.2a).
 
-   **Example:** An opportunity-firing unit's effective rFP against a moving infantry target is reduced by 2 compared to firing at the same target stationary.
+   **Example:** An opportunity-firing unit's eFP against a moving infantry target is reduced by 2 compared to firing at the same target stationary.
 
 **7.5.2a**  Exception: when the target is a vehicle, this penalty does not stack with the Gunnery Roll's own crossing-target adjustment (Rule 18.1a.6/18.1a.9) — the vehicle-specific adjustment replaces it. Rule 7.5.2 applies exactly as written when the target is infantry.
 
@@ -297,7 +334,7 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
 
    **Why:** Prevents the infantry moving-target penalty from double-stacking with the Gunnery Roll's own, more detailed crossing-target adjustment for vehicles — one penalty should apply, not both, when the target is a vehicle specifically.
 
-   **Example:** A moving vehicle target uses only its Gunnery Roll crossing-target adjustment (Rule 18.1a.6/18.1a.9); Rule 7.5.2's flat -2 rFP does not additionally apply on top of it. A moving infantry target uses 7.5.2 exactly as written, since it has no Gunnery Roll to interact with.
+   **Example:** A moving vehicle target uses only its Gunnery Roll crossing-target adjustment (Rule 18.1a.6/18.1a.9); Rule 7.5.2's flat -2 eFP does not additionally apply on top of it. A moving infantry target uses 7.5.2 exactly as written, since it has no Gunnery Roll to interact with.
 
 **7.5.3**  If opportunity fire produces No Effect, the moving unit continues normally.
 

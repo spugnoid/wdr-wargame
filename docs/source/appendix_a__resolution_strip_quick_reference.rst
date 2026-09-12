@@ -5,8 +5,8 @@ Appendix A — Resolution Strip Quick Reference
    :header-rows: 1
    :widths: auto
 
-   * - **Summed Effective rFP**
-     - **Resolution FP**
+   * - **Summed eFP**
+     - **FPr**
    * - 1
      - 1
    * - 2
@@ -43,4 +43,4 @@ Appendix A — Resolution Strip Quick Reference
      - 12 (maximum)
 
 
-Single-unit fire never uses this strip — use effective rFP directly as Resolution FP (Rule 8.4.1). Consult this table only when multiple units are combined into a fire group (Rule 8.4.2). Summed values between listed entries round down to the nearest listed row: summed effective rFP 11 uses the row for 10 (Resolution FP 8).
+Single-unit fire never uses this strip — use eFP directly as FPr (Rule 8.4.1). Consult this table only when multiple units are combined into a fire group (Rule 8.4.2). Summed values between listed entries round down to the nearest listed row: summed eFP 11 uses the row for 10 (FPr 8).

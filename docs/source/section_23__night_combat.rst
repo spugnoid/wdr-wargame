@@ -1,7 +1,7 @@
 Section 23 — Night Combat
 =========================
 
-Night scenarios collapse visual detection and put a premium on sound, silhouette, and the rare, precious light a side can bring with it. This section finishes the framework Rule 14.11.5 established and left as future work, and adds illumination as a real, biddable resource rather than a fixed scenario condition. It is deliberately built from pieces this system already has — the fire-mission pipeline (Section 16), the CON/OBS spot procedure (Section 14.9), the careless-movement penalty (Section 7.4), and the dispersion-direction table (Rule 16.6.5) — rather than introducing a parallel set of night-only mechanics. Section 20's own note on reuse-by-reference is the model followed here: each affected section carries one short cross-reference rule pointing back to this section for the actual values, rather than a duplicated procedure.
+Night scenarios collapse visual detection and put a premium on sound, silhouette, and the rare, precious light a side can bring with it. This section finishes the framework Rule 14.11.5 established and left as future work, and adds illumination as a real, biddable resource rather than a fixed scenario condition. It is deliberately built from pieces this system already has — the fire-mission pipeline (Section 16), the CON/OBS spot procedure (Section 14.9), the Double-Timed-movement penalty (Section 7.4), and the dispersion-direction table (Rule 16.6.5) — rather than introducing a parallel set of night-only mechanics. Section 20's own note on reuse-by-reference is the model followed here: each affected section carries one short cross-reference rule pointing back to this section for the actual values, rather than a duplicated procedure.
 
 Rule 14.11.5 is superseded by Rule 23.1. See design note E.106.
 
@@ -27,13 +27,13 @@ Rule 14.11.5 is superseded by Rule 23.1. See design note E.106.
 
    **Example:** A unit firing within 5 hexes turns off sound spotting for the turn at night exactly as it would at midday — the doubled penalties of Rule 23.1.3 never come into play on a turn where sound spotting itself isn't available.
 
-**23.1.3**  Exactly two rows of the CON table (Rule 14.9.7) double at night: moving through dense woods or rubble (-1 becomes -2) and moving carelessly (-2 becomes -4). Every other row — terrain cover, the table's own "Night scenario: +3" row, smoke's +2 — is unaffected.
+**23.1.3**  Exactly two rows of the CON table (Rule 14.9.7) double at night: moving through dense woods or rubble (-1 becomes -2) and taking Double-Timed Movement (-2 becomes -4). Every other row — terrain cover, the table's own "Night scenario: +3" row, smoke's +2 — is unaffected.
 
 .. container:: rule-guide
 
    **Why:** Names the two rows Rule 14.11.5 gestured at without specifying ("sound-based CON penalties") — these are the only two rows in the existing table that are genuinely about noise a unit makes by moving, which is exactly what carries further and matters more once vision has collapsed. Doubling the flat "Night scenario: +3" row itself, or terrain cover, would conflate concealment sources this rule isn't meant to touch.
 
-   **Example:** A unit moving carelessly at night suffers -4 CON (the doubled row) on top of the flat +3 Night scenario CON bonus it would otherwise carry — carelessness is far more dangerous after dark than the same move in daylight, while a unit that hasn't moved or fired keeps its ordinary night concealment untouched.
+   **Example:** A unit taking Double-Timed Movement at night suffers -4 CON (the doubled row) on top of the flat +3 Night scenario CON bonus it would otherwise carry — Double-Timed Movement is far more dangerous after dark than the same move in daylight, while a unit that hasn't moved or fired keeps its ordinary night concealment untouched.
 
 **23.1.4**  Everything else in the spot-roll procedure — the 4+ threshold (Rule 14.9.6), the full OBS table (Rule 14.9.8), and every RP cost (Rule 14.9.5) — is unchanged at night.
 

@@ -190,21 +190,21 @@ See Rule 6.3.3.
 
    **Example:** Both Alpha and Bravo survived the Grenade Phase. Alpha now enters Bravo's hex; both sides fire simultaneously at range 0 per 9.4.2/9.4.3.
 
-**9.4.2**  Attacker fires using their dominant fire line rFP + range 0 bonus (+3). A unit's **dominant fire line** is the fire line with the highest printed rFP (all lines are at full rFP at range 0; break ties in the owning player's favour). Only the dominant line fires in close assault — the confusion of a contested hex does not permit coordinated multi-weapon fire.
+**9.4.2**  Attacker's eFP is their dominant fire line's rFP + range 0 bonus (+3). A unit's **dominant fire line** is the fire line with the highest printed rFP (all lines are at full rFP at range 0; break ties in the owning player's favour). Only the dominant line fires in close assault — the confusion of a contested hex does not permit coordinated multi-weapon fire.
 
 .. container:: rule-guide
 
    **Why:** A contested hex is too chaotic for a unit to coordinate multiple weapons at once, so only its single best line fires — this keeps a multi-weapon unit from getting the full-firepower advantage in melee that Rule 8's line combination allows at range.
 
-   **Example:** Alpha has two printed fire lines, rFP 4 and rFP 6. Its dominant line (rFP 6) fires at range 0 with the +3 bonus for an effective rFP of 9; the rFP 4 line does not also fire.
+   **Example:** Alpha has two printed fire lines, rFP 4 and rFP 6. Its dominant line (rFP 6) fires at range 0 with the +3 bonus for an eFP of 9; the rFP 4 line does not also fire.
 
-**9.4.3**  Defender fires using their dominant fire line rFP + range 0 bonus (+3).
+**9.4.3**  Defender's eFP is their dominant fire line's rFP + range 0 bonus (+3).
 
 .. container:: rule-guide
 
    **Why:** The defender's own dominant line gets the identical range-0 treatment as the attacker's, keeping the Entry Fire exchange symmetric — neither side is favoured for standing still versus advancing into the hex.
 
-   **Example:** Bravo's dominant line is rFP 5. At range 0 with the bonus, Bravo fires at an effective rFP of 8.
+   **Example:** Bravo's dominant line is rFP 5. At range 0 with the bonus, Bravo fires at an eFP of 8.
 
 **9.4.4**  No cover modifier applies in the Entry Fire Phase — both sides are in the same position.
 
@@ -220,7 +220,7 @@ See Rule 6.3.3.
 
    **Why:** Keeps a single, familiar results table doing all the outcome work across ranged fire, grenades, and now entry fire, rather than a bespoke melee-specific table.
 
-   **Example:** Alpha's effective rFP 9 versus Bravo's Defence 5 (no cover) gives a margin of 4 → Suppressed, read off the same Appendix C table used everywhere else in the book.
+   **Example:** Alpha's eFP 9 versus Bravo's Defence 5 (no cover) gives a margin of 4 → Suppressed, read off the same Appendix C table used everywhere else in the book.
 
 **9.4.6**  If the defender is eliminated, the assault succeeds. If the attacker is eliminated, the assault fails and the attacker's counter is removed.
 
@@ -260,13 +260,13 @@ See Rule 6.3.3.
 
    **Example:** At the start of turn 4, both sides' engaged units attempt recovery rolls first (Rule 5.2), then Melee Continuation resolves immediately afterward, before either player spends their first AP of the Action Phase.
 
-**9.5.3**  During Melee Continuation turns, both sides fire simultaneously at range 0 with no cover modifier. Apply the range 0 bonus (+3 rFP) to both sides.
+**9.5.3**  During Melee Continuation turns, both sides fire simultaneously at range 0 with no cover modifier. Apply the range 0 bonus (+3 eFP) to both sides.
 
 .. container:: rule-guide
 
    **Why:** Reuses the exact Entry Fire conditions — range 0, no cover, +3 bonus — every subsequent turn, since nothing about the physical situation (two units locked together in the same hex) has changed.
 
-   **Example:** On a second melee turn, Alpha and Bravo fire again at their dominant-line effective rFPs (9 and 8 respectively, as in the Entry Fire example), unaffected by any terrain.
+   **Example:** On a second melee turn, Alpha and Bravo fire again at their dominant-line eFPs (9 and 8 respectively, as in the Entry Fire example), unaffected by any terrain.
 
 **9.5.4**  Melee continues until one side is eliminated, one side fails a morale check and withdraws, or one side voluntarily withdraws at the start of a turn (if eligible per Rule 9.2).
 

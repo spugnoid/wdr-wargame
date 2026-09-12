@@ -19,9 +19,11 @@ ASSAULT marker  ..........  6.5.1, 6.3.3
 
 FIRED 1/2/3 markers (F#-capable weapons)  ..........  6.5.1, 6.6
 
-MOVED/FIRED marker (shared two-sided marker with CARELESS)  ..........  6.5.1, 3.6
+MOVED/FIRED marker (shared two-sided marker with CAUTIOUS or DOUBLE-TIMED)  ..........  6.5.1, 3.6
 
-CARELESS marker  ..........  7.4.2, 3.6
+CAUTIOUS marker  ..........  7.3a.2, 3.6
+
+DOUBLE-TIMED marker  ..........  7.4.2, 3.6
 
 removal (Recovery Phase)  ..........  5.2.2, 6.5.4
 
@@ -71,9 +73,9 @@ Spot Action  ..........  6.3, 14.10
 
 **Adjacent fire bonus**  ..........  8.9
 
-range 0 bonus (+3 rFP)  ..........  8.9.2
+range 0 bonus (+3 eFP)  ..........  8.9.2
 
-range 1 bonus (+2 rFP)  ..........  8.9.1
+range 1 bonus (+2 eFP)  ..........  8.9.1
 
 **Adjustment fire (mortars)**  ..........  16.8
 
@@ -163,7 +165,7 @@ destruction  ..........  21.8.6
 
 ASSAULT marker placed  ..........  6.3.3
 
-half effective rFP  ..........  6.3.3, 2.5
+half eFP  ..........  6.3.3, 2.5
 
 **AT rifle**  ..........  18.9
 
@@ -263,7 +265,15 @@ combining half squads  ..........  13.4
 
 Recovery Window  ..........  13.2, 22.7
 
-**Careless movement**  ..........  7.4
+**Cautious movement**  ..........  7.3a
+
++2 CON bonus  ..........  7.3a.2
+
+1 hex (or 1 floor) regardless of terrain cost  ..........  7.3a.1
+
+available near sniper CONTACT marker  ..........  20.5.3
+
+**Double-Timed movement**  ..........  7.4
 
 -2 CON penalty  ..........  7.4.2
 
@@ -427,7 +437,7 @@ range 3–26, mean 14.5  ..........  8.5.1
 
 **Direct Fire (leader action)**  ..........  12.7
 
-+CMD rFP to fire group  ..........  12.7.1
++CMD eFP to fire group  ..........  12.7.1
 
 hidden leader cannot Direct Fire  ..........  12.7.4
 
@@ -457,7 +467,7 @@ size must match real unit  ..........  14.4.2
 
 **E**
 
-**Effective rFP**  ..........  1.3, 8.2
+**eFP**  ..........  1.3, 8.2
 
 falloff formula  ..........  8.2.1
 
@@ -469,7 +479,7 @@ cover modifier for uphill target  ..........  4.5.2
 
 not limited to hills — embankments, causeways  ..........  4.4a.1a
 
-rFP bonus for elevated firer  ..........  4.5.1
+eFP bonus for elevated firer  ..........  4.5.1
 
 **Eliminated result**  ..........  8.6
 
@@ -569,7 +579,7 @@ ambush sit tight  ..........  14.7.4
 
 scenario record sheet  ..........  14.7.1
 
-surprise bonus (+2 rFP)  ..........  14.7.6
+surprise bonus (+2 eFP)  ..........  14.7.6
 
 transition to HIDDEN on move  ..........  14.7.2
 
@@ -771,7 +781,7 @@ vehicle LOS rule  ..........  17.6.3
 
 **Long range cap**  ..........  8.7
 
-effective rFP ≤ 3 → max Pinned  ..........  8.7.1
+eFP ≤ 3 → max Pinned  ..........  8.7.1
 
 sniper exemption  ..........  8.7.4, 20.2.6
 
@@ -849,7 +859,9 @@ smoke rounds  ..........  16.9
 
 assault move (1 hex)  ..........  7.3.2
 
-careless movement  ..........  7.4
+cautious movement  ..........  7.3a
+
+double-timed movement  ..........  7.4
 
 road bonus  ..........  7.2.1
 
@@ -911,7 +923,7 @@ deferred to a future companion manual — see E.107  ..........  2.1.2, E.107
 
 1 RP cost  ..........  6.4
 
-free vs careless movement  ..........  7.4.3
+free vs Double-Timed movement  ..........  7.4.3
 
 trigger: enemy moves into LOS or fires  ..........  6.4
 
@@ -1059,9 +1071,9 @@ do not carry over between campaign turns  ..........  13.2.2a
 
 **Resupply**  ..........  13.2.2, E.100
 
-**Resolution FP**  ..........  1.3, 8.4
+**FPr**  ..........  1.3, 8.4
 
-single unit: use rFP directly  ..........  8.4.1
+single unit: use eFP directly  ..........  8.4.1
 
 multiple units: use Resolution Strip  ..........  8.4.2
 

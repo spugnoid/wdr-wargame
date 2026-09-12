@@ -164,13 +164,13 @@ Vehicle combat uses a dedicated resolution sequence that determines whether a ro
 
    **Example:** A tank firing its MG at infantry uses ordinary fire resolution (Section 8) against infantry Defence, with no Gunnery Roll involved at all — the Gunnery Roll is reserved for gun-vs-vehicle engagements.
 
-**18.1a.9**  Rule 7.5.2's existing −2 rFP penalty for opportunity fire against a moving target does not stack with Rule 18.1a.6 when the target is a vehicle — the Gunnery Roll's own crossing-target adjustment replaces it for vehicle targets specifically (Rule 7.5.2a states this same exception from the movement side). Rule 7.5.2 continues to apply exactly as written when the target is infantry.
+**18.1a.9**  Rule 7.5.2's existing −2 eFP penalty for opportunity fire against a moving target does not stack with Rule 18.1a.6 when the target is a vehicle — the Gunnery Roll's own crossing-target adjustment replaces it for vehicle targets specifically (Rule 7.5.2a states this same exception from the movement side). Rule 7.5.2 continues to apply exactly as written when the target is infantry.
 
 .. container:: rule-guide
 
-   **Why:** Prevents double-penalizing a moving vehicle target with both the general moving-target rFP penalty and the vehicle-specific crossing-target band adjustment, since both mechanisms exist to model the same underlying difficulty — hitting a moving target — and applying both would overstate that difficulty for vehicles specifically.
+   **Why:** Prevents double-penalizing a moving vehicle target with both the general moving-target eFP penalty and the vehicle-specific crossing-target band adjustment, since both mechanisms exist to model the same underlying difficulty — hitting a moving target — and applying both would overstate that difficulty for vehicles specifically.
 
-   **Example:** Opportunity fire against a moving vehicle target applies only the Gunnery Table's crossing-target band shift (Rule 18.1a.6), not also the ordinary -2 rFP moving-target penalty; that same opportunity fire against moving infantry still applies the standard -2 rFP penalty exactly as Rule 7.5.2 always has.
+   **Example:** Opportunity fire against a moving vehicle target applies only the Gunnery Table's crossing-target band shift (Rule 18.1a.6), not also the ordinary -2 eFP moving-target penalty; that same opportunity fire against moving infantry still applies the standard -2 eFP penalty exactly as Rule 7.5.2 always has.
 
     *Note: vehicles use their own MOVED marker (Rule 18.1a.6) tracking whether they have moved this turn — a simpler, unchanged concept distinct from the infantry MOVED/FIRED marker of Rule 6.5.1, which the Section 17-19 vehicle rules do not use.*
 
@@ -494,7 +494,7 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
 
    **Why:** Maps vehicle damage onto the same conceptual ladder as infantry status (Suppressed, Pinned, Casualty, Broken) so a player already familiar with infantry rules can apply the same intuition to vehicles, even though the specific mechanical effects differ to fit a vehicle's own capabilities.
 
-   **Example:** A vehicle's Suppressed state parallels an infantry unit's Suppressed status conceptually (a temporary combat-effectiveness hit), even though its specific mechanical penalties — reduced PEN, halved movement, a bail-out check — are vehicle-specific rather than the infantry rFP/movement penalties of Rule 10.2.
+   **Example:** A vehicle's Suppressed state parallels an infantry unit's Suppressed status conceptually (a temporary combat-effectiveness hit), even though its specific mechanical penalties — reduced PEN, halved movement, a bail-out check — are vehicle-specific rather than the infantry eFP/movement penalties of Rule 10.2.
 
 .. list-table::
    :header-rows: 1
@@ -505,7 +505,7 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
      - **Effect on vehicle**
    * - Suppressed (crew shock)
      - Suppressed
-     - Fires at -20 PEN (mm) and -2 rFP. Moves at half M#. Bail-out check each Recovery Phase.
+     - Fires at -20 PEN (mm) and -2 eFP. Moves at half M#. Bail-out check each Recovery Phase.
    * - Pinned (buttoned up)
      - Pinned
      - MG only at -4. Cannot move. -2 OBS. Cannot spot hidden units. -1 morale checks. Bail-out check each Recovery Phase.
@@ -532,13 +532,13 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
 
    **Example:** A tank firing its MG at an infantry squad rolls fire combat exactly as any other MG fire line would (Section 8), comparing against the squad's Defence and cover — no Gunnery Roll or penetration table is involved.
 
-**18.8.2**  MG fire: uses MG rFP ⬡h -f notation, resolves against infantry defence + cover. The standard close-range bonuses apply: +3 rFP at range 0 (same hex, Rule 8.9.2), +2 rFP at range 1 (adjacent, Rule 8.9.1).
+**18.8.2**  MG fire: uses MG rFP ⬡h -f notation, resolves against infantry defence + cover. The standard close-range bonuses apply: +3 eFP at range 0 (same hex, Rule 8.9.2), +2 eFP at range 1 (adjacent, Rule 8.9.1).
 
 .. container:: rule-guide
 
    **Why:** Treats a vehicle's MG exactly like any other MG fire line, complete with the usual close-range bonuses, since the weapon and its resolution mechanics don't change just because it happens to be mounted on a vehicle rather than carried by infantry.
 
-   **Example:** A vehicle's mounted MG firing at an adjacent infantry unit gets the same +2 rFP close-range bonus (Rule 8.9.1) that any infantry MG team would get firing at the same range.
+   **Example:** A vehicle's mounted MG firing at an adjacent infantry unit gets the same +2 eFP close-range bonus (Rule 8.9.1) that any infantry MG team would get firing at the same range.
 
 **18.8.3**  HE fire: uses the flat HE rFP value. No falloff — HE effectiveness is constant regardless of range. Cover modifier applies but is reduced by 1 step (same as mortar indirect fire against buildings and reverse slopes).
 
@@ -778,7 +778,7 @@ Overrun's pre-entry defensive fire does not use the Gunnery Roll (Rule 18.1a.8) 
 
    **Example:** Infantry that fails its Rule 18.11.3 morale check and routs immediately clears the way — the vehicle simply enters the now-vacated hex without further opposition.
 
-**18.11.5**  If infantry holds: vehicle enters hex. Both sides are now in the same hex. Close combat continues each subsequent impulse — infantry fires AT weapons at range 0, vehicle fires MG at range 0. No cover modifiers apply. Range 0 bonus (+3 rFP) applies to the vehicle MG. Both sides resolve simultaneously.
+**18.11.5**  If infantry holds: vehicle enters hex. Both sides are now in the same hex. Close combat continues each subsequent impulse — infantry fires AT weapons at range 0, vehicle fires MG at range 0. No cover modifiers apply. Range 0 bonus (+3 eFP) applies to the vehicle MG. Both sides resolve simultaneously.
 
 .. container:: rule-guide
 

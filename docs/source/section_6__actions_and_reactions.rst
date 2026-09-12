@@ -59,8 +59,8 @@ Section 6 — Actions and Reactions
 
    **Example:** Bravo could have fired on Alpha crossing hex A but chose to hold. Once Alpha moves on to hex B, that specific opportunity is gone — Bravo's player cannot retroactively claim it — though hex B is a brand-new window Bravo may react to if it still has RP and capacity.
 
-  - A unit using the ordinary (F1) economy reacts with an **Assault Fire** (Rule 6.3.3, half effective rFP): a fresh unit becomes ASSAULT-marked; an already ASSAULT-marked unit becomes MOVED/FIRED.
-  - A stationary weapon with F# greater than 1 (Rule 6.6) reacts at **full effective rFP**, expending one FIRED pip.
+  - A unit using the ordinary (F1) economy reacts with an **Assault Fire** (Rule 6.3.3, half eFP): a fresh unit becomes ASSAULT-marked; an already ASSAULT-marked unit becomes MOVED/FIRED.
+  - A stationary weapon with F# greater than 1 (Rule 6.6) reacts at **full eFP**, expending one FIRED pip.
   - A unit already MOVED/FIRED may not react with Opportunity Fire (the sole exception is Desperate Fire against its own attackers, Rule 6.7.1).
 
 A unit may react more than once per turn while it still has an unspent part-action, F# pip, or (for Desperate Fire) is the actual target of a close assault — reacting is limited by resources (RP) and remaining capacity, not by a fixed count.
@@ -91,7 +91,7 @@ A unit may react more than once per turn while it still has an unspent part-acti
 
    **Why:** The "AP Cost" and "ends the unit's turn" columns exist because most Regular actions are meant to be a unit's entire turn at full effect — a unit trades flexibility for full-strength results by choosing this over the Assault economy.
 
-   **Example:** Alpha spends 1 AP for a Regular Fire at full effective rFP. Even though Alpha wasn't Suppressed or otherwise unable to act again, it is now MOVED/FIRED and done for the turn — the trade-off for firing at full strength rather than a reduced Assault Fire.
+   **Example:** Alpha spends 1 AP for a Regular Fire at full eFP. Even though Alpha wasn't Suppressed or otherwise unable to act again, it is now MOVED/FIRED and done for the turn — the trade-off for firing at full strength rather than a reduced Assault Fire.
 
 .. list-table::
    :header-rows: 1
@@ -102,10 +102,10 @@ A unit may react more than once per turn while it still has an unspent part-acti
      - **Description**
    * - Move
      - 1
-     - Move one unit up to its M# movement allowance (Section 7). → MOVED/FIRED.
+     - Move one unit up to its M# movement allowance under Advance Movement (Section 7), or declare Cautious Movement (Rule 7.3a) or Double-Timed Movement (Rule 7.4) instead. → MOVED/FIRED.
    * - Fire
      - 1
-     - One attack at full effective rFP (Section 8). → MOVED/FIRED — unless the firing weapon is a stationary weapon with F# greater than 1 (Rule 6.6), which is marked FIRED 1 instead and may fire again.
+     - One attack at full eFP (Section 8). → MOVED/FIRED — unless the firing weapon is a stationary weapon with F# greater than 1 (Rule 6.6), which is marked FIRED 1 instead and may fire again.
    * - Close Assault
      - 1
      - Declare close assault against an adjacent occupied enemy hex. A completely fresh unit (no ASSAULT, FIRED, or MOVED/FIRED marker present this turn) may declare freely. See Section 9 and Rule 6.3.3 for the ASSAULT-marked case.
@@ -158,7 +158,7 @@ A unit may react more than once per turn while it still has an unspent part-acti
      - Bound 1 hex, regardless of M# (Rule 7.1.4 governs terrain cost as normal).
    * - Assault Fire
      - 1
-     - One attack at half effective rFP, rounded down — the halving is applied to the final effective rFP after falloff, terrain, and status modifiers (Rule 8.2.5 governs a result of 0 or less).
+     - One attack at half eFP, rounded down — the halving is applied to the final eFP after falloff, terrain, and status modifiers (Rule 8.2.5 governs a result of 0 or less).
    * - Close Assault
      - 1
      - Available only to a unit already carrying the ASSAULT marker (one part-action already spent), as its **second** part-action, and only with a leader present — in the assaulting unit's hex, either coordinating that unit alone or activating it together with other units in the same stack (Rule 6.1.1). Without a leader present, an ASSAULT-marked unit may not declare Close Assault this turn — its second part-action must be an ordinary Assault Move or Assault Fire. See Rule 9.1.2.
@@ -172,7 +172,7 @@ After a unit's **first** part-action this turn (of either kind, in either order)
 
    **Why:** States the halving convention exactly once, centrally, so every other rule that halves something (Assault Fire here, and any future rule) can just say "halved" without re-specifying the rounding direction each time.
 
-   **Example:** Alpha's full effective rFP for a given shot is 7. Its Assault Fire uses half of that, rounded down: 3, not 3.5 or 4.
+   **Example:** Alpha's full eFP for a given shot is 7. Its Assault Fire uses half of that, rounded down: 3, not 3.5 or 4.
 
 6.4  Reaction Types
 --------------------
@@ -195,7 +195,7 @@ The following reactions are available to the non-active player during a reaction
      - Enemy unit declares Close Assault against a friendly unit.
    * - Spot Roll
      - 1
-     - Enemy unit becomes visible, moves carelessly, or enters LOS of a unit taking a Spot Action. See Section 14.
+     - Enemy unit becomes visible, takes Double-Timed Movement, or enters LOS of a unit taking a Spot Action. See Section 14.
    * - Interrupt
      - 2
      - Any enemy action. The non-active player inserts their own action before the declared enemy action resolves. Initiative passes temporarily to the interrupting player for that one action.
@@ -275,13 +275,13 @@ The following reactions are available to the non-active player during a reaction
 
    **Example:** A tripod HMG firing under F# is never marked ASSAULT — it uses the FIRED 1/2/3 track exclusively. A unit that has taken an Assault Move (ASSAULT marker) is, by definition, in the Assault economy, not exercising F#.
 
-**6.5.4**  All action markers (ASSAULT, FIRED 1/2/3, MOVED/FIRED, CARELESS) are removed during the Recovery Phase at the start of the following turn.
+**6.5.4**  All action markers (ASSAULT, FIRED 1/2/3, MOVED/FIRED, CAUTIOUS, DOUBLE-TIMED) are removed during the Recovery Phase at the start of the following turn.
 
 .. container:: rule-guide
 
    **Why:** Gives every marker a fixed, predictable lifetime — exactly one turn — so a player never has to remember to manually track when a marker "expires" mid-game.
 
-   **Example:** At the start of the Recovery Phase, every ASSAULT, FIRED 1/2/3, MOVED/FIRED, and CARELESS marker on the map is removed at once, regardless of when each was placed during the previous turn.
+   **Example:** At the start of the Recovery Phase, every ASSAULT, FIRED 1/2/3, MOVED/FIRED, CAUTIOUS, and DOUBLE-TIMED marker on the map is removed at once, regardless of when each was placed during the previous turn.
 
 6.6  F# and Rate of Fire — Stationary Weapons
 -------------------------------------------------
@@ -335,13 +335,13 @@ The following reactions are available to the non-active player during a reaction
 
    **Example:** A tripod HMG (F3) fires three separate times this turn, each a full-effect Regular Fire, marked FIRED 1, then FIRED 2, then FIRED 3 in turn. Only after the third shot does it become MOVED/FIRED.
 
-**6.6.4**  F# greater than 1 applies only in a turn the weapon has not moved. A weapon that takes any Move action this turn — Regular or Assault — is in the ordinary Assault economy for the rest of its turn: no weapon fires above F1 in a turn it moved. An LMG (or any bipod-capable MG) that chooses to move therefore fights like any other unit — one crewman operating it off the bipod, at half rFP.
+**6.6.4**  F# greater than 1 applies only in a turn the weapon has not moved. A weapon that takes any Move action this turn — Regular or Assault — is in the ordinary Assault economy for the rest of its turn: no weapon fires above F1 in a turn it moved. An LMG (or any bipod-capable MG) that chooses to move therefore fights like any other unit — one crewman operating it off the bipod, at half eFP.
 
 .. container:: rule-guide
 
    **Why:** Ties the extra bursts specifically to staying planted — the moment a weapon with F# greater than 1 moves, whatever pre-sighting or range-carding gave it those extra shots is gone, so it drops to the ordinary Assault economy for the rest of that turn.
 
-   **Example:** An LMG team takes an Assault Move this turn. Even though it's an F2 weapon while stationary, having moved it no longer qualifies — its only remaining option this turn is an ordinary Assault Fire at half rFP, not a second full-effect F# shot.
+   **Example:** An LMG team takes an Assault Move this turn. Even though it's an F2 weapon while stationary, having moved it no longer qualifies — its only remaining option this turn is an ordinary Assault Fire at half eFP, not a second full-effect F# shot.
 
 **6.6.5**  A deployed weapon that has expended its printed F# this turn may not Limber (Rule 6.3.2) until the following turn — the crew is serving the gun, not packing it up.
 
@@ -355,13 +355,13 @@ The following reactions are available to the non-active player during a reaction
 -----------------------------------------------
 
 
-**6.7.1**  A unit marked MOVED/FIRED that is the target of a declared Close Assault or Overrun may still take **Desperate Fire** against those incoming attackers only — one Assault Fire (half effective rFP, Rule 6.3.3), 1 RP, at the declaration window (Rule 5.5.2). It may not fire at any other target this turn.
+**6.7.1**  A unit marked MOVED/FIRED that is the target of a declared Close Assault or Overrun may still take **Desperate Fire** against those incoming attackers only — one Assault Fire (half eFP, Rule 6.3.3), 1 RP, at the declaration window (Rule 5.5.2). It may not fire at any other target this turn.
 
 .. container:: rule-guide
 
    **Why:** Gives a fully spent (MOVED/FIRED) unit exactly one narrow, desperate option against the specific threat closing on it, rather than leaving it with zero defensive recourse just because it happened to act earlier in the turn.
 
-   **Example:** Bravo is MOVED/FIRED from an earlier Regular Fire this turn. Alpha now declares Close Assault against Bravo. Bravo's player may spend 1 RP for Desperate Fire — an Assault Fire at half effective rFP — against Alpha specifically, but could not use this same fire against some other, unrelated enemy unit.
+   **Example:** Bravo is MOVED/FIRED from an earlier Regular Fire this turn. Alpha now declares Close Assault against Bravo. Bravo's player may spend 1 RP for Desperate Fire — an Assault Fire at half eFP — against Alpha specifically, but could not use this same fire against some other, unrelated enemy unit.
 
 **6.7.2**  Close-combat defense — defensive grenades, melee, and withdrawal rights (Section 9) — is always available to a unit regardless of its action markers.
 

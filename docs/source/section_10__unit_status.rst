@@ -23,12 +23,12 @@ Units may be in one of the following status levels at any time. Status is tracke
      - Normal
    * - Suppressed
      - Half M# (round down, minimum 1)
-     - At -2 rFP
-     - At -1 rFP
+     - At -2 eFP
+     - At -1 eFP
      - -2
    * - Pinned
      - No movement
-     - At -4 rFP
+     - At -4 eFP
      - Cannot react
      - -3
    * - Routing
@@ -52,13 +52,13 @@ Units may be in one of the following status levels at any time. Status is tracke
 ----------------
 
 
-**10.2.1**  A Suppressed unit has its movement halved, fires at -2 rFP, and reacts at -1 rFP.
+**10.2.1**  A Suppressed unit has its movement halved, fires at -2 eFP, and reacts at -1 eFP.
 
 .. container:: rule-guide
 
    **Why:** Bundles three separate penalties — movement, fire, and reaction — into a single status so one bad result (being Suppressed) has a broad, felt effect across everything the unit tries to do, not just one narrow stat.
 
-   **Example:** A Suppressed Alpha with M2 moves at M1 (round down, Rule 2.5.1), fires at -2 rFP below its normal effective rFP, and reacts at -1 rFP if it spends RP — all three penalties apply from the same single status marker.
+   **Example:** A Suppressed Alpha with M2 moves at M1 (round down, Rule 2.5.1), fires at -2 rFP below its normal eFP, and reacts at -1 rFP if it spends RP — all three penalties apply from the same single status marker.
 
 **10.2.2**  A Suppressed unit's effective Defence is reduced by 2.
 
@@ -88,19 +88,19 @@ Units may be in one of the following status levels at any time. Status is tracke
 ------------
 
 
-**10.3.1**  A Pinned unit cannot move and fires at -4 rFP.
+**10.3.1**  A Pinned unit cannot move and fires at -4 eFP.
 
 .. container:: rule-guide
 
-   **Why:** Makes Pinned a strictly harsher version of Suppressed's mobility and fire penalties (Rule 10.2.1) — no movement at all rather than halved, and a steeper rFP cut — matching Pinned's role as the next status up the severity ladder.
+   **Why:** Makes Pinned a strictly harsher version of Suppressed's mobility and fire penalties (Rule 10.2.1) — no movement at all rather than halved, and a steeper eFP cut — matching Pinned's role as the next status up the severity ladder.
 
-   **Example:** A Pinned unit with M2 cannot move at all this turn, unlike a merely Suppressed unit which could still move at half rate — and its fire suffers -4 rFP instead of Suppressed's -2.
+   **Example:** A Pinned unit with M2 cannot move at all this turn, unlike a merely Suppressed unit which could still move at half rate — and its fire suffers -4 eFP instead of Suppressed's -2.
 
 **10.3.2**  A Pinned unit cannot spend RP for opportunity fire or other reactions.
 
 .. container:: rule-guide
 
-   **Why:** Removes reactive capability entirely rather than just penalizing it (compare Suppressed's -1 rFP reaction penalty, Rule 10.2.1) — a Pinned unit is treated as too suppressed to respond to anything happening around it at all.
+   **Why:** Removes reactive capability entirely rather than just penalizing it (compare Suppressed's -1 eFP reaction penalty, Rule 10.2.1) — a Pinned unit is treated as too suppressed to respond to anything happening around it at all.
 
    **Example:** A Pinned unit cannot spend RP on Opportunity Fire even against an enemy unit moving right past it in plain sight — Rule 10.3.2 rules that reaction out entirely, not just at a penalty.
 

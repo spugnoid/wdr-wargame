@@ -106,13 +106,13 @@ Section 11 — Prisoners and Surrender
 
    **Example:** Alpha, holding a GUARD marker, cannot declare a Close Assault against an adjacent enemy unit even if the tactical situation would otherwise favor it — that option is off the table while guarding.
 
-**11.3.4**  A guarding unit fires at -2 rFP on all fire actions.
+**11.3.4**  A guarding unit fires at -2 eFP on all fire actions.
 
 .. container:: rule-guide
 
    **Why:** Penalizes a guarding unit's combat effectiveness across the board, on top of the movement and assault restrictions (Rules 11.3.2-11.3.3) — attention split between watching prisoners and fighting means every fire action suffers, not just the ones directly involving the prisoners.
 
-   **Example:** Alpha's normal effective rFP against a target is reduced by 2 for every fire action it takes while still carrying its GUARD marker, regardless of what or whom it's firing at.
+   **Example:** Alpha's normal eFP against a target is reduced by 2 for every fire action it takes while still carrying its GUARD marker, regardless of what or whom it's firing at.
 
 **11.3.5**  Guard scaling: all POW markers in a single hex form one **prisoner group**. A group of 1–2 POW markers requires 1 guard unit; 3–4 markers require 2 guard units; 5 or more require a dedicated escort element — at least 2 guard units, neither of which may take any offensive action. A guard unit covers a group if it is in the group's hex or adjacent to it; a guard unit counts toward only one group at a time (owning player assigns).
 

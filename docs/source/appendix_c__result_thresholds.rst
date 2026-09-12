@@ -5,7 +5,7 @@ Appendix C — Result Thresholds
    :header-rows: 1
    :widths: auto
 
-   * - **Margin (Roll + Resolution FP − Defence − Cover)**
+   * - **Margin (Roll + FPr − Defence − Cover)**
      - **Result**
    * - Below 0
      - No effect
@@ -21,7 +21,7 @@ Appendix C — Result Thresholds
      - Broken — unit is CI, remove from map to BROKEN zone
 
 
-Long Range Cap: when effective rFP is 3 or less after all modifiers, maximum result is Pinned regardless of margin.
+Long Range Cap: when eFP is 3 or less after all modifiers, maximum result is Pinned regardless of margin.
 
 Multiple attack step-up order: Suppressed → Pinned → Casualty → Casualty+Suppressed → Broken.
 
@@ -29,13 +29,13 @@ Outcome Probability Table
 -------------------------
 
 
-Exact probabilities for the 1d6+1d8+1d12 roll (576 outcomes) at each net modifier, under the v0.9.2 thresholds. The net modifier is Resolution FP minus the target's Defence and cover. Values under 0.05% shown as —. This table is reference material for scenario designers and does not need to be consulted during play.
+Exact probabilities for the 1d6+1d8+1d12 roll (576 outcomes) at each net modifier, under the v0.9.2 thresholds. The net modifier is FPr minus the target's Defence and cover. Values under 0.05% shown as —. This table is reference material for scenario designers and does not need to be consulted during play.
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
-   * - **Net modifier (Resolution FP − Defence − Cover)**
+   * - **Net modifier (FPr − Defence − Cover)**
      - **No effect**
      - **Suppressed**
      - **Pinned**
@@ -191,4 +191,4 @@ Exact probabilities for the 1d6+1d8+1d12 roll (576 outcomes) at each net modifie
      - 34.0%
 
 
-Calibration anchors: a single LMG line (effective rFP 7) against a squad (Defence 8) in the open is net −1; in light woods net −4; in a heavy building net −6; entrenched net −7. Suppression becomes the most likely outcome once the target has meaningful cover; open ground remains lethal by design.
+Calibration anchors: a single LMG line (eFP 7) against a squad (Defence 8) in the open is net −1; in light woods net −4; in a heavy building net −6; entrenched net −7. Suppression becomes the most likely outcome once the target has meaningful cover; open ground remains lethal by design.

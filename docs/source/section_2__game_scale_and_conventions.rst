@@ -155,9 +155,9 @@ With Deepest Regret... uses a specific counter notation for firepower and fallof
 
    **Why:** Sets one default rounding rule so a new halving rule added anywhere in the book doesn't need to restate how to round — silence means round down, and only an explicit minimum overrides that.
 
-   **Example:** A rule that halves Alpha's effective rFP without mentioning rounding uses round-down by default: an effective rFP of 5 halves to 2, not 3, unless that rule states a minimum.
+   **Example:** A rule that halves Alpha's eFP without mentioning rounding uses round-down by default: an eFP of 5 halves to 2, not 3, unless that rule states a minimum.
 
-**2.5.2**  Rules already using this convention before it was stated here: Suppressed movement (half M#, round down, minimum 1, Rule 10.1), grenade-phase cover (halved, round down, Rule 9.3.5), flamethrower cover (halved, round down, Rule 21.5.3), and Assault Fire (half effective rFP, round down, Rule 6.3.3).
+**2.5.2**  Rules already using this convention before it was stated here: Suppressed movement (half M#, round down, minimum 1, Rule 10.1), grenade-phase cover (halved, round down, Rule 9.3.5), flamethrower cover (halved, round down, Rule 21.5.3), and Assault Fire (half eFP, round down, Rule 6.3.3).
 
 .. container:: rule-guide
 

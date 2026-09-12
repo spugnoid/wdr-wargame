@@ -267,9 +267,9 @@ The upper right corner of each counter shows three action values:
 ------------------------
 
 
-Small markers are placed on or beside unit counters to track their current state. Action markers (ASSAULT, FIRED 1/2/3, MOVED/FIRED, CARELESS) are removed during the Recovery Phase at the start of each turn; status markers (SUPPRESSED, PINNED, and the like) persist until removed by their own rules — a recovery roll, a rally, or the condition ending (Rules 5.2.2–5.2.4).
+Small markers are placed on or beside unit counters to track their current state. Action markers (ASSAULT, FIRED 1/2/3, MOVED/FIRED, CAUTIOUS, DOUBLE-TIMED) are removed during the Recovery Phase at the start of each turn; status markers (SUPPRESSED, PINNED, and the like) persist until removed by their own rules — a recovery roll, a rally, or the condition ending (Rules 5.2.2–5.2.4).
 
-FIRED 1/2/3 is a progression of three physical chits — one showing "1", the next "2", the next "3" — swapped in as a stationary F#-capable weapon's fire count climbs this turn, standard practice for tracking a step count on a physical counter. MOVED/FIRED and CARELESS, by contrast, are one physical component — a two-sided marker — since Careless Movement (Rule 7.4) is only ever taken as a Regular Move action, which always ends the unit's turn; a unit is never MOVED/FIRED-without-CARELESS-info-loss and CARELESS-without-MOVED/FIRED at once, so a unit is never in a state needing both faces shown simultaneously (Rule 7.4.2). See design notes E.96–E.97.
+FIRED 1/2/3 is a progression of three physical chits — one showing "1", the next "2", the next "3" — swapped in as a stationary F#-capable weapon's fire count climbs this turn, standard practice for tracking a step count on a physical counter. MOVED/FIRED, CAUTIOUS, and DOUBLE-TIMED, by contrast, use two physical two-sided marker components — MOVED/FIRED-CAUTIOUS and MOVED/FIRED-DOUBLE-TIMED — since both Cautious Movement (Rule 7.3a) and Double-Timed Movement (Rule 7.4) are only ever taken as a Regular Move action, which always ends the unit's turn; a unit is never MOVED/FIRED-without-CAUTIOUS/DOUBLE-TIMED-info-loss and never CAUTIOUS or DOUBLE-TIMED without MOVED/FIRED at once, so neither marker is ever needed with both its faces shown simultaneously (Rules 7.3a.2, 7.4.2). A unit takes at most one of Cautious or Double-Timed Movement per turn, so only one of the two components is ever in play on a given counter at once. See design notes E.96–E.97.
 
 .. list-table::
    :header-rows: 1
@@ -286,9 +286,11 @@ FIRED 1/2/3 is a progression of three physical chits — one showing "1", the ne
    * - FIRED 3
      - Fired three times this turn (tripod HMG only)
    * - MOVED/FIRED
-     - Unit is done for the turn — no further movement or fire (Rule 6.7 covers remaining defensive rights). Front face of the shared MOVED/FIRED-CARELESS marker.
-   * - CARELESS
-     - Unit moved M#+1 hexes this turn and suffers -2 CON for the remainder of it (Rule 7.4). Reverse face of the shared MOVED/FIRED-CARELESS marker — always accompanies MOVED/FIRED, never appears alone.
+     - Unit is done for the turn — no further movement or fire (Rule 6.7 covers remaining defensive rights). Front face of the shared MOVED/FIRED-CAUTIOUS or MOVED/FIRED-DOUBLE-TIMED marker when either applies, or displayed alone otherwise.
+   * - CAUTIOUS
+     - Unit moved 1 hex (or changed 1 floor) this turn and gains +2 CON for the remainder of it (Rule 7.3a). Reverse face of the shared MOVED/FIRED-CAUTIOUS marker — always accompanies MOVED/FIRED, never appears alone.
+   * - DOUBLE-TIMED
+     - Unit moved M#+1 hexes this turn and suffers -2 CON for the remainder of it (Rule 7.4). Reverse face of the shared MOVED/FIRED-DOUBLE-TIMED marker — always accompanies MOVED/FIRED, never appears alone.
    * - SUPPRESSED
      - Unit is suppressed (see Section 10.2)
    * - PINNED
