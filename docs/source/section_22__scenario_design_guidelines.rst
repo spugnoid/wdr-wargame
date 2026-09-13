@@ -106,13 +106,13 @@ Every scenario sheet must include the following parameters. Players read these b
 
    **Example:** 2 veteran German squads count as 2 × 1.5 = 3.0 effective units for ratio purposes, worth exactly as much as 5 green Soviet conscript squads at 5 × 0.6 = 3.0.
 
-**22.2.4**  Vehicle units count as 2 combat units for ratio purposes at tactical scale. A heavy tank (Tiger, KV-1) counts as 3.
+**22.2.4**  Vehicle units count as 2 combat units for ratio purposes at tactical scale. A heavy tank (Tiger, KV-1) counts as 3. These values already account for crew quality: Rule 22.2.3's multipliers apply to infantry only and are **never** applied on top of a vehicle's count. A veteran-crewed Panzer IV counts 2, not 3.
 
 .. container:: rule-guide
 
    **Why:** A single tank brings vastly more firepower and battlefield impact than a single infantry squad, so weighting it at 2 (or 3 for a heavy tank) keeps the force ratio meaningful when comparing mixed infantry-and-armour forces rather than treating every counter as equivalent.
 
-   **Example:** A defending force of 3 infantry squads plus 1 Tiger tank counts as 3 + 3 = 6 effective combat units for ratio purposes, not just 4.
+   **Example:** A defending force of 3 regular infantry squads plus 1 Tiger counts 3 + 3 = 6. Had the Tiger been veteran-crewed it would still count 3 — the quality multiplier of Rule 22.2.3 is not applied to it.
 
 22.3  Force Morale Calculation
 -------------------------------
@@ -439,7 +439,7 @@ Every scenario sheet must include the following parameters. Players read these b
 
    **Example:** A defender cannot place a FIXED HMG team deep inside the attacker's own setup zone unless the scenario explicitly calls for that kind of infiltration ambush — normally, FIXED units stay within the defender's own designated zone.
 
-**22.8.4**  Guidelines for FIXED unit placement by scenario type:
+**22.8.4**  Guidelines for the *designer* setting a scenario's FIXED allowance by scenario type. What a player may actually do is whatever the finished parameter block says (Rule 22.9a.2):
 
 .. container:: rule-guide
 
@@ -541,7 +541,7 @@ Every scenario sheet must include the following parameters. Players read these b
 
    **Example:** Both players confirm they are playing a 4-turn scenario on a 6 × 6 map with the German objective at E3 before a single counter is placed.
 
-**22.9a.2**  Each player takes their force, sets their Force Morale marker to its starting value, and decides privately which of their units begin FIXED (Rule 14.7) and which begin VISIBLE. Record every FIXED unit's hex on the scenario record sheet now (Rules 22.8.1, 22.8.2). A unit not recorded as FIXED begins VISIBLE.
+**22.9a.2**  Each player takes their force, sets their Force Morale marker to its starting value, and decides privately which of their units begin FIXED (Rule 14.7) and which begin VISIBLE — **within whatever allowance the scenario gives them**. The scenario's parameter block is the authority on how many units, and which, may set up FIXED; Rule 22.8.4 is guidance for the designer writing that line, not a permission a player may claim at the table. A scenario silent on the matter allows none. Record every FIXED unit's hex on the scenario record sheet now (Rules 22.8.1, 22.8.2). A unit not recorded as FIXED begins VISIBLE.
 
 .. container:: rule-guide
 
