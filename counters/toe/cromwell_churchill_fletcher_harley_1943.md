@@ -158,3 +158,147 @@ that citation's exact page and unit, rather than being taken from this summary.
    candidate; see `counters/toe/encyclopedia_weapons_wwii_1943.md`. The
    Panzer-Tracts-style-reference recommendation in item 4 above stands
    unchanged.
+
+6. **Update 2026-09-12, design note E.162**: John Sandars' *British 7th
+   Armoured Division 1940-45* (Osprey Vanguard 1, 1977,
+   `reference/operational-histories/vanguard-01-british-7th-armoured-division-1940-45_compress.pdf`,
+   51pp, real OCR text layer, read in full via `pdftotext -layout`) was
+   checked against this file's 8 directive questions, plus two adjacent
+   questions this pass was also tasked with (British elite-unit crew-quality
+   basis; squadron/troop organizational breakdown). It is a unit/campaign
+   history — the same genre already producing clean negatives for Fletcher &
+   Harley (this file) and Bird & Livingston's national tables
+   (`vehicle_top_armor_1943.md`) — and the pattern holds again for armor
+   geometry specifically, a **third independent confirmed negative**: a
+   full-text search for "armour thickness," "glacis," "frontal armour," and
+   plate/mm figures of any kind returns nothing beyond one incidental,
+   non-armor use of the word "plate" (a divisional sign painted "on the
+   front plate" of a scout car). No hull/turret thickness-and-angle table or
+   diagram exists anywhere in the book, for Cromwell, Crusader, or any other
+   vehicle it names. **Questions 1-6 of this file remain exactly as before —
+   not addressed by this source at all.**
+
+   **Question 8 (real, dated combat anecdote) gets a genuine, clean 1943 hit,
+   independent of the two low-confidence Fletcher & Harley anecdotes above.**
+   Two dated, named items from the division's own Tunisia campaign: (a) the
+   6 March 1943 Battle of Medenine, where the division's 6-pounder anti-tank
+   guns (Queens' brigade and divisional A/T regiments) broke up a
+   counterattack by German armor redeployed from the US front, described in
+   the book's own narrative as a case where "many [enemy tanks] never even
+   reached the British positions" thanks to concentrated artillery and A/T
+   fire, with "over 40 enemy tanks destroyed... without it being necessary
+   to commit the armoured brigades at all"; and (b) a precisely dated first
+   encounter with a new enemy vehicle type: "Tiger tanks first appeared in
+   April [1943], and 11th Hussars actually captured a disabled one" — real,
+   dated (April 1943), named-unit (11th Hussars), citable content, though it
+   documents an armored-car regiment's capture of an abandoned vehicle, not
+   a tank-vs-tank engagement suitable for a Rule 18.12 entry as-is.
+
+   **A genuinely new, unrelated finding: dated squadron/troop-level
+   organizational tables for the British armoured regiment across four
+   distinct establishments (1940, 1941, 1942-43, 1944), that this project's
+   TOE files do not currently have anywhere** — checked against
+   `counters/toe/united_kingdom_1943.md` (infantry-only; no armoured-regiment
+   content) and `counters/toe/british_vehicles_1943.md` (vehicle armor/gun
+   data only; no organizational breakdown), neither of which covers this.
+   Recorded here rather than in a new file, since this is this project's
+   established British-armor tracking file. See the dedicated section below
+   for the full table and the crew-quality/elite-tier finding (a genuine
+   open question this pass was asked to check, answered as inconclusive —
+   not a positive finding to build a roster row from).
+
+## Squadron/Troop Organization of a British Armoured Regiment (1940-1944) —
+## New Data, Not Currently in This Project's TOE Files
+
+*Added 2026-09-12, design note E.162.* Sandars' book (p.20, "The Armoured
+Regiment" table) gives a dated, four-era breakdown of how a British armoured
+regiment's Regimental HQ, HQ Squadron, and three fighting Squadrons were
+tank-equipped, tracing the same 7th Armoured Division regiments this file
+already draws vehicle data from:
+
+- **(a) 1940:** RHQ — 4× Mk VIB light tanks. HQ Sqn — admin troops, A & B
+  echelons, MO, fitters, etc. 3 Sqns total — 2 with light tanks, 1 with
+  cruisers; each Sqn has an HQ of 4 tanks plus 4 Troops of 3 tanks each.
+- **(b) 1941:** RHQ — 4× cruiser tanks (A13, Crusader, or Stuart). HQ Sqn —
+  as above. 3 Sqns; each Sqn HQ has 2× cruiser + 2× close-support tanks
+  (cruisers re-gunned with a 3in or 3.7in howitzer for HE/smoke, since 2pdr
+  gun tanks couldn't fire HE), plus 4 Troops of 3 cruisers each.
+- **(c) 1942-43 (the Crusader/Grant/Sherman era this file's Cromwell/
+  Churchill questions sit adjacent to):** RHQ — 4× cruiser + 8× light AA
+  tanks. HQ Sqn — admin troops plus a Recce Troop of 12 scout cars. 3 Sqns —
+  2 with Grant or Sherman, 1 with Stuart or Crusader; each Sqn HQ has 4
+  tanks plus 4 Troops of 3 tanks each.
+- **(d) 1944 (the Cromwell era):** RHQ — 4× Cromwell + 8× AA tanks (the
+  latter discarded after the Normandy landing). HQ Sqn — admin troops plus
+  a Recce Troop of 10 Stuarts and 12 scout cars. 3 Sqns; each Sqn HQ has
+  2× 75mm-gun + 2× 95mm-howitzer Cromwells, plus 4 Troops of 3× 75mm
+  Cromwells + 1× Sherman Firefly or Challenger each. A footnote specifically
+  flags 8th Hussars as a documented 1944 exception, fielding 5 Troops of 5
+  tanks each rather than the standard 4-of-3.
+
+This is real, dated, primary-structure organizational data (tank counts per
+Troop/Squadron/Regiment, by year, with named vehicle-type mixes) of exactly
+the kind Question 2 of this pass's brief asked to check for — and it is not
+duplicated anywhere in this project's existing TOE files. It has no bearing
+on the armor-geometry questions this file otherwise tracks, and no
+crew-composition (number of men per tank/turret) is given. **Not applied to
+any roster or TOE file by this pass** — flagged here for the coordinator to
+decide whether a Cromwell/Crusader-era squadron-organization entry is worth
+adding to this project's vehicle-roster documentation.
+
+## Crew Quality / "Desert Rats" Elite-Unit Basis — Checked and Found
+## Inconclusive, Not a Clean Positive
+
+*Added 2026-09-12, design note E.162.* This pass was also asked to check,
+honestly, whether this book — a single-division history of one of the most
+famous British formations of the war — supports treating 7th Armoured
+Division (or "veteran British armoured formations" generally) as a distinct
+quality tier, the way this project's Airborne (`us_airborne_zaloga_1943.md`),
+Commando, and Waffen-SS threads have done for other nations. **It does not,
+at the evidence bar those threads established** (a documented
+selection/recruitment standard, a distinct training regimen, and/or a named
+contemporary or adversary assessment of combat value) — the book gives real
+color, but of a different, weaker kind:
+
+- **Positive-leaning:** the book's own introduction states the division's
+  "story... is one of almost continuous front-line service throughout six
+  years of war: a record unequalled by any similar British formation" — a
+  historian's direct claim of distinctiveness, though about *continuity of
+  service*, not about crew skill or selection. Separately, of the division's
+  first campaign (Operation Compass, Dec 1940-Feb 1941), the book credits
+  victory to "the comparative ease with which a well-led, highly-trained
+  mobile force had been able to defeat a badly-led, poorly-equipped army
+  with low morale" — a real, dated, positive quality assessment, but specific
+  to that one campaign against a specific (Italian) opponent, twenty-nine
+  months before this project's 1943 baseline, not a running characteristic
+  claimed for the whole war.
+- **Directly complicating:** the book itself documents that 7th Armoured
+  Division's component regiments were **not** a stable veteran cohort — units
+  were rotated in and out constantly ("Units were replaced as they became
+  depleted by casualties or were required elsewhere"), and at least one
+  named brigade is explicitly described mid-war as green: "22nd [Armoured]
+  Brigade... was entirely composed of as-yet inexperienced Yeomanry
+  (territorial cavalry) regiments" (1941 Crusader-battle period). This is
+  the opposite of the Airborne/SS/Guards pattern, where a named selection
+  and training process produced a durable quality distinction; here the
+  division's fame rests on its persistent unit lineage and combat record
+  under the "Desert Rats"/jerboa sign, not on any documented crew-selection
+  or training standard above a standard cavalry/RTR regiment's own.
+- No recruitment criteria, no distinct training pipeline, and no named
+  adversary or Allied-command assessment of 7th Armoured crew quality
+  specifically (as opposed to army-level or campaign-level judgments) were
+  found anywhere in the book's 51 pages.
+
+**Verdict: this is a genuinely open question, and this book does not close
+it in the affirmative.** It is real evidence that "7th Armoured" carried
+outsized *reputation* and an unusually long combat record, but not the kind
+of citable selection/training/adversary-assessment evidence this project's
+existing elite-tier rows are built from. **No roster row, quality tier, or
+rule mechanic is proposed from this pass.** If the coordinator wants to
+pursue a British veteran-armour tier despite this, the strongest available
+angle from this book alone would be the "well-led, highly-trained... defeat
+a badly-led... army" line for the 1940-41 period specifically, not a
+blanket 1943 claim — and a different, more specialist source (e.g., a
+dedicated Osprey Elite-series or Men-at-Arms title on British armoured-corps
+training/selection, parallel to the Airborne/Commando titles already used)
+would be needed to make a real case.

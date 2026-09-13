@@ -99,7 +99,7 @@ terrain and tactics.)*
 | epdf.pub_osprey-campaign-129-operation-barbarossa-1941-1-army-group-south.pdf | *Operation Barbarossa 1941 (1): Army Group South* | Robert Kirchubel | Osprey Campaign 129 | text, 95pp | unused | — |
 | epdf.pub_wake-island-1941-a-battle-to-make-the-gods-weep-osprey-campaign-144.pdf | *Wake Island 1941: A Battle to Make the Gods Weep* | Jim Moran | Osprey Campaign 144 | text, 97pp | unused | — |
 | epdf.pub_panzer-leader-pdf-5ecced7677a19.pdf | *Panzer Leader* | Heinz Guderian | memoir, first pub. 1952 | text, 272pp | used | design note E.161 — read in full for Ch.8-9 (1943); see `counters/toe/pak40_crew_quality_and_fielding_date_followup.md`, `germany_1943.md`, `stug3_panzer_tracts_1943.md`, `waffen_ss_michulec_1943.md`, `vehicle_top_armor_1943.md` |
-| vanguard-01-british-7th-armoured-division-1940-45_compress.pdf | *British 7th Armoured Division 1940-45* | John Sandars | Osprey Vanguard 1 | text (OCR), 51pp | unused | secondary: elite-special-units / armor-vehicles |
+| vanguard-01-british-7th-armoured-division-1940-45_compress.pdf | *British 7th Armoured Division 1940-45* | John Sandars | Osprey Vanguard 1 | text (OCR), 51pp | used | design note E.162 — read in full; third confirmed clean negative on Cromwell/Churchill armor geometry, British elite-tier evidence checked and found insufficient, new squadron/troop organizational table found; see `counters/toe/cromwell_churchill_fletcher_harley_1943.md` |
 | epdf.pub_armor-at-war-series-wwii-the-battle-of-the-bulge.pdf | *The Battle of the Bulge* | Steven Zaloga | Concord Armor at War 7045 | image, ~74pp | unused | cover independently verified |
 
 ## Known issues to act on
