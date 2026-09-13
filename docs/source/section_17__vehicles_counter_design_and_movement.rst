@@ -693,7 +693,7 @@ Casemate vehicles (TRAV 0) never receive a TRAVERSED marker; they have no separa
 
    **Example:** A Tiger I hit in its Front arc rolls against its printed Hit Location Table to determine MOB kill versus GUN kill; a hit on that same Tiger's Side arc, or a Casualty result against any vehicle without a printed table at all, still uses the owning player's own judgment call instead.
 
-**17.7.2**  The table gives one **Neither Threshold** and one **Mobility Threshold** per profile (Hull, Turret), printed on the player aid card — a single pair of numbers, valid at every range and for every attacker. The split is conditional on the shot having already hit the profile (the Gunnery Roll settled that), and where a confirmed hit lands on a plate is governed by the plate's own geometry, not by how hard the shot was to make — so range, attacker crew quality, and attacker identity all drop out. An infantry AT penetration (Panzerfaust, Rule 18.9) rolls against the same two thresholds.
+**17.7.2**  The table gives one **Neither Threshold** and one **Mobility Threshold** per profile (Hull, Turret), printed on the player aid card and listed in Appendix G.6 — a single pair of numbers, valid at every range and for every attacker. The split is conditional on the shot having already hit the profile (the Gunnery Roll settled that), and where a confirmed hit lands on a plate is governed by the plate's own geometry, not by how hard the shot was to make — so range, attacker crew quality, and attacker identity all drop out. An infantry AT penetration (Panzerfaust, Rule 18.9) rolls against the same two thresholds.
 
 .. container:: rule-guide
 

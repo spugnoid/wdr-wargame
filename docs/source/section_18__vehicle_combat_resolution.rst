@@ -67,7 +67,7 @@ Vehicle combat uses a dedicated resolution sequence that determines whether a ro
 --------------------
 
 
-**18.1a.1**  Every vehicle-mounted gun counter prints a Gunnery Table: a Miss Threshold and a Hull Threshold for each range band, already calculated for that vehicle's own Crew Quality (Rule 18.1a.2). No separate lookup, chart, or calculation is required at the table — read the row for the actual range.
+**18.1a.1**  Every vehicle-mounted gun counter prints a Gunnery Table: a Miss Threshold and a Hull Threshold for each range band, already calculated for that vehicle's own Crew Quality (Rule 18.1a.2). No separate lookup, chart, or calculation is required at the table — read the row for the actual range. Appendix G.4 lists the full set, every gun at every crew quality, for counter design and for scenarios fielding a gun behind an unusual crew.
 
 .. container:: rule-guide
 
@@ -224,13 +224,13 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
 
 *NOTE: condition (b) is a deliberate at-table simplification of the sourced eligibility ratio (shatter applies from T/D ≥ 0.8, i.e. calibre up to 1.25× AV). The simplified test exempts a narrow band of shots the source says could shatter (e.g. an 88mm gun against an 80mm plate), in exchange for a condition a player can check at a glance.*
 
-**18.2a.2**  If 18.2a.1's conditions hold, look up the target's AV on the Shatter Gap Table (player aid card) to find its Shatter Window — a lower and upper PEN value.
+**18.2a.2**  If 18.2a.1's conditions hold, look up the target's AV on the Shatter Gap Table (player aid card, and Appendix G.5) to find its Shatter Window — a lower and upper PEN value.
 
 .. container:: rule-guide
 
    **Why:** Derives the specific PEN range where shattering occurs from the target's own AV, since the phenomenon depends on the relationship between the round's energy and the plate's resistance — a window keyed to AV captures that relationship without a separate calculation at the table.
 
-   **Example:** A target with a given AV has a specific Shatter Window looked up from the player aid card — a different target AV produces a different window, since the shatter phenomenon shifts with the plate's own resistance.
+   **Example:** A target with a given AV has a specific Shatter Window looked up from the Shatter Gap Table — a different target AV produces a different window, since the shatter phenomenon shifts with the plate's own resistance.
 
 **18.2a.3**  If effective PEN falls within the Shatter Window (inclusive), the shot is forced to a Non-Penetrating Hit (Rule 18.4), regardless of what Rule 18.2 would otherwise indicate. Proceed directly to 18.4 — do not consult 18.2 or 18.3 for this shot.
 

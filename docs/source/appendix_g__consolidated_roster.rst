@@ -5,11 +5,13 @@ Appendix G — Consolidated Unit and Vehicle Roster
 and weapon teams in G.1, vehicle armour profiles in G.2, and gun penetration
 curves by range in G.3.*
 
-*Vehicle Gunnery Tables (Rule 18.1a) are not reproduced here. Each
-vehicle-mounted gun prints its own Miss and Hull Thresholds by range band
-on its counter (Rule 18.1a.1), calculated for that vehicle's Crew Quality
-— which is itself derived from the vehicle's printed Morale (Rules 17.3.6,
-18.1a.2), not chosen per scenario.*
+*Vehicle combat reference follows in G.4 to G.6: the Gunnery Tables behind
+every gun's printed Miss and Hull Thresholds, the Shatter Gap windows, and
+the Hit Location thresholds. A gun's thresholds are printed on its own
+counter for that vehicle's Crew Quality (Rule 18.1a.1); G.4 reproduces
+every quality so a scenario can field the same gun behind a better or
+worse crew. Crew Quality is derived from the vehicle's printed Morale
+(Rules 17.3.6, 18.1a.2), not chosen per scenario.*
 
 G.1  Infantry and Weapon Team Roster
 ----------------------------------------
@@ -1458,3 +1460,937 @@ the ammunition nature actually fired.*
      - 115.3
      - 108.0
      - 94.8
+
+G.4  Vehicle Gunnery Tables
+--------------------------------
+
+*Miss and Hull Thresholds for the Gunnery Roll (Rule 18.1a), by gun, crew
+quality and range band. Each cell reads* **miss / hull**\ *: a roll below the
+first number misses, a roll at or above the second strikes the Hull, and
+anything between strikes the Turret.* **T** *in place of a Hull Threshold
+means every hit at that range strikes the Turret;* **—** *means the band is
+an automatic miss (Rule 18.1a.1a). These bands are the Gunnery Table's own
+and are read independently of the PEN bands in G.3.*
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - **Gun**
+     - **Crew**
+     - **100m**
+     - **250m**
+     - **500m**
+     - **750m**
+     - **1000m**
+     - **1500m**
+     - **2000m**
+     - **2500m**
+   * - pak40_75l46_apcbc
+     - elite
+     - 10 / 12
+     - 10 / 14
+     - 10 / 15
+     - 13 / 16
+     - 16 / 18
+     - 22 / 22
+     - 26 / 26
+     - —
+   * - pak40_75l46_apcbc
+     - veteran
+     - 11 / 13
+     - 11 / 15
+     - 11 / 15
+     - 13 / 16
+     - 16 / 18
+     - 22 / 22
+     - 26 / 26
+     - —
+   * - pak40_75l46_apcbc
+     - regular
+     - 12 / 14
+     - 12 / 15
+     - 12 / 15
+     - 13 / 16
+     - 16 / 18
+     - 22 / 22
+     - 26 / 26
+     - —
+   * - pak40_75l46_apcbc
+     - green
+     - 14 / 15
+     - 14 / 16
+     - 14 / 16
+     - 14 / 16
+     - 16 / 18
+     - 22 / 22
+     - 26 / 26
+     - —
+   * - pak40_75l46_apcbc
+     - militia
+     - 15 / 17
+     - 15 / 18
+     - 15 / 18
+     - 15 / 18
+     - 16 / 18
+     - 22 / 22
+     - 26 / 26
+     - —
+   * - pak40_75l46_apcr
+     - elite
+     - 10 / 12
+     - 10 / 14
+     - 10 / 14
+     - 12 / 15
+     - 14 / 17
+     - 19 / 21
+     - 24 / 24
+     - —
+   * - pak40_75l46_apcr
+     - veteran
+     - 11 / 13
+     - 11 / 15
+     - 11 / 15
+     - 12 / 15
+     - 14 / 17
+     - 19 / 21
+     - 24 / 24
+     - —
+   * - pak40_75l46_apcr
+     - regular
+     - 12 / 14
+     - 12 / 15
+     - 12 / 15
+     - 12 / 15
+     - 14 / 17
+     - 19 / 21
+     - 24 / 24
+     - —
+   * - pak40_75l46_apcr
+     - green
+     - 14 / 15
+     - 14 / 16
+     - 14 / 16
+     - 14 / 16
+     - 14 / 17
+     - 19 / 21
+     - 24 / 24
+     - —
+   * - pak40_75l46_apcr
+     - militia
+     - 15 / 17
+     - 15 / 18
+     - 15 / 18
+     - 15 / 18
+     - 15 / 18
+     - 19 / 21
+     - 24 / 24
+     - —
+   * - panther_75l70_apcbc
+     - elite
+     - 10 / 12
+     - 10 / 14
+     - 10 / 14
+     - 12 / 15
+     - 15 / 17
+     - 20 / 21
+     - 24 / 24
+     - 26 / T
+   * - panther_75l70_apcbc
+     - veteran
+     - 11 / 13
+     - 11 / 15
+     - 11 / 15
+     - 12 / 15
+     - 15 / 17
+     - 20 / 21
+     - 24 / 24
+     - 26 / T
+   * - panther_75l70_apcbc
+     - regular
+     - 12 / 14
+     - 12 / 15
+     - 12 / 15
+     - 12 / 15
+     - 15 / 17
+     - 20 / 21
+     - 24 / 24
+     - 26 / T
+   * - panther_75l70_apcbc
+     - green
+     - 14 / 15
+     - 14 / 16
+     - 14 / 16
+     - 14 / 16
+     - 15 / 17
+     - 20 / 21
+     - 24 / 24
+     - 26 / T
+   * - panther_75l70_apcbc
+     - militia
+     - 15 / 17
+     - 15 / 18
+     - 15 / 18
+     - 15 / 18
+     - 15 / 18
+     - 20 / 21
+     - 24 / 24
+     - 26 / T
+   * - pziii_50l60_apcbc
+     - elite
+     - 10 / 12
+     - 10 / 14
+     - 10 / 15
+     - 13 / 16
+     - 17 / 18
+     - 22 / 23
+     - 26 / T
+     - —
+   * - pziii_50l60_apcbc
+     - veteran
+     - 11 / 13
+     - 11 / 15
+     - 11 / 15
+     - 13 / 16
+     - 17 / 18
+     - 22 / 23
+     - 26 / T
+     - —
+   * - pziii_50l60_apcbc
+     - regular
+     - 12 / 14
+     - 12 / 15
+     - 12 / 15
+     - 13 / 16
+     - 17 / 18
+     - 22 / 23
+     - 26 / T
+     - —
+   * - pziii_50l60_apcbc
+     - green
+     - 14 / 15
+     - 14 / 16
+     - 14 / 16
+     - 14 / 16
+     - 17 / 18
+     - 22 / 23
+     - 26 / T
+     - —
+   * - pziii_50l60_apcbc
+     - militia
+     - 15 / 17
+     - 15 / 18
+     - 15 / 18
+     - 15 / 18
+     - 17 / 18
+     - 22 / 23
+     - 26 / T
+     - —
+   * - pziv_75l48_apcbc
+     - elite
+     - 10 / 12
+     - 10 / 14
+     - 11 / 15
+     - 14 / 16
+     - 17 / 19
+     - 22 / 23
+     - 26 / 26
+     - —
+   * - pziv_75l48_apcbc
+     - veteran
+     - 11 / 13
+     - 11 / 15
+     - 11 / 15
+     - 14 / 16
+     - 17 / 19
+     - 22 / 23
+     - 26 / 26
+     - —
+   * - pziv_75l48_apcbc
+     - regular
+     - 12 / 14
+     - 12 / 15
+     - 12 / 15
+     - 14 / 16
+     - 17 / 19
+     - 22 / 23
+     - 26 / 26
+     - —
+   * - pziv_75l48_apcbc
+     - green
+     - 14 / 15
+     - 14 / 16
+     - 14 / 16
+     - 14 / 16
+     - 17 / 19
+     - 22 / 23
+     - 26 / 26
+     - —
+   * - pziv_75l48_apcbc
+     - militia
+     - 15 / 17
+     - 15 / 18
+     - 15 / 18
+     - 15 / 18
+     - 17 / 19
+     - 22 / 23
+     - 26 / 26
+     - —
+   * - seventeenpdr_76l55_apcbc
+     - elite
+     - 10 / 12
+     - 10 / 14
+     - 10 / 14
+     - 12 / 16
+     - 15 / 17
+     - 20 / 21
+     - 24 / 24
+     - 26 / T
+   * - seventeenpdr_76l55_apcbc
+     - veteran
+     - 11 / 13
+     - 11 / 15
+     - 11 / 15
+     - 12 / 16
+     - 15 / 17
+     - 20 / 21
+     - 24 / 24
+     - 26 / T
+   * - seventeenpdr_76l55_apcbc
+     - regular
+     - 12 / 14
+     - 12 / 15
+     - 12 / 15
+     - 12 / 16
+     - 15 / 17
+     - 20 / 21
+     - 24 / 24
+     - 26 / T
+   * - seventeenpdr_76l55_apcbc
+     - green
+     - 14 / 15
+     - 14 / 16
+     - 14 / 16
+     - 14 / 16
+     - 15 / 17
+     - 20 / 21
+     - 24 / 24
+     - 26 / T
+   * - seventeenpdr_76l55_apcbc
+     - militia
+     - 15 / 17
+     - 15 / 18
+     - 15 / 18
+     - 15 / 18
+     - 15 / 18
+     - 20 / 21
+     - 24 / 24
+     - 26 / T
+   * - seventeenpdr_76l55_apds
+     - elite
+     - 10 / 12
+     - 10 / 14
+     - 10 / 14
+     - 10 / 15
+     - 12 / 16
+     - 16 / 18
+     - 20 / 21
+     - 23 / 24
+   * - seventeenpdr_76l55_apds
+     - veteran
+     - 11 / 13
+     - 11 / 15
+     - 11 / 15
+     - 11 / 15
+     - 12 / 16
+     - 16 / 18
+     - 20 / 21
+     - 23 / 24
+   * - seventeenpdr_76l55_apds
+     - regular
+     - 12 / 14
+     - 12 / 15
+     - 12 / 15
+     - 12 / 15
+     - 12 / 16
+     - 16 / 18
+     - 20 / 21
+     - 23 / 24
+   * - seventeenpdr_76l55_apds
+     - green
+     - 14 / 15
+     - 14 / 16
+     - 14 / 16
+     - 14 / 16
+     - 14 / 16
+     - 16 / 18
+     - 20 / 21
+     - 23 / 24
+   * - seventeenpdr_76l55_apds
+     - militia
+     - 15 / 17
+     - 15 / 18
+     - 15 / 18
+     - 15 / 18
+     - 15 / 18
+     - 16 / 18
+     - 20 / 21
+     - 23 / 24
+   * - sherman75_m61_apc
+     - elite
+     - 10 / 12
+     - 10 / 14
+     - 13 / 16
+     - 17 / 18
+     - 20 / 21
+     - 26 / 26
+     - —
+     - —
+   * - sherman75_m61_apc
+     - veteran
+     - 11 / 13
+     - 11 / 15
+     - 13 / 16
+     - 17 / 18
+     - 20 / 21
+     - 26 / 26
+     - —
+     - —
+   * - sherman75_m61_apc
+     - regular
+     - 12 / 14
+     - 12 / 15
+     - 13 / 16
+     - 17 / 18
+     - 20 / 21
+     - 26 / 26
+     - —
+     - —
+   * - sherman75_m61_apc
+     - green
+     - 14 / 15
+     - 14 / 16
+     - 14 / 16
+     - 17 / 18
+     - 20 / 21
+     - 26 / 26
+     - —
+     - —
+   * - sherman75_m61_apc
+     - militia
+     - 15 / 17
+     - 15 / 18
+     - 15 / 18
+     - 17 / 18
+     - 20 / 21
+     - 26 / 26
+     - —
+     - —
+   * - sherman76_m62_apc
+     - elite
+     - 10 / 12
+     - 10 / 14
+     - 11 / 15
+     - 14 / 16
+     - 17 / 19
+     - 22 / 23
+     - 26 / T
+     - —
+   * - sherman76_m62_apc
+     - veteran
+     - 11 / 13
+     - 11 / 15
+     - 11 / 15
+     - 14 / 16
+     - 17 / 19
+     - 22 / 23
+     - 26 / T
+     - —
+   * - sherman76_m62_apc
+     - regular
+     - 12 / 14
+     - 12 / 15
+     - 12 / 15
+     - 14 / 16
+     - 17 / 19
+     - 22 / 23
+     - 26 / T
+     - —
+   * - sherman76_m62_apc
+     - green
+     - 14 / 15
+     - 14 / 16
+     - 14 / 16
+     - 14 / 16
+     - 17 / 19
+     - 22 / 23
+     - 26 / T
+     - —
+   * - sherman76_m62_apc
+     - militia
+     - 15 / 17
+     - 15 / 18
+     - 15 / 18
+     - 15 / 18
+     - 17 / 19
+     - 22 / 23
+     - 26 / T
+     - —
+   * - sixpdr_57l50_apcbc
+     - elite
+     - 10 / 12
+     - 10 / 14
+     - 10 / 14
+     - 13 / 16
+     - 16 / 18
+     - 21 / 22
+     - 25 / 26
+     - —
+   * - sixpdr_57l50_apcbc
+     - veteran
+     - 11 / 13
+     - 11 / 15
+     - 11 / 15
+     - 13 / 16
+     - 16 / 18
+     - 21 / 22
+     - 25 / 26
+     - —
+   * - sixpdr_57l50_apcbc
+     - regular
+     - 12 / 14
+     - 12 / 15
+     - 12 / 15
+     - 13 / 16
+     - 16 / 18
+     - 21 / 22
+     - 25 / 26
+     - —
+   * - sixpdr_57l50_apcbc
+     - green
+     - 14 / 15
+     - 14 / 16
+     - 14 / 16
+     - 14 / 16
+     - 16 / 18
+     - 21 / 22
+     - 25 / 26
+     - —
+   * - sixpdr_57l50_apcbc
+     - militia
+     - 15 / 17
+     - 15 / 18
+     - 15 / 18
+     - 15 / 18
+     - 16 / 18
+     - 21 / 22
+     - 25 / 26
+     - —
+   * - sixpdr_57l50_apds
+     - elite
+     - 10 / 12
+     - 10 / 14
+     - 10 / 14
+     - 10 / 15
+     - 13 / 16
+     - 17 / 18
+     - 21 / 22
+     - 24 / 24
+   * - sixpdr_57l50_apds
+     - veteran
+     - 11 / 13
+     - 11 / 15
+     - 11 / 15
+     - 11 / 15
+     - 13 / 16
+     - 17 / 18
+     - 21 / 22
+     - 24 / 24
+   * - sixpdr_57l50_apds
+     - regular
+     - 12 / 14
+     - 12 / 15
+     - 12 / 15
+     - 12 / 15
+     - 13 / 16
+     - 17 / 18
+     - 21 / 22
+     - 24 / 24
+   * - sixpdr_57l50_apds
+     - green
+     - 14 / 15
+     - 14 / 16
+     - 14 / 16
+     - 14 / 16
+     - 14 / 16
+     - 17 / 18
+     - 21 / 22
+     - 24 / 24
+   * - sixpdr_57l50_apds
+     - militia
+     - 15 / 17
+     - 15 / 18
+     - 15 / 18
+     - 15 / 18
+     - 15 / 18
+     - 17 / 18
+     - 21 / 22
+     - 24 / 24
+   * - t3485_85_d5t_apc
+     - elite
+     - 10 / 12
+     - 10 / 14
+     - 11 / 15
+     - 14 / 16
+     - 17 / 19
+     - 22 / 23
+     - 26 / T
+     - —
+   * - t3485_85_d5t_apc
+     - veteran
+     - 11 / 13
+     - 11 / 15
+     - 11 / 15
+     - 14 / 16
+     - 17 / 19
+     - 22 / 23
+     - 26 / T
+     - —
+   * - t3485_85_d5t_apc
+     - regular
+     - 12 / 14
+     - 12 / 15
+     - 12 / 15
+     - 14 / 16
+     - 17 / 19
+     - 22 / 23
+     - 26 / T
+     - —
+   * - t3485_85_d5t_apc
+     - green
+     - 14 / 15
+     - 14 / 16
+     - 14 / 16
+     - 14 / 16
+     - 17 / 19
+     - 22 / 23
+     - 26 / T
+     - —
+   * - t3485_85_d5t_apc
+     - militia
+     - 15 / 17
+     - 15 / 18
+     - 15 / 18
+     - 15 / 18
+     - 17 / 19
+     - 22 / 23
+     - 26 / T
+     - —
+   * - t34_76_f34_apc
+     - elite
+     - 10 / 12
+     - 10 / 14
+     - 12 / 15
+     - 16 / 18
+     - 19 / 20
+     - 25 / 25
+     - —
+     - —
+   * - t34_76_f34_apc
+     - veteran
+     - 11 / 13
+     - 11 / 15
+     - 12 / 15
+     - 16 / 18
+     - 19 / 20
+     - 25 / 25
+     - —
+     - —
+   * - t34_76_f34_apc
+     - regular
+     - 12 / 14
+     - 12 / 15
+     - 12 / 15
+     - 16 / 18
+     - 19 / 20
+     - 25 / 25
+     - —
+     - —
+   * - t34_76_f34_apc
+     - green
+     - 14 / 15
+     - 14 / 16
+     - 14 / 16
+     - 16 / 18
+     - 19 / 20
+     - 25 / 25
+     - —
+     - —
+   * - t34_76_f34_apc
+     - militia
+     - 15 / 17
+     - 15 / 18
+     - 15 / 18
+     - 16 / 18
+     - 19 / 20
+     - 25 / 25
+     - —
+     - —
+   * - t70_45l46_apbc
+     - elite
+     - 10 / 12
+     - 10 / 14
+     - 11 / 15
+     - 14 / 17
+     - 17 / 19
+     - 23 / 23
+     - —
+     - —
+   * - t70_45l46_apbc
+     - veteran
+     - 11 / 13
+     - 11 / 15
+     - 11 / 15
+     - 14 / 17
+     - 17 / 19
+     - 23 / 23
+     - —
+     - —
+   * - t70_45l46_apbc
+     - regular
+     - 12 / 14
+     - 12 / 15
+     - 12 / 15
+     - 14 / 17
+     - 17 / 19
+     - 23 / 23
+     - —
+     - —
+   * - t70_45l46_apbc
+     - green
+     - 14 / 15
+     - 14 / 16
+     - 14 / 16
+     - 14 / 17
+     - 17 / 19
+     - 23 / 23
+     - —
+     - —
+   * - t70_45l46_apbc
+     - militia
+     - 15 / 17
+     - 15 / 18
+     - 15 / 18
+     - 15 / 18
+     - 17 / 19
+     - 23 / 23
+     - —
+     - —
+   * - tiger_88_apcbc
+     - elite
+     - 10 / 12
+     - 10 / 14
+     - 10 / 15
+     - 13 / 16
+     - 16 / 18
+     - 21 / 22
+     - 25 / 26
+     - —
+   * - tiger_88_apcbc
+     - veteran
+     - 11 / 13
+     - 11 / 15
+     - 11 / 15
+     - 13 / 16
+     - 16 / 18
+     - 21 / 22
+     - 25 / 26
+     - —
+   * - tiger_88_apcbc
+     - regular
+     - 12 / 14
+     - 12 / 15
+     - 12 / 15
+     - 13 / 16
+     - 16 / 18
+     - 21 / 22
+     - 25 / 26
+     - —
+   * - tiger_88_apcbc
+     - green
+     - 14 / 15
+     - 14 / 16
+     - 14 / 16
+     - 14 / 16
+     - 16 / 18
+     - 21 / 22
+     - 25 / 26
+     - —
+   * - tiger_88_apcbc
+     - militia
+     - 15 / 17
+     - 15 / 18
+     - 15 / 18
+     - 15 / 18
+     - 16 / 18
+     - 21 / 22
+     - 25 / 26
+     - —
+   * - usm1_57l50_ap
+     - elite
+     - 10 / 12
+     - 10 / 14
+     - 10 / 14
+     - 13 / 16
+     - 16 / 18
+     - 21 / 22
+     - 25 / 25
+     - —
+   * - usm1_57l50_ap
+     - veteran
+     - 11 / 13
+     - 11 / 15
+     - 11 / 15
+     - 13 / 16
+     - 16 / 18
+     - 21 / 22
+     - 25 / 25
+     - —
+   * - usm1_57l50_ap
+     - regular
+     - 12 / 14
+     - 12 / 15
+     - 12 / 15
+     - 13 / 16
+     - 16 / 18
+     - 21 / 22
+     - 25 / 25
+     - —
+   * - usm1_57l50_ap
+     - green
+     - 14 / 15
+     - 14 / 16
+     - 14 / 16
+     - 14 / 16
+     - 16 / 18
+     - 21 / 22
+     - 25 / 25
+     - —
+   * - usm1_57l50_ap
+     - militia
+     - 15 / 17
+     - 15 / 18
+     - 15 / 18
+     - 15 / 18
+     - 16 / 18
+     - 21 / 22
+     - 25 / 25
+     - —
+
+G.5  Shatter Gap Table
+---------------------------
+
+*Used only when the Shatter Gap optional module is in play (Rule 18.2a).
+Look up the target's AV in the profile and arc being hit; if effective PEN
+falls inside that row's window, inclusive, the shot is forced to a
+Non-Penetrating Hit (Rule 18.2a.3). Applies to Capped, Uncapped AP and
+Soviet APBC only, and only where the gun's calibre does not exceed the
+target's AV (Rule 18.2a.1).*
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - **Target AV (mm)**
+     - **Shatter Window — lower PEN**
+     - **Shatter Window — upper PEN**
+   * - 30.0
+     - 31.8
+     - 36.6
+   * - 40.0
+     - 42.4
+     - 48.8
+   * - 50.0
+     - 53.0
+     - 61.0
+   * - 60.0
+     - 63.6
+     - 73.2
+   * - 70.0
+     - 74.2
+     - 85.4
+   * - 80.0
+     - 84.8
+     - 97.6
+   * - 90.0
+     - 95.4
+     - 109.8
+   * - 100.0
+     - 106.0
+     - 122.0
+   * - 110.0
+     - 116.6
+     - 134.2
+   * - 120.0
+     - 127.2
+     - 146.4
+   * - 130.0
+     - 137.8
+     - 158.6
+   * - 140.0
+     - 148.4
+     - 170.8
+   * - 150.0
+     - 159.0
+     - 183.0
+   * - 160.0
+     - 169.6
+     - 195.2
+   * - 170.0
+     - 180.2
+     - 207.4
+   * - 180.0
+     - 190.8
+     - 219.6
+   * - 190.0
+     - 201.4
+     - 231.8
+   * - 200.0
+     - 212.0
+     - 244.0
+
+G.6  Hit Location Thresholds
+---------------------------------
+
+*Used only by vehicles with a printed Hit Location Table, and only for
+Front-arc hits (Rules 17.7.1, 18.6a). One pair of numbers per profile,
+valid at every range and against every attacker. Roll below the Neither
+Threshold for Neither (a Casualty downgrades to Pinned, Rule 18.6a.2), at
+or above the Mobility Threshold for a MOB kill, and between the two for a
+GUN kill. A profile with no Mobility Threshold can never produce a MOB
+kill (Rule 17.7.2).*
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - **Vehicle**
+     - **Profile**
+     - **Neither Threshold**
+     - **Mobility Threshold**
+   * - Tiger I Ausf E
+     - Hull
+     - 18
+     - 18
+   * - Tiger I Ausf E
+     - Turret
+     - 14
+     - —
+   * - Sherman M4A1 (75mm)
+     - Hull
+     - 18
+     - 18
+   * - Sherman M4A1 (75mm)
+     - Turret
+     - 15
+     - —
