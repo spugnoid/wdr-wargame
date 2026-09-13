@@ -1107,6 +1107,12 @@ banded rows, no rounding  ..........  8.4.3
 
 **Resolution Strip**  ..........  8.4, App.A
 
+single-weapon HE and area attacks do not use it  ..........  8.4.4
+
+mortar and off-map artillery exempt  ..........  8.4.4, 16.7.6
+
+flamethrower exempt  ..........  8.4.4, 21.5.2a
+
 full table  ..........  App.A
 
 logarithmic compression  ..........  8.4.2

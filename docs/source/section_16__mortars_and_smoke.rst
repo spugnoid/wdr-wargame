@@ -356,7 +356,7 @@ All mortar counters use M2 F1 (mobile) or M0 F2 (deployed), per Rule 6.6.2. Mort
 
    **Why:** Reuses the same core fire-resolution machinery (Section 8) for mortar blast rather than inventing a separate combat system, while flagging that several specific modifications (Rules 16.7.3-16.7.6) apply on top — indirect fire is a variant of the same fire-combat model, not a wholly different one.
 
-   **Example:** A unit caught in a mortar's blast area resolves its fire combat with the same dice-and-roll procedure as ordinary direct fire (Section 8), just using the mortar's rFP and the specific exceptions listed in the rules that follow.
+   **Example:** A unit caught in a mortar's blast area resolves its fire combat with the same dice-and-roll procedure as ordinary direct fire (Section 8), just using the mortar's rFP and the specific exceptions listed in the rules that follow — no falloff (16.7.5), no grouping, and no Resolution Strip (16.7.6).
 
 **16.7.3**  Cover modifiers apply — units in cover are protected from indirect fire.
 
@@ -382,7 +382,7 @@ All mortar counters use M2 F1 (mobile) or M0 F2 (deployed), per Rule 6.6.2. Mort
 
    **Example:** A mortar's rFP against a target 10 hexes away is identical to its rFP against a target 40 hexes away — only the accuracy roll and dispersion outcome differ with range, not the blast's underlying lethality.
 
-**16.7.6**  Mortars use a single rFP value with no ⬡h -f notation. They do not participate in fire group grouping with direct fire weapons.
+**16.7.6**  Mortars use a single rFP value with no ⬡h -f notation. They do not participate in fire group grouping with direct fire weapons, and they do not use the Resolution Strip: a mortar's eFP is its FPr directly (Rule 8.4.4). The same holds for off-map artillery (Rule 16.11), whose scenario-printed rFP can exceed the strip's ceiling of 12 and is meant to.
 
 .. container:: rule-guide
 

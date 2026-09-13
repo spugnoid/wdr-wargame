@@ -241,6 +241,14 @@ The full procedure for any fire combat action:
      - 12 (maximum)
 
 
+**8.4.4**  Attacks that do not use the strip. A **single-weapon area or high-explosive attack** takes its eFP directly as its FPr, with no strip lookup and no ceiling of 12. This covers mortar and off-map artillery blast (Rules 16.7.2, 16.11.5), flamethrower fire (Rule 21.5), and the burning-hex attack, which states its FPr outright (Rule 21.5.5). Everything else — all small-arms and machine-gun fire, whether one unit fires or several — uses the strip.
+
+.. container:: rule-guide
+
+   **Why:** The strip models one specific thing: the diminishing return on piling more rifles into the same target, where the twentieth man firing adds far less than the second. A single mortar bomb, artillery shell, or jet of flame is not volume of fire and has no such curve — its effect comes from one detonation, and halving a heavy shell's value because the number happens to be large would misrepresent the weapon rather than compress it. This is also why an artillery mission can exceed FPr 12 where no amount of massed small arms can: overwhelming a defended position is exactly what it is for.
+
+   **Example:** A heavy off-map artillery mission printed at rFP 18 in the scenario parameters resolves at FPr 18, not the FPr 10 the strip would give. Three squads summing eFP 18 of rifle and machine-gun fire resolve at FPr 10, because that is twenty-odd men shooting rather than one shell landing.
+
 8.5  Dice and Roll Procedure
 ----------------------------
 

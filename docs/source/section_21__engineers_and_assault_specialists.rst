@@ -339,6 +339,8 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
      - Three flame attacks per scenario
 
 
+**21.5.2a**  A flamethrower attack does not use the Resolution Strip — its eFP is its FPr directly (Rule 8.4.4). Flame is a single area effect, not volume of fire.
+
 **21.5.3**  Cover modifier: halved for flamethrower attacks (round down). Flame flows around and into cover rather than being blocked by it. Same principle as the grenade phase cover reduction in close assault.
 
 .. container:: rule-guide
