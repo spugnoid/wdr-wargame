@@ -259,7 +259,7 @@ Vehicle counters display the following fields:
 ------------------------
 
 
-**17.3.1**  Penetration values (PEN) are printed as 0°-equivalent millimetres at a small set of range bands (typically 0/250/500/750/1000/1500/2000m), not as a single value with falloff notation. Read the row for the actual range to target, using the next lower printed band if the exact range falls between two listed bands — a shot at less than 250m reads the 0m (point-blank) row.
+**17.3.1**  Penetration values (PEN) are printed as 0°-equivalent millimetres at a small set of range bands (typically 0/250/500/750/1000/1500/2000m), not as a single value with falloff notation. Read the row for the actual range to target, using the next lower printed band if the exact range falls between two listed bands — a shot at less than 250m reads the 0m (point-blank) row. **Converting hexes to metres:** one hex is 40 yards, so range in hexes × 37 gives metres (Rule 2.1.1). Appendix G.3 prints the hex range for each band beside it, so no conversion is needed at the table.
 
 .. container:: rule-guide
 

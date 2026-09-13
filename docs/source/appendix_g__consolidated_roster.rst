@@ -1258,16 +1258,26 @@ the ammunition nature actually fired.*
 
    * - **Gun**
      - **Confidence**
-     - **0m**
-     - **250m**
-     - **500m**
-     - **750m**
-     - **1000m**
-     - **1250m**
-     - **1500m**
-     - **1750m**
-     - **2000m**
-     - **2500m**
+     - **0m
+       (hex 1-6)**
+     - **250m
+       (hex 7-13)**
+     - **500m
+       (hex 14-20)**
+     - **750m
+       (hex 21-27)**
+     - **1000m
+       (hex 28-34)**
+     - **1250m
+       (hex 35-41)**
+     - **1500m
+       (hex 42-47)**
+     - **1750m
+       (hex 48-54)**
+     - **2000m
+       (hex 55-68)**
+     - **2500m
+       (hex 69+)**
    * - pziv_75l48_apcbc
      - fitted
      - 137.8
@@ -1467,10 +1477,13 @@ G.4  Vehicle Gunnery Tables
 *Miss and Hull Thresholds for the Gunnery Roll (Rule 18.1a), by gun, crew
 quality and range band. Each cell reads* **miss / hull**\ *: a roll below the
 first number misses, a roll at or above the second strikes the Hull, and
-anything between strikes the Turret.* **T** *in place of a Hull Threshold
-means every hit at that range strikes the Turret;* **—** *means the band is
-an automatic miss (Rule 18.1a.1a). These bands are the Gunnery Table's own
-and are read independently of the PEN bands in G.3.*
+anything between strikes the Turret. Three cells are degenerate:* **T** *in
+place of a Hull Threshold means every hit at that range strikes the Turret;*
+**H** *means the two thresholds coincide, so the Turret band is empty and
+every hit strikes the Hull; and* **—** *means the band is an automatic miss
+(Rule 18.1a.1a). Each band's hex range is printed beneath it, so no
+conversion from metres is needed at the table; these bands are the Gunnery
+Table's own and are read independently of the PEN bands in G.3.*
 
 .. list-table::
    :header-rows: 1
@@ -1479,13 +1492,21 @@ and are read independently of the PEN bands in G.3.*
    * - **Gun**
      - **Crew**
      - **100m**
+       (hex 3-6)
      - **250m**
+       (hex 7-13)
      - **500m**
+       (hex 14-20)
      - **750m**
+       (hex 21-27)
      - **1000m**
+       (hex 28-41)
      - **1500m**
+       (hex 42-54)
      - **2000m**
+       (hex 55-68)
      - **2500m**
+       (hex 69+)
    * - pak40_75l46_apcbc
      - elite
      - 10 / 12
@@ -1493,8 +1514,8 @@ and are read independently of the PEN bands in G.3.*
      - 10 / 15
      - 13 / 16
      - 16 / 18
-     - 22 / 22
-     - 26 / 26
+     - 22 / H
+     - 26 / H
      - —
    * - pak40_75l46_apcbc
      - veteran
@@ -1503,8 +1524,8 @@ and are read independently of the PEN bands in G.3.*
      - 11 / 15
      - 13 / 16
      - 16 / 18
-     - 22 / 22
-     - 26 / 26
+     - 22 / H
+     - 26 / H
      - —
    * - pak40_75l46_apcbc
      - regular
@@ -1513,8 +1534,8 @@ and are read independently of the PEN bands in G.3.*
      - 12 / 15
      - 13 / 16
      - 16 / 18
-     - 22 / 22
-     - 26 / 26
+     - 22 / H
+     - 26 / H
      - —
    * - pak40_75l46_apcbc
      - green
@@ -1523,8 +1544,8 @@ and are read independently of the PEN bands in G.3.*
      - 14 / 16
      - 14 / 16
      - 16 / 18
-     - 22 / 22
-     - 26 / 26
+     - 22 / H
+     - 26 / H
      - —
    * - pak40_75l46_apcbc
      - militia
@@ -1533,8 +1554,8 @@ and are read independently of the PEN bands in G.3.*
      - 15 / 18
      - 15 / 18
      - 16 / 18
-     - 22 / 22
-     - 26 / 26
+     - 22 / H
+     - 26 / H
      - —
    * - pak40_75l46_apcr
      - elite
@@ -1544,7 +1565,7 @@ and are read independently of the PEN bands in G.3.*
      - 12 / 15
      - 14 / 17
      - 19 / 21
-     - 24 / 24
+     - 24 / H
      - —
    * - pak40_75l46_apcr
      - veteran
@@ -1554,7 +1575,7 @@ and are read independently of the PEN bands in G.3.*
      - 12 / 15
      - 14 / 17
      - 19 / 21
-     - 24 / 24
+     - 24 / H
      - —
    * - pak40_75l46_apcr
      - regular
@@ -1564,7 +1585,7 @@ and are read independently of the PEN bands in G.3.*
      - 12 / 15
      - 14 / 17
      - 19 / 21
-     - 24 / 24
+     - 24 / H
      - —
    * - pak40_75l46_apcr
      - green
@@ -1574,7 +1595,7 @@ and are read independently of the PEN bands in G.3.*
      - 14 / 16
      - 14 / 17
      - 19 / 21
-     - 24 / 24
+     - 24 / H
      - —
    * - pak40_75l46_apcr
      - militia
@@ -1584,7 +1605,7 @@ and are read independently of the PEN bands in G.3.*
      - 15 / 18
      - 15 / 18
      - 19 / 21
-     - 24 / 24
+     - 24 / H
      - —
    * - panther_75l70_apcbc
      - elite
@@ -1594,7 +1615,7 @@ and are read independently of the PEN bands in G.3.*
      - 12 / 15
      - 15 / 17
      - 20 / 21
-     - 24 / 24
+     - 24 / H
      - 26 / T
    * - panther_75l70_apcbc
      - veteran
@@ -1604,7 +1625,7 @@ and are read independently of the PEN bands in G.3.*
      - 12 / 15
      - 15 / 17
      - 20 / 21
-     - 24 / 24
+     - 24 / H
      - 26 / T
    * - panther_75l70_apcbc
      - regular
@@ -1614,7 +1635,7 @@ and are read independently of the PEN bands in G.3.*
      - 12 / 15
      - 15 / 17
      - 20 / 21
-     - 24 / 24
+     - 24 / H
      - 26 / T
    * - panther_75l70_apcbc
      - green
@@ -1624,7 +1645,7 @@ and are read independently of the PEN bands in G.3.*
      - 14 / 16
      - 15 / 17
      - 20 / 21
-     - 24 / 24
+     - 24 / H
      - 26 / T
    * - panther_75l70_apcbc
      - militia
@@ -1634,7 +1655,7 @@ and are read independently of the PEN bands in G.3.*
      - 15 / 18
      - 15 / 18
      - 20 / 21
-     - 24 / 24
+     - 24 / H
      - 26 / T
    * - pziii_50l60_apcbc
      - elite
@@ -1694,7 +1715,7 @@ and are read independently of the PEN bands in G.3.*
      - 14 / 16
      - 17 / 19
      - 22 / 23
-     - 26 / 26
+     - 26 / H
      - —
    * - pziv_75l48_apcbc
      - veteran
@@ -1704,7 +1725,7 @@ and are read independently of the PEN bands in G.3.*
      - 14 / 16
      - 17 / 19
      - 22 / 23
-     - 26 / 26
+     - 26 / H
      - —
    * - pziv_75l48_apcbc
      - regular
@@ -1714,7 +1735,7 @@ and are read independently of the PEN bands in G.3.*
      - 14 / 16
      - 17 / 19
      - 22 / 23
-     - 26 / 26
+     - 26 / H
      - —
    * - pziv_75l48_apcbc
      - green
@@ -1724,7 +1745,7 @@ and are read independently of the PEN bands in G.3.*
      - 14 / 16
      - 17 / 19
      - 22 / 23
-     - 26 / 26
+     - 26 / H
      - —
    * - pziv_75l48_apcbc
      - militia
@@ -1734,7 +1755,7 @@ and are read independently of the PEN bands in G.3.*
      - 15 / 18
      - 17 / 19
      - 22 / 23
-     - 26 / 26
+     - 26 / H
      - —
    * - seventeenpdr_76l55_apcbc
      - elite
@@ -1744,7 +1765,7 @@ and are read independently of the PEN bands in G.3.*
      - 12 / 16
      - 15 / 17
      - 20 / 21
-     - 24 / 24
+     - 24 / H
      - 26 / T
    * - seventeenpdr_76l55_apcbc
      - veteran
@@ -1754,7 +1775,7 @@ and are read independently of the PEN bands in G.3.*
      - 12 / 16
      - 15 / 17
      - 20 / 21
-     - 24 / 24
+     - 24 / H
      - 26 / T
    * - seventeenpdr_76l55_apcbc
      - regular
@@ -1764,7 +1785,7 @@ and are read independently of the PEN bands in G.3.*
      - 12 / 16
      - 15 / 17
      - 20 / 21
-     - 24 / 24
+     - 24 / H
      - 26 / T
    * - seventeenpdr_76l55_apcbc
      - green
@@ -1774,7 +1795,7 @@ and are read independently of the PEN bands in G.3.*
      - 14 / 16
      - 15 / 17
      - 20 / 21
-     - 24 / 24
+     - 24 / H
      - 26 / T
    * - seventeenpdr_76l55_apcbc
      - militia
@@ -1784,7 +1805,7 @@ and are read independently of the PEN bands in G.3.*
      - 15 / 18
      - 15 / 18
      - 20 / 21
-     - 24 / 24
+     - 24 / H
      - 26 / T
    * - seventeenpdr_76l55_apds
      - elite
@@ -1843,7 +1864,7 @@ and are read independently of the PEN bands in G.3.*
      - 13 / 16
      - 17 / 18
      - 20 / 21
-     - 26 / 26
+     - 26 / H
      - —
      - —
    * - sherman75_m61_apc
@@ -1853,7 +1874,7 @@ and are read independently of the PEN bands in G.3.*
      - 13 / 16
      - 17 / 18
      - 20 / 21
-     - 26 / 26
+     - 26 / H
      - —
      - —
    * - sherman75_m61_apc
@@ -1863,7 +1884,7 @@ and are read independently of the PEN bands in G.3.*
      - 13 / 16
      - 17 / 18
      - 20 / 21
-     - 26 / 26
+     - 26 / H
      - —
      - —
    * - sherman75_m61_apc
@@ -1873,7 +1894,7 @@ and are read independently of the PEN bands in G.3.*
      - 14 / 16
      - 17 / 18
      - 20 / 21
-     - 26 / 26
+     - 26 / H
      - —
      - —
    * - sherman75_m61_apc
@@ -1883,7 +1904,7 @@ and are read independently of the PEN bands in G.3.*
      - 15 / 18
      - 17 / 18
      - 20 / 21
-     - 26 / 26
+     - 26 / H
      - —
      - —
    * - sherman76_m62_apc
@@ -1995,7 +2016,7 @@ and are read independently of the PEN bands in G.3.*
      - 13 / 16
      - 17 / 18
      - 21 / 22
-     - 24 / 24
+     - 24 / H
    * - sixpdr_57l50_apds
      - veteran
      - 11 / 13
@@ -2005,7 +2026,7 @@ and are read independently of the PEN bands in G.3.*
      - 13 / 16
      - 17 / 18
      - 21 / 22
-     - 24 / 24
+     - 24 / H
    * - sixpdr_57l50_apds
      - regular
      - 12 / 14
@@ -2015,7 +2036,7 @@ and are read independently of the PEN bands in G.3.*
      - 13 / 16
      - 17 / 18
      - 21 / 22
-     - 24 / 24
+     - 24 / H
    * - sixpdr_57l50_apds
      - green
      - 14 / 15
@@ -2025,7 +2046,7 @@ and are read independently of the PEN bands in G.3.*
      - 14 / 16
      - 17 / 18
      - 21 / 22
-     - 24 / 24
+     - 24 / H
    * - sixpdr_57l50_apds
      - militia
      - 15 / 17
@@ -2035,7 +2056,7 @@ and are read independently of the PEN bands in G.3.*
      - 15 / 18
      - 17 / 18
      - 21 / 22
-     - 24 / 24
+     - 24 / H
    * - t3485_85_d5t_apc
      - elite
      - 10 / 12
@@ -2093,7 +2114,7 @@ and are read independently of the PEN bands in G.3.*
      - 12 / 15
      - 16 / 18
      - 19 / 20
-     - 25 / 25
+     - 25 / H
      - —
      - —
    * - t34_76_f34_apc
@@ -2103,7 +2124,7 @@ and are read independently of the PEN bands in G.3.*
      - 12 / 15
      - 16 / 18
      - 19 / 20
-     - 25 / 25
+     - 25 / H
      - —
      - —
    * - t34_76_f34_apc
@@ -2113,7 +2134,7 @@ and are read independently of the PEN bands in G.3.*
      - 12 / 15
      - 16 / 18
      - 19 / 20
-     - 25 / 25
+     - 25 / H
      - —
      - —
    * - t34_76_f34_apc
@@ -2123,7 +2144,7 @@ and are read independently of the PEN bands in G.3.*
      - 14 / 16
      - 16 / 18
      - 19 / 20
-     - 25 / 25
+     - 25 / H
      - —
      - —
    * - t34_76_f34_apc
@@ -2133,7 +2154,7 @@ and are read independently of the PEN bands in G.3.*
      - 15 / 18
      - 16 / 18
      - 19 / 20
-     - 25 / 25
+     - 25 / H
      - —
      - —
    * - t70_45l46_apbc
@@ -2143,7 +2164,7 @@ and are read independently of the PEN bands in G.3.*
      - 11 / 15
      - 14 / 17
      - 17 / 19
-     - 23 / 23
+     - 23 / H
      - —
      - —
    * - t70_45l46_apbc
@@ -2153,7 +2174,7 @@ and are read independently of the PEN bands in G.3.*
      - 11 / 15
      - 14 / 17
      - 17 / 19
-     - 23 / 23
+     - 23 / H
      - —
      - —
    * - t70_45l46_apbc
@@ -2163,7 +2184,7 @@ and are read independently of the PEN bands in G.3.*
      - 12 / 15
      - 14 / 17
      - 17 / 19
-     - 23 / 23
+     - 23 / H
      - —
      - —
    * - t70_45l46_apbc
@@ -2173,7 +2194,7 @@ and are read independently of the PEN bands in G.3.*
      - 14 / 16
      - 14 / 17
      - 17 / 19
-     - 23 / 23
+     - 23 / H
      - —
      - —
    * - t70_45l46_apbc
@@ -2183,7 +2204,7 @@ and are read independently of the PEN bands in G.3.*
      - 15 / 18
      - 15 / 18
      - 17 / 19
-     - 23 / 23
+     - 23 / H
      - —
      - —
    * - tiger_88_apcbc
@@ -2244,7 +2265,7 @@ and are read independently of the PEN bands in G.3.*
      - 13 / 16
      - 16 / 18
      - 21 / 22
-     - 25 / 25
+     - 25 / H
      - —
    * - usm1_57l50_ap
      - veteran
@@ -2254,7 +2275,7 @@ and are read independently of the PEN bands in G.3.*
      - 13 / 16
      - 16 / 18
      - 21 / 22
-     - 25 / 25
+     - 25 / H
      - —
    * - usm1_57l50_ap
      - regular
@@ -2264,7 +2285,7 @@ and are read independently of the PEN bands in G.3.*
      - 13 / 16
      - 16 / 18
      - 21 / 22
-     - 25 / 25
+     - 25 / H
      - —
    * - usm1_57l50_ap
      - green
@@ -2274,7 +2295,7 @@ and are read independently of the PEN bands in G.3.*
      - 14 / 16
      - 16 / 18
      - 21 / 22
-     - 25 / 25
+     - 25 / H
      - —
    * - usm1_57l50_ap
      - militia
@@ -2284,7 +2305,7 @@ and are read independently of the PEN bands in G.3.*
      - 15 / 18
      - 16 / 18
      - 21 / 22
-     - 25 / 25
+     - 25 / H
      - —
 
 G.5  Shatter Gap Table

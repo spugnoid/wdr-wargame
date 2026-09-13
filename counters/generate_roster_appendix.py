@@ -110,7 +110,8 @@ def render_vehicle_armour_table(rows: list[dict[str, str]]) -> str:
 
 
 def render_gun_curves_table(rows: list[dict[str, str]]) -> str:
-    header_ranges = ["0m", "250m", "500m", "750m", "1000m", "1250m", "1500m", "1750m", "2000m", "2500m"]
+    header_bands = [0, 250, 500, 750, 1000, 1250, 1500, 1750, 2000, 2500]
+    header_ranges = [f"{b}m\n       (hex {_hex_span(header_bands, i)})" for i, b in enumerate(header_bands)]
     lines = [
         ".. list-table::",
         "   :header-rows: 1",
@@ -127,6 +128,18 @@ def render_gun_curves_table(rows: list[dict[str, str]]) -> str:
     return "\n".join(lines)
 
 
+M_PER_HEX = 40 * 0.9144  # Rule 2.1.1: one hex is 40 yards
+
+
+def _hex_span(bands: list[int], i: int) -> str:
+    """Hex range covered by band i, so a player never converts metres at the table."""
+    import math
+    lo = 1 if bands[i] == 0 else max(1, math.ceil(bands[i] / M_PER_HEX))
+    if i + 1 < len(bands):
+        return f"{lo}-{math.ceil(bands[i+1] / M_PER_HEX) - 1}"
+    return f"{lo}+"
+
+
 GUNNERY_BANDS = ["100", "250", "500", "750", "1000", "1500", "2000", "2500"]
 CREW_ORDER = ["elite", "veteran", "regular", "green", "militia"]
 
@@ -137,7 +150,11 @@ def _gunnery_cell(miss: str, hull: str) -> str:
     miss, hull = (miss or "").strip(), (hull or "").strip()
     if not miss:
         return "—"
-    return f"{miss} / {hull}" if hull else f"{miss} / T"
+    if not hull:
+        return f"{miss} / T"
+    if miss == hull:
+        return f"{miss} / H"      # turret band empty: every hit strikes the Hull
+    return f"{miss} / {hull}"
 
 
 def render_gunnery_tables(rows: list[dict[str, str]]) -> str:
@@ -152,7 +169,8 @@ def render_gunnery_tables(rows: list[dict[str, str]]) -> str:
         "",
         "   * - **Gun**",
         "     - **Crew**",
-    ] + [f"     - **{b}m**" for b in GUNNERY_BANDS]
+    ] + [f"     - **{b}m**\n       (hex {_hex_span([int(x) for x in GUNNERY_BANDS], i)})"
+         for i, b in enumerate(GUNNERY_BANDS)]
     for gun in sorted({g for g, _ in by_key}):
         for crew in CREW_ORDER:
             if (gun, crew) not in by_key:
@@ -246,10 +264,13 @@ G.4  Vehicle Gunnery Tables
 *Miss and Hull Thresholds for the Gunnery Roll (Rule 18.1a), by gun, crew
 quality and range band. Each cell reads* **miss / hull**\\ *: a roll below the
 first number misses, a roll at or above the second strikes the Hull, and
-anything between strikes the Turret.* **T** *in place of a Hull Threshold
-means every hit at that range strikes the Turret;* **—** *means the band is
-an automatic miss (Rule 18.1a.1a). These bands are the Gunnery Table's own
-and are read independently of the PEN bands in G.3.*
+anything between strikes the Turret. Three cells are degenerate:* **T** *in
+place of a Hull Threshold means every hit at that range strikes the Turret;*
+**H** *means the two thresholds coincide, so the Turret band is empty and
+every hit strikes the Hull; and* **—** *means the band is an automatic miss
+(Rule 18.1a.1a). Each band's hex range is printed beneath it, so no
+conversion from metres is needed at the table; these bands are the Gunnery
+Table's own and are read independently of the PEN bands in G.3.*
 
 {gunnery_table}
 

@@ -116,7 +116,7 @@ Vehicle combat uses a dedicated resolution sequence that determines whether a ro
 
    **Example:** A vehicle counter printed with Morale 5 has Regular Crew Quality baked into its Gunnery Table forever — nothing that happens to the vehicle during play changes which crew-quality tier its printed thresholds reflect.
 
-**18.1a.3**  Roll 1d6+1d8+1d12 (the same combination used for every other fire attack, Rule 8.5.1) and compare to the Miss Threshold and Hull Threshold for the actual range to target, using the next lower printed range band if the exact range falls between two listed bands.
+**18.1a.3**  Roll 1d6+1d8+1d12 (the same combination used for every other fire attack, Rule 8.5.1) and compare to the Miss Threshold and Hull Threshold for the actual range to target, using the next lower printed range band if the exact range falls between two listed bands. A range shorter than the shortest printed band reads that shortest band — the Gunnery Table's own bands begin at 100m, so ranges of 1 or 2 hexes read the 100m row. **Converting hexes to metres:** one hex is 40 yards, so range in hexes × 37 gives metres (Rule 2.1.1); Appendix G.4 prints the hex range for each band beside it, so no conversion is needed at the table.
 
 .. container:: rule-guide
 
