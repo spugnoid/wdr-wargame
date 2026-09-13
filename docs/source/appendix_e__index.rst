@@ -205,6 +205,14 @@ extended to any hex under Rain/Mud  ..........  24.2.2
 
 recovery (activation + 1d6 vs 4, tow bonus)  ..........  17.6.2a
 
+**Base of fire**  ..........  8.14.1
+
+deployed sustained-fire weapons, F# above 1  ..........  8.14.1, 6.6.2
+
+**Beaten zone**  ..........  8.14.2
+
+one hex beyond the target, same roll at half FPr  ..........  8.14.2
+
 **Blind markers**  ..........  14.3
 
 dummy markers  ..........  14.4
@@ -413,6 +421,12 @@ Suppressed (crew shock)  ..........  18.7
 
 **Dead ground — see Reverse slope**  ..........  4.4.4, 4.4a.4
 
+**Dead space**  ..........  8.14.4
+
+crest blind zone and terrain masking  ..........  4.4a.4, 8.14.4
+
+reached only by plunging fire or indirect HE  ..........  8.14.3, 8.4.4
+
 **Defence value**  ..........  1.4
 
 floor of 1  ..........  3.2.5
@@ -533,6 +547,14 @@ representative counters 1943  ..........  21.9
 
 covers used capability icon or weapon band  ..........  18.9.1
 
+**Enfilade fire**  ..........  8.14.5
+
+lines of fire 3 hexsides apart; cover halved  ..........  8.14.5
+
+oblique (2 apart): cover -1  ..........  8.14.5
+
+frontal (0-1 apart): no effect  ..........  8.14.5
+
 **Experience Modifier (EM)**  ..........  1.3, 13.5.2
 
 promotion via CI-free streak  ..........  13.5.2a
@@ -562,6 +584,12 @@ pivot costs  ..........  17.5.4
 overview  ..........  8.1
 
 resolution sequence  ..........  8.1
+
+**Final Protective Fire (FPF)**  ..........  8.14.6
+
+full FPr reaction down a pre-registered lane  ..........  8.14.6, 8.13.1
+
+expends the weapon's whole remaining F#  ..........  8.14.6
 
 **Fire group**  ..........  1.3, 8.3
 
@@ -648,6 +676,12 @@ dummy placement  ..........  14.6.4
 real marker movement  ..........  14.6.3
 
 **G**
+
+**Grazing fire**  ..........  8.14.2
+
+level ground, establishes a beaten zone  ..........  8.14.2
+
+cannot enter dead space  ..........  8.14.4
 
 **Grenade phase (close assault)**  ..........  9.3
 
@@ -768,6 +802,12 @@ roll 1d6 + highest functional leader's CMD  ..........  5.3.1
 **Inspire (leader action)**  ..........  12.5
 
 +1 fire action to adjacent unit  ..........  12.5
+
+**Interlocking fire**  ..........  22.8a.1
+
+siting guns so beaten zones overlap  ..........  22.8a.1
+
+the attacker's counters to it  ..........  22.8a.2
 
 **Intelligence Points (prisoners)**  ..........  11.6
 
@@ -1028,6 +1068,10 @@ Aberdeen Proving Ground  ..........  17.3.6
 GABTU / tankarchives.ca  ..........  17.3.6
 
 Panzer Tracts  ..........  17.3.6
+
+**Plunging fire**  ..........  8.14.3
+
+no beaten zone, but reaches dead space  ..........  8.14.3
 
 **Prisoners — see Surrender**  ..........  S.11
 

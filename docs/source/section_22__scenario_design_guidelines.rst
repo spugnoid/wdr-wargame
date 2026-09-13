@@ -498,6 +498,26 @@ Every scenario sheet must include the following parameters. Players read these b
 
    **Example:** A designer playtests their scenario and finds the attacker's fastest unit can reach effective firing range against the defender's objective in a single turn — they widen the setup zone separation so the defender gets at least one full turn to occupy their position first.
 
+22.8a  Siting a Base of Fire
+--------------------------------
+
+
+**22.8a.1**  **Interlocking fire.** A defence should site its sustained-fire weapons (Rule 8.14.1) so that their beaten zones overlap and their lines of fire bracket the likely approaches. Two guns whose fire enters an approach hex through opposite hexsides put every attacker crossing it into enfilade (Rule 8.14.5); two guns firing along the same axis do not, however good each position is on its own.
+
+.. container:: rule-guide
+
+   **Why:** Interlocking fire is what turns a collection of machine guns into a defence. It covers the dead space (Rule 8.14.4) each individual gun cannot see, it means losing one weapon does not open a gap, and it is the only way a defender gets the enfilade bonus. A designer laying out a scenario, and a player laying out a setup, are solving the same problem: where can two guns stand such that an attacker cannot cross the ground between them without being shot at from two directions?
+
+   **Example:** Two MG positions on the same flank cover the same ground twice and leave the other flank open. The same two guns placed on opposite flanks of an approach halve the cover of every hex between them and have no dead space either can hide in.
+
+**22.8a.2**  An attacker's answer to interlocking fire is the same one doctrine gives: suppress one gun with a base of fire of their own, screen the approach with smoke (Rule 16.9), work through dead space, or bring indirect HE onto a position that direct fire cannot reach. A scenario whose attacker has none of these tools against a well-sited defence is not a hard scenario, it is an unwinnable one.
+
+.. container:: rule-guide
+
+   **Why:** States the counter alongside the tactic, so a designer checking a scenario can ask the useful question — not "is this position strong?" but "does the attacking force actually contain the means to break it?" This is the practical test behind Rule 22.4.3's covered approach and the force-composition guidance of Rule 22.2.
+
+   **Example:** A defence holding a heavy building with two interlocking machine guns is a fair problem for an attacker with a mortar, a smoke screen and an engineer squad, and an impossible one for three rifle squads and a leader.
+
 22.9a  Setup Sequence
 -------------------------
 

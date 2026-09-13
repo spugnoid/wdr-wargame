@@ -542,3 +542,77 @@ The full procedure for any fire combat action:
    **Example:** An AT gun that limbers and moves to a new position loses both of its pre-registered hexes — reaching that bonus again means registering new hexes from wherever it stops next, if the scenario still allows it.
 
    **Example:** A unit taking an Assault Move and then firing on its next activation is not itself penalized for having moved earlier — its own fire is judged solely by whether it's a Regular or Assault Fire (this rule). A -2 eFP penalty only applies to whoever is shooting at a currently-moving target (Rule 7.5.2), a completely separate situation.
+
+8.14  Machine Gun Employment
+-------------------------------
+
+
+*A sustained-fire weapon is not a squad with a bigger number. Its job is to fix the enemy in place so that somebody else can move. The rules below give that job mechanical form.*
+
+**8.14.1**  A **base of fire** is one or more deployed sustained-fire weapons — any weapon with a printed F# greater than 1 while stationary (Rule 6.6.2) — firing to hold an enemy position down while other friendly units manoeuvre against it. Nothing needs to be declared: the rules in 8.14.2-8.14.6 apply whenever their stated conditions hold.
+
+.. container:: rule-guide
+
+   **Why:** Names the thing the rest of this subsection is about. A game in which a machine gun is only ever a high-firepower rifle squad misses the single most important tactical fact about automatic weapons — that they were sited and fought as a separate element from the men who assaulted.
+
+   **Example:** An MG42 team firing on a farmhouse while two Panzergrenadier squads work around its flank is a base of fire; the same MG42 walking forward with the squads is not, and gets none of these effects.
+
+**8.14.2**  **Grazing fire and the beaten zone.** A base-of-fire weapon's attack is *grazing* when the target is at the firer's own elevation level, every intervening hex is at that level or lower, and no intervening hex blocks line of sight. A grazing attack establishes a **beaten zone**: resolve the attack against the target hex normally, then apply the **same dice roll at half FPr** (round down) against any unit in the next hex along the line of fire beyond the target. One roll, two hexes.
+
+.. container:: rule-guide
+
+   **Why:** A burst does not arrive as a point. The rounds leave the barrel as a cone and strike the ground as an ellipse — long and narrow over flat ground — so a gun firing low across level terrain lays a strip of danger rather than hitting one spot. Representing that as one extra hex, resolved off the roll already made, gives the machine gun its real battlefield signature for no additional dice and no additional lookup.
+
+   **Example:** An MG42 in A3 fires along row 3 at a squad in D3. The attack resolves against D3 normally; a second squad in E3, one hex further along the same line, is attacked by the same roll at half the FPr. Had the ground risen between them, or had D3 sat a level higher, there would be no beaten zone.
+
+**8.14.3**  **Plunging fire.** An attack made from at least one elevation level **above** the target is *plunging*. Plunging fire establishes no beaten zone — the rounds strike the ground steeply and stop — but it reaches into dead space (Rule 8.14.4) that grazing fire cannot.
+
+.. container:: rule-guide
+
+   **Why:** The same trajectory that makes high ground valuable also destroys the beaten zone: rounds arriving at a steep angle bury themselves immediately past the target instead of skimming on. Elevation therefore buys reach rather than width, which is the genuine trade and gives high ground a tactical character beyond simply seeing further.
+
+   **Example:** An HMG on a level-2 ridge firing down at a squad in a level-0 field hits only that hex — but it can also engage a squad tucked behind the crest below it, which a gun firing from the flat could not touch at all.
+
+**8.14.4**  **Dead space** is ground within a weapon's range that its fire cannot reach: the crest blind zone of Rule 4.4a.4, and any hex screened by intervening terrain. Grazing fire may not enter dead space. Plunging fire (Rule 8.14.3) and indirect HE (Sections 16, 21) can.
+
+.. container:: rule-guide
+
+   **Why:** Gives the ground immediately behind a crest or a wall a name and a consequence, so a player siting a machine gun has to think about what it *cannot* see as well as what it can. It is also the reason a defence needs mortars: dead space is precisely the ground that only indirect fire covers, which is why Rule 8.4.4 keeps HE off the Resolution Strip.
+
+   **Example:** A squad hugging the reverse side of a ridge sits in the dead space of every machine gun on the flat ground opposite. Rooting it out takes a mortar, a gun on higher ground, or somebody walking up the hill.
+
+**8.14.5**  **Enfilade, oblique and frontal fire.** When two or more units attack the same hex during the same turn, compare the hexsides through which their lines of fire enter it. Count the shorter way round the six hexsides:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - **Hexsides apart**
+     - **Name**
+     - **Effect on the target hex**
+   * - 0 or 1
+     - Frontal fire
+     - None
+   * - 2
+     - Oblique fire
+     - Terrain cover −1 against all fire at that hex for the rest of the turn
+   * - 3 (opposite)
+     - Enfilade fire
+     - Terrain cover **halved**, round down, against all fire at that hex for the rest of the turn
+
+
+Place an ENFILADE marker on the hex when either condition is first met; remove it in the Recovery Phase with all other action markers (Rule 5.2.2).
+
+.. container:: rule-guide
+
+   **Why:** This is the doctrinally correct reward for concentrating fire, and it rewards *geometry* rather than stacking. Cover works by putting something solid between a man and the bullets, which is a direction-dependent thing: a wall that shields a squad from the west is worthless once a second gun opens up from the south. Firing down the long axis of a position is what a machine gunner is trying to achieve, and bracketing a hex from two sides is how it is achieved on a hex grid without giving every infantry counter a facing to track. Flanking fire against infantry is subsumed here for the same reason — a squad in a hex has no front, so what matters is the angle between the guns, not the angle to the squad.
+
+   **Example:** Two squads both firing at the farmhouse from the west gain nothing. Move one of them to the south so the two lines of fire enter E3 through opposite hexsides, and the building's +5 cover halves to +2 for every attack on it this turn — including the close assault that follows.
+
+**8.14.6**  **Final Protective Fire.** A weapon with a pre-registered hex (Rule 8.13.1) may designate one of them its FPF lane, noted when the hex is registered. When an enemy unit enters that hex or fires from it, the weapon may react for 1 RP at **full FPr** rather than the halved value of Rule 8.10.1. Doing so expends the weapon's entire remaining F# for the turn, and it may not fire again this turn by any means.
+
+.. container:: rule-guide
+
+   **Why:** FPF is the emergency barrier a defence fires when a position is about to be overrun — everything the gun has, down a lane laid in beforehand, with no thought of conserving ammunition or rate. Making it the one reaction that fires at full strength gives a defender a real answer to an assault, and paying for it with the weapon's whole turn keeps it the last resort it was: fire it early and the gun is silent when the second wave comes.
+
+   **Example:** An MG42 registers the open ground at D3 as its FPF lane. A Panzergrenadier squad steps into D3 to close on the farmhouse; the Soviet player spends 1 RP and the MG42 fires at its full FPr instead of half — but is finished for the turn, whatever else crosses.

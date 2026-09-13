@@ -71,6 +71,8 @@ The game does not glorify war. The ordinary soldiers of every nation were not ev
      - TBD
    * - ROUTING markers
      - TBD
+   * - ENFILADE markers — placed on a hex under fire from two directions (Rule 8.14.5)
+     - TBD
    * - CI cause markers — red (physical break) and white (psychological break)
      - TBD
    * - Force morale track — printed on scenario sheet or player aid card
