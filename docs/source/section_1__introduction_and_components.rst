@@ -157,7 +157,7 @@ The following terms are used throughout this document. Each term is defined here
 
 **Advance movement —**  The default, undeclared way of taking a Move action: up to a unit's full M# allowance, spending Movement Points per the Rule 7.2 terrain chart. Rule 7.1.
 
-**Assault economy —**  A unit's reduced-effect alternative to a Regular action: up to two part-actions (Assault Move, 1 hex regardless of M#; Assault Fire, half eFP) in either order. Rule 6.3.3.
+**Assault economy —**  A unit's reduced-effect alternative to a Regular action: up to two part-actions (Assault Move, 1 hex regardless of M#; Assault Fire, half FPr) in either order. Rule 6.3.3.
 
 **F# —**  Rate of Fire. The number of times a unit may fire at full eFP in one turn while stationary: 1 for the great majority of units (any further fire comes only from the reduced-effect Assault economy, Rule 6.3.3), 2 for a bipod- or light-tripod-mounted MG, 3 for a tripod-deployed MG, 2 for a deployed mortar (Rule 6.6.2).
 

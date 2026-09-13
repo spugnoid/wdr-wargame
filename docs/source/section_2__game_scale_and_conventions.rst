@@ -163,13 +163,13 @@ With Deepest Regret... uses a specific counter notation for firepower and fallof
 
    **Example:** A rule that halves Alpha's eFP without mentioning rounding uses round-down by default: an eFP of 5 halves to 2, not 3, unless that rule states a minimum.
 
-**2.5.2**  Rules that use this convention: Suppressed movement (half M#, round down, minimum 1, Rule 10.1), grenade-phase cover (halved, round down, Rule 9.3.5), flamethrower cover (halved, round down, Rule 21.5.3), and Assault Fire (half eFP, round down, Rule 6.3.3).
+**2.5.2**  Rules that use this convention: Suppressed movement (half M#, round down, minimum 1, Rule 10.1), grenade-phase cover (halved, round down, Rule 9.3.5), flamethrower cover (halved, round down, Rule 21.5.3), and Assault Fire (half FPr, round down, Rule 6.3.3).
 
 .. container:: rule-guide
 
    **Why:** Indexes every halving rule in the book that runs on the standard convention, so a player can confirm at a glance which specific rules 2.5.1 governs rather than hunting for them.
 
-   **Example:** Assault Fire's half-eFP rule (6.3.3) rounds down under 2.5.1's convention; this rule points to it, and to the other three, as the full list of places that convention is already in play.
+   **Example:** Assault Fire's half-FPr rule (6.3.3) rounds down under 2.5.1's convention; this rule points to it, and to the other three, as the full list of places that convention is already in play.
 
 **2.5.3**  Reaction Points (RP = round(AP / 2), Rule 5.3.4) is a deliberate, separately-made choice and is not affected by this convention — it keeps its own rounding.
 

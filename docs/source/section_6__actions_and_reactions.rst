@@ -59,7 +59,7 @@ Section 6 — Actions and Reactions
 
    **Example:** Bravo could have fired on Alpha crossing hex A but chose to hold. Once Alpha moves on to hex B, that specific opportunity is gone — Bravo's player cannot retroactively claim it — though hex B is a brand-new window Bravo may react to if it still has RP and capacity.
 
-  - A unit using the ordinary (F1) economy reacts with an **Assault Fire** (Rule 6.3.3, half eFP): a fresh unit becomes ASSAULT-marked; an already ASSAULT-marked unit becomes MOVED/FIRED.
+  - A unit using the ordinary (F1) economy reacts with an **Assault Fire** (Rule 6.3.3, half FPr): a fresh unit becomes ASSAULT-marked; an already ASSAULT-marked unit becomes MOVED/FIRED.
   - A stationary weapon with F# greater than 1 (Rule 6.6) reacts at **full eFP**, expending one FIRED pip.
   - A unit already MOVED/FIRED may not react with Opportunity Fire (the sole exception is Desperate Fire against its own attackers, Rule 6.7.1).
 
@@ -158,7 +158,7 @@ A unit may react more than once per turn while it still has an unspent part-acti
      - Bound 1 hex, regardless of M# (Rule 7.1.4 governs terrain cost as normal).
    * - Assault Fire
      - 1
-     - One attack at half eFP, rounded down — the halving is applied to the final eFP after falloff, terrain, and status modifiers (Rule 8.2.5 governs a result of 0 or less).
+     - One attack at **half FPr**, rounded down — resolve the attack normally, then halve the FPr read from the Resolution Strip (Rules 8.4.1, 2.5.1).
    * - Close Assault
      - 1
      - Available only to a unit already carrying the ASSAULT marker (one part-action already spent), as its **second** part-action, and only with a leader present — in the assaulting unit's hex, either coordinating that unit alone or activating it together with other units in the same stack (Rule 6.1.1). Without a leader present, an ASSAULT-marked unit may not declare Close Assault this turn — its second part-action must be an ordinary Assault Move or Assault Fire. See Rule 9.1.2.
@@ -355,7 +355,7 @@ The following reactions are available to the non-active player during a reaction
 -----------------------------------------------
 
 
-**6.7.1**  A unit marked MOVED/FIRED that is the target of a declared Close Assault or Overrun may still take **Desperate Fire** against those incoming attackers only — one Assault Fire (half eFP, Rule 6.3.3), 1 RP, at the declaration window (Rule 5.5.2). It may not fire at any other target this turn.
+**6.7.1**  A unit marked MOVED/FIRED that is the target of a declared Close Assault or Overrun may still take **Desperate Fire** against those incoming attackers only — one Assault Fire (half FPr, Rule 6.3.3), 1 RP, at the declaration window (Rule 5.5.2). It may not fire at any other target this turn.
 
 .. container:: rule-guide
 
