@@ -97,6 +97,16 @@ average.
 - armouredfightingvehicle.fandom.com — uncited hobby wiki for Panzer III Ausf
   M, included only to document disagreement; could not be independently
   re-fetched this session (HTTP 402 on retry).
+- Scheibert, Horst. *Russian T-34 Battle Tank* (Schiffer Military History,
+  Atglen PA, 1992; ISBN 0-88740-405-7; translated by Edward Force from the
+  original German *Der Russische Kampfwagen T-34*, Podzun-Pallas Verlag) —
+  a 52-page, image-only-scan (no extractable text layer), read in full as
+  images this session. Mostly wartime photographs with short captions, the
+  same general shape as the two general references already ruled out
+  (E.145, E.146), but closes with a genuine plate-by-plate "Technical Data"
+  table (p.47) covering T-34/76 A, T-34/76 C, and T-34/85 — the right genre
+  of source this project's Soviet-vehicle top-armor questions have been
+  looking for. See design note E.157.
 
 ## German Vehicles
 
@@ -261,12 +271,73 @@ were being replaced by 20mm ones. This corroborates 20mm as the correct
 1943-production figure rather than an artifact of Wikipedia's general 1941-
 era infobox rounding.
 
+**Update 2026-09-12, design note E.157: hull roof further corroborated;
+turret roof still genuinely unresolved.** Scheibert's *Russian T-34 Battle
+Tank* (Schiffer, 1992), p.47 "Technical Data" table, gives 18-22mm for its
+"Hull cover" row on the T-34/76 C column (the F-34 76mm L/41-gun variant,
+the closest match in that table to this project's own roster entry) — 20mm
+sits inside that band, an independent (if not precisely pinpointed)
+corroboration of the existing figure, not a contradiction. The table's only
+turret-armor line, however, is a single aggregate "Armor: turret" span
+(20-70mm for this column) covering the whole turret from thinnest to
+thickest point, not a plate specifically labeled "roof" — and both of this
+project's disputed candidate figures (20mm and 56mm) fit inside that span,
+so it does not narrow the dispute at all. See the fuller writeup under
+T-34/85 above (same book, same table, same finding) for the full reasoning
+on why this aggregate range isn't treated as a roof-specific source. Turret
+roof for the hexagonal turret remains exactly as open as before this pass.
+
 ### T-34/85 (late 1943 variant)
 
 | Plate | Thickness | Source | Confidence |
 |---|---|---|---|
-| Hull roof | **Not found** — candidate figures of 20mm, 16mm, and 15mm circulate across secondary sites, none traceable to an archival document or a specific book page this session | Various uncited secondary/tertiary tank-wiki pages | **Unsourced — do not guess** |
-| Turret roof | **Not found** | Same | **Unsourced — do not guess** |
+| Hull roof | **18-22mm — FOUND, design note E.157** | Scheibert, *Russian T-34 Battle Tank* (Schiffer Military History, 1992), p.47, "Technical Data" table, "Hull cover" row, T-34/85 column | **High** — a genuine plate-by-plate technical spec table (right genre, unlike the two general references already ruled out), naming the plate specifically (paired directly under "Hull bottom" in the same table, not a vague whole-vehicle range) |
+| Turret roof | **Still not found — see Update below** | — | **Unsourced — do not guess** |
+
+**Update 2026-09-12, design note E.157: a genuine spec/diagram-style source
+found at last, resolving the hull roof half of this item.** Horst
+Scheibert's *Russian T-34 Battle Tank* (Schiffer Military History, 1992,
+translated from *Der Russische Kampfwagen T-34*) is a 52-page,
+photo-caption-dominated book — the same general shape as the two
+already-ruled-out references (E.145, E.146) — but it closes with a
+"Technical Data" table (p.47) giving named, plate-specific armor rows
+("Hull, front" / "Hull side, front" / "Hull side, rear" / "Hull, rear" /
+"Hull bottom" / "Hull cover") side-by-side for three variants: T-34/76 A
+(1940), T-34/76 C (1942, F-34 76mm L/41 gun — the closest match in this
+table to this project's own "T-34 Model 1943" roster entry), and T-34/85.
+"Hull cover" is read as hull roof/deck: it sits immediately below "Hull
+bottom" (floor) in the same list of named plates, the same paired
+front/rear/bottom/cover structure used throughout the table, not a vague
+whole-vehicle range. Values: **T-34/76 A 18-22mm, T-34/76 C 18-22mm, T-34/85
+18-22mm** — identical across all three variants. For T-34/85 this is a
+genuinely new, citable figure filling a real gap; for T-34 Model 1943 (via
+the T-34/76 C column) it independently corroborates, without contradicting,
+this project's existing 20mm figure (Tank Archives' 1943 simplification
+order) — 20mm sits squarely inside 18-22mm.
+
+**Turret roof was NOT resolved by this same table, and this is a deliberate
+non-finding, not an oversight.** The table's only turret line is a single
+aggregate "Armor: turret" row (T-34/76 A: 15-45mm; T-34/76 C: 20-70mm;
+T-34/85: 20-75mm) — a broad thinnest-to-thickest span across the whole
+turret (roof through mantlet/front), not a plate specifically labeled
+"roof" the way "Hull cover" is specifically labeled. This project has
+already established, in this same file (Cromwell's Wikipedia "8-76mm"
+overall-armor span, explicitly declined as too vague to backfill a specific
+plate), that a whole-component range of this kind cannot be used to
+extract one plate's figure without guessing — the same standard applies
+here. Notably, 20mm (this project's existing candidate) and 56mm (the
+disputed hobby-site figure) **both** fit inside the T-34/76 C row's
+20-70mm span, so this table doesn't even narrow the dispute, let alone
+settle it. Turret roof for both T-34/85 and T-34 Model 1943 remains
+genuinely open.
+
+One additional, not-usable-but-notable find: p.31 shows a captured T-34/85
+used by the Wehrmacht for demonstrations, with a caption claiming "the
+numbers painted on it indicate armor thicknesses, number of shells and the
+gun's arc of elevation" — but the visible chalked figures ("75m," "45m
+3G°") read as gunnery reference-chart data (range/elevation), not
+plate-thickness callouts, and are not legible enough at this scan's
+resolution to extract a number even if they were. Not used for anything.
 
 What IS well-sourced for this vehicle, but is turret **wall** thickness (not
 roof, and already reflected in `vehicles.csv`'s existing Turret Front/Side
@@ -316,6 +387,19 @@ armor configuration was "unchanged" from the SU-122 chassis it was based on,
 without stating a roof number for either vehicle. A secondary web summary
 claimed 30mm, but this could not be traced to any specific citable page —
 **not used.**
+
+**Update 2026-09-12, design note E.157: a clean negative, confirmed by a
+fourth source.** Scheibert's *Russian T-34 Battle Tank* (Schiffer, 1992) —
+read in full, all 52 pages, as the specific book this pass was checking —
+covers the SU-85 only in its "Variants of the T-34" prose section (pp.32-35:
+production history, the SU-85's role as a 1943 "tank destroyer" answer to
+uparmored German tanks, captured/Allied-service photos) and its p.47
+"Technical Data" table has **no SU-85 column at all** — only T-34/76 A,
+T-34/76 C, and T-34/85 are tabulated. This is the same "wrong shape of data
+for this specific vehicle" pattern as the rest of this project's SU-85
+research: even a book with the right genre of table for the T-34 tank
+itself simply doesn't extend that table to the SPG variant. SU-85 remains
+the single weakest-sourced vehicle in this entire research thread.
 
 ## American Vehicles
 
@@ -425,16 +509,23 @@ One well-documented, on-point incident/finding was located:
   Tiger I Ausf E hull top and turret roof (Jentz & Doyle 1993 + Hart 2007);
   KV-1S turret roof / removable hull roof panels (GOKO Decree #1334ss, 23
   Feb 1942); T-34 Model 1943 hull roof (Tank Archives' 1943 archival
-  simplification order); Panther Ausf G's narrow 40mm front-hull-roof-strip
-  claim (dated British wartime technical-intelligence report).
+  simplification order, now corroborated by Scheibert p.47 — design note
+  E.157); T-34/85 hull roof (Scheibert, *Russian T-34 Battle Tank*, p.47
+  Technical Data table — design note E.157); Panther Ausf G's narrow 40mm
+  front-hull-roof-strip claim (dated British wartime technical-intelligence
+  report).
 - **Genuinely unresolved — do not guess, flag as TBD in `vehicles.csv`:**
   Panzer III Ausf M (both hull top and turret roof — disputed 2x between
   sources with no primary tiebreaker); StuG III Ausf G (both plates —
   10–17mm range, no clean primary citation); T-34 Model 1943 turret roof
-  (56mm claim uncorroborated and inconsistent with normal Soviet turret-roof
-  design); T-34/85 (both plates — not found at all); T-70 turret roof (not
-  reported separately anywhere); SU-85 (the single weakest-sourced vehicle
-  in this whole pass — Wikipedia's own editors flag its one armor figure as
+  and T-34/85 turret roof (56mm-vs-20mm dispute checked against a genuine
+  plate-by-plate spec table this session — design note E.157 — but that
+  table's only turret line is a vague aggregate range that doesn't
+  distinguish the two candidates); T-70 turret roof (not reported
+  separately anywhere); SU-85 (the single weakest-sourced vehicle in this
+  whole file — now checked against four separate sources including one
+  with the right genre of table for the T-34 tank itself, and still has no
+  data at all — Wikipedia's own editors also flag its one armor figure as
   ambiguous); Cromwell Mk IV hull top (not found) and turret roof (existing
   20mm figure could not be reconfirmed this session — treat as weakened,
   not as still-solid).
@@ -497,14 +588,25 @@ One well-documented, on-point incident/finding was located:
    Zaloga & Grams or Solyankin/Pavlov Soviet title) rather than back to
    this one. See `counters/toe/wwii_ballistics_direct_read_1943.md` for the
    full read.
-3. T-34/85's own top armor (both hull and turret roof) is a real, unresolved
-   gap — candidate figures exist (15–20mm range) but none traced to a
-   citable source. A Zaloga & Grams title or a Solyankin/Pavlov Soviet armor
-   encyclopedia volume would likely resolve this; neither was accessible
-   this session.
-4. SU-85's top armor is entirely unsourced — same recommendation as above
-   (a dedicated Soviet SPG reference, not general Wikipedia/Tank Archives
-   searching, is probably needed).
+3. **Partially resolved 2026-09-12, design note E.157.** T-34/85's hull roof
+   is now FOUND: 18-22mm, Scheibert's *Russian T-34 Battle Tank* (Schiffer,
+   1992), p.47 "Technical Data" table, "Hull cover" row — a genuine
+   plate-by-plate spec table, the right genre this project's prior general
+   references (E.145, E.146) lacked. Turret roof remains unresolved: the
+   same table's only turret line is a vague aggregate "Armor: turret"
+   20-75mm span, not a plate specifically labeled roof, and both existing
+   candidate figures (20mm, 56mm) fit inside it without being distinguished.
+   A Zaloga & Grams title or a Solyankin/Pavlov Soviet armor encyclopedia
+   volume remains the likely path to the turret-roof half of this question;
+   neither was accessible this session.
+4. **Confirmed still unsourced 2026-09-12, design note E.157 (fourth source
+   ruled out).** SU-85's top armor remains entirely unsourced. Scheibert's
+   *Russian T-34 Battle Tank* (read in full this pass, see item 3 above)
+   covers SU-85 only in prose (production history and combat role, pp.32-35)
+   and its p.47 Technical Data table has no SU-85 column at all — even a
+   book with the right table format for the T-34 tank itself doesn't extend
+   it to this SPG variant. A dedicated Soviet SPG reference, not general
+   T-34-titled books, remains the likely path forward.
 5. Cromwell Mk IV's hull top figure remains unfound, and its turret roof
    figure (carried in the existing British vehicles file) could not be
    reconfirmed. **Update 2026-09-12, design note E.137: Fletcher & Harley
@@ -529,9 +631,16 @@ One well-documented, on-point incident/finding was located:
    T-34 and T-70 Tanks" returned HTTP 403 this session and was not pursued
    — it's a plausible source for more historical top-armor-penetration
    incidents if that question becomes a priority.
-7. T-34 Model 1943's turret roof (hexagonal turret) needs a real primary
-   source — the two figures found (20mm vs. 56mm) are far enough apart that
-   guessing between them would be worse than leaving it blank.
+7. **Update 2026-09-12, design note E.157: checked against a genuine spec
+   table, still not resolved.** T-34 Model 1943's turret roof (hexagonal
+   turret) needs a real primary source — the two figures found (20mm vs.
+   56mm) are far enough apart that guessing between them would be worse
+   than leaving it blank. Scheibert's *Russian T-34 Battle Tank* (Schiffer,
+   1992) was checked this pass (see item 3 above): its p.47 table's only
+   turret-armor line is a vague aggregate "Armor: turret" 20-70mm span for
+   the closest-matching column, and both 20mm and 56mm fit inside that
+   range without being distinguished — a real, right-genre source checked,
+   but one that doesn't happen to break this particular tie. Still open.
 8. **Update 2026-09-12, design note E.145**: *The Encyclopedia of Weapons of
    World War II* (a general single-volume reference) was checked against
    items 3 (T-34/85), 4 (SU-85), and 7 (T-34 Model 1943 turret roof) above,
@@ -540,3 +649,18 @@ One well-documented, on-point incident/finding was located:
    overall thickness range in prose. Ruled out as a candidate for any
    plate-level armor question in this project. See
    `counters/toe/encyclopedia_weapons_wwii_1943.md` for the full pass.
+9. **New 2026-09-12, design note E.157 — partial resolution, first real
+   positive movement on this file's Soviet items in several passes.**
+   Scheibert's *Russian T-34 Battle Tank* (Schiffer Military History, 1992)
+   — a 52-page, image-only-scan, mostly photo-caption book of the same
+   general shape as E.145/E.146's two ruled-out references — turns out to
+   close with a genuine plate-by-plate "Technical Data" table (p.47),
+   unlike either of those two. It resolves T-34/85's hull roof (item 3:
+   18-22mm, FOUND) and independently corroborates T-34 Model 1943's
+   existing 20mm hull roof figure, but its only turret-armor line is a
+   vague aggregate range that does not resolve either turret-roof dispute
+   (items 3, 7 remain open on that half). SU-85 (item 4) remains a clean,
+   now four-times-confirmed negative — this book, like the others, simply
+   has no data for the SPG variant. Full read notes are folded inline into
+   items 3, 4, and 7 above rather than a separate companion file, per this
+   pass's own instructions.
