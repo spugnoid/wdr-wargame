@@ -37,6 +37,7 @@ T-34/85 (late 1943),Hull,Rear,40,45,0,False,Soviet,1942-43,,,,,,,,,,
 T-34/85 (late 1943),Turret,Front,90,15,0,True,Soviet,1942-43,,,,,,,,,True,"new larger turret -- production era ambiguous, see spec S7 (early 1944 historically; using 1942-43 hardness bracket)"
 T-34/85 (late 1943),Turret,Side,75,20,0,True,Soviet,1942-43,,,,,,,,,,
 T-34/85 (late 1943),Turret,Rear,52,10,0,True,Soviet,1942-43,,,,,,,,,,
+T-34/85 (late 1943),Hull,Top,20,0,0,False,Soviet,1942-43,,,,,,,,,,"Hull roof 18-22mm per Scheibert, Russian T-34 Battle Tank (Schiffer, 1992), p.47 Technical Data table, 'Hull cover' row, T-34/85 column; 20mm used as a representative midpoint, consistent with T-34 Model 1943's existing Hull Top value. Turret roof intentionally not modeled -- disputed 20mm-vs-56mm figures remain unresolved, see counters/toe/vehicle_top_armor_1943.md."
 KV-1S,Hull,Front,75,25,0,False,Soviet,1942-43,,,,,,,,,,
 KV-1S,Hull,Side,60,0,0,False,Soviet,1942-43,,,,,,,,,,
 KV-1S,Hull,Rear,60,0,0,False,Soviet,1942-43,,,,,,,,,,

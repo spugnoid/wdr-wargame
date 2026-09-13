@@ -209,11 +209,14 @@ class TestTopArmorLoading:
         assert av == pytest.approx(15.8, abs=0.3)
 
     def test_vehicles_without_sourced_top_data_have_no_top_rows(self):
-        """Panzer III, StuG III, T-34/85, SU-85, and Cromwell all came back
-        genuinely unsourced or disputed for top armor -- confirms none of
-        them got a guessed-at row rather than an honest gap."""
+        """Panzer III, StuG III, SU-85, and Cromwell all came back genuinely
+        unsourced or disputed for top armor -- confirms none of them got a
+        guessed-at row rather than an honest gap. T-34/85 is excluded from
+        this list since design note E.157 sourced its Hull Top (Scheibert,
+        Russian T-34 Battle Tank, p.47) -- see the dedicated T-34/85 tests
+        below."""
         vehicles = load_vehicles()
-        for name in ["Panzer III Ausf M", "StuG III Ausf G", "T-34/85 (late 1943)", "SU-85", "Cromwell Mk IV"]:
+        for name in ["Panzer III Ausf M", "StuG III Ausf G", "SU-85", "Cromwell Mk IV"]:
             tops = [v for v in vehicles if v.vehicle == name and v.arc == "Top"]
             assert tops == [], f"{name} should have no Top rows (unsourced)"
 
@@ -224,6 +227,18 @@ class TestTopArmorLoading:
         vehicles = load_vehicles()
         rows = [v for v in vehicles if v.vehicle == "T-34 Model 1943" and v.arc == "Top"]
         assert [r.profile for r in rows] == ["Hull"]
+
+    def test_t34_85_hull_top_sourced_turret_top_intentionally_absent(self):
+        """Design note E.157: Scheibert's Russian T-34 Battle Tank (Schiffer,
+        1992, p.47 Technical Data table) sources T-34/85's Hull Top at
+        18-22mm (20mm used as the representative midpoint) -- the same
+        table's only turret-armor line is a vague aggregate range that
+        doesn't distinguish the disputed 20mm-vs-56mm turret roof figures,
+        so Turret Top stays deliberately absent, mirroring T-34 Model 1943."""
+        vehicles = load_vehicles()
+        rows = [v for v in vehicles if v.vehicle == "T-34/85 (late 1943)" and v.arc == "Top"]
+        assert [r.profile for r in rows] == ["Hull"]
+        assert rows[0].thickness_mm == 20
 
 
 class TestShermanFireflyLoading:
