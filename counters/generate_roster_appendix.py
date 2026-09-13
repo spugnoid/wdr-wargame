@@ -132,11 +132,11 @@ Appendix G — Consolidated Unit and Vehicle Roster
 and weapon teams in G.1, vehicle armour profiles in G.2, and gun penetration
 curves by range in G.3.*
 
-*Vehicle Gunnery Tables (Rule 18.1a) are not listed here. A Gunnery Table
-depends on the firing vehicle's Crew Quality (Rule 17.3.6), which derives
-from that vehicle's printed Morale — and a scenario's own parameter block
-sets each side's vehicle crew qualities. Build the table from Rule 18.1a
-once the crew quality for the scenario is known.*
+*Vehicle Gunnery Tables (Rule 18.1a) are not reproduced here. Each
+vehicle-mounted gun prints its own Miss and Hull Thresholds by range band
+on its counter (Rule 18.1a.1), calculated for that vehicle's Crew Quality
+— which is itself derived from the vehicle's printed Morale (Rules 17.3.6,
+18.1a.2), not chosen per scenario.*
 
 G.1  Infantry and Weapon Team Roster
 ----------------------------------------
