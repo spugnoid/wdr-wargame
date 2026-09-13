@@ -75,6 +75,8 @@ The game does not glorify war. The ordinary soldiers of every nation were not ev
      - TBD
    * - Force morale track — printed on scenario sheet or player aid card
      - Included in scenario booklet
+   * - Casualty Track — BROKEN / DISPERSED / CAPTURED / GUARD zones plus numbered boxes for serialised DISPERSED counters (Rule 13.1)
+     - 1 per player
    * - SMOKE markers — numbered 1–3 showing current dissipation step
      - TBD
    * - ILLUM markers — numbered 1–3 showing current step/radius, used for starshell and handheld flare illumination (Rule 23.3, 23.4)
@@ -140,6 +142,8 @@ The following terms are used throughout this document. Each term is defined here
 **Intervening terrain —**  Terrain hexes that the line of fire passes through between firer and target, reducing eFP.
 
 **CI —**  Combat Ineffective. A unit that has been eliminated from play for the scenario.
+
+**Casualty Track —**  A designated area beside the map, one per player, holding counters that have left it. Four zones: BROKEN, DISPERSED, CAPTURED and GUARD, plus numbered boxes matching the serialised DISPERSED markers on the map. Defined in Rule 13.1 and used from Section 9 onward, in one-off scenarios as well as campaigns.
 
 **Broken —**  A unit rendered CI by ranged fire. Counter removed from map.
 

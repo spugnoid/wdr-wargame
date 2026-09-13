@@ -297,6 +297,10 @@ margin 14–18  ..........  8.6, App.C
 
 **Casualty Track**  ..........  13.1
 
+used in every scenario, not only campaigns  ..........  13.1, 22.9a.1
+
+numbered boxes for serialised DISPERSED counters  ..........  10.5.2, 13.1
+
 BROKEN zone  ..........  10.4
 
 CAPTURED zone  ..........  11.2.2, 11.2a
@@ -791,6 +795,12 @@ sniper exemption  ..........  8.7.4, 20.2.6
 
 **Maps (SVG generated)**  ..........  1.5.4, 1.5.5
 
+what a playable map must state  ..........  4.1.1a
+
+blank hex means open ground at level 0  ..........  4.1.1a
+
+hex grid, columns, rows and adjacency  ..........  2.3.0
+
 **Mass Assault (Optional Rule)**  ..........  9.8a, App.F
 
 cumulative Defence penalty per prior assault this turn  ..........  9.8a.1
@@ -1159,6 +1169,18 @@ Broadside-to-Slope condition  ..........  18.2c.1
 
 resolves against lower of Side/Top AV  ..........  18.2c.2
 
+**Setup sequence**  ..........  22.9a
+
+defender places first, then attacker  ..........  22.9a.3
+
+meeting engagement: roll for placement order  ..........  22.9a.3
+
+FIXED units recorded before any placement  ..........  22.9a.2, 22.8.1
+
+VISIBLE is the default starting state  ..........  22.9a.2
+
+setup is final once both sides have placed  ..........  22.9a.4
+
 **Smoke**  ..........  16.9, 16.10
 
 CON bonus per step  ..........  16.10.2
@@ -1242,6 +1264,8 @@ recovery threshold 3 (Suppressed)  ..........  5.2.4, 10.2.3
 40 yards per hex  ..........  2.1.1
 
 **Terrain**  ..........  S.4
+
+assigned per hex by the map  ..........  4.1.1, 4.1.1a
 
 anti-tank ditch (vehicle-impassable)  ..........  4.1.3a, 17.6.2
 

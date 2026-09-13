@@ -498,6 +498,44 @@ Every scenario sheet must include the following parameters. Players read these b
 
    **Example:** A designer playtests their scenario and finds the attacker's fastest unit can reach effective firing range against the defender's objective in a single turn — they widen the setup zone separation so the defender gets at least one full turn to occupy their position first.
 
+22.9a  Setup Sequence
+-------------------------
+
+
+*Everything below happens once, before the first Recovery Phase of Turn 1 (Rule 5.1).*
+
+**22.9a.1**  Agree the scenario: both players read the scenario's parameter block, lay out the named map (Rule 4.1.1a), and confirm the turn limit, setup zones, objectives, Force Morale values (Rule 22.3.2) and any special conditions. Place a Casualty Track (Rule 13.1) beside the map for each player.
+
+.. container:: rule-guide
+
+   **Why:** Puts every shared assumption on the table before either player commits a counter, so a disagreement about what the scenario says surfaces now rather than in the middle of Turn 3.
+
+   **Example:** Both players confirm they are playing a 4-turn scenario on a 6 × 6 map with the German objective at E3 before a single counter is placed.
+
+**22.9a.2**  Each player takes their force, sets their Force Morale marker to its starting value, and decides privately which of their units begin FIXED (Rule 14.7) and which begin VISIBLE. Record every FIXED unit's hex on the scenario record sheet now (Rules 22.8.1, 22.8.2). A unit not recorded as FIXED begins VISIBLE.
+
+.. container:: rule-guide
+
+   **Why:** Makes VISIBLE the default and FIXED the recorded exception, so "what state is this unit in?" always has an answer without a scenario having to list every unit twice. Recording FIXED positions before any placement also stops a player choosing an ambush position in reaction to what the opponent has already put down.
+
+   **Example:** A defender with four units records two as FIXED on the record sheet; the other two begin VISIBLE and are physically placed in the next step.
+
+**22.9a.3**  The **defending** side places all its VISIBLE units within its setup zone. The **attacking** side then places all of its own. In a scenario with no attacker or defender — a meeting engagement (Rule 22.5.3) — both players roll 1d6 and the higher chooses whether to place first or second, re-rolling ties.
+
+.. container:: rule-guide
+
+   **Why:** The attacker's real advantage is choosing where to strike, so the attacker deploys knowing what the defender shows. The defender's answer is concealment rather than secrecy of deployment: anything the defender genuinely needs hidden goes down as FIXED (Rule 14.7) or goes hidden in play (Rule 14.5), and neither is given away by placing first.
+
+   **Example:** The Soviet defender places its Guards squad and DP-28 team in column F. The German attacker, seeing both, then places its four units in column A, weighting them toward the flank the defender left thin.
+
+**22.9a.4**  Setup is complete once both sides have placed. Neither player may reposition a placed unit, add a FIXED unit, or change a unit's starting state after this point. Begin Turn 1 at the Recovery Phase (Rule 5.2) — which on Turn 1 has nothing to resolve — and proceed to the Command Phase (Rule 5.3).
+
+.. container:: rule-guide
+
+   **Why:** Draws a hard line under setup so both players know when the scenario has started, and routes the first turn through the ordinary turn sequence rather than making Turn 1 a special case: the Recovery Phase simply has no work to do the first time through.
+
+   **Example:** With all counters placed and the record sheet agreed, the players roll initiative (Rule 5.3.1) and the scenario begins.
+
 22.10  Scenario Design Checklist
 ----------------------------------
 
@@ -557,7 +595,7 @@ The following parameters are a worked example of a complete scenario parameter b
    * - Scale
      - Tactical (40 yards per hex)
    * - Map
-     - 6 × 6 hexes
+     - 6 × 6 hexes, columns A–F, rows 1–6 (Rule 2.3.0). Terrain as the layout below; every hex not listed is open ground at level 0 (Rule 4.1.1a)
    * - Turn limit
      - 4 turns
    * - Recovery Window
@@ -587,3 +625,38 @@ The following parameters are a worked example of a complete scenario parameter b
 
 
 *NOTE: at this skirmish's size both Force Morale values floor to 1, so the first CI unit on either side triggers a collapse check — small engagements are brittle by construction, which suits a 4-turn farmhouse fight; designers wanting more resilience at this scale should add units, not inflate the factor.*
+
+**Terrain layout.** Every hex not listed here is open ground at level 0 (Rule 4.1.1a).
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - **Hex**
+     - **Terrain**
+     - **Notes**
+   * - E3
+     - Heavy building
+     - The farmhouse. Cover +5 (Rule 4.2). The German objective
+   * - E2, E4
+     - Rubble
+     - Outbuildings and collapsed wall along the farmyard
+   * - C2, C3
+     - Light woods
+     - The orchard — the attacker's covered approach (Rule 22.4.3)
+   * - D5, E5
+     - Crops / tall grass
+     - Standing wheat south of the farmhouse
+   * - B4, C4
+     - Ditch / sunken road
+     - Drainage cut running east-west
+   * - D3/E3 hexside
+     - Wall
+     - Farmyard wall, +1 MP to enter E3 from D3 (Rule 7.2)
+
+
+.. container:: rule-guide
+
+   **Why:** Gives the book's one worked scenario a map a reader can actually lay out, rather than a grid size and a single named hex. The layout is built to the same section's own criteria: a covered approach for the attacker through the orchard (22.4.3), a defensible objective in heavy building (22.4.4), and roughly a quarter of the map carrying cover (22.4.1's "mixed" density).
+
+   **Example:** A German unit in C3 is in light woods, two hexes from the farmhouse, with open ground in between — exactly the last-bound decision the scenario is built around.

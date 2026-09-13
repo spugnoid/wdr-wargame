@@ -57,6 +57,14 @@ Section 2 — Game Scale and Conventions
 ----------------------------
 
 
+**2.3.0**  Hex grid and coordinates: maps use columns of hexes running top to bottom, lettered A, B, C… from the left, and rows numbered 1, 2, 3… from the top. A hex is named by its column letter then its row number — A1, D4, F6. Columns alternate between higher and lower vertical offset, with **odd-lettered columns (A, C, E…) set half a hex lower** than the even columns beside them. Every hex therefore has six neighbours: the hex above it, the hex below it, and two in each adjacent column.
+
+.. container:: rule-guide
+
+   **Why:** Fixes the one convention everything else in the game is measured against. Without a stated column-offset direction, "adjacent" is ambiguous on a hex grid and no range, movement cost, line of sight, or setup zone can be resolved the same way by both players.
+
+   **Example:** On an odd-column-low grid, hex C3's six neighbours are C2 (above), C4 (below), B3 and B4 (to the left), and D3 and D4 (to the right). Hex D3's neighbours are D2, D4, C2, C3, E2 and E3 — the offset runs the other way, because D is an even column.
+
 **2.3.1**  Range equals the number of hex boundaries the line of fire crosses to reach the target. The firer's own hex is not counted. The target's hex is counted.
 
 .. container:: rule-guide

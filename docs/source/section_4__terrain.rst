@@ -7,6 +7,14 @@ Section 4 — Terrain
 
 **4.1.1**  Each hex is assigned a terrain type. The terrain type determines the cover modifier it provides to units occupying it and any LOS penalty it applies to fire passing through it.
 
+**4.1.1a**  A playable map states, for every hex on it, that hex's **terrain type** (Rule 4.1.2's table) and its **elevation level** (Rule 4.4a.1; level 0 unless printed otherwise), plus any hexside features — roads, walls, fences, hedgerows, streams — that lie on the boundaries between hexes rather than inside them. A hex with nothing printed on it is open ground at level 0. Maps are supplied with the scenario, not by this document; a scenario names the map it is played on and any terrain the scenario itself changes.
+
+.. container:: rule-guide
+
+   **Why:** Says plainly what a map has to carry, so a map drawn for this game by anyone — printed, hand-drawn, or generated — contains everything the rules will ask of it, and so a player handed a scenario knows exactly what they are missing if the map does not say. The "blank means open ground at level 0" default means a sparse map is still a complete one.
+
+   **Example:** A scenario's map marks hex D4 "light woods" and hex E3 "heavy building, level 1", prints a road running along the A4-L4 hexsides, and leaves everything else blank — those blank hexes are open ground at level 0, and the map is complete as it stands.
+
 .. container:: rule-guide
 
    **Why:** Ties one terrain type to two separate effects — defensive cover for the occupant and a fire penalty for anyone shooting through it — so a single map symbol drives both halves of terrain's tactical impact without needing separate occupancy and transit tables.

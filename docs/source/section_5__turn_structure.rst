@@ -5,7 +5,7 @@ Section 5 — Turn Structure
 ---------------------------
 
 
-Each game turn proceeds through three phases in the following order:
+Before the first turn begins, both players set up the scenario once: see Rule 22.9a for the full sequence. Thereafter each game turn proceeds through three phases in the following order:
 
 .. list-table::
    :header-rows: 1

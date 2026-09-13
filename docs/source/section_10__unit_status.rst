@@ -132,7 +132,7 @@ Units may be in one of the following status levels at any time. Status is tracke
 ------------
 
 
-**10.4.1**  A Broken unit has been rendered Combat Ineffective. Its counter is removed from the map and placed in the BROKEN zone of the Casualty Track.
+**10.4.1**  A Broken unit has been rendered Combat Ineffective. Its counter is removed from the map and placed in the BROKEN zone of the Casualty Track (Rule 13.1 — the Track is used in every scenario, not only in campaign play).
 
 .. container:: rule-guide
 

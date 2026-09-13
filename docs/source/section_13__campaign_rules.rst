@@ -7,7 +7,7 @@ Section 13 — Campaign Rules
 --------------------
 
 
-The Casualty Track is a designated area beside the map. It has four zones: BROKEN, DISPERSED, CAPTURED, and GUARD. Eliminated counters are placed in the appropriate zone as follows:
+The Casualty Track is a designated area beside the map, one per player. It has four zones: BROKEN, DISPERSED, CAPTURED, and GUARD, and a set of numbered boxes matching the serialised DISPERSED markers (Rule 10.5.2), each box holding the counter for the marker of the same number. Every scenario uses a Casualty Track, whether or not it is part of a campaign — set one out during setup (Rule 22.9a.1). Eliminated counters are placed in the appropriate zone as follows:
 
 .. list-table::
    :header-rows: 1
