@@ -21,26 +21,19 @@ Appendix A — Resolution Strip Quick Reference
      - 6
    * - 7
      - 7
-   * - 8
-     - 7
-   * - 9
+   * - 8–11
      - 8
-   * - 10
-     - 8
-   * - 12
+   * - 12–16
      - 9
-   * - 15
-     - 9
-   * - 18
+   * - 17–23
      - 10
-   * - 24
+   * - 24–35
      - 11
-   * - 30
-     - 11
-   * - 40
+   * - 36+
      - 12
-   * - 50+
-     - 12 (maximum)
 
 
-Single-unit fire never uses this strip — use eFP directly as FPr (Rule 8.4.1). Consult this table only when multiple units are combined into a fire group (Rule 8.4.2). Summed values between listed entries round down to the nearest listed row: summed eFP 11 uses the row for 10 (FPr 8).
+Every fire attack consults this strip, whether one unit fires or several
+(Rule 8.4.1). Sum the eFP of everything firing, find the band containing that
+total, and read the FPr beside it. The strip is the identity up to 7, so a
+single ordinary attack needs no lookup in practice.

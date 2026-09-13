@@ -49,13 +49,13 @@ The full procedure for any fire combat action:
 
    **Example:** Two units contribute eFP of 5 and 4 to the same fire group. Their sum, 9, is what proceeds to the Resolution Strip (Rule 8.4) as one combined attack.
 
-**8.1.5**  If a single unit fires, use eFP directly as FPr. If multiple units in a group fire, consult the Resolution Strip (Rule 8.4) to find the FPr.
+**8.1.5**  Consult the Resolution Strip (Rule 8.4) with the summed eFP to find the FPr. This applies to every attack, whether one unit fires or several.
 
 .. container:: rule-guide
 
-   **Why:** Draws the line between "small enough to read directly" and "needs the compression table" at exactly one firer — a lone attacker's own eFP already accounts for everything relevant, with nothing left to compress.
+   **Why:** One conversion for all fire keeps the same summed eFP worth the same FPr however it was assembled, so concentrating fire is never punished — and the strip is the identity up to 7, so ordinary single-unit fire needs no lookup in practice anyway.
 
-   **Example:** Alpha fires alone. Its eFP (say, 5) is used directly as FPr — no Resolution Strip lookup is needed since there's only one contributor.
+   **Example:** Alpha fires alone at eFP 5, reading FPr 5 straight off the identity range. A second unit joining for a summed 14 reads FPr 9 — more than either alone, less than the raw 14.
 
 **8.1.6**  Roll 1d6 + 1d8 + 1d12. Add FPr to the roll.
 
@@ -185,29 +185,29 @@ The full procedure for any fire combat action:
 ---------------------
 
 
-**8.4.1**  When a single unit fires, use its eFP directly as the FPr. No strip lookup is required regardless of the rFP value.
+**8.4.1**  Every fire attack determines its FPr from the Resolution Strip, whether one unit fires or several. Sum the eFP of everything firing and read the FPr from the band containing that total.
 
 .. container:: rule-guide
 
-   **Why:** Reconfirms, from the Resolution Strip's own section, the same single-firer exemption already stated in 8.1.5 — a lone attacker's eFP needs no compression because there's nothing yet to compress.
+   **Why:** Puts single and grouped fire through the same conversion so the same summed eFP always produces the same FPr. Exempting a lone firer would mean one unit at eFP 12 hit harder than two units summing 12, which would penalise the concentration of fire this section exists to reward.
 
-   **Example:** Alpha, firing alone, uses its eFP of 6 directly as FPr — no strip lookup, regardless of how high that 6 might otherwise look on the table.
+   **Example:** Alpha, firing alone at eFP 6, reads FPr 6 — the strip is the identity that low, so in practice no lookup is needed. Alpha firing alone at eFP 14 reads FPr 9, exactly as a two-unit group summing 14 would.
 
-**8.4.2**  When multiple units are combined into a fire group (Rule 8.3), always consult the Resolution Strip to determine the FPr. The strip applies logarithmic compression to concentrated fire, reflecting diminishing returns from massed volume. This ensures that dice remain meaningful at all firepower levels.
-
-.. container:: rule-guide
-
-   **Why:** Applies compression specifically, and only, to grouped fire, reflecting that massed fire has diminishing returns — ten rifles firing together don't inflict ten times the harm of one, and the strip's logarithmic shape is what keeps the dice roll meaningful even at very high summed rFP.
-
-   **Example:** A fire group's summed eFP of 24 doesn't add 24 to the dice roll — it converts to FPr 11 via the strip, reflecting the diminishing marginal value of each additional rifle in the group.
-
-**8.4.3**  The Resolution Strip is printed on the player aid card for quick reference. Summed values between listed entries round down to the nearest listed row (a summed eFP of 11 uses the row for 10, FPr 8). The strip is the identity up to 7 — compression only begins where massed fire does.
+**8.4.2**  The strip applies logarithmic compression above eFP 7, reflecting diminishing returns from massed volume. This ensures that dice remain meaningful at all firepower levels and fixes a ceiling no volume of fire can exceed.
 
 .. container:: rule-guide
 
-   **Why:** Gives the strip a simple, memorizable rounding rule — round down to the nearest listed row — so players don't need to interpolate between printed values during play, and confirms the strip does nothing at all below 8: compression starts exactly where grouped fire starts mattering.
+   **Why:** Massed fire has diminishing returns — ten rifles firing together don't inflict ten times the harm of one — and the strip's logarithmic shape is what keeps the three dice meaningful against even the heaviest attack the game can assemble.
 
-   **Example:** A fire group with a summed eFP of 11 (not itself a printed row) uses the row for 10, giving FPr 8 — the same value a group summing to exactly 10 would use.
+   **Example:** A fire group's summed eFP of 24 doesn't add 24 to the dice roll — it converts to FPr 11, reflecting the diminishing marginal value of each additional rifle in the group.
+
+**8.4.3**  The Resolution Strip is printed on the player aid card for quick reference. Each row covers a band of summed eFP, so no rounding or interpolation is required — find the band containing the total and read across. The strip is the identity up to 7, and reaches its maximum of FPr 12 at 36.
+
+.. container:: rule-guide
+
+   **Why:** Banded rows remove the interpolation step entirely: every possible summed eFP falls in exactly one band. The identity range covers ordinary single-unit fire, so most attacks need no lookup at all, while the ceiling of 12 keeps even a full three-unit stack at point-blank range from overwhelming the dice.
+
+   **Example:** A summed eFP of 14 falls in the 12–16 band, giving FPr 9 — the same as any other total in that band, with nothing to round.
 
 .. list-table::
    :header-rows: 1
@@ -229,25 +229,15 @@ The full procedure for any fire combat action:
      - 6
    * - 7
      - 7
-   * - 8
-     - 7
-   * - 9
+   * - 8–11
      - 8
-   * - 10
-     - 8
-   * - 12
+   * - 12–16
      - 9
-   * - 15
-     - 9
-   * - 18
+   * - 17–23
      - 10
-   * - 24
+   * - 24–35
      - 11
-   * - 30
-     - 11
-   * - 40
-     - 12
-   * - 50+
+   * - 36+
      - 12 (maximum)
 
 
@@ -423,21 +413,21 @@ The full procedure for any fire combat action:
 ------------------------
 
 
-**8.9.1**  Fire at range 1 (adjacent hex) receives a +2 bonus to eFP (applied before any Resolution Strip lookup, for grouped fire).
+**8.9.1**  Fire at range 1 (adjacent hex) receives a +2 bonus to eFP. The bonus is applied **once per firing unit**, not once per fire line, and is added before the Resolution Strip lookup (Rule 8.4.1).
 
 .. container:: rule-guide
 
-   **Why:** Rewards genuinely close engagement with a real, unconditional bonus rather than letting range-1 fire be treated the same as any other in-range shot — adjacency is dramatically more lethal than standing off even slightly.
+   **Why:** Rewards genuinely close engagement with a real, unconditional bonus rather than letting range-1 fire be treated the same as any other in-range shot — adjacency is dramatically more lethal than standing off even slightly. Pricing it per unit rather than per line keeps a three-line squad from collecting three times the bonus for the same act of closing to one hex.
 
-   **Example:** A fire line at range 1 gets +2 eFP before that value joins a fire group's sum or goes to the Resolution Strip — the bonus applies before any compression, not after.
+   **Example:** A squad with three fire lines at range 1 adds +2 to its own summed eFP, not +2 to each line. Two such squads firing together add +2 each, for +4 across the group, before that total goes to the strip.
 
-**8.9.2**  Fire at range 0 (same hex, close assault entry fire) receives a +3 bonus to eFP. See Section 9 for close assault procedure.
+**8.9.2**  Fire at range 0 (same hex, close assault entry fire) receives a +3 bonus to eFP, applied once per firing unit on the same basis as Rule 8.9.1. See Section 9 for close assault procedure.
 
 .. container:: rule-guide
 
    **Why:** Gives point-blank fire — same hex, specifically close assault's Entry Fire and Melee Continuation phases — an even larger bonus than merely-adjacent fire, matching the greater lethality of a fight happening in the exact same space.
 
-   **Example:** Fire resolved during close assault's Entry Fire Phase (Section 9), at range 0, gets +3 eFP — one point more than the range-1 adjacent bonus.
+   **Example:** Fire resolved during close assault's Entry Fire Phase (Section 9), at range 0, gets +3 eFP for the firing unit — one point more than the range-1 adjacent bonus, and likewise counted once, not per line.
 
 **8.9.3**  These bonuses represent the dramatically increased effectiveness of close-range fire.
 

@@ -220,7 +220,7 @@ See Rule 6.3.3.
 
    **Why:** Keeps a single, familiar results table doing all the outcome work across ranged fire, grenades, and now entry fire, rather than a bespoke melee-specific table.
 
-   **Example:** Alpha fires at eFP 9. Alone, that is FPr 9 (Rule 8.4.1). Rolling 1d6+1d8+1d12 for 12 gives a combat total of 21; against Bravo's Defence 5 with no cover (Rule 9.4.4) the margin is 16 → Casualty, read off the same Appendix C table used everywhere else in the book. Entry Fire is ordinary fire resolution (Rule 8.1.6) — the dice are always rolled.
+   **Example:** Alpha fires at eFP 9, reading FPr 8 from the Resolution Strip (Rule 8.4.1). Rolling 1d6+1d8+1d12 for 12 gives a combat total of 20; against Bravo's Defence 5 with no cover (Rule 9.4.4) the margin is 15 → Casualty, read off the same Appendix C table used everywhere else in the book. Entry Fire is ordinary fire resolution (Rule 8.1.6) — the dice are always rolled.
 
 **9.4.6**  If the defender is eliminated, the assault succeeds. If the attacker is eliminated, the assault fails and the attacker's counter is removed.
 

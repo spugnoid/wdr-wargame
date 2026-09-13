@@ -127,7 +127,7 @@ The following terms are used throughout this document. Each term is defined here
 
 **eFP —**  Effective Firepower. Firepower after range falloff and terrain modifiers have been applied.
 
-**FPr —**  Resolution FP. The value looked up on the Resolution Strip after summing eFP across a fire group. Used as the bonus added to the dice roll.
+**FPr —**  Resolution FP. The value read from the Resolution Strip for an attack's summed eFP, whether one unit fired or several. Used as the bonus added to the dice roll.
 
 **Falloff —**  The reduction in rFP as range increases, governed by the ⬡h and -f values on the counter.
 
@@ -329,7 +329,7 @@ With Deepest Regret... is designed so that a player can resolve the majority of 
 
 **1.5.1**  Information on the counter — not in a table:  Every fire line encodes base firepower, falloff interval, and falloff loss — the complete information needed to calculate effective fire at any range without a lookup. Vehicle counters carry all three armour facing values and the complete penetration curve. Leaders carry all four command stats. No chart lookup is required for routine combat resolution.
 
-**1.5.2**  What remains on the player aid card:  The resolution strip (rFP to FPr conversion for combined fire), result thresholds (memorised after a few games), terrain cover modifiers, and vehicle damage tables. These are the minimum necessary lookups. Everything else is on the counter.
+**1.5.2**  What remains on the player aid card:  The resolution strip (eFP to FPr conversion), result thresholds (memorised after a few games), terrain cover modifiers, and vehicle damage tables. These are the minimum necessary lookups. Everything else is on the counter.
 
 **1.5.3**  Counter size:  Counters are produced at 0.75 inch (19mm) or 1 inch (25.4mm) — significantly larger than the wargame industry standard of 0.5 inch (12.7mm). The larger size makes all counter information readable without magnification. At 1 inch a counter has approximately four times the area of a standard counter — sufficient to display multiple fire lines, all action values, armour facings, and defence and morale values in comfortable reading size.
 
