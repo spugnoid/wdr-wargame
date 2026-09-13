@@ -297,6 +297,10 @@ margin 14–18  ..........  8.6, App.C
 
 **CREW counter**  ..........  19.2.7, 19.2.7a
 
+sources: own bail-out, or fielded by the scenario  ..........  19.4.2a
+
+must rally before attempting a capture  ..........  19.4.2a, 10.6.7
+
 stats: Morale from the vehicle, Def 3, M5 F0 G1  ..........  19.2.7a
 
 single face; a Casualty is a physical break  ..........  19.2.7a, 10.4.3

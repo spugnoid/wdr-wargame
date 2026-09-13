@@ -238,7 +238,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
 ---------------------
 
 
-**19.4.1**  An enemy unit in the same hex as or adjacent to an ABANDONED vehicle may attempt capture by spending 1 AP.
+**19.4.1**  A CREW counter in the same hex as, or adjacent to, an ABANDONED vehicle may attempt capture for 1 AP. That single Action Point covers both moving into the vehicle's hex from an adjacent one and the attempt itself (Rule 19.4.3) — the capture is one action, not a Move followed by a second action.
 
 .. container:: rule-guide
 
@@ -254,7 +254,15 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
 
    **Example:** A rifle squad adjacent to an abandoned enemy tank cannot attempt to crew it at all — only a CREW counter of the capturing nation, representing trained tank crew, is eligible to try.
 
-**19.4.3**  Capture attempt: move the CREW counter into the vehicle hex (costs 1 AP). Roll 1d6 + the CREW counter's Morale modifier (Rule 15.2.1a) vs threshold 5.
+**19.4.2a**  Where CREW counters come from. A side has a CREW counter available in one of two ways: one of its own vehicles was abandoned and its crew bailed out (Rule 19.2.7), or the scenario fielded one at setup as a stated asset — replacement or recovery crew waiting on a vehicle, of which Rule 19.4.4's Beutepanzer specialists are the particular case. A CREW counter must also have **rallied**: one still carrying a ROUTING marker (Rule 19.2.8) is fleeing and may not attempt a capture until it rallies (Rules 10.6.6, 10.6.7).
+
+.. container:: rule-guide
+
+   **Why:** Says plainly where the one unit type capable of capturing a vehicle actually comes from, because Rule 19.4.2 restricts capture to CREW counters and the only rule that creates one is a bail-out — read alone, that means a side can never take an enemy tank until it has lost one of its own. That gate is deliberate for the bail-out case and historically apt: the men who take over an abandoned enemy vehicle are usually the crew of one just knocked out. But it should not be the only route, so a scenario may simply field a crew, exactly as Rule 19.4.4 already allows for Beutepanzer specialists. The rally requirement is not a new restriction, only a statement of one Section 10.6 already imposes: a routing unit flees on each activation and cannot spend its action on anything else.
+
+   **Example:** A German scenario that wants a recovery subplot lists "1 × CREW counter (replacement crew)" in its parameters, and that crew can go after an abandoned T-34 from Turn 1. Without such an asset the Germans must wait until one of their own vehicles is abandoned, its crew bails out, routs, and rallies — several turns, and a real cost.
+
+**19.4.3**  Capture attempt: with the CREW counter in the vehicle's hex, roll 1d6 + the CREW counter's Morale modifier (Rule 15.2.1a) vs threshold 5.
 
 .. container:: rule-guide
 
@@ -274,7 +282,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - Vehicle not operational this scenario — crew cannot figure out unfamiliar controls in time
 
 
-**19.4.4**  Special Beutepanzer (captured equipment) units: some scenarios may include dedicated captured-equipment crew counters that can attempt to crew enemy vehicles at only -1 penalty to the roll instead of the standard difficulty. This is scenario-defined.
+**19.4.4**  Special Beutepanzer (captured equipment) units: a scenario-fielded CREW counter (Rule 19.4.2a) may be designated captured-equipment specialists, attempting to crew enemy vehicles at only -1 penalty to the roll instead of the standard difficulty. This is scenario-defined.
 
 .. container:: rule-guide
 
