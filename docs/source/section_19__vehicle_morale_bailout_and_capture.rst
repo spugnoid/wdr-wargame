@@ -376,7 +376,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - 78.9
      - 119.6
      - 3
-     - M3
+     - M8
      - 4
      - 4 ⬡3 -1
      - 6
@@ -386,7 +386,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - 57.8
      - 69.0
      - 3
-     - M3
+     - M8
      - 3
      - 4 ⬡3 -1
      - 6
@@ -396,7 +396,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - 143.0
      - 137.4
      - 2
-     - M2
+     - M5
      - 4
      - 4 ⬡3 -1
      - 6
@@ -406,7 +406,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - — (casemate)
      - 119.6
      - 0
-     - M3
+     - M8
      - 4
      - 3 ⬡3 -1
      - 6
@@ -416,7 +416,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - 55.8
      - 72.2
      - 3
-     - M3
+     - M8
      - 4
      - 3 ⬡3 -1
      - 5
@@ -426,7 +426,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - 146.0
      - 119.8
      - 3
-     - M3
+     - M8
      - 4
      - 3 ⬡3 -1
      - 5
@@ -436,7 +436,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - 129.1
      - 72.2
      - 1
-     - M2
+     - M5
      - 4
      - 3 ⬡3 -1
      - 5
@@ -446,7 +446,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - — (casemate)
      - 119.8
      - 0
-     - M3
+     - M8
      - 4
      - 3 ⬡3 -1
      - 5
@@ -456,7 +456,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - 89.0
      - 77.9
      - 3
-     - M3
+     - M8
      - 4
      - 4 ⬡3 -1
      - 6
@@ -466,7 +466,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - 93.6
      - 117.5
      - 3
-     - M3
+     - M8
      - 4
      - 4 ⬡3 -1
      - 6
@@ -476,7 +476,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - — (no turret)
      - —
      - —
-     - M4
+     - M10
      - —
      - 3 ⬡3 -1
      - 5
@@ -486,7 +486,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - 30.5
      - 59.3
      - 3
-     - M4
+     - M10
      - 2
      - 3 ⬡3 -1
      - 5

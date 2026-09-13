@@ -49,7 +49,7 @@ H.1  Infantry and Weapon Team Roster
      - omit (rFP too low)
      - 8
      - 5
-     - M2
+     - M5
      - F1
      - G3
    * - Grenadier Squad (reduced)
@@ -62,7 +62,7 @@ H.1  Infantry and Weapon Team Roster
      - —
      - 6
      - 5
-     - M2
+     - M5
      - F1
      - G2
    * - Panzergrenadier Squad
@@ -75,7 +75,7 @@ H.1  Infantry and Weapon Team Roster
      - ≡ 2 ⬡3 -1
      - 9
      - 6
-     - M2
+     - M5
      - F1
      - G4
    * - Panzergrenadier Squad (reduced)
@@ -88,7 +88,7 @@ H.1  Infantry and Weapon Team Roster
      - —
      - 7
      - 6
-     - M2
+     - M5
      - F1
      - G3
    * - MG42 HMG Team
@@ -127,7 +127,7 @@ H.1  Infantry and Weapon Team Roster
      - ≡ 4 ⬡1 -1
      - 8
      - 6
-     - M2
+     - M5
      - F1
      - G3
    * - Guards Rifle Squad (reduced)
@@ -140,7 +140,7 @@ H.1  Infantry and Weapon Team Roster
      - —
      - 6
      - 6
-     - M2
+     - M5
      - F1
      - G2
    * - Rifle Squad (Pattern A)
@@ -153,7 +153,7 @@ H.1  Infantry and Weapon Team Roster
      - ≡ 3 ⬡2 -1
      - 8
      - 5
-     - M2
+     - M5
      - F1
      - G3
    * - Rifle Squad (Pattern A) (reduced)
@@ -166,7 +166,7 @@ H.1  Infantry and Weapon Team Roster
      - —
      - 6
      - 5
-     - M2
+     - M5
      - F1
      - G2
    * - Rifle Squad (Pattern B)
@@ -179,7 +179,7 @@ H.1  Infantry and Weapon Team Roster
      - ≡ 3 ⬡2 -1
      - 8
      - 5
-     - M2
+     - M5
      - F1
      - G3
    * - Rifle Squad (Pattern B) (reduced)
@@ -192,7 +192,7 @@ H.1  Infantry and Weapon Team Roster
      - —
      - 6
      - 5
-     - M2
+     - M5
      - F1
      - G2
    * - DP-28 LMG Team
@@ -231,7 +231,7 @@ H.1  Infantry and Weapon Team Roster
      - omit (rFP too low)
      - 9
      - 5
-     - M2
+     - M5
      - F1
      - G3
    * - Rifle Squad (reduced)
@@ -244,7 +244,7 @@ H.1  Infantry and Weapon Team Roster
      - —
      - 7
      - 5
-     - M2
+     - M5
      - F1
      - G2
    * - Rifle Section
@@ -257,7 +257,7 @@ H.1  Infantry and Weapon Team Roster
      - omit (rFP too low)
      - 8
      - 5
-     - M2
+     - M5
      - F1
      - G3
    * - Rifle Section (reduced)
@@ -270,7 +270,7 @@ H.1  Infantry and Weapon Team Roster
      - —
      - 6
      - 5
-     - M2
+     - M5
      - F1
      - G2
    * - Rifle Squad
@@ -283,7 +283,7 @@ H.1  Infantry and Weapon Team Roster
      - —
      - 10
      - 5
-     - M2
+     - M5
      - F1
      - G3
    * - Rifle Squad (reduced)
@@ -296,7 +296,7 @@ H.1  Infantry and Weapon Team Roster
      - —
      - 8
      - 5
-     - M2
+     - M5
      - F1
      - G2
    * - Light Machine Gun Squad
@@ -387,7 +387,7 @@ H.1  Infantry and Weapon Team Roster
      - —
      - 4
      - 3
-     - M2
+     - M5
      - F1
      - G2
    * - Home Guard Squad (reduced)
@@ -400,7 +400,7 @@ H.1  Infantry and Weapon Team Roster
      - —
      - 2
      - 3
-     - M2
+     - M5
      - F1
      - G1
 
@@ -721,6 +721,14 @@ H.2  Vehicle Armour Roster
      - 35.2
      - 36.1
      - 52.8
+     - —
+     - —
+   * - T-34/85 (late 1943)
+     - Hull
+     - Top
+     - 12.0
+     - 12.2
+     - 20.0
      - —
      - —
    * - KV-1S

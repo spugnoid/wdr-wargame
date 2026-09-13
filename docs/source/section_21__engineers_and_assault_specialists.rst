@@ -21,7 +21,7 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
 
    **Why:** Engineers trade raw mobility for close-combat and specialist capability — the low M# reflects the weight of demolition and breaching equipment, while the high G# and Defence reflect training and gear specifically suited to close-quarters and fortification assault.
 
-   **Example:** Alpha's engineer squad moves at only M1 due to its equipment load, but brings G5 into a close assault — far higher than a standard rifle squad's assault rating.
+   **Example:** Alpha's engineer squad moves at only M2 due to its equipment load, but brings G5 into a close assault — far higher than a standard rifle squad's assault rating.
 
 .. list-table::
    :header-rows: 1
@@ -31,7 +31,7 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
      - **Value**
      - **Notes**
    * - M#
-     - M1
+     - M2
      - Heavy equipment limits speed
    * - F#
      - F1
@@ -242,7 +242,7 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
 
    **Why:** Combining a movement penalty with a casualty risk makes minefields a genuine area-denial tool rather than just difficult terrain — units are both slowed down and put at risk simply by choosing to cross, which is what made real minefields so effective at channeling attacks.
 
-   **Example:** Squad Bravo, with M4, spends 3 of its 4 movement points just entering a single minefield hex, and risks a mine strike the moment it does.
+   **Example:** Squad Bravo, with M5, spends 3 of its 5 movement points just entering a single minefield hex, and risks a mine strike the moment it does.
 
 **21.4.2**  Mine strike: when any non-engineer unit enters a minefield hex, roll 1d6: on 1-2, the unit takes a Casualty result (mine strike). On 3-6, the unit passes safely.
 

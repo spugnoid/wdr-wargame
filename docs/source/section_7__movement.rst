@@ -11,15 +11,15 @@ Section 7 — Movement
 
    **Why:** Ties movement allowance directly to the printed M# stat, keeping "how far can this unit move" a single, countable number rather than a formula, and names this default mode Advance Movement so it can be cross-referenced the same way its two declared alternatives (Cautious, Double-Timed) already are.
 
-   **Example:** A unit with M2 may move up to 2 hexes in a single Move action under ordinary Advance Movement; it may choose to move fewer, but never more, in that one action.
+   **Example:** A unit with M5 may move up to 5 hexes in a single Move action under ordinary Advance Movement; it may choose to move fewer, but never more, in that one action.
 
-**7.1.2**  One impulse represents approximately 20-25 seconds of real time. At a marching pace of tactical double time (200 yards per minute) — a historical marching cadence, not to be confused with the declared Double-Timed Movement of Rule 7.4 — a squad can cover roughly 70-80 yards — approximately 2 hexes at 40 yards per hex. M2 is therefore the standard infantry movement allowance under Advance Movement.
+**7.1.2**  A Move action's allowance represents that unit's continuous movement for as long as it remains active — since a Regular Move already ends the unit's turn (Rule 6.3.2), that span runs to the front end of one game turn (Rule 2.2.1: approximately 2 to 5 minutes), not to the shorter span of a single impulse. At an ordinary marching pace of roughly 100 yards per minute — half of Double-Timed Movement's own double-time pace (Rule 7.4: 200 yards per minute) — a squad covers roughly 200 yards over the front 2 minutes of a turn: 5 hexes at 40 yards per hex. M5 is therefore the standard infantry movement allowance under Advance Movement.
 
 .. container:: rule-guide
 
-   **Why:** Grounds the M2 standard in real-world pacing — roughly 70-80 yards per 20-25-second impulse at double time — so the movement scale isn't an arbitrary game number but a deliberate translation of historical infantry tempo.
+   **Why:** Grounds the M5 standard in real-world pacing — roughly 200 yards over the front end of a 2-5 minute turn at ordinary marching pace — so the movement scale isn't an arbitrary game number but a deliberate translation of historical infantry tempo, anchored to the same double-time figure Double-Timed Movement (Rule 7.4) already uses at twice the rate.
 
-   **Example:** An M2 rifle squad's 2-hex move represents a squad jogging roughly 70-80 yards in the ~20-25 seconds one impulse abstracts, consistent with tactical double time at 40 yards per hex.
+   **Example:** An M5 rifle squad's 5-hex move represents a squad marching roughly 200 yards over about 2 minutes, consistent with ordinary marching pace at 40 yards per hex.
 
 **7.1.3**  Movement allowance by unit type:
 
@@ -27,7 +27,7 @@ Section 7 — Movement
 
    **Why:** Collects every unit type's movement rate in one place so a player never has to derive M# from first principles — heavier weapons and deployed guns are slower or immobile by design, reflecting their real weight and setup requirements.
 
-   **Example:** A mobile HMG team (M1) moves half as far per activation as a rifle squad (M2); once deployed, that same HMG team is M0 and cannot move at all until it limbers (Rule 7.6.4).
+   **Example:** A mobile HMG team (M2) moves markedly less far per activation than a rifle squad (M5); once deployed, that same HMG team is M0 and cannot move at all until it limbers (Rule 7.6.4).
 
 .. list-table::
    :header-rows: 1
@@ -37,31 +37,31 @@ Section 7 — Movement
      - **M#**
      - **Notes**
    * - Rifle squad
-     - M2
+     - M5
      - Standard tactical bound
    * - SMG squad
-     - M2
+     - M5
      - Same rate, lighter weapon load
    * - Panzergrenadier squad
-     - M2
+     - M5
      - Same rate, assault doctrine
    * - LMG team
-     - M2
-     - Weapon slows but still two hexes
+     - M5
+     - Weapon slows but still full rate
    * - HMG team (mobile)
-     - M1
+     - M2
      - Heavy weapon significantly impedes
    * - Mortar team (mobile)
-     - M1
+     - M2
      - Same
    * - HMG / Mortar team (deployed)
      - M0
      - Cannot move while deployed
    * - Leader
-     - M3
+     - M8
      - Lighter load, higher initiative
    * - Sniper team
-     - M1
+     - M2
      - Deliberate, concealed movement — snipers do not run (Section 20)
 
 
@@ -71,7 +71,7 @@ Section 7 — Movement
 
    **Why:** Prevents a unit from being stranded by a single expensive hex that happens to exceed its entire movement allowance — forbidding entry into terrain costlier than a unit's full M# would be far more disruptive than simply letting the activation end there.
 
-   **Example:** An M2 unit facing a Dense Woods hex (3 MP) may still enter it, spending its entire activation's worth of MP on that one hex, rather than being forbidden from moving into terrain costlier than its full M#.
+   **Example:** An HMG team (M2) facing a Dense Woods hex (3 MP) may still enter it, spending its entire activation's worth of MP on that one hex, rather than being forbidden from moving into terrain costlier than its full M#.
 
 **7.1.5**  Status effects on movement: Suppressed units move at half M# (round down, minimum 1). Pinned units cannot move.
 
@@ -79,13 +79,13 @@ Section 7 — Movement
 
    **Why:** Applies the same two ranged-fire statuses (Suppressed, Pinned) to movement specifically, since a unit keeping its head down or pinned in place has an obviously reduced — or zero — capacity to relocate.
 
-   **Example:** A Suppressed M2 unit moves at half M#, rounded down: 1 hex, not 2. A Pinned unit of any M# cannot move at all this turn.
+   **Example:** A Suppressed M5 unit moves at half M#, rounded down: 2 hexes, not 5. A Pinned unit of any M# cannot move at all this turn.
 
 7.2  Terrain Movement Costs
 ---------------------------
 
 
-Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per activation. Each hex entered costs the MP listed below.
+Movement costs are in Movement Points (MP). Standard infantry has M5 = 5 MP per activation. Each hex entered costs the MP listed below.
 
 .. list-table::
    :header-rows: 1
@@ -114,7 +114,7 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
      - Floors above ground have no separate entry cost — see Rule 7.2a
    * - Light woods
      - 2
-     - Full activation for M2 unit
+     - Noticeable cost, well within a standard M5 unit's budget
    * - Hedgerow (hexside crossing)
      - +1
      - Added to cost of hex being entered (open hex through hedgerow = 2 MP total)
@@ -126,7 +126,7 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
      - Wading
    * - Dense woods
      - 3
-     - Exceeds M2 — entire activation consumed
+     - Exceeds the M2 rate of HMG/Mortar/Sniper teams — full activation for them; leaves 2 MP for a standard M5 unit
    * - Wall / fence (hexside crossing)
      - +1
      - Added to cost of hex being entered
@@ -154,17 +154,17 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
 
    **Why:** Scales the road bonus to the mover's own M# (M#+1) rather than a flat bonus, so a fast unit and a slow unit both gain proportionally from moving in a column down a road, instead of the flat-bonus version that used to triple a slow unit's speed while barely helping a fast one (see the note quoted just below this rule).
 
-   **Example:** An M1 HMG team moving entirely along road hexes gets M1+1 = 2 hexes that activation. An M2 rifle squad on the same road gets M2+1 = 3 hexes — each benefits by exactly one extra hex, not by a fixed multiple.
+   **Example:** An M2 HMG team moving entirely along road hexes gets M2+1 = 3 hexes that activation. An M5 rifle squad on the same road gets M5+1 = 6 hexes — each benefits by exactly one extra hex, not by a fixed multiple.
 
-*NOTE: earlier drafts gave a flat 3 hexes on roads, which tripled an M1 weapon team's speed while giving an M2 squad only 50% — M#+1 scales the benefit to the mover.*
+*NOTE: an earlier draft considered a flat hex bonus on roads instead of the current M#+1 formula — a flat bonus disproportionately helps slow units and barely helps fast ones; M#+1 scales the benefit to the mover instead.*
 
-**7.2.2**  Elevation interaction example: a unit with M2 moving uphill one level into open ground costs 1 (terrain) + 1 (elevation) = 2 MP — the full activation for one hex. Two levels uphill in one activation is impossible for a standard M2 unit.
+**7.2.2**  Elevation interaction example: a mobile HMG team (M2) moving uphill one level into open ground costs 1 (terrain) + 1 (elevation) = 2 MP — the full activation for that unit. Two levels uphill in one activation is impossible for an M2 unit. A standard M5 rifle squad, by contrast, can climb two levels of open ground for 1 (terrain) + 1 (elevation) = 2 MP per hex, 4 MP total, with 1 MP still to spare.
 
 .. container:: rule-guide
 
    **Why:** Works through a concrete elevation-plus-terrain stacking case so the "costs add" principle — terrain cost plus elevation cost, both charged to the same hex entered — isn't left to be inferred from the terrain table alone.
 
-   **Example:** An M2 unit moving uphill one level into open ground pays 1 (open ground) + 1 (elevation gain) = 2 MP for that single hex — its entire activation, even though open ground alone would only cost 1.
+   **Example:** An M2 HMG team moving uphill one level into open ground pays 1 (open ground) + 1 (elevation gain) = 2 MP for that single hex — its entire activation, even though open ground alone would only cost 1. An M5 rifle squad making the identical climb still has 3 MP left over for further movement.
 
 **7.2.3**  *Superseded — see Rule 7.2a.* Climbing within a building is no longer priced in Movement Points; it is its own AP-costing action (Rule 6.3.2, Change Floor).
 
@@ -215,9 +215,9 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
 
 .. container:: rule-guide
 
-   **Why:** Bounds an Assault Move to exactly 1 hex regardless of M#, so a fast unit (M3 leader) and a slow one (M1 HMG team) get the identical, deliberately modest distance from this part-action — the Assault economy trades reach for flexibility across the board, not just for slow units.
+   **Why:** Bounds an Assault Move to exactly 1 hex regardless of M#, so a fast unit (M8 leader) and a slow one (M2 HMG team) get the identical, deliberately modest distance from this part-action — the Assault economy trades reach for flexibility across the board, not just for slow units.
 
-   **Example:** A leader (M3) and an HMG team (M1) both move exactly 1 hex if either takes an Assault Move — the leader's higher printed M# gives it no extra distance under this part-action.
+   **Example:** A leader (M8) and an HMG team (M2) both move exactly 1 hex if either takes an Assault Move — the leader's higher printed M# gives it no extra distance under this part-action.
 
 **7.3.3**  A unit may take an Assault Move as either its first or second part-action; two Assault Moves in the same turn are legal (2 hexes total across two impulses) but for most infantry cover no more ground than a single Regular Move (Rule 6.3.2) at twice the AP cost.
 
@@ -225,7 +225,7 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
 
    **Why:** Allows two Assault Moves back-to-back, since nothing in the Assault economy forbids taking the same kind of part-action twice, while being upfront that this rarely beats a single Regular Move in ground covered — so players don't mistake the option for a hidden speed advantage.
 
-   **Example:** An M2 rifle squad takes Assault Move, then Assault Move again (2 hexes total across two separate 1-AP activations) — the same 2 hexes a single Regular Move would have covered for half the AP cost.
+   **Example:** An M5 rifle squad takes Assault Move, then Assault Move again (2 hexes total across two separate 1-AP activations) — a small fraction of the 5 hexes a single Regular Move would have covered, for double the AP cost.
 
 7.3a  Cautious Movement
 -----------------------
@@ -238,7 +238,7 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
 
    **Why:** Gives Cautious Movement the same "ignore the cost of one hex" shape Rule 7.1.4 already grants every Move action, but caps it at a single hex or floor no matter how fast the unit's printed M# is — the entire point is deliberately slow, careful movement, not a cost-free bargain on an expensive hex.
 
-   **Example:** An M2 unit in a dense woods hex (3 MP) declares Cautious Movement to enter an adjacent Dense Woods hex — the 3 MP cost is irrelevant, since Cautious Movement never spends MP at all, but it still only reaches that one hex this activation, exactly as a unit with no terrain in its way would.
+   **Example:** An M5 unit in a dense woods hex (3 MP) declares Cautious Movement to enter an adjacent Dense Woods hex — the 3 MP cost is irrelevant, since Cautious Movement never spends MP at all, but it still only reaches that one hex this activation, exactly as a unit with no terrain in its way would.
 
 **7.3a.2**  Place the unit's MOVED/FIRED marker CAUTIOUS-side up. The unit gains +2 CON (concealment) for the remainder of this turn. Cautious Movement is only ever taken as a Regular Move action, which already ends the unit's turn as MOVED/FIRED (Rule 6.3.2) — so this one physical marker, shown CAUTIOUS-side up, carries both facts at once (Rule 3.6), the same consolidation Double-Timed Movement's marker uses (Rule 7.4.2).
 
@@ -274,7 +274,7 @@ Movement costs are in Movement Points (MP). Standard infantry has M2 = 2 MP per 
 
    **Why:** Is the one case where a Move action gains extra distance (M#+1) rather than merely avoiding a penalty, in exchange for the concealment cost defined in 7.4.2 — speed traded directly for being seen.
 
-   **Example:** An M2 unit declaring Double-Timed Movement may move up to 3 hexes (M#+1) this activation, instead of the normal 2.
+   **Example:** An M5 unit declaring Double-Timed Movement may move up to 6 hexes (M#+1) this activation, instead of the normal 5.
 
 **7.4.2**  Place the unit's MOVED/FIRED marker DOUBLE-TIMED-side up. The unit suffers -2 CON (concealment) for the remainder of this turn. Double-Timed Movement is only ever taken as a Regular Move action, which already ends the unit's turn as MOVED/FIRED (Rule 6.3.2) — so this one physical marker, shown DOUBLE-TIMED-side up, carries both facts at once (Rule 3.6).
 

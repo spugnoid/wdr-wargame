@@ -476,7 +476,7 @@ Casemate vehicles (TRAV 0) never receive a TRAVERSED marker; they have no separa
 
    **Why:** Sets movement allowance by vehicle class rather than individually per counter, since real vehicles of the same broad type (light tank, medium tank, heavy tank) had genuinely similar road speeds — one class-based M# value captures that pattern without needing a bespoke number for every single vehicle.
 
-   **Example:** A Panzer IV and a T-34, both medium tanks, share the same M3 movement allowance under this table, even though they're different vehicles from different nations — their class, not their specific model, determines the printed M#.
+   **Example:** A Panzer IV and a T-34, both medium tanks, share the same M8 movement allowance under this table, even though they're different vehicles from different nations — their class, not their specific model, determines the printed M#.
 
 .. list-table::
    :header-rows: 1
@@ -486,25 +486,25 @@ Casemate vehicles (TRAV 0) never receive a TRAVERSED marker; they have no separa
      - **M#**
      - **Notes**
    * - Light tank / armoured car
-     - M4
+     - M10
      - Fast, lightly armoured
    * - Medium tank
-     - M3
+     - M8
      - Standard — Panzer IV, T-34, Sherman
    * - Heavy tank
-     - M2
+     - M5
      - Tiger, KV-1 — powerful but slow
    * - Tank destroyer (turreted)
-     - M3
+     - M8
      - Same as medium tank
    * - Tank destroyer (casemate)
-     - M3
+     - M8
      - Pivot costs extra MP — see Rule 17.4.4
    * - Half-track
-     - M3
+     - M8
      - Tracked mobility, wheeled terrain limits
    * - Truck / soft vehicle
-     - M3
+     - M8
      - Road only effectively — see terrain table
 
 

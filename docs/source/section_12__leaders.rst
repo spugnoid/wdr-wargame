@@ -30,7 +30,7 @@ Leader counters use a diamond symbol (◆) and display four stats in addition to
      - Added to attacker's grenade rFP during close assault when leader is in hex.
 
 
-All leaders have M3 F1 — movement allowance 3, fire rate 1. Leaders move faster than squads (lighter load, higher initiative) and rarely fire directly.
+All leaders have M8 F1 — movement allowance 8, fire rate 1. Leaders move faster than squads (lighter load, higher initiative) and rarely fire directly.
 
 12.2  Command Rating and Radius
 -------------------------------
@@ -210,7 +210,7 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
      - **Effect**
      - **Range**
    * - Move
-     - Leader moves up to M3 hexes following terrain movement costs.
+     - Leader moves up to M8 hexes following terrain movement costs.
      - N/A
    * - Direct Fire
      - Add CMD rating as bonus eFP to one fire group this impulse. Applied after falloff and terrain, before Resolution Strip.

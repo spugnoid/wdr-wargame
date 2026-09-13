@@ -58,7 +58,7 @@ Units may be in one of the following status levels at any time. Status is tracke
 
    **Why:** Bundles three separate penalties — movement, fire, and reaction — into a single status so one bad result (being Suppressed) has a broad, felt effect across everything the unit tries to do, not just one narrow stat.
 
-   **Example:** A Suppressed Alpha with M2 moves at M1 (round down, Rule 2.5.1), fires at -2 rFP below its normal eFP, and reacts at -1 rFP if it spends RP — all three penalties apply from the same single status marker.
+   **Example:** A Suppressed Alpha with M5 moves at M2 (round down, Rule 2.5.1), fires at -2 rFP below its normal eFP, and reacts at -1 rFP if it spends RP — all three penalties apply from the same single status marker.
 
 **10.2.2**  A Suppressed unit's effective Defence is reduced by 2.
 
@@ -94,7 +94,7 @@ Units may be in one of the following status levels at any time. Status is tracke
 
    **Why:** Makes Pinned a strictly harsher version of Suppressed's mobility and fire penalties (Rule 10.2.1) — no movement at all rather than halved, and a steeper eFP cut — matching Pinned's role as the next status up the severity ladder.
 
-   **Example:** A Pinned unit with M2 cannot move at all this turn, unlike a merely Suppressed unit which could still move at half rate — and its fire suffers -4 eFP instead of Suppressed's -2.
+   **Example:** A Pinned unit with M5 cannot move at all this turn, unlike a merely Suppressed unit which could still move at half rate — and its fire suffers -4 eFP instead of Suppressed's -2.
 
 **10.3.2**  A Pinned unit cannot spend RP for opportunity fire or other reactions.
 

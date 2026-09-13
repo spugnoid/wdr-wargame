@@ -55,7 +55,7 @@ A scenario declares exactly one Weather condition in its scenario parameters, fi
 
    **Why:** Foot movement through mud is markedly slower without the same risk of getting flatly stuck a heavy vehicle faces — a flat cost surcharge (the same additive idiom Rule 4.1.3 already uses for hedgerow crossings) captures that without adding a chance-based mechanic infantry don't need.
 
-   **Example:** A squad with M2 crossing open ground (normally 1 MP/hex) under Rain/Mud pays 2 MP per hex instead, reaching only 1 hex this activation instead of the usual 2.
+   **Example:** A squad with M5 crossing open ground (normally 1 MP/hex) under Rain/Mud pays 2 MP per hex instead, reaching only 2 hexes this activation instead of the usual 5.
 
 24.3  Snow
 ----------
@@ -75,7 +75,7 @@ A scenario declares exactly one Weather condition in its scenario parameters, fi
 
    **Why:** Deep snow slows everyone down fairly uniformly, which a flat surcharge captures cleanly, but it doesn't trap a tracked vehicle the way wet mud does — giving Snow its own distinct movement profile (a cost, not a risk) rather than reusing Mud's bog check keeps the two precipitation types mechanically distinguishable by what actually happens on the ground, not just by name.
 
-   **Example:** A tank with M4 (vehicle movement allowance) under Snow spends 4 MP to move 3 open-ground hexes (1 base + 1 Snow surcharge, per hex) instead of the usual 4 hexes — slower, but never at risk of the BOGGED marker Rain/Mud's mud can inflict on it.
+   **Example:** A light tank/armoured car (M10, vehicle movement allowance) under Snow spends 10 MP to move 5 open-ground hexes (1 base + 1 Snow surcharge, per hex) instead of the usual 10 hexes — slower, but never at risk of the BOGGED marker Rain/Mud's mud can inflict on it.
 
 24.4  Fog
 ---------

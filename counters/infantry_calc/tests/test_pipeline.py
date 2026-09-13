@@ -86,7 +86,7 @@ class TestLoadUnits:
         assert gren_f.quality == "regular"
         assert gren_f.manpower_full == 10
         assert gren_f.manpower_reduced == 5
-        assert gren_f.m_number == 2
+        assert gren_f.m_number == 5
         assert gren_f.f_number == 1
         assert gren_f.g_number == 3
         assert gren_f.verify_status == "ANCHOR"
@@ -185,7 +185,7 @@ class TestWriteInfantryRosterCsv:
         assert row["fire_line_3"] == "omit (rFP too low)"
         assert row["defence"] == "8"
         assert row["morale"] == "5"
-        assert row["m_number"] == "2"
+        assert row["m_number"] == "5"
         assert row["f_number"] == "1"
         assert row["g_number"] == "3"
 

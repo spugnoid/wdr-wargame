@@ -705,7 +705,7 @@ VISIBLE state  ..........  14.1
 
 deployed M0  ..........  3.3.1
 
-mobile M1  ..........  3.3.1
+mobile M2  ..........  3.3.1
 
 **I**
 
@@ -765,7 +765,7 @@ action list  ..........  12.5
 
 CMD rating  ..........  12.2
 
-M3 F1 standard stats  ..........  12.1
+M8 F1 standard stats  ..........  12.1
 
 OBS rating  ..........  12.1
 
@@ -873,7 +873,7 @@ vehicle terrain costs  ..........  17.6.2
 
 derived from impulse duration  ..........  7.1.2, E.18
 
-M2 standard infantry  ..........  7.1.2
+M5 standard infantry  ..........  7.1.2
 
 **Multiple attack step-up**  ..........  8.8
 

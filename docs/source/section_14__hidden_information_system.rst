@@ -169,7 +169,7 @@ With Deepest Regret... uses a physical hidden information system to model the fo
 
    **Why:** Holds dummy movement to the same physical constraints as a real unit's, since a dummy that could cross terrain a real unit couldn't (or move farther than the real unit's M# allows) would give away its unreality by its route alone.
 
-   **Example:** A dummy spawned from a unit with M2 cannot move 4 hexes in one impulse or cross an impassable cliff hex — its movement has to look exactly as constrained as the real unit's would.
+   **Example:** A dummy spawned from a unit with M5 cannot move 6 hexes in one impulse or cross an impassable cliff hex — its movement has to look exactly as constrained as the real unit's would.
 
 14.5  Going Hidden
 ------------------
@@ -233,7 +233,7 @@ With Deepest Regret... uses a physical hidden information system to model the fo
 
    **Why:** Requires every marker in the group — real and dummy alike — to obey the exact same movement-legality envelope, so a sharp-eyed opponent can't deduce the real unit just by noticing one marker took an implausible or impossible route that only the "cheating" dummies could get away with.
 
-   **Example:** If Alpha has M2, none of its three markers this impulse — real or dummy — can end up more than 2 hexes away along a legal route; an opponent who sees one marker sitting 3 hexes out would know something was wrong, so the rule guarantees that never happens.
+   **Example:** If Alpha has M5, none of its three markers this impulse — real or dummy — can end up more than 5 hexes away along a legal route; an opponent who sees one marker sitting 6 hexes out would know something was wrong, so the rule guarantees that never happens.
 
 *NOTE: earlier drafts placed the real counter into its slot in the open, spawned visibly-empty dummy covers, and moved the real marker before the dummies existed — in face-to-face play the opponent simply watched, and the three-marker uncertainty this system exists to create never existed. Every leak has the same fix: assignment happens out of sight, and everything that could distinguish group members is committed simultaneously under a shared constraint.*
 

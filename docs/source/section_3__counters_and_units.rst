@@ -99,7 +99,7 @@ The upper right corner of each counter shows three action values:
 
    **Why:** Makes M0 a normal, expected value rather than an error case — a unit's mobility is a state, and a deployed heavy weapon simply has zero of it until redeployed.
 
-   **Example:** A deployed HMG team prints M0 F3 G1 — it can still fire and use grenades in an assault, but cannot move until it's limbered (switching to its M1 F0 G0 mobile profile).
+   **Example:** A deployed HMG team prints M0 F3 G1 — it can still fire and use grenades in an assault, but cannot move until it's limbered (switching to its M2 F0 G0 mobile profile).
 
 **3.3.2**  F# — Rate of Fire.  The number of full-effect fire actions the unit may take per turn while stationary, read directly from Rule 6.6.2's table: **1** for the great majority of units — a single Regular Fire ends their turn (Rule 6.3.2), with the reduced-effect Assault economy (Rule 6.3.3) as their only path to a second, weaker shot — **2** for a bipod- or light-tripod-mounted MG or a deployed mortar, **3** for a tripod-deployed MG. A unit that moves this turn never fires at more than F1 regardless of its printed value (Rule 6.6.4).
 
@@ -125,31 +125,31 @@ The upper right corner of each counter shows three action values:
      - **Standard Action Values**
      - **Notes**
    * - Rifle squad
-     - M2 F1 G3
+     - M5 F1 G3
      -
    * - SMG squad
-     - M2 F1 G3
+     - M5 F1 G3
      -
    * - Panzergrenadier squad
-     - M2 F1 G4
+     - M5 F1 G4
      - Higher grenade value reflects assault doctrine
    * - Guards rifle squad
-     - M2 F1 G4
+     - M5 F1 G4
      -
    * - LMG team
-     - M2 F2 G2
+     - M5 F2 G2
      - Bipod F# (Rule 6.6.2) — sustained fire while stationary
    * - HMG team (deployed)
      - M0 F3 G1
      - Cannot move while deployed; tripod F# (Rule 6.6.2)
    * - HMG team (mobile)
-     - M1 F0 G0
+     - M2 F0 G0
      - Cannot fire while mobile
    * - Sniper team
-     - M1 F1 G0
+     - M2 F1 G0
      - One careful shot per turn
    * - Leader
-     - M3 F1 G0
+     - M8 F1 G0
      - High mobility, rarely fires directly
 
 

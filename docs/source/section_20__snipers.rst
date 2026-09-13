@@ -23,7 +23,7 @@ Sniper rules differ from standard infantry fire in three fundamental ways: they 
 
    **Why:** Centralises the sniper's baseline numbers in one reference block so quality and nationality differences (Rule 20.7) can be expressed as deltas from a single known standard, rather than restating the full stat line for every variant.
 
-   **Example:** Alpha's sniper counter reads M1/F1/G0 with fire line ╌○ 3 ⬡6 -1 — one careful hex of movement, one shot, no close assault capability, and a low-volume but precise attack.
+   **Example:** Alpha's sniper counter reads M2/F1/G0 with fire line ╌○ 3 ⬡6 -1 — up to two careful hexes of movement, one shot, no close assault capability, and a low-volume but precise attack.
 
 .. list-table::
    :header-rows: 1
@@ -33,7 +33,7 @@ Sniper rules differ from standard infantry fire in three fundamental ways: they 
      - **Value**
      - **Notes**
    * - M#
-     - M1
+     - M2
      - Careful movement only — snipers do not run
    * - F#
      - F1
@@ -232,7 +232,7 @@ Sniper rules differ from standard infantry fire in three fundamental ways: they 
 
    **Why:** A free, pre-detection reposition models the practiced sniper habit of "shoot and scoot" — moving immediately after firing was standard doctrine precisely because staying in the firing position invited counter-fire the instant the shot was heard.
 
-   **Example:** Alpha's sniper fires, then immediately moves 1 hex (its M1 allowance) into nearby cover before the opponent even rolls for detection — the detection roll that follows is now made against the new position, not the one that actually fired.
+   **Example:** Alpha's sniper fires, then immediately moves up to 2 hexes (its M2 allowance) into nearby cover before the opponent even rolls for detection — the detection roll that follows is now made against the new position, not the one that actually fired.
 
 **20.4.2**  The detection roll is made against the sniper's new position CON value, not the firing position.
 
@@ -276,7 +276,7 @@ Sniper rules differ from standard infantry fire in three fundamental ways: they 
 
    **Why:** A blanket movement penalty represents troops moving more cautiously — using cover, pausing to check open ground — when they know a sniper might be watching, rather than the game tracking exactly which soldier is exposed to the sniper's field of view.
 
-   **Example:** Squad Bravo normally moves at M4 but is within 6 hexes of an active CONTACT marker, so its move this turn is capped at M3.
+   **Example:** Squad Bravo normally moves at M5 but is within 6 hexes of an active CONTACT marker, so its move this turn is capped at M4.
 
 **20.5.3**  Double-Timed Movement unavailable: no unit may declare Double-Timed Movement while a sniper CONTACT marker is within 6 hexes.
 
