@@ -1,4 +1,4 @@
-Appendix F — Index
+Appendix E — Index
 ==================
 
 All significant rules, mechanics, terms, and procedures are indexed below by rule number. Appendix references use the format App.X. Section references use the format S.X.
@@ -189,7 +189,7 @@ condition: PEN ≥ AV + 3  ..........  18.2
 
 **Bail-out (vehicle)**  ..........  19.2
 
-**Bypass Movement (Optional Rule)**  ..........  17.6a, App.G
+**Bypass Movement (Optional Rule)**  ..........  17.6a, App.F
 
 CREW counter placed  ..........  19.2.7
 
@@ -255,9 +255,9 @@ extinguishing  ..........  21.5.6
 
 **C**
 
-**Complexity tiers (Basic/Standard/Advanced)**  ..........  App.G
+**Complexity tiers (Basic/Standard/Advanced)**  ..........  App.F
 
-**Consolidated unit and vehicle roster — see Appendix H**  ..........  App.H
+**Consolidated unit and vehicle roster — see Appendix G**  ..........  App.G
 
 **Campaign rules**  ..........  S.13
 
@@ -671,13 +671,13 @@ cover reduced 1 step vs buildings  ..........  18.8.3
 
 rFP derivation formula (calibre in mm / 20, rounded)  ..........  18.8.4
 
-**Heavy Mortar/Artillery vs. Top Armour (Optional Rule)**  ..........  16.7.8a, App.G
+**Heavy Mortar/Artillery vs. Top Armour (Optional Rule)**  ..........  16.7.8a, App.F
 
 mobility kill only, never penetration  ..........  16.7.8a.1
 
 120mm-class threshold  ..........  16.7.8a.2
 
-**Hull-Down Position (Optional Rule)**  ..........  17.6b, App.G
+**Hull-Down Position (Optional Rule)**  ..........  17.6b, App.F
 
 lost on movement  ..........  17.6b.3
 
@@ -791,7 +791,7 @@ sniper exemption  ..........  8.7.4, 20.2.6
 
 **Maps (SVG generated)**  ..........  1.5.4, 1.5.5
 
-**Mass Assault (Optional Rule)**  ..........  9.8a, App.G
+**Mass Assault (Optional Rule)**  ..........  9.8a, App.F
 
 cumulative Defence penalty per prior assault this turn  ..........  9.8a.1
 
@@ -943,7 +943,7 @@ pre-entry defensive fire  ..........  18.11.2
 
 **P**
 
-**Pre-Registered Defensive Fire (Optional Rule)**  ..........  8.13, App.G
+**Pre-Registered Defensive Fire (Optional Rule)**  ..........  8.13, App.F
 
 reuses mortar's 2-hex registration limit  ..........  8.13.1, 16.4.1
 
@@ -1153,7 +1153,7 @@ victory conditions  ..........  22.6
 
 **Sealed slip — see Fire mission slip**  ..........  16.5
 
-**Sidehill Exposure (Optional Rule)**  ..........  18.2c, App.G
+**Sidehill Exposure (Optional Rule)**  ..........  18.2c, App.F
 
 Broadside-to-Slope condition  ..........  18.2c.1
 
@@ -1259,7 +1259,7 @@ movement allowance derived from turn-length marching pace, not impulse duration 
 
 one turn ~2–5 minutes  ..........  2.2.1
 
-**Top Armour (Optional Rule)**  ..........  17.2a, App.G
+**Top Armour (Optional Rule)**  ..........  17.2a, App.F
 
 never a direct Gunnery Roll option  ..........  17.2a.2
 
@@ -1365,7 +1365,7 @@ types  ..........  22.6.2
 
 **W**
 
-**Weapon Malfunction (Optional Rule)**  ..........  8.12, App.G
+**Weapon Malfunction (Optional Rule)**  ..........  8.12, App.F
 
 triggers on natural 1-and-1 (d6, d8) on the attack's own roll  ..........  8.12.1
 

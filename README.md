@@ -103,8 +103,8 @@ This project uses two licenses, split by content type:
 
 Both permit commercial use and modification. CC BY 4.0 requires attribution to the With Deepest Regret Project; MIT requires only that the license notice be preserved. Neither restricts building closed-source tools or commercial products on top of this work.
 
-Note: the game's mechanics (formulas, procedures, result tables as *ideas*) are not subject to copyright and are not "licensed" by either file above — only the specific text, art, and code expressing them are. This is standard for tabletop game design; see the design notes in `docs/source/appendix_e__design_notes.rst` for the project's design rationale if you're building something derivative.
+Note: the game's mechanics (formulas, procedures, result tables as *ideas*) are not subject to copyright and are not "licensed" by either file above — only the specific text, art, and code expressing them are. This is standard for tabletop game design; see the design notes in [`DESIGN_NOTES.rst`](DESIGN_NOTES.rst) for the project's design rationale if you're building something derivative.
 
 ## Status
 
-Rules of Play: v0.9.7, working draft. See `docs/source/appendix_e__design_notes.rst` for the full design-decision log.
+Rules of Play: v0.9.7, working draft. See [`DESIGN_NOTES.rst`](DESIGN_NOTES.rst) for the full design-decision log.

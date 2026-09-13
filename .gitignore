@@ -1,5 +1,6 @@
 # Sphinx build output
 docs/_build/
+docs/build/
 
 # Python
 __pycache__/
@@ -10,8 +11,9 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
-# Reference source PDFs (large, not project deliverables)
+# Reference source books (large, not project deliverables)
 *.pdf
+*.epub
 
 # Subagent-driven-development scratch (progress ledger)
 .superpowers/

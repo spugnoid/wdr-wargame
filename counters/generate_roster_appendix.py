@@ -1,4 +1,4 @@
-"""Generates docs/source/appendix_h__consolidated_roster.rst from this
+"""Generates docs/source/appendix_g__consolidated_roster.rst from this
 project's own already-generated CSV outputs (infantry_calc/infantry_roster_output.csv,
 armor_calc/roster_output.csv, armor_calc/gun_curves_output.csv).
 
@@ -20,7 +20,7 @@ REPO_ROOT = pathlib.Path(__file__).parent.parent
 INFANTRY_CSV = REPO_ROOT / "counters" / "infantry_calc" / "infantry_roster_output.csv"
 VEHICLE_ROSTER_CSV = REPO_ROOT / "counters" / "armor_calc" / "roster_output.csv"
 GUN_CURVES_CSV = REPO_ROOT / "counters" / "armor_calc" / "gun_curves_output.csv"
-OUT_PATH = REPO_ROOT / "docs" / "source" / "appendix_h__consolidated_roster.rst"
+OUT_PATH = REPO_ROOT / "docs" / "source" / "appendix_g__consolidated_roster.rst"
 
 RANGE_COLUMNS = ["pen_0m", "pen_250m", "pen_500m", "pen_750m", "pen_1000m", "pen_1250m", "pen_1500m", "pen_1750m", "pen_2000m", "pen_2500m"]
 
@@ -125,12 +125,12 @@ def render_gun_curves_table(rows: list[dict[str, str]]) -> str:
 
 
 PREAMBLE = """\
-Appendix H — Consolidated Unit and Vehicle Roster
+Appendix G — Consolidated Unit and Vehicle Roster
 ====================================================
 
 *Every printed counter value in the game, collected in one place: infantry
-and weapon teams in H.1, vehicle armour profiles in H.2, and gun penetration
-curves by range in H.3.*
+and weapon teams in G.1, vehicle armour profiles in G.2, and gun penetration
+curves by range in G.3.*
 
 *Vehicle Gunnery Tables (Rule 18.1a) are not listed here. A Gunnery Table
 depends on the firing vehicle's Crew Quality (Rule 17.3.6), which derives
@@ -138,17 +138,17 @@ from that vehicle's printed Morale — and a scenario's own parameter block
 sets each side's vehicle crew qualities. Build the table from Rule 18.1a
 once the crew quality for the scenario is known.*
 
-H.1  Infantry and Weapon Team Roster
+G.1  Infantry and Weapon Team Roster
 ----------------------------------------
 
 {infantry_table}
 
-H.2  Vehicle Armour Roster
+G.2  Vehicle Armour Roster
 -------------------------------
 
 {vehicle_table}
 
-H.3  Gun Penetration Curves
+G.3  Gun Penetration Curves
 --------------------------------
 
 *0°-equivalent millimetres by range band (Rule 17.3.1) — read the row for

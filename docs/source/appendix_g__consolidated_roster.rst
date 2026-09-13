@@ -1,9 +1,9 @@
-Appendix H — Consolidated Unit and Vehicle Roster
+Appendix G — Consolidated Unit and Vehicle Roster
 ====================================================
 
 *Every printed counter value in the game, collected in one place: infantry
-and weapon teams in H.1, vehicle armour profiles in H.2, and gun penetration
-curves by range in H.3.*
+and weapon teams in G.1, vehicle armour profiles in G.2, and gun penetration
+curves by range in G.3.*
 
 *Vehicle Gunnery Tables (Rule 18.1a) are not listed here. A Gunnery Table
 depends on the firing vehicle's Crew Quality (Rule 17.3.6), which derives
@@ -11,7 +11,7 @@ from that vehicle's printed Morale — and a scenario's own parameter block
 sets each side's vehicle crew qualities. Build the table from Rule 18.1a
 once the crew quality for the scenario is known.*
 
-H.1  Infantry and Weapon Team Roster
+G.1  Infantry and Weapon Team Roster
 ----------------------------------------
 
 .. list-table::
@@ -396,7 +396,7 @@ H.1  Infantry and Weapon Team Roster
      - F1
      - G1
 
-H.2  Vehicle Armour Roster
+G.2  Vehicle Armour Roster
 -------------------------------
 
 .. list-table::
@@ -1244,7 +1244,7 @@ H.2  Vehicle Armour Roster
      - —
      - —
 
-H.3  Gun Penetration Curves
+G.3  Gun Penetration Curves
 --------------------------------
 
 *0°-equivalent millimetres by range band (Rule 17.3.1) — read the row for

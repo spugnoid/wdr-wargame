@@ -1,7 +1,7 @@
-Appendix E — Design Notes
-=========================
+Design Notes — Internal Record
+==============================
 
-This appendix records the reasoning behind significant design decisions. It is intended for the designer's reference during revision and playtesting. New design decisions should be documented here as the project develops.
+This is an internal working document, not part of the rulebook. It records the reasoning behind significant design decisions for the designer's reference during revision and playtesting, and is deliberately excluded from the built rules so that no trace of development history appears in the book itself. New design decisions should be documented here as the project develops, keeping the existing E.NN note numbering.
 
 E.1  Why Yards, Not Metres
 --------------------------
@@ -1424,3 +1424,18 @@ E.169  The Main Body Stops Talking About Itself — Every Trace of Development R
 *Judgment calls. Design-rationale and clarification asides that describe the* current *design were kept throughout — the yards-versus-metres note, the face-hardening explanation, the Cautious Movement note, "this can only ever make an outcome worse," the German NCO-training note behind higher German leader ratings. Real-world military history used to justify a rule was likewise kept everywhere, including the full Wittmann engagement vignette in Rule 18.12 and the organisational research explaining why Japan has no engineer row: that is historical* warfare\ *, which belongs in a wargame, not rules history, which does not. The designer's foreword was left untouched — its talk of rule revisions concerns other published games and is the author's stated reason for writing this one. The title page keeps its current version stamp, which is a version* number\ *, not version* history\ *. Appendix D's "Six Test Unit Counter Values" heading became "Worked Counter Values," development vocabulary having no place in a heading a player reads.*
 
 *This appendix is deliberately exempt and unchanged. It is the one place in the book where development history is the point, and it now holds that history alone — the main body no longer references it, and the reader who wants to know why a rule is shaped the way it is comes here on purpose rather than being sent from a footnote.* ``sphinx -W`` *builds clean; the defined-rule count is identical before and after (967), confirming no rule was renumbered or lost to a paragraph deletion.*
+
+E.170  This Document Leaves the Book
+-----------------------------------------
+
+*Design note: E.169 stripped every reference to this appendix out of the rulebook but left the appendix itself bound into it, on the reasoning that a reader who wanted design rationale could still find it deliberately. The designer's answer: "cut it. make it a internal design notes doc." Correct — a hundred and seventy notes of development history sitting at the back of a rulebook is exactly the thing being complained about, whether or not anything points at it.*
+
+*The file moves out of the Sphinx source tree to* ``DESIGN_NOTES.rst`` *at the repository root and is retitled "Design Notes — Internal Record." It keeps its E.NN numbering, which is referenced throughout the research files in* ``counters/toe/`` *and across the commit history, and it stays in RST so it renders on its own in the repository browser without a build step. Nothing in it was edited or removed; it is the same record, in a place the rulebook does not reach.*
+
+*Removing Appendix E left a hole in the appendix sequence — A, B, C, D, then F — which is its own visible evidence that something was cut, the same class of scar as Rule 18.12's notes starting at "(f)". The remaining three appendices are therefore re-lettered up: Index F→E, Rules Complexity Tiers G→F, Consolidated Roster H→G. This touched their filenames, their headings, their own internal section numbers (G.1-G.3 and H.1-H.3 becoming F.1-F.3 and G.1-G.3), the toctree, thirty-odd "App.X" cross-references scattered through the rules and the index's own entries, and* ``generate_roster_appendix.py``\ *'s output path and template — the roster appendix being generated, a hand-edit alone would have reverted on the next run. The letters were shifted in a single simultaneous pass rather than three sequential renames, so no reference could be double-converted (F→E→D).*
+
+*One unplanned improvement fell out of the move. A mechanical scan of every "Rule X.Y" reference in the book now resolves completely: the five rule numbers that had no definition anywhere — 6.6.6, 6.6.7, 7.2.3, 8.3.4, 8.3.4a — existed only as citations inside this document's own historical entries, so taking this document out of the build left the rulebook fully self-consistent for the first time. The defined-rule count is unchanged at 967.*
+
+*The inline* ``*Design note:*`` *asides that remain in Sections 7, 8, 9, 16, 17, 18 and 21 are deliberately kept. They explain why a current rule or optional module is scoped the way it is — why Weapon Malfunction is optional, why Bypass costs what it costs — and contain no development history, no sourcing, and no pointer to anything outside the book. They are rationale a player reads while deciding whether to use a module, not a record of what changed.*
+
+*Two smaller consequences.* ``authorship.rst``\ *'s AI-disclosure statement said design decisions are "recorded in Appendix E" with a link; it now says "recorded in the project's design notes" with no link, which keeps the disclosure honest without pointing the reader at a document that is no longer part of the book. The README's two references to the old appendix path now point at* ``DESIGN_NOTES.rst``\ *.*

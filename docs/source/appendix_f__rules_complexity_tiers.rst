@@ -1,9 +1,9 @@
-Appendix G — Rules Complexity Tiers
+Appendix F — Rules Complexity Tiers
 ====================================
 
 This appendix sorts the rules into three tiers — **Basic**, **Standard**, and **Advanced** — so a group can choose how much of the system to bring to the table without hunting through 24 sections to work that out for themselves. Nothing here changes what any rule says; it only labels how essential each part is to a complete, satisfying game.
 
-G.1  What Each Tier Means
+F.1  What Each Tier Means
 --------------------------
 
 **Basic** is everything needed to play a complete game to a fair, historically plausible result: the resolution engine (fire combat, close assault, morale), the action economy (AP/RP, leaders, the Regular/Assault split), core unit and terrain rules, and enough scenario structure to set one up. A group playing Basic rules only is playing the real game, not a simplified preview of it — nothing in Basic is a placeholder for something "more real" in a higher tier.
@@ -18,7 +18,7 @@ G.1  What Each Tier Means
 
    **Example:** A group's first game uses Basic rules only — no vehicles, no snipers, no hidden units — and plays a complete, fair scenario. Their second game adds Standard-tier vehicles and mortars because the scenario calls for combined arms. Their fifth game adds the Weapon Malfunction module (Rule 8.12) because they specifically want that texture, while still skipping Night Combat (Section 23) entirely because no scenario they're playing needs it.
 
-G.2  Tier by Section
+F.2  Tier by Section
 ----------------------
 
 .. list-table::
@@ -102,7 +102,7 @@ G.2  Tier by Section
      - An entire optional scenario-condition module
 
 
-**G.2.1**  A scenario's own parameters (Rule 22.x) state which tier it assumes and which specific Advanced modules, if any, are active — a scenario designer is free to write a Basic-only scenario, a Standard scenario with two specific Advanced modules bolted on, or anything between.
+**F.2.1**  A scenario's own parameters (Rule 22.x) state which tier it assumes and which specific Advanced modules, if any, are active — a scenario designer is free to write a Basic-only scenario, a Standard scenario with two specific Advanced modules bolted on, or anything between.
 
 .. container:: rule-guide
 
@@ -110,7 +110,7 @@ G.2  Tier by Section
 
    **Example:** A scenario's parameter block might read "Standard tier; Advanced modules in use: Weapon Malfunction (8.12), Night Combat (Section 23)" — telling both players exactly what's live before a single counter is placed, with every other Advanced module (Bypass Movement, Mass Assault, Weather, the full Campaign layer) understood to be off.
 
-G.3  The Complete List of Advanced (Optional Rule) Modules
+F.3  The Complete List of Advanced (Optional Rule) Modules
 ---------------------------------------------------------------
 
 Every module below carries its own "(Optional Rule)" header and an "If this module is in use for the scenario" line at the point it begins in the main text — this list exists only so a group can see the full menu in one place.
