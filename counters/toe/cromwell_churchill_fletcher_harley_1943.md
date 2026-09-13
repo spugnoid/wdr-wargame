@@ -302,3 +302,21 @@ blanket 1943 claim — and a different, more specialist source (e.g., a
 dedicated Osprey Elite-series or Men-at-Arms title on British armoured-corps
 training/selection, parallel to the Airborne/Commando titles already used)
 would be needed to make a real case.
+
+## Bonus-Check Cross-Reference: Crusader Has a Plate Diagram, But It Isn't
+## Cromwell's or Churchill's
+
+*Added 2026-09-12, design note E.163.* A separate pass checking three
+unrelated unmodeled-vehicle books (`counters/toe/unmodeled_vehicles_survey_1943.md`)
+found that Fletcher's *Crusader Cruiser Tank 1939-45* (Osprey New Vanguard
+14) contains a genuine official "Plate Thickness" technical diagram (p.9,
+T.D. 5911/5913) for Covenanter I and Crusader III — a real, if partial,
+break in the pattern this file (E.137) and E.162 both confirmed of Osprey
+New Vanguard titles carrying no plate-geometry data. **This does not answer
+either of this file's open questions**: Crusader and Covenanter are earlier,
+distinct vehicles in the same Christie-suspension cruiser-tank lineage, not
+Cromwell or Churchill, and no equivalent diagram for either roster vehicle
+appears in that book. Recorded here only as a cross-reference in case a
+future Crusader/Covenanter-specific question ever needs it; Cromwell's
+stepped-glacis angle question and hull side/rear thickness variance remain
+exactly where E.137 left them.
