@@ -664,3 +664,57 @@ One well-documented, on-point incident/finding was located:
    has no data for the SPG variant. Full read notes are folded inline into
    items 3, 4, and 7 above rather than a separate companion file, per this
    pass's own instructions.
+10. **New 2026-09-12, design note E.161 — Guderian's *Panzer Leader*, checked
+    directly for Tiger/Panther top-armor figures: no hull/turret plate data
+    of the kind this file needs anywhere in the book (a command memoir, not
+    a technical reference) — a clean negative for this file's actual
+    subject.** Recorded here anyway because the same read turned up
+    substantial *production and crew-training* material for Tiger/Panther
+    in 1943, adjacent to but outside this file's armor-thickness scope,
+    filed here as the closest existing vehicle-research home rather than as
+    a new file (all page citations are PDF page numbers from
+    `pdftotext`'s own page-break count on `reference/operational-histories/
+    epdf.pub_panzer-leader-pdf-5ecced7677a19.pdf`, since the extracted text
+    carries no printed pagination):
+    - **Production chronology, Jan 1942-Jan 1943** (Chapter 8, PDF pp.149-155):
+      a month-by-month account, sourced by Guderian to Armaments-Ministry
+      Chief Assistant Saur's own records, of Hitler's tank-production
+      conferences — e.g. 23 January 1942, capacity ordered raised to 600
+      units/month from a May 1940 baseline of 125; 23 June 1942, May-1943
+      production estimated at 250 Panthers and 285 Tigers; November 1942,
+      Tiger output raised from 13 to 25/month; January 1943, frontal armor
+      set at 100mm (Panzer IV) and the Tiger's long 88mm gun with 150mm
+      front/80mm side armor specified.
+    - **Panther's 1943 timeline, dated and specific**: at Guderian's first
+      Hitler conference as Inspector-General (9 March 1943, PDF p.162), his
+      own prepared notes state "the Panther battalions at any rate will not
+      be ready for action before July or August" 1943. On 10 May 1943 (PDF
+      p.172) industry promised 324 Panthers by 31 May against an original
+      250-tank schedule. On 16-18 June 1943 (PDF p.173) Guderian personally
+      inspected the 51st and 52nd Panther Battalions at Grafenwöhr and
+      reported to Hitler that, apart from unresolved track-suspension and
+      optics faults, **"neither the crews nor the commanders were by then
+      sufficiently experienced in their handling, while some of them even
+      lacked adequate battle experience"** — a first-person, dated, named-unit
+      crew-training assessment, the most concrete of its kind found in this
+      project's German-vehicle research to date.
+    - **Kursk (Operation Citadel) as the premature-commitment case study**:
+      Guderian records arguing against the attack directly to Hitler at a
+      Munich conference on 3-4 May 1943 (PDF p.170-172, including the
+      exchange "How many people do you think even know where Kursk is?...
+      Whenever I think of this attack my stomach turns over") specifically
+      because the Panthers were not combat-ready; his account of the battle
+      itself (10-15 July 1943 front visit, PDF p.174) states the 90-vehicle
+      Ferdinand/Porsche-Tiger regiment lacked a machine gun and so could not
+      suppress Russian infantry/anti-tank teams once past the infantry line
+      ("they literally had to go quail shooting with cannons"), and that his
+      "fears concerning the premature commitment of the Panthers were
+      justified."
+    - **Confidence**: high confidence as to what Guderian claims (specific
+      named units, dated conferences, and a chronology internally consistent
+      with his other production dates), with the standard memoir caveats
+      (self-interested "I was right, they didn't listen" framing, written in
+      1950-51, in translation) — not independently cross-checked against a
+      technical/production reference this pass. No `units.csv` change
+      proposed; this is flavor-text/design-note-citation material (see
+      question 6 in design note E.161), not a stats source.

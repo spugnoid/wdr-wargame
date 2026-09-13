@@ -155,3 +155,43 @@ freshly re-verified to a specific page.
    for completeness in case a future need arises (e.g. if this project ever
    adds StuG IV or another derivative to its roster).
 5. **Hull deck/floor thickness was not found** in the pages read.
+6. **New 2026-09-12, design note E.161 — Guderian's *Panzer Leader*, checked
+   for StuG III armor/construction data: nothing (a command memoir has no
+   plate diagrams), but a real, dated, and directly relevant institutional
+   finding on assault-gun *allocation and command* was found instead**,
+   filed here as the closest existing StuG III home rather than as a new
+   file. Page citations are PDF page numbers from `pdftotext`'s own
+   page-break count on `reference/operational-histories/
+   epdf.pub_panzer-leader-pdf-5ecced7677a19.pdf` (no printed pagination
+   survives extraction).
+
+   As Inspector-General of Armored Troops from 28 February 1943, Guderian's
+   own signed Assignment of Duties (PDF pp.158-160) originally defined
+   "armored troops" — his own jurisdiction — to include "heavy assault gun
+   units" by his own footnote addition; he explains why: "the production of
+   assault guns was absorbing a high proportion of our tank production,
+   while the performance of assault guns in an anti-tank role was limited
+   by the fact that they were equipped with insufficiently powerful pieces"
+   (PDF p.160). But "somebody smuggled in the word 'heavy' while I was not
+   looking," limiting his actual authority to the not-yet-existing
+   Tiger/Panther-based heavy tank destroyers, not the standard StuG III.
+
+   At his first Hitler conference as Inspector-General (Vinnitsa, 9 March
+   1943), Guderian formally requested "that the assault guns be placed
+   under my General-Inspectorate" (PDF p.165) — rejected outright: "At this
+   suggestion the whole conference became incensed. All those present, with
+   the single exception of Speer, disapproved, in particular of course the
+   gunners; Hitler's chief adjutant also spoke up against me, remarking that
+   the assault artillery was the only weapon which nowadays enabled gunners
+   to win the Knight's Cross." Hitler declined to overrule the room: "You
+   see, they're all against you. So I can't approve either." Guderian's own
+   verdict: **"the assault artillery remained an independent weapon"** (PDF
+   p.166) — i.e., StuG III/Sturmartillerie stayed organizationally under the
+   artillery branch, not the Panzerwaffe, for the rest of the war, as a
+   direct result of this single dated institutional fight. This is a
+   precise, first-person, dated (28 Feb/9 March 1943) primary account of
+   exactly the "Sturmartillerie's relationship to the Panzerwaffe" debate
+   this project's task briefs have referenced — a real find for design-note
+   color on *why* StuG III stayed an artillery-branch weapon throughout
+   this project's 1943 baseline, even though it changes no armor/vehicle
+   figure and triggers no `units.csv` or `vehicles.csv` edit.

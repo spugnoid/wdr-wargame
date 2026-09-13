@@ -331,3 +331,117 @@ from the KStN dates, not a directly documented fielding-percentage claim.
    plausible-but-not-fully-verified October 1943 candidate window rather
    than a source-confirmed exact date on the order of the US 57mm gun's
    documented "26 May 1943"/"15 July 1943" TO&E dates.
+
+## Fifth Pass (2026-09-12): Guderian, *Panzer Leader* — the Inspector-General's own account
+
+Read in full: Heinz Guderian, *Panzer Leader* (1952; this project's copy is
+`reference/operational-histories/epdf.pub_panzer-leader-pdf-5ecced7677a19.pdf`,
+272 pp., extracted via `pdftotext -layout`). Chosen because Guderian was
+Inspector-General of Armored Troops from 28 February 1943 onward — literally the
+officer this project has been trying to find a document *from* for four passes —
+with an assignment of duties (quoted in full by Guderian, PDF pp.158-160) that
+explicitly made him responsible for panzer, Panzergrenadier, armored
+reconnaissance, **and anti-tank troop** organization and training. Chapters 8
+("The Development of the Armored Force, January 1942 to February 1943," PDF
+pp.149-155) and 9 ("Inspector-General of Armored Troops," PDF pp.155-181, which
+covers the whole of 1943) were read in full; the rest of the book was skimmed for
+anti-tank/Panzerjäger keywords (`grep`-checked for "PaK 40," "Panzerjäger," "50-mm,"
+"PaK 38," "Hetzer," "38(t)," "tank destroyer," "KStN" across the full extracted
+text) rather than read cover-to-cover, per the task's own exploratory-pass framing.
+
+**Question 1 (crew quality): still not found — a fifth consecutive clean
+negative, from the strongest-placed possible author.** Guderian discusses tank
+and Panther crew training and experience levels repeatedly (e.g. PDF p.173, on
+the 51st and 52nd Panther Battalions: "neither the crews nor the commanders were
+by then sufficiently experienced in their handling, while some of them even
+lacked adequate battle experience") but never once assesses towed anti-tank gun
+crews as a personnel-quality category, comparatively or otherwise. This is
+consistent with this thread's now-established pattern (`pak40_1943.md`,
+this file's original pass, `pak40_sturmartillerie_panzerjager_book_1943.md`, and
+`pak40_forczyk_kv1_book_1943.md`): even a memoir by the single most qualified
+possible author on this exact organizational question does not contain a
+towed-PaK-crew-quality verdict. Worth stating plainly rather than straining for
+a match: Guderian's book is a command-decision/production-policy narrative, not
+a personnel-quality assessment of any branch below regimental level.
+
+**Question 2 (fielding date): no PaK 38→PaK 40 date found, but a genuinely new,
+directly-relevant, and complicating data point.** Guderian never names "PaK 38"
+or "PaK 40" anywhere in the book (confirmed by full-text search) — his anti-tank
+discussion is entirely in terms of unit type and towed-vs-self-propelled
+equipment, not gun model. But he gives a precisely dated institutional history
+of the *standard infantry division's* anti-tank battalion problem across all of
+1943, which bears directly on this question:
+
+- **28 February 1943**, his signed Assignment of Duties as Inspector-General
+  defined "armored troops" to include anti-tank troops and (his own footnote
+  addition) assault gun units — but "somebody smuggled in the word 'heavy'
+  while I was not looking" (PDF p.160), so his actual authority was limited to
+  *heavy* assault guns (the future Tiger/Panther-based tank destroyers), not
+  the standard infantry division's own anti-tank battalion.
+- **9 March 1943**, at his first Hitler conference (Vinnitsa), Guderian
+  formally proposed "that the anti-tank battalions of the Infantry divisions be
+  re-equipped with assault guns in place of their present ineffective weapons
+  drawn by half-tracks" and that assault artillery be placed under his
+  Inspectorate (PDF pp.162, 165 for the conference notes; the "in place of
+  their present ineffective weapons" quote and its rejection are on PDF
+  p.165-166). Every officer present except Speer opposed this; Hitler declined.
+  Guderian's own verdict: **"the anti-tank battalions continued to be equipped
+  with ineffective, tractor-drawn guns, and the infantry divisions remained
+  without adequate anti-tank defense. It was nine months before Hitler was
+  convinced that a mistake had been made"** (PDF p.166) — i.e., by his own
+  count, nothing changed for the standard division's anti-tank battalion from
+  March through roughly **December 1943**.
+- **7 December 1943**, Guderian records that Hitler finally approved switching
+  the Czech 38(t) chassis's full production capacity to a new tank destroyer
+  (the future Jagdpanzer 38/"Hetzer") explicitly as the anti-tank battalions'
+  new "basic weapon," calling it "the belated answer to my proposals made on
+  March the 9th" (PDF p.176) — i.e., the fix Guderian himself describes as
+  finally closing the "ineffective, tractor-drawn guns" problem was a
+  **self-propelled** vehicle, not a towed-gun caliber upgrade. He adds that
+  "only one-third of our anti-tank companies could be equipped with the new
+  weapon" before the Russians' next winter offensive (PDF p.176; the text
+  reads "1945," almost certainly a translation/OCR slip for the 1944-45
+  winter, since the Hetzer did not reach production until spring 1944).
+
+**Why this complicates, rather than confirms, the prior pass's October 1943
+Nafziger-index reading:** the previous follow-up pass (this file, above) inferred
+from the Nafziger Collection's index alone that the standard infantry
+Panzerjäger/anti-tank company was reorganized onto 75mm guns around October
+1943. Guderian's own first-person account — from the officer who would have had
+to approve or at least be consulted on exactly that kind of reorganization, and
+who tracked this specific problem obsessively across the whole year — describes
+the standard infantry division's anti-tank battalion as still carrying
+**"ineffective, tractor-drawn guns"** with no fix in sight right through his
+7 December 1943 diary-style entry, and states the eventual fix was a
+self-propelled vehicle, not a heavier towed gun. This does not disprove the
+October 1943 KStN-index reading (a caliber upgrade to towed PaK 40 and a
+still-considered-inadequate anti-tank battalion are not strictly
+contradictory — even 75mm PaK 40, towed by weak prime movers and lacking
+mobility/protection, could still earn Guderian's "ineffective" verdict), but it
+removes any temptation to read the Nafziger dates as confirmation that the
+*problem* Guderian was trying to solve got fixed by caliber alone in 1943. If
+anything, this is the first source in this whole five-pass thread to describe
+the standard division's anti-tank problem as a live, unresolved institutional
+fight running the entire length of the project's 1943 baseline year, rather than
+a single fielding-date event.
+
+**Confidence notes:** Guderian's account is a first-person primary memoir by the
+man literally responsible for this decision, written with specific quoted dates
+(28 Feb, 9 March, 7 Dec 1943) that match the documented pattern of the rest of
+the book's tightly-dated production/organization narrative (cf. the Tiger/Panther
+production chronology in `vehicle_top_armor_1943.md`'s new addendum, sourced from
+the same book) — high confidence as to what Guderian claims. It carries the usual
+memoir caveats (self-interested framing of his own proposals as correct and
+prescient, written in 1950-51 with the benefit of hindsight, and translated from
+German) but nothing here reads as implausible or self-serving beyond the normal
+memoir tendency to cast the author as the ignored Cassandra — a tendency already
+flagged for this book's Kursk material in `vehicle_top_armor_1943.md`.
+
+**No `units.csv` change proposed.** This pass, like the four before it, found no
+data precise enough to justify changing `GER_PAK40_1943.3_F`'s quality=regular
+default or its fielding-date framing. It does add one concrete new fact worth
+recording for a future pass: **Guderian names "PaK 38" and "PaK 40" nowhere in
+this book** — a real, checked absence, not an oversight — so any future search
+for a first-person high-command source on the specific caliber-conversion
+question should look elsewhere (the still-unread suggestion from the Sturmartillerie
+pass, or an actual archival KStN document, remain the live leads).

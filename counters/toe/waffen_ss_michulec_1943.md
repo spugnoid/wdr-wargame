@@ -598,6 +598,71 @@ explicit "why." The book's own 1944 division org chart's weapons totals
 standard German ordnance-nomenclature items, none a distinct "SS-only"
 weapon type, consistent with the parity statement above.
 
+## E.161 Follow-Up: Guderian, *Panzer Leader* — the Army Side of the Equipment-Allocation Question, Confirmed and Slightly Complicated
+
+Read as part of a wider exploratory pass, not a dedicated Waffen-SS research
+session: Heinz Guderian, *Panzer Leader* (1952), full text via
+`pdftotext -layout` on `reference/operational-histories/
+epdf.pub_panzer-leader-pdf-5ecced7677a19.pdf` (272 pp.; page citations below are
+PDF page numbers from `pdftotext`'s own page-break count, since the extracted
+text carries no printed pagination). Checked specifically because Guderian, as
+Inspector-General of Armored Troops from 28 February 1943, had explicit,
+Hitler-signed authority (quoted in full at PDF pp.158-160) "to direct the armored
+troops of the Waffen-SS and the Luftwaffe in matters of organization and
+training" — making him a first-person Army-side witness to exactly the
+dependency-on-Army-channels mechanism the E.158 Das Reich/HIAG finding
+describes, rather than an SS veterans'-association account of it.
+
+**This pass corroborates E.158's central finding independently, from the
+opposite institutional side, with a specific new date.** On **11 April 1943**
+(PDF p.169), Guderian records: "I called on Himmler, with the purpose of
+arranging that the armored formations of the Waffen-SS be organized in
+accordance with the establishments laid down for the Army. My efforts met with
+only partial success." He goes on to state plainly that "the preferential
+treatment received by the Waffen-SS in the quality and quantity of its
+replacements, as well as of arms and equipment, led to a certain amount of
+understandable ill-feeling on the part of the less-favored army formations"
+(same page) — an Army general, in his own memoir, naming Waffen-SS preferential
+treatment as a real and resented fact, not a rumor.
+
+**One partial complication worth flagging rather than smoothing over**: Das
+Reich's HIAG-sourced quote (E.158, above) frames the SS's *only* profit as "in
+one area... entirely due to Hitler's personal intervention" — first-batch
+Tiger/Panther allocation specifically — implying parity everywhere else.
+Guderian's own phrasing is broader: "preferential treatment... in the quality
+and quantity of its replacements, as well as of arms and equipment" reads as a
+general pattern, not a single named exception. The two accounts are not
+necessarily contradictory (Guderian may simply be speaking loosely, and both
+agree the Waffen-SS depended on the Army for its ordnance channel — see below),
+but this project should not quietly treat "the only SS advantage was
+Tiger/Panther first-batch allocation" as fully closed on Guderian's word alone;
+his sentence is the more sweeping of the two, from the more institutionally
+authoritative source.
+
+**A second, independent institutional data point, new to this thread**: at his
+9 March 1943 Vinnitsa conference (conference notes, PDF p.165, item 10(d)),
+Guderian proposed to Hitler "the abandonment of plans for the formation of new
+armored or motorized divisions, both in the Army and in the Waffen-SS" —
+approved by Hitler in principle. Yet at the same 11 April meeting with Himmler,
+"Himmler would not agree to my urgent request that the setting up of new units
+be abandoned," and Guderian explains why: "so far as the Waffen-SS was
+concerned, [Hitler] and Himmler had reached certain conclusions which they did
+not impart to any of the soldiers. Hitler's idea was to make himself
+independent of the Army, whose leaders he never trusted, by forming this
+private army..." (PDF p.169). This is a second, concrete, dated (9 March/11
+April 1943) instance of the Waffen-SS operating outside a rule Guderian
+believed Hitler had already approved for the whole armed forces — organizational
+autonomy on new-unit formation, not just equipment quality — corroborating this
+thread's general "Waffen-SS as a partially separate track" finding with a new
+specific mechanism (unit-raising policy) beyond quality tier and Tiger/Panther
+allocation.
+
+**No `units.csv` change proposed.** Like every prior pass in this thread, this
+finding reinforces rather than overturns the existing "SS" sourcing-note hedge
+in Sections 15.5.2/22.3.3 — no new evidence here reaches squad or platoon level,
+and the Guderian material is institutional/policy-level, the same altitude as
+the rest of this thread's non-squad-table findings.
+
 ## Mechanically Distinct: No New Finding — Existing Quality-Tier/Morale Mechanics Already Cover What This Book Documents
 
 Per this pass's own constraint, nothing below is designed as a rule,
