@@ -111,7 +111,7 @@ Cover modifiers are added to the defender's Defence value when resolving fire co
 
    **Example:** Alpha fires through a hex of light woods at Squad Bravo standing in open ground. Bravo gets no cover bonus from the woods (it isn't in that hex), but Alpha's eFP is still reduced for having fired through it.
 
-**4.3.2**  The firer's hex and the target's hex are not counted as intervening terrain.
+**4.3.2**  The firer's hex and the target's hex are not counted as intervening terrain. Terrain that does not appear in Rule 4.3.1's table has no intervening penalty — every terrain type in the game carries a stated value, zero included, and Appendix B lists them all in one place.
 
 .. container:: rule-guide
 
@@ -162,7 +162,7 @@ Cover modifiers are added to the defender's Defence value when resolving fire co
    * - Smoke (one hex)
      - -3
    * - Building (firing through)
-     - -2
+     - Blocks LOS entirely (Rule 4.4.2)
    * - Crest hexside crossed at the firer's own level (grazing fire, Rule 4.4a.5)
      - -1
 
@@ -191,7 +191,7 @@ Cover modifiers are added to the defender's Defence value when resolving fire co
 
 **Cliff —**  A cliff-face hex
 
-**Solid building —**  A building hex not designated as having windows or breaches in the relevant direction
+**Building —**  Any building hex. Buildings block line of sight through them. A unit *in* a building fires out and is fired at normally (the cover values of Rule 4.2 apply); what a building stops is a line of fire passing **through** the hex to something beyond it.
 
 **4.4.3**  Dense woods and other non-blocking terrain degrade fire through the per-hex penalty system (Rule 4.3) but do not block LOS entirely unless three or more consecutive hexes of dense woods intervene.
 

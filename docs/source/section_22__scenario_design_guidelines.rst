@@ -126,7 +126,7 @@ Every scenario sheet must include the following parameters. Players read these b
 
    **Example:** Before setup begins, the scenario designer works out each side's Force Morale and writes it directly on the scenario sheet, so both players know the collapse thresholds from Turn 1.
 
-**22.3.2**  Force Morale = total combat unit count × force factor (round down, minimum 1).
+**22.3.2**  Force Morale = total unit count × force factor (round down, minimum 1). Every unit counts, leaders included — matching Rule 15.5.1. This differs from the force-ratio count of Rule 22.2.2, which excludes leaders: a ratio measures fighting power, Force Morale measures how much the force can lose before it quits, and losing an officer counts toward that.
 
 .. container:: rule-guide
 
@@ -298,6 +298,15 @@ Every scenario sheet must include the following parameters. Players read these b
 
 
 **22.6.1**  Victory conditions define what each side is trying to achieve. Clear, unambiguous conditions are essential — players should never be uncertain whether a condition has been met.
+
+**22.6.1a**  Force collapse overrides every other victory condition. If a side's Force Morale check fails (Rule 15.5.7) the scenario ends at once and that side loses, whatever the objectives say and whoever holds them — a force that has come apart cannot take, hold, or contest anything. A scenario's own conditions decide the winner only if neither side collapses before the turn limit.
+
+.. container:: rule-guide
+
+   **Why:** Settles which of the game's two ending conditions wins when they disagree, rather than leaving a scenario to end with one side awarded an objective it never reached. It is also the historically right answer: an attack does not fail because a farmhouse stayed in enemy hands, it fails because the attacking company stopped being a company.
+
+   **Example:** The Soviet force collapses on Turn 4 while still holding the objective hex. The Germans win immediately, despite never having entered it — the defence has ceased to exist, so the ground is theirs for the taking.
+
 
 .. container:: rule-guide
 

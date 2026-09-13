@@ -47,7 +47,7 @@ Appendix B — Terrain Quick Reference
      - 3
    * - Building — light
      - +4
-     - -2
+     - blocks LOS
      - 1
    * - Reverse slope (position, not terrain — Rule 4.4.4; cover vs indirect fire only)
      - +4
@@ -59,7 +59,7 @@ Appendix B — Terrain Quick Reference
      - 2
    * - Building — heavy
      - +5
-     - -2
+     - blocks LOS
      - 1
    * - Entrenchment
      - +6

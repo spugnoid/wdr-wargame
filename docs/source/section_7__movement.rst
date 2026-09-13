@@ -386,6 +386,15 @@ Climbing within a building is priced in AP, not Movement Points — see Rule 7.2
 
 **7.6.4**  Adding the MOBILE marker (limbering the weapon) costs 1 AP. The weapon may not fire in the same impulse it limbers. A weapon that expended its printed F# this turn (Rule 6.6) may not limber until the following turn.
 
+**7.6.4a**  A weapon counter's starting state is its owner's choice at setup — deployed or mobile — unless the scenario specifies one. Record it with the unit when placing (Rule 22.9a.3).
+
+.. container:: rule-guide
+
+   **Why:** Deploying is a real tactical commitment: a deployed weapon shoots at its full F# and cannot move, a mobile one can reposition and cannot. Making the choice the owner's, and making the scenario able to override it, puts the decision where the other setup decisions already are rather than leaving players to guess a default.
+
+   **Example:** A defender expecting an assault on a known approach sets up its HMG deployed and ready; the same team in a meeting engagement sets up mobile, planning to site it once the enemy's axis is clear.
+
+
 .. container:: rule-guide
 
    **Why:** Mirrors 7.6.3 for the reverse action, and cross-references the same F#-expenditure restriction already established in Rule 6.6.5, so the two "packing up" rules — Section 6's F#-specific one and this general one — stay consistent with each other.

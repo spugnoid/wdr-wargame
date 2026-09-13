@@ -76,7 +76,7 @@ Units may be in one of the following status levels at any time. Status is tracke
 
    **Example:** Alpha, Suppressed at the end of one turn, either passes its 1d6+Morale roll against threshold 3 in the next Recovery Phase (Rule 5.2.4), or has a leader spend an action to rally it away earlier (Section 12) — there's no third way for the marker to come off.
 
-**10.2.4**  A Suppressed unit that receives a second Suppressed result is upgraded to Pinned.
+**10.2.4**  Status results always escalate; they are never absorbed. A result that would apply a status a unit already has instead applies the **next step up** the ladder: Suppressed → Pinned → Casualty (Rule 10.4). A unit that is Pinned and takes another Pinned result therefore takes a Casualty, and a unit shot at while Pinned long enough is destroyed by suppression alone.
 
 .. container:: rule-guide
 
@@ -120,7 +120,7 @@ Units may be in one of the following status levels at any time. Status is tracke
 
    **Example:** A regular unit (Morale modifier +0) needs a roll of 5 or better on 1d6 to clear Pinned unaided — a 33% chance, roughly half as likely as clearing Suppressed, and much improved by a leader's CMD bonus (Rule 5.2.6).
 
-**10.3.5**  A Pinned unit that receives a Suppressed result remains Pinned (Pinned is worse than Suppressed; the result is absorbed).
+**10.3.5**  A Pinned unit that receives a Suppressed result steps up to a Casualty (Rule 10.2.4) — a lesser result against a unit already in a worse state still does harm, because the men are being shot at either way.
 
 .. container:: rule-guide
 

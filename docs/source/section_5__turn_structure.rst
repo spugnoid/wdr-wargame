@@ -83,7 +83,7 @@ Before the first turn begins, both players set up the scenario once: see Rule 22
 
    **Example:** A regular Pinned unit recovers only 33% of the time per attempt (roll 5+ on 1d6) — it can easily stay Pinned into the next turn's Action Phase without a leader's help (Rule 5.2.6).
 
-**5.2.6**  A leader adjacent to a recovering unit adds their CMD rating to the recovery roll during the Recovery Phase. For mid-turn rally using the Rally action, use the RAL threshold instead (see Rule 12.6).
+**5.2.6**  A leader adjacent to a recovering unit adds their CMD rating to the recovery roll during the Recovery Phase. **Adjacent** means the next hex or, inside a building, the next floor (Rule 7.2a) — and a leader in the unit's own hex or on its own floor is adjacent for every purpose in these rules. For mid-turn rally using the Rally action, use the RAL threshold instead (see Rule 12.6).
 
 .. container:: rule-guide
 

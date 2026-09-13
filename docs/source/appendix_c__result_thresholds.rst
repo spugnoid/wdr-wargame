@@ -16,7 +16,7 @@ Appendix C — Result Thresholds
    * - 14 to 18
      - Casualty — flip unit to rear face (or CI if already on rear face)
    * - 19 to 22
-     - Casualty + Suppressed — flip unit to rear face and place SUPPRESSED marker
+     - Casualty + Suppressed — a step loss *and* a suppression. Flip a squad to its rear face, or eliminate a half-squad outright; then place a SUPPRESSED marker on another unit in the target hex. Where the target hex holds only the one unit, that unit takes both
    * - 23+
      - Broken — unit is CI, remove from map to BROKEN zone
 

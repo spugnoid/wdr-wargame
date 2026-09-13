@@ -75,6 +75,14 @@ The full procedure for any fire combat action:
 
 **8.1.8**  The result is the margin. Consult the Result Threshold Table (Rule 8.6 / Appendix C) to determine the result.
 
+**8.1.9**  Allotting a result within a stack: where the target hex holds more than one unit, the **firing** player chooses which unit takes the result. A player who prefers chance to choice may instead roll 1d6, count down the stack from the top by that many, wrapping back to the top on reaching the bottom, and apply the result where the count stops.
+
+.. container:: rule-guide
+
+   **Why:** Close assault already says who allots a result (Rule 9.8.4) and leaders already have their own rule (Rule 12.9.1); ordinary ranged fire said nothing at all, which left every shot into a stack unresolvable. Giving it to the firer keeps target selection a real decision — you shoot at the machine gun, not at whatever the defender feels like losing — and the die is there for groups who would rather the fire be blind.
+
+   **Example:** Two squads and an HMG share a hex. A Casualty result lets the firing player put it on the HMG. Playing with the die instead, a roll of 2 counts down two from the top of the stack and the second counter takes it.
+
 .. container:: rule-guide
 
    **Why:** Closes the loop by handing the final margin to a single shared lookup table rather than a bespoke result scale for each weapon or situation.
@@ -312,7 +320,7 @@ The full procedure for any fire combat action:
    * - 14 to 18
      - Casualty
    * - 19 to 22
-     - Casualty + Suppressed
+     - Casualty + Suppressed — a step loss and a suppression; see Appendix C for how the two are allotted within the hex
    * - 23+
      - Broken (Combat Ineffective)
 
