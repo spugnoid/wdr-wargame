@@ -116,7 +116,7 @@ See Rule 6.3.3.
 
    **Why:** The three-die pool (d6+d8+d12) gives a wide, non-bell-curved spread appropriate to a short-range, close-quarters weapon — a grenade's outcome is dominated by luck (a good bounce, a dud) rather than skill, unlike aimed fire's tighter distributions.
 
-   **Example:** Attacker has G3. Defender holds a building (cover +6, halved to +3 in the Grenade Phase per 9.3.5) with Defence 5. Attacker rolls 1d6=4, 1d8=5, 1d12=8 (17) + G3 = 20. Threshold = Defence 5 + half-cover 3 = 8. Margin = 20 − 8 = 12 → **Pinned** (9–13 band, Rule 8.6/Appendix C).
+   **Example:** Attacker has G3. Defender holds a heavy building (cover +5 per Rule 4.2, halved round down to +2 in the Grenade Phase per 9.3.5) with Defence 5. Attacker rolls 1d6=4, 1d8=5, 1d12=8 (17) + G3 = 20. Threshold = Defence 5 + half-cover 2 = 7. Margin = 20 − 7 = 13 → **Pinned** (9–13 band, Rule 8.6/Appendix C).
 
 **9.3.2a**  If the assaulting unit's blind marker had not been spotted (Rule 14.9.6) at the moment it declared Close Assault, its Grenade Phase roll (9.3.2) gets **+3** — reusing the existing +3 figure (Rule 9.4.2's range-0 entry-fire bonus, Rule 14.10.2's Spot Action bonus) rather than inventing a new constant.
 
@@ -150,7 +150,7 @@ See Rule 6.3.3.
 
    **Why:** Grenades explode inside the position a defender is using for cover, so that cover protects far less than it does against fire arriving from outside it.
 
-   **Example:** A building's printed cover modifier is +6 against ranged fire. In the Grenade Phase, that halves (round down) to +3 for a defender inside it.
+   **Example:** A heavy building's printed cover modifier is +5 against ranged fire (Rule 4.2). In the Grenade Phase, that halves (round down) to +2 for a defender inside it.
 
 **9.3.6**  If the defender is eliminated (Dispersed, per Rule 9.1.6) in the Grenade Phase, the assault succeeds. The attacker enters the hex. The Entry Fire Phase does not occur.
 
@@ -220,7 +220,7 @@ See Rule 6.3.3.
 
    **Why:** Keeps a single, familiar results table doing all the outcome work across ranged fire, grenades, and now entry fire, rather than a bespoke melee-specific table.
 
-   **Example:** Alpha's eFP 9 versus Bravo's Defence 5 (no cover) gives a margin of 4 → Suppressed, read off the same Appendix C table used everywhere else in the book.
+   **Example:** Alpha fires at eFP 9. Alone, that is FPr 9 (Rule 8.4.1). Rolling 1d6+1d8+1d12 for 12 gives a combat total of 21; against Bravo's Defence 5 with no cover (Rule 9.4.4) the margin is 16 → Casualty, read off the same Appendix C table used everywhere else in the book. Entry Fire is ordinary fire resolution (Rule 8.1.6) — the dice are always rolled.
 
 **9.4.6**  If the defender is eliminated, the assault succeeds. If the attacker is eliminated, the assault fails and the attacker's counter is removed.
 

@@ -134,7 +134,7 @@ The upper right corner of each counter shows three action values:
      - M5 F1 G4
      - Higher grenade value reflects assault doctrine
    * - Guards rifle squad
-     - M5 F1 G4
+     - M5 F1 G3
      -
    * - LMG team
      - M5 F2 G2

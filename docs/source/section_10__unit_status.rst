@@ -112,13 +112,13 @@ Units may be in one of the following status levels at any time. Status is tracke
 
    **Example:** Alpha with a printed Defence of 4, once Pinned, defends at an effective 1 (4 − 3) — a steeper cut than the same unit would take merely Suppressed.
 
-**10.3.4**  Pinned status is removed during the Recovery Phase if the unit passes a recovery roll at threshold 10 (Rule 5.2.4).
+**10.3.4**  Pinned status is removed during the Recovery Phase if the unit passes a recovery roll at threshold 5 (Rule 5.2.4).
 
 .. container:: rule-guide
 
-   **Why:** Sets a much higher recovery threshold than Suppressed's 3 (Rule 5.2 table), reflecting that shaking off being Pinned is meant to be genuinely hard without leadership help, not a near-automatic roll.
+   **Why:** Sets a higher recovery threshold than Suppressed's 3 (Rule 5.2 table), reflecting that shaking off being Pinned is meant to be genuinely harder than shaking off Suppression, without putting it out of reach unaided.
 
-   **Example:** A regular unit (Morale modifier +0) needs a roll of 10 or better on 1d6 to clear Pinned unaided — effectively impossible without a leader's CMD bonus (Rule 5.2.6) added to the roll.
+   **Example:** A regular unit (Morale modifier +0) needs a roll of 5 or better on 1d6 to clear Pinned unaided — a 33% chance, roughly half as likely as clearing Suppressed, and much improved by a leader's CMD bonus (Rule 5.2.6).
 
 **10.3.5**  A Pinned unit that receives a Suppressed result remains Pinned (Pinned is worse than Suppressed; the result is absorbed).
 

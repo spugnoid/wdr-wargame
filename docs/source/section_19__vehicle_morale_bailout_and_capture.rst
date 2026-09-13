@@ -402,7 +402,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - 6
    * - StuG III Ausf G
      - 75mm KwK40 L48
-     - 87.1
+     - 64.0
      - — (casemate)
      - 119.6
      - 0
@@ -452,7 +452,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - 5
    * - Sherman M4A1 (75mm)
      - 75mm M3 L31
-     - 76.7
+     - 79.7
      - 89.0
      - 77.9
      - 3

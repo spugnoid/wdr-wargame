@@ -203,7 +203,7 @@ The following terms are used throughout this document. Each term is defined here
 
 **Rout —**  A fleeing morale failure. Unit moves D3 hexes away from nearest visible enemy each activation. ROUTING marker placed. Can rally at Recovery Phase.
 
-**Cascade —**  The contagion effect when a unit Breaks or Routs. All friendly units within 2 hexes with LOS to the breaking unit must immediately check morale at threshold 5.
+**Cascade —**  The contagion effect when a unit Breaks or Routs. All friendly units within 2 hexes with LOS to the breaking unit must immediately check morale at threshold 2 (Rule 15.4.2).
 
 **Force Morale value —**  The threshold of CI and routing units at which a force morale check is triggered. Calculated as unit count × force factor at scenario start.
 

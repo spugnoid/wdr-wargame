@@ -55,17 +55,17 @@ All leaders have M8 F1 — movement allowance 8, fire rate 1. Leaders move faste
      - **Typical Role**
    * - 1
      - Poor / inexperienced
-     - +0 AP
+     - +1 AP
      - 1 hex (adjacent only)
      - Junior NCO, replacement officer
    * - 2
      - Regular
-     - +1 AP
+     - +2 AP
      - 2 hexes
      - Squad leader, platoon sergeant
    * - 3
      - Veteran / elite
-     - +2 AP
+     - +3 AP
      - 3 hexes
      - Platoon commander, company officer
 
@@ -134,7 +134,7 @@ All leaders have M8 F1 — movement allowance 8, fire rate 1. Leaders move faste
 
    **Example:** A wounded leader still contributes their reduced CMD to the AP pool and can still take Leader Actions; a Pinned leader in the same hex still adds CMD to the AP pool but cannot take a Rally action or project CMD to any other unit until the Pin clears.
 
-**12.3.4**  Example: German platoon with one CMD 3 platoon leader and two CMD 2 squad leaders: AP = 1 + 3 + 2 + 2 = 8, RP = 4.
+**12.3.4a**  Example: German platoon with one CMD 3 platoon leader and two CMD 2 squad leaders: AP = 1 + 3 + 2 + 2 = 8, RP = 4.
 
 .. container:: rule-guide
 
@@ -286,7 +286,7 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
      - Suppressed target 2 (83%, automatic for veterans); Pinned target 4 (50%) — frequently succeeds
    * - CMD 3 / Elite
      - 2
-     - Suppressed target 1 — automatic for green and better; Pinned target 3 (67%) — usually succeeds
+     - Suppressed target 1 — automatic for regular and better (green, at -1, still needs a 2); Pinned target 3 (67%) — usually succeeds
 
 
 12.6a  Rally Point Action

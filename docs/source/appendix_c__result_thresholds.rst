@@ -21,7 +21,7 @@ Appendix C — Result Thresholds
      - Broken — unit is CI, remove from map to BROKEN zone
 
 
-Long Range Cap: when eFP is 3 or less after all modifiers, maximum result is Pinned regardless of margin.
+Long Range Cap (Rule 8.7.1): when eFP after all modifiers is 1–2, the maximum result is Suppressed regardless of margin; when it is exactly 3, the maximum result is Pinned. At eFP 4 or more there is no cap.
 
 Multiple attack step-up order: Suppressed → Pinned → Casualty → Casualty+Suppressed → Broken.
 

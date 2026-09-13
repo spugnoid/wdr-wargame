@@ -197,7 +197,7 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
    * - Effective PEN ≥ AV
      - Contested — roll 1d6
      - Penetration roll table
-   * - Effective PEN < AV
+   * - AV − 10 ≤ effective PEN < AV
      - Non-penetrating hit — roll 1d6
      - Non-penetrating hit table
    * - Effective PEN < AV − 10
@@ -590,7 +590,7 @@ A Casualty result or better eliminates a soft vehicle; against an open-topped ar
 --------------------------------
 
 
-Infantry AT weapons do not use the Gunnery Roll (Rule 18.1a.8) — they always hit if fired within range and resolve directly against the target's Hull profile (front arc of engagement).
+Infantry AT weapons do not use the Gunnery Roll (Rule 18.1a.8) — they always hit if fired within range and resolve directly against the target's Hull profile. A shot fired at range resolves against the Hull arc facing the firer's own hex (Rule 17.5.2). Exception: an infantry AT weapon used from inside the vehicle's own hex, in a Close Assault against a vehicle, resolves against the Hull **Rear** arc instead (Rule 18.9a.2) — at point-blank the attacker picks their angle.
 
 *[ TBD: Penetration values below are preliminary. Verify against primary sources before treating as final. ]*
 
@@ -918,8 +918,8 @@ Each matchup reads PEN at the next lower printed range band, exactly as Rule 17.
      - 200 yds
      - Front
      - Contested
-     - Bounce
-     - Plausible ✓ — T-70's 45mm APBC has only a contested chance against the glacis at point-blank and cannot beat the turret at its own small calibre
+     - Contested
+     - Plausible ✓ — at point-blank the T-70's 45mm APBC gets a contested chance against either profile and no better: the glacis is face-hardened against it (Rule 17.2.3a) and the turret, though softer, still sits at the very top of its penetration curve
    * - KV-1S vs Panzer IV H
      - 300 yds
      - Front
@@ -979,4 +979,4 @@ Each matchup reads PEN at the next lower printed range band, exactly as Rule 17.
      - Contested
      - Plausible ✓ — see note (b)
 
-**(b) Sherman Firefly vs Tiger I — the Wittmann engagement, 8 August 1944.** Trooper Joe Ekins's Firefly (A Squadron, 1st Northamptonshire Yeomanry) is credited with destroying all three Tigers of the 101st SS Heavy Panzer Battalion's 3rd/HQ Company his troop could see during the Saint-Aignan-de-Cramesnil action, including Michael Wittmann's — one of the best-corroborated small-unit tank actions of the war, converging across four independent secondary sources. The engagement range itself wobbles by roughly 100m across tellings (~700m per a cited fire order, ~730m per another account) — 700m is used here since both readings fall in the same printed band. At the 500m band (700m reads the next lower printed band per Rule 17.3.1) the 17pdr APCBC line reads PEN 150.6mm — a clean Automatic Penetration against Tiger I's 102.0mm Hull Front (48.6mm over, far outside the ±10mm margin of Rule 18.2), but only a Contested result against the 143.0mm Turret Front (7.6mm over, inside the margin) — Tiger's mantlet and turret front remain the hard target they are against every other gun in the roster. This is consistent with, not a stretch from, the real outcome: three kills in one action is a decisive result, and this table's Hull/Turret split shows *why* it was decisive — Ekins didn't need a mantlet shot to win, the hull alone was a guaranteed kill at this range, exactly the capability gap the 17pdr was built to close. No claim is made about which plate the real rounds actually struck; the vignette's own sourcing doesn't specify hit location, only outcome.
+**(b) Sherman Firefly vs Tiger I — the Wittmann engagement, 8 August 1944.** Trooper Joe Ekins's Firefly (A Squadron, 1st Northamptonshire Yeomanry) is credited with destroying all three Tigers of the 101st SS Heavy Panzer Battalion's 3rd/HQ Company his troop could see during the Saint-Aignan-de-Cramesnil action, including Michael Wittmann's — one of the best-corroborated small-unit tank actions of the war, converging across four independent secondary sources. The engagement range itself wobbles by roughly 100m across tellings (~700m per a cited fire order, ~730m per another account) — 700m is used here since both readings fall in the same printed band. At the 500m band (700m reads the next lower printed band per Rule 17.3.1) the 17pdr APCBC line reads PEN 164.0mm — a clean Automatic Penetration against Tiger I's 102.0mm Hull Front (62.0mm over) and, unusually, against its 143.0mm Turret Front as well (21.0mm over, still outside the ±10mm margin of Rule 18.2). This is consistent with, not a stretch from, the real outcome: three kills in one action is a decisive result, and this table shows *why* it was decisive — at this range the 17pdr defeats the plate that stops every other gun in the roster, so Ekins needed no favourable aspect or weak-point shot to win. That is exactly the capability gap the 17pdr was built to close, and the reason a single Firefly was worth distributing one per troop. No claim is made about which plate the real rounds actually struck; the vignette's own sourcing doesn't specify hit location, only outcome.
