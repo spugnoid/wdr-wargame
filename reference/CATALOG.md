@@ -48,10 +48,10 @@ categories is filed under its primary use and cross-referenced in Notes.
 | epdf.pub_us-combat-engineer-1941-1945-osprey-warrior-147.pdf | *US Combat Engineer 1941-1945* | Gordon Rottman | Osprey Warrior 147 | text, 65pp | `us_combat_engineer_1943.md` (E.147) | — |
 | epdf.pub_osprey-the-military-sniper-since-1914-elite-68.pdf | *The Military Sniper Since 1914* | Martin Pegler | Osprey Elite 68 | image, 66pp | `military_sniper_pegler_1943.md` (E.149, E.150) | — |
 | epdf.pub_world-war-ii-jungle-warfare-tactics-osprey-elite.pdf | *World War II Jungle Warfare Tactics* | Dr Stephen Bull | Osprey Elite 151 | image, 67pp | `jungle_warfare_rottman_1943.md` (E.152) | secondary: fortifications-terrain |
-| epdf.pub_german-military-police-units-1939-45-osprey-men-at-arms-213.pdf | *German Military Police Units 1939-45* | Gordon Williamson | Osprey Men-at-Arms 213 | image, 49pp | unused | no MP unit type exists in this project |
+| epdf.pub_german-military-police-units-1939-45-osprey-men-at-arms-213.pdf | *German Military Police Units 1939-45* | Gordon Williamson | Osprey Men-at-Arms 213 | image, 49pp | `german_military_police_survey_1943.md` (E.164) | genuine TOE/duties content read in full; confirms no combat-role justification exists for an MP unit type — 1943 Feldgendarmerie/Feldjäger work was rear-area only, front-line combat is documented but explicitly a 1944-45 phenomenon |
 | osprey-elite-122-world-war-ii-infantry-tactics-company-and-battalion-osprey-elite-122_compress.pdf | *World War II Infantry Tactics: Company and Battalion* | Dr Stephen Bull | Osprey Elite 122 | text, 67pp | `infantry_tactics_bull_1943.md` (E.160) | — |
 | pdfcoffee.com_osprey-elite-122-...-pdf-free.pdf | *World War II Infantry Tactics: Company and Battalion* (identical copy) | Dr Stephen Bull | Osprey Elite 122 | text, 67pp | `infantry_tactics_bull_1943.md` (E.160) | **Exact duplicate** of the row above (md5-identical) — kept, not deleted |
-| epdf.pub_german-infantry-in-wwii-warmachines-16.pdf | *German Infantry in Action WWII* (cover: "German Infantry in WWII") | Nick Adams | Verlinden Publications, WarMachines 16 | image, 38pp | unused | photo-reference album, not a TOE/tactics text |
+| epdf.pub_german-infantry-in-wwii-warmachines-16.pdf | *German Infantry in Action WWII* (cover: "German Infantry in WWII") | Nick Adams | Verlinden Publications, WarMachines 16 | image, 38pp | `germany_1943.md` (E.164) | photo-reference album, not a TOE/tactics text — confirmed by full read, no organizational/weapon data found |
 
 ### elite-special-units/
 
