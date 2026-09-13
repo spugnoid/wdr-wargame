@@ -40,11 +40,27 @@ organizational facts instead of assumption.
 
 ## Files
 
-One file per nation: `germany_1943.md`, `soviet_union_1943.md`,
-`united_states_1943.md`, `united_kingdom_1943.md`, `japan_1943.md`. Each
-follows the same structure (Sources, Rifle Squad, Other Squad-Level
-Units, Platoon Organization, Company Organization, Confidence Notes, Open
-Questions) so they're directly comparable side by side.
+The five original nation TOE files (`germany_1943.md`, `soviet_union_1943.md`,
+`united_states_1943.md`, `united_kingdom_1943.md`, `japan_1943.md`) follow one
+shared structure (Sources, Rifle Squad, Other Squad-Level Units, Platoon
+Organization, Company Organization, Confidence Notes, Open Questions) so
+they're directly comparable side by side.
+
+Since then, this directory has grown into the general home for every
+single-book, single-topic research pass in this project (vehicle armor,
+weapons, snipers, fortifications, airborne, elite units, etc.) — each one
+still follows the same broad shape (Sources / Findings / Confidence Notes /
+Open Questions), adapted to whatever the topic actually needs. Every file
+here is cross-referenced from a design note in
+`docs/source/appendix_e__design_notes.rst` (search that file for the
+research filename to find its E.### note) and from the rule text it
+informed, if any.
+
+The source books themselves live in `reference/` (gitignored, not part of
+the repo) — see `reference/CATALOG.md` for the full library index: verified
+title/author for every file (filenames are not always trustworthy — see
+that catalog's own notes on mislabeled files), which folder it's organized
+into, and which research file/design note (if any) has used it.
 
 ## Relationship to existing counter data
 
