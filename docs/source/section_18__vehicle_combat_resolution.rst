@@ -686,6 +686,30 @@ Infantry AT weapons do not use the Gunnery Roll (Rule 18.1a.8) — they always h
 
    **Example:** Squad Alpha, with a leader present and a magnetic mine still unexpended, declares Close Assault against an adjacent hex containing a single enemy tank and no infantry. The declaration costs 1 AP exactly as any other Close Assault would; the defending player may still spend 1 RP on Defensive Fire before the exchange below resolves.
 
+**18.9a.1a**  **Employing an explosive.** A weapon that is placed rather than aimed — a demolition charge, satchel charge, AT grenade bundle, magnetic mine or Molotov — requires a Check (Rule 2.6) before it does anything: 1d6 with the standard modifiers against a threshold of **4**, plus the modifiers below. Pass and the explosive is employed, and resolves normally against the target. Fail and the attempt is wasted: the weapon is expended (Rule 18.9.1) and nothing happens.
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - **Condition**
+     - **Modifier**
+   * - Engineer or pioneer unit (Section 21)
+     - +2
+   * - Target vehicle is buttoned up, Suppressed or Pinned
+     - +2
+   * - Target vehicle moved this turn
+     - −2
+   * - Employed from an adjacent hex rather than the target's own hex
+     - −1
+
+
+.. container:: rule-guide
+
+   **Why:** These weapons never needed a to-hit roll — a satchel charge does not miss, it is placed or it is not — but they did need some representation of the thing that actually decides the attempt: whether a man can get to a moving tank and set a charge on it while people shoot at him. A Check does that in one die, keeps the leader bonus central (somebody has to order this and stay to see it done), and leaves the explosive's own destructive effect to the penetration rules that already handle it. Engineers are better at it because that is their trade; a buttoned-up or suppressed crew cannot see him coming; a moving tank is very hard to catch.
+
+   **Example:** A pioneer squad with a magnetic mine attacks a Pinned StuG from its own hex, with a CMD 2 leader present: 1d6 +2 engineer +2 target Pinned +2 leader against 4 — it needs a 1 to fail, and a natural 1 always fails (Rule 2.6.1). The same squad going after a Panzer IV that moved this turn, with no leader, rolls 1d6 −2 and will usually not manage it.
+
 **18.9a.2**  The assaulting unit selects one weapon eligible at 0-hex range from Rule 18.9's table (an AT grenade bundle; a magnetic mine, engineer unit required; or any other carried weapon whose printed range band includes 0 hexes) and resolves it against the vehicle's Rear arc AV — closing to point-blank range means approaching from whatever angle exposes the weakest armor, the same principle already established for the flamethrower (Rule 21.5.8) and the Molotov cocktail (Rule 18.10.1). This resolves as an ordinary infantry AT attack (Rule 18.9): no Gunnery Roll, flat PEN vs AV.
 
 .. container:: rule-guide

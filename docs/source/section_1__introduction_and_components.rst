@@ -139,6 +139,8 @@ The following terms are used throughout this document. Each term is defined here
 
 **Fire group —**  All units firing at the same target as part of one Fire action, regardless of ⬡h interval, resolved as a single attack. eFP is calculated per unit and summed (Rule 8.3.2); units sharing a hex and ⬡h may sum rFP and -f values first (Rule 8.3.3).
 
+**Check —**  The game's universal non-combat roll: 1d6 plus modifiers against a threshold, with a natural 1 always failing and a natural 6 always passing. A d8 thrown alongside gives degree, a d12 gives direction (Rule 2.6). Fire combat is not a Check.
+
 **Cover modifier —**  A bonus added to the defender's Defence value based on terrain occupied.
 
 **Intervening terrain —**  Terrain hexes that the line of fire passes through between firer and target, reducing eFP.
@@ -213,7 +215,7 @@ The following terms are used throughout this document. Each term is defined here
 
 **Force Morale value —**  The threshold of CI and routing units at which a force morale check is triggered. Calculated as unit count × force factor at scenario start.
 
-**Force morale check —**  A roll made when CI and routing units reach the Force Morale value. Roll 2d6 + highest functional leader CMD vs 8. Failure ends the scenario.
+**Force morale check —**  A roll made when CI and routing units reach the Force Morale value. A Check (Rule 2.6) at threshold 5, adding the highest functional leader's CMD. Failure ends the scenario.
 
 **Indirect fire —**  Fire that does not require LOS to the target hex. Mortars and artillery. Targets a hex coordinate, not a specific unit.
 

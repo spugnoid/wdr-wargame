@@ -281,21 +281,21 @@ Most WWII engagements ended not with one side physically eliminated but with one
 
    **Example:** A force with Force Morale 5 that has accumulated 3 CI units and 2 routing units (totaling 5) triggers a Force Morale check the instant that fifth unit's status is reached — whether the fifth came from a Break, a Dispersal, or a new Rout makes no difference to the trigger.
 
-**15.5.4**  Force Morale check: roll **2d6** + CMD rating of the highest-rated functional leader still on the map vs threshold 8.
+**15.5.4**  Force Morale check: a Check (Rule 2.6) at threshold **5**, adding the CMD rating of the highest-rated functional leader still on the map.
 
 .. container:: rule-guide
 
-   **Why:** Lets the single best surviving leader on the map represent the whole force's remaining command backbone for this one critical roll, rather than averaging or summing every leader — one strong senior officer can meaningfully steady an entire force at this pivotal moment. Two dice rather than one keep the threshold of 8 reachable for a leaderless force, which a single d6 cannot reach at all, while still leaving collapse a real risk for a well-led one.
+   **Why:** Lets the single best surviving leader on the map represent the whole force's remaining command backbone for this one critical roll, rather than averaging or summing every leader — one strong senior officer can meaningfully steady an entire force at this pivotal moment. A threshold of 5 keeps collapse a real risk for a well-led force and a likely one for a broken one, while staying inside the single-die Check every other test in the book uses.
 
-   **Example:** A force with a surviving CMD 3 platoon leader and a CMD 1 squad leader uses the higher CMD 3 rating, rolling 2d6+3 against 8 — it holds about 83% of the time. The lesser leader's rating doesn't apply here at all.
+   **Example:** A force with a surviving CMD 3 platoon leader and a CMD 1 squad leader uses the higher CMD 3 rating, rolling 1d6+3 against 5 — it holds about 83% of the time. The lesser leader's rating doesn't apply here at all.
 
-**15.5.5**  If no functional leader remains on the map, roll 2d6 only with no bonus.
+**15.5.5**  If no functional leader remains on the map, the Check is made with no command bonus at all.
 
 .. container:: rule-guide
 
    **Why:** Removes any leadership bonus entirely once a force has no functional leader left, reflecting that a completely leaderless force facing a Force Morale check has nothing steadying it at the moment that matters most — but leaves it a real, if poor, chance rather than a certainty of collapse.
 
-   **Example:** A force whose every leader has been eliminated, evacuated, captured, or is Routing rolls a bare 2d6 against threshold 8 — it holds about 42% of the time, against the 83% a CMD 3 leader would have bought.
+   **Example:** A force whose every leader has been eliminated, evacuated, captured, or is Routing rolls a bare 1d6 against threshold 5 — it holds a third of the time, against the 83% a CMD 3 leader would have bought.
 
 **15.5.6**  Success: the force holds. The new Force Morale threshold advances by 1 — the next check triggers when one more unit becomes CI or begins routing. This continues until the force either collapses or the scenario ends.
 

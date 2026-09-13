@@ -331,6 +331,22 @@ four zones  ..........  13.1
 
 **CI cause markers (red/white)**  ..........  10.4.3, 10.4.4
 
+**Check (universal non-combat roll)**  ..........  2.6
+
+1d6 + modifiers vs threshold  ..........  2.6.1
+
+natural 1 always fails, natural 6 always passes  ..........  2.6.1
+
+standard modifiers; leader CMD is the largest  ..........  2.6.2
+
+d8 alongside for degree  ..........  2.6.3
+
+d12 as a hex clock for direction  ..........  2.6.4
+
+what is not a Check: fire combat and gunnery  ..........  2.6.5
+
+employing an explosive  ..........  18.9a.1a
+
 **Close assault**  ..........  S.9
 
 against a vehicle  ..........  18.9a

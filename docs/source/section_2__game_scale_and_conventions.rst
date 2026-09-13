@@ -178,3 +178,73 @@ With Deepest Regret... uses a specific counter notation for firepower and fallof
    **Why:** Flags the one place standard rounding was deliberately not used, so a player doesn't assume 2.5.1's round-down applies universally and misapply it to Reaction Points.
 
    **Example:** An AP total of 3 converts to RP via round(3 / 2) = round(1.5) = 2 — ordinary round-half-up, not the halve-round-down convention that governs every other halved value in the book.
+
+2.6  The Check
+--------------
+
+
+*Everything in this game that is not fire combat is resolved by a Check. Fire combat keeps its own three-dice procedure (Rule 8.1.6) and is never a Check.*
+
+**2.6.1**  A **Check** is one roll of **1d6**, plus modifiers, against a threshold. Meet or beat the threshold and the Check passes. A natural **1** always fails and a natural **6** always passes, whatever the modifiers.
+
+.. container:: rule-guide
+
+   **Why:** One resolution shape for morale, rally, recovery, spotting, bail-out, breaching, demolition, unjamming, extinguishing, capture and every other non-combat question in the book means a player learns it once and never looks it up again. The natural 1 and 6 keep the arithmetic honest at the extremes — no modifier stack ever makes a Check automatic or impossible, so there is always a reason to roll.
+
+   **Example:** A Pinned squad's Recovery Phase roll, a sniper detection roll, a bail-out check and an engineer's breach attempt are all the same act: roll a d6, add what applies, compare to a number.
+
+**2.6.2**  Standard modifiers. Unless a Check's own rule says otherwise, these apply and nothing else does:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - **Modifier**
+     - **Value**
+     - **Source**
+   * - Leader within command radius
+     - **+ that leader's CMD**
+     - Rule 12.2.1 — the largest modifier in the game, and the reason leaders matter
+   * - Unit's own quality
+     - + its Morale modifier
+     - Rule 15.2.1a
+   * - Out of command
+     - −1
+     - Rule 12.4.2
+   * - Suppressed
+     - −1
+     - Rule 10.2
+   * - Pinned
+     - −2
+     - Rule 10.3
+
+
+.. container:: rule-guide
+
+   **Why:** Fixes one modifier set for every Check so a player is never hunting for which bonuses apply to which roll. Command is deliberately the heaviest term: a CMD 3 officer swings a Check by half the die, which is why a force that loses its leaders does not merely act less often — it starts failing at everything it still tries to do.
+
+   **Example:** A Regular squad (+0) that is Suppressed (−1) but has a CMD 2 leader in radius (+2) rolls 1d6 +1 against the threshold. The same squad with its leader dead rolls 1d6 −2, out of command.
+
+**2.6.3**  Degree — the **d8**. When a Check needs to know not just whether but *how much*, throw a d8 alongside the d6 and read both from the one throw: the d6 says whether it worked, the d8 says how well, on that rule's own table. A failed Check ignores the d8.
+
+.. container:: rule-guide
+
+   **Why:** Keeps "did it work" and "how well did it work" in a single throw rather than a roll followed by another roll, and gives the d8 a consistent job across the whole book so a player knows what it is for the moment they pick it up.
+
+   **Example:** An engineer places a demolition charge: the d6 says whether the charge was set properly under fire, and the d8 thrown with it says how much of the wall came down.
+
+**2.6.4**  Direction — the **d12**. When a rule needs a direction or a scatter, read the d12 as a clock face centred on the hex in question, with the six hex directions at 12, 2, 4, 6, 8 and 10 o'clock; a reading between two directions takes the lower of the two.
+
+.. container:: rule-guide
+
+   **Why:** A twelve-sided die is a clock, and a hex has six sides — so one throw gives a direction with a built-in bias toward the cardinal ones without a conversion table. Reusing it for every scatter, dispersion and drift in the game means mortar rounds, thrown charges and routing all read the same way.
+
+   **Example:** A mortar round disperses: the d12 comes up 7, which lies between the 6 and 8 o'clock directions, so the round drifts in the 6 o'clock direction.
+
+**2.6.5**  Rolls that are **not** Checks: fire combat resolution (Rule 8.1.6), the vehicle Gunnery Roll (Rule 18.1a.3), and the penetration and damage rolls that follow from them (Rules 18.3, 18.4, 18.6). These keep their own procedures.
+
+.. container:: rule-guide
+
+   **Why:** Combat is the one place where the three dice together are doing deliberate distributional work — the 1d6+1d8+1d12 spread and the result bands of Appendix C are calibrated against each other. Carving combat out keeps the Check simple everywhere else without disturbing the maths the rest of the game is balanced on.
+
+   **Example:** Firing at a squad is not a Check; the squad's morale test after being hit is.
