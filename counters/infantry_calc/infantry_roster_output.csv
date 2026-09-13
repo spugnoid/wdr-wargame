@@ -27,3 +27,11 @@ SOV_45MMAT_1943.3_F,Soviet Union,45mm Anti-tank Gun Team,1943.3,F,regular,,,,6,5
 US_57MMAT_1943.3_F,United States,57mm Anti-tank Gun Team M1,1943.3,F,regular,,,,6,5,0,2,1,PRELIMINARY
 UK_HOMEGUARD_1943.3_F,United Kingdom,Home Guard Squad,1943.3,F,militia,omit (rFP too low),omit (rFP too low),,4,3,5,1,2,PRELIMINARY
 UK_HOMEGUARD_1943.3_R,United Kingdom,Home Guard Squad (reduced),1943.3,R,militia,omit (rFP too low),,,2,3,5,1,1,PRELIMINARY
+GER_CREW_1943.3_F,Germany,Vehicle Crew,1943.3,F,regular,omit (rFP too low),,,6,5,5,0,1,PLACEHOLDER
+GER_CREW_1943.3_R,Germany,Vehicle Crew (reduced),1943.3,R,regular,omit (rFP too low),,,4,5,5,0,1,PLACEHOLDER
+SOV_CREW_1943.3_F,Soviet Union,Vehicle Crew,1943.3,F,regular,omit (rFP too low),,,6,5,5,0,1,PLACEHOLDER
+SOV_CREW_1943.3_R,Soviet Union,Vehicle Crew (reduced),1943.3,R,regular,omit (rFP too low),,,4,5,5,0,1,PLACEHOLDER
+US_CREW_1943.3_F,United States,Vehicle Crew,1943.3,F,regular,omit (rFP too low),,,6,5,5,0,1,PLACEHOLDER
+US_CREW_1943.3_R,United States,Vehicle Crew (reduced),1943.3,R,regular,omit (rFP too low),,,4,5,5,0,1,PLACEHOLDER
+UK_CREW_1943.3_F,United Kingdom,Vehicle Crew,1943.3,F,regular,omit (rFP too low),,,6,5,5,0,1,PLACEHOLDER
+UK_CREW_1943.3_R,United Kingdom,Vehicle Crew (reduced),1943.3,R,regular,omit (rFP too low),,,4,5,5,0,1,PLACEHOLDER

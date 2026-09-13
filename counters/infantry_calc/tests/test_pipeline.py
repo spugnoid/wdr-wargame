@@ -65,9 +65,9 @@ class TestLoadUnits:
     corrected against newly-sourced TOE research -- see their own `notes`
     column and design notes E.110/E.116."""
 
-    def test_loads_all_twenty_eight_rows(self):
+    def test_loads_all_thirty_six_rows(self):
         units = load_units()
-        assert len(units) == 28
+        assert len(units) == 36
 
     def test_gren_43_front_face_matches_the_anchor_unit(self):
         """Corrected 2026-09-11: manpower_full 9->10 and a third weapon
@@ -166,7 +166,7 @@ class TestWriteInfantryRosterCsv:
 
     def test_writes_one_row_per_unit(self, tmp_path):
         rows = self._rows_by_unit_id(tmp_path)
-        assert len(rows) == 28
+        assert len(rows) == 36
 
     def test_gren_43_front_face_matches_the_worked_example(self, tmp_path):
         """The MG42 LMG line is untouched by the 2026-09-11 correction --
@@ -409,3 +409,26 @@ def test_leader_stats_do_not_vary_by_nation():
         by_quality.setdefault(r["quality"], set()).add(sig)
     for quality, sigs in by_quality.items():
         assert len(sigs) == 1, f"{quality} leaders differ by nation: {sigs}"
+
+
+def test_vehicle_crews_print_no_fire_line():
+    """Rule 19.2.7a: a bailed crew's sidearms fall below MIN_RFP, so the
+    counter prints no fire line and can never make a Fire action."""
+    import csv, pathlib
+    rows = [r for r in csv.DictReader(
+        open(pathlib.Path(__file__).parent.parent / "infantry_roster_output.csv", encoding="utf-8"))
+        if "Vehicle Crew" in r["unit_type"]]
+    assert len(rows) == 8, "expected a full and reduced crew face for four nations"
+    for r in rows:
+        assert r["fire_line_1"].startswith("omit"), f"{r['unit_type']} {r['nation']} printed a fire line"
+        assert r["f_number"] == "0", "Rule 19.2.7a: a CREW counter is F0"
+
+
+def test_crew_morale_does_not_come_from_a_vehicle():
+    """Every crew is statted by the pipeline like any other unit, so crews
+    of the same quality match regardless of what they bailed out of."""
+    import csv, pathlib
+    rows = [r for r in csv.DictReader(
+        open(pathlib.Path(__file__).parent.parent / "infantry_roster_output.csv", encoding="utf-8"))
+        if r["unit_type"] == "Vehicle Crew"]
+    assert len({(r["morale"], r["defence"], r["m_number"]) for r in rows}) == 1

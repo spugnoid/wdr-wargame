@@ -397,6 +397,110 @@ G.1  Infantry and Weapon Team Roster
      - M5
      - F1
      - G1
+   * - Vehicle Crew
+     - Germany
+     - 1943.3
+     - regular
+     - F
+     - omit (rFP too low)
+     - —
+     - —
+     - 6
+     - 5
+     - M5
+     - F0
+     - G1
+   * - Vehicle Crew (reduced)
+     - Germany
+     - 1943.3
+     - regular
+     - R
+     - omit (rFP too low)
+     - —
+     - —
+     - 4
+     - 5
+     - M5
+     - F0
+     - G1
+   * - Vehicle Crew
+     - Soviet Union
+     - 1943.3
+     - regular
+     - F
+     - omit (rFP too low)
+     - —
+     - —
+     - 6
+     - 5
+     - M5
+     - F0
+     - G1
+   * - Vehicle Crew (reduced)
+     - Soviet Union
+     - 1943.3
+     - regular
+     - R
+     - omit (rFP too low)
+     - —
+     - —
+     - 4
+     - 5
+     - M5
+     - F0
+     - G1
+   * - Vehicle Crew
+     - United States
+     - 1943.3
+     - regular
+     - F
+     - omit (rFP too low)
+     - —
+     - —
+     - 6
+     - 5
+     - M5
+     - F0
+     - G1
+   * - Vehicle Crew (reduced)
+     - United States
+     - 1943.3
+     - regular
+     - R
+     - omit (rFP too low)
+     - —
+     - —
+     - 4
+     - 5
+     - M5
+     - F0
+     - G1
+   * - Vehicle Crew
+     - United Kingdom
+     - 1943.3
+     - regular
+     - F
+     - omit (rFP too low)
+     - —
+     - —
+     - 6
+     - 5
+     - M5
+     - F0
+     - G1
+   * - Vehicle Crew (reduced)
+     - United Kingdom
+     - 1943.3
+     - regular
+     - R
+     - omit (rFP too low)
+     - —
+     - —
+     - 4
+     - 5
+     - M5
+     - F0
+     - G1
 
 G.2  Leader Roster
 -----------------------

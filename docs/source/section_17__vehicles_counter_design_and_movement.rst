@@ -327,7 +327,50 @@ Vehicle counters display the following fields:
 
    **Example:** A fast-turreted TRAV 3 vehicle can engage any target regardless of hull facing, but that same hull's armor facing arcs (Rule 17.5.2) still determine which AV value an incoming shot uses based on the hull's actual orientation — the two never interact.
 
-**17.4.1a**  A vehicle does not follow Rule 6.3.1's Regular/Assault split. In a single turn it may take one Move action and one Fire action (Rule 6.3.2, 1 AP each), in either order — a vehicle's Move does not place a MOVED/FIRED marker and does not by itself end its turn. A vehicle instead tracks only whether it has moved this turn, via its own MOVED marker (Rule 18.1a.6) — a simpler, separate concept from the infantry MOVED/FIRED marker (Rule 6.5.1), which vehicles do not use. A vehicle that has both moved and fired this turn may not move or fire again. If the Fire action comes after the Move action, it is subject to Rule 17.4.2's TRAV penalty; a Fire action taken before the vehicle has moved this turn is not.
+**17.4.1a**  A vehicle does not follow Rule 6.3.1's Regular/Assault split. In a single turn it may take one Move action and **as many Fire actions as its printed F# allows** (Rule 17.4.1b), 1 AP each, in any order — a vehicle's Move does not place a MOVED/FIRED marker and does not by itself end its turn. A vehicle instead tracks only whether it has moved this turn, via its own MOVED marker (Rule 18.1a.6), and its expended shots with FIRED pips exactly as a crew-served weapon does (Rule 6.6.3). Rule 6.6.4's restriction does not apply to vehicles: a tank is a mobile gun platform and fires at its full rate whether or not it moved, with the accuracy cost of shooting on the move already carried by the Gunnery Roll (Rules 18.1a.6, 18.1a.9).
+
+.. container:: rule-guide
+
+   **Why:** A tank that can shoot once per turn is not a tank. Real crews fired repeatedly, and the thing that limited them was not doctrine but the inside of the turret — how many hands were free to serve the gun. Tying the rate to that, and letting a vehicle keep firing while it manoeuvres, also makes Rule 18.1a.7's follow-up-shot bonus reachable for the first time; it was written for a second shot the old one-Fire limit made impossible.
+
+   **Example:** A Panzer IV (F3) may fire three times in a turn for 3 AP, gaining 18.1a.7's follow-up bonus on the second and third if it stays put and keeps engaging the same target. A T-70 (F1) fires once and is done.
+
+**17.4.1b**  **Vehicle fire rate (F#).** A vehicle's F# is set by how many crew are free to serve the main gun, and is printed on the counter:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - **Turret / fighting compartment**
+     - **F#**
+     - **Why**
+   * - Three-man turret or casemate — commander, gunner and dedicated loader
+     - **F3**
+     - The commander fights the vehicle while the gunner lays and the loader loads; nobody is doing two jobs
+   * - Two-man turret — the commander doubles as gunner or loader
+     - **F2**
+     - Every shot costs the commander his other job, and the vehicle fights half blind while he does it
+   * - One-man turret — the commander is gunner and loader both
+     - **F1**
+     - He cannot observe, aim, load and command at once; in practice he does one of them
+   * - Separate-loading ammunition (shell and charge loaded apart)
+     - **−1**
+     - Two motions per round, in a cramped space, with heavy components
+
+
+.. container:: rule-guide
+
+   **Why:** Turret crew arrangement is the single best-documented determinant of real WWII tank rate of fire, and it produces the distinctions that actually mattered without inventing a new stat to source. It is why the T-34's two-man turret was such a serious handicap against a Panzer IV of the same calibre, why the T-34/85's three-man turret was a step change rather than merely a bigger gun, and why the T-70's one-man turret made it nearly useless in a gun duel. The game already prints F# on the vehicle counter (Rule 17.1); this says what the number is.
+
+   **Example:** A T-34 Model 1943 is F2 — its commander also lays the gun. A T-34/85, same hull and a heavier weapon, is F3, because the new turret finally gave him a gunner. That single difference is worth more in a firefight than the extra 9mm of calibre.
+
+**17.4.1c**  A vehicle firing its main gun may fire **one machine gun in the same action**, at the same target or a different one, resolved separately as ordinary anti-infantry fire (Rule 18.8.2). This costs no additional AP and no FIRED pip. A vehicle with several machine guns picks one per action; a vehicle firing no main gun may fire one MG as its action in the ordinary way.
+
+.. container:: rule-guide
+
+   **Why:** A tank's hull and coaxial machine guns were fired by different men from the man serving the main gun, and they fired more or less constantly. Making the MG free and simultaneous rather than a competing action reflects that, and restores the thing that made tanks genuinely dangerous to infantry — not the shell, but the belt-fed weapon going the whole time the gun was being reloaded.
+
+   **Example:** A Panzer IV fires its 7.5cm at a T-34 and its coaxial MG34 at a squad in the woods beside it, in the same action for the same single Action Point. Both are resolved, each by its own procedure.
 
 .. container:: rule-guide
 

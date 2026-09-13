@@ -67,13 +67,13 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
 ------------------------
 
 
-**19.2.1**  Bail-out check trigger: during each Recovery Phase, any vehicle that is Suppressed or Pinned must pass a bail-out check.
+**19.2.1**  Bail-out check trigger: a bail-out check is a **response**, made the moment a vehicle becomes Suppressed or Pinned (Rule 18.4, 18.7.1) — not a Recovery Phase check. Resolve it immediately, as part of the attack that caused the condition. A vehicle already Suppressed or Pinned that is hit again and holds its condition checks again.
 
 .. container:: rule-guide
 
-   **Why:** Adds a recurring automatic risk for any degraded vehicle, timed to the same Recovery Phase used for other automatic per-turn checks (Rule 5.2.8) — a crew that's been shaken or isolated doesn't just sit there indefinitely; each turn brings a fresh chance they decide to abandon ship.
+   **Why:** Bailing out is something a crew decides in the seconds after a round comes through, not a housekeeping roll at the top of the next turn. Resolving it as a response to the hit puts the decision where it belongs and lets the attacking player see the consequence of the shot they just fired. Morale recovery stays where it belongs, at the start of the turn (Rule 5.2) or when a leader spends the AP to force it (Rule 12.6).
 
-   **Example:** A vehicle Suppressed at the end of a turn faces a bail-out check at the very next Recovery Phase, alongside whatever other recovery-related rolls are also happening that phase.
+   **Example:** A non-penetrating hit leaves a Panzer IV's crew Suppressed (Rule 18.4.1). The bail-out check is made there and then, before the impulse ends — not deferred to the following turn.
 
 .. list-table::
    :header-rows: 1
@@ -138,39 +138,13 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
 
    **Example:** When a tank's crew bails out, a CREW counter appears in that same hex representing the men themselves — a distinct piece from the now-abandoned vehicle counter sitting in the same hex.
 
-**19.2.7a**  CREW counter values. A CREW counter carries its own nation and the following stats. Its **Morale is the printed Morale of the vehicle it bailed out of** — the same value that set that vehicle's Crew Quality (Rule 17.3.6) — so a veteran crew stays a veteran crew on foot. Every other value is fixed:
-
-.. list-table::
-   :header-rows: 1
-   :widths: auto
-
-   * - **Stat**
-     - **Value**
-     - **Notes**
-   * - Morale
-     - As the vehicle's printed Morale
-     - Carries across unchanged; drives rally (Rule 10.6.7), capture (Rule 19.4.3) and hull recovery (Rule 13.3.2)
-   * - Defence
-     - 3
-     - Four or five men on foot with sidearms — the same Defence as a reduced-crew weapon team
-   * - M#
-     - M5
-     - Carrying nothing heavy, so the standard infantry rate (Rule 7.1.3)
-   * - F#
-     - F0
-     - No printed fire line. A CREW counter never makes a Fire action
-   * - G#
-     - G1
-     - May defend itself in a melee but may never **declare** a close assault
-   * - Faces
-     - Single
-     - No reduced face, so a Casualty result or worse is a physical break (Rule 10.4.3): the counter goes to the BROKEN zone with a red CI cause marker
+**19.2.7a**  CREW counter values. A CREW counter is an ordinary unit counter with its own printed stats, listed in Appendix G.1 like every other unit — Morale, Defence, M#, F# and G# all come from the roster, not from the vehicle the crew left. It prints **no fire line**: four or five men with sidearms and a submachine gun fall below the printing floor, so a CREW counter can never make a Fire action. It has a reduced face like any other unit.
 
 .. container:: rule-guide
 
-   **Why:** Derives the one value that should vary — Morale — from a number already printed on the vehicle, rather than adding a stat a player would have to look up or a scenario would have to specify. A crew's quality is not changed by being shot out of their tank; their *state* is, and Rule 19.2.8 already represents that by routing them the instant they appear. Everything else is fixed because a bailed-out crew is the same thing in every army: a handful of men with pistols, no longer a fighting unit in any meaningful sense, whose remaining purpose is to get away and perhaps crew something else later (Rule 19.4.2).
+   **Why:** A bailed-out crew is men on foot, and men on foot are statted the way this game stats everyone — from what they are carrying and how many of them there are, through the same pipeline that produces every other counter. Deriving their Morale from the tank they just abandoned would have made them the one unit in the game whose numbers came from somewhere else, and would have said that crews from better tanks are braver, which is not a thing. A crew that cannot shoot is the honest outcome of the arithmetic, not a special case: whatever they are carrying, it is not enough to matter, and their business now is getting away.
 
-   **Example:** A Tiger I with printed Morale 6 is abandoned. Its CREW counter is Morale 6, Defence 3, M5 F0 G1 — it cannot shoot, routs immediately at D3 hexes, and will rally on a 5 or better in a Recovery Phase (threshold 6, Rule 10.6.7, plus its +1 Morale modifier).
+   **Example:** A German crew bails out of a Panzer IV: Morale 5, Defence 6, M5 F0 G1, no fire line — the same numbers whether the vehicle was a Tiger or a half-track, and the same numbers a scenario uses when it fields a replacement crew at setup (Rule 19.4.2a).
 
 **19.2.8**  The CREW counter immediately routs using infantry routing rules — moves D3 hexes away from the nearest visible enemy unit. Place ROUTING marker on CREW counter.
 
@@ -409,6 +383,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - **Gun PEN @ 500m**
      - **TRAV**
      - **M#**
+     - **F#**
      - **HE**
      - **MG**
      - **Morale**
@@ -419,6 +394,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - 119.6
      - 3
      - M8
+     - F3
      - 4
      - 4 ⬡3 -1
      - 6
@@ -429,6 +405,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - 69.0
      - 3
      - M8
+     - F3
      - 3
      - 4 ⬡3 -1
      - 6
@@ -439,6 +416,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - 137.4
      - 2
      - M5
+     - F3
      - 4
      - 4 ⬡3 -1
      - 6
@@ -449,6 +427,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - 119.6
      - 0
      - M8
+     - F3
      - 4
      - 3 ⬡3 -1
      - 6
@@ -459,6 +438,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - 72.2
      - 3
      - M8
+     - F2
      - 4
      - 3 ⬡3 -1
      - 5
@@ -469,6 +449,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - 119.8
      - 3
      - M8
+     - F3
      - 4
      - 3 ⬡3 -1
      - 5
@@ -479,6 +460,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - 72.2
      - 1
      - M5
+     - F3
      - 4
      - 3 ⬡3 -1
      - 5
@@ -489,6 +471,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - 119.8
      - 0
      - M8
+     - F2
      - 4
      - 3 ⬡3 -1
      - 5
@@ -499,6 +482,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - 77.9
      - 3
      - M8
+     - F3
      - 4
      - 4 ⬡3 -1
      - 6
@@ -509,6 +493,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - 117.5
      - 3
      - M8
+     - F3
      - 4
      - 4 ⬡3 -1
      - 6
@@ -519,6 +504,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - —
      - —
      - M10
+     - F1
      - —
      - 3 ⬡3 -1
      - 5
@@ -529,6 +515,7 @@ Vehicle crews were not immune to morale failure. Isolated inside steel boxes, de
      - 59.3
      - 3
      - M10
+     - F1
      - 2
      - 3 ⬡3 -1
      - 5

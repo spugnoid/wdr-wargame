@@ -156,7 +156,7 @@ Units may be in one of the following status levels at any time. Status is tracke
 
    **Example:** A unit already on its rear face that suffers another Casualty result has nowhere further to reduce, so it breaks physically — its Casualty Track slot gets a red marker, not white.
 
-**10.4.4**  Psychological break — the unit fails a morale check (see Section 15). Place a white CI cause marker in the unit's Casualty Track slot.
+**10.4.4**  Psychological break — the unit fails a morale check (see Section 15), **or** a single fire attack produces the Broken result outright (Rule 8.6's top band) without the unit having taken a step loss. Place a white CI cause marker in the unit's Casualty Track slot. A unit that is shot to pieces over several attacks breaks physically (Rule 10.4.3); one that comes apart under a single overwhelming volume of fire has not lost the men, it has lost its nerve.
 
 .. container:: rule-guide
 

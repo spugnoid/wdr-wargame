@@ -322,6 +322,9 @@ The following reactions are available to the non-active player during a reaction
    * - Towed anti-tank gun, deployed (Rule 17.1a)
      - 2
      - Same deploy/limber logic as a deployed mortar or bipod MG — the pre-sighted, planted mount buys the extra shot, not the gun itself. Limbered guns use the row below.
+   * - Vehicle main gun
+     - **Printed**
+     - Set by turret crew arrangement, from F1 to F3 (Rule 17.4.1b). A vehicle fires at its printed rate whether or not it moved, and may fire one machine gun free alongside each shot (Rule 17.4.1c)
    * - Any other unit, or any weapon in transit
      - 1
      - One full-effect fire is the unit's entire turn (Rule 6.3.2); the Assault economy (Rule 6.3.3) is its only path to a second, reduced shot.
@@ -335,7 +338,7 @@ The following reactions are available to the non-active player during a reaction
 
    **Example:** A tripod HMG (F3) fires three separate times this turn, each a full-effect Regular Fire, marked FIRED 1, then FIRED 2, then FIRED 3 in turn. Only after the third shot does it become MOVED/FIRED.
 
-**6.6.4**  F# greater than 1 applies only in a turn the weapon has not moved. A weapon that takes any Move action this turn — Regular or Assault — is in the ordinary Assault economy for the rest of its turn: no weapon fires above F1 in a turn it moved. An LMG (or any bipod-capable MG) that chooses to move therefore fights like any other unit — one crewman operating it off the bipod, at half FPr.
+**6.6.4**  F# greater than 1 applies only in a turn the weapon has not moved. **Vehicles are excepted** (Rule 17.4.1a): a tank is a mobile gun platform and fires at its full printed rate whether or not it moved. A weapon that takes any Move action this turn — Regular or Assault — is in the ordinary Assault economy for the rest of its turn: no weapon fires above F1 in a turn it moved. An LMG (or any bipod-capable MG) that chooses to move therefore fights like any other unit — one crewman operating it off the bipod, at half FPr.
 
 .. container:: rule-guide
 
