@@ -18,7 +18,7 @@ Leader counters use a diamond symbol (◆) and display four stats in addition to
      - **Description**
    * - Command
      - CMD ●●●
-     - Command rating 1–3 shown as filled dots. Drives AP contribution and command radius.
+     - Command rating 1–3 shown as filled dots. Does three jobs at once: AP contributed, command radius in hexes, and directions available per turn (Rule 12.4a.1). Turn a dot down for each direction used.
    * - Observation
      - OBS 1–3
      - Observation rating. Added as bonus to spot rolls when leader is present.
@@ -36,7 +36,7 @@ All leaders have M8 F1 — movement allowance 8, fire rate 1. Leaders move faste
 -------------------------------
 
 
-**12.2.1**  A leader's CMD rating (1–3) determines both their AP contribution and their command radius — the area within which they can affect friendly units.
+**12.2.1**  A leader's CMD rating (1–3) determines three things at once: their AP contribution, their command radius — the area within which they can affect friendly units — and how many times per turn they may direct (Rule 12.4a.1).
 
 .. container:: rule-guide
 
@@ -52,21 +52,25 @@ All leaders have M8 F1 — movement allowance 8, fire rate 1. Leaders move faste
      - **Quality**
      - **AP Contribution**
      - **Command Radius**
+     - **Directions / turn**
      - **Typical Role**
    * - 1
      - Poor / inexperienced
      - +1 AP
      - 1 hex (adjacent only)
+     - 1
      - Junior NCO, replacement officer
    * - 2
      - Regular
      - +2 AP
      - 2 hexes
+     - 2
      - Squad leader, platoon sergeant
    * - 3
      - Veteran / elite
      - +3 AP
      - 3 hexes
+     - 3
      - Platoon commander, company officer
 
 
@@ -196,11 +200,55 @@ All leaders have M8 F1 — movement allowance 8, fire rate 1. Leaders move faste
 
    **Example:** An out-of-command unit can still move, fire, and take other normal actions for its usual AP cost — it just does so at the penalties listed in Rule 12.4.2's table rather than being unable to act at all.
 
+12.4a  Directing
+-------------------
+
+
+**12.4a.1**  A leader's **CMD rating does three jobs at once**: it is the AP that leader contributes to the side's pool (Rule 5.3.3), the leader's command radius in hexes (Rule 12.2.1), and the number of times that leader may **direct** in a turn. Turn one of the leader's CMD dots face down for each direction used; restore them all in the Recovery Phase (Rule 5.2.2).
+
+.. container:: rule-guide
+
+   **Why:** One printed number, three jobs, and killing the officer takes all three away at once — which is exactly what made junior leaders the thing snipers and machine guns were told to shoot at first. A CMD 3 platoon commander brings three Action Points and can personally shape three of them; a CMD 1 replacement brings one and can shape one. The allowance also stops a single officer coordinating the entire company every turn from one hex, without needing a separate rule to forbid it.
+
+   **Example:** A CMD 2 squad leader contributes 2 AP, reaches 2 hexes, and may direct twice this turn. Having directed a group move and then a burst of fire, its dots are spent: it can still move and still be shot at, but it can do nothing further for anyone else until the next Recovery Phase.
+
+**12.4a.2**  Directing is **not a separate action and costs no additional AP**. It is a property of an activation already being paid for: the AP is spent as normal, and the leader's direction is what lets that AP do more than one counter's worth of work, or lets a unit act better than it could alone. A leader may direct in the same impulse it is itself activated, and may direct without being activated at all.
+
+.. container:: rule-guide
+
+   **Why:** A leader shouting an order is not a turn's worth of activity, it is the thing that makes somebody else's activity work. Pricing direction as its own action created an impossible sequence — one Action Point for the leader, another for the unit, but only one action permitted per impulse (Rule 5.5.1), so the bonus could never reach the shot it was meant to modify. Folding direction into the activation it modifies resolves that and matches what an officer actually does.
+
+   **Example:** A player spends 1 AP to fire a squad. The CMD 2 leader beside it directs that fire in the same impulse: one AP, one action, +2 to the FPr, one of the leader's two dots turned down.
+
+**12.4a.3**  What a direction buys — one of the following per direction:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - **Direction**
+     - **Effect**
+   * - Group action
+     - Two or more counters within command radius take the same kind of action on the single AP spent (Rule 6.1.1)
+   * - Directed fire
+     - One firing unit or fire group within radius adds the leader's CMD to its FPr, after the Resolution Strip (Rule 12.7.2)
+   * - Coordinated assault
+     - Adds the leader's ASL to the Grenade Phase, the leader being in the assaulting hex (Rule 12.8)
+
+
+**12.4a.4**  A unit never *needs* a leader to act. One counter, one AP, on its own initiative, anywhere on the map. Support weapons fire perfectly well unled — a machine gun crew does not wait for an officer to shoot. What a leader adds is doing it *together*, or doing it *better*.
+
+.. container:: rule-guide
+
+   **Why:** Keeps the leader as a multiplier rather than a gate, which is both the historical reality and the more interesting game: a force that loses its officers is not paralysed, it is reduced to fighting as individual squads — slower, more scattered, and less accurate, but still fighting. Gating ordinary fire behind an officer would be gamey; making concentration and coordination the things that need one is not.
+
+   **Example:** An MG42 team with no leader in sight fires at its full printed effect. The same team with a CMD 3 leader directing adds 3 to its FPr — the officer is picking the target, calling the range, and correcting the burst.
+
 12.5  Leader Actions
 --------------------
 
 
-When a leader is activated (costs 1 AP), they may take one of the following actions:
+A leader spending its own 1 AP may take one of the following actions. These are things the leader does *itself*, and are distinct from **directing** (Rule 12.4a), which costs no AP of its own and rides on an activation already being paid for:
 
 .. list-table::
    :header-rows: 1
@@ -212,8 +260,8 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
    * - Move
      - Leader moves up to M8 hexes following terrain movement costs.
      - N/A
-   * - Direct Fire
-     - Add CMD rating to one fire group's FPr this impulse, after the Resolution Strip lookup.
+   * - Directed fire
+     - Not a leader action — a direction (Rule 12.4a.3). Adds CMD to one fire group's FPr, in the same impulse as the fire it modifies.
      - Command radius
    * - Rally
      - One Suppressed or Pinned unit attempts mid-turn recovery at RAL threshold instead of standard threshold. See Rule 12.6.
@@ -221,8 +269,8 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
    * - Rally Point
      - Places a RALLY POINT marker in the leader's current hex — a rally destination for Dispersed units. See Rule 12.6a.
      - Current hex
-   * - Coordinate Assault
-     - Add ASL value to assaulting unit's grenade G# for the Grenade Phase. Does not apply to Entry Fire or Melee Continuation.
+   * - Coordinated assault
+     - Not a leader action — a direction (Rule 12.4a.3). Adds ASL to the Grenade Phase; does not apply to Entry Fire or Melee Continuation.
      - Same hex as assaulting unit
    * - Spot
      - Leader takes Spot Action. Adds OBS to all spot rolls this turn. May attempt free spot rolls against all hidden markers in LOS.
@@ -327,17 +375,17 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
 
    **Example:** A Dispersed unit sits exactly 3 hexes from two different friendly RALLY POINT markers. The owning player picks which of the two the unit rallies to when its Recovery Phase roll succeeds.
 
-12.7  Direct Fire Coordination
-------------------------------
+12.7  Directed Fire
+-------------------
 
 
-**12.7.1**  A leader spending 1 AP on Direct Fire adds their CMD rating to the FPr of one fire group within command radius.
+**12.7.1**  A leader may **direct the fire** of one unit or fire group within its command radius, adding its CMD rating to that attack's FPr. This is a direction (Rule 12.4a), not a separate action: it costs no AP of its own, happens in the same impulse as the fire it modifies, and turns down one of the leader's CMD dots.
 
 .. container:: rule-guide
 
    **Why:** Gives a leader a direct way to boost a fire attack's raw firepower rather than just improving morale or coordination indirectly, spending the same 1 AP that any other Leader Action costs (Rule 12.5) so it competes with those other options for the leader's turn.
 
-   **Example:** A CMD 2 leader spending 1 AP on Direct Fire adds +2 to a nearby fire group's FPr this impulse, on top of whatever the firing units' own summed eFP produced.
+   **Example:** A CMD 2 leader directing a nearby fire group adds +2 to its FPr in that same impulse, on top of whatever the firing units' own summed eFP produced.
 
 **12.7.2**  The bonus is added to the **FPr**, after the Resolution Strip lookup (Rule 8.4.1) — not to the summed eFP before it. It is therefore worth its full face value whatever the size of the attack, and may carry the result above the strip's own maximum of 12.
 
@@ -345,7 +393,7 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
 
    **Why:** Command coordination is not another rifle in the firing line, so it is not subject to the diminishing returns the strip models for volume of fire. Adding it before the lookup would let compression swallow it whole — a CMD 3 leader spending 1 AP on a fire group already summing 20 eFP would change FPr by nothing at all, since 20 and 23 fall in the same band. Applied after, the leader's contribution is always exactly what the counter says it is.
 
-   **Example:** A fire group's eFP sums to 20, reading FPr 10 off the strip. A CMD 2 leader's Direct Fire makes the attack FPr 12 — the bonus lands in full, where adding it to the eFP first would have left the group at FPr 10 and wasted the AP.
+   **Example:** A fire group's eFP sums to 20, reading FPr 10 off the strip. A CMD 2 leader directing it makes the attack FPr 12 — the bonus lands in full, where adding it to the eFP first would have left the group at FPr 10 and wasted the AP.
 
 **12.7.3**  Multiple leaders cannot stack fire coordination bonuses on the same fire group in the same impulse. The highest single CMD bonus applies.
 
@@ -353,15 +401,15 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
 
    **Why:** Caps a fire group's leadership bonus at one leader's worth even if several leaders are in range, preventing a cluster of leaders from compounding an already-large firepower bonus onto a single attack — command coordination has a ceiling per attack.
 
-   **Example:** If both a CMD 2 leader and a CMD 3 leader are in range of the same fire group and both would want to apply Direct Fire to it in the same impulse, only the higher CMD 3 bonus actually applies — the two bonuses don't add together.
+   **Example:** If both a CMD 2 leader and a CMD 3 leader are in range of the same fire group and both would want to direct it in the same impulse, only the higher CMD 3 bonus actually applies — the two bonuses don't add together.
 
-**12.7.4**  A HIDDEN leader's command is limited to what silence permits: they contribute CMD to the AP pool (Rule 12.3.1 — planning happens off-map) and add CMD to rolls of units **in their own hex only**. Every other leader function — Direct Fire coordination, Rally, Inspire, Leader Actions, command radius to other hexes, and the Recovery Phase CMD bonus of Rule 5.2.6 for units outside their hex — requires the leader to be VISIBLE: shouting orders across a field reveals the shouter. A hidden leader may reveal voluntarily at the start of any friendly impulse (remove the blind marker) to use these functions.
+**12.7.4**  A HIDDEN leader's command is limited to what silence permits: they contribute CMD to the AP pool (Rule 12.3.1 — planning happens off-map) and add CMD to rolls of units **in their own hex only**. Every other leader function — directing fire, coordination, Rally, Inspire, Leader Actions, command radius to other hexes, and the Recovery Phase CMD bonus of Rule 5.2.6 for units outside their hex — requires the leader to be VISIBLE: shouting orders across a field reveals the shouter. A hidden leader may reveal voluntarily at the start of any friendly impulse (remove the blind marker) to use these functions.
 
 .. container:: rule-guide
 
    **Why:** Reconciles the hidden-information system (Section 14) with leader command functions by treating audible commands as inherently revealing — a hidden leader can still plan (AP contribution) and help their own hex quietly, but projecting command outward requires the leader to break cover and become visible.
 
-   **Example:** A HIDDEN leader still contributes their CMD to the side's AP pool and can add CMD to a unit sharing their own hex, but if that leader wants to use Direct Fire on a fire group two hexes away, they must first reveal (removing the blind marker) — silent long-range coordination isn't an option.
+   **Example:** A HIDDEN leader still contributes their CMD to the side's AP pool and can add CMD to a unit sharing their own hex, but if that leader wants to direct the fire of a group two hexes away, they must first reveal (removing the blind marker) — silent long-range coordination isn't an option.
 
 12.8  Assault Coordination
 --------------------------
@@ -371,7 +419,7 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
 
 .. container:: rule-guide
 
-   **Why:** Requires the leader to physically be in the same hex as the assaulting unit, unlike Direct Fire's command-radius range (Rule 12.7.1) — coordinating a close assault means being right there with the assault, not directing it from a distance.
+   **Why:** Requires the leader to physically be in the same hex as the assaulting unit, unlike directed fire's command-radius range (Rule 12.7.1) — coordinating a close assault means being right there with the assault, not directing it from a distance.
 
    **Example:** A leader standing in the same hex as Alpha when Alpha declares a close assault can spend 1 AP on Coordinate Assault to boost Alpha's grenade G#; a leader two hexes away, even well within command radius, cannot provide this specific bonus.
 

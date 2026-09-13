@@ -5,13 +5,13 @@ Section 6 — Actions and Reactions
 ------------------
 
 
-**6.1.1**  Spending 1 AP activates one unit or stack for that impulse, granting exactly one action from the Section 6.3 table.
+**6.1.1**  Spending 1 AP activates **one counter** for that impulse, granting exactly one action from the Section 6.3 table. To activate **two or more counters on that single AP**, a leader must direct them (Rule 12.4a): every counter activated must lie within that leader's command radius, and they must all take the same kind of action.
 
 .. container:: rule-guide
 
-   **Why:** Ties the AP resource directly to the Section 6.3 action menu, so every activation is both priced (1 AP) and limited to exactly one action — no free extra actions bundled into a single AP spend.
+   **Why:** Ties the AP resource directly to the Section 6.3 action menu, so every activation is both priced (1 AP) and limited to exactly one action. Making a leader the only way to move or shoot with more than one counter at once is the central fact about small-unit command: men act on their own initiative one at a time, and it takes somebody in charge to make them act *together*. A stack is not a unit — three squads sharing a hex are still three squads, and without an officer they take three Action Points to move.
 
-   **Example:** Alpha's player spends 1 AP to activate Alpha this impulse, choosing one action from the 6.3 table (e.g. Move). Alpha may not also Fire in the same impulse without spending a second AP in a later impulse.
+   **Example:** Alpha's player spends 1 AP to activate Alpha this impulse, choosing one action from the 6.3 table. Moving Alpha and the two squads beside it on that same AP requires a leader within command radius of all three, directing them (Rule 12.4a).
 
 **6.1.2**  A unit may be activated more than once per turn, in separate impulses, each activation costing 1 AP. A unit's turn ends — no further movement or fire this turn — the moment it is marked MOVED/FIRED (Rule 6.5.4): a fresh unit reaches MOVED/FIRED after one Regular action (Rule 6.3.2) or after its second Assault part-action (Rule 6.3.3); a stationary weapon with F# greater than 1 (Rule 6.6) reaches it only once its printed F# is expended. A unit already MOVED/FIRED may not be activated again this turn (see Rule 6.7 for its remaining defensive rights).
 

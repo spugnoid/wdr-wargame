@@ -49,7 +49,7 @@ Coordinate Assault (leader)  ..........  6.3, 12.8
 
 Deploy Weapon  ..........  6.3, 7.6.3
 
-Direct Fire (leader)  ..........  6.3, 12.7
+Directed fire (leader direction)  ..........  12.4a.3, 12.7
 
 Fire  ..........  6.3, 8.1
 
@@ -479,11 +479,21 @@ distribution: symmetric, skew emergent from modifiers  ..........  8.5.3
 
 range 3–26, mean 14.5  ..........  8.5.1
 
-**Direct Fire (leader action)**  ..........  12.7
+**Directing (leaders)**  ..........  12.4a
+
+CMD is radius, AP and directions per turn  ..........  12.4a.1, 12.2.1
+
+costs no AP; rides on the activation it modifies  ..........  12.4a.2
+
+group action: two or more counters on one AP  ..........  12.4a.3, 6.1.1
+
+a unit never needs a leader to act alone  ..........  12.4a.4
+
+**Directed fire**  ..........  12.7, 12.4a.3
 
 +CMD eFP to fire group  ..........  12.7.1
 
-hidden leader cannot Direct Fire  ..........  12.7.4
+hidden leader cannot direct fire beyond its own hex  ..........  12.7.4
 
 **Dispersion (mortar)**  ..........  16.6
 
