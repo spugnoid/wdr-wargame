@@ -305,13 +305,13 @@ With Deepest Regret... uses a physical hidden information system to model the fo
 
    **Example:** A FIXED unit's very first shot from its prepared position can be followed immediately by Fire and Disperse at no AP cost; if that same unit is later caught in the open again and wants to hide once more, it must use the ordinary paid process (Rule 14.5.1) instead, since the free option is already spent.
 
-**14.7.6**  The surprise of the first FIXED fire applies a +2 eFP bonus to that fire action, representing the target's unpreparedness. This bonus applies only to the first fire from the FIXED position.
+**14.7.6**  The surprise of the first FIXED fire applies a **+2 FPr** bonus to that fire action, added after the Resolution Strip lookup (Rule 8.4.1), representing the target's unpreparedness. This bonus applies only to the first fire from the FIXED position.
 
 .. container:: rule-guide
 
    **Why:** Rewards the ambush value of a prepared position specifically on its opening shot, since that's the moment the target is genuinely caught unprepared — every subsequent shot from that same position no longer has the element of surprise once the enemy knows something is there.
 
-   **Example:** A FIXED unit's very first fire action, whichever option it later chooses (Rule 14.7.4 or 14.7.5), gets +2 eFP for that one shot; any fire the unit takes afterward, from any position, no longer carries that surprise bonus.
+   **Example:** A FIXED unit's very first fire action, whichever option it later chooses (Rule 14.7.4 or 14.7.5), gets +2 FPr for that one shot; any fire the unit takes afterward, from any position, no longer carries that surprise bonus.
 
 **14.7.7**  A FIXED unit cannot be spotted — it has no marker on the map and nothing for a spot roll to target. It is revealed only by its own fire or movement (Rules 14.7.2–14.7.5), or when an enemy unit attempts to enter its recorded hex: the FIXED unit is revealed immediately as VISIBLE in its hex, and the entering unit halts in the hex it currently occupies with its remaining MP lost — it has walked into a prepared position. The revealed unit's +2 surprise bonus (Rule 14.7.6) still applies to its first fire.
 

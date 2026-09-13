@@ -447,7 +447,7 @@ The full procedure for any fire combat action:
 
    **Why:** Confirms that Assault Fire and reaction fire are not special resolution systems of their own — they're ordinary fire attacks under this whole section, just computed at half eFP, so nothing about grouping, the Resolution Strip, or the dice procedure needs a separate version for them.
 
-   **Example:** An Assault Fire at half eFP still goes through falloff calculation, potential grouping, the Resolution Strip if grouped, and the same three-dice roll — only the rFP value feeding into all of that is halved going in.
+   **Example:** An Assault Fire at half eFP still goes through falloff calculation, potential grouping, the Resolution Strip, and the same three-dice roll — only the rFP value feeding into all of that is halved going in.
 
 **8.10.2**  A moving unit's own fire is unaffected by this rule — it is the attacker in that exchange, not the target. The -2 eFP penalty for firing *at* a moving target is Rule 7.5.2.
 

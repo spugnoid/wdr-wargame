@@ -207,7 +207,7 @@ The following terms are used throughout this document. Each term is defined here
 
 **Force Morale value —**  The threshold of CI and routing units at which a force morale check is triggered. Calculated as unit count × force factor at scenario start.
 
-**Force morale check —**  A roll made when CI and routing units reach the Force Morale value. Roll 1d6 + highest functional leader CMD vs 8. Failure ends the scenario.
+**Force morale check —**  A roll made when CI and routing units reach the Force Morale value. Roll 2d6 + highest functional leader CMD vs 8. Failure ends the scenario.
 
 **Indirect fire —**  Fire that does not require LOS to the target hex. Mortars and artillery. Targets a hex coordinate, not a specific unit.
 
@@ -247,11 +247,11 @@ The following terms are used throughout this document. Each term is defined here
 
 **TRAVERSED marker —**  Placed on a turreted vehicle when it fires at a target outside its hull's front hexside, showing the turret's actual current facing independent of the hull's facing arrow. Rule 17.5.5.
 
-**Automatic penetration —**  When effective PEN ≥ AV + 3. Round penetrates without a dice roll.
+**Automatic penetration —**  When effective PEN ≥ AV + 10. Round penetrates without a dice roll.
 
-**Contested penetration —**  When effective PEN ≥ AV but PEN < AV + 3. Roll 1d6 to determine penetration outcome.
+**Contested penetration —**  When effective PEN ≥ AV but PEN < AV + 10. Roll 1d6 to determine penetration outcome.
 
-**Bounce —**  When effective PEN < AV - 3. Round deflects with no effect.
+**Bounce —**  When effective PEN < AV − 10. Round deflects with no effect.
 
 **Shatter Gap —**  Optional/advanced rule (18.2a). A kinetic round that badly over-penetrates a plate can shatter its own nose before completing penetration and fail, despite nominally clearing AV by a comfortable margin.
 
@@ -279,7 +279,7 @@ The following terms are used throughout this document. Each term is defined here
 
 **Demolition —**  An engineer action destroying a terrain feature. Bridge, building, fortification, or road junction. Automatic success given time; roll under fire.
 
-**Burning marker —**  Placed when a hex is hit by flamethrower or catches fire. Units in hex take rFP 3 attack each turn. Persists until extinguished or 3 turns pass.
+**Burning marker —**  Placed when a hex is hit by flamethrower or catches fire. Units in hex take FPr 3 attack at the start of each activation by a unit in the hex. Persists until extinguished or 3 turns pass.
 
 **Capability marker —**  An icon on an engineer counter's support band showing available specialist capabilities: DEMO, BRH, MINE, FLAM, BRDG, FORT. Covered with EXPENDED strip when used.
 

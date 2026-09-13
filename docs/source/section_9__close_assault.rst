@@ -142,7 +142,7 @@ See Rule 6.3.3.
 
    **Why:** Reuses the same results table already governing ranged fire instead of a separate close-assault-only table, keeping the whole system's outcome language consistent no matter which rule produced the margin.
 
-   **Example:** Alpha's margin-12 Pinned result (9.3.2's example) and Bravo's margin-10 Pinned result (9.3.3's example) are both read straight off Appendix C — no separate close-assault threshold table exists.
+   **Example:** Alpha's margin-13 Pinned result (9.3.2's example) and Bravo's margin-10 Pinned result (9.3.3's example) are both read straight off Appendix C — no separate close-assault threshold table exists.
 
 **9.3.5**  Grenades halve the defender's cover modifier because they detonate inside the cover rather than against its exterior face.
 
@@ -212,7 +212,7 @@ See Rule 6.3.3.
 
    **Why:** Cover belongs to terrain, and both combatants are now standing in the exact same terrain — there's no longer an "inside" and "outside" of the position left to distinguish them.
 
-   **Example:** Even though Bravo's hex is a building (normally +6 cover against ranged fire), no cover modifier applies to either side once Alpha has entered it for Entry Fire.
+   **Example:** Even though Bravo's hex is a heavy building (normally +5 cover against ranged fire), no cover modifier applies to either side once Alpha has entered it for Entry Fire.
 
 **9.4.5**  Apply results simultaneously using the standard Result Threshold Table.
 
@@ -374,11 +374,11 @@ See Rule 6.3.3.
 
    **Example:** A stack of two rifle squads in the same hex declares one Close Assault action (1 AP total) against an adjacent enemy hex. Both squads participate in every phase.
 
-**9.8.2**  When either side has multiple participating combat units, that side makes **one** attack per phase. In the Grenade Phase, sum the participants' G# values directly. In the Entry Fire Phase and Melee Continuation, each participating unit first computes its own eFP (its dominant fire line's rFP plus the range 0 bonus, Rules 9.4.2-9.4.3/9.5.3) exactly as it would fighting alone; those eFPs are then summed as a fire group (Rule 8.3.2) and run through the Resolution Strip (Rule 8.4.2) to determine the phase's FPr.
+**9.8.2**  When either side has multiple participating combat units, that side makes **one** attack per phase. In the Grenade Phase, sum the participants' G# values directly. In the Entry Fire Phase and Melee Continuation, each participating unit first computes its own eFP (its dominant fire line's rFP plus the range 0 bonus, Rules 9.4.2-9.4.3/9.5.3) exactly as it would fighting alone; those eFPs are then summed as a fire group (Rule 8.3.2) and run through the Resolution Strip (Rule 8.4.1) to determine the phase's FPr.
 
 .. container:: rule-guide
 
-   **Why:** Multiple attackers don't each get a separate attack roll — their strength is pooled into one combined attack per phase, keeping stack combat resolvable with one roll instead of compounding accuracy across repeated rolls. Reusing the ordinary fire-group procedure (Rule 8.3.2's per-unit eFP then sum, Rule 8.4.2's Resolution Strip) rather than inventing a separate stacked-assault formula keeps a Close Assault stack's summed firepower subject to the same diminishing-returns compression as any other massed fire.
+   **Why:** Multiple attackers don't each get a separate attack roll — their strength is pooled into one combined attack per phase, keeping stack combat resolvable with one roll instead of compounding accuracy across repeated rolls. Reusing the ordinary fire-group procedure (Rule 8.3.2's per-unit eFP then sum, Rule 8.4.1's Resolution Strip) rather than inventing a separate stacked-assault formula keeps a Close Assault stack's summed firepower subject to the same diminishing-returns compression as any other massed fire.
 
    **Example:** Two squads (G3 and G2) assault together. In the Grenade Phase they make one combined attack using G3+G2=G5, not two separate G3 and G2 attacks. In Entry Fire, if each squad's own dominant-line eFP (rFP + range 0 bonus) comes to 9 and 8, the stack sums to 17 and looks up FPr on the Resolution Strip rather than using 17 directly.
 

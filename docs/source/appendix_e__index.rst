@@ -73,9 +73,9 @@ Spot Action  ..........  6.3, 14.10
 
 **Adjacent fire bonus**  ..........  8.9
 
-range 0 bonus (+3 eFP)  ..........  8.9.2
+range 0 bonus (+3 eFP, once per firing unit)  ..........  8.9.2
 
-range 1 bonus (+2 eFP)  ..........  8.9.1
+range 1 bonus (+2 eFP, once per firing unit)  ..........  8.9.1
 
 **Adjustment fire (mortars)**  ..........  16.8
 
@@ -157,7 +157,7 @@ RHA (rolled homogeneous) baseline  ..........  17.2.5
 
 composite formula (hull + turret)  ..........  17.2.3, 17.2.4
 
-scale (1 AV = 10mm effective)  ..........  17.2.1
+expressed in millimetres  ..........  17.2.1
 
 slope calculation  ..........  17.2.4
 
@@ -181,7 +181,7 @@ half eFP  ..........  6.3.3, 2.5
 
 **Automatic penetration**  ..........  18.2
 
-condition: PEN ≥ AV + 3  ..........  18.2
+condition: PEN ≥ AV + 10  ..........  18.2
 
 **B**
 
@@ -213,7 +213,7 @@ size categories (single/small/large)  ..........  14.3.1
 
 **Bounce (penetration)**  ..........  18.2
 
-condition: PEN < AV − 3  ..........  18.2
+condition: PEN < AV − 10  ..........  18.2
 
 **Breach / Breaching**  ..........  21.2
 
@@ -659,7 +659,7 @@ restrictions on guarding unit  ..........  11.3.2–11.3.4
 
 flat penetration (no falloff)  ..........  17.3.3
 
-Panzerfaust PEN 14  ..........  18.9
+Panzerfaust PEN 140  ..........  18.9
 
 slope immunity  ..........  17.2.6
 
@@ -737,7 +737,7 @@ reaction window  ..........  5.5.2–5.5.4
 
 buys tempo only, not RP  ..........  5.3.2
 
-roll 1d6, higher wins  ..........  5.3.1
+roll 1d6 + highest functional leader's CMD  ..........  5.3.1
 
 **Inspire (leader action)**  ..........  12.5
 
@@ -961,9 +961,9 @@ spreadsheet derivation  ..........  17.3.5
 
 **Penetration outcomes**  ..........  18.2
 
-automatic: PEN ≥ AV + 3  ..........  18.2
+automatic: PEN ≥ AV + 10  ..........  18.2
 
-bounce: PEN < AV − 3  ..........  18.2
+bounce: PEN < AV − 10  ..........  18.2
 
 contested: PEN ≥ AV  ..........  18.2
 
@@ -977,7 +977,7 @@ buttoned up (vehicle)  ..........  18.7
 
 cannot move or react  ..........  10.3.1
 
-recovery threshold 10 (Pinned)  ..........  5.2.4, 10.3.4
+recovery threshold 5 (Pinned)  ..........  5.2.4, 10.3.4
 
 **Pivot (vehicle)**  ..........  17.5.4
 
@@ -1073,9 +1073,9 @@ do not carry over between campaign turns  ..........  13.2.2a
 
 **FPr**  ..........  1.3, 8.4
 
-single unit: use eFP directly  ..........  8.4.1
+every attack, one firer or several: consult the Resolution Strip  ..........  8.4.1
 
-multiple units: use Resolution Strip  ..........  8.4.2
+banded rows, no rounding  ..........  8.4.3
 
 **Resolution Strip**  ..........  8.4, App.A
 
@@ -1231,7 +1231,7 @@ integral weapon shown  ..........  1.4
 
 half move  ..........  10.2.1
 
-recovery threshold 8 (Suppressed)  ..........  5.2.4, 10.2.3
+recovery threshold 3 (Suppressed)  ..........  5.2.4, 10.2.3
 
 **Surrender — see Prisoners**  ..........  S.11
 

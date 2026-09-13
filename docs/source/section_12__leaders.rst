@@ -213,7 +213,7 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
      - Leader moves up to M8 hexes following terrain movement costs.
      - N/A
    * - Direct Fire
-     - Add CMD rating as bonus eFP to one fire group this impulse. Applied after falloff and terrain, before Resolution Strip.
+     - Add CMD rating to one fire group's FPr this impulse, after the Resolution Strip lookup.
      - Command radius
    * - Rally
      - One Suppressed or Pinned unit attempts mid-turn recovery at RAL threshold instead of standard threshold. See Rule 12.6.
@@ -331,21 +331,21 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
 ------------------------------
 
 
-**12.7.1**  A leader spending 1 AP on Direct Fire adds their CMD rating as bonus eFP to one fire group within command radius.
+**12.7.1**  A leader spending 1 AP on Direct Fire adds their CMD rating to the FPr of one fire group within command radius.
 
 .. container:: rule-guide
 
    **Why:** Gives a leader a direct way to boost a fire attack's raw firepower rather than just improving morale or coordination indirectly, spending the same 1 AP that any other Leader Action costs (Rule 12.5) so it competes with those other options for the leader's turn.
 
-   **Example:** A CMD 2 leader spending 1 AP on Direct Fire adds +2 bonus eFP to a nearby fire group's attack this impulse, on top of whatever eFP the firing units already contribute.
+   **Example:** A CMD 2 leader spending 1 AP on Direct Fire adds +2 to a nearby fire group's FPr this impulse, on top of whatever the firing units' own summed eFP produced.
 
-**12.7.2**  The bonus is applied to the summed eFP after range falloff and terrain modifiers, before the Resolution Strip lookup. It participates in strip compression along with the rest of the group's eFP.
+**12.7.2**  The bonus is added to the **FPr**, after the Resolution Strip lookup (Rule 8.4.1) — not to the summed eFP before it. It is therefore worth its full face value whatever the size of the attack, and may carry the result above the strip's own maximum of 12.
 
 .. container:: rule-guide
 
-   **Why:** Places the leader's bonus at a specific point in the fire-resolution sequence (Rule 8.1) — after the group's own falloff and terrain penalties are already applied, but before Resolution Strip compression — so the bonus behaves exactly like any other contribution to the group's summed eFP, not as a separate late modifier.
+   **Why:** Command coordination is not another rifle in the firing line, so it is not subject to the diminishing returns the strip models for volume of fire. Adding it before the lookup would let compression swallow it whole — a CMD 3 leader spending 1 AP on a fire group already summing 20 eFP would change FPr by nothing at all, since 20 and 23 fall in the same band. Applied after, the leader's contribution is always exactly what the counter says it is.
 
-   **Example:** A fire group's terrain-and-falloff-adjusted eFP sums to 7 before the leader's CMD 2 bonus; the bonus is added to make 9, and that combined total of 9 (not 7) is what gets looked up on the Resolution Strip (Rule 8.4).
+   **Example:** A fire group's eFP sums to 20, reading FPr 10 off the strip. A CMD 2 leader's Direct Fire makes the attack FPr 12 — the bonus lands in full, where adding it to the eFP first would have left the group at FPr 10 and wasted the AP.
 
 **12.7.3**  Multiple leaders cannot stack fire coordination bonuses on the same fire group in the same impulse. The highest single CMD bonus applies.
 
