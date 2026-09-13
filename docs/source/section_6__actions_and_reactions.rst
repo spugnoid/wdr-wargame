@@ -55,7 +55,7 @@ Section 6 — Actions and Reactions
 
 .. container:: rule-guide
 
-   **Why:** Makes a reaction a use-it-or-lose-it response to one specific moment, not a standing overwatch condition — this is what keeps a unit from stacking up "owed" reactions across multiple triggering events, and it's why reacting marks the unit exactly as if it had acted normally (see design note E.94).
+   **Why:** Makes a reaction a use-it-or-lose-it response to one specific moment, not a standing overwatch condition — this is what keeps a unit from stacking up "owed" reactions across multiple triggering events, and it's why reacting marks the unit exactly as if it had acted normally.
 
    **Example:** Bravo could have fired on Alpha crossing hex A but chose to hold. Once Alpha moves on to hex B, that specific opportunity is gone — Bravo's player cannot retroactively claim it — though hex B is a brand-new window Bravo may react to if it still has RP and capacity.
 

@@ -152,11 +152,9 @@ Movement costs are in Movement Points (MP). Standard infantry has M5 = 5 MP per 
 
 .. container:: rule-guide
 
-   **Why:** Scales the road bonus to the mover's own M# (M#+1) rather than a flat bonus, so a fast unit and a slow unit both gain proportionally from moving in a column down a road, instead of the flat-bonus version that used to triple a slow unit's speed while barely helping a fast one (see the note quoted just below this rule).
+   **Why:** Scales the road bonus to the mover's own M# (M#+1) rather than granting a flat number of extra hexes, so a fast unit and a slow unit both gain proportionally from moving in a column down a road — a flat bonus would disproportionately help slow units while barely helping fast ones.
 
    **Example:** An M2 HMG team moving entirely along road hexes gets M2+1 = 3 hexes that activation. An M5 rifle squad on the same road gets M5+1 = 6 hexes — each benefits by exactly one extra hex, not by a fixed multiple.
-
-*NOTE: an earlier draft considered a flat hex bonus on roads instead of the current M#+1 formula — a flat bonus disproportionately helps slow units and barely helps fast ones; M#+1 scales the benefit to the mover instead.*
 
 **7.2.2**  Elevation interaction example: a mobile HMG team (M2) moving uphill one level into open ground costs 1 (terrain) + 1 (elevation) = 2 MP — the full activation for that unit. Two levels uphill in one activation is impossible for an M2 unit. A standard M5 rifle squad, by contrast, can climb two levels of open ground for 1 (terrain) + 1 (elevation) = 2 MP per hex, 4 MP total, with 1 MP still to spare.
 
@@ -175,7 +173,7 @@ Climbing within a building is priced in AP, not Movement Points — see Rule 7.2
 
 .. container:: rule-guide
 
-   **Why:** Keeps the horizontal move into a building costing exactly what any other terrain entry costs, since climbing floors is now a wholly separate action rather than a component folded into the Move's own MP total.
+   **Why:** Keeps the horizontal move into a building costing exactly what any other terrain entry costs, since climbing floors is a wholly separate action rather than a component folded into the Move's own MP total.
 
    **Example:** A unit moving into a building hex pays the building's normal 1 MP entry cost, arrives on the ground floor, and its M# is otherwise unaffected by however many floors that building happens to have.
 
@@ -183,7 +181,7 @@ Climbing within a building is priced in AP, not Movement Points — see Rule 7.2
 
 .. container:: rule-guide
 
-   **Why:** Pricing every floor at its own AP, rather than folding several floors into one action, keeps climbing a real, separately-chosen cost at every step — a unit bound for the third floor genuinely commits three activations' worth of AP to get there, exactly as reaching it used to cost three MP under the old rule, just charged in the currency that actually has consequences (AP, not MP a Move never gets to spend elsewhere anyway).
+   **Why:** Pricing every floor at its own AP, rather than folding several floors into one action, keeps climbing a real, separately-chosen cost at every step — a unit bound for the third floor genuinely commits three activations' worth of AP to get there, charged in the currency that actually has consequences (AP, not MP a Move never gets to spend elsewhere anyway).
 
    **Example:** A unit on the ground floor spends 1 AP to reach the first floor, then a second 1-AP activation later in the same turn to reach the second floor — two activations, two floors, with AP left over (if any) still available for a Move or Fire action afterward.
 
@@ -191,7 +189,7 @@ Climbing within a building is priced in AP, not Movement Points — see Rule 7.2
 
 .. container:: rule-guide
 
-   **Why:** Gives the climb a real, historically grounded payoff — observers and snipers favouring upper floors is a genuine WWII tactical reality — without building a parallel LOS-blocking system for building interiors that nobody asked for; reusing the existing Elevated OBS bonus (Rule 14.9.8) is the smallest change that makes the AP cost mean something.
+   **Why:** Gives the climb a real, historically grounded payoff — observers and snipers favouring upper floors is a genuine WWII tactical reality — without building a parallel LOS-blocking system for building interiors; reusing the existing Elevated OBS bonus (Rule 14.9.8) is what makes the AP cost mean something.
 
    **Example:** A sniper team on a building's second floor gets +2 OBS (two floors up) on top of any other applicable modifiers when attempting to spot a target outside — the same bonus a unit on a two-level hilltop would get over a target in the valley below, just earned by climbing stairs instead of a hillside.
 

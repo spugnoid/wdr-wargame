@@ -235,7 +235,7 @@ With Deepest Regret... uses a physical hidden information system to model the fo
 
    **Example:** If Alpha has M5, none of its three markers this impulse — real or dummy — can end up more than 5 hexes away along a legal route; an opponent who sees one marker sitting 6 hexes out would know something was wrong, so the rule guarantees that never happens.
 
-*NOTE: earlier drafts placed the real counter into its slot in the open, spawned visibly-empty dummy covers, and moved the real marker before the dummies existed — in face-to-face play the opponent simply watched, and the three-marker uncertainty this system exists to create never existed. Every leak has the same fix: assignment happens out of sight, and everything that could distinguish group members is committed simultaneously under a shared constraint.*
+*NOTE: the three-marker uncertainty this system creates depends on two things in face-to-face play. Assignment happens out of sight, and everything that could distinguish one group member from another is committed simultaneously under a shared constraint.*
 
 **14.6.5**  May move each dummy marker up to M# hexes along any plausible route.
 
@@ -356,7 +356,7 @@ With Deepest Regret... uses a physical hidden information system to model the fo
      - Outdated — removed at the end of this Recovery Phase
 
 
-**14.8.3**  At the first Recovery Phase after placement, flip the marker to its STALE face. At the following Recovery Phase, remove it. This is the same three-turn information lifespan as before, just two states instead of three — see design note E.99.
+**14.8.3**  At the first Recovery Phase after placement, flip the marker to its STALE face. At the following Recovery Phase, remove it — a three-turn information lifespan from placement to removal, across two marker states.
 
 .. container:: rule-guide
 
@@ -445,7 +445,7 @@ With Deepest Regret... uses a physical hidden information system to model the fo
 
    **Example:** A spotter with +3 OBS (from a dedicated Spot Action) rolling against a target with +2 CON (light woods) needs a 1d6 result that, after adding 3 and subtracting 2, reaches 4 or better — meaning a raw roll of 3 or higher succeeds.
 
-*NOTE: earlier drafts spotted on 0+, under which a Spot Action (+3 OBS) spotted a stationary unit in a building automatically and swept the board of markers in one action — the hidden system's uncertainty never survived contact with a single 1 AP action. At 4+, that same attempt succeeds 33% of the time per action: concealment decays under observation instead of evaporating.*
+*NOTE: the 4+ threshold is what keeps concealment meaningful. A dedicated Spot Action (+3 OBS) against a stationary unit in a building succeeds 33% of the time per action, so concealment decays under sustained observation instead of evaporating to a single 1 AP action.*
 
 **14.9.7**  Concealment modifiers (CON). Every modifier is computable from the **map alone** — the marker's hex, its observed movement history this turn, and scenario conditions — so a dummy's CON is always exactly the CON a real unit under that marker would have, and announcing it reveals nothing (a spot roll against a marker whose owner must consult hidden unit state would itself leak whether the marker is real):
 
@@ -491,7 +491,7 @@ With Deepest Regret... uses a physical hidden information system to model the fo
      - +2
 
 
-*NOTE: "fired this turn" and "suppressed/pinned" no longer appear here — a unit that fires is revealed automatically (Rule 14.9.3) and needs no spot roll, and a hidden unit taking fire results is revealed by the blast rules (Rule 16.7.7); neither state can belong to a marker still on the map.*
+*NOTE: every condition in this table is one a marker on the map can actually be in. Firing and suppression are not among them: a unit that fires is revealed automatically (Rule 14.9.3) and needs no spot roll, and a hidden unit taking fire results is revealed by the blast rules (Rule 16.7.7) — both states belong to revealed units, not to markers.*
 
 
 **14.9.8**  Observation modifiers (OBS) — spotter:

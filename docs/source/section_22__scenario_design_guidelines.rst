@@ -159,11 +159,6 @@ Every scenario sheet must include the following parameters. Players read these b
    * - Mixed — calculate weighted average
      - Sum (units × individual factor) ÷ total units
 
-*Sourcing note (E.153): Steven J. Zaloga's* US Airborne Divisions in the ETO 1944-45 *(Osprey Battle Orders 25) supports this table's "airborne" exemplar for parachute infantry specifically (volunteer recruitment, dedicated jump training, a historian's judgment that training and esprit de corps "helped to overcome the shortcomings" elsewhere in the formation) but documents that glider infantry within the same divisions were explicitly NOT trained, paid, or treated as an elite population — a real distinction this table's single "airborne" label doesn't carry. No change made to this table — see* ``counters/toe/us_airborne_zaloga_1943.md`` *for full citations.*
-
-*Sourcing note (E.155): Mike Chappell's* Army Commandos 1940-1945 *(Osprey Elite 64) was read to open a research thread on this table's "Rangers" exemplar (Commando specifically; the US Rangers half is still completely unresearched). The book gives real, dated support for a British Commando elite tier — an all-volunteer force with an active officer/man selection and "returned to unit" washout mechanism, a reproduced 17-point wartime training doctrine, a dedicated central training depot (Achnacarry), and a claim that Commando units carried "a higher establishment of snipers than normal infantry battalions" — but also a real, dated 1943 caveat: Commandos used as improvised line infantry in North Africa (Nov 1942-Apr 1943), without their usual raiding-role support, took losses severe enough to reduce two Commandos to 150 men by the time of their withdrawal. This table's "Rangers" exemplar is, at best, partially supported (Commando organization/training only) — the US Rangers half and this project's only actual No.10 Commando/X Troop angle both remain unresearched. No change made to this table — see* ``counters/toe/commando_sutherland_1943.md`` *for full citations and the reason this pass's source turned out to be a different, though usefully general, book than the one named in its own filename.*
-
-*Sourcing note (E.156): Robert Michulec & Ronald Volstad's* Waffen-SS in Combat *(Concord Armor at War series) was read to open a research thread on this table's "SS" exemplar, completing the bracket alongside E.153/E.155's airborne and Rangers/Commando notes. The book gives real, 1943-dated support for a genuine early-elite/later-diluted split within the Waffen-SS itself, not a flat elite property: covering the March 1943 recapture of Kharkov by its founding Panzer-Grenadier divisions, it states plainly that "the ranks of the SS were being filled out with 17-18 year old boys who were put into front line service with only 6-12 months training," adding that this "resulted in unnecessary casualties... especially in the autumn of 1943"; a separate caption notes that only "the first SS divisions had become better equipped and armed than most Wehrmacht divisions" while "the newer ones were often more poorly equipped." The book's own closing verdict is blunter still: "very few first rate divisions in the short history of the Waffen-SS, but it was these few that created the elite image... known to us today." This table's "SS" exemplar is accurate for a minority of early-founded divisions specifically, not the Waffen-SS as a whole — and, unlike the airborne and Commando threads, no Waffen-SS squad/platoon/company organizational table of any kind was found in this source, a gap left fully open. No change made to this table — see* ``counters/toe/waffen_ss_michulec_1943.md`` *for full citations.*
 
 **22.3.4**  Example: German force of 8 units, 3 veteran (factor 0.5) and 5 regular (factor 0.4). Force Morale = floor(3×0.5 + 5×0.4) = floor(3.5) = 3 (round down, minimum 1 — Rule 15.5.1).
 
@@ -545,7 +540,7 @@ Before finalising a scenario, verify the following:
 ------------------------------------------------
 
 
-The following parameters represent the Farmhouse at Prokhorovka test scenario used during rules development. It is provided as a worked example of a complete scenario parameter block.
+The following parameters are a worked example of a complete scenario parameter block.
 
 .. list-table::
    :header-rows: 1
@@ -591,4 +586,4 @@ The following parameters represent the Farmhouse at Prokhorovka test scenario us
      - None
 
 
-*NOTE: this parameter block is recomputed to follow this section's own rules — the original draft counted the platoon leader as a combat unit, used a flat 0.45 factor instead of 22.3.3's weighted average, and placed setup zones 2 hexes apart against 22.9.3's 4-hex minimum. At this skirmish's size both Force Morale values floor to 1, so the first CI unit on either side triggers a collapse check — small engagements are brittle by construction, which suits a 4-turn farmhouse fight; designers wanting more resilience at this scale should add units, not inflate the factor.*
+*NOTE: at this skirmish's size both Force Morale values floor to 1, so the first CI unit on either side triggers a collapse check — small engagements are brittle by construction, which suits a 4-turn farmhouse fight; designers wanting more resilience at this scale should add units, not inflate the factor.*

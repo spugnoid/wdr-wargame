@@ -3,8 +3,6 @@ Section 17 — Vehicles: Counter Design and Movement
 
 Vehicles in With Deepest Regret... are represented by individual counters at tactical scale (one counter = one vehicle) and section counters at operational scale (one counter = 3-5 vehicles). The same counter design serves both scales — scenario rules define which resolution mode applies.
 
-*Vehicle AV, PEN, and Gunnery Table values are computed by the project's calculation tool (*`counters/armor_calc/`*) from sourced ballistics data (Rule 17.2.5, 17.3.7) and cross-checked against a historical-matchup table covering the full roster (Rule 18.12) — not hand-derived placeholders. See that tool's own README and* `docs/superpowers/specs/2026-07-04-armored-combat-penetration-physics-design.md` *for the full sourcing and validation detail, including the roster's own known gaps (e.g. towed anti-tank guns not yet modelled).*
-
 17.1  Vehicle Counter Layout
 ----------------------------
 
@@ -172,7 +170,7 @@ Vehicle counters display the following fields:
      - 35.7
 
 
-*NOTE: face-hardening is a real penalty for capped rounds (the cap defeats the hardened face), no correction at all for APBC, and a real bonus for uncapped AP (the hardened face shatters the unprotected nose) — reusing the Capped column for those attackers understated these four plates by 30–70%. Values above use the same 75mm reference diameter as the printed columns; a validation script needing exact attacker-diameter figures calls* ``resolve_av(diameter, hardness_table, family=...)`` *directly (see Rule 18.12 note (e)).*
+*NOTE: face-hardening is a real penalty for capped rounds (the cap defeats the hardened face), no correction at all for APBC, and a real bonus for uncapped AP (the hardened face shatters the unprotected nose) — reading the Capped column for those attackers would understate these four plates by 30–70%. Values above use the same 75mm reference diameter as the printed columns.*
 
 **17.2.4**  HEAT attacks compare their flat PEN directly against the printed **AV-vs-HEAT** value for the struck profile and arc — no arithmetic at the table. Because HEAT's effective resistance depends only on the plate (thickness and angle), never on the attacker, one printed number per arc covers every HEAT weapon in the game — it is the one AV that is genuinely attacker-independent.
 
@@ -182,13 +180,13 @@ Vehicle counters display the following fields:
 
    **Example:** A Panzerfaust and a HEAT tank round striking the same arc of the same vehicle both compare their own flat PEN values against that single AV-vs-HEAT number — no separate HEAT figures are needed per weapon.
 
-**17.2.5**  AV, PEN, and the Gunnery Table are all computed by the project's calculation tool (`counters/armor_calc/`) from sourced ballistics data, not derived by formula at the table. See that tool's own documentation for the full physics — nothing beyond the printed numbers is needed to play.
+**17.2.5**  AV, PEN, and the Gunnery Table are all computed at design time from sourced ballistics data, not derived by formula at the table. Nothing beyond the printed numbers is needed to play.
 
 .. container:: rule-guide
 
-   **Why:** Keeps the heavy ballistics math entirely in the design-time tooling rather than exposing any of it to players, so the printed counter values are all a player ever needs — the underlying physics is documented for verification, not for table-side recalculation.
+   **Why:** Keeps the heavy ballistics math entirely at design time rather than exposing any of it to players, so the printed counter values are all a player ever needs — the underlying physics is worked out once, not recalculated at the table.
 
-   **Example:** A player never needs to open `armor_calc` to play a scenario — every AV, PEN, and Gunnery Table value already printed on the counters is the finished, ready-to-use output of that tool's calculations.
+   **Example:** A player never needs to work out a penetration figure to play a scenario — every AV, PEN, and Gunnery Table value already printed on the counters is finished and ready to use.
 
 **17.2.6**  Slope, material quality, hardness, and flaw corrections are all already resolved into the printed AV (Rule 17.2.1) — there is no separate step for players to apply any of them.
 
@@ -239,9 +237,9 @@ Vehicle counters display the following fields:
 
 *If this module is in use for the scenario:*
 
-*Design note: no vehicle in this roster printed a Top arc at all before this module — every plate was Front, Side, or Rear (Rule 17.2.2). Top AV exists to support Rule 18.2c (Sidehill Exposure) and Rule 16.7.8a (heavy mortar/artillery vs. top armour); a group not using either of those never needs this stat. See design note E.120.*
+*Design note: Top AV exists to support Rule 18.2c (Sidehill Exposure) and Rule 16.7.8a (heavy mortar/artillery vs. top armour); a group not using either of those never needs this stat.*
 
-**17.2a.1**  A vehicle may print a fourth arc, Top, for its Hull and/or Turret profile — the horizontal deck or roof plate, computed and printed exactly like any other arc (Rule 17.2.1, 17.2.3): AV-vs-Capped, AV-vs-Tungsten, and AV-vs-HEAT. Top AV is printed only where a real, cited thickness exists for that specific vehicle and profile — a vehicle or profile with no printed Top AV simply has none, the same "lookup miss means not modelled, not zero" convention this project already uses for missing hardness data (`counters/armor_calc/data/hardness_table.csv`).
+**17.2a.1**  A vehicle may print a fourth arc, Top, for its Hull and/or Turret profile — the horizontal deck or roof plate, computed and printed exactly like any other arc (Rule 17.2.1, 17.2.3): AV-vs-Capped, AV-vs-Tungsten, and AV-vs-HEAT. Top AV is printed only where a real, cited thickness exists for that specific vehicle and profile — a vehicle or profile with no printed Top AV simply has none, the same "not printed means not modelled, not zero" convention this book uses wherever a sourced figure is unavailable.
 
 .. container:: rule-guide
 
@@ -253,7 +251,7 @@ Vehicle counters display the following fields:
 
 .. container:: rule-guide
 
-   **Why:** Keeps the base Gunnery Roll exactly as simple as it has always been — a third printed arc would otherwise imply a three-way hit-location roll for every single shot, which is far more table overhead than the narrow, conditional cases Top AV actually needs to cover.
+   **Why:** Keeps the base Gunnery Roll simple — a third printed arc would otherwise imply a three-way hit-location roll for every single shot, which is far more table overhead than the narrow, conditional cases Top AV actually needs to cover.
 
    **Example:** An ordinary tank-vs-tank shot at normal range never even considers Top AV — it resolves Hull or Turret exactly as Rule 18.1a already describes, whether or not the target has a printed Top AV at all.
 
@@ -309,13 +307,13 @@ Vehicle counters display the following fields:
 
    **Example:** A vehicle counter printed with Morale 6 is fixed as Veteran Crew Quality at design time, which is what determined the specific numbers baked into that vehicle's own printed Gunnery Table (Rule 17.3.5).
 
-**17.3.7**  PEN, AV, and Gunnery Table values are computed by the project's calculation tool from sourced ballistics data (velocity-at-range, slope multipliers by ammunition nose shape, and the flight-time-based hit-probability model) — not derived by formula at the table.
+**17.3.7**  PEN, AV, and Gunnery Table values are computed at design time from sourced ballistics data (velocity-at-range, slope multipliers by ammunition nose shape, and the flight-time-based hit-probability model) — not derived by formula at the table.
 
 .. container:: rule-guide
 
-   **Why:** Reaffirms that all this section's numbers come from real ballistics research processed by dedicated tooling rather than a simplified in-play formula, giving the printed values a documented, verifiable basis rather than being ad hoc design choices.
+   **Why:** Reaffirms that all this section's numbers come from real ballistics research rather than a simplified in-play formula, giving the printed values a documented, verifiable basis rather than being ad hoc design choices.
 
-   **Example:** A gun's printed PEN-at-500m figure traces back through the calculation tool to actual sourced velocity-at-range data for that specific historical round, not a hand-picked number chosen to feel right.
+   **Example:** A gun's printed PEN-at-500m figure traces back to actual sourced velocity-at-range data for that specific historical round, not a hand-picked number chosen to feel right.
 
 17.4  Traverse Rating
 ---------------------
@@ -425,11 +423,11 @@ Vehicle counters display the following fields:
      - R value
 
 
-**17.5.2a**  The attacker's arc is the wedge containing the attacker's hex. A hex lying exactly on the spine between two wedges counts as the wedge **less favourable to the target** (the attacker's choice of the two AVs' better side): a spine between FRONT and SIDE resolves as SIDE, between SIDE and REAR as REAR. At adjacent range this reduces exactly to the old adjacent-hex table — one hex ahead is FRONT, one behind is REAR, the four others SIDE.
+**17.5.2a**  The attacker's arc is the wedge containing the attacker's hex. A hex lying exactly on the spine between two wedges counts as the wedge **less favourable to the target** (the attacker's choice of the two AVs' better side): a spine between FRONT and SIDE resolves as SIDE, between SIDE and REAR as REAR. At adjacent range this gives the obvious result — one hex ahead is FRONT, one behind is REAR, the four others SIDE.
 
 .. container:: rule-guide
 
-   **Why:** Resolves the edge case of a shot landing exactly on the boundary between two wedges by favoring the attacker, since an ambiguous geometric case shouldn't default to protecting the target — and confirms the new any-range system produces identical results to the old adjacent-hex-only table at close range, so nothing about short-range combat actually changed.
+   **Why:** Resolves the edge case of a shot landing exactly on the boundary between two wedges by favoring the attacker, since an ambiguous geometric case shouldn't default to protecting the target.
 
    **Example:** An attacker positioned exactly on the spine between a target's FRONT and SIDE wedges resolves as a SIDE hit (the worse AV for the target) rather than FRONT — the ambiguity breaks toward the attacker's advantage, not the target's.
 
@@ -626,7 +624,7 @@ Casemate vehicles (TRAV 0) never receive a TRAVERSED marker; they have no separa
 
 *If this module is in use for the scenario:*
 
-*Design note: every vehicle move fully enters a hex and takes on that hex's full terrain cost and risk (including Rule 17.6.2a's bog check) — there was no way to skirt an obstacle rather than drive through it, the way Advanced Squad Leader's Bypass rule lets a vehicle hug a hex's edge instead of its center. Scoped as optional because the trade-off it adds (speed and safety for cover and combat capability) is exactly the kind of extra declared choice the base game deliberately keeps out of ordinary movement. See design note E.115.*
+*Design note: ordinarily every vehicle move fully enters a hex and takes on that hex's full terrain cost and risk (including Rule 17.6.2a's bog check). Bypass lets a vehicle hug a hex's edge instead of its centre, skirting an obstacle rather than driving through it. It is scoped as optional because the trade-off it adds (speed and safety for cover and combat capability) is exactly the kind of extra declared choice the base game deliberately keeps out of ordinary movement.*
 
 **17.6a.1**  A vehicle entering a hex may declare Bypass instead of an ordinary move into it: pay open ground's MP cost (1) regardless of the hex's actual terrain, and skip Rule 17.6.2a's bog check entirely for that hex.
 
@@ -657,7 +655,7 @@ Casemate vehicles (TRAV 0) never receive a TRAVERSED marker; they have no separa
 
 *If this module is in use for the scenario:*
 
-*Design note: real tank doctrine's single most basic defensive posture — back the hull below a crest so only the turret shows — had no rule of its own; a vehicle's Hull profile was always just as targetable as its Turret regardless of terrain. See design note E.120.*
+*Design note: this module gives real tank doctrine's single most basic defensive posture — back the hull below a crest so only the turret shows — a rule of its own, so that terrain can take a vehicle's Hull profile out of play where the ground genuinely hides it.*
 
 **17.6b.1**  A stationary, turreted vehicle (Rule 17.2.2 — casemate vehicles have no separate Turret profile to hide behind) occupying a hex with a crest hexside (Rule 4.4a.1) may declare Hull-Down, 1 AP, oriented toward one specific low-side hexside of that crest. Declaring Hull-Down does not place a MOVED marker and does not prevent the vehicle from also firing this turn (Rule 17.4.1a).
 
@@ -703,4 +701,4 @@ Casemate vehicles (TRAV 0) never receive a TRAVERSED marker; they have no separa
 
    **Example:** A Tiger's Hull profile has one Neither Threshold and one Mobility Threshold that apply identically whether the confirmed hit came from a close-range tank gun or a Panzerfaust at point-blank range — the roll against those same two numbers doesn't change based on who or what fired.
 
-*Read: roll below the Neither Threshold — Neither (Casualty downgrades to Pinned, Rule 18.6a.2). Roll at or above the Mobility Threshold — MOB kill. Between the two — GUN kill. A profile with no printed Mobility Threshold (e.g. a turret with no mobility-critical systems) can never produce a MOB kill. See* ``hit_location_output.csv`` *for the computed values.*
+*Read: roll below the Neither Threshold — Neither (Casualty downgrades to Pinned, Rule 18.6a.2). Roll at or above the Mobility Threshold — MOB kill. Between the two — GUN kill. A profile with no printed Mobility Threshold (e.g. a turret with no mobility-critical systems) can never produce a MOB kill.*

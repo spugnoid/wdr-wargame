@@ -1,9 +1,9 @@
 Section 24 — Weather
 ====================
 
-Section 22's own scenario-design checklist has always told designers to note "Night, weather, restricted terrain, off-map assets" as special conditions — but until this section, weather was never actually a rule a designer could invoke. This section closes that gap the same way Section 23 finished Night Combat: by declaring exactly what a scenario's weather does, once, at setup, and reusing existing machinery (the visibility-cap idiom of Rule 23.1.1, the terrain movement-cost table's own additive idiom, and the bog check of Rule 17.6.2a) rather than building a parallel system.
+Weather is one of the special conditions a scenario's designer may declare, alongside night, restricted terrain, and off-map assets. This section states exactly what a scenario's weather does, once, at setup, using existing machinery: the visibility-cap idiom of Rule 23.1.1, the terrain movement-cost table's own additive idiom, and the bog check of Rule 17.6.2a.
 
-A scenario declares exactly one Weather condition in its scenario parameters, fixed for the whole scenario: **Clear** (the default — no effect, nothing in this section applies), **Rain/Mud**, **Snow**, or **Fog**. See design note E.108.
+A scenario declares exactly one Weather condition in its scenario parameters, fixed for the whole scenario: **Clear** (the default — no effect, nothing in this section applies), **Rain/Mud**, **Snow**, or **Fog**.
 
 24.1  Weather — General
 ------------------------
@@ -13,7 +13,7 @@ A scenario declares exactly one Weather condition in its scenario parameters, fi
 
 .. container:: rule-guide
 
-   **Why:** Matches how Night is already handled (Rule 2.2, scenario parameters) rather than adding a weather track that shifts mid-game — a rolling, changing weather system is real future-work territory, but a fixed condition set at setup is the version that was actually asked for, and it keeps Weather exactly as easy to author as Night already is.
+   **Why:** Matches how Night is already handled (Rule 2.2, scenario parameters) rather than adding a weather track that shifts mid-game — a fixed condition set at setup keeps Weather exactly as easy to author as Night already is.
 
    **Example:** A scenario designer declares Rain/Mud in the scenario parameters. Every turn of that scenario is played under Rain/Mud's effects (Rule 24.2) — there is no roll or event that changes it to Clear or to a different condition partway through.
 
@@ -65,7 +65,7 @@ A scenario declares exactly one Weather condition in its scenario parameters, fi
 
 .. container:: rule-guide
 
-   **Why:** Falling or blowing snow obscures the battlefield in roughly the same way sustained rain does, and the distinction that actually matters for play is what the ground itself does underfoot (Rule 24.3.2), not a separately-tuned visibility number for a second precipitation type — a deliberate simplification, the same call E.82 made when one Hit Location row turned out to cover what a much larger table used to.
+   **Why:** Falling or blowing snow obscures the battlefield in roughly the same way sustained rain does, and the distinction that actually matters for play is what the ground itself does underfoot (Rule 24.3.2), not a separately-tuned visibility number for a second precipitation type — a deliberate simplification.
 
    **Example:** A unit may not declare fire or attempt a visual spot roll beyond 3 hexes under Snow, identically to Rain/Mud (Rule 24.2.1) — the two conditions share one visibility number by design.
 
@@ -85,7 +85,7 @@ A scenario declares exactly one Weather condition in its scenario parameters, fi
 
 .. container:: rule-guide
 
-   **Why:** Thick ground fog obscures more completely than rain, snow, or even full darkness (Night's own ambient +3 CON row still leaves some sky glow and silhouette to work with) — the 1-hex figure is a wargame-design convention reflecting that severity rather than a number cited to a specific primary source, in the same spirit as design note E.57's Schürzen figure.
+   **Why:** Thick ground fog obscures more completely than rain, snow, or even full darkness (Night's own ambient +3 CON row still leaves some sky glow and silhouette to work with) — the 1-hex figure is a wargame-design convention reflecting that severity rather than a number cited to a specific primary source.
 
    **Example:** A unit may not declare fire or attempt a visual spot roll beyond 1 hex under Fog — even an adjacent-but-one target is untouchable by anything but sound spotting (Rule 14.11) or a lucky automatic reveal (Rule 14.9.3-14.9.4).
 

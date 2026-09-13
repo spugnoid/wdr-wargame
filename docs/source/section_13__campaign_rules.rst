@@ -199,7 +199,7 @@ BROKEN zone recovery (Days window or better):
 
    **Example:** A Regular-quality half squad combining with a Veteran-quality half squad produces a Regular-quality combined unit; a Militia half squad combining with a Veteran one is not permitted at all, since that quality gap exceeds one step.
 
-**13.4.4**  Record the combined unit as Composite on its roster/OB sheet entry — no physical marker is placed on the map. A Composite unit has -1 Morale until it completes one full scenario without being rendered CI, at which point the notation is cleared from the roster sheet. See design note E.98.
+**13.4.4**  Record the combined unit as Composite on its roster/OB sheet entry — no physical marker is placed on the map. A Composite unit has -1 Morale until it completes one full scenario without being rendered CI, at which point the notation is cleared from the roster sheet.
 
 .. container:: rule-guide
 
@@ -253,7 +253,7 @@ The campaign consists of a series of scenarios linked by a branching structure (
 
    **Example:** A veteran squad with EM +2 that gets combined with another rear-face squad under Rule 13.4 produces a Composite unit starting at EM +0 — the veteran squad's hard-earned experience doesn't carry over into the newly-formed unit.
 
-**13.5.2d**  Ordinary casualties, a bad recovery roll, or being rendered CI do not by themselves cost EM — only combining or re-crewing does (13.5.2c). This keeps EM loss tied to a single, unambiguous event rather than a second parallel bad-performance tracker alongside the CI-free streak (13.5.2) and the Composite marker's own -1 Morale penalty (13.4.4), which already covers a freshly-combined unit's shakiness in the short term. See design note E.104.
+**13.5.2d**  Ordinary casualties, a bad recovery roll, or being rendered CI do not by themselves cost EM — only combining or re-crewing does (13.5.2c). This keeps EM loss tied to a single, unambiguous event rather than a second parallel bad-performance tracker alongside the CI-free streak (13.5.2) and the Composite marker's own -1 Morale penalty (13.4.4), which already covers a freshly-combined unit's shakiness in the short term.
 
 .. container:: rule-guide
 

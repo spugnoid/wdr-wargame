@@ -19,7 +19,7 @@ Section 9 — Close Assault
 
 .. container:: rule-guide
 
-   **Why:** Requires leader coordination for every close assault, fresh or ASSAULT-marked alike (see design note E.105, amending E.95's fresh-unit exception) — even a unit that hasn't done anything else yet this turn doesn't charge on its own initiative the instant it's adjacent to the enemy. The two-path split below is only about **which part-action** the assault costs, not about whether a leader is required at all.
+   **Why:** Requires leader coordination for every close assault, fresh or ASSAULT-marked alike — even a unit that hasn't done anything else yet this turn doesn't charge on its own initiative the instant it's adjacent to the enemy. The two-path split below is only about **which part-action** the assault costs, not about whether a leader is required at all.
 
    **Example:** Rifle Squad Alpha is completely fresh (no ASSAULT marker) and adjacent to Bravo's hex, with Sergeant Krebs (CMD 1) present in its hex. Alpha may declare Close Assault as its own Regular action. Had Krebs not been there, Alpha could still fire or move this turn like any other unit, but could not initiate the assault — no matter how fresh it was.
 
@@ -421,7 +421,7 @@ See Rule 6.3.3.
 
 *If this module is in use for the scenario:*
 
-*Design note: Rule 3.5.1's stacking cap already limits how much force can mass in one hex, and Rule 9.8.2 already sums a stack's own G#/rFP linearly — but nothing rewards the historically real, historically loaded tactic of committing several separate assaults in succession against the same position, the "human wave" most associated with Eastern Front fighting in this game's own calibration period. Deliberately not modeled as bigger stacking numbers (Rule 3.5.1 stays exactly as written) — modeled instead as attrition on the defender across successive, separate assaults. See design note E.115.*
+*Design note: Rule 3.5.1's stacking cap already limits how much force can mass in one hex, and Rule 9.8.2 already sums a stack's own G#/rFP linearly — but nothing rewards the historically real, historically loaded tactic of committing several separate assaults in succession against the same position, the "human wave" most associated with Eastern Front fighting in this game's own calibration period. Deliberately not modeled as bigger stacking numbers (Rule 3.5.1 stays exactly as written) — modeled instead as attrition on the defender across successive, separate assaults.*
 
 **9.8a.1**  A defending hex that has already been the target of one or more Close Assaults this turn — win, lose, or ongoing, per Rule 9.8.1's "separate hexes... separate impulses" framing — applies a cumulative **-1 to its Defence** in the Grenade Phase and Entry Fire Phase for each such prior assault, to a maximum of **-3**.
 

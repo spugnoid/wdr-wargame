@@ -13,7 +13,7 @@ Section 2 — Game Scale and Conventions
 
    **Example:** At tactical scale, a target 3 hexes away (Rule 2.3.1) is roughly 120 yards distant — close enough that most small-arms fire lines haven't started falling off yet (Rule 2.4.3).
 
-**2.1.2**  Operational scale:  One hex equals 250 yards, for platoon- and company-level engagements with an armour emphasis. Operational scale is planned as a separate companion manual, developed after this tactical ruleset is finalised — reusing this document's core resolution formulas and procedures, with counters representing larger formations (platoons or equivalent) in place of squads. No operational-scale rules exist in this document; the 250-yard figure is recorded here only to fix what "operational scale" means once that manual is written. See design note E.107.
+**2.1.2**  Operational scale:  One hex equals 250 yards, for platoon- and company-level engagements with an armour emphasis. Operational scale is planned as a separate companion manual, developed after this tactical ruleset is finalised — reusing this document's core resolution formulas and procedures, with counters representing larger formations (platoons or equivalent) in place of squads. No operational-scale rules exist in this document; the 250-yard figure is recorded here only to fix what "operational scale" means once that manual is written.
 
 .. container:: rule-guide
 
@@ -77,7 +77,7 @@ Section 2 — Game Scale and Conventions
 
 .. container:: rule-guide
 
-   **Why:** Confirms adjacency is range 1, not range 0 — the detail Rule 2.3.4's note flags as having been wrong in early rulebook printings, so it's worth stating explicitly rather than leaving it implied.
+   **Why:** Confirms adjacency is range 1, not range 0 — the one point where the boundary-crossing definition is easiest to misread, so it's worth stating explicitly rather than leaving it implied.
 
    **Example:** Alpha fires at Squad Bravo in the next hex over. Exactly one boundary lies between them, so the shot resolves at range 1, not range 0.
 
@@ -88,8 +88,6 @@ Section 2 — Game Scale and Conventions
    **Why:** Walks the boundary-crossing count (Rule 2.3.1) across a multi-hex line so the counting method is unambiguous even once several hexes separate firer and target, not just at the range-0/range-1 edge cases.
 
    **Example:** As printed: firer at A1, target at D1, with B1 and C1 in between. The line of fire crosses A1/B1, then B1/C1, then C1/D1 — three boundaries, so the range is 3.
-
-*NOTE: This definition was corrected in v0.6.1. The original wording (v0.1–v0.6) stated 'inclusive of neither' which implied adjacent range = 0 — inconsistent with the stated adjacent range of 1. The boundary-crossing definition is unambiguous and consistent with all examples throughout the rules.*
 
 2.4  Notation System
 --------------------
@@ -157,13 +155,13 @@ With Deepest Regret... uses a specific counter notation for firepower and fallof
 
    **Example:** A rule that halves Alpha's eFP without mentioning rounding uses round-down by default: an eFP of 5 halves to 2, not 3, unless that rule states a minimum.
 
-**2.5.2**  Rules already using this convention before it was stated here: Suppressed movement (half M#, round down, minimum 1, Rule 10.1), grenade-phase cover (halved, round down, Rule 9.3.5), flamethrower cover (halved, round down, Rule 21.5.3), and Assault Fire (half eFP, round down, Rule 6.3.3).
+**2.5.2**  Rules that use this convention: Suppressed movement (half M#, round down, minimum 1, Rule 10.1), grenade-phase cover (halved, round down, Rule 9.3.5), flamethrower cover (halved, round down, Rule 21.5.3), and Assault Fire (half eFP, round down, Rule 6.3.3).
 
 .. container:: rule-guide
 
-   **Why:** Is a retroactive index confirming that every halving rule already in the book, written before this convention was formalized, already matched it — so stating the convention here changed no existing numbers, only made the shared rule explicit.
+   **Why:** Indexes every halving rule in the book that runs on the standard convention, so a player can confirm at a glance which specific rules 2.5.1 governs rather than hunting for them.
 
-   **Example:** Assault Fire's half-eFP rule (6.3.3) was already round-down before 2.5.1 existed; this rule just points to it as proof the convention isn't a retroactive change to that math.
+   **Example:** Assault Fire's half-eFP rule (6.3.3) rounds down under 2.5.1's convention; this rule points to it, and to the other three, as the full list of places that convention is already in play.
 
 **2.5.3**  Reaction Points (RP = round(AP / 2), Rule 5.3.4) is a deliberate, separately-made choice and is not affected by this convention — it keeps its own rounding.
 

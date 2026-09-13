@@ -60,7 +60,7 @@ Fire Line Notation
      - -1 = lose 1 FP per interval
 
 
-Six Test Unit Counter Values — 1943 Eastern Front
+Worked Counter Values — 1943 Eastern Front
 -------------------------------------------------
 
 

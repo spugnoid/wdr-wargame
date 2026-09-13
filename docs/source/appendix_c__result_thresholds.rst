@@ -29,7 +29,7 @@ Outcome Probability Table
 -------------------------
 
 
-Exact probabilities for the 1d6+1d8+1d12 roll (576 outcomes) at each net modifier, under the v0.9.2 thresholds. The net modifier is FPr minus the target's Defence and cover. Values under 0.05% shown as —. This table is reference material for scenario designers and does not need to be consulted during play.
+Exact probabilities for the 1d6+1d8+1d12 roll (576 outcomes) at each net modifier, under the thresholds above. The net modifier is FPr minus the target's Defence and cover. Values under 0.05% shown as —. This table is reference material for scenario designers and does not need to be consulted during play.
 
 .. list-table::
    :header-rows: 1

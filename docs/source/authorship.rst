@@ -12,6 +12,4 @@ AI assistance (Claude, Anthropic) was used in the development process for:
 - Drafting and formatting of documentation
 
 Every significant design decision, including the reasoning behind it, is
-recorded in :doc:`Appendix E <appendix_e__design_notes>`. This record was
-maintained throughout development regardless of which tools were used to
-produce a given draft.
+recorded in :doc:`Appendix E <appendix_e__design_notes>`.

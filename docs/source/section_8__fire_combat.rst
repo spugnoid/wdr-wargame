@@ -353,13 +353,13 @@ The full procedure for any fire combat action:
 
    **Example:** A rifle squad exchanging fire at the edge of its weapons' range can pin an enemy repeatedly but essentially never inflicts a Casualty result on them, matching historical long-range engagement outcomes.
 
-**8.7.3**  The long range cap applies after all modifiers have been calculated. The two-band grading removes the old cliff at rFP 3/4, where a single point of intervening penalty toggled a firer between "can never inflict a casualty" and the full table including Broken.
+**8.7.3**  The long range cap applies after all modifiers have been calculated. The two-band grading avoids a cliff at rFP 3/4, where a single point of intervening penalty would otherwise toggle a firer between "can never inflict a casualty" and the full table including Broken.
 
 .. container:: rule-guide
 
-   **Why:** Smooths what used to be an abrupt, unrealistic threshold — one point of extra intervening-terrain penalty shouldn't be the difference between "can never hurt them" and "can potentially wipe them out" — into a graduated two-step cap instead.
+   **Why:** Smooths what would otherwise be an abrupt, unrealistic threshold — one point of extra intervening-terrain penalty shouldn't be the difference between "can never hurt them" and "can potentially wipe them out" — into a graduated two-step cap instead.
 
-   **Example:** A fire line at eFP 3 (Pinned cap) and one at eFP 4 (uncapped) are adjacent points on a smooth two-step scale, rather than the old system's single sharp cliff between "no casualties ever" and "full table available."
+   **Example:** A fire line at eFP 3 (Pinned cap) and one at eFP 4 (uncapped) are adjacent points on a smooth two-step scale, rather than two sides of a single sharp cliff between "no casualties ever" and "full table available."
 
 **8.7.4**  Sniper exemption:  Sniper fire lines (weapon class icon ╌○) are exempt from the long range cap when deliberate targeting is declared (see Rule 20.2). Full result thresholds apply regardless of eFP. A sniper firing without declaring a deliberate target is treated as normal area fire and the cap applies normally.
 
@@ -484,7 +484,7 @@ The full procedure for any fire combat action:
 
 *If this module is in use for the scenario:*
 
-*Design note: automatic weapons jamming under sustained fire is one of the most recognisable pieces of tactical-wargame chrome (Advanced Squad Leader's Malfunction result is the best-known example), and a real historical phenomenon — but it adds a check to every single automatic-weapon shot in the game, which is exactly the kind of table overhead the base game deliberately avoids. Scoped as optional for that reason, not because the phenomenon isn't real. See design note E.115.*
+*Design note: automatic weapons jamming under sustained fire is one of the most recognisable pieces of tactical-wargame chrome (Advanced Squad Leader's Malfunction result is the best-known example), and a real historical phenomenon — but it adds a check to every single automatic-weapon shot in the game, which is exactly the kind of table overhead the base game deliberately avoids. Scoped as optional for that reason, not because the phenomenon isn't real.*
 
 **8.12.1**  Whenever a unit fires a weapon with class lmg, hmg, or smg (Rule 6.6.2's mount-type table, or the printed weapon_class on the fire line), check for malfunction using the same 1d6+1d8+1d12 roll already made for the attack: if the 1d6 **and** the 1d8 both show their minimum value (1 and 1), regardless of the 1d12 or the attack's own result, the weapon malfunctions. This reuses the existing roll — no second roll, no new dice.
 
@@ -517,7 +517,7 @@ The full procedure for any fire combat action:
 
 *If this module is in use for the scenario:*
 
-*Design note: Rule 16.4.1 already lets a mortar pre-designate up to two target hexes for a real accuracy bonus (Registered Target). Direct-fire weapons — an HMG, an AT gun, a defending tank in a prepared position — had no equivalent, even though boresighting a likely approach is exactly the kind of preparation real defenders actually did. Reuses the mortar rule's own registration limit and the Gunnery Roll's own existing band-shortening idiom rather than inventing new numbers. See design note E.115.*
+*Design note: Rule 16.4.1 already lets a mortar pre-designate up to two target hexes for a real accuracy bonus (Registered Target). Direct-fire weapons — an HMG, an AT gun, a defending tank in a prepared position — had no equivalent, even though boresighting a likely approach is exactly the kind of preparation real defenders actually did. Reuses the mortar rule's own registration limit and the Gunnery Roll's own existing band-shortening idiom rather than inventing new numbers.*
 
 **8.13.1**  During scenario setup, a weapon that will not move for the rest of the scenario (a deployed HMG, an AT gun, or a vehicle the scenario designates as fixed/dug-in) may pre-register up to **2 hexes** within its printed range — the same limit Rule 16.4.1 already sets for mortar Registered Target.
 

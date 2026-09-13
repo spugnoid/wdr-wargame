@@ -124,8 +124,6 @@ All mortar counters use M2 F1 (mobile) or M0 F2 (deployed), per Rule 6.6.2. Mort
 
    **Example:** A mortar with printed AMO 8 is guaranteed exactly 8 fire missions before any uncertainty begins — its 9th mission onward is the first point where the extended ammunition table's rolls come into play.
 
-*NOTE: earlier drafts also added a secret 1d6−1 bonus recorded privately at setup. Two mechanisms cannot both govern the same supply — a player who rolled +5 secret rounds could still be forced dry by a first extended-table roll of 1 — and the extended table alone already provides hidden, variable ammunition without any private bookkeeping. The secret roll is removed.*
-
 **16.3.2**  Each fire mission (HE, smoke, or Illum — Rule 23.3.1) expends 1 AMO. All three round types are tracked on the same AMO count unless the scenario specifies separate pools.
 
 .. container:: rule-guide
@@ -415,7 +413,7 @@ All mortar counters use M2 F1 (mobile) or M0 F2 (deployed), per Rule 6.6.2. Mort
 
 *If this module is in use for the scenario:*
 
-*Design note: real WWII mortar and light-artillery HE had no meaningful capability to penetrate a tank's top armour outright — every source checked (casualty studies, ordnance engineering references, contemporary doctrine) agrees HE fire against tanks was a suppression/button-up tool, never a killing mechanism, and no documented incident of a mortar round penetrating a tank's roof was found. Where the record does support real teeth beyond suppression is narrower: heavy ordnance occasionally disabling a tank's mobility through unarmoured engine-deck grilles and louvres, not through the armour plate itself. This rule is scoped to exactly that, not to a general top-armour-penetration capability. See* ``counters/toe/mortar_vs_top_armor_research.md`` *and design note E.120.*
+*Design note: real WWII mortar and light-artillery HE had no meaningful capability to penetrate a tank's top armour outright — every source checked (casualty studies, ordnance engineering references, contemporary doctrine) agrees HE fire against tanks was a suppression/button-up tool, never a killing mechanism, and no documented incident of a mortar round penetrating a tank's roof was found. Where the record does support real teeth beyond suppression is narrower: heavy ordnance occasionally disabling a tank's mobility through unarmoured engine-deck grilles and louvres, not through the armour plate itself. This rule is scoped to exactly that, not to a general top-armour-penetration capability.*
 
 **16.7.8a.1**  When a 120mm-class mortar or larger-calibre HE mission (a heavier off-map artillery mission, Rule 16.11, flagged as such in the scenario's own parameters) lands in a closed AFV's hex, roll 1d6 in addition to Rule 16.7.8's crew Suppression check: on a natural 1, the vehicle suffers a Mobility Kill (flip to its MOB KILL rear face, Rule 17.1.1) — the blast has disabled an exposed engine-deck grille, louvre, or running-gear component, not penetrated the deck plate. This check never uses Rule 18.2's PEN-vs-AV comparison and is unaffected by whether the vehicle has a printed Top AV (Rule 17.2a) at all.
 

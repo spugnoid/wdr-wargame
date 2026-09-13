@@ -110,7 +110,7 @@ All leaders have M8 F1 — movement allowance 8, fire rate 1. Leaders move faste
 
 **AP = 1 (base) + Σ CMD ratings of all functional leaders**
 
-**12.3.2**  RP = round(AP / 2), minimum 1. This formula is unchanged from Section 5.3.
+**12.3.2**  RP = round(AP / 2), minimum 1. This is the same formula given in Section 5.3.
 
 .. container:: rule-guide
 
@@ -524,7 +524,7 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
 ------------------------------------------
 
 
-The following counters are representative examples across the nations this document covers, for 1943 test scenarios. CMD/OBS/RAL/ASL/Defence are quality-tier stats (Rule 12.2, 12.6.4) and deliberately do not vary by nation — national differences are carried by Force Morale factors (Rule 15.6) and unit-level data (Section 3, `counters/infantry_calc/`), not by individual leader competence. A Platoon Leader (Regular) is therefore the identical stat line for every nation below; only the counter's own printed nationality and unit ID differ.
+The following counters are representative examples across the nations this document covers, for 1943 test scenarios. CMD/OBS/RAL/ASL/Defence are quality-tier stats (Rule 12.2, 12.6.4) and deliberately do not vary by nation — national differences are carried by Force Morale factors (Rule 15.6) and unit-level data (Section 3), not by individual leader competence. A Platoon Leader (Regular) is therefore the identical stat line for every nation below; only the counter's own printed nationality and unit ID differ.
 
 .. list-table::
    :header-rows: 1

@@ -1,23 +1,15 @@
 Appendix H — Consolidated Unit and Vehicle Roster
 ====================================================
 
-*This appendix is generated directly from this project's own calculation
-tools, in* ``counters/infantry_calc/`` *and* ``counters/armor_calc/``\ *, and
-is never hand-edited. Regenerate it with the command* ``PYTHONPATH=counters
-python3 counters/generate_roster_appendix.py`` *after re-running either
-pipeline, and commit the regenerated file alongside whatever data change
-produced it. Full sourcing, confidence notes, and open questions for any
-given row live in the underlying* ``data`` *CSV files and the*
-``counters/toe/`` *research documents they cite — this appendix intentionally
-omits that detail to stay scannable as a single reference table.*
+*Every printed counter value in the game, collected in one place: infantry
+and weapon teams in H.1, vehicle armour profiles in H.2, and gun penetration
+curves by range in H.3.*
 
-*Vehicle Gunnery Tables (Rule 18.1a) are not included here: a Gunnery Table
-depends on the firing vehicle's own Crew Quality (Rule 17.3.6), which is
-derived from a vehicle's printed Morale at counter-design time — a
-scenario-specific choice this roster does not currently track as structured
-data for every vehicle. A scenario's own parameter block states each side's
-vehicle crew qualities; look up that gun's full Gunnery Table in the file*
-``vehicle_fire_thresholds_output.csv`` *once the crew quality is chosen.*
+*Vehicle Gunnery Tables (Rule 18.1a) are not listed here. A Gunnery Table
+depends on the firing vehicle's Crew Quality (Rule 17.3.6), which derives
+from that vehicle's printed Morale — and a scenario's own parameter block
+sets each side's vehicle crew qualities. Build the table from Rule 18.1a
+once the crew quality for the scenario is known.*
 
 H.1  Infantry and Weapon Team Roster
 ----------------------------------------

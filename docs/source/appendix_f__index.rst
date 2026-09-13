@@ -95,7 +95,7 @@ triggers: failed Dispersed rally, unrallied at scenario end, still Routing at sc
 
 default, undeclared Move action  ..........  7.1.1
 
-M5 standard infantry baseline  ..........  7.1.2, E.166
+M5 standard infantry baseline  ..........  7.1.2
 
 spends MP per Rule 7.2 terrain chart  ..........  7.1.1
 
@@ -261,7 +261,7 @@ extinguishing  ..........  21.5.6
 
 **Campaign rules**  ..........  S.13
 
-branching structure (nodes, branch tables, DAG)  ..........  13.5.3–13.5.7, E.103
+branching structure (nodes, branch tables, DAG)  ..........  13.5.3–13.5.7
 
 between-scenario recovery rolls  ..........  13.3
 
@@ -429,7 +429,7 @@ procedure  ..........  20.3.2
 
 **Dice — 1d6 + 1d8 + 1d12**  ..........  8.5
 
-distribution: symmetric, skew emergent from modifiers  ..........  8.5.3, E.7
+distribution: symmetric, skew emergent from modifiers  ..........  8.5.3
 
 range 3–26, mean 14.5  ..........  8.5.1
 
@@ -519,13 +519,9 @@ covers used capability icon or weapon band  ..........  18.9.1
 
 **Experience Modifier (EM)**  ..........  1.3, 13.5.2
 
-promotion via CI-free streak  ..........  13.5.2a, E.101
+promotion via CI-free streak  ..........  13.5.2a
 
-reset on replacement dilution  ..........  13.5.2c, E.104
-
-**Exposure rules — eliminated**  ..........  E.94
-
-reactions are momentary, resolved at the triggering action  ..........  6.2.3, E.94
+reset on replacement dilution  ..........  13.5.2c
 
 **F**
 
@@ -569,7 +565,7 @@ sealed slip procedure  ..........  16.5
 
 **Fire mission slip**  ..........  16.5, 16.12
 
-anti-cheat function  ..........  16.5.4, E.31
+anti-cheat function  ..........  16.5.4
 
 fields  ..........  16.12
 
@@ -737,11 +733,9 @@ reaction window  ..........  5.5.2–5.5.4
 
 **Indirect fire — see Mortars**  ..........  S.16
 
-**Inform you — see Title rationale**  ..........  E.45
-
 **Initiative**  ..........  5.3.1
 
-buys tempo only, not RP (see E.91)  ..........  5.3.2
+buys tempo only, not RP  ..........  5.3.2
 
 roll 1d6, higher wins  ..........  5.3.1
 
@@ -851,7 +845,7 @@ dispersion  ..........  16.6
 
 fire mission delay table  ..........  16.4.1
 
-no falloff (flat rFP)  ..........  16.7.5, E.34
+no falloff (flat rFP)  ..........  16.7.5
 
 RNG range band  ..........  16.1.1
 
@@ -879,7 +873,7 @@ vehicle terrain costs  ..........  17.6.2
 
 **Movement allowance (M#)**  ..........  3.3.1, 7.1
 
-derived from turn duration, not a single impulse  ..........  7.1.2, E.166
+derived from turn duration, not a single impulse  ..........  7.1.2
 
 M5 standard infantry  ..........  7.1.2
 
@@ -925,7 +919,7 @@ requires radio operator/FO  ..........  16.11.3
 
 **Operational scale**  ..........  2.1.2
 
-deferred to a future companion manual — see E.107  ..........  2.1.2, E.107
+deferred to a future companion manual  ..........  2.1.2
 
 **Opportunity fire**  ..........  6.4
 
@@ -991,7 +985,7 @@ cost 1 MP per 60°  ..........  17.5.4
 
 casemate extra cost  ..........  17.4.4
 
-**Player aid card**  ..........  S.22 design notes, E.44
+**Player aid card**  ..........  1.5.2, 8.4.3
 
 **POW markers**  ..........  11.2.2, 11.2a
 
@@ -1029,8 +1023,6 @@ lost if enemy occupies its hex  ..........  12.6a.3
 
 boundary-crossing definition  ..........  2.3.1
 
-correction from v0.6.1  ..........  E.35
-
 range 0 = same hex  ..........  2.3.2
 
 range 1 = adjacent hex  ..........  2.3.3
@@ -1051,7 +1043,7 @@ Spot Roll (1 RP)  ..........  6.4
 
 **Recovery Phase**  ..........  5.2
 
-at start of turn not end  ..........  5.2.1, E.9
+at start of turn not end  ..........  5.2.1
 
 markers removed  ..........  5.2.2
 
@@ -1063,7 +1055,7 @@ four levels  ..........  13.2
 
 loser reduced one step  ..........  13.2.1
 
-resupply tiers  ..........  13.2.2, E.100
+resupply tiers  ..........  13.2.2
 
 **Registered target (mortar)**  ..........  16.4.1
 
@@ -1071,13 +1063,13 @@ limit 2 per mortar  ..........  16.4.1
 
 reduced delay  ..........  16.4.1
 
-**Replacement Points**  ..........  13.2.2a, E.100
+**Replacement Points**  ..........  13.2.2a
 
 bump a recovery roll one tier  ..........  13.2.2a
 
 do not carry over between campaign turns  ..........  13.2.2a
 
-**Resupply**  ..........  13.2.2, E.100
+**Resupply**  ..........  13.2.2
 
 **FPr**  ..........  1.3, 8.4
 
@@ -1089,7 +1081,7 @@ multiple units: use Resolution Strip  ..........  8.4.2
 
 full table  ..........  App.A
 
-logarithmic compression  ..........  8.4.2, E.6
+logarithmic compression  ..........  8.4.2
 
 **Result thresholds**  ..........  8.6, App.C
 
@@ -1167,10 +1159,6 @@ Broadside-to-Slope condition  ..........  18.2c.1
 
 resolves against lower of Side/Top AV  ..........  18.2c.2
 
-**Skulking — eliminated by design**  ..........  E.8, E.94
-
-momentary reactions replace the Exposure system  ..........  6.2.3, E.94
-
 **Smoke**  ..........  16.9, 16.10
 
 CON bonus per step  ..........  16.10.2
@@ -1225,7 +1213,7 @@ weapon counters exempt  ..........  3.5.3
 
 **Step-up order (multiple attacks)**  ..........  8.8.3
 
-**Summation rule (fire groups)**  ..........  8.3, E.5
+**Summation rule (fire groups)**  ..........  8.3
 
 sum rFP and f, keep h (same-hex shortcut)  ..........  8.3.3
 
@@ -1267,15 +1255,9 @@ movement costs table  ..........  7.2, App.B
 
 **Time scale**  ..........  2.2
 
-movement allowance derived from turn-length marching pace, not impulse duration  ..........  7.1.2, E.166
+movement allowance derived from turn-length marching pace, not impulse duration  ..........  7.1.2
 
 one turn ~2–5 minutes  ..........  2.2.1
-
-**Title — With Deepest Regret...**  ..........  E.45
-
-abbreviation WDR  ..........  E.45
-
-universal opening of death notifications  ..........  E.45
 
 **Top Armour (Optional Rule)**  ..........  17.2a, App.G
 
@@ -1423,8 +1405,6 @@ stacking exemption  ..........  3.5.3
 
 two faces: full/reduced crew  ..........  3.2.6
 
-**With Deepest Regret... — see Title**  ..........  E.45
-
 **Wounded leader**  ..........  12.10
 
 rear face stat reductions  ..........  12.10.1
@@ -1433,13 +1413,13 @@ second hit: eliminated or captured  ..........  12.10.2
 
 **Y**
 
-**Year brackets**  ..........  1.3, E.16 (campaign)
+**Year brackets**  ..........  1.3
 
 1939–40 / 1941–42 / 1943 / 1944–45  ..........  campaign framework
 
 **⬡ (Hex interval notation)**
 
-**⬡h hex interval — see Falloff formula**  ..........  2.4.3, 8.2, E.3
+**⬡h hex interval — see Falloff formula**  ..........  2.4.3, 8.2
 
 grouping by ⬡h  ..........  8.3.1
 

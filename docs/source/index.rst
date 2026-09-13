@@ -1,7 +1,7 @@
 With Deepest Regret...
 =======================
 
-Rules of Play — Docs-as-Code Edition
+Rules of Play
 
 Version |release| — built |today|
 
