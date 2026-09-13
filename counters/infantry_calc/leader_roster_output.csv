@@ -1,0 +1,8 @@
+leader_id,nation,echelon,year_bracket,quality,cmd,obs,ral,asl,morale,defence,m_number,f_number
+GER_GREN_PLT_1943.3,Germany,Platoon Leader,1943.3,veteran,3,2,3,1,7,6,8,1
+GER_GREN_SL_1943.3,Germany,Squad Leader,1943.3,regular,2,2,4,1,6,6,8,1
+SOV_RIF_PLT_1943.3,Soviet Union,Platoon Leader,1943.3,regular,2,2,4,1,6,6,8,1
+SOV_GDS_PLT_1943.3,Soviet Union,Guards Platoon Leader,1943.3,veteran,3,2,3,1,7,6,8,1
+US_PLT_1943.3,United States,Platoon Leader,1943.3,regular,2,2,4,1,6,6,8,1
+UK_PLT_1943.3,United Kingdom,Platoon Leader,1943.3,regular,2,2,4,1,6,6,8,1
+JPN_PLT_1943.3,Japan,Platoon Leader,1943.3,regular,2,2,4,1,6,6,8,1

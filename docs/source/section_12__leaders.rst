@@ -586,7 +586,7 @@ A leader spending its own 1 AP may take one of the following actions. These are 
 ------------------------------------------
 
 
-The following counters are representative examples across the nations this document covers, for 1943 test scenarios. CMD/OBS/RAL/ASL/Defence are quality-tier stats (Rule 12.2, 12.6.4) and deliberately do not vary by nation — national differences are carried by Force Morale factors (Rule 15.6) and unit-level data (Section 3), not by individual leader competence. A Platoon Leader (Regular) is therefore the identical stat line for every nation below; only the counter's own printed nationality and unit ID differ.
+The following counters are representative examples across the nations this document covers, for 1943 test scenarios. They are also listed in Appendix G.2, generated from the same quality-tier data, so the two cannot drift apart. CMD/OBS/RAL/ASL/Defence are quality-tier stats (Rule 12.2, 12.6.4) and deliberately do not vary by nation — national differences are carried by Force Morale factors (Rule 15.6) and unit-level data (Section 3), not by individual leader competence. A Platoon Leader (Regular) is therefore the identical stat line for every nation below; only the counter's own printed nationality and unit ID differ.
 
 .. list-table::
    :header-rows: 1

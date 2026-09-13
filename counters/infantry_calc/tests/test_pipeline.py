@@ -382,3 +382,30 @@ class TestWriteInfantryRosterCsv:
         row = rows["SOV_RIFSQ_B_1943.3_F"]
         assert row["fire_line_1"] == "─● 9 ⬡3 -1"
         assert row["fire_line_3"] == "≡ 3 ⬡2 -1"
+
+
+def test_leader_roster_matches_quality_tiers():
+    """Leader stats come from the tier table and nowhere else, so a German
+    and a Soviet leader of the same quality can never drift apart
+    (Rule 12.11's stated principle)."""
+    import csv, pathlib
+    base = pathlib.Path(__file__).parent.parent
+    tiers = {r["quality"]: r for r in csv.DictReader(open(base / "data" / "leader_tiers.csv", encoding="utf-8"))}
+    rows = list(csv.DictReader(open(base / "leader_roster_output.csv", encoding="utf-8")))
+    assert rows, "leader roster is empty"
+    for r in rows:
+        t = tiers[r["quality"]]
+        for stat in ("cmd", "obs", "ral", "asl", "morale", "defence"):
+            assert r[stat] == t[stat], f"{r['leader_id']} {stat}: {r[stat]} != tier {t[stat]}"
+        assert r["m_number"] == "8" and r["f_number"] == "1", "Rule 12.1: every leader is M8 F1"
+
+
+def test_leader_stats_do_not_vary_by_nation():
+    import csv, pathlib
+    rows = list(csv.DictReader(open(pathlib.Path(__file__).parent.parent / "leader_roster_output.csv", encoding="utf-8")))
+    by_quality = {}
+    for r in rows:
+        sig = (r["cmd"], r["obs"], r["ral"], r["asl"], r["morale"], r["defence"])
+        by_quality.setdefault(r["quality"], set()).add(sig)
+    for quality, sigs in by_quality.items():
+        assert len(sigs) == 1, f"{quality} leaders differ by nation: {sigs}"

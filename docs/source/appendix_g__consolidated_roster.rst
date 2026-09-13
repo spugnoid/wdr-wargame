@@ -2,8 +2,8 @@ Appendix G — Consolidated Unit and Vehicle Roster
 ====================================================
 
 *Every printed counter value in the game, collected in one place: infantry
-and weapon teams in G.1, vehicle armour profiles in G.2, and gun penetration
-curves by range in G.3.*
+and weapon teams in G.1, leaders in G.2, vehicle armour profiles in G.3, gun penetration curves in
+G.4, and vehicle combat reference in G.5 to G.7.*
 
 *Vehicle combat reference follows in G.4 to G.6: the Gunnery Tables behind
 every gun's printed Miss and Hull Thresholds, the Shatter Gap windows, and
@@ -398,7 +398,118 @@ G.1  Infantry and Weapon Team Roster
      - F1
      - G1
 
-G.2  Vehicle Armour Roster
+G.2  Leader Roster
+-----------------------
+
+*A leader's CMD, OBS, RAL, ASL and Defence are quality-tier values and do
+not vary by nation (Rule 12.11) — a Regular platoon leader is the same
+counter in every army, and only the printed nationality and unit ID
+differ. CMD does three jobs at once: Action Points contributed, command
+radius in hexes, and directions available per turn (Rule 12.4a.1). Every
+leader is M8 F1 (Rule 12.1) and prints no fire line.*
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - **Leader**
+     - **Nation**
+     - **Year**
+     - **Quality**
+     - **CMD**
+     - **OBS**
+     - **RAL**
+     - **ASL**
+     - **Mor**
+     - **Def**
+     - **M#**
+     - **F#**
+   * - Platoon Leader
+     - Germany
+     - 1943.3
+     - veteran
+     - 3
+     - 2
+     - 3
+     - +1
+     - 7
+     - 6
+     - M8
+     - F1
+   * - Squad Leader
+     - Germany
+     - 1943.3
+     - regular
+     - 2
+     - 2
+     - 4
+     - +1
+     - 6
+     - 6
+     - M8
+     - F1
+   * - Platoon Leader
+     - Soviet Union
+     - 1943.3
+     - regular
+     - 2
+     - 2
+     - 4
+     - +1
+     - 6
+     - 6
+     - M8
+     - F1
+   * - Guards Platoon Leader
+     - Soviet Union
+     - 1943.3
+     - veteran
+     - 3
+     - 2
+     - 3
+     - +1
+     - 7
+     - 6
+     - M8
+     - F1
+   * - Platoon Leader
+     - United States
+     - 1943.3
+     - regular
+     - 2
+     - 2
+     - 4
+     - +1
+     - 6
+     - 6
+     - M8
+     - F1
+   * - Platoon Leader
+     - United Kingdom
+     - 1943.3
+     - regular
+     - 2
+     - 2
+     - 4
+     - +1
+     - 6
+     - 6
+     - M8
+     - F1
+   * - Platoon Leader
+     - Japan
+     - 1943.3
+     - regular
+     - 2
+     - 2
+     - 4
+     - +1
+     - 6
+     - 6
+     - M8
+     - F1
+
+G.3  Vehicle Armour Roster
 -------------------------------
 
 .. list-table::
@@ -1246,7 +1357,7 @@ G.2  Vehicle Armour Roster
      - —
      - —
 
-G.3  Gun Penetration Curves
+G.4  Gun Penetration Curves
 --------------------------------
 
 *0°-equivalent millimetres by range band (Rule 17.3.1) — read the row for
@@ -1471,7 +1582,7 @@ the ammunition nature actually fired.*
      - 108.0
      - 94.8
 
-G.4  Vehicle Gunnery Tables
+G.5  Vehicle Gunnery Tables
 --------------------------------
 
 *Miss and Hull Thresholds for the Gunnery Roll (Rule 18.1a), by gun, crew
@@ -1483,7 +1594,7 @@ place of a Hull Threshold means every hit at that range strikes the Turret;*
 every hit strikes the Hull; and* **—** *means the band is an automatic miss
 (Rule 18.1a.1a). Each band's hex range is printed beneath it, so no
 conversion from metres is needed at the table; these bands are the Gunnery
-Table's own and are read independently of the PEN bands in G.3.*
+Table's own and are read independently of the PEN bands in G.4.*
 
 .. list-table::
    :header-rows: 1
@@ -2308,7 +2419,7 @@ Table's own and are read independently of the PEN bands in G.3.*
      - 25 / H
      - —
 
-G.5  Shatter Gap Table
+G.6  Shatter Gap Table
 ---------------------------
 
 *Used only when the Shatter Gap optional module is in play (Rule 18.2a).
@@ -2380,7 +2491,7 @@ target's AV (Rule 18.2a.1).*
      - 212.0
      - 244.0
 
-G.6  Hit Location Thresholds
+G.7  Hit Location Thresholds
 ---------------------------------
 
 *Used only by vehicles with a printed Hit Location Table, and only for

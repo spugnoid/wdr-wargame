@@ -1,0 +1,5 @@
+quality,cmd,obs,ral,asl,morale,defence,source
+poor,1,1,5,0,5,6,"12.2.1 CMD 1 / 12.6.4 RAL 5 / 12.8.2 ASL +0"
+regular,2,2,4,1,6,6,"12.2.1 CMD 2 / 12.6.4 RAL 4 / 12.8.2 ASL +1 — matches 12.11 as printed"
+veteran,3,2,3,1,7,6,"12.2.1 CMD 3 / 12.6.4 RAL 3 / 12.8.2 ASL +1 — matches 12.11 as printed"
+elite,3,3,2,2,7,6,"12.2.3 elite distinguished by RAL/ASL/OBS not CMD / 12.6.4 RAL 2 / 12.8.2 ASL +2"

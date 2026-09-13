@@ -18,6 +18,7 @@ import pathlib
 
 REPO_ROOT = pathlib.Path(__file__).parent.parent
 INFANTRY_CSV = REPO_ROOT / "counters" / "infantry_calc" / "infantry_roster_output.csv"
+LEADER_CSV = REPO_ROOT / "counters" / "infantry_calc" / "leader_roster_output.csv"
 VEHICLE_ROSTER_CSV = REPO_ROOT / "counters" / "armor_calc" / "roster_output.csv"
 GUN_CURVES_CSV = REPO_ROOT / "counters" / "armor_calc" / "gun_curves_output.csv"
 GUNNERY_CSV = REPO_ROOT / "counters" / "armor_calc" / "vehicle_fire_thresholds_output.csv"
@@ -140,6 +141,44 @@ def _hex_span(bands: list[int], i: int) -> str:
     return f"{lo}+"
 
 
+
+def render_leader_table(rows: list[dict[str, str]]) -> str:
+    lines = [
+        ".. list-table::",
+        "   :header-rows: 1",
+        "   :widths: auto",
+        "",
+        "   * - **Leader**",
+        "     - **Nation**",
+        "     - **Year**",
+        "     - **Quality**",
+        "     - **CMD**",
+        "     - **OBS**",
+        "     - **RAL**",
+        "     - **ASL**",
+        "     - **Mor**",
+        "     - **Def**",
+        "     - **M#**",
+        "     - **F#**",
+    ]
+    for r in rows:
+        lines += [
+            f"   * - {r['echelon']}",
+            f"     - {r['nation']}",
+            f"     - {r['year_bracket']}",
+            f"     - {r['quality']}",
+            f"     - {r['cmd']}",
+            f"     - {r['obs']}",
+            f"     - {r['ral']}",
+            f"     - +{r['asl']}",
+            f"     - {r['morale']}",
+            f"     - {r['defence']}",
+            f"     - M{r['m_number']}",
+            f"     - F{r['f_number']}",
+        ]
+    return "\n".join(lines)
+
+
 GUNNERY_BANDS = ["100", "250", "500", "750", "1000", "1500", "2000", "2500"]
 CREW_ORDER = ["elite", "veteran", "regular", "green", "militia"]
 
@@ -229,8 +268,8 @@ Appendix G — Consolidated Unit and Vehicle Roster
 ====================================================
 
 *Every printed counter value in the game, collected in one place: infantry
-and weapon teams in G.1, vehicle armour profiles in G.2, and gun penetration
-curves by range in G.3.*
+and weapon teams in G.1, leaders in G.2, vehicle armour profiles in G.3, gun penetration curves in
+G.4, and vehicle combat reference in G.5 to G.7.*
 
 *Vehicle combat reference follows in G.4 to G.6: the Gunnery Tables behind
 every gun's printed Miss and Hull Thresholds, the Shatter Gap windows, and
@@ -245,12 +284,24 @@ G.1  Infantry and Weapon Team Roster
 
 {infantry_table}
 
-G.2  Vehicle Armour Roster
+G.2  Leader Roster
+-----------------------
+
+*A leader's CMD, OBS, RAL, ASL and Defence are quality-tier values and do
+not vary by nation (Rule 12.11) — a Regular platoon leader is the same
+counter in every army, and only the printed nationality and unit ID
+differ. CMD does three jobs at once: Action Points contributed, command
+radius in hexes, and directions available per turn (Rule 12.4a.1). Every
+leader is M8 F1 (Rule 12.1) and prints no fire line.*
+
+{leader_table}
+
+G.3  Vehicle Armour Roster
 -------------------------------
 
 {vehicle_table}
 
-G.3  Gun Penetration Curves
+G.4  Gun Penetration Curves
 --------------------------------
 
 *0°-equivalent millimetres by range band (Rule 17.3.1) — read the row for
@@ -258,7 +309,7 @@ the ammunition nature actually fired.*
 
 {gun_table}
 
-G.4  Vehicle Gunnery Tables
+G.5  Vehicle Gunnery Tables
 --------------------------------
 
 *Miss and Hull Thresholds for the Gunnery Roll (Rule 18.1a), by gun, crew
@@ -270,11 +321,11 @@ place of a Hull Threshold means every hit at that range strikes the Turret;*
 every hit strikes the Hull; and* **—** *means the band is an automatic miss
 (Rule 18.1a.1a). Each band's hex range is printed beneath it, so no
 conversion from metres is needed at the table; these bands are the Gunnery
-Table's own and are read independently of the PEN bands in G.3.*
+Table's own and are read independently of the PEN bands in G.4.*
 
 {gunnery_table}
 
-G.5  Shatter Gap Table
+G.6  Shatter Gap Table
 ---------------------------
 
 *Used only when the Shatter Gap optional module is in play (Rule 18.2a).
@@ -286,7 +337,7 @@ target's AV (Rule 18.2a.1).*
 
 {shatter_table}
 
-G.6  Hit Location Thresholds
+G.7  Hit Location Thresholds
 ---------------------------------
 
 *Used only by vehicles with a printed Hit Location Table, and only for
@@ -314,6 +365,7 @@ def main() -> None:
         infantry_table=render_infantry_table(infantry_rows),
         vehicle_table=render_vehicle_armour_table(vehicle_rows),
         gun_table=render_gun_curves_table(gun_rows),
+        leader_table=render_leader_table(_read_rows(LEADER_CSV)),
         gunnery_table=render_gunnery_tables(gunnery_rows),
         shatter_table=render_shatter_gap_table(shatter_rows),
         hit_location_table=render_hit_location_table(hit_location_rows),

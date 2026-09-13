@@ -250,11 +250,45 @@ def write_infantry_roster_csv(
             )
 
 
+def write_leader_roster_csv(
+    out_path: pathlib.Path,
+    leaders_path: pathlib.Path = DATA_DIR / "leaders.csv",
+    tiers_path: pathlib.Path = DATA_DIR / "leader_tiers.csv",
+) -> int:
+    """Leader counters, joined from which leaders exist (leaders.csv) and
+    what a leader of that quality is worth (leader_tiers.csv).
+
+    The split is deliberate and enforces Rule 12.11's stated principle that
+    CMD/OBS/RAL/ASL/Defence are quality-tier stats which do not vary by
+    nation: the stats live in exactly one place, so a German and a Soviet
+    leader of the same tier cannot drift apart. TOE research supplies which
+    leaders a formation actually fields and at what echelon; the tier table
+    supplies what each is worth. Nothing here is computed from weapons --
+    unlike a squad, a leader has no fire line.
+    """
+    with open(tiers_path, newline="", encoding="utf-8") as f:
+        tiers = {r["quality"]: r for r in csv.DictReader(f)}
+    with open(leaders_path, newline="", encoding="utf-8") as f:
+        leaders = list(csv.DictReader(f))
+
+    with open(out_path, "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["leader_id", "nation", "echelon", "year_bracket", "quality",
+                    "cmd", "obs", "ral", "asl", "morale", "defence", "m_number", "f_number"])
+        for r in leaders:
+            t = tiers[r["quality"]]
+            # Rule 12.1: every leader is M8 F1, regardless of quality or nation.
+            w.writerow([r["leader_id"], r["nation"], r["echelon"], r["year_bracket"], r["quality"],
+                        t["cmd"], t["obs"], t["ral"], t["asl"], t["morale"], t["defence"], 8, 1])
+    return len(leaders)
+
+
 def main() -> None:
     weapons = load_weapons()
     units = load_units()
     write_infantry_roster_csv(weapons, units, DATA_DIR.parent / "infantry_roster_output.csv")
-    print(f"Wrote infantry_calc output to {DATA_DIR.parent}")
+    n_leaders = write_leader_roster_csv(DATA_DIR.parent / "leader_roster_output.csv")
+    print(f"Wrote infantry_calc output to {DATA_DIR.parent} ({n_leaders} leader rows)")
 
 
 if __name__ == "__main__":
