@@ -295,6 +295,14 @@ flip to rear face  ..........  App.C
 
 margin 14–18  ..........  8.6, App.C
 
+**CREW counter**  ..........  19.2.7, 19.2.7a
+
+stats: Morale from the vehicle, Def 3, M5 F0 G1  ..........  19.2.7a
+
+single face; a Casualty is a physical break  ..........  19.2.7a, 10.4.3
+
+required to capture an abandoned vehicle  ..........  19.4.2
+
 **Casualty Track**  ..........  13.1
 
 used in every scenario, not only campaigns  ..........  13.1, 22.9a.1

@@ -273,7 +273,7 @@ The following terms are used throughout this document. Each term is defined here
 
 **Overrun —**  Vehicle moving into an enemy infantry hex. Triggers defensive AT fire and morale check before close combat.
 
-**CREW counter —**  A small counter representing vehicle crew without a vehicle. Can crew friendly or captured vehicles. Moves using infantry routing rules when bailed out.
+**CREW counter —**  A small counter representing vehicle crew without a vehicle. Can crew friendly or captured vehicles. Moves using infantry routing rules when bailed out. Takes its Morale from the vehicle it left; all its other values are fixed (Rule 19.2.7a).
 
 **Deliberate targeting —**  A sniper declaring a specific unit as the target of fire rather than a hex. Full result thresholds apply — long range cap exempt.
 
