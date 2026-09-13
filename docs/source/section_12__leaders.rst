@@ -166,7 +166,23 @@ All leaders have M8 F1 — movement allowance 8, fire rate 1. Leaders move faste
 
    **Example:** A unit within the command radius of a distant CMD 1 leader and a farther-but-still-in-range CMD 3 leader is in command either way — Rule 12.4.1 only needs at least one functional leader's radius to cover it.
 
-**12.4.2**  A unit with no friendly leader in command radius is out of command. Out of command effects:
+**12.4.1a**  **The inherent NCO.** Every combat unit counter includes its own junior leader — the section or squad NCO — who is not represented separately and never needs a counter of his own. He is why a squad can be activated, fire, recover and hold together with no officer anywhere near it. A unit relying on its inherent NCO adds **+1** wherever these rules call for a leader's CMD on a Check (Rule 2.6.2).
+
+.. container:: rule-guide
+
+   **Why:** A rifle squad is not a leaderless mob waiting for an officer; it has a corporal or a sergeant in it, and that man is the reason it functions at all. Baking him into the counter rather than printing him separately keeps the action economy honest — officers generate Action Points, NCOs do not — while making sure that a unit fighting on its own is competent rather than crippled. It also means the difference an officer makes is a real, visible step up from a baseline that already works: +1 becomes +3 when the platoon commander is beside you.
+
+   **Example:** A Grenadier squad with no officer within radius makes its Recovery Phase roll at 1d6 +1 for its own NCO. The platoon leader (CMD 3) moving into range raises that to +3 — the squad was never helpless, it just got markedly better at everything.
+
+**12.4.1b**  The inherent NCO covers his own counter and nothing else. He never contributes AP (Rule 5.3.3), never extends a command radius, and can never direct a group action, directed fire or a coordinated assault (Rule 12.4a.3) — those all require an officer's counter on the map. A squad leader commands his own squad, not the squad in the next hex.
+
+.. container:: rule-guide
+
+   **Why:** Draws the line that stops the inherent NCO becoming a free officer on every counter. What a junior leader could actually do was hold his own section together and fight it; what he could not do was generate a platoon's tempo or coordinate the section beside him. Keeping AP and coordination exclusively with printed leaders is what preserves the whole point of the command system.
+
+   **Example:** Two squads sharing a hex, no officer present, each have their own NCO and each function normally — but moving both on a single Action Point is impossible, because that needs an officer directing (Rule 6.1.1).
+
+**12.4.2**  A unit with no friendly **officer** in command radius is out of command — it has only its inherent NCO (Rule 12.4.1a). Out of command effects:
 
 .. container:: rule-guide
 
@@ -180,10 +196,8 @@ All leaders have M8 F1 — movement allowance 8, fire rate 1. Leaders move faste
 
    * - **Effect**
      - **Modifier**
-   * - Morale checks
-     - -1
-   * - Recovery rolls
-     - -1
+   * - Checks (morale, recovery, rally, spotting and the rest)
+     - +1 from the inherent NCO, in place of an officer's CMD
    * - Rally action
      - Not available — no leader present
    * - Fire coordination bonus
@@ -236,7 +250,7 @@ All leaders have M8 F1 — movement allowance 8, fire rate 1. Leaders move faste
      - Adds the leader's ASL to the Grenade Phase, the leader being in the assaulting hex (Rule 12.8)
 
 
-**12.4a.4**  A unit never *needs* a leader to act. One counter, one AP, on its own initiative, anywhere on the map. Support weapons fire perfectly well unled — a machine gun crew does not wait for an officer to shoot. What a leader adds is doing it *together*, or doing it *better*.
+**12.4a.4**  A unit never *needs* an officer to act. One counter, one AP, on its own initiative, anywhere on the map, under its own inherent NCO (Rule 12.4.1a). Support weapons fire perfectly well unled — a machine gun crew does not wait for an officer to shoot. What a leader adds is doing it *together*, or doing it *better*.
 
 .. container:: rule-guide
 

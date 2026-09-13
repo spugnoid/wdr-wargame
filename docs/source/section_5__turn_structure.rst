@@ -145,7 +145,7 @@ Before the first turn begins, both players set up the scenario once: see Rule 22
 
    **Example:** A side with one functional leader of CMD 2 gets AP = 1 + 2 = 3 for the turn; losing that leader mid-battle (and gaining no replacement) drops future turns toward the base AP = 1, moderated by the NCO floor (Rule 5.3.3a).
 
-**5.3.3a**  NCO floor: a side with **no functional leaders** that still has at least 3 unbroken combat units on the map receives AP = 2 (and thus RP = 1) — junior NCOs take over enough to keep the force fighting, at half or less of a typical led pool. With fewer than 3 unbroken combat units remaining, the base AP = 1 stands: the remnant is beyond coordination.
+**5.3.3a**  NCO floor: a side with **no functional officers** still has the inherent NCO in every one of its counters (Rule 12.4.1a), and while at least 3 unbroken combat units remain on the map those NCOs between them generate AP = 2 (and thus RP = 1) — junior NCOs take over enough to keep the force fighting, at half or less of a typical led pool. With fewer than 3 unbroken combat units remaining, the base AP = 1 stands: the remnant is beyond coordination.
 
 .. container:: rule-guide
 

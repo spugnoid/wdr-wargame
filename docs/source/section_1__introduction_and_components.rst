@@ -367,4 +367,6 @@ With Deepest Regret... is designed so that a player can resolve the majority of 
      - Generous, very readable, best for older eyes
 
 
-**1.5.6**  Free and open release:  With Deepest Regret... is released free of charge as a complete open system. Rules, counter sheets, markers, and a large inventory of generated maps are all freely available. The system is designed to make squad-level hex and counter wargaming accessible without the financial barrier of commercial systems. All components can be printed at home or through a print service.
+**1.5.6**  Free and open release:  With Deepest Regret... is released free of charge as a complete open system. Rules, counter sheets, markers, and a large inventory of generated maps are all freely available. The system is designed to make squad-level hex and counter wargaming accessible without the financial barrier of commercial systems. All components can be printed at home or through a print service.**Inherent NCO —**  The junior leader inside every combat unit counter, never represented separately. He is why a squad functions with no officer nearby, and is worth +1 wherever a Check calls for a leader's CMD. He contributes no AP and can direct nothing beyond his own counter (Rule 12.4.1a).
+
+

@@ -819,6 +819,14 @@ reaction window  ..........  5.5.2–5.5.4
 
 **Indirect fire — see Mortars**  ..........  S.16
 
+**Inherent NCO**  ..........  12.4.1a
+
++1 on Checks where no officer is in radius  ..........  12.4.1a, 2.6.2
+
+contributes no AP, directs nothing beyond its counter  ..........  12.4.1b
+
+why a leaderless force still has AP 2  ..........  5.3.3a
+
 **Initiative**  ..........  5.3.1
 
 buys tempo only, not RP  ..........  5.3.2

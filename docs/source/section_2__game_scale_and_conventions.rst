@@ -202,15 +202,15 @@ With Deepest Regret... uses a specific counter notation for firepower and fallof
    * - **Modifier**
      - **Value**
      - **Source**
-   * - Leader within command radius
-     - **+ that leader's CMD**
+   * - Officer within command radius
+     - **+ that officer's CMD**
      - Rule 12.2.1 — the largest modifier in the game, and the reason leaders matter
+   * - No officer in radius
+     - **+1**, the unit's own inherent NCO
+     - Rule 12.4.1a. Never added to an officer's CMD — take whichever applies, not both
    * - Unit's own quality
      - + its Morale modifier
      - Rule 15.2.1a
-   * - Out of command
-     - −1
-     - Rule 12.4.2
    * - Suppressed
      - −1
      - Rule 10.2
@@ -223,7 +223,7 @@ With Deepest Regret... uses a specific counter notation for firepower and fallof
 
    **Why:** Fixes one modifier set for every Check so a player is never hunting for which bonuses apply to which roll. Command is deliberately the heaviest term: a CMD 3 officer swings a Check by half the die, which is why a force that loses its leaders does not merely act less often — it starts failing at everything it still tries to do.
 
-   **Example:** A Regular squad (+0) that is Suppressed (−1) but has a CMD 2 leader in radius (+2) rolls 1d6 +1 against the threshold. The same squad with its leader dead rolls 1d6 −2, out of command.
+   **Example:** A Regular squad (+0) that is Suppressed (−1) but has a CMD 2 officer in radius (+2) rolls 1d6 +1 against the threshold. The same squad with its officer dead falls back on its own NCO and rolls 1d6 +0 — worse, but not helpless.
 
 **2.6.3**  Degree — the **d8**. When a Check needs to know not just whether but *how much*, throw a d8 alongside the d6 and read both from the one throw: the d6 says whether it worked, the d8 says how well, on that rule's own table. A failed Check ignores the d8.
 
