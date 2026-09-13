@@ -13,11 +13,11 @@ Section 7 — Movement
 
    **Example:** A unit with M5 may move up to 5 hexes in a single Move action under ordinary Advance Movement; it may choose to move fewer, but never more, in that one action.
 
-**7.1.2**  A Move action's allowance represents that unit's continuous movement for as long as it remains active — since a Regular Move already ends the unit's turn (Rule 6.3.2), that span runs to the front end of one game turn (Rule 2.2.1: approximately 2 to 5 minutes), not to the shorter span of a single impulse. At an ordinary marching pace of roughly 100 yards per minute — half of Double-Timed Movement's own double-time pace (Rule 7.4: 200 yards per minute) — a squad covers roughly 200 yards over the front 2 minutes of a turn: 5 hexes at 40 yards per hex. M5 is therefore the standard infantry movement allowance under Advance Movement.
+**7.1.2**  A Move action's allowance represents that unit's continuous movement for as long as it remains active — since a Regular Move already ends the unit's turn (Rule 6.3.2), that span runs to the front end of one game turn (Rule 2.2.1: approximately 2 to 5 minutes), not to the shorter span of a single impulse. At an ordinary marching pace of roughly 100 yards per minute — half the historical double-time pace of roughly 200 yards per minute that Double-Timed Movement's own M#+1 bonus (Rule 7.4.1) represents — a squad covers roughly 200 yards over the front 2 minutes of a turn: 5 hexes at 40 yards per hex. M5 is therefore the standard infantry movement allowance under Advance Movement.
 
 .. container:: rule-guide
 
-   **Why:** Grounds the M5 standard in real-world pacing — roughly 200 yards over the front end of a 2-5 minute turn at ordinary marching pace — so the movement scale isn't an arbitrary game number but a deliberate translation of historical infantry tempo, anchored to the same double-time figure Double-Timed Movement (Rule 7.4) already uses at twice the rate.
+   **Why:** Grounds the M5 standard in real-world pacing — roughly 200 yards over the front end of a 2-5 minute turn at ordinary marching pace — so the movement scale isn't an arbitrary game number but a deliberate translation of historical infantry tempo, at half the historical double-time pace that Double-Timed Movement's M#+1 bonus (Rule 7.4.1) represents.
 
    **Example:** An M5 rifle squad's 5-hex move represents a squad marching roughly 200 yards over about 2 minutes, consistent with ordinary marching pace at 40 yards per hex.
 
@@ -166,12 +166,10 @@ Movement costs are in Movement Points (MP). Standard infantry has M5 = 5 MP per 
 
    **Example:** An M2 HMG team moving uphill one level into open ground pays 1 (open ground) + 1 (elevation gain) = 2 MP for that single hex — its entire activation, even though open ground alone would only cost 1. An M5 rifle squad making the identical climb still has 3 MP left over for further movement.
 
-**7.2.3**  *Superseded — see Rule 7.2a.* Climbing within a building is no longer priced in Movement Points; it is its own AP-costing action (Rule 6.3.2, Change Floor).
-
 7.2a  Building Floors
 -----------------------
 
-*Design note: Rule 7.2's table used to charge MP for "each additional floor" entered, and 7.2.3 worked through an example of a unit spending its whole MP allowance just climbing — but "floor" never appeared anywhere else in the rules. Nothing tracked which floor a unit ended up on, and nothing depended on it: the cost was real, the consequence wasn't. Confirmed with the designer: floor-to-floor movement becomes its own action, 1 AP per floor, rather than a line item in a Move's MP budget — and floor now does something once a unit is actually on one. See design note E.114.*
+Climbing within a building is priced in AP, not Movement Points — see Rule 7.2a.2 (Change Floor).
 
 **7.2a.1**  A building hex may have more than one floor, as printed on the map or set in the scenario's own setup instructions. A unit entering a building hex from outside starts on the ground floor, at the hex's normal terrain MP cost (Rule 7.2) — there is no separate MP cost for the floors above it.
 

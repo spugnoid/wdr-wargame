@@ -27,7 +27,7 @@ Leader counters use a diamond symbol (◆) and display four stats in addition to
      - Target number for mid-turn rally rolls. Lower is better.
    * - Assault bonus
      - ASL +#
-     - Added to attacker's grenade rFP during close assault when leader is in hex.
+     - Added to attacker's grenade G# during close assault when leader is in hex.
 
 
 All leaders have M8 F1 — movement allowance 8, fire rate 1. Leaders move faster than squads (lighter load, higher initiative) and rarely fire directly.
@@ -222,7 +222,7 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
      - Places a RALLY POINT marker in the leader's current hex — a rally destination for Dispersed units. See Rule 12.6a.
      - Current hex
    * - Coordinate Assault
-     - Add ASL value to assaulting unit's grenade rFP for the Grenade Phase. Does not apply to Entry Fire or Melee Continuation.
+     - Add ASL value to assaulting unit's grenade G# for the Grenade Phase. Does not apply to Entry Fire or Melee Continuation.
      - Same hex as assaulting unit
    * - Spot
      - Leader takes Spot Action. Adds OBS to all spot rolls this turn. May attempt free spot rolls against all hidden markers in LOS.
@@ -339,7 +339,7 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
 
    **Example:** A CMD 2 leader spending 1 AP on Direct Fire adds +2 bonus eFP to a nearby fire group's attack this impulse, on top of whatever eFP the firing units already contribute.
 
-**12.7.2**  The bonus is applied to the summed eFP after range falloff and terrain modifiers, before the Resolution Strip lookup. It participates in strip compression along with the rest of the group's rFP.
+**12.7.2**  The bonus is applied to the summed eFP after range falloff and terrain modifiers, before the Resolution Strip lookup. It participates in strip compression along with the rest of the group's eFP.
 
 .. container:: rule-guide
 
@@ -367,13 +367,13 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
 --------------------------
 
 
-**12.8.1**  When a leader is in the same hex as an assaulting unit and spends 1 AP on Coordinate Assault, the leader's ASL value is added to the attacker's grenade rFP for the Grenade Phase only.
+**12.8.1**  When a leader is in the same hex as an assaulting unit and spends 1 AP on Coordinate Assault, the leader's ASL value is added to the attacker's grenade G# for the Grenade Phase only.
 
 .. container:: rule-guide
 
    **Why:** Requires the leader to physically be in the same hex as the assaulting unit, unlike Direct Fire's command-radius range (Rule 12.7.1) — coordinating a close assault means being right there with the assault, not directing it from a distance.
 
-   **Example:** A leader standing in the same hex as Alpha when Alpha declares a close assault can spend 1 AP on Coordinate Assault to boost Alpha's grenade rFP; a leader two hexes away, even well within command radius, cannot provide this specific bonus.
+   **Example:** A leader standing in the same hex as Alpha when Alpha declares a close assault can spend 1 AP on Coordinate Assault to boost Alpha's grenade G#; a leader two hexes away, even well within command radius, cannot provide this specific bonus.
 
 **12.8.2**  ASL values by leader quality:
 
@@ -381,7 +381,7 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
 
    **Why:** Scales the assault bonus with leader quality the same way CMD, OBS, and RAL do, but keeps ASL's own scale — where Regular and Veteran share the same value (Rule 12.8.2's table) — reflecting that assault leadership doesn't always track cleanly with the other stats.
 
-   **Example:** A Regular and a Veteran leader both provide the same +1 ASL bonus to a close assault's grenade rFP — quality differences between them show up elsewhere (RAL, OBS), not in this particular stat.
+   **Example:** A Regular and a Veteran leader both provide the same +1 ASL bonus to a close assault's grenade G# — quality differences between them show up elsewhere (RAL, OBS), not in this particular stat.
 
 .. list-table::
    :header-rows: 1
@@ -410,7 +410,7 @@ When a leader is activated (costs 1 AP), they may take one of the following acti
 
    **Why:** Limits ASL's benefit to the one phase (Grenade Phase) where a coordinating officer can meaningfully organize the attack — once a close assault degenerates into Entry Fire or ongoing melee, the fighting is too close and chaotic for a leader's coordination to have a clean, separable effect.
 
-   **Example:** A leader's Coordinate Assault action boosts grenade rFP during the Grenade Phase, but that same leader's presence provides no additional bonus once the assault moves into Entry Fire or Melee Continuation — those phases resolve without any ASL contribution.
+   **Example:** A leader's Coordinate Assault action boosts grenade G# during the Grenade Phase, but that same leader's presence provides no additional bonus once the assault moves into Entry Fire or Melee Continuation — those phases resolve without any ASL contribution.
 
 12.9  Leader Casualties
 -----------------------

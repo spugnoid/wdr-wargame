@@ -374,13 +374,13 @@ See Rule 6.3.3.
 
    **Example:** A stack of two rifle squads in the same hex declares one Close Assault action (1 AP total) against an adjacent enemy hex. Both squads participate in every phase.
 
-**9.8.2**  When either side has multiple participating combat units, that side makes **one** attack per phase using the **sum** of its participants' G# values (Grenade Phase) or the sum of their dominant fire line rFPs (Entry Fire and Melee Continuation, +3 range 0 bonus applied once).
+**9.8.2**  When either side has multiple participating combat units, that side makes **one** attack per phase. In the Grenade Phase, sum the participants' G# values directly. In the Entry Fire Phase and Melee Continuation, each participating unit first computes its own eFP (its dominant fire line's rFP plus the range 0 bonus, Rules 9.4.2-9.4.3/9.5.3) exactly as it would fighting alone; those eFPs are then summed as a fire group (Rule 8.3.2) and run through the Resolution Strip (Rule 8.4.2) to determine the phase's FPr.
 
 .. container:: rule-guide
 
-   **Why:** Multiple attackers don't each get a separate attack roll — their strength is pooled into one combined attack per phase, keeping stack combat resolvable with one roll instead of compounding accuracy across repeated rolls.
+   **Why:** Multiple attackers don't each get a separate attack roll — their strength is pooled into one combined attack per phase, keeping stack combat resolvable with one roll instead of compounding accuracy across repeated rolls. Reusing the ordinary fire-group procedure (Rule 8.3.2's per-unit eFP then sum, Rule 8.4.2's Resolution Strip) rather than inventing a separate stacked-assault formula keeps a Close Assault stack's summed firepower subject to the same diminishing-returns compression as any other massed fire.
 
-   **Example:** Two squads (G3 and G2) assault together. In the Grenade Phase they make one combined attack using G3+G2=G5, not two separate G3 and G2 attacks.
+   **Example:** Two squads (G3 and G2) assault together. In the Grenade Phase they make one combined attack using G3+G2=G5, not two separate G3 and G2 attacks. In Entry Fire, if each squad's own dominant-line eFP (rFP + range 0 bonus) comes to 9 and 8, the stack sums to 17 and looks up FPr on the Resolution Strip rather than using 17 directly.
 
 **9.8.3**  Each side's attack resolves against the **highest** Defence value among the opposing side's participating units — a stack defends as well as its best-positioned element. Cover handling is unchanged (halved in the Grenade Phase, none thereafter).
 

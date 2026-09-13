@@ -413,7 +413,7 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
 
    **Why:** Spreading the engineer bonus across three separate assault phases (grenade, entry fire, melee) reflects that their advantage isn't a single flat combat bonus but specialist capability at every distinct stage of clearing a fortified structure, from breaching to the close-quarters fighting that follows.
 
-   **Example:** Alpha's engineer squad leads an assault into a building — its grenade phase uses G# + 2 for satchel and shaped charges, its entry fire gets +2 rFP from fatal-funnel training, and any melee continuation benefits from +1 to morale checks.
+   **Example:** Alpha's engineer squad leads an assault into a building — its grenade phase uses G# + 2 for satchel and shaped charges, its entry fire gets +2 eFP from fatal-funnel training, and any melee continuation benefits from +1 to morale checks.
 
 .. list-table::
    :header-rows: 1
@@ -426,7 +426,7 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
      - G# + 2
      - Specialist equipment — satchel charges, shaped charges
    * - Entry fire phase
-     - +2 rFP
+     - +2 eFP
      - Fatal funnel clearance training
    * - Melee continuation
      - +1 to all morale checks
@@ -610,7 +610,7 @@ Combat engineers were the unit that made the impossible possible. Minefields, wi
      - DEMO BRH MINE FLAM
      - 7
      - 7
-     - Full assault pioneer capability including flamethrower. Morale corrected 6->7 2026-09-11 -- veteran quality should read higher than the regular row below it, matching the pattern every other veteran/regular pair in this document follows (found while adding the Japan row beneath this table).
+     - Full assault pioneer capability including flamethrower.
    * - German Pioneer squad (Pioniere) — regular
      - ╌ 5 ⬡4 -1
      - G5

@@ -1,9 +1,7 @@
 Section 23 — Night Combat
 =========================
 
-Night scenarios collapse visual detection and put a premium on sound, silhouette, and the rare, precious light a side can bring with it. This section finishes the framework Rule 14.11.5 established and left as future work, and adds illumination as a real, biddable resource rather than a fixed scenario condition. It is deliberately built from pieces this system already has — the fire-mission pipeline (Section 16), the CON/OBS spot procedure (Section 14.9), the Double-Timed-movement penalty (Section 7.4), and the dispersion-direction table (Rule 16.6.5) — rather than introducing a parallel set of night-only mechanics. Section 20's own note on reuse-by-reference is the model followed here: each affected section carries one short cross-reference rule pointing back to this section for the actual values, rather than a duplicated procedure.
-
-Rule 14.11.5 is superseded by Rule 23.1. See design note E.106.
+Night scenarios collapse visual detection and put a premium on sound, silhouette, and the rare, precious light a side can bring with it. This section defines the complete night-detection framework and adds illumination as a real, biddable resource rather than a fixed scenario condition. It is deliberately built from pieces this system already has — the fire-mission pipeline (Section 16), the CON/OBS spot procedure (Section 14.9), the Double-Timed-movement penalty (Section 7.4), and the dispersion-direction table (Rule 16.6.5) — rather than introducing a parallel set of night-only mechanics. Section 20's own note on reuse-by-reference is the model followed here: each affected section carries one short cross-reference rule pointing back to this section for the actual values, rather than a duplicated procedure.
 
 23.1  Ambient Visibility
 ------------------------
@@ -13,7 +11,7 @@ Rule 14.11.5 is superseded by Rule 23.1. See design note E.106.
 
 .. container:: rule-guide
 
-   **Why:** Firms up 14.11.5's original "1-2 hexes" range into one fixed number, matching the example Section 22's own scenario-design guidelines already give ("Night: visibility 2 hexes") — and makes it a flat gate rather than a CON penalty so a spotter can't buy back distance with a large enough OBS bonus, which would defeat the point of night visibility being genuinely short.
+   **Why:** Fixes visibility at one specific number rather than a range, matching the example Section 22's own scenario-design guidelines already give ("Night: visibility 2 hexes") — and makes it a flat gate rather than a CON penalty so a spotter can't buy back distance with a large enough OBS bonus, which would defeat the point of night visibility being genuinely short.
 
    **Example:** An enemy marker 3 hexes away cannot be spotted visually this turn no matter how many OBS bonuses the spotter stacks — a Spot Action's +3 (Rule 14.10.2) has no effect on a roll that is never attempted in the first place. The same marker at 2 hexes is a normal spot attempt, subject to every usual modifier.
 
@@ -31,7 +29,7 @@ Rule 14.11.5 is superseded by Rule 23.1. See design note E.106.
 
 .. container:: rule-guide
 
-   **Why:** Names the two rows Rule 14.11.5 gestured at without specifying ("sound-based CON penalties") — these are the only two rows in the existing table that are genuinely about noise a unit makes by moving, which is exactly what carries further and matters more once vision has collapsed. Doubling the flat "Night scenario: +3" row itself, or terrain cover, would conflate concealment sources this rule isn't meant to touch.
+   **Why:** Names the two specific rows this applies to — the only two rows in the existing table that are genuinely about noise a unit makes by moving, which is exactly what carries further and matters more once vision has collapsed. Doubling the flat "Night scenario: +3" row itself, or terrain cover, would conflate concealment sources this rule isn't meant to touch.
 
    **Example:** A unit taking Double-Timed Movement at night suffers -4 CON (the doubled row) on top of the flat +3 Night scenario CON bonus it would otherwise carry — Double-Timed Movement is far more dangerous after dark than the same move in daylight, while a unit that hasn't moved or fired keeps its ordinary night concealment untouched.
 

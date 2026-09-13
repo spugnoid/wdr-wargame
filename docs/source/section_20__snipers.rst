@@ -45,7 +45,7 @@ Sniper rules differ from standard infantry fire in three fundamental ways: they 
      - ╌○ 3 ⬡6 -1
      - Low rFP — precision not volume
    * - AMO
-     - 4 base + secret bonus
+     - 4 base, extended table past that
      - Limited shots per scenario
    * - Morale
      - 7 (veteran) or 6 (regular)
@@ -294,7 +294,7 @@ Sniper rules differ from standard infantry fire in three fundamental ways: they 
 
    **Example:** A veteran squad that has taken no casualties and never been directly fired upon still moves cautiously and avoids open ground the moment a CONTACT marker appears nearby — exactly the historical behaviour this rule models.
 
-**20.5.5**  The psychological suppression applies from the moment the CONTACT marker is placed and persists until the marker is removed (sniper revealed, CONTACT marker ages to COLD and is removed, or sniper is eliminated).
+**20.5.5**  The psychological suppression applies from the moment the CONTACT marker is placed and persists until the marker is removed (sniper revealed, CONTACT marker ages to STALE and is then removed at the following Recovery Phase (Rule 14.8.3), or sniper is eliminated).
 
 .. container:: rule-guide
 

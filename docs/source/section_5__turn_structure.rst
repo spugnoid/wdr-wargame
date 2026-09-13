@@ -109,7 +109,7 @@ Each game turn proceeds through three phases in the following order:
 
 1. Remove action markers (Rule 5.2.2).
 2. Prisoner escape attempts for under-guarded groups (Rule 11.4.2).
-3. CONTACT markers age one step; COLD markers are removed (Rule 14.8.2).
+3. CONTACT markers flip to STALE; STALE markers are removed (Rule 14.8.2-14.8.3).
 4. Suppressed/Pinned recovery rolls (Rules 5.2.3–5.2.4) and vehicle bail-out checks (Rule 19.2.1).
 5. Molotov engine-fire rolls (Rule 18.10.3).
 6. Routing units attempt rally (Rule 10.6.7).

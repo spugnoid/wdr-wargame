@@ -451,7 +451,7 @@ The full procedure for any fire combat action:
 ---------------------------------
 
 
-**8.10.1**  Assault Fire (Rule 6.3.3) and reaction fire (Rule 6.2.3) are ordinary fire attacks resolved by this section, at half eFP rather than full — nothing else about their resolution differs. A stationary F#-greater-than-1 weapon's reaction (Rule 6.6) is a full-effective-rFP attack instead, exactly like its own Regular Fire.
+**8.10.1**  Assault Fire (Rule 6.3.3) and reaction fire (Rule 6.2.3) are ordinary fire attacks resolved by this section, at half eFP rather than full — nothing else about their resolution differs. A stationary F#-greater-than-1 weapon's reaction (Rule 6.6) is a full-eFP attack instead, exactly like its own Regular Fire.
 
 .. container:: rule-guide
 
@@ -459,7 +459,7 @@ The full procedure for any fire combat action:
 
    **Example:** An Assault Fire at half eFP still goes through falloff calculation, potential grouping, the Resolution Strip if grouped, and the same three-dice roll — only the rFP value feeding into all of that is halved going in.
 
-**8.10.2**  A moving unit's own fire is unaffected by this rule — it is the attacker in that exchange, not the target. The -2 rFP penalty for firing *at* a moving target is Rule 7.5.2.
+**8.10.2**  A moving unit's own fire is unaffected by this rule — it is the attacker in that exchange, not the target. The -2 eFP penalty for firing *at* a moving target is Rule 7.5.2.
 
 .. container:: rule-guide
 
@@ -543,4 +543,4 @@ The full procedure for any fire combat action:
 
    **Example:** An AT gun that limbers and moves to a new position loses both of its pre-registered hexes — reaching that bonus again means registering new hexes from wherever it stops next, if the scenario still allows it.
 
-   **Example:** A unit taking an Assault Move and then firing on its next activation is not itself penalized for having moved earlier — its own fire is judged solely by whether it's a Regular or Assault Fire (this rule). A -2 rFP penalty only applies to whoever is shooting at a currently-moving target (Rule 7.5.2), a completely separate situation.
+   **Example:** A unit taking an Assault Move and then firing on its next activation is not itself penalized for having moved earlier — its own fire is judged solely by whether it's a Regular or Assault Fire (this rule). A -2 eFP penalty only applies to whoever is shooting at a currently-moving target (Rule 7.5.2), a completely separate situation.

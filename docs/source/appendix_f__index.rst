@@ -91,6 +91,14 @@ exempt from GUARD marker and escape attempts  ..........  11.2a.3
 
 triggers: failed Dispersed rally, unrallied at scenario end, still Routing at scenario end, wounded leader captured  ..........  10.5.4, 10.5.6, 10.6.9, 12.10.2
 
+**Advance Movement**  ..........  7.1
+
+default, undeclared Move action  ..........  7.1.1
+
+M5 standard infantry baseline  ..........  7.1.2, E.166
+
+spends MP per Rule 7.2 terrain chart  ..........  7.1.1
+
 **Ammunition (AMO)**  ..........  16.3, 20.1.3
 
 extended ammunition table  ..........  16.3.3
@@ -273,16 +281,6 @@ Recovery Window  ..........  13.2, 22.7
 
 available near sniper CONTACT marker  ..........  20.5.3
 
-**Double-Timed movement**  ..........  7.4
-
--2 CON penalty  ..........  7.4.2
-
-free spot attempt triggered  ..........  7.4.3
-
-M#+1 hexes  ..........  7.4.1
-
-unavailable near sniper CONTACT marker  ..........  20.5.3
-
 **Cascade (morale)**  ..........  15.4
 
 threshold  ..........  15.4.2
@@ -457,6 +455,16 @@ rally destination (Rally Point)  ..........  10.5.4, 12.6a
 
 captured on rally failure or timeout  ..........  10.5.4, 10.5.6, 11.2a
 
+**Double-Timed movement**  ..........  7.4
+
+-2 CON penalty  ..........  7.4.2
+
+free spot attempt triggered  ..........  7.4.3
+
+M#+1 hexes  ..........  7.4.1
+
+unavailable near sniper CONTACT marker  ..........  20.5.3
+
 **Dummy markers**  ..........  14.4
 
 movement cost  ..........  14.4.4
@@ -471,7 +479,7 @@ size must match real unit  ..........  14.4.2
 
 falloff formula  ..........  8.2.1
 
-minimum 1 after all modifiers  ..........  4.3.5
+can be driven to 0 by accumulated penalties, contributes nothing  ..........  4.3.5, 8.2.5
 
 **Elevation**  ..........  4.5
 
@@ -545,11 +553,11 @@ resolution sequence  ..........  8.1
 
 **Fire group**  ..........  1.3, 8.3
 
-grouping by ⬡h interval  ..........  8.3.1
-
 mixed-interval combining  ..........  8.3.1 (no restriction)
 
-summing rFP and f  ..........  8.3.2
+per-unit eFP method  ..........  8.3.2
+
+same-hex shortcut — summing rFP and f, keep h  ..........  8.3.3
 
 **Fire mission (mortar)**  ..........  16.4
 
@@ -568,8 +576,6 @@ fields  ..........  16.12
 **Fire rate (F#)**  ..........  3.3.2, 6.6
 
 values by mount type (1/2/3)  ..........  6.6.2
-
-**Firing Exposed — eliminated**  ..........  E.94
 
 **FIXED units**  ..........  14.7
 
@@ -663,7 +669,11 @@ slope immunity  ..........  17.2.6
 
 **HE (high explosive) fire**  ..........  18.8.3
 
+flat HE rFP, no falloff  ..........  18.8.3
+
 cover reduced 1 step vs buildings  ..........  18.8.3
+
+rFP derivation formula (calibre in mm / 20, rounded)  ..........  18.8.4
 
 **Heavy Mortar/Artillery vs. Top Armour (Optional Rule)**  ..........  16.7.8a, App.G
 
@@ -676,10 +686,6 @@ mobility kill only, never penetration  ..........  16.7.8a.1
 lost on movement  ..........  17.6b.3
 
 Turret-only exposure from low side  ..........  17.6b.2
-
-flat rFP no falloff  ..........  18.8.3
-
-rFP derivation formula  ..........  18.8.4
 
 **HIDDEN state**  ..........  1.3, 14.1
 
@@ -781,7 +787,7 @@ vehicle LOS rule  ..........  17.6.3
 
 **Long range cap**  ..........  8.7
 
-eFP ≤ 3 → max Pinned  ..........  8.7.1
+two-band cap: eFP 1–2 → max Suppressed, eFP 3 → max Pinned, eFP 4+ uncapped  ..........  8.7.1, 8.7.3
 
 sniper exemption  ..........  8.7.4, 20.2.6
 
@@ -857,6 +863,8 @@ smoke rounds  ..........  16.9
 
 **Movement**  ..........  S.7
 
+advance movement (default)  ..........  7.1
+
 assault move (1 hex)  ..........  7.3.2
 
 cautious movement  ..........  7.3a
@@ -871,7 +879,7 @@ vehicle terrain costs  ..........  17.6.2
 
 **Movement allowance (M#)**  ..........  3.3.1, 7.1
 
-derived from impulse duration  ..........  7.1.2, E.18
+derived from turn duration, not a single impulse  ..........  7.1.2, E.166
 
 M5 standard infantry  ..........  7.1.2
 
@@ -895,7 +903,7 @@ night movement risk check  ..........  7.7
 
 night infiltration bonus (close assault)  ..........  9.3.2a
 
-superseded framework — see Rule 14.11.5  ..........  E.106
+sound spotting at night  ..........  14.11.5, 23.1.3
 
 **No effect result**  ..........  8.6
 
@@ -1219,7 +1227,7 @@ weapon counters exempt  ..........  3.5.3
 
 **Summation rule (fire groups)**  ..........  8.3, E.5
 
-sum rFP and f, keep h  ..........  8.3.2
+sum rFP and f, keep h (same-hex shortcut)  ..........  8.3.3
 
 valid for any mix of ⬡h intervals  ..........  8.3.1, 8.3.2
 
@@ -1259,7 +1267,7 @@ movement costs table  ..........  7.2, App.B
 
 **Time scale**  ..........  2.2
 
-impulse duration ~22 seconds  ..........  7.1.2
+movement allowance derived from turn-length marching pace, not impulse duration  ..........  7.1.2, E.166
 
 one turn ~2–5 minutes  ..........  2.2.1
 

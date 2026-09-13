@@ -305,7 +305,7 @@ Compares effective PEN (Rule 17.3.1) against the AV of the profile and arc selec
 --------------------------------
 
 
-**18.3.1**  When effective PEN equals or exceeds AV but is less than AV + 3, roll 1d6:
+**18.3.1**  When effective PEN equals or exceeds AV but is less than AV + 10, roll 1d6:
 
 .. container:: rule-guide
 
@@ -798,7 +798,7 @@ Overrun's pre-entry defensive fire does not use the Gunnery Roll (Rule 18.1a.8) 
 --------------------------------------
 
 
-**Re-run against the current system, following the game's own reading procedure.** Each matchup reads PEN at the next lower printed range band exactly as Rule 17.3.1 directs players to (an earlier revision of this table computed PEN at exact ranges — a procedure the players never use — which produced three verdicts the table itself would contradict at the table), applies the ±10mm outcome margins of Rule 18.2, and checks against **both** the target's Hull and Turret AV-vs-Capped independently — the single blended "Front AV" this table originally validated no longer exists as a concept. Panzerfaust rows use the flat 140mm PEN now printed in Rule 18.9 (the direct millimetre conversion of the original system's flat "PEN 14", not a re-sourced value); infantry AT weapons resolve against Hull only, never Turret (no Gunnery Roll). This table checks penetration outcome only, the same scope the original table had — it does not check Gunnery Roll hit probability, which was separately calibrated against real data during that mechanism's own build (Rule 18.1a).
+Each matchup reads PEN at the next lower printed range band, exactly as Rule 17.3.1 directs, applies the ±10mm outcome margins of Rule 18.2, and checks against **both** the target's Hull and Turret AV-vs-Capped independently. Panzerfaust rows use the flat 140mm PEN printed in Rule 18.9; infantry AT weapons resolve against Hull only, never Turret (no Gunnery Roll). This table checks penetration outcome only — it does not check Gunnery Roll hit probability, which is calibrated separately against real data (Rule 18.1a).
 
 .. list-table::
    :header-rows: 1
@@ -827,7 +827,7 @@ Overrun's pre-entry defensive fire does not use the Gunnery Roll (Rule 18.1a.8) 
      - Side
      - Contested
      - Contested
-     - Penetrates side armour — largely correct, see note (a)
+     - Penetrates side armour, but only just — a roll is needed, not guaranteed
    * - Tiger I 88mm vs Sherman M4A1
      - 600 yds
      - Front
@@ -839,25 +839,25 @@ Overrun's pre-entry defensive fire does not use the Gunnery Roll (Rule 18.1a.8) 
      - Front
      - Auto penetration
      - Auto penetration
-     - Uncertain results historically — see note (b)
+     - Comfortable penetration against both profiles at this range — see design note E.167 for an open question about whether this outcome deserves a second look
    * - T-34 Model 1943 vs Panzer IV H
      - 400 yds
      - Front
      - Auto penetration
      - Non-penetrating hit
-     - Cannot reliably penetrate the turret, hull now vulnerable — see note (c)
+     - Hull is vulnerable at this range; turret remains protected
    * - T-34 Model 1943 vs Panzer IV H
      - 120 yds
      - Front
      - Auto penetration
      - Contested
-     - Can penetrate at close range — correct ✓, more decisively than before
+     - Can penetrate at close range — correct ✓
    * - T-34/85 vs Tiger I
      - 400 yds
      - Front
      - Auto penetration
      - Bounce
-     - Marginal threat — correct ✓, and now shows *why*: see note (d)
+     - Hull is a guaranteed kill at this range; turret remains protected — matches the historical "capable but not guaranteed" reputation
    * - Panzerfaust 60 vs T-34 Model 1943
      - 80 yds
      - Front
@@ -875,20 +875,10 @@ Overrun's pre-entry defensive fire does not use the Gunnery Roll (Rule 18.1a.8) 
      - Front
      - Auto penetration
      - Bounce
-     - Capable but not guaranteed — correct ✓, and now shows *why*: see note (d)
+     - Hull is a guaranteed kill at this range; turret remains protected — matches the historical "capable but not guaranteed" reputation
 
 
-**Notes on genuine changes from the original (pre-rebuild) table:**
-
-**(a) Sherman 75mm vs Tiger I side, 320 yds** — the original table called this "Auto penetration." Under the band-read procedure (320 yds ≈ 293m reads the 250m row: PEN 84.1mm) against AV 80.1mm (both Hull and Turret side share the figure), the shot clears AV by 4mm — inside the ±10mm Contested window of Rule 18.2. "Penetrates side armour" is still the correct story, just "very likely, roll needed" rather than "guaranteed."
-
-**(b) Panzer IV H vs T-34 Model 1943, 320 yds** — the most substantive change. The original table called this "Contested," matching a "results were historically uncertain" narrative. The rebuilt KwK40 L48 gun curve — fitted to 5 independent historical data points at <1.2% error, the highest-confidence curve in the roster — puts PEN at 126.8mm against a 93.7mm Hull AV and 55.8mm Turret AV: a comfortable, unambiguous Automatic Penetration against both profiles, not a coin-flip. This is not obviously a regression: the long-barrelled 75mm L48 (KwK40) on the Panzer IV H was specifically prized by German crews for being able to reliably defeat T-34 frontal armour at real combat ranges, unlike the earlier short-barrelled 75mm it replaced — arguably the rebuilt system's more decisive result is the more historically accurate one, and the original "uncertain" calibration may have undersold the L48's real capability. Flagged for Rod's own judgement rather than silently resolved either way.
-
-**(c) T-34 Model 1943 vs Panzer IV H, 400 yds** — the original table called this "Non-penetrating" outright. The rebuilt system splits it: Hull is now Automatic Penetration (PEN 74.9mm vs. Hull AV 64.9mm), Turret remains a clean Bounce (vs. 78.9mm). The Hull figure dropped from the original system's blended AV specifically because of this session's face-hardened-armour work (Rule 17.2, §17 of the design spec) — Panzer IV H's hull front and side were historically face-hardened, and face-hardening is a *liability* against capped rounds once the attacking cap protects the round's nose from the shattering mechanism face-hardening relies on. **Resolved**: the Soviet 76mm F-34's BR-350A round was flagged as a possible `ap_uncapped` candidate (Russian ammunition is often generally described as lacking AP caps) — checked directly against Woodman's "Tank Armament in World War Two" table (the same source already calibrating this gun's own curve), which explicitly labels this exact round "Sov 76mm APC" (Armor-Piercing **Capped**). The general "Russian ammunition lacked caps" claim appears to describe older ammunition (the plain BR-350, fired from 1930s-era 76.2mm guns) rather than the improved "A"-suffix BR-350A the wartime F-34 actually fired. `ammo_family=capped` stands as correctly sourced, not merely assumed — this matchup's numbers are unchanged.
-
-**(d) T-34/85 vs Tiger I (400 yds) and Sherman 76mm vs Tiger I (400 yds)** — both originally called "Contested"/"marginal"/"not guaranteed." The rebuilt system reveals *why* that framing was historically right, in a way the old blended AV couldn't show: the Hull is a clean Automatic Penetration in both cases, while the Turret (Tiger's real, edge-effect-derived 143mm mantlet figure, Rule 17.2's Ch.10 data) is a clean Bounce. "Not guaranteed" was never about any single shot being marginal against its own target — it was always about *which profile* the shot would land on, which is exactly what the Gunnery Roll (Rule 18.1a) now resolves explicitly instead of burying it inside one averaged number.
-
-**Extended coverage: the five vehicles the original table never tested.** The original 11 matchups only ever exercised Tiger I, Panzer IV H, T-34 (both marks), and both Shermans. Panther, KV-1S, SU-85, T-70, and StuG III had never been checked against a historical matchup at all. Extending the same methodology:
+**Extended coverage:** five vehicles with no historical matchup entry — Panther, KV-1S, SU-85, T-70, and StuG III:
 
 .. list-table::
    :header-rows: 1
@@ -968,7 +958,7 @@ Overrun's pre-entry defensive fire does not use the Gunnery Roll (Rule 18.1a.8) 
      - Correct ✓ — the weakest gun in the roster, at unusually long range, still trivially defeats the half-track's 14.3mm armour. Included only to confirm the last untested roster vehicle behaves as expected; no real ambiguity to resolve here
 
 
-**(e) T-70 vs Panzer IV H — a real methodology bug caught and fixed during this extension, not a subtle judgement call.** The first pass of this matchup compared T-70's 45mm APBC gun against Panzer IV's `av_vs_capped_mm` roster column — which would have been wrong. That column bakes in the face-hardening correction for a **Capped**-family attacker (Rule 17.2.3) specifically; T-70's 45mm fires Soviet APBC ammunition, an entirely different nose shape, for which face-hardening does not apply the same way (`face_hardened_multiplier("apbc") = 1.0`, a documented gap — no correction rather than a wrong one). Recomputing Panzer IV's front plates for a 45mm APBC attacker (bypassing the mismatched column, and at the attacker's own calibre rather than the roster's 75mm reference diameter) gives Hull 83.9mm and Turret 106.6mm — against a band-read PEN of 86.3mm (200 yds reads the 0m row), a Contested Hull shot and a clean Turret Bounce under the ±10mm margins. **Fixed since this table was first written.** `VehiclePlateRow.resolve_av()` in `counters/armor_calc/pipeline.py` was hardcoded to the Capped family — it now takes an explicit `family` parameter (defaulting to "capped", so `write_roster_csv`'s printed columns are unaffected). A future matchup or validation script needing the correct AV for an APBC or uncapped-AP attacker should call `resolve_av(diameter, hardness_table, family="apbc")` directly rather than reading `av_vs_capped_mm` off the roster CSV. The printed counter still shows only two AV columns (vs. Capped, vs. Tungsten) — APBC and uncapped AP remain rare enough as attacker families that a third and fourth printed column isn't warranted, consistent with the "least granular means necessary" design principle (§2) — but the underlying tool can no longer silently give a wrong answer when one is actually needed for a specific check. Regression tests cover the family parameter in `tests/test_pipeline.py`.
+**(e) T-70 vs Panzer IV H — APBC attacks need their own AV calculation, not the roster's Capped column.** Panzer IV's `av_vs_capped_mm` roster column bakes in a face-hardening correction specific to **Capped**-family attackers (Rule 17.2.3); T-70's 45mm fires Soviet APBC ammunition, an entirely different nose shape, for which face-hardening does not apply the same way (`face_hardened_multiplier("apbc") = 1.0`). Computing Panzer IV's front plates directly for a 45mm APBC attacker (at the attacker's own calibre, not the roster's 75mm reference diameter) gives Hull 83.9mm and Turret 106.6mm — against a band-read PEN of 86.3mm (200 yds reads the 0m row), a Contested Hull shot and a clean Turret Bounce under the ±10mm margins. A future matchup or validation script needing the correct AV for an APBC or uncapped-AP attacker should call `resolve_av(diameter, hardness_table, family="apbc")` directly rather than reading `av_vs_capped_mm` off the roster CSV. The printed counter still shows only two AV columns (vs. Capped, vs. Tungsten) — APBC and uncapped AP remain rare enough as attacker families that a third and fourth printed column isn't warranted, consistent with the "least granular means necessary" design principle.
 
 **(f) KV-1S matchups borrow gun curves, not vehicle-specific ones.** KV-1S historically mounted the 76.2mm ZIS-5 gun, not the F-34 this table uses — but ZIS-5 is a direct evolution of F-34 with closely comparable ballistic performance, and no separate ZIS-5 curve has been fitted in this roster. Similarly, SU-85's 85mm D-5S gun is modelled using the T-34/85's D-5T curve — the same gun family, tank- vs. self-propelled-mounted. StuG III's matchup uses Panzer IV's KwK40 curve directly, which is not an approximation — StuG III Ausf G by this point mounted the identical 7.5cm StuK 40 L/48. These substitutions are reasonable but unverified against separately-sourced data for the specific gun models named — flagged rather than presented as equally certain to the guns with their own fitted curves.
 

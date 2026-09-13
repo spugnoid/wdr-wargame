@@ -17,7 +17,7 @@ Section 2 — Game Scale and Conventions
 
 .. container:: rule-guide
 
-   **Why:** Deliberately sequences operational scale behind the tactical ruleset rather than developing them in parallel — every operational-scale formula (movement allowance, range bands, turn duration) would need rederiving from whatever the tactical values finally settle at, the same way Rule 7.1.2's tactical movement allowance was itself derived from impulse timing. Building it first would mean rebuilding it every time a tactical number changed during this ruleset's own development.
+   **Why:** Deliberately sequences operational scale behind the tactical ruleset rather than developing them in parallel — every operational-scale formula (movement allowance, range bands, turn duration) would need rederiving from whatever the tactical values finally settle at, the same way Rule 7.1.2's tactical movement allowance is itself derived from real-world marching pace over a game turn. Building it first would mean rebuilding it every time a tactical number changed during this ruleset's own development.
 
    **Example:** A unit's printed range values don't change between scales, but what they represent does: range 3 at operational scale would cover roughly 750 yards, ground that takes over six tactical-scale hexes to cross — but the formulas that turn that printed range into an actual combat result belong to the companion manual, not this document.
 
@@ -163,7 +163,7 @@ With Deepest Regret... uses a specific counter notation for firepower and fallof
 
    **Why:** Is a retroactive index confirming that every halving rule already in the book, written before this convention was formalized, already matched it — so stating the convention here changed no existing numbers, only made the shared rule explicit.
 
-   **Example:** Assault Fire's half-effective-rFP rule (6.3.3) was already round-down before 2.5.1 existed; this rule just points to it as proof the convention isn't a retroactive change to that math.
+   **Example:** Assault Fire's half-eFP rule (6.3.3) was already round-down before 2.5.1 existed; this rule just points to it as proof the convention isn't a retroactive change to that math.
 
 **2.5.3**  Reaction Points (RP = round(AP / 2), Rule 5.3.4) is a deliberate, separately-made choice and is not affected by this convention — it keeps its own rounding.
 

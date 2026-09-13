@@ -159,6 +159,8 @@ The following terms are used throughout this document. Each term is defined here
 
 **MOVED/FIRED —**  The marker showing a unit is done for the turn — no further movement or fire, though it retains close-combat defense and, if it is the target of a close assault, Desperate Fire (Rule 6.7).
 
+**CMD —**  Command rating. A leader stat (1–3) that drives both AP contribution and command radius (Rule 12.2.1).
+
 **AP —**  Action Points. The resource controlling how many units the active player may activate per turn.
 
 **RP —**  Reaction Points. The resource controlling how many times the non-active player may respond to enemy actions per turn.
@@ -179,7 +181,7 @@ The following terms are used throughout this document. Each term is defined here
 
 **Dummy marker —**  A blind marker with no unit behind it. Used to create uncertainty about a hidden unit's true position.
 
-**CONTACT marker —**  A marker placed at a unit's last known position when it goes hidden mid-play. Advances through fresh, recent, and cold states before removal.
+**CONTACT marker —**  A marker placed at a unit's last known position when it goes hidden mid-play. Two-sided (CONTACT/STALE, Rule 14.8.2): flips to its STALE face at the first Recovery Phase after placement, then is removed at the following Recovery Phase.
 
 **RALLY POINT marker —**  A map token placed by a leader (Rule 12.6a) marking a rendezvous hex for Dispersed units. Independent of the placing leader once set; remains valid for the rest of the scenario unless an enemy unit occupies its hex, which removes it immediately.
 

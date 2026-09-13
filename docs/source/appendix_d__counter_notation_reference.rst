@@ -85,12 +85,12 @@ Six Test Unit Counter Values — 1943 Eastern Front
      - 5
    * - PZGR 43
      - Full
-     - ─● 8 ⬡3 -1  /  ≡ 7 ⬡1 -2
+     - ─● 11 ⬡2 -1  /  ≡ 2 ⬡3 -1
      - 9
      - 6
    * - PZGR 43r
      - Reduced
-     - ≡ 5 ⬡1 -2
+     - ╌ 3 ⬡5 -1
      - 7
      - 6
    * - MG42 HMG 43
@@ -100,27 +100,27 @@ Six Test Unit Counter Values — 1943 Eastern Front
      - 5
    * - MG42 HMG 43r
      - Reduced crew
-     - ═● 7 ⬡6 -1
+     - ═● 8 ⬡6 -1
      - 3
      - 5
    * - GDS 43
      - Full
-     - ─● 7 ⬡3 -1  /  ≡ 6 ⬡1 -2
-     - 9
+     - ─● 8 ⬡3 -1  /  ╌ 3 ⬡4 -1  /  ≡ 4 ⬡1 -1
+     - 8
      - 6
    * - GDS 43r
      - Reduced
-     - ≡ 4 ⬡1 -2
-     - 7
+     - (no printed fire line — rFP rounds below the printable minimum at this strength)
+     - 6
      - 6
    * - RIF 43
      - Full
-     - ─● 7 ⬡3 -1  /  ╌ 2 ⬡7 -1  /  ≡ 3 ⬡1 -2
+     - ─● 7 ⬡3 -1  /  ≡ 3 ⬡2 -1
      - 8
      - 5
    * - RIF 43r
      - Reduced
-     - ╌ 2 ⬡4 -1
+     - (no printed fire line — rFP rounds below the printable minimum at this strength)
      - 6
      - 5
    * - DP-28 43
