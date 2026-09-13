@@ -61,9 +61,9 @@ categories is filed under its primary use and cross-referenced in Notes.
 | epdf.pub_osprey-no10-inter-allied-commando-1942-45-britains-secret-commando-elite-64.pdf | *Army Commandos 1940-1945* | Mike Chappell | Osprey Elite 64 | image, 65pp | `commando_sutherland_1943.md` (E.155) | **Mislabeled** — filename claims *No.10 (Inter-Allied) Commando 1942-45*; independently re-verified via cover/ISBN, is a different, more general title |
 | epdf.pub_us-airborne-divisions-in-the-eto-1944-45-osprey-battle-orders-25.pdf | *US Airborne Divisions in the ETO 1944-45* | Steven J. Zaloga | Osprey Battle Orders 25 | text, 100pp | `us_airborne_zaloga_1943.md` (E.153) | tables are 1944, not 1943 |
 | epdf.pub_german-airborne-divisions-mediterranean-theatre-1942-45.pdf | *German Airborne Divisions: Mediterranean Theatre 1942-45* | Bruce Quarrie | Osprey Battle Orders 15 | text, 100pp | `german_airborne_quarrie_1943.md` (E.154) | — |
-| osprey-maa-380-german-army-elite-units-1939-45-pdf_compress.pdf | *German Army Elite Units 1939-45* | Gordon Williamson | Osprey Men-at-Arms 380 | image, 27pp | unused | strong candidate for the still-open Waffen-SS squad/platoon organization gap (E.156) |
-| epdf.pub_10-ss-panzer-division-frundsberg.pdf | *Frundsberg* | Rolf Michaelis | Wydawnictwo Militaria #245 | image, 82pp | unused | **Non-English** — Polish-language, only an "English Summary" section is in English; cover independently verified |
-| vanguard-07-2-ss-das-reich_compress.pdf | *2nd SS Panzer Division: Das Reich* | Bruce Quarrie | Osprey Vanguard 7, 1979 | text (noisy OCR), 50pp | unused | candidate for the still-open Waffen-SS organizational gap (E.156) |
+| osprey-maa-380-german-army-elite-units-1939-45-pdf_compress.pdf | *German Army Elite Units 1939-45* | Gordon Williamson | Osprey Men-at-Arms 380 | image, 27pp | `waffen_ss_michulec_1943.md` (E.158) | **Ruled out for Waffen-SS research** — despite the title's ambiguity, this book covers exclusively Heer (Army) formations (Grossdeutschland, Feldherrnhalle, List, Brandenburg, a cavalry regiment, 44. Reichsgrenadier-Division, three Panzer divisions, Panzer-Lehr, two Gebirgs divisions, the Tiger battalions) — zero dedicated Waffen-SS or Fallschirmjäger content, confirmed by reading all 27 pages in full |
+| epdf.pub_10-ss-panzer-division-frundsberg.pdf | *Frundsberg* | Rolf Michaelis | Wydawnictwo Militaria #245 | image, 82pp | unused | **Non-English** — Polish-language, only an "English Summary" section is in English; cover independently verified; remaining unread Waffen-SS-adjacent title after E.158, low priority given the language barrier |
+| vanguard-07-2-ss-das-reich_compress.pdf | *2nd SS Panzer Division: Das Reich* | Bruce Quarrie | Osprey Vanguard 7, 1979 | text (noisy OCR), 50pp | `waffen_ss_michulec_1943.md` (E.158) | on-topic and read in full; division/regiment/battalion-echelon detail only (no squad table); gives an explicit "no difference in vehicles and weapons" equipment-parity statement and real SS-VT recruitment/training detail |
 | epdf.pub_airborne-world-war-ii-paratroopers-in-combat-osprey-general-military.pdf | *Airborne: World War II Paratroopers in Combat* | ed. Julie Guard | Osprey General Military (anthology) | image, 307pp | unused | secondary: operational-histories |
 
 ### fortifications-terrain/
@@ -111,7 +111,7 @@ terrain and tactics.)*
 
 ## Currently strongest unused candidates
 
-- `elite-special-units/osprey-maa-380-german-army-elite-units-1939-45-pdf_compress.pdf` and `elite-special-units/vanguard-07-2-ss-das-reich_compress.pdf` — both good candidates for the still-open Waffen-SS squad/platoon organizational gap E.156 left open (no German Fallschirmjäger- or Waffen-SS-specific squad table has been found in any book read so far).
+- Both former candidates here (`osprey-maa-380-...pdf` and `vanguard-07-2-ss-das-reich_compress.pdf`) were read for E.158; the Waffen-SS squad/platoon organizational gap remains open (see `counters/toe/waffen_ss_michulec_1943.md`'s Open Question 7) but no further concrete candidate is currently identified in this library — a future pass should look specifically for a KStN-transcription/compilation source (the genre that closed the equivalent Wehrmacht question in `germany_1943.md`), not another narrative unit history.
 
 ## Maintenance
 
