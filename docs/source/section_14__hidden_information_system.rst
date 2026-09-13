@@ -273,7 +273,7 @@ With Deepest Regret... uses a physical hidden information system to model the fo
 -----------------
 
 
-**14.7.1**  FIXED units are units assigned to prepared positions before the scenario begins. They have no counter on the map and no blind marker — their position is committed to a scenario record sheet before play starts. Both players must agree that positions are recorded before the scenario begins.
+**14.7.1**  FIXED units are units assigned to prepared positions before the scenario begins. A FIXED unit is **totally hidden**: no counter on the map, no blind marker, and **no dummies** — nothing at all for the opponent to look at. Its position is committed to a scenario record sheet before play starts, and both players must agree the positions are recorded before the scenario begins. **Only a scenario may make a unit FIXED**, and only those units its parameter block names (Rule 22.9a.2); a player never chooses FIXED at the table, and a unit that loses FIXED status never regains it.
 
 .. container:: rule-guide
 
@@ -281,7 +281,7 @@ With Deepest Regret... uses a physical hidden information system to model the fo
 
    **Example:** A defending player writes down that an HMG team is FIXED in a specific hex before the scenario begins; the opposing player sees no marker there at all until the FIXED unit fires, moves, or is walked into (Rules 14.7.2-14.7.7).
 
-**14.7.2**  A FIXED unit that moves for the first time transitions to HIDDEN status. Its counter is placed on the chart under cover, a blind marker is placed at its recorded position, and it receives a free hidden impulse to spawn dummies and reposition.
+**14.7.2**  **FIXED is lost the moment the unit moves**, and is lost permanently. On moving, the unit transitions to HIDDEN: its counter goes onto the chart under cover, a blind marker is placed at its recorded position, and it receives a free hidden impulse (Rule 14.6) — seating **exactly 2** dummies, as any unit going hidden does (Rule 14.6.2), and repositioning within its allowance (Rules 14.6.4-14.6.5).
 
 .. container:: rule-guide
 
