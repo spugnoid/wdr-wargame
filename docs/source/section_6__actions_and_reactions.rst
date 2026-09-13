@@ -172,7 +172,7 @@ After a unit's **first** part-action this turn (of either kind, in either order)
 
    **Why:** States the halving convention exactly once, centrally, so every other rule that halves something (Assault Fire here, and any future rule) can just say "halved" without re-specifying the rounding direction each time.
 
-   **Example:** Alpha's full eFP for a given shot is 7. Its Assault Fire uses half of that, rounded down: 3, not 3.5 or 4.
+   **Example:** Alpha's shot reads FPr 7 off the Resolution Strip. Its Assault Fire uses half of that, rounded down: 3, not 3.5 or 4.
 
 6.4  Reaction Types
 --------------------
@@ -335,13 +335,13 @@ The following reactions are available to the non-active player during a reaction
 
    **Example:** A tripod HMG (F3) fires three separate times this turn, each a full-effect Regular Fire, marked FIRED 1, then FIRED 2, then FIRED 3 in turn. Only after the third shot does it become MOVED/FIRED.
 
-**6.6.4**  F# greater than 1 applies only in a turn the weapon has not moved. A weapon that takes any Move action this turn — Regular or Assault — is in the ordinary Assault economy for the rest of its turn: no weapon fires above F1 in a turn it moved. An LMG (or any bipod-capable MG) that chooses to move therefore fights like any other unit — one crewman operating it off the bipod, at half eFP.
+**6.6.4**  F# greater than 1 applies only in a turn the weapon has not moved. A weapon that takes any Move action this turn — Regular or Assault — is in the ordinary Assault economy for the rest of its turn: no weapon fires above F1 in a turn it moved. An LMG (or any bipod-capable MG) that chooses to move therefore fights like any other unit — one crewman operating it off the bipod, at half FPr.
 
 .. container:: rule-guide
 
    **Why:** Ties the extra bursts specifically to staying planted — the moment a weapon with F# greater than 1 moves, whatever pre-sighting or range-carding gave it those extra shots is gone, so it drops to the ordinary Assault economy for the rest of that turn.
 
-   **Example:** An LMG team takes an Assault Move this turn. Even though it's an F2 weapon while stationary, having moved it no longer qualifies — its only remaining option this turn is an ordinary Assault Fire at half eFP, not a second full-effect F# shot.
+   **Example:** An LMG team takes an Assault Move this turn. Even though it's an F2 weapon while stationary, having moved it no longer qualifies — its only remaining option this turn is an ordinary Assault Fire at half FPr, not a second full-effect F# shot.
 
 **6.6.5**  A deployed weapon that has expended its printed F# this turn may not Limber (Rule 6.3.2) until the following turn — the crew is serving the gun, not packing it up.
 
@@ -361,7 +361,7 @@ The following reactions are available to the non-active player during a reaction
 
    **Why:** Gives a fully spent (MOVED/FIRED) unit exactly one narrow, desperate option against the specific threat closing on it, rather than leaving it with zero defensive recourse just because it happened to act earlier in the turn.
 
-   **Example:** Bravo is MOVED/FIRED from an earlier Regular Fire this turn. Alpha now declares Close Assault against Bravo. Bravo's player may spend 1 RP for Desperate Fire — an Assault Fire at half eFP — against Alpha specifically, but could not use this same fire against some other, unrelated enemy unit.
+   **Example:** Bravo is MOVED/FIRED from an earlier Regular Fire this turn. Alpha now declares Close Assault against Bravo. Bravo's player may spend 1 RP for Desperate Fire — an Assault Fire at half FPr — against Alpha specifically, but could not use this same fire against some other, unrelated enemy unit.
 
 **6.7.2**  Close-combat defense — defensive grenades, melee, and withdrawal rights (Section 9) — is always available to a unit regardless of its action markers.
 

@@ -173,7 +173,7 @@ destruction  ..........  21.8.6
 
 ASSAULT marker placed  ..........  6.3.3
 
-half eFP  ..........  6.3.3, 2.5
+half FPr, applied after the strip  ..........  6.3.3, 2.5
 
 **AT rifle**  ..........  18.9
 

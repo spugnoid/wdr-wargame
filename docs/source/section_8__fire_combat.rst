@@ -453,7 +453,7 @@ The full procedure for any fire combat action:
 
 .. container:: rule-guide
 
-   **Why:** Confirms that Assault Fire and reaction fire are not special resolution systems of their own — they're ordinary fire attacks under this whole section, just computed at half eFP, so nothing about grouping, the Resolution Strip, or the dice procedure needs a separate version for them.
+   **Why:** Confirms that Assault Fire and reaction fire are not special resolution systems of their own — they're ordinary fire attacks under this whole section, with the FPr halved at the end, so nothing about grouping, the Resolution Strip, or the dice procedure needs a separate version for them.
 
    **Example:** An Assault Fire still goes through falloff calculation, potential grouping, the Resolution Strip and the same three-dice roll — only the FPr coming out of the strip is halved before it is added to the roll.
 
