@@ -1,4 +1,4 @@
-# Waffen-SS — Organization, Quality Tier, and Weapons — Research Pass (Three Books Read, Still No TOE Table)
+# Waffen-SS — Organization, Quality Tier, and Weapons — Research Pass (Five Books Read, Still No TOE Table)
 
 ## Sources
 
@@ -54,6 +54,31 @@
   extracts roughly 128KB of readable, if imperfectly-recognized, text),
   read in full via `pdftotext -layout`. Also named in the same two
   candidate lists.
+
+**Added for the E.159 follow-up pass (2026-09-12):**
+
+- Rolf Michaelis, *Frundsberg* (Wydawnictwo Militaria #245, Warszawa
+  2006) — `reference/elite-special-units/epdf.pub_10-ss-panzer-division-frundsberg.pdf`.
+  82 pages, confirmed image-only scan (`pdftotext` extracts no usable
+  text). This is the last remaining unread title flagged against this
+  thread (Open Question 5 as of E.158), previously deprioritized in
+  `reference/CATALOG.md` as "Polish-language, English Summary section
+  only." Read in full, all 82 pages, via the Read tool's `pages`
+  parameter in five batches. The premise that only a dedicated summary
+  section would be legible turned out to be an underestimate: the book's
+  main body prose (a chronological unit history, "Karl der Große"/
+  "Frundsberg"'s formation in France 1943 through destruction in Saxony
+  1945) is Polish-only, but **every photo caption and every
+  organizational-chart legend carries an italic English translation
+  alongside the Polish**, and a dedicated two-page "English Summary"
+  exists at pp.78-79, immediately after the main narrative's "Posłowie"
+  (Afterword, p.77) and immediately before a two-page divisional
+  staff-roster chart and a one-page decorations table (pp.80-82). This
+  is a materially better-than-expected source, covering 10.SS-Panzer-
+  Division "Frundsberg" specifically — the first book in this thread to
+  cover one of the "later, less elite" Waffen-SS divisions raised in
+  1943 rather than one of the three founding divisions (LAH/Das Reich/
+  Totenkopf) already central to E.156/E.158.
 
 ## Scope Verdict: A Genuine Scope Match, But a Photo-Caption History, Not a TOE Reference — the Book's Own Shape Sets This Pass's Ceiling
 
@@ -160,6 +185,156 @@ remains a clean, repeated negative for Waffen-SS specifically, in
 contrast to the Commando thread's real 1943 troop/section chart (E.155)
 and the Fallschirmjäger thread's Folgore-squad near-miss (E.154).
 
+## E.159 Follow-Up: Frundsberg (Michaelis) — A Fifth Book, Bilingual Throughout, Still No Squad Table, But a Genuine 1943-Raised-Division Case Study
+
+**The English Summary itself (pp.78-79) adds nothing organizational —
+it is pure campaign narrative, the same shape as every prior book in
+this thread.** It runs chronologically through six named
+theatre/date sections ("France — 1943-1944," "Eastern Front — 1944,"
+"Normandy — 1944," "Arnhem — 1944," "The Rhineland, Alsace 1944-1945,"
+"Eastern Front — 1945") plus a short biography of the division's
+16th-century namesake, the Landsknecht commander Georg von Frundsberg
+(1473-1528). Its only 1943-specific content is a single confirming
+sentence: "In September-October 1943 10th SS-*Panzergrenadier*
+Division was reformed as a Panzer Division '1943'" — precisely
+matching this project's own "1943"-table naming convention for a
+division upgrade, and giving a clean, citable formation date. No
+personnel figures, no weapons figures, no organizational chart of any
+kind appears in the Summary text itself.
+
+**Where this book earns its keep is not the Summary, but the
+bilingual captions and chart legends running through the whole 82-page
+body** — a genre difference from every prior book in this thread. That
+opened up real 1943-dated organizational and quantitative content that
+would otherwise have been locked behind untranslated Polish prose:
+
+- **p.9: a three-group organizational box chart, dated 24 April
+  1943**, for 10.SS-Panzergrenadier-Division "Karl der Große" (the
+  division's name before its October/November 1943 renaming to
+  "Frundsberg"). The chart's own boxes are bilingual (Polish/English)
+  and fully legible without translation help: a "Motorized Alarm
+  Group" (I. Abteilung of both SS-Grenadier Regiments, a motorized
+  Panzer-Pionier-Kompanie, a motorized Artillerie-Abteilung, a
+  motorized Nachrichten-Kompanie, a "schwere Kompanie," a Werkstatt-Zug,
+  a StuG-Abteilung, and a sIG-Zug), a "Motorized Group" (StuG
+  Abteilung, SS-Panzerjäger-Abteilung, SS-Flak-Abteilung, Division
+  Nachschub, Wirtschaft Battalion), and a "Non-motorized Group" (the
+  remaining infantry/artillery/Flak/Kradschützen battalions and
+  companies). **This is a genuine, precisely 1943-dated organizational
+  snapshot for a Waffen-SS division — but at battalion/company
+  echelon, not squad level**, the same ceiling every prior book in this
+  thread has hit.
+- **p.11: a bilingual personnel-count table, headed "DATA/DATE" and
+  "ŻOŁNIERZE/SOLDIERS,"** tracking the division's raising strength from
+  **13,787 soldiers on 1 April 1943 to 19,138 soldiers on 11 June
+  1943** — a real, quantified, precisely-dated ten-week formation-growth
+  curve, high confidence (the table's own header is in English).
+- **p.23: a full division-level organization chart, headed "10. SS-
+  Panzer Division 'Frundsberg' — 04.1944"** — box-and-line, all-German
+  labels (Divisionstab, 21./22. SS-Panzergrenadier Regiment, 10.
+  SS-Panzer Artillerie Regiment, 10. SS-Panzerjäger Abteilung, 10.
+  SS-Panzer Aufklärungs Abteilung, 10. SS-Flak Abteilung, 10. SS-Panzer
+  Nachrichten Abteilung, 10. SS-Nachschubtruppen, 10. SS-Sanitäts/
+  Wirtschafts/Instandsetzungs Abteilung, plus a Feldgendarmerie
+  Kompanie and Kriegsberichter unit at staff level) — legible without
+  translation since the German terms are largely the same words
+  `germany_1943.md` and this thread's other sources already use.
+  Regiment/battalion echelon, dated April 1944 (past this project's
+  1943 baseline), not squad-level.
+- **p.36: a company-by-company armor count for 10.SS-Panzer-Regiment,
+  dated "Aktualny stan 1.06.1944"/"Actual strength 1.06.1944"** —
+  pictorial tank silhouettes grouped by company (5./6./7./8. Kompanie),
+  totaling 3x PzBfWg III, 39x PzKpfw IV, 38x StuG 40. A real, precise,
+  bilingual armor OB — but tank-regiment/company level, dated June
+  1944, and armor rather than infantry.
+- **p.64: a bilingual armament table, "Uzbrojenie 10. Dywizji
+  Pancernej SS 'Frundsberg' — 10 grudnia 1944 roku"/"The armament of
+  10th SS-Panzer Division 'Frundsberg' — December 10, 1944,"** giving
+  ETAT (established)/SPRAWNE (ready)/NOWE (new) counts for Panther,
+  PzKpfw IV, StuG, heavy AT guns, light and heavy howitzers, and 100mm
+  cannon. Division-level heavy-weapons/vehicle inventory, dated
+  December 1944, not squad-level and not 1943.
+- **pp.80-81: a full divisional staff/command-chain chart** (undated,
+  evidently a composite end-of-war roster, given Feldpost numbers)
+  running from division HQ down through both Panzergrenadier
+  regiments' battalions to **numbered companies (13. Kompanie sIG,
+  14. Kompanie Flak, 15. Kompanie, 16. Kompanie Pionier)** with named
+  commanders for each box. This is the most granular organizational
+  chart in the book — company-level, and it confirms the standard
+  German panzergrenadier-regiment company-numbering scheme (13th =
+  infantry guns, 14th = Flak, 16th = Pionier) — but it is a
+  chain-of-command roster (names and Feldpost numbers), **not a
+  headcount or weapons-density table**, and gives no squad-level
+  breakdown of any individual company.
+- **p.82: a bilingual decorations table** ("RANK NAME AND SURNAME" /
+  "STANOWISKO SŁUŻBOWE — POSITION" / "DATA — DATE"), naming individual
+  Knight's Cross, German Cross in Gold/Silver, and Honour Roll Clasp
+  recipients with their exact unit position and award date — useful for
+  future named-anecdote citations, not organizational.
+
+**Net verdict: this is a fifth book, and the cleanest-shaped negative
+yet on the central squad-table question.** Unlike the general
+Waffen-SS histories and single-division deep-dives read for E.156/
+E.158, this book is unusually rich in genuine organizational charts —
+six of them, several precisely dated and bilingual — and still **not
+one shows a Gruppe (squad) or platoon-level personnel/weapons
+breakdown**. Every chart in this book tops out at company echelon at
+its most granular (the p.80-81 command roster), and every chart with
+actual headcounts or weapon counts (pp.9, 11, 23, 36, 64) sits at
+battalion/regiment/division echelon. This reinforces, rather than
+complicates, E.158's Open Question 7 conclusion: the gap looks like a
+genre mismatch (narrative/organizational-history sources, however
+detailed, versus a dedicated KStN-transcription compilation), not bad
+luck or under-searching — a fifth independently-sourced, well-
+illustrated book confirms the same ceiling.
+
+**A genuinely new finding, medium confidence given the Polish-cognate
+reading involved:** p.13's Polish-only body text (no English
+translation accompanies this particular passage, unlike the captions)
+appears to state that on **17 August 1943**, Oberbefehlshaber West
+ordered trucks delivered to *both* newly-forming SS-Panzergrenadier
+divisions (9th "Hohenstaufen" and 10th "Karl der Große"/"Frundsberg"),
+but that in practice **all the delivered vehicles went to the 9th
+Division "Hohenstaufen," leaving the 10th Division's equipment
+situation unchanged** (still short). Read via cognates/proper nouns
+("Oberbefehlszwo West," "samochody ciężarowe" = trucks, "9. Dywizja
+Pancerna SS 'Hohenstaufen'," "sytuacja sprzętowa... nie zmieniła się" =
+equipment situation... did not change) rather than fluent Polish, so
+this is flagged **medium, not high, confidence** — but if accurate, it
+is a genuinely new axis on the "SS got better/worse weapons" question
+this thread has been tracking: not founding-division-vs-later-raised
+(E.156's p.21 finding) or theatre/recruitment-type (E.158's Das Reich
+footnote finding), but **unequal treatment between two sister
+divisions raised in the very same 1943 corps-formation effort**,
+corroborating the general "later-raised SS divisions were shorted"
+pattern with a specific, dated, named mechanism (rather than a general
+statement about "newer divisions").
+
+**On the discipline/growing-pains side of quality tier**, pp.7-8
+reproduce (bilingual caption plus adjacent Polish body text, read with
+the same medium-confidence caveat for the body prose) a real internal
+document: SS-Brigadeführer Lothar Debes's 8 May 1943 memo to
+subordinate commanders addressing uniform infractions, uneven
+enforcement of collar-hook fastening, unauthorized removal of the
+death's-head collar insignia is mentioned as inherited from disbanded
+*Totenkopfverbände* stock (Dachau/Buchenwald guard units) rather than
+issued specifically to this new division, motorcycle traffic accidents
+including one fatality, and a court-martial of three
+SS-Unterscharführer for alcohol-related offenses. This is a real,
+dated, unusually candid first-hand administrative snapshot of a
+brand-new 1943 Waffen-SS division's teething problems — not a quality
+*verdict* the way Michulec's and Quarrie's books gave, but concrete
+evidence of the same underlying phenomenon (a hastily-formed division
+still working out basic discipline and equipment issues months after
+activation).
+
+**No PaK 40-specific finding.** The Dec 1944 armament table (p.64)
+lists an unspecified "Ciężkie armaty ppanc/Heavy AT guns" line (28
+established, 15 new) without naming a gun type, and no caption
+anywhere names the PaK 40 specifically — a clean non-result for the
+bonus check, consistent with (not narrowing) the open question in
+`pak40_crew_quality_and_fielding_date_followup.md`.
+
 ## Organizational Findings: A Clean Negative — No Waffen-SS Squad/Platoon/Company Table of Any Kind
 
 **This book contains no Waffen-SS Panzergrenadier or infantry
@@ -201,6 +376,18 @@ for MAA 380 beyond regiment-name lists). This structural question now
 has a clean negative across four books read in this thread and remains
 genuinely open — see the updated Open Questions below for what kind of
 source would actually be needed to close it.
+
+**Update (E.159): confirmed a fifth time, by the most chart-rich book
+in the thread yet.** *Frundsberg* contains six distinct organizational/
+quantitative charts (pp.9, 11, 23, 36, 64, 80-81 — see the "E.159
+Follow-Up" section above) and not one reaches squad or platoon level;
+the most granular is a company-level command roster with no headcounts
+or weapons attached. This is now the strongest version of E.158's own
+structural conclusion: a book that is unusually generous with
+organizational diagrams by this thread's standards still tops out at
+battalion/regiment/division/tank-company echelon, reinforcing that the
+gap is a source-genre problem, not a matter of any one book failing to
+include squad detail that was otherwise "due."
 
 ## Quality Tier: Strong, Explicit, Directly 1943-Dated Support for an Early-Elite/Later-Diluted Split
 
@@ -547,12 +734,24 @@ or crew-quality question this bonus check was tracking. Still open — see
 - The Prokhorovka-area tank-battle figures (roughly 700/850/350 tanks)
   and the SS-VT recruitment/training figures (height, age, enlistment
   length) are stated plainly in the book's own text — high confidence.
+- **Added for E.159:** the English Summary's "reformed as a Panzer
+  Division '1943'" sentence, the p.9 organizational-chart legend, the
+  p.11 personnel table, the p.23 division chart, the p.36 tank-company
+  chart, and the p.64 armament table are all bilingual or English-
+  labeled in the book's own text/captions — high confidence for what
+  they show. The p.13 truck-priority finding (trucks earmarked for both
+  new SS-Panzergrenadier divisions in August 1943 going entirely to
+  "Hohenstaufen") and the p.7-8 Debes discipline-memo detail are read
+  from Polish body prose via cognates and proper nouns, not fluent
+  translation — **explicitly flagged as medium, not high, confidence**;
+  a Polish-reading follow-up would be needed to confirm the exact
+  wording and rule out a misreading.
 
 ## Open Questions
 
 1. **The central organizational question this pass was asked to check
    — identical-to-Wehrmacht vs. distinct Waffen-SS table of
-   organization — remains genuinely unanswered, now across four books.**
+   organization — remains genuinely unanswered, now across five books.**
    **Updated (E.158):** MAA 380 and Das Reich were both checked and both
    add a clean negative — see the "E.158 Follow-Up" section above. A
    dedicated Waffen-SS TOE/KStN-focused source (analogous to Kennedy's
@@ -565,6 +764,15 @@ or crew-quality question this bonus check was tracking. Still open — see
    actual KStN transcription or compilation site, of the kind
    `germany_1943.md` used for the Wehrmacht) rather than another
    narrative unit history, general or division-specific.
+   **Updated (E.159):** *Frundsberg* adds a fifth clean negative — see
+   the "E.159 Follow-Up" section above — despite being the single most
+   organizational-chart-rich book read in this thread (six distinct
+   diagrams/tables, none below company echelon). This makes the
+   genre-mismatch conclusion above stronger, not weaker: a future pass
+   should still look specifically for a KStN transcription/compilation
+   source, since narrative and divisional-history books keep producing
+   real battalion/regiment/division-level content without ever reaching
+   squad level, however many charts any single title happens to contain.
 2. **No recruitment/selection-standard or training-doctrine
    documentation was found** in the original Michulec pass, unlike the
    Commando pass's washout mechanism (E.155) or the Airborne passes'
@@ -589,14 +797,19 @@ or crew-quality question this bonus check was tracking. Still open — see
    four-pass history; this book adds no new information toward closing
    it.
 5. **Updated (E.158): both MAA 380 and Das Reich have now been read** —
-   see the "E.158 Follow-Up" section above for both verdicts. The one
-   remaining unread title from this project's `reference/` library is
+   see the "E.158 Follow-Up" section above for both verdicts. **Updated
+   (E.159): the last remaining unread title,**
    `epdf.pub_10-ss-panzer-division-frundsberg.pdf` (Rolf Michaelis,
-   *Frundsberg*, Wydawnictwo Militaria #245) — flagged in
-   `reference/CATALOG.md` as **Polish-language**, with only an "English
-   Summary" section in English, so it remains a low-priority candidate
-   given the language barrier, not a clean next step the way MAA 380 and
-   Das Reich were.
+   *Frundsberg*, Wydawnictwo Militaria #245), **has now also been read
+   in full** — see the "E.159 Follow-Up" section above. Contrary to its
+   `reference/CATALOG.md` flag as a low-priority Polish-language title,
+   it turned out to be a rich source (bilingual captions/chart legends
+   throughout, plus a genuine English Summary) — but still a clean
+   negative on the central squad-table question. This thread has now
+   read every currently-known concrete candidate in this project's
+   `reference/` library; no further named candidate remains unread as
+   of E.159 (see `reference/CATALOG.md`'s "Currently strongest unused
+   candidates" line, updated accordingly).
 6. No `units.csv` row was added, and no rule mechanic was designed —
    see the design note (E.156) for why this constraint was followed
    even though real quality-tier evidence was found. **Confirmed still
@@ -604,6 +817,11 @@ or crew-quality question this bonus check was tracking. Still open — see
    squad/platoon organizational figure precise enough to propose as a
    `units.csv` row either — see the design note (E.158) for the
    coordinator-facing summary of what was and wasn't found this pass.
+   **Confirmed still true after E.159:** Frundsberg's six organizational
+   charts are all genuine and citable at their own (battalion/regiment/
+   division/company-roster) echelon, but none is a squad/platoon
+   personnel-or-weapons table, so there is still nothing precise enough
+   to propose as a `units.csv` row from this book either.
 7. **New (E.158): the organizational question has now had a genuinely
    different kind of negative result than Open Questions 1-2 above
    describe in the abstract.** Three narrative/unit-history-shaped
@@ -621,3 +839,29 @@ or crew-quality question this bonus check was tracking. Still open — see
    search specifically for a Waffen-SS-focused KStN transcription
    project or equivalent primary-source compilation, rather than reading
    further general-interest Waffen-SS histories.
+   **Updated (E.159): now confirmed a fourth time, by the strongest
+   possible test case.** *Frundsberg* is precisely the kind of book that
+   might have been expected to break this pattern — a Wydawnictwo
+   Militaria title specifically known for technical diagrams and TO&E-
+   style organizational charts, and it delivers six of them (more than
+   any other book in this thread). It still tops out at company echelon
+   for its most granular chart (the pp.80-81 command roster) and at
+   battalion/regiment/division echelon for every chart carrying actual
+   headcounts or weapon counts. A book choice this favorable to the
+   diagram-hunting strategy failing anyway is strong evidence the
+   remaining gap is genuinely a *source-type* problem (organizational-
+   history and unit-history books, however chart-rich, are not the same
+   *kind* of document as a KStN transcription), not a matter of trying
+   one more divisional history and hoping.
+8. **New (E.159): a possible instance of unequal resourcing *within*
+   the newly-raised Waffen-SS divisions themselves**, distinct from the
+   founding-vs-later-raised split (E.156) and the theatre/recruitment-
+   type split (E.158): p.13 of *Frundsberg* appears to describe an
+   August 1943 truck-allocation order meant for both 9.SS "Hohenstaufen"
+   and 10.SS "Karl der Große"/"Frundsberg" being fulfilled entirely in
+   "Hohenstaufen"'s favor. Flagged explicitly as **medium confidence**
+   in this pass (read via Polish cognates, not fluent translation) — a
+   future pass with either a Polish-reading pass or a machine-translated
+   re-check of `reference/elite-special-units/epdf.pub_10-ss-panzer-division-frundsberg.pdf`
+   pp.12-13 specifically would be needed to confirm or retract this
+   before it is relied on for anything beyond flavor text.
