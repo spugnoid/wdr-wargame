@@ -59,13 +59,13 @@ The game does not glorify war. The ordinary soldiers of every nation were not ev
      - TBD — quantity to match maximum likely dispersed units per scenario
    * - RALLY POINT markers — per nation, one per leader in play
      - TBD
-   * - Blind markers — single/small/large sizes, per nation
-     - TBD
-   * - Dummy markers — single/small/large sizes, nation-neutral
-     - TBD
+   * - Blind markers — single/small/large sizes, per nation, numbered 1-12 to match the chart slots (Rule 14.3.3)
+     - 12 per player, per size
+   * - Dummy markers — single/small/large sizes, per nation, numbered 1-12; physically identical to blind markers (Rule 14.4.1)
+     - included in the blind marker count
    * - CONTACT markers — two-sided (CONTACT/STALE, Rule 14.8.2)
      - TBD
-   * - Hidden information chart with numbered slots and physical covers (cups or opaque tokens)
+   * - Hidden information chart — 12 numbered slots with physical covers (cups or opaque tokens), Rule 14.2.1
      - 1 per player
    * - Scenario record sheets for FIXED unit positions
      - TBD

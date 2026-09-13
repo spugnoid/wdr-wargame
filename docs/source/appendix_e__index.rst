@@ -701,6 +701,16 @@ chart and cover system  ..........  14.2
 
 going hidden procedure  ..........  14.5
 
+**Hidden information chart**  ..........  14.2.1
+
+12 numbered slots per player  ..........  14.2.1
+
+capacity: three slots per group, four groups  ..........  14.2.1a
+
+may not go hidden with fewer than three free slots  ..........  14.2.1a
+
+blind markers numbered 1-12 to match  ..........  14.3.3
+
 **Hidden information system**  ..........  S.14
 
 blind markers  ..........  14.3

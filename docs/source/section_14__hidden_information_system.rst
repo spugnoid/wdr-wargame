@@ -41,13 +41,21 @@ With Deepest Regret... uses a physical hidden information system to model the fo
 ----------------------------------
 
 
-**14.2.1**  Each player has a hidden information chart with numbered slots beside the map. Each slot has a physical cover — a cup, opaque token, or small box.
+**14.2.1**  Each player has a hidden information chart beside the map with **12 numbered slots**, 1 through 12. Each slot has a physical cover — a cup, opaque token, or small box.
 
 .. container:: rule-guide
 
    **Why:** Gives the hidden-information system a physical, off-map home for concealed counters, since the whole system depends on something in the real world actually hiding information from the opponent — a chart with numbered, physically covered slots is that mechanism.
 
-   **Example:** A player's hidden information chart has numbered slots 1 through however many are needed, each with its own opaque cover, sitting beside the map where the opponent cannot see underneath any of them.
+   **Example:** A player's hidden information chart has slots numbered 1 through 12, each with its own opaque cover, sitting beside the map where the opponent cannot see underneath any of them.
+
+**14.2.1a**  Chart capacity: a unit going hidden occupies three slots — its own and its two dummies (Rule 14.6.2) — so a player's 12 slots support **four** concealed groups at once. A unit may not go hidden while fewer than three of its owner's slots are free. Slots are freed when a group is revealed, eliminated, or its dummies are exposed (Rule 14.4.3), and a freed slot may be reused later in the scenario.
+
+.. container:: rule-guide
+
+   **Why:** Fixes a real, physical limit rather than leaving the chart notionally unbounded, so the components list can state a definite quantity and a player always knows whether a Go Hidden action is legal before declaring it. Four concurrent groups comfortably exceeds what a platoon-sized force can usefully conceal, while keeping the chart small enough to sit beside the map.
+
+   **Example:** A player with three groups already concealed has nine slots occupied and three free — enough for a fourth unit to go hidden, but not a fifth until one of the existing groups is revealed.
 
 **14.2.2**  When a unit goes HIDDEN, its counter is seated under one of a group of numbered covers **out of the opponent's sight** — behind a small screen, below the table edge, or with the covers face-down in hand — together with the empty covers of any dummies spawned in the same action. The whole group of covered slots is then placed on the chart **simultaneously**. Blind markers with the matching numbers go on the map. The opponent may know which group of numbers belongs together; nothing in the placement may reveal which number holds the counter.
 
@@ -119,7 +127,7 @@ With Deepest Regret... uses a physical hidden information system to model the fo
 
    **Example:** A single unit going hidden must use the single (one-dot) marker — it cannot deliberately use a large-stack (three-dot) marker to bluff the opponent into thinking a bigger force is present.
 
-**14.3.3**  Blind markers show nation colour but no unit type, quality, or stats.
+**14.3.3**  Blind markers show nation colour and a slot number (1-12) matching the chart slot they correspond to, and nothing else — no unit type, quality, or stats. The number is what links a marker on the map to a covered slot on the chart (Rule 14.6.3); since two of every group's three markers are dummies, it gives nothing away.
 
 .. container:: rule-guide
 
