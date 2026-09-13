@@ -49,8 +49,8 @@ categories is filed under its primary use and cross-referenced in Notes.
 | epdf.pub_osprey-the-military-sniper-since-1914-elite-68.pdf | *The Military Sniper Since 1914* | Martin Pegler | Osprey Elite 68 | image, 66pp | `military_sniper_pegler_1943.md` (E.149, E.150) | — |
 | epdf.pub_world-war-ii-jungle-warfare-tactics-osprey-elite.pdf | *World War II Jungle Warfare Tactics* | Dr Stephen Bull | Osprey Elite 151 | image, 67pp | `jungle_warfare_rottman_1943.md` (E.152) | secondary: fortifications-terrain |
 | epdf.pub_german-military-police-units-1939-45-osprey-men-at-arms-213.pdf | *German Military Police Units 1939-45* | Gordon Williamson | Osprey Men-at-Arms 213 | image, 49pp | unused | no MP unit type exists in this project |
-| osprey-elite-122-world-war-ii-infantry-tactics-company-and-battalion-osprey-elite-122_compress.pdf | *World War II Infantry Tactics: Company and Battalion* | Dr Stephen Bull | Osprey Elite 122 | text, 67pp | unused | — |
-| pdfcoffee.com_osprey-elite-122-...-pdf-free.pdf | *World War II Infantry Tactics: Company and Battalion* (identical copy) | Dr Stephen Bull | Osprey Elite 122 | text, 67pp | unused | **Exact duplicate** of the row above (md5-identical) — kept, not deleted |
+| osprey-elite-122-world-war-ii-infantry-tactics-company-and-battalion-osprey-elite-122_compress.pdf | *World War II Infantry Tactics: Company and Battalion* | Dr Stephen Bull | Osprey Elite 122 | text, 67pp | `infantry_tactics_bull_1943.md` (E.160) | — |
+| pdfcoffee.com_osprey-elite-122-...-pdf-free.pdf | *World War II Infantry Tactics: Company and Battalion* (identical copy) | Dr Stephen Bull | Osprey Elite 122 | text, 67pp | `infantry_tactics_bull_1943.md` (E.160) | **Exact duplicate** of the row above (md5-identical) — kept, not deleted |
 | epdf.pub_german-infantry-in-wwii-warmachines-16.pdf | *German Infantry in Action WWII* (cover: "German Infantry in WWII") | Nick Adams | Verlinden Publications, WarMachines 16 | image, 38pp | unused | photo-reference album, not a TOE/tactics text |
 
 ### elite-special-units/
