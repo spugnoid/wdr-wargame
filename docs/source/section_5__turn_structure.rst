@@ -121,13 +121,13 @@ Each game turn proceeds through three phases in the following order:
 ------------------
 
 
-**5.3.1**  Both players roll 1d6 and add any applicable leader bonus. The higher result wins initiative for this turn. Re-roll ties.
+**5.3.1**  Both players roll 1d6 and add the CMD rating of their highest-rated functional leader still on the map (Rule 12.3.4). A side with no functional leader adds nothing. The higher result wins initiative for this turn. Re-roll ties.
 
 .. container:: rule-guide
 
-   **Why:** Decides who acts first each turn with a contest that leadership can influence but chance still decides, rather than a fixed or purely leader-determined order that would make one side predictably always lead.
+   **Why:** Decides who acts first each turn with a contest leadership influences but chance still settles. Reusing the highest surviving CMD — the same value Rule 15.5.4's Force Morale check uses — means losing leaders costs a side tempo as well as Action Points, without adding a stat to the counter.
 
-   **Example:** A side with a leader bonus of +1 rolls 1d6+1 for initiative; a strong roll from the other side can still beat it, since the bonus tilts the odds without guaranteeing the win.
+   **Example:** A side with a CMD 2 squad leader rolls 1d6+2; a side whose leaders are all dead rolls a bare 1d6. The led side is favoured but a 6 against a 1 still loses to nobody — the bonus tilts the odds without guaranteeing the win.
 
 **5.3.2**  The initiative winner acts first in each impulse and wins all reaction timing ties. Initiative grants tempo, not resources — both sides' RP pools are computed identically (Rule 5.3.4).
 
